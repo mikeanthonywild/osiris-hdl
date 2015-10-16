@@ -39,8 +39,8 @@ always @(posedge pclk) begin
             capture_state <= I2C_SETUP;
         end
 
-        // Configure sensor registers
         I2C_SETUP: begin
+            // Wait for i2c state machine to configure registers
             if (i2c_setup_complete) begin
                 capture_state <= WAIT_FOR_FRAME_END;
             end

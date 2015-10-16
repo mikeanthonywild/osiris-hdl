@@ -62,7 +62,7 @@ always @(posedge pclk) begin
             if (href) begin
                 // TODO: Clock first pixel on transition!
                 capture_state <= FETCH_PIXEL;
-            else if (vsync) begin
+            end else if (vsync) begin
                 capture_state <= WAIT_FOR_FRAME_START;
             end
         end
@@ -72,7 +72,7 @@ always @(posedge pclk) begin
                 capture_state <= WAIT_FOR_LINE_START;
             end
         end
-    end
+    endcase
 end
 
 endmodule

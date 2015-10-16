@@ -1,2 +1,9 @@
-# Python virtualenv
+# Python
 env/
+*.pyc
+
+# Build
+bin/
+
+# Other
+*.DS_Store

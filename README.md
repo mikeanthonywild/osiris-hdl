@@ -1,3 +1,4 @@
-# OSIRIS HDL [![Build Status](https://magnum.travis-ci.com/mikeanthonywild/osiris-hdl.svg?token=NDTyY9L4Xy88HazazqPp&branch=master)](https://magnum.travis-ci.com/mikeanthonywild/osiris-hdl)
+# Osiris HDL [![Build Status](https://magnum.travis-ci.com/mikeanthonywild/osiris-hdl.svg?token=NDTyY9L4Xy88HazazqPp&branch=develop)](https://magnum.travis-ci.com/mikeanthonywild/osiris-hdl)
 
-Blah blah blah
+This repository contains all HDL code (sensor capture, data transfer and testbenches) for the Osiris project.
+

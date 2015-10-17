@@ -5,5 +5,8 @@ env/
 # Build
 bin/
 
+# MyHDL
+myhdl.vpi
+
 # Other
 *.DS_Store

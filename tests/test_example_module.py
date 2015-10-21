@@ -3,18 +3,25 @@ import os
 from myhdl import Cosimulation, Simulation, Signal, intbv
 from myhdl import delay, always, now, instance, always_comb, bin
 
+def Thingy():
 
-def test_example_module():
-    clk = Signal(intbv(1))
-    reset = Signal(intbv(0))
-    d = Signal(intbv(0))
-    dut = Cosimulation('vpp -m ./myhdl.vpi bin/example_module', 
+    clk = Signal(0)
+    d = Signal(intbv(0)[8:])
+    reset = Signal(1)
+
+    driver = ClkDriver(clk)
+
+    dut = Cosimulation('vvp -m ./myhdl.vpi ./bin/example_module/example_module', 
                         clk=clk, 
                         reset=reset,
                         d=d)
-    sim = Simulation(dut, None)
-    sim.run()
-    assert(1==1)
+
+    return dut, driver
+
+def test_example_module():
+    #sim = Simulation(Greetings())
+    sim = Simulation(Thingy())
+    sim.run(30)
 
 # Testing out some MyHDL features
 def HelloWorld(clk, to='World'):
@@ -62,7 +69,7 @@ def Bin2Gray(B, G, width):
 
     return logic
 
-def TestBench(width):
+def Bench(width):
     B = Signal(intbv(0))
     G = Signal(intbv(0))
 
@@ -76,11 +83,3 @@ def TestBench(width):
             print("B: {}| G: {}".format(bin(B, width), bin(G, width)))
 
     return dut, stimulus
-
-
-if __name__ == '__main__':
-    sim = Simulation(TestBench(3
-
-        ))
-    sim.run()
-

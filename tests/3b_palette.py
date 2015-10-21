@@ -17,7 +17,7 @@ palette = (
 
 if __name__ == '__main__':
 
-    img1 = Image.open('images/bayer.png').convert('LA')
+    img1 = Image.open('images/cat.jpg').convert('LA')
     img2 = Image.new('RGB', img1.size)
     for x in range(img1.size[0]):
         for y in range(img1.size[1]):

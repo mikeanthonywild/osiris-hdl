@@ -1,20 +1,18 @@
 module example_module (
-    input           clk,
-    input           reset,
-    output [7:0]    d
+    input               clk,
+    input               reset,
+    output reg [7:0]    count
 );
 
-reg [7:0]   count;
-
-assign d = count;
-
-always @(posedge clk) begin
+always @(posedge clk or negedge reset) begin
     if (!reset) begin
-        count <= 1'b0;
+        $display("Reset");
+        count <= 0;
     end else begin
         // Inc counter
         $display("Clk");
-        count <= count + 1'd1;
+        $display("Count %d", count);
+        count <= count + 1;
     end
 end
 

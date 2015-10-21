@@ -5,8 +5,9 @@ env/
 # Build
 bin/
 
-# MyHDL
+# MyHDL / Verilog
 myhdl.vpi
+*.vcd
 
 # Other
 *.DS_Store

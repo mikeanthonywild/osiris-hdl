@@ -1,2 +1,13 @@
-# Python virtualenv
+# Python
 env/
+*.pyc
+
+# Build
+bin/
+
+# MyHDL / Verilog
+myhdl.vpi
+*.vcd
+
+# Other
+*.DS_Store

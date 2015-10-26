@@ -8,71 +8,30 @@
  */
 
 module ov7670_capture (
-    input           pclk, // Pixel clock
-    input           vsync, //Vertical sync signal
-    input           href, // Horizontal timing reference
-    input [7:0]     d, // Pixel data
-    input           reset // Synchronous reset
+    input               pclk_24, // 24MHz Pixel clock
+    input               rst, // Synchronous reset
+    input               start, /// Start capturing
+    input               vsync, //Vertical sync signal
+    input               href, // Horizontal timing reference
+    input [7:0]         d, // Pixel data from sensor
+    output reg [7:0]    addr, // Framebuffer address
+    output reg [7:0]    dout // Data to write to framebuffer
 );
 
-// FSM states
-localparam IDLE                 = 3'd0;
-localparam I2C_SETUP            = 3'd1;
-localparam WAIT_FOR_FRAME_END   = 3'd2;
-localparam WAIT_FOR_FRAME_START = 3'd3;
-localparam WAIT_FOR_LINE_START  = 3'd4;
-localparam FETCH_PIXEL          = 3'd5;
-
-reg [2:0]   capture_state = IDLE;
-
-reg         i2c_setup_complete = 1'b0;
-
-always @(posedge pclk) begin
-    if (!reset) begin
-        capture_state = IDLE;
-        i2c_setup_complete = 1'b0;
+always @(posedge pclk_24 or negedge rst) begin
+    if (!rst) begin
+        // Reset everything
     end
 
-    // Capture state machine
-    case (capture_state)
-        IDLE: begin
-            capture_state <= I2C_SETUP;
+    if (pclk_24) begin
+        if (vsync) begin
+            addr <= 0;
+        end else begin
+            // Clock data from sensor into framebuffer
+            dout <= d;
+            addr <= addr + 1;
         end
-
-        I2C_SETUP: begin
-            // Wait for i2c state machine to configure registers
-            if (i2c_setup_complete) begin
-                capture_state <= WAIT_FOR_FRAME_END;
-            end
-        end
-
-        WAIT_FOR_FRAME_END: begin
-            if (vsync) begin
-                capture_state <= WAIT_FOR_FRAME_START;
-            end
-        end
-
-        WAIT_FOR_FRAME_START: begin
-            if (!vsync) begin
-                capture_state <= WAIT_FOR_LINE_START;
-            end
-        end
-
-        WAIT_FOR_LINE_START: begin
-            if (href) begin
-                // TODO: Clock first pixel on transition!
-                capture_state <= FETCH_PIXEL;
-            end else if (vsync) begin
-                capture_state <= WAIT_FOR_FRAME_START;
-            end
-        end
-
-        FETCH_PIXEL: begin
-            if (!href) begin
-                capture_state <= WAIT_FOR_LINE_START;
-            end
-        end
-    endcase
+    end
 end
 
-endmodule
+endmodule;

@@ -32,6 +32,7 @@ module vga_controller (
     localparam H_BACK_PORCH     = 48;
     localparam BLANK_WIDTH      = H_FRONT_PORCH + H_SYNC_PULSE + H_BACK_PORCH;
     localparam MAX_H_COUNT      = DISPLAY_WIDTH + BLANK_WIDTH;
+    localparam FRAMEBUF_WIDTH   = 176;
 
     localparam DISPLAY_HEIGHT   = 480;
     localparam V_FRONT_PORCH    = 10;
@@ -39,10 +40,13 @@ module vga_controller (
     localparam V_BACK_PORCH     = 33;
     localparam BLANK_HEIGHT     = V_FRONT_PORCH + V_SYNC_PULSE + V_BACK_PORCH;
     localparam MAX_V_COUNT      = DISPLAY_HEIGHT + BLANK_HEIGHT;
+    localparam FRAMEBUF_HEIGHT  = 144;
 
     // Combinatorial VGA sync logic
-    assign vsync = (v_count > (DISPLAY_HEIGHT + V_FRONT_PORCH)) || (v_count < (MAX_V_COUNT - V_BACK_PORCH));
-    assign hsync = (h_count < (DISPLAY_WIDTH + H_FRONT_PORCH)) || (h_count > (MAX_H_COUNT - H_BACK_PORCH)); 
+    assign vsync = (v_count > (DISPLAY_HEIGHT + V_FRONT_PORCH)) || 
+        (v_count < (MAX_V_COUNT - V_BACK_PORCH));
+    assign hsync = (h_count < (DISPLAY_WIDTH + H_FRONT_PORCH)) || 
+        (h_count > (MAX_H_COUNT - H_BACK_PORCH)); 
 
     always @(posedge vga_clk_25 or negedge reset_n) begin
         if (!reset_n) begin
@@ -58,32 +62,40 @@ module vga_controller (
 
         if (vga_clk_25) begin
             //Increment counters to drive VGA sync logic
-            h_count <= h_count + 1;
-            if (h_count > MAX_H_COUNT) begin
-                h_count <= 0;
-                if (v_count > MAX_V_COUNT) begin
-                    v_count <= 0;
-                end else begin
-                    v_count <= v_count + 1; 
+            if (h_count < MAX_H_COUNT) begin
+                h_count <= h_count + 1;
+                if (h_count < FRAMEBUF_WIDTH) begin
+                    addr <= addr + 1;
                 end
+            end else begin
+                h_count <= 0;
+            end
+
+            if (v_count < MAX_V_COUNT) begin
+                v_count <= v_count + 1;
+            end else begin
+                v_count <= 0;
+                addr <= 0;
             end
 
             if (test_pattern) begin
                 // Output alternating stripes test pattern
-                // TODO: Is RTL for MOD 2 efficient? If not, just examine LSB.
-                R <= G <= B <= (v_count % 2) ? 255 : 0;
+                // TODO: Is compiler clever enough to just examine LSB?
+                R <= (v_count % 2) ? 255 : 0;
+                G <= (v_count % 2) ? 255 : 0;
+                B <= (v_count % 2) ? 255 : 0;
             end else begin
                 // Output framebuffer
-                R <= G <= B <= din;
+                if (h_count < FRAMEBUF_WIDTH && v_count < FRAMEBUF_HEIGHT) begin
+                    R <= din;
+                    G <= din;
+                    B <= din;
+                end else begin
+                    R <= 0; 
+                    G <= 0;
+                    B <= 0;
+                end
             end
-
-            // Framebuffer size is 176x132, but output resolution is 640x480.
-            // Select whether we output pixel from framebuffer or black.
-            //if (h_count < 176 && v_count < 132) begin
-                
-            //end
-            // TODO: How many cycles to read from RAM?
-            // FIXME: If RAM read takes 1 cycle then din will be lagging
         end
     end
 

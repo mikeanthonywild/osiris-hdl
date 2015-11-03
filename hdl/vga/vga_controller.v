@@ -43,7 +43,7 @@ module vga_controller (
     localparam FRAMEBUF_HEIGHT  = 144;
 
     // Combinatorial VGA sync logic
-    assign vsync = (v_count > (DISPLAY_HEIGHT + V_FRONT_PORCH)) || 
+    assign vsync = (v_count > (DISPLAY_HEIGHT + V_FRONT_PORCH)) && 
         (v_count < (MAX_V_COUNT - V_BACK_PORCH));
     assign hsync = (h_count < (DISPLAY_WIDTH + H_FRONT_PORCH)) || 
         (h_count > (MAX_H_COUNT - H_BACK_PORCH)); 
@@ -68,14 +68,15 @@ module vga_controller (
                     addr <= addr + 1;
                 end
             end else begin
+                // New line
                 h_count <= 0;
-            end
-
-            if (v_count < MAX_V_COUNT) begin
-                v_count <= v_count + 1;
-            end else begin
-                v_count <= 0;
-                addr <= 0;
+                if (v_count < MAX_V_COUNT) begin
+                    v_count <= v_count + 1;
+                end else begin
+                    // New frame
+                    v_count <= 0;
+                    addr <= 0;
+                end
             end
 
             if (test_pattern) begin

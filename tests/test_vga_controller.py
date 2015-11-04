@@ -31,12 +31,24 @@ def test_vga_output_from_framebuffer():
     """ Test that we can display a frame fetched from the framebuffer.
 
     """
+    capture_data = Image.new('RGB', (640, 480))
+    capture_pixels = capture_data.load()
+
     vga_clk_25, reset_n, din, test_pattern, addr, vsync, hsync, R, G, B, dut = _tb_vga_controller()
     
     def _bench():
         @instance
         def stimulus():
-            yield delay(vga_clk_25.period * 800 * 530)
+            yield reset_n.posedge
+
+            for line in range(525):
+                for col in range(800):
+                    if col < 640 and line < 480:
+                        capture_pixels[col, line] = (R, G, B)
+                    yield vga_clk_25.posedge
+
+            capture_data.show()
+
             assert False
             raise StopSimulation
 
@@ -45,10 +57,10 @@ def test_vga_output_from_framebuffer():
             x = int(addr) % image_data.size[0]
             y = int(addr) / image_data.size[0]
             try:
-                #din.next = image_pixels[x, y]
-                din.next = addr[8:]
+                din.next = image_pixels[x, y]
             except IndexError:
-                pass
+                print("Index error [{}, {}]".format(x, y))
+                raise IndexError
 
         return dut, vga_clk_25.gen(), reset_n.pulse(), stimulus, framebuffer_read
 

@@ -74,20 +74,21 @@ module vga_controller (
             //Increment counters to drive VGA sync logic
             if (h_count < MAX_H_COUNT-1) begin
                 h_count <= h_count + 1;
-                if (h_count+1 < FRAMEBUF_WIDTH) begin
-                    addr <= addr + 1;
-                end
             end else begin
                 // New line
                 h_count <= 0;
                 if (v_count < MAX_V_COUNT-1) begin
                     v_count <= v_count + 1;
-                    addr <= addr + 1;   // Make sure that we roll the address over
                 end else begin
                     // New frame
                     v_count <= 0;
                     addr <= 0;
                 end
+            end
+
+            // Increment framebuffer address
+            if (h_count+1 < FRAMEBUF_WIDTH  && v_count+1 < FRAMEBUF_HEIGHT) begin
+                addr <= addr + 1;
             end
         end
     end

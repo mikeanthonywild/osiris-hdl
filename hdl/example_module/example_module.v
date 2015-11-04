@@ -10,8 +10,8 @@ always @(posedge clk or negedge reset) begin
         count <= 0;
     end else begin
         // Inc counter
-        $display("Clk");
-        $display("Count %d", count);
+        //$display("Clk");
+        //$display("Count %d", count);
         count <= count + 1;
     end
 end

@@ -10,7 +10,7 @@
 module vga_controller_dut;
 
     reg         vga_clk_25;     // VGA pixel clock (640x480 = 25 MHz)
-    reg         reset_n;        // Asynchronous reset
+    reg         reset_n;        // Synchronous reset
     reg [7:0]   din;            // RAW pixel value
     reg         test_pattern;   // Output test pattern
     wire [15:0] addr;           // Framebuffer read address

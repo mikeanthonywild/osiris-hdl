@@ -13,7 +13,7 @@
 
 module ov7670_capture (
     input               pclk_24,    // 24MHz Pixel clock
-    input               reset_n,    // Asynchronous reset
+    input               reset_n,    // Synchronous reset
     input               start,      // Start capturing
     input               vsync,      //Vertical sync signal
     input               href,       // Horizontal timing reference
@@ -24,23 +24,23 @@ module ov7670_capture (
 
     reg [15:0] next_addr;
 
-    always @(posedge pclk_24 or negedge reset_n) begin
+    always @(posedge pclk_24) begin
         if (!reset_n) begin
             // Reset everything
             addr <= 0;
             next_addr <= 0;
             dout <= 0;
-        end
-
-        if (pclk_24 && start) begin
-            if (vsync) begin
-                addr <= 0;
-            end else if (href) begin
-                // Clock data from sensor into framebuffer
-                dout <= d;
-                addr <= next_addr;  // Output address must lag by 1
-                next_addr <= next_addr + 1;
-            end
+        end else begin
+            if (start) begin
+                if (vsync) begin
+                    addr <= 0;
+                end else if (href) begin
+                    // Clock data from sensor into framebuffer
+                    dout <= d;
+                    addr <= next_addr;  // Output address must lag by 1
+                    next_addr <= next_addr + 1;
+                end
+            end 
         end
     end
 

@@ -9,7 +9,7 @@ image_pixels = image_data.load()
 def _tb_ov7670_capture():
     # Signals and interface etc.
     pclk_24 = Clock()
-    reset_n = Reset(async=True)
+    reset_n = Reset()
     start = Signal(0)
     vsync = Signal(1)
     href = Signal(0)

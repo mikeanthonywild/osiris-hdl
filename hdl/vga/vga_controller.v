@@ -87,7 +87,7 @@ module vga_controller (
             end
 
             // Increment framebuffer address
-            if (h_count+1 < FRAMEBUF_WIDTH  && v_count+1 < FRAMEBUF_HEIGHT) begin
+            if (h_count+1 <= FRAMEBUF_WIDTH  && v_count+1 < FRAMEBUF_HEIGHT) begin
                 addr <= addr + 1;
             end
         end

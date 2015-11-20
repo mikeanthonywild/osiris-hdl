@@ -92,7 +92,7 @@ module vga_controller (
                 // Increment framebuffer address while we're drawing framebuffer
                 // and also twice more for the last to pixels of the line to 
                 // ensure that the
-                if (h_count+1 < FRAMEBUF_WIDTH-1  && v_count+1 < FRAMEBUF_HEIGHT ||
+                if (h_count+1 < FRAMEBUF_WIDTH-1  && v_count < FRAMEBUF_HEIGHT ||
                     h_count == MAX_H_COUNT-2 || h_count == MAX_H_COUNT-1) begin
                     addr <= addr + 1;
                 end

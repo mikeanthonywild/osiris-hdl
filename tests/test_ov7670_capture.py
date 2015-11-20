@@ -62,6 +62,8 @@ def test_ov7670_capture():
             start.next = 0
             yield pclk_24.posedge
 
+            capture_data.save('tests/output/test_ov7670_capture.bmp')
+
             # Check that test image and captured image match
             for y in range(image_data.size[1]):
                 for x in range(image_data.size[0]):

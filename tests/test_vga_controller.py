@@ -41,15 +41,32 @@ def test_vga_output_from_framebuffer():
         def stimulus():
             yield reset_n.posedge
 
+            # Wait a clock period to latch first address in to RAM
+            yield vga_clk_25.posedge
+
             for line in range(525):
                 for col in range(800):
                     if col < 640 and line < 480:
                         capture_pixels[col, line] = (R, G, B)
                     yield vga_clk_25.posedge
 
-            capture_data.show()
+            capture_data.save('tests/output/test_vga_output_from_framebuffer.bmp')
 
-            assert False
+            # Check captured data
+            for line in range(480):
+                for col in range(640):
+                    if col < 176 and line < 144:
+                        expected_pixel = image_pixels[col, line]
+                    else:
+                        expected_pixel = 0
+
+                    try:
+                        # Output is grayscale, so just check R channel
+                        assert capture_pixels[col, line][0] == expected_pixel
+                    except AssertionError:
+                        print("Pixel mismatch [{}, {}]. Captured {}, should be {}".format(
+                              col, line, capture_pixels[col, line], expected_pixel))
+                        raise AssertionError
             raise StopSimulation
 
         @always(vga_clk_25.posedge)
@@ -59,7 +76,8 @@ def test_vga_output_from_framebuffer():
             try:
                 din.next = image_pixels[x, y]
             except IndexError:
-                print("Index error [{}, {}]".format(x, y))
+                pass
+                #print("Index error [{}, {}]".format(x, y))
                 #raise IndexError
 
         return dut, vga_clk_25.gen(), reset_n.pulse(), stimulus, framebuffer_read

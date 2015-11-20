@@ -21,7 +21,7 @@ module vga_controller_dut;
     wire [7:0]  B;              // VGA blue component
 
     initial begin
-        $dumpfile("tests/vga_controller.vcd");
+        $dumpfile("tests/output/vga_controller.vcd");
         $dumpvars;
         $from_myhdl(vga_clk_25, reset_n, din, test_pattern);
         $to_myhdl(addr, vsync, hsync, R, G, B);

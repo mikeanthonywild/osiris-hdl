@@ -19,7 +19,7 @@
     wire [7:0]  dout; // Data to write to framebuffer
 
     initial begin
-        $dumpfile("tests/ov7670_capture.vcd");
+        $dumpfile("tests/output/ov7670_capture.vcd");
         $dumpvars;
         $from_myhdl(pclk_24, reset_n, start, vsync, href, d);
         $to_myhdl(addr, dout);

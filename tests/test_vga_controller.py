@@ -85,7 +85,6 @@ def test_vga_output_from_framebuffer():
     Simulation(_bench()).run()
 
 
-'''
 def test_vga_output_from_test_pattern():
     """ Test that we can display a frame from the test pattern
     generator.
@@ -100,28 +99,34 @@ def test_vga_output_from_test_pattern():
 
         @instance
         def stimulus():
-            #test_pattern.next = 1
-            yield delay(vga_clk_25.period * 800 * 550)
+            test_pattern.next = 1
+            yield reset_n.posedge
+            
+            # Wait a clock period to latch first address in to RAM
+            yield vga_clk_25.posedge
 
-            assert False
+            for line in range(525):
+                for col in range(800):
+                    if col < 640 and line < 480:
+                        capture_pixels[col, line] = (R, G, B)
+                    yield vga_clk_25.posedge
+
+            capture_data.save('tests/output/test_vga_output_from_test_pattern.bmp')
+
+            # Check captured data
+            for line in range(480):
+                for col in range(640):
+                    try:
+                        # Output is grayscale, so just check R channel
+                        expected_pixel = (line % 2) * 255
+                        assert capture_pixels[col, line][0] == expected_pixel
+                    except AssertionError:
+                        print("Pixel mismatch [{}, {}]. Captured {}, should be {}".format(
+                              col, line, capture_pixels[col, line], expected_pixel))
+                        raise AssertionError
+
             raise StopSimulation
 
-        @always(vga_clk_25.posedge)
-        def framebuffer_read():
-            din.next = addr[8:]
-
-        @always(vga_clk_25.posedge)
-        def check_framebuffer():
-            #count = count + 1
-            #test_var = test_var + 1
-            try:
-                x = int(addr) % capture_data.size[0]
-                y = int(addr) / capture_data.size[0]
-                capture_pixels[x, y] = (int(R), int(G), int(B))
-            except IndexError:
-                pass
-
-        return dut, vga_clk_25.gen(), reset_n.pulse(), stimulus, check_framebuffer, framebuffer_read
+        return dut, vga_clk_25.gen(), reset_n.pulse(), stimulus
 
     Simulation(_bench()).run()
-'''

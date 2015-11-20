@@ -13,6 +13,8 @@ MyHDL must provide a *VPI* file for interaction with Icarus, so before any tests
     $ make
     $ cp myhdl.vpi PROJECT_ROOT
 
+If testing on Linux, you will also need to install these pre-requisite packages before you can fetch the required Python packages: `libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev imagemagick`.
+
 To run the tests, simply use:
 
     $ make test

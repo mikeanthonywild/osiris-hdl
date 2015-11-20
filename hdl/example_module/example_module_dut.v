@@ -15,7 +15,7 @@ reg         reset;
 wire [7:0]  count;
 
 initial begin
-    $dumpfile("tests/example_module.vcd");
+    $dumpfile("tests/output/example_module.vcd");
     $dumpvars;
     $from_myhdl(clk, reset);
     $to_myhdl(count);

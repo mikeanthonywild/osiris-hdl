@@ -21,13 +21,10 @@ def test_count_increments():
                            reset=reset,
                            count=count)
 
-        @always(delay(5))
-        def drive_clk():
-            clk.next = not clk
-
         @instance
         def stimulus():
-            yield delay(255 * 2 + 5)
+            yield delay(255 * 2 + 4)
+            print(count)
             assert count == 0xff
             raise StopSimulation
 

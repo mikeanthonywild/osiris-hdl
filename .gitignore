@@ -2,8 +2,9 @@
 env/
 *.pyc
 
-# Build
+# Build and test outputs
 bin/
+tests/output/
 
 # MyHDL / Verilog
 myhdl.vpi

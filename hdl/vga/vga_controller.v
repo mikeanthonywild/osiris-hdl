@@ -26,8 +26,9 @@ module vga_controller (
     output [7:0]        B               // VGA blue component
 );
 
-    reg [9:0] h_count;      
-    reg [9:0] v_count;       
+    reg         memory_ready;
+    reg [9:0]   h_count;      
+    reg [9:0]   v_count;       
 
     // Consts
     localparam DISPLAY_WIDTH    = 640;
@@ -70,25 +71,35 @@ module vga_controller (
             addr <= 0;
             h_count <= 0;
             v_count <= 0;
+            memory_ready <= 0;
         end else begin
-            //Increment counters to drive VGA sync logic
-            if (h_count < MAX_H_COUNT-1) begin
-                h_count <= h_count + 1;
-            end else begin
-                // New line
-                h_count <= 0;
-                if (v_count < MAX_V_COUNT-1) begin
-                    v_count <= v_count + 1;
+            if (memory_ready) begin
+                //Increment counters to drive VGA sync logic
+                if (h_count < MAX_H_COUNT-1) begin
+                    h_count <= h_count + 1;
                 end else begin
-                    // New frame
-                    v_count <= 0;
-                    addr <= 0;
+                    // New line
+                    h_count <= 0;
+                    if (v_count < MAX_V_COUNT-1) begin
+                        v_count <= v_count + 1;
+                    end else begin
+                        // New frame
+                        v_count <= 0;
+                        addr <= 0;
+                    end
                 end
-            end
 
-            // Increment framebuffer address
-            if (h_count+1 <= FRAMEBUF_WIDTH  && v_count+1 < FRAMEBUF_HEIGHT) begin
-                addr <= addr + 1;
+                // Increment framebuffer address while we're drawing framebuffer
+                // and also twice more for the last to pixels of the line to 
+                // ensure that the
+                if (h_count+1 < FRAMEBUF_WIDTH-1  && v_count+1 < FRAMEBUF_HEIGHT ||
+                    h_count == MAX_H_COUNT-2 || h_count == MAX_H_COUNT-1) begin
+                    addr <= addr + 1;
+                end
+            end else begin
+                // Read first pixel and increment address
+                addr <= 1;
+                memory_ready <= 1;
             end
         end
     end

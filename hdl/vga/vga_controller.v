@@ -6,9 +6,6 @@
  *
  * Module to generate VGA output to display image from framebuffer.
  * Outstanding issues:
- *  - addr and h_count start at 0x01 after reset_n deasserted
- *  - Are v_sync and h_sync pulsing at correct count and interval?
- *  - How do we account for BRAM read delay?
  *  - Many other Verilog designs seem to lack a reset and instead just provide
  *    initialisation values.
  */

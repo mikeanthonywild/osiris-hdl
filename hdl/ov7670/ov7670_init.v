@@ -32,6 +32,7 @@ module ov7670_init (
             // Data = {REG_ADDR, REG_VALUE}
             // Register init sequence   // REG      DESCRIPTION
             case (step)
+                // Are reset registers even required in addition to reset pin?
                 0   : data <= 'h1280;   // COM7     Reset
                 1   : data <= 'h1280;   // Delay after reset
                 2   : data <= 'h1100;   // CLKRC    Prescaler - Fin/(1+1)

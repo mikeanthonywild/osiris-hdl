@@ -7,7 +7,7 @@
  * Instantiates ov7670_capture module for testing.
  */
 
- module ov7670_capture_dut;
+module ov7670_capture_dut;
 
     reg         pclk_24; // 24MHz Pixel clock
     reg         reset_n; // Synchronous reset

@@ -14,10 +14,12 @@ module ov7670_init (
     input               reset_n,    // Synchronous reset
     input               continue,   // Continue with register intialisation
     output reg [15:0]   data,       // Register address and value for SCCB
-    output              done,       // Register initialisation finished
+    output              done        // Register initialisation finished
 );
 
     reg [5:0] step;
+
+    assign done = data == 'hffff;
 
     always @(posedge clk) begin
         if (!reset_n) begin
@@ -25,7 +27,7 @@ module ov7670_init (
             step <= 0;
             data <= 'h0000;
         end else begin
-            if (continue) begin
+            if (continue && !done) begin
                 step <= step + 1;
             end 
 
@@ -93,7 +95,7 @@ module ov7670_init (
                 53  : data <= 'haa94;   // NALG     AEC algo select
                 54  : data <= 'h13e5;   // COM8     AGC settings
 
-                default: data <= 1;
+                default: data <= 'hffff;
             endcase
         end
     end

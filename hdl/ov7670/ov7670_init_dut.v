@@ -9,23 +9,23 @@
 
 module ov7670_init_dut;
 
-    reg         clk,        // Core clock
-    reg         reset_n,    // Synchronous reset
-    reg         continue,   // Continue with register intialisation
-    wire [15:0] data,       // Register address and value for SCCB
-    wire        done,       // Register initialisation finished
+    reg         clk;        // Core clock
+    reg         reset_n;    // Synchronous reset
+    reg         _continue;  // Continue with register intialisation
+    wire [15:0] data;       // Register address and value for SCCB
+    wire        done;       // Register initialisation finished
 
     initial begin
         $dumpfile("tests/output/ov7670_init.vcd");
         $dumpvars;
-        $from_myhdl(clk, reset_n);
+        $from_myhdl(clk, reset_n, _continue);
         $to_myhdl(data, done);
     end
 
     ov7670_init ov7670_init (
         .clk(clk),
         .reset_n(reset_n),
-        .continue(continue),
+        .continue(_continue),
         .data(data),
         .done(done)
     );

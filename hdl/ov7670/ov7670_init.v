@@ -32,8 +32,34 @@ module ov7670_init (
             end 
 
             // Data = {REG_ADDR, REG_VALUE}
-            // Register init sequence   // REG      DESCRIPTION
+            // Register init sequence   // REG              DESCRIPTION
             case (step)
+                0   : data <= 'h1280;   // COM7             Reset
+                1   : data <= 'h1280;   // COM7             Delay after reset
+
+                // Register settings from Implementation Guide table 2-2.
+                // TODO: WHY ARE WE DIVIDING INPUT CLOCK BY TWO???!!!
+                // ALL OF THIS IS CONTRADICTED. Implementation guide 3.2.1:
+                // FINT = F * PLL / (2 * CLKRC + 1)
+                // DATASHEET:
+                // FINT = F / (CLKRC + 1)
+                2   : data <= 'h1101;   // CLKRC            Prescaler f = XCLK / (1 + 1)
+                3   : data <= 'h1201;   // COM7             VGA Bayer RAW output
+                4   : data <= 'h0c00;   // COM3             No scaling or DCW - this is default
+                5   : data <= 'h3e00;   // COM14            No PCLK divider - also default
+                // TODO: WHAT ARE ALL OF THESE FOR? Linux driver refers to them
+                // as magic scaling registers. No-one even knows! Read implementation
+                // guide part 6.2.
+                6   : data <= 'h703a;   // SCALING_XSC      Horizontal scaling - default
+                7   : data <= 'h7135;   // SCALING_YSC      Vertical scaling - default
+                8   : data <= 'h7211;   // SCALING_DCWCTR   H+V downsample by 2 - default
+                9   : data <= 'h73f0;   // SCALING_PCLK_DIV PCLK preserved? Uses reserved bits
+                10  : data <= 'ha202;   // SCALING_PCLK_DELAY Scaling output delay 2 - default
+
+
+                /*
+                 * THESE ARE FOR A MORE SPECIALISED SYSTEM. UNTIL WE UNDERSTAND
+                 * HOW IT WORKS, IT'S BEST NOT TO USE THESE SETTINGS.
                 // Are reset registers even required in addition to reset pin?
                 0   : data <= 'h1280;   // COM7     Reset
                 1   : data <= 'h1280;   // Delay after reset
@@ -94,6 +120,7 @@ module ov7670_init (
                 52  : data <= 'ha990;   // TPH      Total prob high
                 53  : data <= 'haa94;   // NALG     AEC algo select
                 54  : data <= 'h13e5;   // COM8     AGC settings
+                */
 
                 default: data <= 'hffff;
             endcase

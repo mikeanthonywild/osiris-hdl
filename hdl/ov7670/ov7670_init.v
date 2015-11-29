@@ -17,7 +17,7 @@ module ov7670_init (
     output              done        // Register initialisation finished
 );
 
-    reg [5:0] step;
+    reg [3:0] step;
 
     assign done = data == 'hffff;
 
@@ -56,6 +56,7 @@ module ov7670_init (
                 9   : data <= 'h73f0;   // SCALING_PCLK_DIV PCLK preserved? Uses reserved bits
                 10  : data <= 'ha202;   // SCALING_PCLK_DELAY Scaling output delay 2 - default
 
+                default: data <= 'hffff;
 
                 /*
                  * THESE ARE FOR A MORE SPECIALISED SYSTEM. UNTIL WE UNDERSTAND
@@ -121,8 +122,6 @@ module ov7670_init (
                 53  : data <= 'haa94;   // NALG     AEC algo select
                 54  : data <= 'h13e5;   // COM8     AGC settings
                 */
-
-                default: data <= 'hffff;
             endcase
         end
     end

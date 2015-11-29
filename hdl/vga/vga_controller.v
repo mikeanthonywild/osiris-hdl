@@ -13,14 +13,14 @@
 module vga_controller (
     input               vga_clk_25,     // VGA pixel clock (640x480 = 25 MHz)
     input               reset_n,        // Synchronous reset
-    input [7:0]         din,            // RAW pixel value
+    input [2:0]         din,            // RAW pixel value
     input               test_pattern,   // Output test pattern
-    output reg [15:0]   addr,           // Framebuffer read address
+    output reg [16:0]   addr,           // Framebuffer read address
     output              vsync,          // Vetical synchronisation signal
     output              hsync,          // Horizontal synchronisation signal
-    output [7:0]        R,              // VGA red component
-    output [7:0]        G,              // VGA green component
-    output [7:0]        B               // VGA blue component
+    output [2:0]        R,              // VGA red component
+    output [2:0]        G,              // VGA green component
+    output [1:0]        B               // VGA blue component
 );
 
     reg         memory_ready;
@@ -34,7 +34,7 @@ module vga_controller (
     localparam H_BACK_PORCH     = 48;
     localparam BLANK_WIDTH      = H_FRONT_PORCH + H_SYNC_PULSE + H_BACK_PORCH;
     localparam MAX_H_COUNT      = DISPLAY_WIDTH + BLANK_WIDTH;
-    localparam FRAMEBUF_WIDTH   = 176;
+    localparam FRAMEBUF_WIDTH   = 320;
 
     localparam DISPLAY_HEIGHT   = 480;
     localparam V_FRONT_PORCH    = 10;
@@ -42,7 +42,7 @@ module vga_controller (
     localparam V_BACK_PORCH     = 33;
     localparam BLANK_HEIGHT     = V_FRONT_PORCH + V_SYNC_PULSE + V_BACK_PORCH;
     localparam MAX_V_COUNT      = DISPLAY_HEIGHT + BLANK_HEIGHT;
-    localparam FRAMEBUF_HEIGHT  = 144;
+    localparam FRAMEBUF_HEIGHT  = 240;
 
     // Combinatorial VGA sync logic
     assign vsync = (v_count >= (DISPLAY_HEIGHT + V_FRONT_PORCH)) && 
@@ -51,14 +51,14 @@ module vga_controller (
         (h_count >= (MAX_H_COUNT - H_BACK_PORCH)); 
 
     // Pixel output - the fuck is this?! Tidy this up!
-    assign R = test_pattern ?   ((v_count % 2) ? 255 : 0)   :                       // Test pattern
+    assign R = test_pattern ?   ((v_count % 2) ? 'h7 : 0)   :                       // Test pattern
                (h_count < FRAMEBUF_WIDTH && v_count < FRAMEBUF_HEIGHT) ? din   :    // Framebuffer
                0;                                                                   // Blank
-    assign G = test_pattern ?   ((v_count % 2) ? 255 : 0)   :
+    assign G = test_pattern ?   ((v_count % 2) ? 'h7 : 0)   :
                (h_count < FRAMEBUF_WIDTH && v_count < FRAMEBUF_HEIGHT) ? din   :
                0;
-    assign B = test_pattern ?   ((v_count % 2) ? 255 : 0)   :
-               (h_count < FRAMEBUF_WIDTH && v_count < FRAMEBUF_HEIGHT) ? din   :
+    assign B = test_pattern ?   ((v_count % 2) ? 'h3 : 0)   :
+               (h_count < FRAMEBUF_WIDTH && v_count < FRAMEBUF_HEIGHT) ? din[2:1]   :
                0;
 
 

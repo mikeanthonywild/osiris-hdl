@@ -43,7 +43,7 @@ module ov7670_controller (
         .taken(continue_init),
         .send(i2c_send),
         .id(camera_addr),
-        .reg(data[15:8]),
+        .reg_addr(data[15:8]),
         .value(data[7:0])
     );
 

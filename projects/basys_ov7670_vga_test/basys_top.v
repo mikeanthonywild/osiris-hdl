@@ -64,7 +64,7 @@ module basys_top (
         .dout(framebuf_din)
     );
 
-    block_ram_framebuf your_instance_name (
+    block_ram_framebuf block_ram_framebuf (
         .clka(pclk_12), // input clka
         .wea(framebuf_we), // input [0 : 0] wea
         .addra(framebuf_addra), // input [16 : 0] addra

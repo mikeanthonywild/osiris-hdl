@@ -16,7 +16,7 @@ module ov7670_capture_dut;
     reg         href; // Horizontal timing reference
     reg [7:0]   d; // Pixel data from sensor
     wire [16:0] addr; // Framebuffer address
-    wire [2:0]  dout; // Data to write to framebuffer
+    wire [1:0]  dout; // Data to write to framebuffer
 
     initial begin
         $dumpfile("tests/output/ov7670_capture.vcd");

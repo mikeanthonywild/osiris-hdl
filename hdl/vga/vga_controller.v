@@ -13,7 +13,7 @@
 module vga_controller (
     input               vga_clk_25,     // VGA pixel clock (640x480 = 25 MHz)
     input               reset_n,        // Synchronous reset
-    input [2:0]         din,            // RAW pixel value
+    input [1:0]         din,            // RAW pixel value
     input               test_pattern,   // Output test pattern
     output reg [16:0]   addr,           // Framebuffer read address
     output              vsync,          // Vetical synchronisation signal
@@ -58,7 +58,7 @@ module vga_controller (
                (h_count < FRAMEBUF_WIDTH && v_count < FRAMEBUF_HEIGHT) ? din   :
                0;
     assign B = test_pattern ?   ((v_count % 2) ? 'h3 : 0)   :
-               (h_count < FRAMEBUF_WIDTH && v_count < FRAMEBUF_HEIGHT) ? din[2:1]   :
+               (h_count < FRAMEBUF_WIDTH && v_count < FRAMEBUF_HEIGHT) ? din   :
                0;
 
 

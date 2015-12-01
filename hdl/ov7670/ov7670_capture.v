@@ -19,7 +19,7 @@ module ov7670_capture (
     input               href,       // Horizontal timing reference
     input [7:0]         d,          // RAW pixel data from sensor
     output reg [16:0]   addr,       // Framebuffer address
-    output reg [2:0]    dout        // Data to write to framebuffer
+    output reg [1:0]    dout        // Data to write to framebuffer
 );
 
     reg [16:0] next_addr;
@@ -36,7 +36,7 @@ module ov7670_capture (
                     addr <= 0;
                 end else if (href) begin
                     // Clock data from sensor into framebuffer
-                    dout <= d[7:5];
+                    dout <= d[7:6];
                     addr <= next_addr;  // Output address must lag by 1
                     next_addr <= next_addr + 1;
                 end

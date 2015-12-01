@@ -10,7 +10,7 @@ def _tb_vga_controller():
     # Signals and interfaces etc.
     vga_clk_25 = Clock()
     reset_n = Reset()
-    din = Signal(intbv(0)[8:])
+    din = Signal(intbv(0)[2:])
     test_pattern = Signal(0)
     addr = Signal(intbv(0)[17:])
     vsync = Signal(0)
@@ -56,7 +56,7 @@ def test_vga_output_from_framebuffer():
             for line in range(480):
                 for col in range(640):
                     if col < image_data.size[0] and line < image_data.size[1]:
-                        expected_pixel = image_pixels[col, line] >> 5
+                        expected_pixel = image_pixels[col, line] >> 6
                     else:
                         expected_pixel = 0
 
@@ -74,7 +74,7 @@ def test_vga_output_from_framebuffer():
             x = int(addr) % image_data.size[0]
             y = int(addr) / image_data.size[0]
             try:
-                din.next = image_pixels[x, y] >> 5
+                din.next = image_pixels[x, y] >> 6
             except IndexError:
                 pass
                 #print("Index error [{}, {}]".format(x, y))
@@ -142,17 +142,17 @@ def test_vga_output_rgb_coherence():
 
         @instance
         def stimulus():
-            din.next = 0xff >> 5
+            din.next = 0xff >> 6
             yield reset_n.posedge
             
             # Wait a clock period to latch first address in to RAM
             yield vga_clk_25.posedge
 
             try:
-                assert R == G and (G >> 1) == B
+                assert R == G == B
             except AssertionError:
                 print("Pixel coherence mismatch. Captured [{}, {}, {}], should be [{}, {}, {}]".format(
-                      R, G, B, R, R, R >> 1))
+                      R, G, B, R, R, R))
                 raise AssertionError
 
             raise StopSimulation

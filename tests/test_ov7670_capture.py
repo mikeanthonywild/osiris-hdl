@@ -15,7 +15,7 @@ def _tb_ov7670_capture():
     href = Signal(0)
     d = Signal(intbv(0)[8:])
     addr = Signal(intbv(0)[17:])
-    dout = Signal(intbv(0)[3:])
+    dout = Signal(intbv(0)[2:])
 
     dut = Cosimulation('vvp -m ./myhdl.vpi ./bin/ov7670/ov7670_capture', 
                            pclk_12=pclk_12, reset_n=reset_n, start=start, 
@@ -70,7 +70,7 @@ def test_ov7670_capture():
                 for x in range(image_data.size[0]):
 
                     # Pixel output is only 3 bits, so rshift the input pixel
-                    expected = image_pixels[x, y] >> 5
+                    expected = image_pixels[x, y] >> 6
 
                     try:
                         assert capture_pixels[x, y] == expected

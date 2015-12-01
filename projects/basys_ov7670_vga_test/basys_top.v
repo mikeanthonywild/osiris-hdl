@@ -24,8 +24,8 @@ module basys_top (
     output          ov7670_reset,   // Reset signal
     output          xclk_25,        // 25MHz OV7670 system clock0 - should be 24MHz!
 
-    output [2:0]    vga_r,          // Output red channel
-    output [2:0]    vga_g,          // Output green channel
+    output [1:0]    vga_r,          // Output red channel
+    output [1:0]    vga_g,          // Output green channel
     output [1:0]    vga_b,          // Output blue channel
     output          vga_vsync,      // VGA VSYNC signal      
     output          vga_hsync       // VGA HSYNC signal    

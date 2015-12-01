@@ -15,7 +15,7 @@ module ov7670_controller (
     output  start_capture,  // Signal the capture module to start
     output  ov7670_reset,   // Camera IC reset registers (active high)
     output  ov7670_pwrdn,   // Camera IC power down mode (active low)
-    output  sda,            // SCCB data
+    inout   sda,            // SCCB data
     output  scl             // SCCB clock
 );
 

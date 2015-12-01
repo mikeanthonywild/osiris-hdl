@@ -11,6 +11,7 @@
 module basys_top (
     input               pclk_12,        // Pixel clock from OV7670
     input               clk_25,         // Core clock
+    input               reset_n,        // Reset button - TODO: Does this pose CDC issues?
 
     input               ov7670_vsync,   // OV7670 VSYNC
     input               ov7670_href     // OV7670 HREF
@@ -30,30 +31,46 @@ module basys_top (
     output reg          vga_hsync       // VGA HSYNC signal     
 );
 
-// Instantiate core modules
-ov7670_capture ov7670_capture (
-    .pclk_12(pclk_12),
-    .reset_n(REPLACE_ME),
-    .start(REPLACE_ME),
-    .vsync(ov7670_vsync),
-    .href(ov7670_href),
-    .d(ov7670_d),
-    .addr(REPLACE_ME),
-    .dout(REPLACE_ME)
-);
+    wire start_capture;
+    wire test_pattern;
 
-// FRAMEBUFFER HERE
+    assign test_pattern = 0;
 
-ov7670_controller ov7670_controller (
-    
-);
-/*
-    input   clk,            // Core clock
-    input   reset_n,        // Synchronous reset
-    output  start_capture,  // Signal the capture module to start
-    output  ov7670_reset,   // Camera IC reset registers (active high)
-    output  ov7670_pwrdn,   // Camera IC power down mode (active low)
-    output  sda,            // SCCB data
-    output  scl             // SCCB clock
-    */
+    // Instantiate core modules
+    ov7670_controller ov7670_controller (
+        .clk(clk_25),
+        .reset_n(reset_n),
+        .start_capture(start_capture), // TODO: IS THIS A CDC ISSUE?
+        .ov7670_reset(ov7670_reset),
+        .ov7670_pwrdn(ov7670_pwrdn),
+        .sda(sda),
+        .scl(scl)
+    );
+
+    ov7670_capture ov7670_capture (
+        .pclk_12(pclk_12),
+        .reset_n(reset_n),
+        .start(start_capture),
+        .vsync(ov7670_vsync),
+        .href(ov7670_href),
+        .d(ov7670_d),
+        .addr(REPLACE_ME),
+        .dout(REPLACE_ME)
+    );
+
+    // FRAMEBUFFER HERE
+
+    vga_controller vga_controller (
+        .vga_clk_25(clk_25),
+        .reset_n(reset_n),
+        .din(REPLACE_ME),
+        .test_pattern(test_pattern),
+        .addr(REPLACE_ME),
+        .vsync(vga_vsync),
+        .hsync(vga_hsync),
+        .R(vga_r),
+        .G(vga_g),
+        .B(vga_b)
+    );
+
 endmodule

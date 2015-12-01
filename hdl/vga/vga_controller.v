@@ -18,8 +18,8 @@ module vga_controller (
     output reg [16:0]   addr,           // Framebuffer read address
     output              vsync,          // Vetical synchronisation signal
     output              hsync,          // Horizontal synchronisation signal
-    output [2:0]        R,              // VGA red component
-    output [2:0]        G,              // VGA green component
+    output [1:0]        R,              // VGA red component
+    output [1:0]        G,              // VGA green component
     output [1:0]        B               // VGA blue component
 );
 

@@ -11,7 +11,8 @@
 module basys_top (
     input           pclk_12,        // Pixel clock from OV7670
     input           clk_25,         // Core clock
-    input           reset_n,        // Reset button - TODO: Does this pose CDC issues?
+    input           reset_btn,      // Reset button - TODO: Does this pose CDC issues?
+    input           test_pattern,   // Test pattern switch
 
     input           ov7670_vsync,   // OV7670 VSYNC
     input           ov7670_href,    // OV7670 HREF
@@ -24,23 +25,24 @@ module basys_top (
     output          ov7670_reset,   // Reset signal
     output          xclk_25,        // 25MHz OV7670 system clock0 - should be 24MHz!
 
-    output [1:0]    vga_r,          // Output red channel
-    output [1:0]    vga_g,          // Output green channel
+    output [2:0]    vga_r,          // Output red channel
+    output [2:0]    vga_g,          // Output green channel
     output [1:0]    vga_b,          // Output blue channel
     output          vga_vsync,      // VGA VSYNC signal      
     output          vga_hsync       // VGA HSYNC signal    
 );
 
     wire        start_capture;
-    wire        test_pattern;
     wire [16:0] framebuf_addra;
     wire [16:0] framebuf_addrb;
     wire [1:0]  framebuf_din;
     wire [1:0]  framebuf_dout;
     wire        framebuf_we;
+    wire        reset_n;
 
-    assign test_pattern = 0;
-    assign we = 1;
+    assign framebuf_we = 1;
+    assign xclk_25 = clk_25;
+    assign reset_n = ~reset_btn;
 
     // Instantiate core modules
     ov7670_controller ov7670_controller (
@@ -69,7 +71,7 @@ module basys_top (
         .wea(framebuf_we), // input [0 : 0] wea
         .addra(framebuf_addra), // input [16 : 0] addra
         .dina(framebuf_din), // input [1 : 0] dina
-        .clkb(vga_clk_25), // input clkb
+        .clkb(clk_25), // input clkb
         .addrb(framebuf_addrb), // input [16 : 0] addrb
         .doutb(framebuf_dout) // output [1 : 0] doutb
     );

@@ -15,8 +15,8 @@ def _tb_vga_controller():
     addr = Signal(intbv(0)[17:])
     vsync = Signal(0)
     hsync = Signal(0)
-    R = Signal(intbv(0)[3:])
-    G = Signal(intbv(0)[3:])
+    R = Signal(intbv(0)[2:])
+    G = Signal(intbv(0)[2:])
     B = Signal(intbv(0)[2:])
 
     dut = Cosimulation('vvp -m ./myhdl.vpi ./bin/vga/vga_controller',
@@ -118,7 +118,7 @@ def test_vga_output_from_test_pattern():
                 for col in range(640):
                     try:
                         # Output is grayscale, so just check R channel
-                        expected_pixel = ((line % 2) * 255) >> 5
+                        expected_pixel = ((line % 2) * 255) >> 6
                         assert capture_pixels[col, line][0] == expected_pixel
                     except AssertionError:
                         print("Pixel mismatch [{}, {}]. Captured {}, should be {}".format(

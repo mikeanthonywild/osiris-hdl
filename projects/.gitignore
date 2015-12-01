@@ -41,6 +41,8 @@
 *_summary.xml
 *_usage.xml
 *_xst.xrpt
+*planAhead.ngc2edif.log
+*planAhead_*.debug
 
 # project-wide generated files
 *.gise
@@ -56,3 +58,5 @@ xst/
 tmp/
 _ngo/
 _xmsgs/
+.Xil/
+planAhead_*/

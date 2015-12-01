@@ -1,0 +1,30 @@
+
+
+NET "ov7670_d[7]" LOC = P77;
+NET "ov7670_d[6]" LOC = P86;
+NET "ov7670_d[5]" LOC = P76;
+NET "ov7670_d[4]" LOC = P85;
+NET "ov7670_d[3]" LOC = P75;
+NET "ov7670_d[2]" LOC = P59;
+NET "ov7670_d[1]" LOC = P74;
+NET "ov7670_d[0]" LOC = P58;
+NET "vga_b[1]" LOC = P43;
+NET "vga_b[0]" LOC = P44;
+NET "vga_g[2]" LOC = P50;
+NET "vga_g[1]" LOC = P51;
+NET "vga_g[0]" LOC = P52;
+NET "vga_r[2]" LOC = P67;
+NET "vga_r[1]" LOC = P68;
+NET "vga_r[0]" LOC = P70;
+NET "xclk_25" LOC = P94;
+NET "test_pattern" LOC = P38;
+NET "clk_25" LOC = P54;
+NET "ov7670_href" LOC = P93;
+NET "ov7670_vsync" LOC = P87;
+NET "pclk_12" LOC = P88;
+NET "pclk_12" CLOCK_DEDICATED_ROUTE = TRUE;
+NET "reset_btn" LOC = P69;
+NET "scl" LOC = P82;
+NET "sda" LOC = P92;
+NET "vga_hsync" LOC = P39;
+NET "vga_vsync" LOC = P35;

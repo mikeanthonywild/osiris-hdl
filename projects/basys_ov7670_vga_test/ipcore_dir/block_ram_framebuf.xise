@@ -14,16 +14,7 @@
 
   <version xil_pn:ise_version="14.7" xil_pn:schema_version="2"/>
 
-  <files>
-    <file xil_pn:name="block_ram_framebuf.ngc" xil_pn:type="FILE_NGC"/>
-    <file xil_pn:name="block_ram_framebuf.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="3"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="3"/>
-      <association xil_pn:name="PostMapSimulation" xil_pn:seqID="3"/>
-      <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="3"/>
-      <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="3"/>
-    </file>
-  </files>
+  <files/>
 
   <properties>
     <property xil_pn:name="Auto Implementation Top" xil_pn:value="false" xil_pn:valueState="non-default"/>
@@ -49,8 +40,8 @@
     <!--                                                                                  -->
     <property xil_pn:name="PROP_DesignName" xil_pn:value="block_ram_framebuf" xil_pn:valueState="non-default"/>
     <property xil_pn:name="PROP_DevFamilyPMName" xil_pn:value="spartan3e" xil_pn:valueState="default"/>
-    <property xil_pn:name="PROP_intProjectCreationTimestamp" xil_pn:value="2015-12-01T17:21:42" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="PROP_intWbtProjectID" xil_pn:value="34425118B06727CE15FEED320A0E0184" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="PROP_intProjectCreationTimestamp" xil_pn:value="2015-12-01T19:28:25" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="PROP_intWbtProjectID" xil_pn:value="7445508E33C498837F23E344BF0F55A4" xil_pn:valueState="non-default"/>
     <property xil_pn:name="PROP_intWorkingDirLocWRTProjDir" xil_pn:value="Same" xil_pn:valueState="non-default"/>
     <property xil_pn:name="PROP_intWorkingDirUsed" xil_pn:value="No" xil_pn:valueState="non-default"/>
   </properties>

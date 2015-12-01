@@ -28,13 +28,19 @@ module basys_top (
     output [2:0]    vga_g,          // Output green channel
     output [1:0]    vga_b,          // Output blue channel
     output          vga_vsync,      // VGA VSYNC signal      
-    output          vga_hsync       // VGA HSYNC signal     
+    output          vga_hsync       // VGA HSYNC signal    
 );
 
-    wire start_capture;
-    wire test_pattern;
+    wire        start_capture;
+    wire        test_pattern;
+    wire [16:0] framebuf_addra;
+    wire [16:0] framebuf_addrb;
+    wire [1:0]  framebuf_din;
+    wire [1:0]  framebuf_dout;
+    wire        framebuf_we;
 
     assign test_pattern = 0;
+    assign we = 1;
 
     // Instantiate core modules
     ov7670_controller ov7670_controller (
@@ -54,18 +60,26 @@ module basys_top (
         .vsync(ov7670_vsync),
         .href(ov7670_href),
         .d(ov7670_d),
-        .addr(REPLACE_ME),
-        .dout(REPLACE_ME)
+        .addr(framebuf_addra),
+        .dout(framebuf_din)
     );
 
-    // FRAMEBUFFER HERE
+    block_ram_framebuf your_instance_name (
+        .clka(pclk_12), // input clka
+        .wea(framebuf_we), // input [0 : 0] wea
+        .addra(framebuf_addra), // input [16 : 0] addra
+        .dina(framebuf_din), // input [1 : 0] dina
+        .clkb(vga_clk_25), // input clkb
+        .addrb(framebuf_addrb), // input [16 : 0] addrb
+        .doutb(framebuf_dout) // output [1 : 0] doutb
+    );
 
     vga_controller vga_controller (
         .vga_clk_25(clk_25),
         .reset_n(reset_n),
-        .din(REPLACE_ME),
+        .din(framebuf_dout),
         .test_pattern(test_pattern),
-        .addr(REPLACE_ME),
+        .addr(framebuf_addrb),
         .vsync(vga_vsync),
         .hsync(vga_hsync),
         .R(vga_r),

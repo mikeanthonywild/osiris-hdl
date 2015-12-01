@@ -38,6 +38,7 @@ module ov7670_controller (
     ); 
 
     i2c_sender i2c_sender (
+        .clk(clk),
         .siod(sda),
         .sioc(scl),
         .taken(continue_init),

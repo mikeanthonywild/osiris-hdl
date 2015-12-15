@@ -1,7 +1,7 @@
 
 # PlanAhead Launch Script for Pre-Synthesis Floorplanning, created by Project Navigator
 
-create_project -name basys_ov7670_vga_test -dir "/home/mike/Documents/osiris-hdl/projects/basys_ov7670_vga_test/planAhead_run_3" -part xc3s250etq144-5
+create_project -name basys_ov7670_vga_test -dir "/home/mike/Documents/osiris-hdl/projects/basys_ov7670_vga_test/planAhead_run_4" -part xc3s250etq144-5
 set_param project.pinAheadLayout yes
 set srcset [get_property srcset [current_run -impl]]
 set_property target_constrs_file "basys_top.ucf" [current_fileset -constrset]

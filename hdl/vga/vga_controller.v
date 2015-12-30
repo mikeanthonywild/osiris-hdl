@@ -1,4 +1,4 @@
-/* 
+/*
  * vga_controller.v
  *
  * Author: Mike Wild <m.a.wild@se12.qmul.ac.uk>
@@ -24,8 +24,8 @@ module vga_controller (
 );
 
     reg         memory_ready;
-    reg [9:0]   h_count;      
-    reg [9:0]   v_count;       
+    reg [9:0]   h_count;
+    reg [9:0]   v_count;
 
     // Consts
     localparam DISPLAY_WIDTH    = 640;
@@ -45,19 +45,19 @@ module vga_controller (
     localparam FRAMEBUF_HEIGHT  = 240;
 
     // Combinatorial VGA sync logic
-    assign vsync = (v_count >= (DISPLAY_HEIGHT + V_FRONT_PORCH)) && 
+    assign vsync = (v_count >= (DISPLAY_HEIGHT + V_FRONT_PORCH)) &&
         (v_count < (MAX_V_COUNT - V_BACK_PORCH));
-    assign hsync = (h_count < (DISPLAY_WIDTH + H_FRONT_PORCH)) || 
-        (h_count >= (MAX_H_COUNT - H_BACK_PORCH)); 
+    assign hsync = (h_count < (DISPLAY_WIDTH + H_FRONT_PORCH)) ||
+        (h_count >= (MAX_H_COUNT - H_BACK_PORCH));
 
     // Pixel output - the fuck is this?! Tidy this up!
-    assign R = test_pattern ?   ((v_count % 2) ? 'h7 : 0)   :                       // Test pattern
+    assign R = test_pattern ?   ((h_count % 2) ? 'h7 : 0)   :                       // Test pattern
                (h_count < FRAMEBUF_WIDTH && v_count < FRAMEBUF_HEIGHT) ? din   :    // Framebuffer
                0;                                                                   // Blank
-    assign G = test_pattern ?   ((v_count % 2) ? 'h7 : 0)   :
+    assign G = test_pattern ?   ((h_count % 2) ? 'h7 : 0)   :
                (h_count < FRAMEBUF_WIDTH && v_count < FRAMEBUF_HEIGHT) ? din   :
                0;
-    assign B = test_pattern ?   ((v_count % 2) ? 'h3 : 0)   :
+    assign B = test_pattern ?   ((h_count % 2) ? 'h3 : 0)   :
                (h_count < FRAMEBUF_WIDTH && v_count < FRAMEBUF_HEIGHT) ? din   :
                0;
 
@@ -74,24 +74,32 @@ module vga_controller (
                 //Increment counters to drive VGA sync logic
                 if (h_count < MAX_H_COUNT-1) begin
                     h_count <= h_count + 1;
+
+                    // Increment framebuffer address while we're drawing framebuffer
+                    // and also twice more for the last two pixels of the line to
+                    // ensure that the
+                    if (v_count < MAX_V_COUNT-1) begin
+                        if (h_count+1 < FRAMEBUF_WIDTH-1  && v_count < FRAMEBUF_HEIGHT ||
+                            h_count == MAX_H_COUNT-2) begin
+                            addr <= addr + 1;
+                        end
+                    end else begin
+                        if (h_count+1 < FRAMEBUF_WIDTH-1  && v_count < FRAMEBUF_HEIGHT) begin
+                            addr <= addr + 1;
+                        end else if (h_count == MAX_H_COUNT-2) begin
+                            addr <= 0;
+                        end
+                    end
                 end else begin
                     // New line
                     h_count <= 0;
+                    addr <= addr + 1;
                     if (v_count < MAX_V_COUNT-1) begin
                         v_count <= v_count + 1;
                     end else begin
                         // New frame
                         v_count <= 0;
-                        addr <= 0;
                     end
-                end
-
-                // Increment framebuffer address while we're drawing framebuffer
-                // and also twice more for the last to pixels of the line to 
-                // ensure that the
-                if (h_count+1 < FRAMEBUF_WIDTH-1  && v_count < FRAMEBUF_HEIGHT ||
-                    h_count == MAX_H_COUNT-2 || h_count == MAX_H_COUNT-1) begin
-                    addr <= addr + 1;
                 end
             end else begin
                 // Read first pixel and increment address

@@ -1,4 +1,5 @@
 # Output products list for <block_ram_framebuf>
+_xmsgs/pn_parser.xmsgs
 block_ram_framebuf/blk_mem_gen_v7_3_readme.txt
 block_ram_framebuf/doc/blk_mem_gen_v7_3_vinfo.html
 block_ram_framebuf/doc/pg058-blk-mem-gen.pdf
@@ -45,6 +46,7 @@ block_ram_framebuf/simulation/timing/wave_mti.do
 block_ram_framebuf/simulation/timing/wave_ncsim.sv
 block_ram_framebuf.asy
 block_ram_framebuf.gise
+block_ram_framebuf.mif
 block_ram_framebuf.ngc
 block_ram_framebuf.v
 block_ram_framebuf.veo

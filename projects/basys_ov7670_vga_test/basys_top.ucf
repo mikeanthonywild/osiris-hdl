@@ -24,7 +24,9 @@ NET "ov7670_vsync" LOC = P87;
 NET "pclk_12" LOC = P88;
 NET "pclk_12" CLOCK_DEDICATED_ROUTE = TRUE;
 NET "reset_btn" LOC = P69;
-NET "scl" LOC = P82;
-NET "sda" LOC = P92;
+NET "scl" LOC = P82 | DRIVE = 2 | PULLUP;
+NET "sda" LOC = P92 | DRIVE = 2 | PULLUP;
 NET "vga_hsync" LOC = P39;
 NET "vga_vsync" LOC = P35;
+
+# PlanAhead Generated IO constraints

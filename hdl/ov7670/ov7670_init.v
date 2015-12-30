@@ -1,4 +1,4 @@
-/* 
+/*
  * ov7670_init.v
  *
  * Author: Mike Wild <m.a.wild@se12.qmul.ac.uk>
@@ -29,7 +29,7 @@ module ov7670_init (
         end else begin
             if (continue && !done) begin
                 step <= step + 1;
-            end 
+            end
 
             // Data = {REG_ADDR, REG_VALUE}
             // Register init sequence   // REG              DESCRIPTION
@@ -38,23 +38,25 @@ module ov7670_init (
                 1   : data <= 'h1280;   // COM7             Delay after reset
 
                 // Register settings from Implementation Guide table 2-2.
-                // TODO: WHY ARE WE DIVIDING INPUT CLOCK BY TWO???!!!
                 // ALL OF THIS IS CONTRADICTED. Implementation guide 3.2.1:
                 // FINT = F * PLL / (2 * CLKRC + 1)
                 // DATASHEET:
                 // FINT = F / (CLKRC + 1)
                 2   : data <= 'h1101;   // CLKRC            Prescaler f = XCLK / (1 + 1)
-                3   : data <= 'h1201;   // COM7             VGA Bayer RAW output
-                4   : data <= 'h0c00;   // COM3             No scaling or DCW - this is default
-                5   : data <= 'h3e00;   // COM14            No PCLK divider - also default
+                3   : data <= 'h6b4a;   // DBLV             Prescaler f = XCLK / (1 + 1)
+                4   : data <= 'h1211;   // COM7             QVGA Processed Bayer output
+                5   : data <= 'h0c04;   // COM3             Enable scaling, DCW disabled
+                6   : data <= 'h3e1a;   // COM14            DCW and scaling PCLK, controlled by
+                //                                          register [2:0]  + PCLK_DIV.
+                //                                          Divide by 4
                 // TODO: WHAT ARE ALL OF THESE FOR? Linux driver refers to them
                 // as magic scaling registers. No-one even knows! Read implementation
                 // guide part 6.2.
-                6   : data <= 'h703a;   // SCALING_XSC      Horizontal scaling - default
-                7   : data <= 'h7135;   // SCALING_YSC      Vertical scaling - default
-                8   : data <= 'h7211;   // SCALING_DCWCTR   H+V downsample by 2 - default
-                9   : data <= 'h73f0;   // SCALING_PCLK_DIV PCLK preserved? Uses reserved bits
-                10  : data <= 'ha202;   // SCALING_PCLK_DELAY Scaling output delay 2 - default
+                7   : data <= 'h703a;   // SCALING_XSC      Horizontal scaling - default
+                8   : data <= 'h7135;   // SCALING_YSC      Vertical scaling - default
+                9   : data <= 'h7211;   // SCALING_DCWCTR   H+V downsample by 2 - default
+                10  : data <= 'h73f9;   // SCALING_PCLK_DIV PCLK preserved? Uses reserved bits
+                11  : data <= 'ha202;   // SCALING_PCLK_DELAY Scaling output delay 2 - default
 
                 default: data <= 'hffff;
 
@@ -78,7 +80,7 @@ module ov7670_init (
                 11  : data <= 'h32a4;   // HREF     Edge offset and low 3 bits of HSTART and HSTOP
                 12  : data <= 'h1903;   // VSTART   VSYNC start (high 8 bits)
                 13  : data <= 'h1a7b;   // VSTOP    VSYNC stop (high 8 bits)
-                14  : data <= 'h030a;   // VREF     VSYNC low two bits 
+                14  : data <= 'h030a;   // VREF     VSYNC low two bits
 
                 15  : data <= 'h703a;   // SCALING_XSC
                 16  : data <= 'h7135;   // SCALING_YSC

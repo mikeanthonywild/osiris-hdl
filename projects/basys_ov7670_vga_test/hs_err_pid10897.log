@@ -1,0 +1,20 @@
+#
+# An unexpected error has occurred (6)
+#
+Stack:
+/lib/x86_64-linux-gnu/libc.so.6(+0x36d40) [0x7f0fd1741d40]
+/lib/x86_64-linux-gnu/libc.so.6(gsignal+0x39) [0x7f0fd1741cc9]
+/lib/x86_64-linux-gnu/libc.so.6(abort+0x148) [0x7f0fd17450d8]
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/lib/lnx64.o/libstlport.so.5.2(__gnu_cxx::__verbose_terminate_handler()+0x11d) [0x7f0fd1f6451d]
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/lib/lnx64.o/libstlport.so.5.2(__cxxabiv1::__terminate(void (*)())+0x6) [0x7f0fd1f626c6]
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/lib/lnx64.o/libstlport.so.5.2(+0x5f6f3) [0x7f0fd1f626f3]
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/lib/lnx64.o/libstlport.so.5.2(+0x5f7ee) [0x7f0fd1f627ee]
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/lib/lnx64.o/librdi_common.so(void boost::throw_exception<boost::lock_error>(boost::lock_error const&)+0xea) [0x7f0fd266fa9a]
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/lib/lnx64.o/librdi_common.so(boost::unique_lock<boost::mutex>::lock()+0xb6) [0x7f0fd279a3c6]
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/lib/lnx64.o/librdi_common.so(hdi::tcltasks::gui_thread_mgr::detail::thread_mgr::create()+0x21) [0x7f0fd27995e1]
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/lib/lnx64.o/librdi_common.so(hdi::tcltasks::task_manager::eval_in_tcl(Tcl_Interp*, Tcl_Obj*, char const*, bool)+0x52e) [0x7f0fd27b321e]
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/lib/lnx64.o/librdi_common.so(hdi::tcltasks::task_manager::eval_in_tcl(Tcl_Interp*, char const*, char const*, bool)+0xd4) [0x7f0fd27b3da4]
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/lib/lnx64.o/librdi_commontasks.so(+0x1ead0f) [0x7f0fca67fd0f]
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/lib/lnx64.o/libboost_thread.so(+0x10b09) [0x7f0fcf900b09]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x8182) [0x7f0fd1ad8182]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7f0fd180547d]

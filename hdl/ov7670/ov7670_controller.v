@@ -1,4 +1,4 @@
-/* 
+/*
  * ov7670_controller.v
  *
  * Author: Mike Wild <m.a.wild@se12.qmul.ac.uk>
@@ -22,10 +22,10 @@ module ov7670_controller (
     wire        continue_init;
     wire        i2c_send;
     wire [15:0] data;
-    wire [7:0]  camera_addr;    
+    wire [7:0]  camera_addr;
 
     assign ov7670_pwrdn = 1;
-    assign ov7670_reset = 0;
+    assign ov7670_reset = 1;
     assign i2c_send = ~start_capture;
     assign camera_addr = 'h42;          // Base address (0x21) with write bit
 
@@ -35,7 +35,7 @@ module ov7670_controller (
         .continue(continue_init),
         .data(data),
         .done(start_capture)
-    ); 
+    );
 
     i2c_sender i2c_sender (
         .clk(clk),

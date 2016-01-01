@@ -16,11 +16,11 @@ module vga_controller (
     input [1:0]         din,            // RAW pixel value
     input               test_pattern,   // Output test pattern
     output reg [16:0]   addr,           // Framebuffer read address
-    output              vsync,          // Vetical synchronisation signal
-    output              hsync,          // Horizontal synchronisation signal
-    output [1:0]        R,              // VGA red component
-    output [1:0]        G,              // VGA green component
-    output [1:0]        B               // VGA blue component
+    output reg          vsync,          // Vetical synchronisation signal
+    output reg          hsync,          // Horizontal synchronisation signal
+    output reg [1:0]    R,              // VGA red component
+    output reg [1:0]    G,              // VGA green component
+    output reg [1:0]    B               // VGA blue component
 );
 
     reg         memory_ready;
@@ -43,24 +43,6 @@ module vga_controller (
     localparam BLANK_HEIGHT     = V_FRONT_PORCH + V_SYNC_PULSE + V_BACK_PORCH;
     localparam MAX_V_COUNT      = DISPLAY_HEIGHT + BLANK_HEIGHT;
     localparam FRAMEBUF_HEIGHT  = 240;
-
-    // Combinatorial VGA sync logic
-    assign vsync = (v_count >= (DISPLAY_HEIGHT + V_FRONT_PORCH)) &&
-        (v_count < (MAX_V_COUNT - V_BACK_PORCH));
-    assign hsync = (h_count < (DISPLAY_WIDTH + H_FRONT_PORCH)) ||
-        (h_count >= (MAX_H_COUNT - H_BACK_PORCH));
-
-    // Pixel output - the fuck is this?! Tidy this up!
-    assign R = test_pattern ?   ((h_count % 2) ? 'h7 : 0)   :                       // Test pattern
-               (h_count < FRAMEBUF_WIDTH && v_count < FRAMEBUF_HEIGHT) ? din   :    // Framebuffer
-               0;                                                                   // Blank
-    assign G = test_pattern ?   ((h_count % 2) ? 'h7 : 0)   :
-               (h_count < FRAMEBUF_WIDTH && v_count < FRAMEBUF_HEIGHT) ? din   :
-               0;
-    assign B = test_pattern ?   ((h_count % 2) ? 'h3 : 0)   :
-               (h_count < FRAMEBUF_WIDTH && v_count < FRAMEBUF_HEIGHT) ? din   :
-               0;
-
 
     always @(posedge vga_clk_25) begin
         if (!reset_n) begin
@@ -101,6 +83,23 @@ module vga_controller (
                         v_count <= 0;
                     end
                 end
+
+                // VGA sync logic
+                vsync <= (v_count >= (DISPLAY_HEIGHT + V_FRONT_PORCH)) &&
+                    (v_count < (MAX_V_COUNT - V_BACK_PORCH));
+                hsync <= (h_count < (DISPLAY_WIDTH + H_FRONT_PORCH)) ||
+                    (h_count >= (MAX_H_COUNT - H_BACK_PORCH));
+
+                // Pixel output - the fuck is this?! Tidy this up!
+                R <= test_pattern ?   ((h_count % 2) ? 'h7 : 0)   :                       // Test pattern
+                     (h_count < FRAMEBUF_WIDTH && v_count < FRAMEBUF_HEIGHT) ? din   :    // Framebuffer
+                     0;                                                                   // Blank
+                G <= test_pattern ?   ((h_count % 2) ? 'h7 : 0)   :
+                     (h_count < FRAMEBUF_WIDTH && v_count < FRAMEBUF_HEIGHT) ? din   :
+                     0;
+                B <= test_pattern ?   ((h_count % 2) ? 'h3 : 0)   :
+                     (h_count < FRAMEBUF_WIDTH && v_count < FRAMEBUF_HEIGHT) ? din   :
+                     0;
             end else begin
                 // Read first pixel and increment address
                 addr <= 1;

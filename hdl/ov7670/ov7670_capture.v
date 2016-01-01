@@ -15,7 +15,7 @@ module ov7670_capture (
     input               pclk_12,    // 12MHz Pixel clock
     input               reset_n,    // Synchronous reset
     input               start,      // Start capturing
-    input               vsync,      //Vertical sync signal
+    input               vsync,      // Vertical sync signal
     input               href,       // Horizontal timing reference
     input [7:0]         d,          // RAW pixel data from sensor
     output reg [16:0]   addr,       // Framebuffer address
@@ -23,6 +23,7 @@ module ov7670_capture (
 );
 
     reg [16:0] next_addr;
+    reg [1:0] sync_start_pclk_12;
 
     always @(posedge pclk_12) begin
         if (!reset_n) begin
@@ -30,8 +31,14 @@ module ov7670_capture (
             addr <= 0;
             next_addr <= 0;
             dout <= 0;
+            sync_start_pclk_12 <= 0;
         end else begin
-            if (start) begin
+            // CDC sync the start capture signal
+            sync_start_pclk_12[0] <= start;
+            sync_start_pclk_12[1] <= sync_start_pclk_12[0];
+
+            // Start capture
+            if (sync_start_pclk_12[1]) begin
                 if (vsync) begin
                     addr <= 0;
                     next_addr <= 0;

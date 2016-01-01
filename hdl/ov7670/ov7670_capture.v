@@ -38,15 +38,6 @@ module ov7670_capture (
                 end else if (href) begin
                     // Clock data from sensor into framebuffer
                     dout <= d[7:6];
-                    /*
-                    if (addr < 'd1280) begin
-                        dout <= 'h3;
-                    end else if (addr < 'd38400) begin
-                        dout <= d[7:6];
-                    end else begin
-                        dout <= addr % 4;
-                    end
-                    */
                     addr <= next_addr;  // Output address must lag by 1
                     next_addr <= next_addr + 1;
                 end

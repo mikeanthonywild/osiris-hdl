@@ -63,7 +63,8 @@ COMPONENT zybo_dvi_output_rgb2dvi_0_0
     vid_pVDE : IN STD_LOGIC;
     vid_pHSync : IN STD_LOGIC;
     vid_pVSync : IN STD_LOGIC;
-    PixelClk : IN STD_LOGIC
+    PixelClk : IN STD_LOGIC;
+    SerialClk : IN STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -83,7 +84,8 @@ your_instance_name : zybo_dvi_output_rgb2dvi_0_0
     vid_pVDE => vid_pVDE,
     vid_pHSync => vid_pHSync,
     vid_pVSync => vid_pVSync,
-    PixelClk => PixelClk
+    PixelClk => PixelClk,
+    SerialClk => SerialClk
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 

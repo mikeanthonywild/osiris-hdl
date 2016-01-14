@@ -146,21 +146,63 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
-  set clk [ create_bd_port -dir I clk ]
+  set clk [ create_bd_port -dir I -type clk clk ]
+  set_property -dict [ list \
+CONFIG.FREQ_HZ {125000000} \
+ ] $clk
   set hdmi_clk_n [ create_bd_port -dir O hdmi_clk_n ]
   set hdmi_clk_p [ create_bd_port -dir O hdmi_clk_p ]
   set hdmi_d_n [ create_bd_port -dir O -from 2 -to 0 hdmi_d_n ]
   set hdmi_d_p [ create_bd_port -dir O -from 2 -to 0 hdmi_d_p ]
+  set hdmi_out_en [ create_bd_port -dir O -from 0 -to 0 hdmi_out_en ]
+
+  # Create instance: clk_wiz_0, and set properties
+  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.2 clk_wiz_0 ]
+  set_property -dict [ list \
+CONFIG.CLKIN1_JITTER_PS {80.0} \
+CONFIG.CLKOUT1_DRIVES {BUFG} \
+CONFIG.CLKOUT1_JITTER {150.675} \
+CONFIG.CLKOUT1_PHASE_ERROR {96.948} \
+CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {40} \
+CONFIG.CLKOUT2_DRIVES {BUFG} \
+CONFIG.CLKOUT2_JITTER {109.241} \
+CONFIG.CLKOUT2_PHASE_ERROR {96.948} \
+CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {200} \
+CONFIG.CLKOUT2_USED {true} \
+CONFIG.CLKOUT3_DRIVES {BUFG} \
+CONFIG.CLKOUT4_DRIVES {BUFG} \
+CONFIG.CLKOUT5_DRIVES {BUFG} \
+CONFIG.CLKOUT6_DRIVES {BUFG} \
+CONFIG.CLKOUT7_DRIVES {BUFG} \
+CONFIG.MMCM_CLKFBOUT_MULT_F {8} \
+CONFIG.MMCM_CLKIN1_PERIOD {8.0} \
+CONFIG.MMCM_CLKOUT0_DIVIDE_F {25} \
+CONFIG.MMCM_CLKOUT1_DIVIDE {5} \
+CONFIG.MMCM_COMPENSATION {ZHOLD} \
+CONFIG.MMCM_DIVCLK_DIVIDE {1} \
+CONFIG.NUM_OUT_CLKS {2} \
+CONFIG.PRIMITIVE {PLL} \
+ ] $clk_wiz_0
 
   # Create instance: rgb2dvi_0, and set properties
   set rgb2dvi_0 [ create_bd_cell -type ip -vlnv digilentinc.com:ip:rgb2dvi:1.2 rgb2dvi_0 ]
+  set_property -dict [ list \
+CONFIG.kClkRange {1} \
+CONFIG.kGenerateSerialClk {false} \
+ ] $rgb2dvi_0
+
+  # Create instance: xlconstant_0, and set properties
+  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
 
   # Create port connections
-  connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins rgb2dvi_0/PixelClk]
+  connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins clk_wiz_0/clk_in1]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins rgb2dvi_0/PixelClk]
+  connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins rgb2dvi_0/SerialClk]
   connect_bd_net -net rgb2dvi_0_TMDS_Clk_n [get_bd_ports hdmi_clk_n] [get_bd_pins rgb2dvi_0/TMDS_Clk_n]
   connect_bd_net -net rgb2dvi_0_TMDS_Clk_p [get_bd_ports hdmi_clk_p] [get_bd_pins rgb2dvi_0/TMDS_Clk_p]
   connect_bd_net -net rgb2dvi_0_TMDS_Data_n [get_bd_ports hdmi_d_n] [get_bd_pins rgb2dvi_0/TMDS_Data_n]
   connect_bd_net -net rgb2dvi_0_TMDS_Data_p [get_bd_ports hdmi_d_p] [get_bd_pins rgb2dvi_0/TMDS_Data_p]
+  connect_bd_net -net xlconstant_0_dout [get_bd_ports hdmi_out_en] [get_bd_pins xlconstant_0/dout]
 
   # Create address segments
 
@@ -169,17 +211,23 @@ proc create_root_design { parentCell } {
    guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.8
 #  -string -flagsOSRD
 preplace port hdmi_clk_n -pg 1 -y 40 -defaultsOSRD
-preplace port clk -pg 1 -lvl 1:-10 -defaultsOSRD -top
+preplace port clk -pg 1 -y 10 -defaultsOSRD
 preplace port hdmi_clk_p -pg 1 -y 20 -defaultsOSRD
 preplace portBus hdmi_d_n -pg 1 -y 80 -defaultsOSRD
+preplace portBus hdmi_out_en -pg 1 -y -120 -defaultsOSRD
 preplace portBus hdmi_d_p -pg 1 -y 60 -defaultsOSRD
-preplace inst rgb2dvi_0 -pg 1 -lvl 2 -y 40 -defaultsOSRD
-preplace netloc rgb2dvi_0_TMDS_Clk_n 1 2 1 N
-preplace netloc rgb2dvi_0_TMDS_Clk_p 1 2 1 N
-preplace netloc clk_1 1 1 1 100
-preplace netloc rgb2dvi_0_TMDS_Data_n 1 2 1 N
-preplace netloc rgb2dvi_0_TMDS_Data_p 1 2 1 N
-levelinfo -pg 1 -80 80 300 460 -top -120 -bot 270
+preplace inst xlconstant_0 -pg 1 -lvl 2 -y -120 -defaultsOSRD
+preplace inst rgb2dvi_0 -pg 1 -lvl 2 -y 60 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y -10 -defaultsOSRD
+preplace netloc rgb2dvi_0_TMDS_Clk_n 1 2 1 470
+preplace netloc rgb2dvi_0_TMDS_Clk_p 1 2 1 460
+preplace netloc clk_1 1 0 1 -70
+preplace netloc xlconstant_0_dout 1 2 1 N
+preplace netloc clk_wiz_0_clk_out1 1 1 1 100
+preplace netloc rgb2dvi_0_TMDS_Data_n 1 2 1 490
+preplace netloc clk_wiz_0_clk_out2 1 1 1 90
+preplace netloc rgb2dvi_0_TMDS_Data_p 1 2 1 480
+levelinfo -pg 1 -90 10 300 510 -top -170 -bot 180
 ",
 }
 

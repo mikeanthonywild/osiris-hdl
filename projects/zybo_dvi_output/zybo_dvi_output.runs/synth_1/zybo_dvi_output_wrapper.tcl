@@ -20,6 +20,9 @@ add_files /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_outp
 set_property used_in_implementation false [get_files -all /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/src/rgb2dvi.xdc]
 set_property used_in_implementation false [get_files -all /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/src/rgb2dvi_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output_ooc.xdc]
 set_property is_locked true [get_files /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd]
 

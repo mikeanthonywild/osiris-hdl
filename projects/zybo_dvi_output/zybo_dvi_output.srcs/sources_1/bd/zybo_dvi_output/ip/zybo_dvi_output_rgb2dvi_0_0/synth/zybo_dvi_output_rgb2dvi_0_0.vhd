@@ -64,7 +64,8 @@ ENTITY zybo_dvi_output_rgb2dvi_0_0 IS
     vid_pVDE : IN STD_LOGIC;
     vid_pHSync : IN STD_LOGIC;
     vid_pVSync : IN STD_LOGIC;
-    PixelClk : IN STD_LOGIC
+    PixelClk : IN STD_LOGIC;
+    SerialClk : IN STD_LOGIC
   );
 END zybo_dvi_output_rgb2dvi_0_0;
 
@@ -109,10 +110,11 @@ ARCHITECTURE zybo_dvi_output_rgb2dvi_0_0_arch OF zybo_dvi_output_rgb2dvi_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF vid_pHSync: SIGNAL IS "xilinx.com:interface:vid_io:1.0 RGB HSYNC";
   ATTRIBUTE X_INTERFACE_INFO OF vid_pVSync: SIGNAL IS "xilinx.com:interface:vid_io:1.0 RGB VSYNC";
   ATTRIBUTE X_INTERFACE_INFO OF PixelClk: SIGNAL IS "xilinx.com:signal:clock:1.0 PixelClk CLK";
+  ATTRIBUTE X_INTERFACE_INFO OF SerialClk: SIGNAL IS "xilinx.com:signal:clock:1.0 SerialClk CLK";
 BEGIN
   U0 : rgb2dvi
     GENERIC MAP (
-      kGenerateSerialClk => true,
+      kGenerateSerialClk => false,
       kClkPrimitive => "MMCM",
       kRstActiveHigh => true,
       kClkRange => 1
@@ -129,6 +131,6 @@ BEGIN
       vid_pHSync => vid_pHSync,
       vid_pVSync => vid_pVSync,
       PixelClk => PixelClk,
-      SerialClk => '0'
+      SerialClk => SerialClk
     );
 END zybo_dvi_output_rgb2dvi_0_0_arch;

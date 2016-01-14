@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date         : Thu Jan 14 15:44:03 2016
-| Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
+| Date         : Thu Jan 14 12:22:00 2016
+| Host         : thinkpad running 64-bit elementary OS Freya
 | Command      : report_drc
 ------------------------------------------------------------------------------------
 
@@ -20,50 +20,10 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 9
+             Violations found: 1
 
 2. REPORT DETAILS
 -----------------
-REQP-1580#1 Warning
-Phase alignment  
-Unsupported clocking topology used for  zybo_dvi_output_i/rgb2dvi_0/U0/ClockSerializer/SerializerMaster. This can result in corrupted data. The zybo_dvi_output_i/rgb2dvi_0/U0/ClockSerializer/SerializerMaster/CLK / zybo_dvi_output_i/rgb2dvi_0/U0/ClockSerializer/SerializerMaster/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship OSERDESE2. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
-Related violations: <none>
-
-REQP-1580#2 Warning
-Phase alignment  
-Unsupported clocking topology used for  zybo_dvi_output_i/rgb2dvi_0/U0/ClockSerializer/SerializerSlave. This can result in corrupted data. The zybo_dvi_output_i/rgb2dvi_0/U0/ClockSerializer/SerializerSlave/CLK / zybo_dvi_output_i/rgb2dvi_0/U0/ClockSerializer/SerializerSlave/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship OSERDESE2. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
-Related violations: <none>
-
-REQP-1580#3 Warning
-Phase alignment  
-Unsupported clocking topology used for  zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[0].DataSerializer/SerializerMaster. This can result in corrupted data. The zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[0].DataSerializer/SerializerMaster/CLK / zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[0].DataSerializer/SerializerMaster/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship OSERDESE2. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
-Related violations: <none>
-
-REQP-1580#4 Warning
-Phase alignment  
-Unsupported clocking topology used for  zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[0].DataSerializer/SerializerSlave. This can result in corrupted data. The zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[0].DataSerializer/SerializerSlave/CLK / zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[0].DataSerializer/SerializerSlave/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship OSERDESE2. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
-Related violations: <none>
-
-REQP-1580#5 Warning
-Phase alignment  
-Unsupported clocking topology used for  zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[1].DataSerializer/SerializerMaster. This can result in corrupted data. The zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[1].DataSerializer/SerializerMaster/CLK / zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[1].DataSerializer/SerializerMaster/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship OSERDESE2. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
-Related violations: <none>
-
-REQP-1580#6 Warning
-Phase alignment  
-Unsupported clocking topology used for  zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[1].DataSerializer/SerializerSlave. This can result in corrupted data. The zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[1].DataSerializer/SerializerSlave/CLK / zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[1].DataSerializer/SerializerSlave/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship OSERDESE2. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
-Related violations: <none>
-
-REQP-1580#7 Warning
-Phase alignment  
-Unsupported clocking topology used for  zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[2].DataSerializer/SerializerMaster. This can result in corrupted data. The zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[2].DataSerializer/SerializerMaster/CLK / zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[2].DataSerializer/SerializerMaster/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship OSERDESE2. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
-Related violations: <none>
-
-REQP-1580#8 Warning
-Phase alignment  
-Unsupported clocking topology used for  zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[2].DataSerializer/SerializerSlave. This can result in corrupted data. The zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[2].DataSerializer/SerializerSlave/CLK / zybo_dvi_output_i/rgb2dvi_0/U0/DataEncoders[2].DataSerializer/SerializerSlave/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship OSERDESE2. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
-Related violations: <none>
-
 ZPS7-1#1 Warning
 PS7 block required  
 The PS7 cell must be used in this Zynq design in order to enable correct default configuration.

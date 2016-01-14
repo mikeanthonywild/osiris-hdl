@@ -1,0 +1,1308 @@
+/*
+
+Vivado v2015.4 (64-bit)
+SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+Process ID: 15105
+
+Current time: 	1/14/16 11:05:49 AM PST
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: NAME="elementary OS"
+Version: 3.13.0-52-generic
+Architecture: amd64
+Available processors (cores): 4
+
+DISPLAY: :0
+Screen size: 1600x900
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_45 64-bit
+Java home: 	/opt/Xilinx/Vivado/2015.4/tps/lnx64/jre
+
+User name: 	mike
+User home directory: /home/mike
+User working directory: /home/mike/Documents/osiris-hdl
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: /home/mike/.Xilinx/Vivado/2015.4/vivado.ini
+Vivado layouts directory: /home/mike/.Xilinx/Vivado/2015.4/layouts
+
+GUI allocated memory:	203 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,816 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 25 MB (+23868kb) [00:00:05]
+// [Engine Memory]: 4,814 MB (+4896287kb) [00:00:05]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,821 MB. GUI used memory: 20 MB. Current time: 1/14/16 11:05:51 AM PST
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // l:JideButton (JPanel:JComponent, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// Elapsed time: 17 seconds
+setFileChooser("/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.xpr");
+// Opening Vivado Project: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.xpr. Version: Vivado v2015.4 
+// bF:g (cq:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// HMemoryUtils.trashcanNow. Engine heap size: 4,861 MB. GUI used memory: 22 MB. Current time: 1/14/16 11:06:11 AM PST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 41 MB (+15063kb) [00:00:29]
+// [GUI Memory]: 56 MB (+13456kb) [00:00:31]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl/rgb2dvi_v1_2'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.4/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 60 MB (+1108kb) [00:00:33]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: zybo_dvi_output; location: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output; part: xc7z010clg400-1
+// 'i' command handler elapsed time: 23 seconds
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 5783.668 ; gain = 109.621 ; free physical = 3819 ; free virtual = 5938 
+dismissDialog("Open Project"); // bF:g (cq:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 25, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// G:aY (cq:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, G:aY)
+// bF:g (cq:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // G:aY (cq:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// 'bX' command handler elapsed time: 5 seconds
+dismissDialog("Resetting Runs"); // bF:g (cq:JFrame)
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_LOCK_CHANGE
+// bF:g (cq:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: Adding component instance block -- digilentinc.com:ip:rgb2dvi:1.2 - rgb2dvi_0 
+// Tcl Message: Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0 Successfully read diagram <zybo_dvi_output> from BD file </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 . INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_xlconstant_0_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_xlconstant_0_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_xlconstant_0_0'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_xlconstant_0_0'... INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 . 
+// ak:a (cq:JFrame): Launch Run Critical Messages: addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, ak:a)
+dismissDialog("Launch Run Critical Messages"); // ak:a (cq:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 4,985 MB. GUI used memory: 26 MB. Current time: 1/14/16 11:06:37 AM PST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// X:G (cq:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 98 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a:JRadioButton (JPanel:JComponent, X:G)
+selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a:JRadioButton (JPanel:JComponent, X:G)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, X:G)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // X:G (cq:JFrame)
+// Elapsed time: 15 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, zybo_dvi_output_wrapper (zybo_dvi_output_wrapper.v)]", 1); // y:k (I:JPanel, cq:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, zybo_dvi_output_wrapper (zybo_dvi_output_wrapper.v), zybo_dvi_output_i - zybo_dvi_output (zybo_dvi_output.bd)]", 2, true); // y:k (I:JPanel, cq:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, zybo_dvi_output_wrapper (zybo_dvi_output_wrapper.v), zybo_dvi_output_i - zybo_dvi_output (zybo_dvi_output.bd)]", 2, true, false, false, false, false, true); // y:k (I:JPanel, cq:JFrame) - Double Click - Node
+// bF:g (cq:JFrame):  Open Block Design : addNotify
+// TclEventType: RSB_OPEN_DIAGRAM
+// [GUI Memory]: 65 MB (+2695kb) [00:02:52]
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: open_bd_design {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd} 
+// Tcl Message: Adding component instance block -- digilentinc.com:ip:rgb2dvi:1.2 - rgb2dvi_0 
+// Tcl Message: Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0 Successfully read diagram <zybo_dvi_output> from BD file </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// [GUI Memory]: 68 MB (+55kb) [00:02:53]
+// TclEventType: RSB_LOCK_CHANGE
+// a:a (cq:JFrame): Critical Messages: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 5,012 MB. GUI used memory: 33 MB. Current time: 1/14/16 11:08:37 AM PST
+dismissDialog("Open Block Design"); // bF:g (cq:JFrame)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, a:a)
+dismissDialog("Critical Messages"); // a:a (cq:JFrame)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets clk_1] 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_ports clk] 
+// Elapsed time: 19 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 88, 158, 955, 449, false, false, false, true, false); // eC:aO (TdiGroup:JideTabbedPane, cq:JFrame) - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_IP, "Add IP..."); // ae:JMenuItem (al:JPopupMenu, cq:JFrame)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "clock"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard", 2, "Clocking Wizard", 0, false); // T:aw (JViewport:JComponent, ResizableWindow:JWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard", 2); // T:aw (JViewport:JComponent, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard", 2, "Clocking Wizard", 0, false, false, false, false, false, true); // T:aw (JViewport:JComponent, ResizableWindow:JWindow) - Double Click
+// bF:g (cq:JFrame):  Add IP : addNotify
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.2 clk_wiz_0 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bF:g (cq:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 296, 146, 955, 449, false, false, false, true, false); // eC:aO (TdiGroup:JideTabbedPane, cq:JFrame) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // aa:JMenu (al:JPopupMenu, cq:JFrame)
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ae:JMenuItem (al:JPopupMenu, cq:JFrame)
+// aP:x (cq:JFrame): Create Port: addNotify
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "clk", true); // ao:JTextField (JPanel:JComponent, aP:x)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aP:x)
+dismissDialog("Create Port"); // aP:x (cq:JFrame)
+// Tcl Message: startgroup 
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: create_bd_port -dir I -type clk clk 
+// TclEventType: RSB_CONNECTION_CHANGE
+// bF:g (SwingUtilities:Frame):  Create Port : addNotify
+// Tcl Message: connect_bd_net [get_bd_pins /clk_wiz_0/clk_in1] [get_bd_ports clk] 
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property CONFIG.FREQ_HZ 100000000 [get_bd_ports clk] 
+// Tcl Message: endgroup 
+dismissDialog("Create Port"); // bF:g (SwingUtilities:Frame)
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+// [GUI Memory]: 72 MB (+529kb) [00:03:32]
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'endgroup' INFO: [Common 17-17] undo 'set_property CONFIG.FREQ_HZ 100000000 [get_bd_ports clk]' INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins /clk_wiz_0/clk_in1] [get_bd_ports clk]' INFO: [Common 17-17] undo 'create_bd_port -dir I -type clk clk' INFO: [Common 17-17] undo 'startgroup' 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 326, 141, 955, 449, false, false, false, true, false); // eC:aO (TdiGroup:JideTabbedPane, cq:JFrame) - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ae:JMenuItem (al:JPopupMenu, cq:JFrame)
+// aP:x (cq:JFrame): Create Port: addNotify
+setText(PAResourceAtoD.CreateRSBPortDialog_FREQUENCY, "125"); // ao:JTextField (JPanel:JComponent, aP:x)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aP:x)
+dismissDialog("Create Port"); // aP:x (cq:JFrame)
+// Tcl Message: startgroup 
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: create_bd_port -dir I -type clk clk_in1 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins /clk_wiz_0/clk_in1] [get_bd_ports clk_in1] 
+// TclEventType: RSB_PROPERTY_CHANGE
+// bF:g (SwingUtilities:Frame):  Create Port : addNotify
+// Tcl Message: set_property CONFIG.FREQ_HZ 125000000 [get_bd_ports clk_in1] 
+// Tcl Message: endgroup 
+dismissDialog("Create Port"); // bF:g (SwingUtilities:Frame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// t:g (cq:JFrame): Customize Port: addNotify
+// [GUI Memory]: 77 MB (+1267kb) [00:03:45]
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Customize Port"); // t:g (cq:JFrame)
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'endgroup' INFO: [Common 17-17] undo 'set_property CONFIG.FREQ_HZ 125000000 [get_bd_ports clk_in1]' INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins /clk_wiz_0/clk_in1] [get_bd_ports clk_in1]' INFO: [Common 17-17] undo 'create_bd_port -dir I -type clk clk_in1' INFO: [Common 17-17] undo 'startgroup' 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 324, 145, 955, 449, false, false, false, true, false); // eC:aO (TdiGroup:JideTabbedPane, cq:JFrame) - Popup Trigger
+// [Engine Memory]: 5,061 MB (+6518kb) [00:03:52]
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // aa:JMenu (al:JPopupMenu, cq:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 5,061 MB. GUI used memory: 37 MB. Current time: 1/14/16 11:09:37 AM PST
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ae:JMenuItem (al:JPopupMenu, cq:JFrame)
+// aP:x (cq:JFrame): Create Port: addNotify
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "clk"); // ao:JTextField (JPanel:JComponent, aP:x)
+setText(PAResourceAtoD.CreateRSBPortDialog_FREQUENCY, "125", true); // ao:JTextField (JPanel:JComponent, aP:x)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aP:x)
+dismissDialog("Create Port"); // aP:x (cq:JFrame)
+// Tcl Message: startgroup 
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: create_bd_port -dir I -type clk clk 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins /clk_wiz_0/clk_in1] [get_bd_ports clk] 
+// TclEventType: RSB_PROPERTY_CHANGE
+// bF:g (SwingUtilities:Frame):  Create Port : addNotify
+// Tcl Message: set_property CONFIG.FREQ_HZ 125000000 [get_bd_ports clk] 
+// Tcl Message: endgroup 
+dismissDialog("Create Port"); // bF:g (SwingUtilities:Frame)
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins rgb2dvi_0/PixelClk] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// T:bF (cq:JFrame):  Re-customize IP : addNotify
+// t:g (cq:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // T:bF (cq:JFrame)
+// [GUI Memory]: 83 MB (+1608kb) [00:10:15]
+// Elapsed time: 369 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 1); // cH:g (H:JPanel, t:g)
+selectRadioButton((HResource) null, "PLL"); // cC:a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.PRIMITIVE {PLL} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {9} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {9} CONFIG.CLKOUT1_JITTER {137.681} CONFIG.CLKOUT1_PHASE_ERROR {105.461}] [get_bd_cells clk_wiz_0] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// t:g (cq:JFrame): Customize Port: addNotify
+// Elapsed time: 14 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Customize Port"); // t:g (cq:JFrame)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets clk_1] [get_bd_ports clk] 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 383, 192, 955, 449, false, false, false, true, false); // eC:aO (TdiGroup:JideTabbedPane, cq:JFrame) - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ae:JMenuItem (al:JPopupMenu, cq:JFrame)
+// aP:x (cq:JFrame): Create Port: addNotify
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "clk"); // ao:JTextField (JPanel:JComponent, aP:x)
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // h:JCheckBox (JPanel:JComponent, aP:x): TRUE
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", false); // h:JCheckBox (JPanel:JComponent, aP:x): FALSE
+setText(PAResourceAtoD.CreateRSBPortDialog_FREQUENCY, "125"); // ao:JTextField (JPanel:JComponent, aP:x)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aP:x)
+dismissDialog("Create Port"); // aP:x (cq:JFrame)
+// Tcl Message: startgroup 
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: create_bd_port -dir I -type clk clk 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins /clk_wiz_0/clk_in1] [get_bd_ports clk] 
+// TclEventType: RSB_PROPERTY_CHANGE
+// bF:g (SwingUtilities:Frame):  Create Port : addNotify
+// Tcl Message: set_property CONFIG.FREQ_HZ 125000000 [get_bd_ports clk] 
+// Tcl Message: endgroup 
+dismissDialog("Create Port"); // bF:g (SwingUtilities:Frame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// T:bF (cq:JFrame):  Re-customize IP : addNotify
+// t:g (cq:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // T:bF (cq:JFrame)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 1); // cH:g (H:JPanel, t:g)
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER, (String) null); // s:JideToggleButton (JPanel:JComponent, t:g): TRUE
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER_MANUAL, "PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER"); // s:JideToggleButton (JPanel:JComponent, t:g): FALSE
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER, (String) null); // s:JideToggleButton (JPanel:JComponent, t:g): TRUE
+setText("PRIM IN FREQ", "125.000"); // O:ao (cI:N)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 2); // cH:g (H:JPanel, t:g)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 1); // cH:g (H:JPanel, t:g)
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER_MANUAL, "PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER"); // s:JideToggleButton (JPanel:JComponent, t:g): FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC PROPAGATED] [get_bd_cells clk_wiz_0] 
+// Tcl Message: set_property -dict [list CONFIG.CLKIN1_JITTER_PS {100.0} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {9} CONFIG.MMCM_CLKIN1_PERIOD {10.0} CONFIG.CLKOUT1_JITTER {137.681} CONFIG.CLKOUT1_PHASE_ERROR {105.461}] [get_bd_cells clk_wiz_0] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>  
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 25, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// G:aY (cq:JFrame): Synthesis is Out-of-date: addNotify
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", false); // h:JCheckBox (JPanel:JComponent, G:aY): FALSE
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, G:aY)
+// bF:g (cq:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // G:aY (cq:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bF:g (cq:JFrame)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// bF:g (cq:JFrame):  Generate Bitstream : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>  
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 . INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_clk_wiz_0_0'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 . 
+// ak:a (cq:JFrame): Launch Run Critical Messages: addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, ak:a)
+dismissDialog("Launch Run Critical Messages"); // ak:a (cq:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// X:G (cq:JFrame): Implementation Failed: addNotify
+// Elapsed time: 55 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, X:G)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // X:G (cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// T:bF (cq:JFrame):  Re-customize IP : addNotify
+// t:g (cq:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // T:bF (cq:JFrame)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 1); // cH:g (H:JPanel, t:g)
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER, (String) null); // s:JideToggleButton (JPanel:JComponent, t:g): TRUE
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER_MANUAL, "PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER"); // s:JideToggleButton (JPanel:JComponent, t:g): FALSE
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER, (String) null); // s:JideToggleButton (JPanel:JComponent, t:g): TRUE
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER_MANUAL, "PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER"); // s:JideToggleButton (JPanel:JComponent, t:g): FALSE
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER, (String) null); // s:JideToggleButton (JPanel:JComponent, t:g): TRUE
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER_MANUAL, "PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER"); // s:JideToggleButton (JPanel:JComponent, t:g): FALSE
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// [GUI Memory]: 87 MB (+360kb) [00:12:51]
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Route Design, [DRC 23-20] Rule violation (PDRC-34) MMCM_adv_ClkFrequency_div_no_dclk - The computed value 500.000 MHz (CLKIN1_PERIOD, net clk_out1) for the VCO operating frequency of the MMCME2_ADV site MMCME2_ADV_X0Y1 (cell zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator) falls outside the operating range of the MMCM VCO frequency for this device (600.00002122251317 - 1200.0000424450263 MHz). The computed value is (CLKFBOUT_MULT_F * 1000 / (CLKINx_PERIOD * DIVCLK_DIVIDE)). Please run update_timing to update the MMCM settings. If that does not work, adjust either the input period CLKINx_PERIOD (10.000000), multiplication factor CLKFBOUT_MULT_F (5.000000) or the division factor DIVCLK_DIVIDE (1), in order to achieve a VCO frequency within the rated operating range for this device.. ]", 10, false); // ag:k (JViewport:JComponent, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// T:bF (cq:JFrame):  Re-customize IP : addNotify
+// t:g (cq:JFrame): Re-customize IP: addNotify
+// Elapsed time: 227 seconds
+dismissDialog("Re-customize IP"); // T:bF (cq:JFrame)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 1); // cH:g (H:JPanel, t:g)
+// Elapsed time: 104 seconds
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER, (String) null); // s:JideToggleButton (JPanel:JComponent, t:g): TRUE
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER_MANUAL, "PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER"); // s:JideToggleButton (JPanel:JComponent, t:g): FALSE
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER, (String) null); // s:JideToggleButton (JPanel:JComponent, t:g): TRUE
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER_MANUAL, "PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER"); // s:JideToggleButton (JPanel:JComponent, t:g): FALSE
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// T:bF (cq:JFrame):  Re-customize IP : addNotify
+// t:g (cq:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // T:bF (cq:JFrame)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 1); // cH:g (H:JPanel, t:g)
+// HMemoryUtils.trashcanNow. Engine heap size: 5,082 MB. GUI used memory: 72 MB. Current time: 1/14/16 11:24:22 AM PST
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 2); // cH:g (H:JPanel, t:g)
+setText("CLKOUT1 REQUESTED OUT FREQ", "125"); // O:ao (cI:N, t:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// [GUI Memory]: 93 MB (+1950kb) [00:18:51]
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {7} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7} CONFIG.CLKOUT1_JITTER {125.031} CONFIG.CLKOUT1_PHASE_ERROR {104.065}] [get_bd_cells clk_wiz_0] 
+// Tcl Message: endgroup 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 25, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// aR:y (cq:JFrame): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a:JButton (JPanel:JComponent, aR:y)
+// bF:g (cq:JFrame):  Save Constraints : addNotify
+dismissDialog("Save Project"); // aR:y (cq:JFrame)
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>  
+// G:aY (cq:JFrame): Synthesis is Out-of-date: addNotify
+dismissDialog("Save Constraints"); // bF:g (cq:JFrame)
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", false); // h:JCheckBox (JPanel:JComponent, G:aY): FALSE
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, G:aY)
+// bF:g (cq:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // G:aY (cq:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bF:g (cq:JFrame)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// bF:g (cq:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>  
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 . INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_clk_wiz_0_0'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 . 
+// ak:a (cq:JFrame): Launch Run Critical Messages: addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, ak:a)
+dismissDialog("Launch Run Critical Messages"); // ak:a (cq:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// X:G (cq:JFrame): Bitstream Generation Completed: addNotify
+// [GUI Memory]: 100 MB (+1485kb) [00:20:19]
+// Elapsed time: 83 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a:JRadioButton (JPanel:JComponent, X:G)
+selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a:JRadioButton (JPanel:JComponent, X:G)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, X:G)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // X:G (cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// t:g (cq:JFrame): Customize Pin: addNotify
+// Elapsed time: 18 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Customize Pin"); // t:g (cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// T:bF (cq:JFrame):  Re-customize IP : addNotify
+// t:g (cq:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // T:bF (cq:JFrame)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 2); // cH:g (H:JPanel, t:g)
+setText("CLKOUT1 REQUESTED OUT FREQ", "40", true); // O:ao (cI:N, t:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {40} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {8} CONFIG.MMCM_CLKOUT0_DIVIDE_F {25} CONFIG.CLKOUT1_JITTER {150.675} CONFIG.CLKOUT1_PHASE_ERROR {96.948}] [get_bd_cells clk_wiz_0] 
+// Tcl Message: endgroup 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 109 MB (+4790kb) [00:20:57]
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>  
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// T:bF (cq:JFrame):  Re-customize IP : addNotify
+// t:g (cq:JFrame): Re-customize IP: addNotify
+// Elapsed time: 10 seconds
+dismissDialog("Re-customize IP"); // T:bF (cq:JFrame)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 1); // cH:g (H:JPanel, t:g)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 2); // cH:g (H:JPanel, t:g)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "PLLE2 Settings", 3); // cH:g (H:JPanel, t:g)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 2); // cH:g (H:JPanel, t:g)
+// Elapsed time: 11 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// t:g (cq:JFrame): Customize Pin: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Customize Pin"); // t:g (cq:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 25, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// G:aY (cq:JFrame): Synthesis is Out-of-date: addNotify
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", false); // h:JCheckBox (JPanel:JComponent, G:aY): FALSE
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, G:aY)
+// bF:g (cq:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // G:aY (cq:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bF:g (cq:JFrame)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// bF:g (cq:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>  
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 . INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_clk_wiz_0_0'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 . 
+// ak:a (cq:JFrame): Launch Run Critical Messages: addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, ak:a)
+dismissDialog("Launch Run Critical Messages"); // ak:a (cq:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 5,120 MB. GUI used memory: 84 MB. Current time: 1/14/16 11:28:02 AM PST
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// X:G (cq:JFrame): Implementation Failed: addNotify
+// Elapsed time: 95 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, X:G)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // X:G (cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// t:g (cq:JFrame): Re-customize IP: addNotify
+// Elapsed time: 43 seconds
+selectRadioButton((HResource) null, "< 120 MHz (720p)"); // aC:a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.kClkRange {2}] [get_bd_cells rgb2dvi_0] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>  
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 25, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// G:aY (cq:JFrame): Synthesis is Out-of-date: addNotify
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", false); // h:JCheckBox (JPanel:JComponent, G:aY): FALSE
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, G:aY)
+// bF:g (cq:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // G:aY (cq:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bF:g (cq:JFrame)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// bF:g (cq:JFrame):  Generate Bitstream : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>  
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 . 
+// ak:a (cq:JFrame): Launch Run Critical Messages: addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 115 MB (+836kb) [00:24:31]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// [GUI Memory]: 123 MB (+2040kb) [00:24:44]
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// Elapsed time: 186 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, ak:a)
+dismissDialog("Launch Run Critical Messages"); // ak:a (cq:JFrame)
+// X:G (cq:JFrame): Implementation Failed: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, X:G)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // X:G (cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// T:bF (cq:JFrame):  Re-customize IP : addNotify
+// t:g (cq:JFrame): Re-customize IP: addNotify
+// Elapsed time: 216 seconds
+dismissDialog("Re-customize IP"); // T:bF (cq:JFrame)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 1); // cH:g (H:JPanel, t:g)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 2); // cH:g (H:JPanel, t:g)
+setText("CLKOUT1 REQUESTED OUT FREQ", (String) null); // O:ao (cI:N, t:g)
+setText("CLKOUT1 REQUESTED OUT FREQ", "125"); // O:ao (cI:N, t:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// [GUI Memory]: 129 MB (+210kb) [00:31:08]
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {7} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7} CONFIG.CLKOUT1_JITTER {125.031} CONFIG.CLKOUT1_PHASE_ERROR {104.065}] [get_bd_cells clk_wiz_0] 
+// Tcl Message: endgroup 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// t:g (cq:JFrame): Re-customize IP: addNotify
+selectRadioButton((HResource) null, ">=120 MHz (1080p)"); // aC:a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.kClkRange {1}] [get_bd_cells rgb2dvi_0] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>  
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 25, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// G:aY (cq:JFrame): Synthesis is Out-of-date: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 5,145 MB. GUI used memory: 91 MB. Current time: 1/14/16 11:37:07 AM PST
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, G:aY)
+// bF:g (cq:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // G:aY (cq:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bF:g (cq:JFrame)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// bF:g (cq:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>  
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 . INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_clk_wiz_0_0'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 . 
+// ak:a (cq:JFrame): Launch Run Critical Messages: addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, ak:a)
+dismissDialog("Launch Run Critical Messages"); // ak:a (cq:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// X:G (cq:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 1090 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a:JRadioButton (JPanel:JComponent, X:G)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, X:G)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // X:G (cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// T:bF (cq:JFrame):  Re-customize IP : addNotify
+// t:g (cq:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // T:bF (cq:JFrame)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 1); // cH:g (H:JPanel, t:g)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 2); // cH:g (H:JPanel, t:g)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// T:bF (cq:JFrame):  Re-customize IP : addNotify
+// t:g (cq:JFrame): Re-customize IP: addNotify
+// Elapsed time: 248 seconds
+dismissDialog("Re-customize IP"); // T:bF (cq:JFrame)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 1); // cH:g (H:JPanel, t:g)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 2); // cH:g (H:JPanel, t:g)
+setText("CLKOUT1 REQUESTED OUT FREQ", "100", true); // O:ao (cI:N, t:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {36} CONFIG.MMCM_CLKOUT0_DIVIDE_F {9} CONFIG.CLKOUT1_JITTER {237.312} CONFIG.CLKOUT1_PHASE_ERROR {249.865}] [get_bd_cells clk_wiz_0] 
+// Tcl Message: endgroup 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>  
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 25, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// G:aY (cq:JFrame): Synthesis is Out-of-date: addNotify
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", false); // h:JCheckBox (JPanel:JComponent, G:aY): FALSE
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, G:aY)
+// bF:g (cq:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // G:aY (cq:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bF:g (cq:JFrame)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// bF:g (cq:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>  
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 . INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_clk_wiz_0_0'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 . 
+// ak:a (cq:JFrame): Launch Run Critical Messages: addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, ak:a)
+dismissDialog("Launch Run Critical Messages"); // ak:a (cq:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// X:G (cq:JFrame): Implementation Failed: addNotify
+// Elapsed time: 179 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, X:G)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // X:G (cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// T:bF (cq:JFrame):  Re-customize IP : addNotify
+// t:g (cq:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // T:bF (cq:JFrame)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 1); // cH:g (H:JPanel, t:g)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 2); // cH:g (H:JPanel, t:g)
+setText("CLKOUT1 REQUESTED OUT FREQ", "250"); // O:ao (cI:N, t:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {250} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {8} CONFIG.MMCM_CLKOUT0_DIVIDE_F {4} CONFIG.CLKOUT1_JITTER {104.759} CONFIG.CLKOUT1_PHASE_ERROR {96.948}] [get_bd_cells clk_wiz_0] 
+// Tcl Message: endgroup 
+// [GUI Memory]: 139 MB (+2981kb) [00:57:32]
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>  
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 25, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// G:aY (cq:JFrame): Synthesis is Out-of-date: addNotify
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", false); // h:JCheckBox (JPanel:JComponent, G:aY): FALSE
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, G:aY)
+// bF:g (cq:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // G:aY (cq:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// 'bX' command handler elapsed time: 3 seconds
+dismissDialog("Resetting Runs"); // bF:g (cq:JFrame)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// bF:g (cq:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>  
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 . INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_clk_wiz_0_0'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 . 
+// ak:a (cq:JFrame): Launch Run Critical Messages: addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, ak:a)
+dismissDialog("Launch Run Critical Messages"); // ak:a (cq:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// X:G (cq:JFrame): Implementation Failed: addNotify
+// Elapsed time: 93 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, X:G)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // X:G (cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// T:bF (cq:JFrame):  Re-customize IP : addNotify
+// t:g (cq:JFrame): Re-customize IP: addNotify
+// [GUI Memory]: 146 MB (+731kb) [00:59:26]
+dismissDialog("Re-customize IP"); // T:bF (cq:JFrame)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 2); // cH:g (H:JPanel, t:g)
+// HMemoryUtils.trashcanNow. Engine heap size: 5,170 MB. GUI used memory: 114 MB. Current time: 1/14/16 12:05:12 PM PST
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// t:g (cq:JFrame): Re-customize IP: addNotify
+// Elapsed time: 603 seconds
+selectCheckBox((HResource) null, "Generate SerialClk internally from pixel clock.", false); // h:JCheckBox (m:D, t:g): FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.kGenerateSerialClk {false}] [get_bd_cells rgb2dvi_0] 
+// Tcl Message: endgroup 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// T:bF (cq:JFrame):  Re-customize IP : addNotify
+// t:g (cq:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // T:bF (cq:JFrame)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 2); // cH:g (H:JPanel, t:g)
+// Elapsed time: 99 seconds
+setText("CLKOUT1 REQUESTED OUT FREQ", "40"); // O:ao (cI:N, t:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {40} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKOUT0_DIVIDE_F {25} CONFIG.CLKOUT1_JITTER {150.675}] [get_bd_cells clk_wiz_0] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>  
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// T:bF (cq:JFrame):  Re-customize IP : addNotify
+// t:g (cq:JFrame): Re-customize IP: addNotify
+// Elapsed time: 71 seconds
+dismissDialog("Re-customize IP"); // T:bF (cq:JFrame)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 1); // cH:g (H:JPanel, t:g)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 2); // cH:g (H:JPanel, t:g)
+selectCheckBox((HResource) null, "clk_out2", true); // h:JCheckBox (bo:D, t:g): TRUE
+// Elapsed time: 109 seconds
+setText("CLKOUT2 REQUESTED OUT FREQ", "200"); // O:ao (cI:N, t:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable 
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.CLKOUT2_USED {true} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {200} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKOUT1_DIVIDE {5} CONFIG.NUM_OUT_CLKS {2} CONFIG.CLKOUT2_JITTER {109.241} CONFIG.CLKOUT2_PHASE_ERROR {96.948}] [get_bd_cells clk_wiz_0] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
+// t:g (cq:JFrame): Customize Pin: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Customize Pin"); // t:g (cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// T:bF (cq:JFrame):  Re-customize IP : addNotify
+// t:g (cq:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // T:bF (cq:JFrame)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 1); // cH:g (H:JPanel, t:g)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 2); // cH:g (H:JPanel, t:g)
+selectCheckBox((HResource) null, "clk_out1", false); // h:JCheckBox (bo:D, t:g): FALSE
+selectCheckBox((HResource) null, "clk_out1", true); // h:JCheckBox (bo:D, t:g): TRUE
+selectCheckBox((HResource) null, "clk_out1", false); // h:JCheckBox (bo:D, t:g): FALSE
+selectCheckBox((HResource) null, "clk_out1", true); // h:JCheckBox (bo:D, t:g): TRUE
+selectCheckBox((HResource) null, "clk_out2", true); // h:JCheckBox (bo:D, t:g): TRUE
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, t:g)
+dismissDialog("Re-customize IP"); // t:g (cq:JFrame)
+// [GUI Memory]: 163 MB (+9707kb) [01:14:47]
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins rgb2dvi_0/SerialClk] 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>  
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 22 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 25, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// G:aY (cq:JFrame): Synthesis is Out-of-date: addNotify
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", false); // h:JCheckBox (JPanel:JComponent, G:aY): FALSE
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, G:aY)
+// bF:g (cq:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // G:aY (cq:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bF:g (cq:JFrame)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// bF:g (cq:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>  
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'... INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 . INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_clk_wiz_0_0'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_clk_wiz_0_0'... INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 . 
+// ak:a (cq:JFrame): Launch Run Critical Messages: addNotify
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, ak:a)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+dismissDialog("Launch Run Critical Messages"); // ak:a (cq:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// X:G (cq:JFrame): Bitstream Generation Completed: addNotify
+// [GUI Memory]: 172 MB (+457kb) [01:21:00]
+// Elapsed time: 387 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a:JRadioButton (JPanel:JComponent, X:G)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, X:G)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // X:G (cq:JFrame)
+// Elapsed time: 16 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cq:JFrame)
+// Elapsed time: 242 seconds
+selectTab((HResource) null, (HResource) null, "Board", 3); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cq:JFrame)
+// Elapsed time: 10 seconds
+selectTab((HResource) null, (HResource) null, "Design", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cq:JFrame)
+selectTab((HResource) null, (HResource) null, "Sources", 0); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cq:JFrame)
+// Elapsed time: 70 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 26, true); // w:Y (v:I, cq:JFrame) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // i:l (JPanel:JComponent, cq:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ae:JMenuItem (al:JPopupMenu, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-2222] Launching hw_server... INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2015.4   **** Build date : Nov 18 2015-09:53:32     ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210279772162A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/zybo_dvi_output_wrapper.bit} [lindex [get_hw_devices] 1] 
+// Tcl Message: current_hw_device [lindex [get_hw_devices] 1] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1] 
+// Tcl Message: INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0). 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,236 MB. GUI used memory: 138 MB. Current time: 1/14/16 12:33:22 PM PST
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // i:l (JPanel:JComponent, cq:JFrame)
+selectMenuItem((HResource) null, "xc7z010_1"); // ae:JMenuItem (al:JPopupMenu, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aS:ag (cq:JFrame): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aS:ag)
+// bF:g (cq:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aS:ag (cq:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [lindex [get_hw_devices] 1] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/zybo_dvi_output_wrapper.bit} [lindex [get_hw_devices] 1] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 1] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 1] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it. 
+// 'y' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bF:g (cq:JFrame)
+// [GUI Memory]: 181 MB (+1008kb) [01:38:21]
+// Elapsed time: 642 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // w:Y (v:I, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bF:g (cq:JFrame):  Open Block Design : addNotify
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd} 
+dismissDialog("Open Block Design"); // bF:g (cq:JFrame)
+// Elapsed time: 11 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORT, "Report"); // aa:JMenu (JPopupMenu:JComponent, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORT, "Report"); // aa:JMenu (JPopupMenu:JComponent, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)

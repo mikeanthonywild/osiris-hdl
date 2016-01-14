@@ -9,6 +9,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_dvi_output
 # IP: bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/zybo_dvi_output_rgb2dvi_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_dvi_output_rgb2dvi_0_0 || ORIG_REF_NAME==zybo_dvi_output_rgb2dvi_0_0}]
 
+# IP: bd/zybo_dvi_output/ip/zybo_dvi_output_xlconstant_0_0/zybo_dvi_output_xlconstant_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_dvi_output_xlconstant_0_0 || ORIG_REF_NAME==zybo_dvi_output_xlconstant_0_0}]
+
+# IP: bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_dvi_output_clk_wiz_0_0 || ORIG_REF_NAME==zybo_dvi_output_clk_wiz_0_0}]
+
 # XDC: bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/src/rgb2dvi.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==zybo_dvi_output_rgb2dvi_0_0 || ORIG_REF_NAME==zybo_dvi_output_rgb2dvi_0_0}] {/U0 }]/U0 ]]
 
@@ -16,5 +22,13 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==zybo_dvi_output_rgb2dvi_0_0 || ORIG_REF_NAME==zybo_dvi_output_rgb2dvi_0_0}] {/U0 }]/U0 ]]
+
+# XDC: bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==zybo_dvi_output_clk_wiz_0_0 || ORIG_REF_NAME==zybo_dvi_output_clk_wiz_0_0}] {/inst }]/inst ]]
+
+# XDC: bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==zybo_dvi_output_clk_wiz_0_0 || ORIG_REF_NAME==zybo_dvi_output_clk_wiz_0_0}] {/inst }]/inst ]]
+
+# XDC: bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0_ooc.xdc
 
 # XDC: bd/zybo_dvi_output/zybo_dvi_output_ooc.xdc

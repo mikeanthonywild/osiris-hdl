@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date         : Thu Jan 14 15:43:52 2016
-| Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
+| Date         : Thu Jan 14 12:21:49 2016
+| Host         : thinkpad running 64-bit elementary OS Freya
 | Command      : report_control_sets -verbose -file zybo_dvi_output_wrapper_control_sets_placed.rpt
 | Design       : zybo_dvi_output_wrapper
 | Device       : xc7z010
@@ -22,8 +22,8 @@ Table of Contents
 +-------------------------------------------------------------------+-------+
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
-| Number of unique control sets                                     |     3 |
-| Minimum Number of register sites lost to control set restrictions |    14 |
+| Number of unique control sets                                     |     1 |
+| Minimum Number of register sites lost to control set restrictions |     6 |
 +-------------------------------------------------------------------+-------+
 
 
@@ -33,8 +33,8 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               4 |            2 |
-| No           | No                    | Yes                    |               6 |            2 |
+| No           | No                    | No                     |               2 |            1 |
+| No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
@@ -45,12 +45,10 @@ Table of Contents
 3. Detailed Control Set Information
 -----------------------------------
 
-+----------------+---------------+---------------------------------------------------------------------------------------------------+------------------+----------------+
-|  Clock Signal  | Enable Signal |                                          Set/Reset Signal                                         | Slice Load Count | Bel Load Count |
-+----------------+---------------+---------------------------------------------------------------------------------------------------+------------------+----------------+
-|  clk_IBUF_BUFG |               | zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/aRstLck                                 |                1 |              2 |
-|  clk_IBUF_BUFG |               |                                                                                                   |                2 |              4 |
-|  clk_IBUF_BUFG |               | zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/LockLostReset/SyncAsyncx/oSyncStages[1] |                1 |              4 |
-+----------------+---------------+---------------------------------------------------------------------------------------------------+------------------+----------------+
++--------------------------------------------+---------------+------------------+------------------+----------------+
+|                Clock Signal                | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
++--------------------------------------------+---------------+------------------+------------------+----------------+
+|  zybo_dvi_output_i/clk_wiz_0/inst/clk_out1 |               |                  |                1 |              2 |
++--------------------------------------------+---------------+------------------+------------------+----------------+
 
 

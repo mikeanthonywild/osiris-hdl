@@ -2,14 +2,20 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Thu Jan 14 15:42:54 2016
-# Process ID: 24771
+# Start of session at: Thu Jan 14 12:20:56 2016
+# Process ID: 21151
 # Current directory: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1
 # Command line: vivado -log zybo_dvi_output_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source zybo_dvi_output_wrapper.tcl
 # Log file: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/zybo_dvi_output_wrapper.vds
 # Journal file: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source zybo_dvi_output_wrapper.tcl -notrace
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/arty/C.0/board.xml as part xc7a35ticsg324-1l specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:basys3:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/basys3/C.0/board.xml as part xc7a35tcpg236-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4/B.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4_ddr:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4_ddr/C.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys_video:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys_video/A.0/board.xml as part xc7a200tsbg484-1 specified in board_part file is either invalid or not available
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl/rgb2dvi_v1_2'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.4/data/ip'.
@@ -18,24 +24,68 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1026.062 ; gain = 188.824 ; free physical = 6852 ; free virtual = 20860
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 987.176 ; gain = 145.918 ; free physical = 3327 ; free virtual = 5736
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'zybo_dvi_output_wrapper' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v:12]
 INFO: [Synth 8-638] synthesizing module 'zybo_dvi_output' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v:13]
-INFO: [Synth 8-638] synthesizing module 'zybo_dvi_output_rgb2dvi_0_0' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/synth/zybo_dvi_output_rgb2dvi_0_0.vhd:71]
-	Parameter kGenerateSerialClk bound to: 1 - type: bool 
+INFO: [Synth 8-638] synthesizing module 'zybo_dvi_output_clk_wiz_0_0' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0.v:70]
+INFO: [Synth 8-638] synthesizing module 'zybo_dvi_output_clk_wiz_0_0_clk_wiz' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0_clk_wiz.v:68]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:14145]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:14145]
+INFO: [Synth 8-638] synthesizing module 'PLLE2_ADV' [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:32655]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT bound to: 8 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKIN1_PERIOD bound to: 8.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE bound to: 25 - type: integer 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_DIVIDE bound to: 5 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'PLLE2_ADV' (2#1) [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:32655]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_output_clk_wiz_0_0_clk_wiz' (4#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0_clk_wiz.v:68]
+INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_output_clk_wiz_0_0' (5#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0.v:70]
+WARNING: [Synth 8-350] instance 'clk_wiz_0' of module 'zybo_dvi_output_clk_wiz_0_0' requires 5 connections, but only 4 given [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v:42]
+INFO: [Synth 8-638] synthesizing module 'zybo_dvi_output_rgb2dvi_0_0' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/synth/zybo_dvi_output_rgb2dvi_0_0.vhd:72]
+	Parameter kGenerateSerialClk bound to: 0 - type: bool 
 	Parameter kClkPrimitive bound to: MMCM - type: string 
 	Parameter kRstActiveHigh bound to: 1 - type: bool 
 	Parameter kClkRange bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'rgb2dvi' declared at '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/rgb2dvi.vhd:61' bound to instance 'U0' of component 'rgb2dvi' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/synth/zybo_dvi_output_rgb2dvi_0_0.vhd:113]
+INFO: [Synth 8-3491] module 'rgb2dvi' declared at '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/rgb2dvi.vhd:61' bound to instance 'U0' of component 'rgb2dvi' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/synth/zybo_dvi_output_rgb2dvi_0_0.vhd:115]
 INFO: [Synth 8-638] synthesizing module 'rgb2dvi' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/rgb2dvi.vhd:89]
-	Parameter kGenerateSerialClk bound to: 1 - type: bool 
+	Parameter kGenerateSerialClk bound to: 0 - type: bool 
 	Parameter kClkPrimitive bound to: MMCM - type: string 
 	Parameter kClkRange bound to: 1 - type: integer 
 	Parameter kRstActiveHigh bound to: 1 - type: bool 
-INFO: [Synth 8-638] synthesizing module 'ClockGen' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/ClockGen.vhd:46]
-	Parameter kClkRange bound to: 1 - type: integer 
-	Parameter kClkPrimitive bound to: MMCM - type: string 
 INFO: [Synth 8-638] synthesizing module 'ResetBridge' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/SyncAsyncReset.vhd:72]
 	Parameter kPolarity bound to: 1'b1 
 INFO: [Synth 8-5534] Detected attribute (* keep = "TRUE" *) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/SyncAsyncReset.vhd:73]
@@ -43,63 +93,8 @@ INFO: [Synth 8-638] synthesizing module 'SyncAsync' [/home/mike/Documents/osiris
 	Parameter kResetTo bound to: 1'b1 
 	Parameter kStages bound to: 2 - type: integer 
 INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/SyncAsync.vhd:73]
-INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (1#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/SyncAsync.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (2#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/SyncAsyncReset.vhd:72]
-INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized0' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/SyncAsync.vhd:72]
-	Parameter kResetTo bound to: 1'b0 
-	Parameter kStages bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized0' (2#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/SyncAsync.vhd:72]
-WARNING: [Synth 8-614] signal 'pRst' is read in the process but is not in the sensitivity list [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/ClockGen.vhd:71]
-	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
-	Parameter CLKFBOUT_MULT_F bound to: 5.000000 - type: float 
-	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKFBOUT_USE_FINE_PS bound to: 0 - type: bool 
-	Parameter CLKIN1_PERIOD bound to: 6.000000 - type: float 
-	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
-	Parameter CLKOUT0_DIVIDE_F bound to: 1.000000 - type: float 
-	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT0_USE_FINE_PS bound to: 0 - type: bool 
-	Parameter CLKOUT1_DIVIDE bound to: 5 - type: integer 
-	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT1_USE_FINE_PS bound to: 0 - type: bool 
-	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT2_USE_FINE_PS bound to: 0 - type: bool 
-	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT3_USE_FINE_PS bound to: 0 - type: bool 
-	Parameter CLKOUT4_CASCADE bound to: 0 - type: bool 
-	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT4_USE_FINE_PS bound to: 0 - type: bool 
-	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT5_USE_FINE_PS bound to: 0 - type: bool 
-	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT6_USE_FINE_PS bound to: 0 - type: bool 
-	Parameter COMPENSATION bound to: ZHOLD - type: string 
-	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
-	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
-	Parameter IS_PSEN_INVERTED bound to: 1'b0 
-	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
-	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
-	Parameter IS_RST_INVERTED bound to: 1'b0 
-	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
-	Parameter REF_JITTER2 bound to: 0.000000 - type: float 
-	Parameter SS_EN bound to: FALSE - type: string 
-	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
-	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
-	Parameter STARTUP_WAIT bound to: 0 - type: bool 
-INFO: [Synth 8-113] binding component instance 'DVI_ClkGenerator' to cell 'MMCME2_ADV' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/ClockGen.vhd:113]
-INFO: [Synth 8-256] done synthesizing module 'ClockGen' (3#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/ClockGen.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (6#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (7#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/SyncAsyncReset.vhd:72]
 INFO: [Synth 8-638] synthesizing module 'OutputSERDES' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/OutputSERDES.vhd:76]
 	Parameter kParallelWidth bound to: 10 - type: integer 
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
@@ -158,17 +153,23 @@ INFO: [Synth 8-113] binding component instance 'SerializerMaster' to cell 'OSERD
 	Parameter TBYTE_SRC bound to: FALSE - type: string 
 	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-113] binding component instance 'SerializerSlave' to cell 'OSERDESE2' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/OutputSERDES.vhd:135]
-INFO: [Synth 8-256] done synthesizing module 'OutputSERDES' (4#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/OutputSERDES.vhd:76]
+INFO: [Synth 8-256] done synthesizing module 'OutputSERDES' (8#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/OutputSERDES.vhd:76]
 INFO: [Synth 8-638] synthesizing module 'TMDS_Encoder' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:80]
 WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:93]
 WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:93]
-INFO: [Synth 8-256] done synthesizing module 'TMDS_Encoder' (5#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:80]
-INFO: [Synth 8-256] done synthesizing module 'rgb2dvi' (6#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/rgb2dvi.vhd:89]
-INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_output_rgb2dvi_0_0' (7#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/synth/zybo_dvi_output_rgb2dvi_0_0.vhd:71]
-INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_output' (8#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v:13]
-INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_output_wrapper' (9#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v:12]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_Encoder' (9#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'rgb2dvi' (10#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/rgb2dvi.vhd:89]
+INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_output_rgb2dvi_0_0' (11#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/synth/zybo_dvi_output_rgb2dvi_0_0.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'zybo_dvi_output_xlconstant_0_0' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_xlconstant_0_0/sim/zybo_dvi_output_xlconstant_0_0.v:56]
+INFO: [Synth 8-638] synthesizing module 'xlconstant' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/xilinx.com/xlconstant_v1_1/xlconstant.v:23]
+	Parameter CONST_VAL bound to: 1'b1 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xlconstant' (12#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/xilinx.com/xlconstant_v1_1/xlconstant.v:23]
+INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_output_xlconstant_0_0' (13#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_xlconstant_0_0/sim/zybo_dvi_output_xlconstant_0_0.v:56]
+INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_output' (14#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v:13]
+INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_output_wrapper' (15#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1065.445 ; gain = 228.207 ; free physical = 6811 ; free virtual = 20819
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1026.559 ; gain = 185.301 ; free physical = 3286 ; free virtual = 5696
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -178,9 +179,9 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1065.445 ; gain = 228.207 ; free physical = 6811 ; free virtual = 20819
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1026.559 ; gain = 185.301 ; free physical = 3286 ; free virtual = 5696
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -189,13 +190,14 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/src/rgb2dvi.xdc] for cell 'zybo_dvi_output_i/rgb2dvi_0/U0'
 Finished Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/src/rgb2dvi.xdc] for cell 'zybo_dvi_output_i/rgb2dvi_0/U0'
+Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0_board.xdc] for cell 'zybo_dvi_output_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0_board.xdc] for cell 'zybo_dvi_output_i/clk_wiz_0/inst'
+Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0.xdc] for cell 'zybo_dvi_output_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0.xdc] for cell 'zybo_dvi_output_i/clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zybo_dvi_output_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/zybo_dvi_output_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
 Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'hdmi_out_en'. [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:153]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:153]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'hdmi_out_en'. [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:154]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:154]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zybo_dvi_output_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/zybo_dvi_output_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
@@ -211,30 +213,33 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1389.961 ; gain = 0.000 ; free physical = 6596 ; free virtual = 20604
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1317.059 ; gain = 0.000 ; free physical = 3034 ; free virtual = 5440
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 24787 
+INFO: Helper process launched with PID 21164 
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6590 ; free virtual = 20598
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1317.062 ; gain = 475.805 ; free physical = 3030 ; free virtual = 5437
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6590 ; free virtual = 20598
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1317.062 ; gain = 475.805 ; free physical = 3030 ; free virtual = 5437
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for zybo_dvi_output_i/rgb2dvi_0/U0. (constraint file  /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/dont_touch.xdc, line 13).
+Applied set_property DONT_TOUCH = true for zybo_dvi_output_i/rgb2dvi_0/U0. (constraint file  /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/dont_touch.xdc, line 19).
+Applied set_property DONT_TOUCH = true for zybo_dvi_output_i/clk_wiz_0/inst. (constraint file  /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/dont_touch.xdc, line 27).
 Applied set_property DONT_TOUCH = true for zybo_dvi_output_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zybo_dvi_output_i/clk_wiz_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for zybo_dvi_output_i/rgb2dvi_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zybo_dvi_output_i/xlconstant_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6590 ; free virtual = 20598
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1317.062 ; gain = 475.805 ; free physical = 3031 ; free virtual = 5437
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6585 ; free virtual = 20593
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1317.062 ; gain = 475.805 ; free physical = 3029 ; free virtual = 5435
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -260,9 +265,8 @@ Detailed RTL Component Info :
 	                8 Bit    Registers := 3     
 	                5 Bit    Registers := 3     
 	                4 Bit    Registers := 9     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 19    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 18    
 +---Muxes : 
 	   4 Input     10 Bit        Muxes := 3     
 	   2 Input     10 Bit        Muxes := 9     
@@ -279,15 +283,6 @@ Module SyncAsync
 Detailed RTL Component Info : 
 +---Registers : 
 	                2 Bit    Registers := 1     
-Module SyncAsync__parameterized0 
-Detailed RTL Component Info : 
-+---Registers : 
-	                2 Bit    Registers := 1     
-Module ClockGen 
-Detailed RTL Component Info : 
-+---Registers : 
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
 Module TMDS_Encoder 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -322,7 +317,7 @@ BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6585 ; free virtual = 20593
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1317.066 ; gain = 475.809 ; free physical = 3029 ; free virtual = 5435
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -337,9 +332,9 @@ INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pC1_2_reg' in
 INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pVde_1_reg' into 'DataEncoders[0].DataEncoder/pVde_1_reg' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:110]
 INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pVde_2_reg' into 'DataEncoders[0].DataEncoder/pVde_2_reg' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:150]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6586 ; free virtual = 20594
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1317.066 ; gain = 475.809 ; free physical = 3031 ; free virtual = 5437
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6586 ; free virtual = 20594
+Finished Parallel Reinference  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1317.066 ; gain = 475.809 ; free physical = 3031 ; free virtual = 5437
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -350,9 +345,9 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6578 ; free virtual = 20586
+Finished Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1317.066 ; gain = 475.809 ; free physical = 3031 ; free virtual = 5437
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6578 ; free virtual = 20586
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1317.066 ; gain = 475.809 ; free physical = 3031 ; free virtual = 5437
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -365,11 +360,15 @@ Start Timing Optimization
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'zybo_dvi_output_i/rgb2dvi_0/U0/SerialClk' to pin 'zybo_dvi_output_i/clk_wiz_0/inst/clkout2_buf/O'
+info: Source pin 'zybo_dvi_output_i/rgb2dvi_0/U0/PixelClk' of generated clock is hierarchical
+info: Moving clock source from hierarchical pin 'zybo_dvi_output_i/rgb2dvi_0/U0/PixelClk' to 'zybo_dvi_output_i/rgb2dvi_0/U0/\DataEncoders[2].DataEncoder/cnt_t_3_reg[4] /C'
+INFO: Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6547 ; free virtual = 20555
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1317.066 ; gain = 475.809 ; free physical = 3035 ; free virtual = 5436
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6546 ; free virtual = 20555
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1321.059 ; gain = 479.801 ; free physical = 3031 ; free virtual = 5433
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -383,16 +382,16 @@ Start Technology Mapping
 WARNING: [Synth 8-3332] Sequential element (\DataEncoders[1].DataEncoder/pC0_1_reg ) is unused and will be removed from module rgb2dvi.
 WARNING: [Synth 8-3332] Sequential element (\DataEncoders[1].DataEncoder/pC0_2_reg ) is unused and will be removed from module rgb2dvi.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6528 ; free virtual = 20536
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1340.082 ; gain = 498.824 ; free physical = 3018 ; free virtual = 5419
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6528 ; free virtual = 20536
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1340.082 ; gain = 498.824 ; free physical = 3018 ; free virtual = 5419
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6528 ; free virtual = 20536
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1340.082 ; gain = 498.824 ; free physical = 3018 ; free virtual = 5419
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -409,7 +408,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6528 ; free virtual = 20536
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1340.082 ; gain = 498.824 ; free physical = 3018 ; free virtual = 5419
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -422,7 +421,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6528 ; free virtual = 20536
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1340.082 ; gain = 498.824 ; free physical = 3018 ; free virtual = 5419
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -434,25 +433,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6528 ; free virtual = 20536
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1340.082 ; gain = 498.824 ; free physical = 3018 ; free virtual = 5419
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6528 ; free virtual = 20536
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1340.082 ; gain = 498.824 ; free physical = 3018 ; free virtual = 5419
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6528 ; free virtual = 20536
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1340.082 ; gain = 498.824 ; free physical = 3018 ; free virtual = 5419
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6528 ; free virtual = 20536
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1340.082 ; gain = 498.824 ; free physical = 3018 ; free virtual = 5419
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -468,52 +467,52 @@ Report Cell Usage:
 +------+------------+------+
 |      |Cell        |Count |
 +------+------------+------+
-|1     |BUFG        |     1|
-|2     |LUT1        |     2|
+|1     |BUFG        |     3|
+|2     |LUT1        |     1|
 |3     |LUT2        |     9|
-|4     |LUT3        |    41|
+|4     |LUT3        |    40|
 |5     |LUT4        |    26|
 |6     |LUT5        |    77|
 |7     |LUT6        |    95|
-|8     |MMCME2_ADV  |     1|
-|9     |MUXF7       |     4|
-|10    |OSERDESE2   |     4|
-|11    |OSERDESE2_1 |     4|
-|12    |FDPE        |     8|
-|13    |FDRE        |   125|
+|8     |MUXF7       |     4|
+|9     |OSERDESE2   |     4|
+|10    |OSERDESE2_1 |     4|
+|11    |PLLE2_ADV   |     1|
+|12    |FDPE        |     2|
+|13    |FDRE        |   123|
 |14    |FDSE        |    15|
 |15    |IBUF        |     1|
-|16    |OBUFDS      |     4|
+|16    |OBUF        |     1|
+|17    |OBUFDS      |     4|
 +------+------------+------+
 
 Report Instance Areas: 
-+------+-----------------------------------------+----------------------------+------+
-|      |Instance                                 |Module                      |Cells |
-+------+-----------------------------------------+----------------------------+------+
-|1     |top                                      |                            |   417|
-|2     |  zybo_dvi_output_i                      |zybo_dvi_output             |   415|
-|3     |    rgb2dvi_0                            |zybo_dvi_output_rgb2dvi_0_0 |   415|
-|4     |      U0                                 |rgb2dvi                     |   415|
-|5     |        \ClockGenInternal.ClockGenX      |ClockGen                    |    11|
-|6     |          LockLostReset                  |ResetBridge_5               |     2|
-|7     |            SyncAsyncx                   |SyncAsync_6                 |     2|
-|8     |          PLL_LockSyncAsync              |SyncAsync__parameterized0   |     2|
-|9     |        ClockSerializer                  |OutputSERDES                |     3|
-|10    |        \DataEncoders[0].DataEncoder     |TMDS_Encoder                |   134|
-|11    |        \DataEncoders[0].DataSerializer  |OutputSERDES_0              |     3|
-|12    |        \DataEncoders[1].DataEncoder     |TMDS_Encoder_1              |   129|
-|13    |        \DataEncoders[1].DataSerializer  |OutputSERDES_2              |     3|
-|14    |        \DataEncoders[2].DataEncoder     |TMDS_Encoder_3              |   127|
-|15    |        \DataEncoders[2].DataSerializer  |OutputSERDES_4              |     3|
-|16    |        LockLostReset                    |ResetBridge                 |     2|
-|17    |          SyncAsyncx                     |SyncAsync                   |     2|
-+------+-----------------------------------------+----------------------------+------+
++------+-----------------------------------------+------------------------------------+------+
+|      |Instance                                 |Module                              |Cells |
++------+-----------------------------------------+------------------------------------+------+
+|1     |top                                      |                                    |   410|
+|2     |  zybo_dvi_output_i                      |zybo_dvi_output                     |   409|
+|3     |    clk_wiz_0                            |zybo_dvi_output_clk_wiz_0_0         |     5|
+|4     |      inst                               |zybo_dvi_output_clk_wiz_0_0_clk_wiz |     5|
+|5     |    rgb2dvi_0                            |zybo_dvi_output_rgb2dvi_0_0         |   404|
+|6     |      U0                                 |rgb2dvi                             |   404|
+|7     |        ClockSerializer                  |OutputSERDES                        |     3|
+|8     |        \DataEncoders[0].DataEncoder     |TMDS_Encoder                        |   134|
+|9     |        \DataEncoders[0].DataSerializer  |OutputSERDES_0                      |     3|
+|10    |        \DataEncoders[1].DataEncoder     |TMDS_Encoder_1                      |   129|
+|11    |        \DataEncoders[1].DataSerializer  |OutputSERDES_2                      |     3|
+|12    |        \DataEncoders[2].DataEncoder     |TMDS_Encoder_3                      |   127|
+|13    |        \DataEncoders[2].DataSerializer  |OutputSERDES_4                      |     3|
+|14    |        LockLostReset                    |ResetBridge                         |     2|
+|15    |          SyncAsyncx                     |SyncAsync                           |     2|
+|16    |    xlconstant_0                         |zybo_dvi_output_xlconstant_0_0      |     0|
++------+-----------------------------------------+------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6528 ; free virtual = 20536
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1340.082 ; gain = 498.824 ; free physical = 3018 ; free virtual = 5419
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1389.961 ; gain = 107.379 ; free physical = 6528 ; free virtual = 20536
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1389.961 ; gain = 552.723 ; free physical = 6528 ; free virtual = 20536
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1340.082 ; gain = 116.402 ; free physical = 3018 ; free virtual = 5419
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1340.082 ; gain = 498.824 ; free physical = 3018 ; free virtual = 5419
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -523,8 +522,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-56 Infos, 7 Warnings, 2 Critical Warnings and 0 Errors encountered.
+68 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1408.984 ; gain = 497.371 ; free physical = 6528 ; free virtual = 20536
-report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1441.004 ; gain = 0.000 ; free physical = 6528 ; free virtual = 20536
-INFO: [Common 17-206] Exiting Vivado at Thu Jan 14 15:43:28 2016...
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1340.086 ; gain = 427.492 ; free physical = 3017 ; free virtual = 5419
+report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1372.102 ; gain = 0.000 ; free physical = 3016 ; free virtual = 5418
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 14 12:21:27 2016...

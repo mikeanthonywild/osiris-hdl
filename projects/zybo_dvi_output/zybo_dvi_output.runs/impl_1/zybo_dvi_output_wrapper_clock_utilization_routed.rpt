@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date              : Thu Jan 14 15:44:04 2016
-| Host              : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
+| Date              : Thu Jan 14 12:22:00 2016
+| Host              : thinkpad running 64-bit elementary OS Freya
 | Command           : report_clock_utilization -file zybo_dvi_output_wrapper_clock_utilization_routed.rpt
 | Design            : zybo_dvi_output_wrapper
 | Device            : 7z010-clg400
@@ -29,11 +29,11 @@ Table of Contents
 +-------+------+-----------+-----------+
 | Type  | Used | Available | Num Fixed |
 +-------+------+-----------+-----------+
-| BUFG  |    1 |        32 |         0 |
+| BUFG  |    3 |        32 |         0 |
 | BUFH  |    0 |        48 |         0 |
 | BUFIO |    0 |         8 |         0 |
-| MMCM  |    1 |         2 |         0 |
-| PLL   |    0 |         2 |         0 |
+| MMCM  |    0 |         2 |         0 |
+| PLL   |    1 |         2 |         0 |
 | BUFR  |    0 |         8 |         0 |
 | BUFMR |    0 |         4 |         0 |
 +-------+------+-----------+-----------+
@@ -42,34 +42,26 @@ Table of Contents
 2. Details of Global Clocks
 ---------------------------
 
-+-------+--------------------+---------------+--------------+-------+
-|       |                    |               |   Num Loads  |       |
-+-------+--------------------+---------------+------+-------+-------+
-| Index | BUFG Cell          | Net Name      | BELs | Sites | Fixed |
-+-------+--------------------+---------------+------+-------+-------+
-|     1 | clk_IBUF_BUFG_inst | clk_IBUF_BUFG |   11 |     5 |    no |
-+-------+--------------------+---------------+------+-------+-------+
++-------+----------------------------------------------+---------------------------------------------------------------------------+--------------+-------+
+|       |                                              |                                                                           |   Num Loads  |       |
++-------+----------------------------------------------+---------------------------------------------------------------------------+------+-------+-------+
+| Index | BUFG Cell                                    | Net Name                                                                  | BELs | Sites | Fixed |
++-------+----------------------------------------------+---------------------------------------------------------------------------+------+-------+-------+
+|     1 | zybo_dvi_output_i/clk_wiz_0/inst/clkf_buf    | zybo_dvi_output_i/clk_wiz_0/inst/clkfbout_buf_zybo_dvi_output_clk_wiz_0_0 |    1 |     1 |    no |
+|     2 | zybo_dvi_output_i/clk_wiz_0/inst/clkout2_buf | zybo_dvi_output_i/clk_wiz_0/inst/clk_out2                                 |    8 |     8 |    no |
+|     3 | zybo_dvi_output_i/clk_wiz_0/inst/clkout1_buf | zybo_dvi_output_i/clk_wiz_0/inst/clk_out1                                 |   10 |     9 |    no |
++-------+----------------------------------------------+---------------------------------------------------------------------------+------+-------+-------+
 
 
-+-------+------------------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------+--------------+-------+
-|       |                                                                                    |           BUFHCE          |                                                                     |   Num Loads  |       |
-+-------+------------------------------------------------------------------------------------+------------+--------------+---------------------------------------------------------------------+------+-------+-------+
-| Index | Src of Rt-thru BUFHCE                                                              | Clk-Region | Site         | Net Name                                                            | BELs | Sites | Fixed |
-+-------+------------------------------------------------------------------------------------+------------+--------------+---------------------------------------------------------------------+------+-------+-------+
-|     1 | zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator | X1Y1       | BUFHCE_X1Y22 | zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/PixelClk  |    8 |     8 |    no |
-|     2 | zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator | X1Y1       | BUFHCE_X1Y23 | zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk |    8 |     8 |    no |
-+-------+------------------------------------------------------------------------------------+------------+--------------+---------------------------------------------------------------------+------+-------+-------+
-
-
-+-------+------------------------------------------------------------------------------------+---------------------------------------------------------------------+--------------+-------+
-|       |                                                                                    |                                                                     |   Num Loads  |       |
-+-------+------------------------------------------------------------------------------------+---------------------------------------------------------------------+------+-------+-------+
-| Index | MMCM Cell                                                                          | Net Name                                                            | BELs | Sites | Fixed |
-+-------+------------------------------------------------------------------------------------+---------------------------------------------------------------------+------+-------+-------+
-|     1 | zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator | zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/CLKFBIN   |    1 |     1 |    no |
-|     2 | zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator | zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/PixelClk  |    8 |     8 |    no |
-|     3 | zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator | zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk |    8 |     8 |    no |
-+-------+------------------------------------------------------------------------------------+---------------------------------------------------------------------+------+-------+-------+
++-------+-------------------------------------------------+-----------------------------------------------------------------------+--------------+-------+
+|       |                                                 |                                                                       |   Num Loads  |       |
++-------+-------------------------------------------------+-----------------------------------------------------------------------+------+-------+-------+
+| Index | PLL Cell                                        | Net Name                                                              | BELs | Sites | Fixed |
++-------+-------------------------------------------------+-----------------------------------------------------------------------+------+-------+-------+
+|     1 | zybo_dvi_output_i/clk_wiz_0/inst/plle2_adv_inst | zybo_dvi_output_i/clk_wiz_0/inst/clk_out1_zybo_dvi_output_clk_wiz_0_0 |    1 |     1 |    no |
+|     2 | zybo_dvi_output_i/clk_wiz_0/inst/plle2_adv_inst | zybo_dvi_output_i/clk_wiz_0/inst/clk_out2_zybo_dvi_output_clk_wiz_0_0 |    1 |     1 |    no |
+|     3 | zybo_dvi_output_i/clk_wiz_0/inst/plle2_adv_inst | zybo_dvi_output_i/clk_wiz_0/inst/clkfbout_zybo_dvi_output_clk_wiz_0_0 |    1 |     1 |    no |
++-------+-------------------------------------------------+-----------------------------------------------------------------------+------+-------+-------+
 
 
 3. Details of Regional Clocks
@@ -84,6 +76,15 @@ Table of Contents
 6. Details of Local Clocks
 --------------------------
 
++-------+-----------------------------------------------+----------------------------------------------------------------------+--------------+-------+
+|       |                                               |                                                                      |   Num Loads  |       |
++-------+-----------------------------------------------+----------------------------------------------------------------------+------+-------+-------+
+| Index | Local Clk Src                                 | Net Name                                                             | BELs | Sites | Fixed |
++-------+-----------------------------------------------+----------------------------------------------------------------------+------+-------+-------+
+|     1 | zybo_dvi_output_i/clk_wiz_0/inst/clkin1_ibufg | zybo_dvi_output_i/clk_wiz_0/inst/clk_in1_zybo_dvi_output_clk_wiz_0_0 |    1 |     1 |   yes |
++-------+-----------------------------------------------+----------------------------------------------------------------------+------+-------+-------+
+
+
 7. Clock Regions : Key Resource Utilization
 -------------------------------------------
 
@@ -95,7 +96,7 @@ Table of Contents
 | X0Y0              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  8800 |    0 |  1600 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  8800 |    0 |  1400 |    0 |    40 |    0 |    20 |    0 |    20 |
 | X0Y1              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  8800 |    0 |  1600 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 |   10 |  8800 |    0 |  1400 |    0 |    40 |    0 |    20 |    0 |    20 |
+| X1Y1              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 |    2 |  8800 |    0 |  1400 |    0 |    40 |    0 |    20 |    0 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * RAMB36 site can be used as two RAMB18/FIFO18 sites.
 
@@ -103,21 +104,24 @@ Table of Contents
 8. Net wise resources used in clock region X1Y1
 -----------------------------------------------
 
-+-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+----------------+
-| Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s | Clock Net Name |
-+-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+----------------+
-| BUFG        | BUFHCE_X1Y12 |   no  |         1 |        0 |       0 |         0 |       0 |       0 |  10 |     0 |        0 | clk_IBUF_BUFG  |
-+-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+----------------+
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------------------------------------------------+
+| Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                               Clock Net Name                              |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------------------------------------------------+
+| BUFG        | BUFHCE_X1Y23 |   no  |         0 |        0 |       0 |         0 |       0 |       8 |   0 |     0 |        0 | zybo_dvi_output_i/clk_wiz_0/inst/clk_out2                                 |
+| BUFG        | BUFHCE_X1Y12 |   no  |         0 |        1 |       0 |         0 |       0 |       0 |   0 |     0 |        0 | zybo_dvi_output_i/clk_wiz_0/inst/clkfbout_buf_zybo_dvi_output_clk_wiz_0_0 |
+| BUFG        | BUFHCE_X1Y22 |   no  |         0 |        0 |       0 |         0 |       0 |       8 |   2 |     0 |        0 | zybo_dvi_output_i/clk_wiz_0/inst/clk_out1                                 |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------------------------------------------------+
 
 
 
 # Location of BUFG Primitives 
-set_property LOC BUFGCTRL_X0Y16 [get_cells clk_IBUF_BUFG_inst]
+set_property LOC BUFGCTRL_X0Y16 [get_cells zybo_dvi_output_i/clk_wiz_0/inst/clkout1_buf]
+set_property LOC BUFGCTRL_X0Y17 [get_cells zybo_dvi_output_i/clk_wiz_0/inst/clkout2_buf]
+set_property LOC BUFGCTRL_X0Y18 [get_cells zybo_dvi_output_i/clk_wiz_0/inst/clkf_buf]
 
 # Location of IO Clock Primitives
 
 # Location of MMCM Clock Primitives
-set_property LOC MMCME2_ADV_X0Y1 [get_cells zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator]
 
 # Location of BUFH Clock Primitives
 
@@ -126,43 +130,23 @@ set_property LOC MMCME2_ADV_X0Y1 [get_cells zybo_dvi_output_i/rgb2dvi_0/U0/Clock
 # Location of BUFMR Clock Primitives
 
 # Location of PLL Clock Primitives
+set_property LOC PLLE2_ADV_X0Y1 [get_cells zybo_dvi_output_i/clk_wiz_0/inst/plle2_adv_inst]
 
 # Location of IO Primitives which is load of clock spine
 
 # Location of clock ports
 set_property LOC IOB_X0Y78 [get_ports clk]
 
-# Clock net "clk_IBUF_BUFG" driven by instance "clk_IBUF_BUFG_inst" located at site "BUFGCTRL_X0Y16"
+# Clock net "zybo_dvi_output_i/clk_wiz_0/inst/clk_out1" driven by instance "zybo_dvi_output_i/clk_wiz_0/inst/clkout1_buf" located at site "BUFGCTRL_X0Y16"
 #startgroup
-create_pblock {CLKAG_clk_IBUF_BUFG}
-add_cells_to_pblock [get_pblocks  {CLKAG_clk_IBUF_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clk_IBUF_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_clk_IBUF_BUFG}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+create_pblock {CLKAG_zybo_dvi_output_i/clk_wiz_0/inst/clk_out1}
+add_cells_to_pblock [get_pblocks  {CLKAG_zybo_dvi_output_i/clk_wiz_0/inst/clk_out1}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="zybo_dvi_output_i/clk_wiz_0/inst/clk_out1"}]]]
+resize_pblock [get_pblocks {CLKAG_zybo_dvi_output_i/clk_wiz_0/inst/clk_out1}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
-# Clock net "zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/PixelClk" driven by instance "zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator" located at site "MMCME2_ADV_X0Y1"
+# Clock net "zybo_dvi_output_i/clk_wiz_0/inst/clk_out2" driven by instance "zybo_dvi_output_i/clk_wiz_0/inst/clkout2_buf" located at site "BUFGCTRL_X0Y17"
 #startgroup
-create_pblock {CLKAG_zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/PixelClk}
-add_cells_to_pblock [get_pblocks  {CLKAG_zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/PixelClk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/PixelClk"}]]]
-resize_pblock [get_pblocks {CLKAG_zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/PixelClk}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
-#endgroup
-
-# Clock net "zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/PixelClk" driven by instance "zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator" located at site "MMCME2_ADV_X0Y1"
-#startgroup
-create_pblock {CLKAG_zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/PixelClk}
-add_cells_to_pblock [get_pblocks  {CLKAG_zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/PixelClk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/PixelClk"}]]]
-resize_pblock [get_pblocks {CLKAG_zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/PixelClk}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
-#endgroup
-
-# Clock net "zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk" driven by instance "zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator" located at site "MMCME2_ADV_X0Y1"
-#startgroup
-create_pblock {CLKAG_zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk}
-add_cells_to_pblock [get_pblocks  {CLKAG_zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk"}]]]
-resize_pblock [get_pblocks {CLKAG_zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
-#endgroup
-
-# Clock net "zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk" driven by instance "zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator" located at site "MMCME2_ADV_X0Y1"
-#startgroup
-create_pblock {CLKAG_zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk}
-add_cells_to_pblock [get_pblocks  {CLKAG_zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk"}]]]
-resize_pblock [get_pblocks {CLKAG_zybo_dvi_output_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+create_pblock {CLKAG_zybo_dvi_output_i/clk_wiz_0/inst/clk_out2}
+add_cells_to_pblock [get_pblocks  {CLKAG_zybo_dvi_output_i/clk_wiz_0/inst/clk_out2}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="zybo_dvi_output_i/clk_wiz_0/inst/clk_out2"}]]]
+resize_pblock [get_pblocks {CLKAG_zybo_dvi_output_i/clk_wiz_0/inst/clk_out2}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup

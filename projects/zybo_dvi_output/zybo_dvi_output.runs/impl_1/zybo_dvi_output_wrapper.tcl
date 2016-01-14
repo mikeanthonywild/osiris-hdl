@@ -61,6 +61,10 @@ set rc [catch {
   add_files -quiet /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/zybo_dvi_output_wrapper.dcp
   read_xdc -ref zybo_dvi_output_rgb2dvi_0_0 -cells U0 /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/src/rgb2dvi.xdc
   set_property processing_order EARLY [get_files /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/src/rgb2dvi.xdc]
+  read_xdc -prop_thru_buffers -ref zybo_dvi_output_clk_wiz_0_0 -cells inst /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0_board.xdc
+  set_property processing_order EARLY [get_files /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0_board.xdc]
+  read_xdc -ref zybo_dvi_output_clk_wiz_0_0 -cells inst /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0.xdc
+  set_property processing_order EARLY [get_files /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0.xdc]
   read_xdc /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc
   read_xdc -ref zybo_dvi_output_rgb2dvi_0_0 -cells U0 /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc
   set_property processing_order LATE [get_files /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc]

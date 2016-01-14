@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jan 14 15:42:54 2016" VIVADOVERSION="2015.4">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:1.0" DEVICE="7z010" NAME="zybo_dvi_output" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rgb2dvi_0" PORT="PixelClk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="hdmi_clk_p" SIGIS="undef" SIGNAME="rgb2dvi_0_TMDS_Clk_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rgb2dvi_0" PORT="TMDS_Clk_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="hdmi_clk_n" SIGIS="undef" SIGNAME="rgb2dvi_0_TMDS_Clk_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rgb2dvi_0" PORT="TMDS_Clk_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="hdmi_d_p" RIGHT="0" SIGIS="undef" SIGNAME="rgb2dvi_0_TMDS_Data_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rgb2dvi_0" PORT="TMDS_Data_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="hdmi_d_n" RIGHT="0" SIGIS="undef" SIGNAME="rgb2dvi_0_TMDS_Data_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rgb2dvi_0" PORT="TMDS_Data_n"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/rgb2dvi_0" HWVERSION="1.2" INSTANCE="rgb2dvi_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rgb2dvi" VLNV="digilentinc.com:ip:rgb2dvi:1.2">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="/home/mike/Documents/osiris-hdl/hdl/rgb2dvi_v1_2/docs/rgb2dvi_v1_2.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="kGenerateSerialClk" VALUE="true"/>
+        <PARAMETER NAME="kClkPrimitive" VALUE="MMCM"/>
+        <PARAMETER NAME="kRstActiveHigh" VALUE="true"/>
+        <PARAMETER NAME="kClkRange" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="zybo_dvi_output_rgb2dvi_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="TMDS_Clk_p" SIGIS="undef" SIGNAME="rgb2dvi_0_TMDS_Clk_p">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_clk_p"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="TMDS_Clk_n" SIGIS="undef" SIGNAME="rgb2dvi_0_TMDS_Clk_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_clk_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="TMDS_Data_p" RIGHT="0" SIGIS="undef" SIGNAME="rgb2dvi_0_TMDS_Data_p">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_d_p"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="TMDS_Data_n" RIGHT="0" SIGIS="undef" SIGNAME="rgb2dvi_0_TMDS_Data_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_d_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aRst" SIGIS="rst"/>
+        <PORT DIR="I" LEFT="23" NAME="vid_pData" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="vid_pVDE" SIGIS="undef"/>
+        <PORT DIR="I" NAME="vid_pHSync" SIGIS="undef"/>
+        <PORT DIR="I" NAME="vid_pVSync" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="PixelClk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="TMDS" TYPE="INITIATOR">
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="TMDS_Clk_p"/>
+            <PORTMAP PHYSICAL="TMDS_Clk_n"/>
+            <PORTMAP PHYSICAL="TMDS_Data_p"/>
+            <PORTMAP PHYSICAL="TMDS_Data_n"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="RGB" TYPE="TARGET">
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="vid_pData"/>
+            <PORTMAP PHYSICAL="vid_pHSync"/>
+            <PORTMAP PHYSICAL="vid_pVSync"/>
+            <PORTMAP PHYSICAL="vid_pVDE"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

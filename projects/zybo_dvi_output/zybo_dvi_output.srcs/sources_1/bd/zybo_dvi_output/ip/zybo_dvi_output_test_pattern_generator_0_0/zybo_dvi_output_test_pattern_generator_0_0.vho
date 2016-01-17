@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:test_pattern_generator:1.0
--- IP Revision: 8
+-- IP Revision: 9
 
 -- The following code must appear in the VHDL architecture header.
 

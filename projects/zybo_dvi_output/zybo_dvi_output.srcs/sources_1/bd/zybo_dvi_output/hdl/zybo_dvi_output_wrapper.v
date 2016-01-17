@@ -1,8 +1,8 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-//Date        : Thu Jan 14 15:06:41 2016
-//Host        : thinkpad running 64-bit elementary OS Freya
+//Date        : Sun Jan 17 15:07:54 2016
+//Host        : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 //Command     : generate_target zybo_dvi_output_wrapper.bd
 //Design      : zybo_dvi_output_wrapper
 //Purpose     : IP block netlist

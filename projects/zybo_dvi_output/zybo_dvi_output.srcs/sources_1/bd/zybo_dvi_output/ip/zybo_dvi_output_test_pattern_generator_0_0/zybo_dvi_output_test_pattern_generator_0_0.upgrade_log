@@ -1,6 +1,27 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
+| Date         : Sun Jan 17 14:27:42 2016
+| Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zybo_dvi_output_test_pattern_generator_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of zybo_dvi_output_test_pattern_generator_0_0 (user.org:user:test_pattern_generator:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
 | Date         : Thu Jan 14 15:04:47 2016
 | Host         : thinkpad running 64-bit elementary OS Freya
 | Command      : upgrade_ip

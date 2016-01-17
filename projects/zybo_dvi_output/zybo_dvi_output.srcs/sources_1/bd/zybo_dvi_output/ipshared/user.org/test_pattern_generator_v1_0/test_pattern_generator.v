@@ -29,8 +29,8 @@
     parameter integer V_BACK_PORCH     = 20;
 
     // Registers
-    reg [9:0] h_count;
-    reg [9:0] v_count;
+    reg [12:0] h_count;
+    reg [12:0] v_count;
 
     localparam BLANK_WIDTH      = H_FRONT_PORCH + H_SYNC_PULSE + H_BACK_PORCH;
     localparam MAX_H_COUNT      = DISPLAY_WIDTH + BLANK_WIDTH;

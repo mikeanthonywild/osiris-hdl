@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:test_pattern_generator:1.0
-// IP Revision: 8
+// IP Revision: 9
 
 `timescale 1ns/1ps
 
@@ -73,14 +73,14 @@ output wire hsync;
 output wire vde;
 
   test_pattern_generator #(
-    .DISPLAY_WIDTH(640),
-    .H_FRONT_PORCH(16),
-    .H_SYNC_PULSE(96),
-    .H_BACK_PORCH(48),
-    .DISPLAY_HEIGHT(480),
-    .V_FRONT_PORCH(10),
-    .V_SYNC_PULSE(2),
-    .V_BACK_PORCH(33)
+    .DISPLAY_WIDTH(1920),
+    .H_FRONT_PORCH(88),
+    .H_SYNC_PULSE(44),
+    .H_BACK_PORCH(148),
+    .DISPLAY_HEIGHT(1080),
+    .V_FRONT_PORCH(4),
+    .V_SYNC_PULSE(5),
+    .V_BACK_PORCH(36)
   ) inst (
     .clk(clk),
     .r(r),

@@ -4,10 +4,10 @@
 ## - rename the used signals according to the project
 
 ##Clock signal
-##IO_L11P_T1_SRCC_35	
+##IO_L11P_T1_SRCC_35
 set_property PACKAGE_PIN L16 [get_ports clk]
 set_property IOSTANDARD LVCMOS33 [get_ports clk]
-create_clock -add -name sys_clk_pin -period 8.00 -waveform {0 4} [get_ports clk]
+create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_ports clk]
 #set_property CLOCK_DEDICATED_ROUTE BACKBONE [get_nets zybo_dvi_output_i/clk_wiz_0/inst/clk_in1_zybo_dvi_output_clk_wiz_0_1]
 
 ##Switches
@@ -110,35 +110,35 @@ create_clock -add -name sys_clk_pin -period 8.00 -waveform {0 4} [get_ports clk]
 
 ##HDMI Signals
 ##IO_L13N_T2_MRCC_35
-set_property PACKAGE_PIN H17 [get_ports hdmi_clk_n]
 set_property IOSTANDARD TMDS_33 [get_ports hdmi_clk_n]
 
 ##IO_L13P_T2_MRCC_35
 set_property PACKAGE_PIN H16 [get_ports hdmi_clk_p]
+set_property PACKAGE_PIN H17 [get_ports hdmi_clk_n]
 set_property IOSTANDARD TMDS_33 [get_ports hdmi_clk_p]
 
 ##IO_L4N_T0_35
-set_property PACKAGE_PIN D20 [get_ports {hdmi_d_n[0]}]
 set_property IOSTANDARD TMDS_33 [get_ports {hdmi_d_n[0]}]
 
 ##IO_L4P_T0_35
 set_property PACKAGE_PIN D19 [get_ports {hdmi_d_p[0]}]
+set_property PACKAGE_PIN D20 [get_ports {hdmi_d_n[0]}]
 set_property IOSTANDARD TMDS_33 [get_ports {hdmi_d_p[0]}]
 
 ##IO_L1N_T0_AD0N_35
-set_property PACKAGE_PIN B20 [get_ports {hdmi_d_n[1]}]
 set_property IOSTANDARD TMDS_33 [get_ports {hdmi_d_n[1]}]
 
 ##IO_L1P_T0_AD0P_35
 set_property PACKAGE_PIN C20 [get_ports {hdmi_d_p[1]}]
+set_property PACKAGE_PIN B20 [get_ports {hdmi_d_n[1]}]
 set_property IOSTANDARD TMDS_33 [get_ports {hdmi_d_p[1]}]
 
 ##IO_L2N_T0_AD8N_35
-set_property PACKAGE_PIN A20 [get_ports {hdmi_d_n[2]}]
 set_property IOSTANDARD TMDS_33 [get_ports {hdmi_d_n[2]}]
 
 ##IO_L2P_T0_AD8P_35
 set_property PACKAGE_PIN B19 [get_ports {hdmi_d_p[2]}]
+set_property PACKAGE_PIN A20 [get_ports {hdmi_d_n[2]}]
 set_property IOSTANDARD TMDS_33 [get_ports {hdmi_d_p[2]}]
 
 ##IO_L5N_T0_AD9N_35
@@ -150,8 +150,8 @@ set_property IOSTANDARD TMDS_33 [get_ports {hdmi_d_p[2]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports hdmi_hpd]
 
 ##IO_L6N_T0_VREF_35
-set_property PACKAGE_PIN F17 [get_ports hdmi_out_en]
-set_property IOSTANDARD LVCMOS33 [get_ports hdmi_out_en]
+set_property PACKAGE_PIN F17 [get_ports {hdmi_out_en[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {hdmi_out_en[0]}]
 
 ##IO_L16P_T2_35
 #set_property PACKAGE_PIN G17 [get_ports hdmi_scl]
@@ -406,3 +406,30 @@ set_property IOSTANDARD LVCMOS33 [get_ports hdmi_out_en]
 #set_property PACKAGE_PIN R19 [get_ports vga_vs]
 #set_property IOSTANDARD LVCMOS33 [get_ports vga_vs]
 
+
+create_debug_core u_ila_0 ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list zybo_dvi_output_i/clk_wiz_0/inst/clk_out1]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+set_property port_width 1 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list zybo_dvi_output_i/test_pattern_generator_0_vsync]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list zybo_dvi_output_i/test_pattern_generator_0_hsync]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list zybo_dvi_output_i/test_pattern_generator_0_vde]]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets u_ila_0_clk_out1]

@@ -4,6 +4,7 @@
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
+set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.compositeFile.enableAutoGeneration 0
@@ -14,7 +15,7 @@ set_property parent.project_path /home/mike/Documents/osiris-hdl/projects/zybo_d
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
-set_property ip_repo_paths /home/mike/Documents/osiris-hdl/hdl/rgb2dvi_v1_2 [current_project]
+set_property ip_repo_paths /home/mike/Documents/osiris-hdl/hdl [current_project]
 set_property vhdl_version vhdl_2k [current_fileset]
 add_files /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd
 set_property used_in_implementation false [get_files -all /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/src/rgb2dvi.xdc]

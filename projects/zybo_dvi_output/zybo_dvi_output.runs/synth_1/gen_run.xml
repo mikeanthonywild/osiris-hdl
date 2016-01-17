@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1452802855">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1452813971">
   <File Type="VDS-TIMING-PB" Name="zybo_dvi_output_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="zybo_dvi_output_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="zybo_dvi_output_wrapper.dcp"/>
@@ -27,6 +27,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_test_pattern_generator_0_0/zybo_dvi_output_test_pattern_generator_0_0.upgrade_log"/>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="zybo_dvi_output_wrapper"/>
@@ -44,6 +45,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/Downloads/ZYBO_Master.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

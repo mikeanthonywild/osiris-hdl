@@ -18,7 +18,7 @@
     <Option Name="BoardPart" Val="digilentinc.com:zybo:part0:1.0"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../hdl/rgb2dvi_v1_2"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../hdl"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
     <Option Name="IPUserFilesDir" Val="$PPRDIR/zybo_dvi_output.ip_user_files"/>
@@ -34,14 +34,16 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="hdl/zybo_dvi_output.v"/>
+        <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="ip/zybo_dvi_output_xlconcat_0_0/zybo_dvi_output_xlconcat_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="ip/zybo_dvi_output_test_pattern_generator_0_0/zybo_dvi_output_test_pattern_generator_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="ip/zybo_dvi_output_rgb2dvi_0_0/zybo_dvi_output_rgb2dvi_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="zybo_dvi_output_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="ip/zybo_dvi_output_xlconstant_0_0/zybo_dvi_output_xlconstant_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="hw_handoff/zybo_dvi_output.hwh"/>
-        <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="hdl/zybo_dvi_output.hwdef"/>
         <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="hw_handoff/zybo_dvi_output.hwh"/>
         <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="hw_handoff/zybo_dvi_output_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="hdl/zybo_dvi_output.hwdef"/>
+        <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="hdl/zybo_dvi_output.v"/>
+        <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="zybo_dvi_output_ooc.xdc"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v">
         <FileInfo>
@@ -50,6 +52,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_test_pattern_generator_0_0/zybo_dvi_output_test_pattern_generator_0_0.upgrade_log"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="zybo_dvi_output_wrapper"/>
@@ -67,6 +70,7 @@
         </FileInfo>
       </File>
       <Config>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/Downloads/ZYBO_Master.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>

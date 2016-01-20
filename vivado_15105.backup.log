@@ -1,0 +1,1048 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Thu Jan 14 11:05:35 2016
+# Process ID: 15105
+# Current directory: /home/mike/Documents/osiris-hdl
+# Command line: vivado
+# Log file: /home/mike/Documents/osiris-hdl/vivado.log
+# Journal file: /home/mike/Documents/osiris-hdl/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.ip_user_files'.
+WARNING: [filemgmt 56-3] IPStaticSourceDir: Could not find the directory '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.ip_user_files/ipstatic'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl/rgb2dvi_v1_2'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.4/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 5783.668 ; gain = 109.621 ; free physical = 3819 ; free virtual = 5938
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+Adding component instance block -- digilentinc.com:ip:rgb2dvi:1.2 - rgb2dvi_0
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Successfully read diagram <zybo_dvi_output> from BD file </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. 
+Please check your design and connect them if needed: 
+/rgb2dvi_0/vid_pData
+/rgb2dvi_0/vid_pVDE
+/rgb2dvi_0/vid_pHSync
+/rgb2dvi_0/vid_pVSync
+
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_xlconstant_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_xlconstant_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_xlconstant_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_xlconstant_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+Exporting to file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output.hwh
+Generated Block Design Tcl file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output_bd.tcl
+Generated Hardware Definition File /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.hwdef
+[Thu Jan 14 11:06:32 2016] Launched synth_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/runme.log
+[Thu Jan 14 11:06:32 2016] Launched impl_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/runme.log
+open_bd_design {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd}
+Adding component instance block -- digilentinc.com:ip:rgb2dvi:1.2 - rgb2dvi_0
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Successfully read diagram <zybo_dvi_output> from BD file </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>
+delete_bd_objs [get_bd_nets clk_1]
+delete_bd_objs [get_bd_ports clk]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.2 clk_wiz_0
+endgroup
+startgroup
+create_bd_port -dir I -type clk clk
+connect_bd_net [get_bd_pins /clk_wiz_0/clk_in1] [get_bd_ports clk]
+set_property CONFIG.FREQ_HZ 100000000 [get_bd_ports clk]
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'set_property CONFIG.FREQ_HZ 100000000 [get_bd_ports clk]'
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins /clk_wiz_0/clk_in1] [get_bd_ports clk]'
+INFO: [Common 17-17] undo 'create_bd_port -dir I -type clk clk'
+INFO: [Common 17-17] undo 'startgroup'
+startgroup
+create_bd_port -dir I -type clk clk_in1
+connect_bd_net [get_bd_pins /clk_wiz_0/clk_in1] [get_bd_ports clk_in1]
+set_property CONFIG.FREQ_HZ 125000000 [get_bd_ports clk_in1]
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'set_property CONFIG.FREQ_HZ 125000000 [get_bd_ports clk_in1]'
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins /clk_wiz_0/clk_in1] [get_bd_ports clk_in1]'
+INFO: [Common 17-17] undo 'create_bd_port -dir I -type clk clk_in1'
+INFO: [Common 17-17] undo 'startgroup'
+startgroup
+create_bd_port -dir I -type clk clk
+connect_bd_net [get_bd_pins /clk_wiz_0/clk_in1] [get_bd_ports clk]
+set_property CONFIG.FREQ_HZ 125000000 [get_bd_ports clk]
+endgroup
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins rgb2dvi_0/PixelClk]
+startgroup
+set_property -dict [list CONFIG.PRIMITIVE {PLL} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {9} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {9} CONFIG.CLKOUT1_JITTER {137.681} CONFIG.CLKOUT1_PHASE_ERROR {105.461}] [get_bd_cells clk_wiz_0]
+endgroup
+delete_bd_objs [get_bd_nets clk_1] [get_bd_ports clk]
+startgroup
+create_bd_port -dir I -type clk clk
+connect_bd_net [get_bd_pins /clk_wiz_0/clk_in1] [get_bd_ports clk]
+set_property CONFIG.FREQ_HZ 125000000 [get_bd_ports clk]
+endgroup
+startgroup
+set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC PROPAGATED] [get_bd_cells clk_wiz_0]
+set_property -dict [list CONFIG.CLKIN1_JITTER_PS {100.0} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {9} CONFIG.MMCM_CLKIN1_PERIOD {10.0} CONFIG.CLKOUT1_JITTER {137.681} CONFIG.CLKOUT1_PHASE_ERROR {105.461}] [get_bd_cells clk_wiz_0]
+endgroup
+save_bd_design
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. 
+Please check your design and connect them if needed: 
+/rgb2dvi_0/vid_pData
+/rgb2dvi_0/vid_pVDE
+/rgb2dvi_0/vid_pHSync
+/rgb2dvi_0/vid_pVSync
+
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output.hwh
+Generated Block Design Tcl file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output_bd.tcl
+Generated Hardware Definition File /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.hwdef
+[Thu Jan 14 11:17:18 2016] Launched synth_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/runme.log
+[Thu Jan 14 11:17:18 2016] Launched impl_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/runme.log
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {7} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7} CONFIG.CLKOUT1_JITTER {125.031} CONFIG.CLKOUT1_PHASE_ERROR {104.065}] [get_bd_cells clk_wiz_0]
+endgroup
+save_bd_design
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. 
+Please check your design and connect them if needed: 
+/rgb2dvi_0/vid_pData
+/rgb2dvi_0/vid_pVDE
+/rgb2dvi_0/vid_pHSync
+/rgb2dvi_0/vid_pVSync
+
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output.hwh
+Generated Block Design Tcl file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output_bd.tcl
+Generated Hardware Definition File /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.hwdef
+[Thu Jan 14 11:24:40 2016] Launched synth_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/runme.log
+[Thu Jan 14 11:24:40 2016] Launched impl_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/runme.log
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {40} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {8} CONFIG.MMCM_CLKOUT0_DIVIDE_F {25} CONFIG.CLKOUT1_JITTER {150.675} CONFIG.CLKOUT1_PHASE_ERROR {96.948}] [get_bd_cells clk_wiz_0]
+endgroup
+save_bd_design
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. 
+Please check your design and connect them if needed: 
+/rgb2dvi_0/vid_pData
+/rgb2dvi_0/vid_pVDE
+/rgb2dvi_0/vid_pHSync
+/rgb2dvi_0/vid_pVSync
+
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output.hwh
+Generated Block Design Tcl file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output_bd.tcl
+Generated Hardware Definition File /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.hwdef
+[Thu Jan 14 11:27:25 2016] Launched synth_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/runme.log
+[Thu Jan 14 11:27:25 2016] Launched impl_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/runme.log
+startgroup
+set_property -dict [list CONFIG.kClkRange {2}] [get_bd_cells rgb2dvi_0]
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+endgroup
+save_bd_design
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. 
+Please check your design and connect them if needed: 
+/rgb2dvi_0/vid_pData
+/rgb2dvi_0/vid_pVDE
+/rgb2dvi_0/vid_pHSync
+/rgb2dvi_0/vid_pVSync
+
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output.hwh
+Generated Block Design Tcl file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output_bd.tcl
+Generated Hardware Definition File /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.hwdef
+[Thu Jan 14 11:29:54 2016] Launched synth_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/runme.log
+[Thu Jan 14 11:29:54 2016] Launched impl_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/runme.log
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {7} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7} CONFIG.CLKOUT1_JITTER {125.031} CONFIG.CLKOUT1_PHASE_ERROR {104.065}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.kClkRange {1}] [get_bd_cells rgb2dvi_0]
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+endgroup
+save_bd_design
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. 
+Please check your design and connect them if needed: 
+/rgb2dvi_0/vid_pData
+/rgb2dvi_0/vid_pVDE
+/rgb2dvi_0/vid_pHSync
+/rgb2dvi_0/vid_pVSync
+
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output.hwh
+Generated Block Design Tcl file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output_bd.tcl
+Generated Hardware Definition File /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.hwdef
+[Thu Jan 14 11:37:08 2016] Launched synth_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/runme.log
+[Thu Jan 14 11:37:08 2016] Launched impl_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/runme.log
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {36} CONFIG.MMCM_CLKOUT0_DIVIDE_F {9} CONFIG.CLKOUT1_JITTER {237.312} CONFIG.CLKOUT1_PHASE_ERROR {249.865}] [get_bd_cells clk_wiz_0]
+endgroup
+save_bd_design
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. 
+Please check your design and connect them if needed: 
+/rgb2dvi_0/vid_pData
+/rgb2dvi_0/vid_pVDE
+/rgb2dvi_0/vid_pHSync
+/rgb2dvi_0/vid_pVSync
+
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output.hwh
+Generated Block Design Tcl file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output_bd.tcl
+Generated Hardware Definition File /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.hwdef
+[Thu Jan 14 12:00:00 2016] Launched synth_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/runme.log
+[Thu Jan 14 12:00:00 2016] Launched impl_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/runme.log
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {250} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {8} CONFIG.MMCM_CLKOUT0_DIVIDE_F {4} CONFIG.CLKOUT1_JITTER {104.759} CONFIG.CLKOUT1_PHASE_ERROR {96.948}] [get_bd_cells clk_wiz_0]
+endgroup
+save_bd_design
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. 
+Please check your design and connect them if needed: 
+/rgb2dvi_0/vid_pData
+/rgb2dvi_0/vid_pVDE
+/rgb2dvi_0/vid_pHSync
+/rgb2dvi_0/vid_pVSync
+
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output.hwh
+Generated Block Design Tcl file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output_bd.tcl
+Generated Hardware Definition File /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.hwdef
+[Thu Jan 14 12:03:26 2016] Launched synth_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/runme.log
+[Thu Jan 14 12:03:26 2016] Launched impl_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/runme.log
+startgroup
+set_property -dict [list CONFIG.kGenerateSerialClk {false}] [get_bd_cells rgb2dvi_0]
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+endgroup
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {40} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKOUT0_DIVIDE_F {25} CONFIG.CLKOUT1_JITTER {150.675}] [get_bd_cells clk_wiz_0]
+endgroup
+save_bd_design
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+startgroup
+set_property -dict [list CONFIG.CLKOUT2_USED {true} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {200} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKOUT1_DIVIDE {5} CONFIG.NUM_OUT_CLKS {2} CONFIG.CLKOUT2_JITTER {109.241} CONFIG.CLKOUT2_PHASE_ERROR {96.948}] [get_bd_cells clk_wiz_0]
+endgroup
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins rgb2dvi_0/SerialClk]
+save_bd_design
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. 
+Please check your design and connect them if needed: 
+/rgb2dvi_0/vid_pData
+/rgb2dvi_0/vid_pVDE
+/rgb2dvi_0/vid_pHSync
+/rgb2dvi_0/vid_pVSync
+
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output.hwh
+Generated Block Design Tcl file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output_bd.tcl
+Generated Hardware Definition File /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.hwdef
+[Thu Jan 14 12:20:55 2016] Launched synth_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/runme.log
+[Thu Jan 14 12:20:55 2016] Launched impl_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2015.4
+  **** Build date : Nov 18 2015-09:53:32
+    ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210279772162A
+set_property PROGRAM.FILE {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/zybo_dvi_output_wrapper.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/zybo_dvi_output_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+open_bd_design {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd}
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+ipx::infer_core -vendor user.org -library user -taxonomy /UserIP /home/mike/Documents/osiris-hdl/hdl/test_pattern_generator
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/arty/C.0/board.xml as part xc7a35ticsg324-1l specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:basys3:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/basys3/C.0/board.xml as part xc7a35tcpg236-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4/B.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4_ddr:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4_ddr/C.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys_video:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys_video/A.0/board.xml as part xc7a200tsbg484-1 specified in board_part file is either invalid or not available
+ERROR: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+ipx::infer_core -vendor user.org -library user -taxonomy /UserIP /home/mike/Documents/osiris-hdl/hdl/test_pattern_generator
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/arty/C.0/board.xml as part xc7a35ticsg324-1l specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:basys3:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/basys3/C.0/board.xml as part xc7a35tcpg236-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4/B.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4_ddr:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4_ddr/C.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys_video:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys_video/A.0/board.xml as part xc7a200tsbg484-1 specified in board_part file is either invalid or not available
+ERROR: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+ipx::infer_core -vendor user.org -library user -taxonomy /UserIP /home/mike/Documents/osiris-hdl/hdl/test_pattern_generator
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/arty/C.0/board.xml as part xc7a35ticsg324-1l specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:basys3:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/basys3/C.0/board.xml as part xc7a35tcpg236-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4/B.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4_ddr:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4_ddr/C.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys_video:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys_video/A.0/board.xml as part xc7a200tsbg484-1 specified in board_part file is either invalid or not available
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl/rgb2dvi_v1_2'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.4/data/ip'.
+INFO: [IP_Flow 19-2228] Inferred bus interface "clk" of definition type "xilinx.com:signal:clock:1.0".
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/mike/Documents/osiris-hdl/.Xil/Vivado-15105-thinkpad/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Jan 14 14:04:30 2016...
+ipx::edit_ip_in_project -upgrade true -name test_pattern_generator -directory /home/mike/Documents/packageprj.tmp /home/mike/Documents/osiris-hdl/hdl/test_pattern_generator/component.xml
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/arty/C.0/board.xml as part xc7a35ticsg324-1l specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:basys3:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/basys3/C.0/board.xml as part xc7a35tcpg236-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4/B.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4_ddr:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4_ddr/C.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys_video:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys_video/A.0/board.xml as part xc7a200tsbg484-1 specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl/rgb2dvi_v1_2'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+ipx::current_core /home/mike/Documents/osiris-hdl/hdl/test_pattern_generator/component.xml
+update_compile_order -fileset sim_1
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project zybo_dvi_output
+close_project
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/mike/Documents/packageprj.tmp/test_pattern_generator.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Jan 14 14:06:07 2016...
+set_property  ip_repo_paths  /home/mike/Documents/osiris-hdl/hdl/test_pattern_generator [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl/test_pattern_generator'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.4/data/ip'.
+open_project /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.ip_user_files'.
+WARNING: [filemgmt 56-3] IPStaticSourceDir: Could not find the directory '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.ip_user_files/ipstatic'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl/rgb2dvi_v1_2'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.4/data/ip'.
+open_bd_design {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd}
+Adding component instance block -- digilentinc.com:ip:rgb2dvi:1.2 - rgb2dvi_0
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:ip:clk_wiz:5.2 - clk_wiz_0
+Successfully read diagram <zybo_dvi_output> from BD file </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd>
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl/rgb2dvi_v1_2'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl/rgb2dvi_v1_2'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property  ip_repo_paths  /home/mike/Documents/osiris-hdl/hdl [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:test_pattern_generator:1.0 test_pattern_generator_0
+endgroup
+startgroup
+connect_bd_net [get_bd_pins test_pattern_generator_0/r] [get_bd_pins rgb2dvi_0/vid_pData]
+WARNING: [BD 41-1306] The connection to interface pin /rgb2dvi_0/vid_pData is being overridden by the user. This pin will not be connected as a part of interface connection RGB
+endgroup
+delete_bd_objs [get_bd_nets test_pattern_generator_0_r]
+connect_bd_net [get_bd_pins test_pattern_generator_0/r] [get_bd_pins rgb2dvi_0/vid_pData]
+WARNING: [BD 41-1306] The connection to interface pin /rgb2dvi_0/vid_pData is being overridden by the user. This pin will not be connected as a part of interface connection RGB
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins test_pattern_generator_0/r] [get_bd_pins rgb2dvi_0/vid_pData]'
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+set_property location {2 195 122} [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {3}] [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_pins test_pattern_generator_0/r] [get_bd_pins xlconcat_0/In0]
+connect_bd_net [get_bd_pins test_pattern_generator_0/g] [get_bd_pins xlconcat_0/In1]
+connect_bd_net [get_bd_pins test_pattern_generator_0/b] [get_bd_pins xlconcat_0/In2]
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins rgb2dvi_0/vid_pData]
+WARNING: [BD 41-1306] The connection to interface pin /rgb2dvi_0/vid_pData is being overridden by the user. This pin will not be connected as a part of interface connection RGB
+startgroup
+set_property -dict [list CONFIG.IN0_WIDTH.VALUE_SRC PROPAGATED] [get_bd_cells xlconcat_0]
+endgroup
+save_bd_design
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+connect_bd_net [get_bd_pins test_pattern_generator_0/clk] [get_bd_pins clk_wiz_0/clk_out1]
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+connect_bd_net [get_bd_pins test_pattern_generator_0/vsync] [get_bd_pins rgb2dvi_0/vid_pHSync]
+WARNING: [BD 41-1306] The connection to interface pin /rgb2dvi_0/vid_pHSync is being overridden by the user. This pin will not be connected as a part of interface connection RGB
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins test_pattern_generator_0/vsync] [get_bd_pins rgb2dvi_0/vid_pHSync]'
+connect_bd_net [get_bd_pins test_pattern_generator_0/hsync] [get_bd_pins rgb2dvi_0/vid_pHSync]
+WARNING: [BD 41-1306] The connection to interface pin /rgb2dvi_0/vid_pHSync is being overridden by the user. This pin will not be connected as a part of interface connection RGB
+connect_bd_net [get_bd_pins test_pattern_generator_0/vsync] [get_bd_pins rgb2dvi_0/vid_pVSync]
+WARNING: [BD 41-1306] The connection to interface pin /rgb2dvi_0/vid_pVSync is being overridden by the user. This pin will not be connected as a part of interface connection RGB
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins test_pattern_generator_0/vsync] [get_bd_pins rgb2dvi_0/vid_pVSync]'
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins test_pattern_generator_0/hsync] [get_bd_pins rgb2dvi_0/vid_pHSync]'
+connect_bd_net [get_bd_pins test_pattern_generator_0/vsync] [get_bd_pins rgb2dvi_0/vid_pVSync]
+WARNING: [BD 41-1306] The connection to interface pin /rgb2dvi_0/vid_pVSync is being overridden by the user. This pin will not be connected as a part of interface connection RGB
+connect_bd_net [get_bd_pins test_pattern_generator_0/hsync] [get_bd_pins rgb2dvi_0/vid_pHSync]
+WARNING: [BD 41-1306] The connection to interface pin /rgb2dvi_0/vid_pHSync is being overridden by the user. This pin will not be connected as a part of interface connection RGB
+connect_bd_net [get_bd_pins test_pattern_generator_0/vde] [get_bd_pins rgb2dvi_0/vid_pVDE]
+WARNING: [BD 41-1306] The connection to interface pin /rgb2dvi_0/vid_pVDE is being overridden by the user. This pin will not be connected as a part of interface connection RGB
+save_bd_design
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+regenerate_bd_layout
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_test_pattern_generator_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_test_pattern_generator_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_test_pattern_generator_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block test_pattern_generator_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_xlconcat_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_xlconcat_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_xlconcat_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_xlconcat_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+Exporting to file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output.hwh
+Generated Block Design Tcl file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output_bd.tcl
+Generated Hardware Definition File /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.hwdef
+[Thu Jan 14 14:10:37 2016] Launched synth_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/runme.log
+[Thu Jan 14 14:10:37 2016] Launched impl_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2015.4
+  **** Build date : Nov 18 2015-09:53:32
+    ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210279772162A
+set_property PROGRAM.FILE {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/zybo_dvi_output_wrapper.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/zybo_dvi_output_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+open_bd_design {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd}
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKOUT0_DIVIDE_F {40} CONFIG.CLKOUT1_JITTER {165.419}] [get_bd_cells clk_wiz_0]
+endgroup
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+startgroup
+set_property -dict [list CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {125} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {7} CONFIG.MMCM_CLKOUT0_DIVIDE_F {35} CONFIG.MMCM_CLKOUT1_DIVIDE {7} CONFIG.CLKOUT1_JITTER {173.196} CONFIG.CLKOUT1_PHASE_ERROR {104.065} CONFIG.CLKOUT2_JITTER {125.031} CONFIG.CLKOUT2_PHASE_ERROR {104.065}] [get_bd_cells clk_wiz_0]
+endgroup
+save_bd_design
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_test_pattern_generator_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_test_pattern_generator_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_test_pattern_generator_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block test_pattern_generator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+Exporting to file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output.hwh
+Generated Block Design Tcl file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output_bd.tcl
+Generated Hardware Definition File /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.hwdef
+[Thu Jan 14 14:16:24 2016] Launched synth_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/runme.log
+[Thu Jan 14 14:16:24 2016] Launched impl_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/zybo_dvi_output_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.4
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/mike/Documents/osiris-hdl/.Xil/Vivado-15105-thinkpad/dcp/zybo_dvi_output_wrapper_early.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0.xdc:56]
+INFO: [Timing 38-2] Deriving generated clocks [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0.xdc:56]
+get_clocks: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 6852.289 ; gain = 447.508 ; free physical = 2039 ; free virtual = 4793
+Finished Parsing XDC File [/home/mike/Documents/osiris-hdl/.Xil/Vivado-15105-thinkpad/dcp/zybo_dvi_output_wrapper_early.xdc]
+Parsing XDC File [/home/mike/Documents/osiris-hdl/.Xil/Vivado-15105-thinkpad/dcp/zybo_dvi_output_wrapper.xdc]
+Finished Parsing XDC File [/home/mike/Documents/osiris-hdl/.Xil/Vivado-15105-thinkpad/dcp/zybo_dvi_output_wrapper.xdc]
+Parsing XDC File [/home/mike/Documents/osiris-hdl/.Xil/Vivado-15105-thinkpad/dcp/zybo_dvi_output_wrapper_late.xdc]
+Finished Parsing XDC File [/home/mike/Documents/osiris-hdl/.Xil/Vivado-15105-thinkpad/dcp/zybo_dvi_output_wrapper_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 6853.289 ; gain = 1.000 ; free physical = 2039 ; free virtual = 4793
+Restored from archive | CPU: 0.030000 secs | Memory: 0.274475 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 6853.289 ; gain = 1.000 ; free physical = 2039 ; free virtual = 4793
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 6991.246 ; gain = 756.789 ; free physical = 1937 ; free virtual = 4692
+open_bd_design {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd}
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+report_ip_status -name ip_status
+ipx::edit_ip_in_project -upgrade true -name test_pattern_generator_v1_0_project -directory /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.tmp/test_pattern_generator_v1_0_project /home/mike/Documents/osiris-hdl/hdl/test_pattern_generator/component.xml
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/arty/C.0/board.xml as part xc7a35ticsg324-1l specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:basys3:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/basys3/C.0/board.xml as part xc7a35tcpg236-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4/B.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4_ddr:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4_ddr/C.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys_video:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys_video/A.0/board.xml as part xc7a200tsbg484-1 specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+update_compile_order -fileset sim_1
+ipx::merge_project_changes ports [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 4 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.tmp/test_pattern_generator_v1_0_project/test_pattern_generator_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Jan 14 14:30:08 2016...
+update_ip_catalog -rebuild -repo_path /home/mike/Documents/osiris-hdl/hdl
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/mike/Documents/osiris-hdl/hdl'
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:test_pattern_generator:1.0 [get_ips  zybo_dvi_output_test_pattern_generator_0_0]
+Upgrading '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd'
+INFO: [IP_Flow 19-3422] Upgraded zybo_dvi_output_test_pattern_generator_0_0 (test_pattern_generator_v1_0 1.0) from revision 3 to revision 4
+INFO: [IP_Flow 19-3471] Wrote upgrade log to '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_test_pattern_generator_0_0/zybo_dvi_output_test_pattern_generator_0_0.upgrade_log'.
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_xlconstant_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_xlconstant_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_xlconstant_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_xlconstant_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_test_pattern_generator_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_test_pattern_generator_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_test_pattern_generator_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block test_pattern_generator_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_xlconcat_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_xlconcat_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_xlconcat_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_xlconcat_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+Exporting to file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output.hwh
+Generated Block Design Tcl file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output_bd.tcl
+Generated Hardware Definition File /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.hwdef
+[Thu Jan 14 14:30:33 2016] Launched synth_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/runme.log
+[Thu Jan 14 14:30:33 2016] Launched impl_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/zybo_dvi_output_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+open_bd_design {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd}
+ipx::edit_ip_in_project -upgrade true -name test_pattern_generator_v1_0_project -directory /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.tmp/test_pattern_generator_v1_0_project /home/mike/Documents/osiris-hdl/hdl/test_pattern_generator/component.xml
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/arty/C.0/board.xml as part xc7a35ticsg324-1l specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:basys3:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/basys3/C.0/board.xml as part xc7a35tcpg236-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4/B.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4_ddr:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4_ddr/C.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys_video:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys_video/A.0/board.xml as part xc7a200tsbg484-1 specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+update_compile_order -fileset sim_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+set_property core_revision 5 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.tmp/test_pattern_generator_v1_0_project/test_pattern_generator_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Jan 14 14:36:53 2016...
+update_ip_catalog -rebuild -repo_path /home/mike/Documents/osiris-hdl/hdl
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/mike/Documents/osiris-hdl/hdl'
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:test_pattern_generator:1.0 [get_ips  zybo_dvi_output_test_pattern_generator_0_0]
+Upgrading '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd'
+INFO: [IP_Flow 19-3422] Upgraded zybo_dvi_output_test_pattern_generator_0_0 (test_pattern_generator_v1_0 1.0) from revision 4 to revision 5
+INFO: [IP_Flow 19-3471] Wrote upgrade log to '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_test_pattern_generator_0_0/zybo_dvi_output_test_pattern_generator_0_0.upgrade_log'.
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+report_ip_status -name ip_status 
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:test_pattern_generator:1.0 [get_ips  zybo_dvi_output_test_pattern_generator_0_0]
+Upgrading '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd'
+INFO: [IP_Flow 19-1972] Upgraded zybo_dvi_output_test_pattern_generator_0_0 from test_pattern_generator_v1_0 1.0 to test_pattern_generator_v1_0 1.0
+INFO: [IP_Flow 19-3471] Wrote upgrade log to '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_test_pattern_generator_0_0/zybo_dvi_output_test_pattern_generator_0_0.upgrade_log'.
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+report_ip_status -name ip_status 
+ipx::edit_ip_in_project -upgrade true -name test_pattern_generator_v1_0_project -directory /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.tmp/test_pattern_generator_v1_0_project /home/mike/Documents/osiris-hdl/hdl/test_pattern_generator/component.xml
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/arty/C.0/board.xml as part xc7a35ticsg324-1l specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:basys3:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/basys3/C.0/board.xml as part xc7a35tcpg236-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4/B.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4_ddr:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4_ddr/C.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys_video:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys_video/A.0/board.xml as part xc7a200tsbg484-1 specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+update_compile_order -fileset sim_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+set_property core_revision 6 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.tmp/test_pattern_generator_v1_0_project/test_pattern_generator_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Jan 14 14:40:40 2016...
+update_ip_catalog -rebuild -repo_path /home/mike/Documents/osiris-hdl/hdl
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/mike/Documents/osiris-hdl/hdl'
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:test_pattern_generator:1.0 [get_ips  zybo_dvi_output_test_pattern_generator_0_0]
+Upgrading '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd'
+INFO: [IP_Flow 19-3422] Upgraded zybo_dvi_output_test_pattern_generator_0_0 (test_pattern_generator_v1_0 1.0) from revision 5 to revision 6
+INFO: [IP_Flow 19-3471] Wrote upgrade log to '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_test_pattern_generator_0_0/zybo_dvi_output_test_pattern_generator_0_0.upgrade_log'.
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+report_ip_status -name ip_status 
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {74.25} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {371.25} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {59} CONFIG.MMCM_CLKOUT0_DIVIDE_F {20} CONFIG.MMCM_CLKOUT1_DIVIDE {4} CONFIG.CLKOUT1_JITTER {146.569} CONFIG.CLKOUT1_PHASE_ERROR {220.889} CONFIG.CLKOUT2_JITTER {118.604} CONFIG.CLKOUT2_PHASE_ERROR {220.889}] [get_bd_cells clk_wiz_0]
+endgroup
+can't read "p_MMCM_CLKOUT0_DIVIDE": no such variable
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:test_pattern_generator:1.0 [get_ips  zybo_dvi_output_test_pattern_generator_0_0]
+Upgrading '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd'
+INFO: [IP_Flow 19-1972] Upgraded zybo_dvi_output_test_pattern_generator_0_0 from test_pattern_generator_v1_0 1.0 to test_pattern_generator_v1_0 1.0
+INFO: [IP_Flow 19-3471] Wrote upgrade log to '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_test_pattern_generator_0_0/zybo_dvi_output_test_pattern_generator_0_0.upgrade_log'.
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v
+Verilog Output written to : /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v
+Wrote  : </home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_rgb2dvi_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_xlconstant_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_xlconstant_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_xlconstant_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_xlconstant_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_clk_wiz_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_test_pattern_generator_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_test_pattern_generator_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_test_pattern_generator_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block test_pattern_generator_0 .
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'zybo_dvi_output_xlconcat_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zybo_dvi_output_xlconcat_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'zybo_dvi_output_xlconcat_0_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'zybo_dvi_output_xlconcat_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+Exporting to file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output.hwh
+Generated Block Design Tcl file /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hw_handoff/zybo_dvi_output_bd.tcl
+Generated Hardware Definition File /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.hwdef
+[Thu Jan 14 14:42:53 2016] Launched synth_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/runme.log
+[Thu Jan 14 14:42:53 2016] Launched impl_1...
+Run output will be captured here: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/zybo_dvi_output_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+open_bd_design {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd}
+ipx::edit_ip_in_project -upgrade true -name rgb2dvi_v1_2_project -directory /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.tmp/rgb2dvi_v1_2_project /home/mike/Documents/osiris-hdl/hdl/rgb2dvi_v1_2/component.xml
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/arty/C.0/board.xml as part xc7a35ticsg324-1l specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:basys3:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/basys3/C.0/board.xml as part xc7a35tcpg236-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4/B.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4_ddr:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4_ddr/C.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys_video:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys_video/A.0/board.xml as part xc7a200tsbg484-1 specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-792] Syncing company URL meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+INFO: [IP_Flow 19-799] Syncing upgrade version meta-data
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+close_project
+****** Webtalk v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.tmp/rgb2dvi_v1_2_project/rgb2dvi_v1_2_project.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Jan 14 14:50:08 2016...
+ipx::edit_ip_in_project -upgrade true -name test_pattern_generator_v1_0_project -directory /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.tmp/test_pattern_generator_v1_0_project /home/mike/Documents/osiris-hdl/hdl/test_pattern_generator/component.xml
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/arty/C.0/board.xml as part xc7a35ticsg324-1l specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:basys3:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/basys3/C.0/board.xml as part xc7a35tcpg236-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4/B.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4_ddr:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4_ddr/C.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys_video:part0:1.1 available at /opt/Xilinx/Vivado/2015.4/data/boards/board_files/nexys_video/A.0/board.xml as part xc7a200tsbg484-1 specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.4/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+update_compile_order -fileset sources_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+current_project zybo_dvi_output
+current_project test_pattern_generator_v1_0_project
+ipx::add_user_parameter TEST [ipx::current_core]
+set_property value_resolve_type user [ipx::get_user_parameters TEST -of_objects [ipx::current_core]]
+ipgui::add_param -name {TEST} -component [ipx::current_core]
+set_property display_name {Test} [ipgui::get_guiparamspec -name "TEST" -component [ipx::current_core] ]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "TEST" -component [ipx::current_core] ]
+set_property value 10 [ipx::get_user_parameters TEST -of_objects [ipx::current_core]]
+set_property value_format long [ipx::get_user_parameters TEST -of_objects [ipx::current_core]]
+ipx::remove_user_parameter TEST [ipx::current_core]

@@ -1,0 +1,154 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Thu Jan 14 14:57:13 2016
+# Process ID: 29546
+# Current directory: /home/mike/Documents/osiris-hdl
+# Command line: vivado
+# Log file: /home/mike/Documents/osiris-hdl/vivado.log
+# Journal file: /home/mike/Documents/osiris-hdl/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.xpr
+open_bd_design {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/zybo_dvi_output.bd}
+ipx::edit_ip_in_project -upgrade true -name test_pattern_generator_v1_0_project -directory /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.tmp/test_pattern_generator_v1_0_project /home/mike/Documents/osiris-hdl/hdl/test_pattern_generator/component.xml
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+update_compile_order -fileset sim_1
+current_project zybo_dvi_output
+current_project test_pattern_generator_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipgui::add_param -name {DISPLAY_WIDTH} -component [ipx::current_core] -parent [ipgui::get_pagespec -name "Page 0" -component [ipx::current_core] ]
+ipgui::add_param -name {H_FRONT_PORCH} -component [ipx::current_core] -parent [ipgui::get_pagespec -name "Page 0" -component [ipx::current_core] ]
+ipgui::add_param -name {H_SYNC_PULSE} -component [ipx::current_core] -parent [ipgui::get_pagespec -name "Page 0" -component [ipx::current_core] ]
+ipgui::add_param -name {H_BACK_PORCH} -component [ipx::current_core] -parent [ipgui::get_pagespec -name "Page 0" -component [ipx::current_core] ]
+ipgui::add_param -name {DISPLAY_HEIGHT} -component [ipx::current_core] -parent [ipgui::get_pagespec -name "Page 0" -component [ipx::current_core] ]
+ipgui::add_param -name {V_FRONT_PORCH} -component [ipx::current_core] -parent [ipgui::get_pagespec -name "Page 0" -component [ipx::current_core] ]
+ipgui::add_param -name {V_SYNC_PULSE} -component [ipx::current_core] -parent [ipgui::get_pagespec -name "Page 0" -component [ipx::current_core] ]
+ipgui::add_param -name {V_BACK_PORCH} -component [ipx::current_core] -parent [ipgui::get_pagespec -name "Page 0" -component [ipx::current_core] ]
+set_property core_revision 7 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "DISPLAY_WIDTH" -component [ipx::current_core] ]
+set_property value_validation_type range_long [ipx::get_user_parameters DISPLAY_WIDTH -of_objects [ipx::current_core]]
+set_property value_validation_range_minimum 640 [ipx::get_user_parameters DISPLAY_WIDTH -of_objects [ipx::current_core]]
+set_property value_validation_range_maximum 1920 [ipx::get_user_parameters DISPLAY_WIDTH -of_objects [ipx::current_core]]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "H_FRONT_PORCH" -component [ipx::current_core] ]
+set_property value_validation_type range_long [ipx::get_user_parameters H_FRONT_PORCH -of_objects [ipx::current_core]]
+set_property value_validation_range_minimum 0 [ipx::get_user_parameters H_FRONT_PORCH -of_objects [ipx::current_core]]
+set_property value_validation_range_maximum 256 [ipx::get_user_parameters H_FRONT_PORCH -of_objects [ipx::current_core]]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "H_BACK_PORCH" -component [ipx::current_core] ]
+set_property value_validation_type range_long [ipx::get_user_parameters H_BACK_PORCH -of_objects [ipx::current_core]]
+set_property value_validation_range_minimum 0 [ipx::get_user_parameters H_BACK_PORCH -of_objects [ipx::current_core]]
+set_property value_validation_range_maximum 256 [ipx::get_user_parameters H_BACK_PORCH -of_objects [ipx::current_core]]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "DISPLAY_HEIGHT" -component [ipx::current_core] ]
+set_property value_validation_type range_long [ipx::get_user_parameters DISPLAY_HEIGHT -of_objects [ipx::current_core]]
+set_property value_validation_range_minimum 480 [ipx::get_user_parameters DISPLAY_HEIGHT -of_objects [ipx::current_core]]
+set_property value_validation_range_maximum 1080 [ipx::get_user_parameters DISPLAY_HEIGHT -of_objects [ipx::current_core]]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "V_FRONT_PORCH" -component [ipx::current_core] ]
+set_property value_validation_type range_long [ipx::get_user_parameters V_FRONT_PORCH -of_objects [ipx::current_core]]
+set_property value_validation_range_minimum 0 [ipx::get_user_parameters V_FRONT_PORCH -of_objects [ipx::current_core]]
+set_property value_validation_range_maximum 256 [ipx::get_user_parameters V_FRONT_PORCH -of_objects [ipx::current_core]]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "H_SYNC_PULSE" -component [ipx::current_core] ]
+set_property value_validation_type range_long [ipx::get_user_parameters H_SYNC_PULSE -of_objects [ipx::current_core]]
+set_property value_validation_range_minimum 0 [ipx::get_user_parameters H_SYNC_PULSE -of_objects [ipx::current_core]]
+set_property value_validation_range_maximum 256 [ipx::get_user_parameters H_SYNC_PULSE -of_objects [ipx::current_core]]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "V_SYNC_PULSE" -component [ipx::current_core] ]
+set_property value_validation_type range_long [ipx::get_user_parameters V_SYNC_PULSE -of_objects [ipx::current_core]]
+set_property value_validation_range_minimum 0 [ipx::get_user_parameters V_SYNC_PULSE -of_objects [ipx::current_core]]
+set_property value_validation_range_maximum 256 [ipx::get_user_parameters V_SYNC_PULSE -of_objects [ipx::current_core]]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "V_BACK_PORCH" -component [ipx::current_core] ]
+set_property value_validation_type range_long [ipx::get_user_parameters V_BACK_PORCH -of_objects [ipx::current_core]]
+set_property value_validation_range_minimum 0 [ipx::get_user_parameters V_BACK_PORCH -of_objects [ipx::current_core]]
+set_property value_validation_range_maximum 256 [ipx::get_user_parameters V_BACK_PORCH -of_objects [ipx::current_core]]
+set_property core_revision 8 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/mike/Documents/osiris-hdl/hdl
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:test_pattern_generator:1.0 [get_ips  zybo_dvi_output_test_pattern_generator_0_0]
+report_ip_status -name ip_status 
+startgroup
+set_property -dict [list CONFIG.DISPLAY_WIDTH {640} CONFIG.H_FRONT_PORCH {16} CONFIG.H_SYNC_PULSE {96} CONFIG.H_BACK_PORCH {48} CONFIG.DISPLAY_HEIGHT {480} CONFIG.V_FRONT_PORCH {10} CONFIG.V_SYNC_PULSE {2} CONFIG.V_BACK_PORCH {33}] [get_bd_cells test_pattern_generator_0]
+endgroup
+save_bd_design
+startgroup
+set_property -dict [list CONFIG.PRIMITIVE {MMCM} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {125} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {8.000} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {40.000} CONFIG.MMCM_CLKOUT1_DIVIDE {8} CONFIG.CLKOUT1_JITTER {165.419} CONFIG.CLKOUT1_PHASE_ERROR {96.948} CONFIG.CLKOUT2_JITTER {119.348} CONFIG.CLKOUT2_PHASE_ERROR {96.948}] [get_bd_cells clk_wiz_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/zybo_dvi_output_wrapper.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/zybo_dvi_output_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+open_run impl_1
+open_run synth_1 -name synth_1
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list zybo_dvi_output_i/clk_wiz_0/inst/clk_out1 ]]
+set_property port_width 1 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list zybo_dvi_output_i/test_pattern_generator_0_vsync ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list zybo_dvi_output_i/test_pattern_generator_0_hsync ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list zybo_dvi_output_i/test_pattern_generator_0_vde ]]
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+set_property PROBES.FILE {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/zybo_dvi_output_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"u_ila_0"}]]

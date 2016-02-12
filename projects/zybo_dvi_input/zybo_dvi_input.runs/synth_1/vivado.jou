@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Wed Jan 20 19:56:08 2016
+# Process ID: 18076
+# Current directory: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.runs/synth_1
+# Command line: vivado -log zybo_dvi_input_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source zybo_dvi_input_wrapper.tcl
+# Log file: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.runs/synth_1/zybo_dvi_input_wrapper.vds
+# Journal file: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source zybo_dvi_input_wrapper.tcl -notrace

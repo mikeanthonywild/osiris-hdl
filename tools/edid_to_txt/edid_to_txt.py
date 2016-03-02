@@ -12,7 +12,7 @@ def main():
 
     """
     edid_path = sys.argv[1]
-    txt_path = os.path.basename(os.path.splitext(edid_path)[0]) + '.txt'
+    txt_path = os.path.splitext(edid_path)[0] + '.txt'
 
     with open(txt_path, 'w') as txt_file:
         with open(edid_path, 'rb') as edid_file:

@@ -39,11 +39,11 @@
         <CompFileExtendedInfo CompFileName="zybo_dvi_input.bd" FileRelPathName="ip/zybo_dvi_input_dvi2rgb_0_0/zybo_dvi_input_dvi2rgb_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="zybo_dvi_input.bd" FileRelPathName="ip/zybo_dvi_input_processing_system7_0_0/zybo_dvi_input_processing_system7_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="zybo_dvi_input.bd" FileRelPathName="ip/zybo_dvi_input_rgb2vga_0_0/zybo_dvi_input_rgb2vga_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="zybo_dvi_input.bd" FileRelPathName="hdl/zybo_dvi_input.hwdef"/>
         <CompFileExtendedInfo CompFileName="zybo_dvi_input.bd" FileRelPathName="hw_handoff/zybo_dvi_input.hwh"/>
-        <CompFileExtendedInfo CompFileName="zybo_dvi_input.bd" FileRelPathName="hw_handoff/zybo_dvi_input_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="zybo_dvi_input.bd" FileRelPathName="zybo_dvi_input_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="zybo_dvi_input.bd" FileRelPathName="hdl/zybo_dvi_input.v"/>
+        <CompFileExtendedInfo CompFileName="zybo_dvi_input.bd" FileRelPathName="zybo_dvi_input_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="zybo_dvi_input.bd" FileRelPathName="hdl/zybo_dvi_input.hwdef"/>
+        <CompFileExtendedInfo CompFileName="zybo_dvi_input.bd" FileRelPathName="hw_handoff/zybo_dvi_input_bd.tcl"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/zybo_dvi_input/hdl/zybo_dvi_input_wrapper.v">
         <FileInfo>

@@ -146,6 +146,7 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
+  set btn [ create_bd_port -dir I -from 0 -to 0 btn ]
   set clk [ create_bd_port -dir I -type clk clk ]
   set_property -dict [ list \
 CONFIG.FREQ_HZ {125000000} \
@@ -155,6 +156,9 @@ CONFIG.FREQ_HZ {125000000} \
   set hdmi_d_n [ create_bd_port -dir O -from 2 -to 0 hdmi_d_n ]
   set hdmi_d_p [ create_bd_port -dir O -from 2 -to 0 hdmi_d_p ]
   set hdmi_out_en [ create_bd_port -dir O -from 0 -to 0 hdmi_out_en ]
+
+  # Create instance: VDD, and set properties
+  set VDD [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 VDD ]
 
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.2 clk_wiz_0 ]
@@ -211,10 +215,9 @@ CONFIG.V_SYNC_PULSE {5} \
 CONFIG.NUM_PORTS {3} \
  ] $xlconcat_0
 
-  # Create instance: xlconstant_0, and set properties
-  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
-
   # Create port connections
+  connect_bd_net -net VDD_dout [get_bd_ports hdmi_out_en] [get_bd_pins VDD/dout]
+  connect_bd_net -net btn_1 [get_bd_ports btn] [get_bd_pins rgb2dvi_0/flash_sync]
   connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins clk_wiz_0/clk_in1]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins rgb2dvi_0/PixelClk] [get_bd_pins test_pattern_generator_0/clk]
   connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins rgb2dvi_0/SerialClk]
@@ -229,7 +232,6 @@ CONFIG.NUM_PORTS {3} \
   connect_bd_net -net test_pattern_generator_0_vde [get_bd_pins rgb2dvi_0/vid_pVDE] [get_bd_pins test_pattern_generator_0/vde]
   connect_bd_net -net test_pattern_generator_0_vsync [get_bd_pins rgb2dvi_0/vid_pVSync] [get_bd_pins test_pattern_generator_0/vsync]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins rgb2dvi_0/vid_pData] [get_bd_pins xlconcat_0/dout]
-  connect_bd_net -net xlconstant_0_dout [get_bd_ports hdmi_out_en] [get_bd_pins xlconstant_0/dout]
 
   # Create address segments
 
@@ -237,33 +239,35 @@ CONFIG.NUM_PORTS {3} \
   regenerate_bd_layout -layout_string {
    guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.8
 #  -string -flagsOSRD
-preplace port hdmi_clk_n -pg 1 -y 210 -defaultsOSRD
+preplace port hdmi_clk_n -pg 1 -y 170 -defaultsOSRD
 preplace port clk -pg 1 -y 270 -defaultsOSRD
-preplace port hdmi_clk_p -pg 1 -y 190 -defaultsOSRD
-preplace portBus hdmi_d_n -pg 1 -y 250 -defaultsOSRD
-preplace portBus hdmi_out_en -pg 1 -y 50 -defaultsOSRD
-preplace portBus hdmi_d_p -pg 1 -y 230 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 4 -y 50 -defaultsOSRD
-preplace inst test_pattern_generator_0 -pg 1 -lvl 2 -y 170 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 3 -y 120 -defaultsOSRD
-preplace inst rgb2dvi_0 -pg 1 -lvl 4 -y 210 -defaultsOSRD
+preplace port hdmi_clk_p -pg 1 -y 150 -defaultsOSRD
+preplace portBus hdmi_d_n -pg 1 -y 210 -defaultsOSRD
+preplace portBus hdmi_out_en -pg 1 -y 300 -defaultsOSRD
+preplace portBus hdmi_d_p -pg 1 -y 190 -defaultsOSRD
+preplace portBus btn -pg 1 -y 210 -defaultsOSRD
+preplace inst test_pattern_generator_0 -pg 1 -lvl 2 -y 120 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 3 -y 70 -defaultsOSRD
+preplace inst rgb2dvi_0 -pg 1 -lvl 4 -y 170 -defaultsOSRD
+preplace inst VDD -pg 1 -lvl 3 -y 220 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 280 -defaultsOSRD
-preplace netloc test_pattern_generator_0_b 1 2 1 400
+preplace netloc btn_1 1 0 4 NJ 210 NJ 220 NJ 270 600
+preplace netloc test_pattern_generator_0_b 1 2 1 410
 preplace netloc rgb2dvi_0_TMDS_Clk_n 1 4 1 NJ
-preplace netloc test_pattern_generator_0_hsync 1 2 2 NJ 190 580
-preplace netloc test_pattern_generator_0_vsync 1 2 2 NJ 200 N
+preplace netloc test_pattern_generator_0_hsync 1 2 2 NJ 140 600
+preplace netloc test_pattern_generator_0_vsync 1 2 2 NJ 150 N
 preplace netloc rgb2dvi_0_TMDS_Clk_p 1 4 1 NJ
-preplace netloc test_pattern_generator_0_r 1 2 1 380
-preplace netloc test_pattern_generator_0_g 1 2 1 390
-preplace netloc xlconcat_0_dout 1 3 1 580
+preplace netloc test_pattern_generator_0_r 1 2 1 390
+preplace netloc test_pattern_generator_0_g 1 2 1 400
+preplace netloc xlconcat_0_dout 1 3 1 600
 preplace netloc clk_1 1 0 1 N
-preplace netloc xlconstant_0_dout 1 4 1 NJ
-preplace netloc test_pattern_generator_0_vde 1 2 2 NJ 220 N
-preplace netloc clk_wiz_0_clk_out1 1 1 3 180 270 NJ 260 N
+preplace netloc test_pattern_generator_0_vde 1 2 2 NJ 170 N
+preplace netloc clk_wiz_0_clk_out1 1 1 3 190 280 NJ 280 610
 preplace netloc rgb2dvi_0_TMDS_Data_n 1 4 1 NJ
-preplace netloc clk_wiz_0_clk_out2 1 1 3 NJ 280 NJ 280 N
+preplace netloc clk_wiz_0_clk_out2 1 1 3 NJ 290 NJ 290 620
+preplace netloc VDD_dout 1 3 2 NJ 300 N
 preplace netloc rgb2dvi_0_TMDS_Data_p 1 4 1 NJ
-levelinfo -pg 1 0 100 280 490 750 930 -top 0 -bot 350
+levelinfo -pg 1 0 100 290 500 780 960 -top 0 -bot 350
 ",
 }
 

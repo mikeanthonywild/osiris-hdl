@@ -2,20 +2,12 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="zybo_dvi_output" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1453043275"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1453043275"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1453043275"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1456601838"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1456601838"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1456601838"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/zybo_dvi_output_rgb2dvi_0_0/zybo_dvi_output_rgb2dvi_0_0.xci" Type="IP">
         <Instance HierarchyPath="rgb2dvi_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/zybo_dvi_output_xlconstant_0_0/zybo_dvi_output_xlconstant_0_0.xci" Type="IP">
-        <Instance HierarchyPath="xlconstant_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -40,6 +32,14 @@
       </File>
       <File Name="ip/zybo_dvi_output_xlconcat_0_0/zybo_dvi_output_xlconcat_0_0.xci" Type="IP">
         <Instance HierarchyPath="xlconcat_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/zybo_dvi_output_xlconstant_1_1/zybo_dvi_output_xlconstant_1_1.xci" Type="IP">
+        <Instance HierarchyPath="VDD"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

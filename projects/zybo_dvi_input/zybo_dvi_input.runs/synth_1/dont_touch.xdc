@@ -15,11 +15,11 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_dvi_input_
 # IP: bd/zybo_dvi_input/ip/zybo_dvi_input_xlconstant_0_0/zybo_dvi_input_xlconstant_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_dvi_input_xlconstant_0_0 || ORIG_REF_NAME==zybo_dvi_input_xlconstant_0_0}]
 
-# IP: bd/zybo_dvi_input/ip/zybo_dvi_input_xlconstant_1_0/zybo_dvi_input_xlconstant_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_dvi_input_xlconstant_1_0 || ORIG_REF_NAME==zybo_dvi_input_xlconstant_1_0}]
-
 # IP: bd/zybo_dvi_input/ip/zybo_dvi_input_rgb2vga_0_0/zybo_dvi_input_rgb2vga_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_dvi_input_rgb2vga_0_0 || ORIG_REF_NAME==zybo_dvi_input_rgb2vga_0_0}]
+
+# IP: bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/zybo_dvi_input_processing_system7_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_dvi_input_processing_system7_0_0 || ORIG_REF_NAME==zybo_dvi_input_processing_system7_0_0}]
 
 # XDC: bd/zybo_dvi_input/ip/zybo_dvi_input_dvi2rgb_0_0/src/dvi2rgb.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==zybo_dvi_input_dvi2rgb_0_0 || ORIG_REF_NAME==zybo_dvi_input_dvi2rgb_0_0}] {/U0 }]/U0 ]]
@@ -33,5 +33,8 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==zybo_dvi_input_clk_wiz_0_0 || ORIG_REF_NAME==zybo_dvi_input_clk_wiz_0_0}] {/inst }]/inst ]]
 
 # XDC: bd/zybo_dvi_input/ip/zybo_dvi_input_clk_wiz_0_0/zybo_dvi_input_clk_wiz_0_0_ooc.xdc
+
+# XDC: bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/zybo_dvi_input_processing_system7_0_0.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==zybo_dvi_input_processing_system7_0_0 || ORIG_REF_NAME==zybo_dvi_input_processing_system7_0_0}] {/inst }]/inst ]]
 
 # XDC: bd/zybo_dvi_input/zybo_dvi_input_ooc.xdc

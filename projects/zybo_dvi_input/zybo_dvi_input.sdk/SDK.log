@@ -1,0 +1,9 @@
+22:50:00 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+22:50:03 INFO  : XSDB server has started successfully.
+22:50:03 INFO  : Processing command line option -hwspec /home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.sdk/zybo_dvi_input_wrapper.hdf.
+22:53:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:53:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+22:53:14 INFO  : FPGA configured successfully with bitstream "/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.sdk/zybo_dvi_input_wrapper_hw_platform_0/zybo_dvi_input_wrapper.bit"
+22:53:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:55:38 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:55:39 INFO  : Processor reset is completed for ps7_cortexa9_0

@@ -80,6 +80,7 @@ entity rgb2dvi is
       vid_pVDE : in std_logic;
       vid_pHSync : in std_logic;
       vid_pVSync : in std_logic;
+      flash_sync: in std_logic;
       PixelClk : in std_logic; --pixel-clock recovered from the DVI interface
       
       SerialClk : in std_logic); -- 5x PixelClk
@@ -182,10 +183,11 @@ end generate DataEncoders;
 pDataOut(2) <= vid_pData(23 downto 16); -- red is channel 2
 pDataOut(1) <= vid_pData(7 downto 0); -- green is channel 1
 pDataOut(0) <= vid_pData(15 downto 8); -- blue is channel 0
-pC0(2 downto 1) <= (others => '0'); -- default is low for control signals
+pC0(2) <= '0'; -- default is low for control signals
 pC1(2 downto 1) <= (others => '0'); -- default is low for control signals
 pC0(0) <= vid_pHSync; -- channel 0 carries control signals too
 pC1(0) <= vid_pVSync; -- channel 0 carries control signals too
+pC0(1) <= flash_sync; -- channel 1 carries control signals too (non-spec!)
 pVde <= vid_pVDE & vid_pVDE & vid_pVDE; -- all of them are either active or blanking at once
 
 end Behavioral;

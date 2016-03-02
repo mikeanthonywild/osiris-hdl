@@ -48,7 +48,6 @@ set_msg_config -id {HDL 9-1654} -limit 100000
 start_step init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z010clg400-1
   set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
@@ -66,6 +65,8 @@ set rc [catch {
   set_property processing_order EARLY [get_files /home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_clk_wiz_0_0/zybo_dvi_input_clk_wiz_0_0_board.xdc]
   read_xdc -ref zybo_dvi_input_clk_wiz_0_0 -cells inst /home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_clk_wiz_0_0/zybo_dvi_input_clk_wiz_0_0.xdc
   set_property processing_order EARLY [get_files /home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_clk_wiz_0_0/zybo_dvi_input_clk_wiz_0_0.xdc]
+  read_xdc -ref zybo_dvi_input_processing_system7_0_0 -cells inst /home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/zybo_dvi_input_processing_system7_0_0.xdc
+  set_property processing_order EARLY [get_files /home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/zybo_dvi_input_processing_system7_0_0.xdc]
   read_xdc /home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc
   link_design -top zybo_dvi_input_wrapper -part xc7z010clg400-1
   close_msg_db -file init_design.pb

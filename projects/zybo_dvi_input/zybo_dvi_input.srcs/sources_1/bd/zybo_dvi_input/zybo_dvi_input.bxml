@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="zybo_dvi_input" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1453319768"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1453319768"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1453319768"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1456786077"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1456786077"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1456786077"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/zybo_dvi_input_dvi2rgb_0_0/zybo_dvi_input_dvi2rgb_0_0.xci" Type="IP">
         <Instance HierarchyPath="dvi2rgb_0"/>
@@ -22,13 +22,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="hdl/zybo_dvi_input.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip/zybo_dvi_input_xlconstant_0_0/zybo_dvi_input_xlconstant_0_0.xci" Type="IP">
         <Instance HierarchyPath="VDD"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -37,16 +30,23 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/zybo_dvi_input_xlconstant_1_0/zybo_dvi_input_xlconstant_1_0.xci" Type="IP">
-        <Instance HierarchyPath="GND"/>
+      <File Name="ip/zybo_dvi_input_rgb2vga_0_0/zybo_dvi_input_rgb2vga_0_0.xci" Type="IP">
+        <Instance HierarchyPath="rgb2vga_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/zybo_dvi_input_rgb2vga_0_0/zybo_dvi_input_rgb2vga_0_0.xci" Type="IP">
-        <Instance HierarchyPath="rgb2vga_0"/>
+      <File Name="hdl/zybo_dvi_input.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/zybo_dvi_input_processing_system7_0_0/zybo_dvi_input_processing_system7_0_0.xci" Type="IP">
+        <Instance HierarchyPath="processing_system7_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

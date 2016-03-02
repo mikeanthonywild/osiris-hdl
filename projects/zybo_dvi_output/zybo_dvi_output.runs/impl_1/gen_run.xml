@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1453043275">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1456789649">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="RDI-RDI" Name="zybo_dvi_output_wrapper.vdi"/>
   <File Type="BG-DRC" Name="zybo_dvi_output_wrapper.drc"/>
@@ -51,6 +51,7 @@
   <File Type="INIT-TIMING" Name="zybo_dvi_output_wrapper_timing_summary_init.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="zybo_dvi_output_wrapper_timing_summary_postroute_physopted.pb"/>
   <File Type="PA-TCL" Name="zybo_dvi_output_wrapper.tcl"/>
+  <File Type="PA-DCP" Name="zybo_dvi_output_wrapper.dcp"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
@@ -71,6 +72,7 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_test_pattern_generator_0_0/zybo_dvi_output_test_pattern_generator_0_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/zybo_dvi_output_rgb2dvi_0_0.upgrade_log"/>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="zybo_dvi_output_wrapper"/>

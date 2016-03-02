@@ -9,9 +9,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_dvi_output
 # IP: bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/zybo_dvi_output_rgb2dvi_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_dvi_output_rgb2dvi_0_0 || ORIG_REF_NAME==zybo_dvi_output_rgb2dvi_0_0}]
 
-# IP: bd/zybo_dvi_output/ip/zybo_dvi_output_xlconstant_0_0/zybo_dvi_output_xlconstant_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_dvi_output_xlconstant_0_0 || ORIG_REF_NAME==zybo_dvi_output_xlconstant_0_0}]
-
 # IP: bd/zybo_dvi_output/ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_dvi_output_clk_wiz_0_0 || ORIG_REF_NAME==zybo_dvi_output_clk_wiz_0_0}]
 
@@ -20,6 +17,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_dvi_output
 
 # IP: bd/zybo_dvi_output/ip/zybo_dvi_output_xlconcat_0_0/zybo_dvi_output_xlconcat_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_dvi_output_xlconcat_0_0 || ORIG_REF_NAME==zybo_dvi_output_xlconcat_0_0}]
+
+# IP: bd/zybo_dvi_output/ip/zybo_dvi_output_xlconstant_1_1/zybo_dvi_output_xlconstant_1_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_dvi_output_xlconstant_1_1 || ORIG_REF_NAME==zybo_dvi_output_xlconstant_1_1}]
 
 # XDC: bd/zybo_dvi_output/ip/zybo_dvi_output_rgb2dvi_0_0/src/rgb2dvi.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==zybo_dvi_output_rgb2dvi_0_0 || ORIG_REF_NAME==zybo_dvi_output_rgb2dvi_0_0}] {/U0 }]/U0 ]]

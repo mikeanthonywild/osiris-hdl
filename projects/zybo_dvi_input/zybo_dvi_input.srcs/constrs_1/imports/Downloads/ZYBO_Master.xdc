@@ -45,8 +45,8 @@ create_clock -add -name sys_clk_pin -period 8.00 -waveform {0 4} [get_ports clk]
 
 ##LEDs
 ##IO_L23P_T3_35
-#set_property PACKAGE_PIN M14 [get_ports {led[0]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {led[0]}]
+set_property PACKAGE_PIN M14 [get_ports flash_sync_led]
+set_property IOSTANDARD LVCMOS33 [get_ports flash_sync_led]
 
 ##IO_L23N_T3_35
 #set_property PACKAGE_PIN M15 [get_ports {led[1]}]

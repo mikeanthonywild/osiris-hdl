@@ -16,13 +16,15 @@ Command: synth_design -top zybo_dvi_input_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+WARNING: [Synth 8-992] S_AXI_GP0_ACLK_temp is already implicitly declared earlier [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:2701]
+WARNING: [Synth 8-992] S_AXI_GP1_ACLK_temp is already implicitly declared earlier [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:2702]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1029.066 ; gain = 191.824 ; free physical = 5167 ; free virtual = 19309
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1050.844 ; gain = 213.598 ; free physical = 5829 ; free virtual = 20045
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-1565] actual for formal port arst is neither a static name nor a globally static expression [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/TMDS_Clocking.vhd:128]
-WARNING: [Synth 8-1565] actual for formal port arst is neither a static name nor a globally static expression [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/dvi2rgb.vhd:157]
-WARNING: [Synth 8-1565] actual for formal port potherchrdy is neither a static name nor a globally static expression [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/dvi2rgb.vhd:178]
-WARNING: [Synth 8-1565] actual for formal port potherchvld is neither a static name nor a globally static expression [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/dvi2rgb.vhd:179]
+WARNING: [Synth 8-1565] actual for formal port arst is neither a static name nor a globally static expression [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/dvi2rgb.vhd:159]
+WARNING: [Synth 8-1565] actual for formal port potherchrdy is neither a static name nor a globally static expression [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/dvi2rgb.vhd:180]
+WARNING: [Synth 8-1565] actual for formal port potherchvld is neither a static name nor a globally static expression [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/dvi2rgb.vhd:181]
 INFO: [Synth 8-638] synthesizing module 'zybo_dvi_input_wrapper' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/hdl/zybo_dvi_input_wrapper.v:12]
 INFO: [Synth 8-638] synthesizing module 'IOBUF' [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:17333]
 	Parameter DRIVE bound to: 12 - type: integer 
@@ -31,18 +33,12 @@ INFO: [Synth 8-638] synthesizing module 'IOBUF' [/opt/Xilinx/Vivado/2015.4/scrip
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-256] done synthesizing module 'IOBUF' (1#1) [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:17333]
 INFO: [Synth 8-638] synthesizing module 'zybo_dvi_input' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/hdl/zybo_dvi_input.v:13]
-INFO: [Synth 8-638] synthesizing module 'zybo_dvi_input_xlconstant_1_0' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_xlconstant_1_0/sim/zybo_dvi_input_xlconstant_1_0.v:56]
-INFO: [Synth 8-638] synthesizing module 'xlconstant' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/xilinx.com/xlconstant_v1_1/xlconstant.v:23]
-	Parameter CONST_VAL bound to: 1'b0 
-	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'xlconstant' (2#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/xilinx.com/xlconstant_v1_1/xlconstant.v:23]
-INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_input_xlconstant_1_0' (3#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_xlconstant_1_0/sim/zybo_dvi_input_xlconstant_1_0.v:56]
 INFO: [Synth 8-638] synthesizing module 'zybo_dvi_input_xlconstant_0_0' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_xlconstant_0_0/sim/zybo_dvi_input_xlconstant_0_0.v:56]
-INFO: [Synth 8-638] synthesizing module 'xlconstant__parameterized0' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/xilinx.com/xlconstant_v1_1/xlconstant.v:23]
+INFO: [Synth 8-638] synthesizing module 'xlconstant' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/xilinx.com/xlconstant_v1_1/xlconstant.v:23]
 	Parameter CONST_VAL bound to: 1'b1 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'xlconstant__parameterized0' (3#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/xilinx.com/xlconstant_v1_1/xlconstant.v:23]
-INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_input_xlconstant_0_0' (4#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_xlconstant_0_0/sim/zybo_dvi_input_xlconstant_0_0.v:56]
+INFO: [Synth 8-256] done synthesizing module 'xlconstant' (2#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/xilinx.com/xlconstant_v1_1/xlconstant.v:23]
+INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_input_xlconstant_0_0' (3#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_xlconstant_0_0/sim/zybo_dvi_input_xlconstant_0_0.v:56]
 INFO: [Synth 8-638] synthesizing module 'zybo_dvi_input_clk_wiz_0_0' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_clk_wiz_0_0/zybo_dvi_input_clk_wiz_0_0.v:69]
 INFO: [Synth 8-638] synthesizing module 'zybo_dvi_input_clk_wiz_0_0_clk_wiz' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_clk_wiz_0_0/zybo_dvi_input_clk_wiz_0_0_clk_wiz.v:67]
 INFO: [Synth 8-638] synthesizing module 'IBUF' [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:14145]
@@ -51,7 +47,7 @@ INFO: [Synth 8-638] synthesizing module 'IBUF' [/opt/Xilinx/Vivado/2015.4/script
 	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
 	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-256] done synthesizing module 'IBUF' (5#1) [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:14145]
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (4#1) [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:14145]
 INFO: [Synth 8-638] synthesizing module 'PLLE2_ADV' [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:32655]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT bound to: 8 - type: integer 
@@ -84,21 +80,21 @@ INFO: [Synth 8-638] synthesizing module 'PLLE2_ADV' [/opt/Xilinx/Vivado/2015.4/s
 	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
 	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-INFO: [Synth 8-256] done synthesizing module 'PLLE2_ADV' (6#1) [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:32655]
+INFO: [Synth 8-256] done synthesizing module 'PLLE2_ADV' (5#1) [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:32655]
 INFO: [Synth 8-638] synthesizing module 'BUFG' [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-256] done synthesizing module 'BUFG' (7#1) [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_input_clk_wiz_0_0_clk_wiz' (8#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_clk_wiz_0_0/zybo_dvi_input_clk_wiz_0_0_clk_wiz.v:67]
-INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_input_clk_wiz_0_0' (9#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_clk_wiz_0_0/zybo_dvi_input_clk_wiz_0_0.v:69]
-WARNING: [Synth 8-350] instance 'clk_wiz_0' of module 'zybo_dvi_input_clk_wiz_0_0' requires 4 connections, but only 3 given [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/hdl/zybo_dvi_input.v:98]
-INFO: [Synth 8-638] synthesizing module 'zybo_dvi_input_dvi2rgb_0_0' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_dvi2rgb_0_0/synth/zybo_dvi_input_dvi2rgb_0_0.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (6#1) [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_input_clk_wiz_0_0_clk_wiz' (7#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_clk_wiz_0_0/zybo_dvi_input_clk_wiz_0_0_clk_wiz.v:67]
+INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_input_clk_wiz_0_0' (8#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_clk_wiz_0_0/zybo_dvi_input_clk_wiz_0_0.v:69]
+WARNING: [Synth 8-350] instance 'clk_wiz_0' of module 'zybo_dvi_input_clk_wiz_0_0' requires 4 connections, but only 3 given [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/hdl/zybo_dvi_input.v:159]
+INFO: [Synth 8-638] synthesizing module 'zybo_dvi_input_dvi2rgb_0_0' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_dvi2rgb_0_0/synth/zybo_dvi_input_dvi2rgb_0_0.vhd:81]
 	Parameter kEmulateDDC bound to: 1 - type: bool 
 	Parameter kRstActiveHigh bound to: 1 - type: bool 
 	Parameter kClkRange bound to: 1 - type: integer 
 	Parameter kIDLY_TapValuePs bound to: 78 - type: integer 
 	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
 	Parameter kAddBUFG bound to: 1 - type: bool 
-INFO: [Synth 8-3491] module 'dvi2rgb' declared at '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/dvi2rgb.vhd:64' bound to instance 'U0' of component 'dvi2rgb' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_dvi2rgb_0_0/synth/zybo_dvi_input_dvi2rgb_0_0.vhd:140]
-INFO: [Synth 8-638] synthesizing module 'dvi2rgb' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/dvi2rgb.vhd:109]
+INFO: [Synth 8-3491] module 'dvi2rgb' declared at '/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/dvi2rgb.vhd:64' bound to instance 'U0' of component 'dvi2rgb' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_dvi2rgb_0_0/synth/zybo_dvi_input_dvi2rgb_0_0.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'dvi2rgb' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/dvi2rgb.vhd:111]
 	Parameter kEmulateDDC bound to: 1 - type: bool 
 	Parameter kRstActiveHigh bound to: 1 - type: bool 
 	Parameter kAddBUFG bound to: 1 - type: bool 
@@ -114,8 +110,8 @@ INFO: [Synth 8-638] synthesizing module 'SyncAsync' [/home/mike/Documents/osiris
 	Parameter kResetTo bound to: 1'b1 
 	Parameter kStages bound to: 2 - type: integer 
 INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/SyncAsync.vhd:73]
-INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (10#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/SyncAsync.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (11#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/SyncAsyncReset.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (9#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (10#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/SyncAsyncReset.vhd:72]
 	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
 INFO: [Synth 8-113] binding component instance 'IDelayCtrlX' to cell 'IDELAYCTRL' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/TMDS_Clocking.vhd:118]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
@@ -182,8 +178,8 @@ INFO: [Synth 8-113] binding component instance 'PixelClkBuffer' to cell 'BUFR' [
 INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized0' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/SyncAsync.vhd:72]
 	Parameter kResetTo bound to: 1'b0 
 	Parameter kStages bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized0' (11#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/SyncAsync.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'TMDS_Clocking' (12#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/TMDS_Clocking.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized0' (10#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_Clocking' (11#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/TMDS_Clocking.vhd:75]
 INFO: [Synth 8-638] synthesizing module 'TMDS_Decoder' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/TMDS_Decoder.vhd:96]
 	Parameter kCtlTknCount bound to: 128 - type: integer 
 	Parameter kTimeoutMs bound to: 50 - type: integer 
@@ -263,31 +259,31 @@ INFO: [Synth 8-113] binding component instance 'DeserializerMaster' to cell 'ISE
 	Parameter SRVAL_Q3 bound to: 1'b0 
 	Parameter SRVAL_Q4 bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'DeserializerSlave' to cell 'ISERDESE2' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/InputSERDES.vhd:172]
-INFO: [Synth 8-256] done synthesizing module 'InputSERDES' (13#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/InputSERDES.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'InputSERDES' (12#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/InputSERDES.vhd:85]
 INFO: [Synth 8-638] synthesizing module 'SyncBase' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/SyncBase.vhd:74]
 	Parameter kResetTo bound to: 1'b0 
 	Parameter kStages bound to: 2 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized1' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/SyncAsync.vhd:72]
 	Parameter kResetTo bound to: 1'b0 
 	Parameter kStages bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized1' (13#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/SyncAsync.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'SyncBase' (14#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/SyncBase.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized1' (12#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'SyncBase' (13#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/SyncBase.vhd:74]
 INFO: [Synth 8-638] synthesizing module 'SyncBase__parameterized0' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/SyncBase.vhd:74]
 	Parameter kResetTo bound to: 1'b1 
 	Parameter kStages bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'SyncBase__parameterized0' (14#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/SyncBase.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'SyncBase__parameterized0' (13#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/SyncBase.vhd:74]
 INFO: [Synth 8-638] synthesizing module 'PhaseAlign' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/PhaseAlign.vhd:95]
 	Parameter kUseFastAlgorithm bound to: 0 - type: bool 
 	Parameter kCtlTknCount bound to: 128 - type: integer 
 	Parameter kIDLY_TapValuePs bound to: 78 - type: integer 
 	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'PhaseAlign' (15#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/PhaseAlign.vhd:95]
+INFO: [Synth 8-256] done synthesizing module 'PhaseAlign' (14#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/PhaseAlign.vhd:95]
 INFO: [Synth 8-638] synthesizing module 'ChannelBond' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/ChannelBond.vhd:74]
-INFO: [Synth 8-256] done synthesizing module 'ChannelBond' (16#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/ChannelBond.vhd:74]
-INFO: [Synth 8-256] done synthesizing module 'TMDS_Decoder' (17#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/TMDS_Decoder.vhd:96]
+INFO: [Synth 8-256] done synthesizing module 'ChannelBond' (15#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/ChannelBond.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_Decoder' (16#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/TMDS_Decoder.vhd:96]
 INFO: [Synth 8-638] synthesizing module 'ResyncToBUFG' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/ResyncToBUFG.vhd:78]
 INFO: [Synth 8-113] binding component instance 'InstBUFG' to cell 'BUFG' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/ResyncToBUFG.vhd:84]
-INFO: [Synth 8-256] done synthesizing module 'ResyncToBUFG' (18#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/ResyncToBUFG.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'ResyncToBUFG' (17#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/ResyncToBUFG.vhd:78]
 INFO: [Synth 8-638] synthesizing module 'EEPROM_8b' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/EEPROM_8b.vhd:85]
 	Parameter kSampleClkFreqInMHz bound to: 200 - type: integer 
 	Parameter kSlaveAddress bound to: 7'b1010000 
@@ -401,13 +397,85 @@ INFO: [Synth 8-638] synthesizing module 'TWI_SlaveCtl' [/home/mike/Documents/osi
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "gray" *) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/TWI_SlaveCtl.vhd:92]
 INFO: [Synth 8-638] synthesizing module 'GlitchFilter' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/GlitchFilter.vhd:69]
 	Parameter kNoOfPeriodsToFilter bound to: 10 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'GlitchFilter' (19#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/GlitchFilter.vhd:69]
-INFO: [Synth 8-256] done synthesizing module 'TWI_SlaveCtl' (20#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/TWI_SlaveCtl.vhd:87]
+INFO: [Synth 8-256] done synthesizing module 'GlitchFilter' (18#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/GlitchFilter.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'TWI_SlaveCtl' (19#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/TWI_SlaveCtl.vhd:87]
 INFO: [Synth 8-226] default block is never used [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/EEPROM_8b.vhd:201]
-INFO: [Synth 8-256] done synthesizing module 'EEPROM_8b' (21#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/EEPROM_8b.vhd:85]
-INFO: [Synth 8-256] done synthesizing module 'dvi2rgb' (22#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/dvi2rgb.vhd:109]
-INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_input_dvi2rgb_0_0' (23#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_dvi2rgb_0_0/synth/zybo_dvi_input_dvi2rgb_0_0.vhd:80]
-WARNING: [Synth 8-350] instance 'dvi2rgb_0' of module 'zybo_dvi_input_dvi2rgb_0_0' requires 19 connections, but only 18 given [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/hdl/zybo_dvi_input.v:102]
+INFO: [Synth 8-256] done synthesizing module 'EEPROM_8b' (20#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/EEPROM_8b.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'dvi2rgb' (21#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/dvi2rgb_v1_5/src/dvi2rgb.vhd:111]
+INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_input_dvi2rgb_0_0' (22#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_dvi2rgb_0_0/synth/zybo_dvi_input_dvi2rgb_0_0.vhd:81]
+WARNING: [Synth 8-350] instance 'dvi2rgb_0' of module 'zybo_dvi_input_dvi2rgb_0_0' requires 20 connections, but only 19 given [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/hdl/zybo_dvi_input.v:163]
+INFO: [Synth 8-638] synthesizing module 'zybo_dvi_input_processing_system7_0_0' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/synth/zybo_dvi_input_processing_system7_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'processing_system7_v5_5_processing_system7' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
+	Parameter C_USE_DEFAULT_ACP_USER_VAL bound to: 0 - type: integer 
+	Parameter C_S_AXI_ACP_ARUSER_VAL bound to: 31 - type: integer 
+	Parameter C_S_AXI_ACP_AWUSER_VAL bound to: 31 - type: integer 
+	Parameter C_M_AXI_GP0_THREAD_ID_WIDTH bound to: 12 - type: integer 
+	Parameter C_M_AXI_GP1_THREAD_ID_WIDTH bound to: 12 - type: integer 
+	Parameter C_M_AXI_GP0_ENABLE_STATIC_REMAP bound to: 0 - type: integer 
+	Parameter C_M_AXI_GP1_ENABLE_STATIC_REMAP bound to: 0 - type: integer 
+	Parameter C_M_AXI_GP0_ID_WIDTH bound to: 12 - type: integer 
+	Parameter C_M_AXI_GP1_ID_WIDTH bound to: 12 - type: integer 
+	Parameter C_S_AXI_GP0_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_GP1_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_HP0_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_HP1_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_HP2_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_HP3_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_ACP_ID_WIDTH bound to: 3 - type: integer 
+	Parameter C_S_AXI_HP0_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_S_AXI_HP1_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_S_AXI_HP2_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_S_AXI_HP3_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_INCLUDE_ACP_TRANS_CHECK bound to: 0 - type: integer 
+	Parameter C_NUM_F2P_INTR_INPUTS bound to: 1 - type: integer 
+	Parameter C_FCLK_CLK0_BUF bound to: true - type: string 
+	Parameter C_FCLK_CLK1_BUF bound to: false - type: string 
+	Parameter C_FCLK_CLK2_BUF bound to: false - type: string 
+	Parameter C_FCLK_CLK3_BUF bound to: false - type: string 
+	Parameter C_EMIO_GPIO_WIDTH bound to: 64 - type: integer 
+	Parameter C_INCLUDE_TRACE_BUFFER bound to: 0 - type: integer 
+	Parameter C_TRACE_BUFFER_FIFO_SIZE bound to: 128 - type: integer 
+	Parameter C_TRACE_BUFFER_CLOCK_DELAY bound to: 12 - type: integer 
+	Parameter USE_TRACE_DATA_EDGE_DETECTOR bound to: 0 - type: integer 
+	Parameter C_TRACE_PIPELINE_WIDTH bound to: 8 - type: integer 
+	Parameter C_PS7_SI_REV bound to: PRODUCTION - type: string 
+	Parameter C_EN_EMIO_ENET0 bound to: 0 - type: integer 
+	Parameter C_EN_EMIO_ENET1 bound to: 0 - type: integer 
+	Parameter C_EN_EMIO_TRACE bound to: 0 - type: integer 
+	Parameter C_DQ_WIDTH bound to: 32 - type: integer 
+	Parameter C_DQS_WIDTH bound to: 4 - type: integer 
+	Parameter C_DM_WIDTH bound to: 4 - type: integer 
+	Parameter C_MIO_PRIMITIVE bound to: 54 - type: integer 
+	Parameter C_PACKAGE_NAME bound to: clg400 - type: string 
+	Parameter C_IRQ_F2P_MODE bound to: DIRECT - type: string 
+	Parameter C_TRACE_INTERNAL_WIDTH bound to: 2 - type: integer 
+	Parameter C_EN_EMIO_PJTAG bound to: 0 - type: integer 
+	Parameter C_USE_AXI_NONSECURE bound to: 0 - type: integer 
+	Parameter C_USE_S_AXI_HP0 bound to: 0 - type: integer 
+	Parameter C_USE_S_AXI_HP1 bound to: 0 - type: integer 
+	Parameter C_USE_S_AXI_HP2 bound to: 0 - type: integer 
+	Parameter C_USE_S_AXI_HP3 bound to: 0 - type: integer 
+	Parameter C_USE_M_AXI_GP0 bound to: 0 - type: integer 
+	Parameter C_USE_M_AXI_GP1 bound to: 0 - type: integer 
+	Parameter C_USE_S_AXI_GP0 bound to: 0 - type: integer 
+	Parameter C_USE_S_AXI_GP1 bound to: 0 - type: integer 
+	Parameter C_USE_S_AXI_ACP bound to: 0 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1328]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1329]
+INFO: [Synth 8-638] synthesizing module 'BIBUF' [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:268]
+INFO: [Synth 8-256] done synthesizing module 'BIBUF' (23#1) [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:268]
+INFO: [Synth 8-638] synthesizing module 'PS7' [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:33163]
+INFO: [Synth 8-256] done synthesizing module 'PS7' (24#1) [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:33163]
+INFO: [Synth 8-638] synthesizing module 'xlnx_axi_wrshim_unwrap' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:4213]
+	Parameter ID_WIDTH bound to: 6 - type: integer 
+	Parameter AD_WIDTH bound to: 32 - type: integer 
+	Parameter D_WIDTH bound to: 32 - type: integer 
+	Parameter AXI_WRSHIM_APB_SYNC_LEVELS bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xlnx_axi_wrshim_unwrap' (25#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:4213]
+INFO: [Synth 8-256] done synthesizing module 'processing_system7_v5_5_processing_system7' (26#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:156]
+WARNING: [Synth 8-350] instance 'inst' of module 'processing_system7_v5_5_processing_system7' requires 685 connections, but only 672 given [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/synth/zybo_dvi_input_processing_system7_0_0.v:205]
+INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_input_processing_system7_0_0' (27#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/synth/zybo_dvi_input_processing_system7_0_0.v:57]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'zybo_dvi_input_processing_system7_0_0' requires 31 connections, but only 24 given [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/hdl/zybo_dvi_input.v:183]
 INFO: [Synth 8-638] synthesizing module 'zybo_dvi_input_rgb2vga_0_0' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_rgb2vga_0_0/synth/zybo_dvi_input_rgb2vga_0_0.vhd:71]
 	Parameter VID_IN_DATA_WIDTH bound to: 24 - type: integer 
 	Parameter kRedDepth bound to: 5 - type: integer 
@@ -419,12 +487,12 @@ INFO: [Synth 8-638] synthesizing module 'rgb2vga' [/home/mike/Documents/osiris-h
 	Parameter kRedDepth bound to: 5 - type: integer 
 	Parameter kGreenDepth bound to: 6 - type: integer 
 	Parameter kBlueDepth bound to: 5 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'rgb2vga' (24#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/rgb2vga_v1_0/src/rgb2vga.vhd:81]
-INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_input_rgb2vga_0_0' (25#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_rgb2vga_0_0/synth/zybo_dvi_input_rgb2vga_0_0.vhd:71]
-INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_input' (26#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/hdl/zybo_dvi_input.v:13]
-INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_input_wrapper' (27#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/hdl/zybo_dvi_input_wrapper.v:12]
+INFO: [Synth 8-256] done synthesizing module 'rgb2vga' (28#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ipshared/digilentinc.com/rgb2vga_v1_0/src/rgb2vga.vhd:81]
+INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_input_rgb2vga_0_0' (29#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_rgb2vga_0_0/synth/zybo_dvi_input_rgb2vga_0_0.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_input' (30#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/hdl/zybo_dvi_input.v:13]
+INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_input_wrapper' (31#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/hdl/zybo_dvi_input_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1067.449 ; gain = 230.207 ; free physical = 5127 ; free virtual = 19269
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1085.102 ; gain = 247.855 ; free physical = 5729 ; free virtual = 19956
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -434,7 +502,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1067.449 ; gain = 230.207 ; free physical = 5126 ; free virtual = 19269
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1085.102 ; gain = 247.855 ; free physical = 5728 ; free virtual = 19955
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -451,8 +519,18 @@ Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_d
 Finished Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_clk_wiz_0_0/zybo_dvi_input_clk_wiz_0_0.xdc] for cell 'zybo_dvi_input_i/clk_wiz_0/inst'
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_clk_wiz_0_0/zybo_dvi_input_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zybo_dvi_input_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/zybo_dvi_input_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/zybo_dvi_input_processing_system7_0_0.xdc] for cell 'zybo_dvi_input_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/zybo_dvi_input_processing_system7_0_0.xdc] for cell 'zybo_dvi_input_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/sources_1/bd/zybo_dvi_input/ip/zybo_dvi_input_processing_system7_0_0/zybo_dvi_input_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zybo_dvi_input_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/zybo_dvi_input_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
 Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_out_en'. [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hdmi_out_en'. [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:153]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zybo_dvi_input_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/zybo_dvi_input_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
@@ -467,32 +545,33 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1398.965 ; gain = 0.000 ; free physical = 4892 ; free virtual = 19035
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1387.625 ; gain = 0.000 ; free physical = 5478 ; free virtual = 19703
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18098 
+INFO: Helper process launched with PID 26143 
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4883 ; free virtual = 19034
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1387.625 ; gain = 550.379 ; free physical = 5392 ; free virtual = 19677
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4883 ; free virtual = 19034
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1387.625 ; gain = 550.379 ; free physical = 5392 ; free virtual = 19677
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for zybo_dvi_input_i/dvi2rgb_0/U0. (constraint file  /home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.runs/synth_1/dont_touch.xdc, line 25).
 Applied set_property DONT_TOUCH = true for zybo_dvi_input_i/clk_wiz_0/inst. (constraint file  /home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.runs/synth_1/dont_touch.xdc, line 30).
+Applied set_property DONT_TOUCH = true for zybo_dvi_input_i/processing_system7_0/inst. (constraint file  /home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.runs/synth_1/dont_touch.xdc, line 38).
 Applied set_property DONT_TOUCH = true for zybo_dvi_input_i. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for zybo_dvi_input_i/GND. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for zybo_dvi_input_i/VDD. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for zybo_dvi_input_i/clk_wiz_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for zybo_dvi_input_i/dvi2rgb_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zybo_dvi_input_i/processing_system7_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for zybo_dvi_input_i/rgb2vga_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4884 ; free virtual = 19035
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1387.625 ; gain = 550.379 ; free physical = 5392 ; free virtual = 19677
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'pState_reg' in module 'PhaseAlign'
 INFO: [Synth 8-5546] ROM "pCtlTknRst" won't be mapped to RAM because it is too sparse
@@ -523,6 +602,7 @@ INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address s
 INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "eeprom" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "address_offset" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -536,7 +616,7 @@ INFO: [Synth 8-5546] ROM "eeprom" won't be mapped to RAM because it is too spars
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'gray' in module 'TWI_SlaveCtl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4887 ; free virtual = 19037
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1387.625 ; gain = 550.379 ; free physical = 5393 ; free virtual = 19678
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -568,7 +648,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 21    
-	                1 Bit    Registers := 107   
+	                1 Bit    Registers := 117   
 +---RAMs : 
 	              320 Bit         RAMs := 3     
 +---Muxes : 
@@ -584,9 +664,12 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit        Muxes := 3     
 	   2 Input      4 Bit        Muxes := 3     
 	  22 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   7 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 3     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 102   
+	   8 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 112   
 	  12 Input      1 Bit        Muxes := 3     
 	   4 Input      1 Bit        Muxes := 10    
 	   5 Input      1 Bit        Muxes := 6     
@@ -725,6 +808,15 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 2     
+Module xlnx_axi_wrshim_unwrap 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   8 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
 Module rgb2vga 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -744,7 +836,7 @@ BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4887 ; free virtual = 19037
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1387.625 ; gain = 550.379 ; free physical = 5393 ; free virtual = 19678
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -772,6 +864,7 @@ INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pIDLY_INC" won't 
 INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pIDLY_LD" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pAligned" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pError" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/pC0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pTkn1Flag" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pTkn2Flag" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pTkn3Flag" won't be mapped to RAM because it is too sparse
@@ -787,9 +880,9 @@ INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pError" won't be 
 INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/pC0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/pVde" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4886 ; free virtual = 19039
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1387.625 ; gain = 550.379 ; free physical = 5394 ; free virtual = 19679
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4886 ; free virtual = 19039
+Finished Parallel Reinference  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1387.625 ; gain = 550.379 ; free physical = 5394 ; free virtual = 19679
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -817,9 +910,9 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4873 ; free virtual = 19022
+Finished Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1387.625 ; gain = 550.379 ; free physical = 5361 ; free virtual = 19652
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4873 ; free virtual = 19022
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1387.625 ; gain = 550.379 ; free physical = 5361 ; free virtual = 19652
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -833,10 +926,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4864 ; free virtual = 19006
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1531.625 ; gain = 694.379 ; free physical = 5174 ; free virtual = 19466
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4863 ; free virtual = 19006
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1558.641 ; gain = 721.395 ; free physical = 5146 ; free virtual = 19438
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -848,16 +941,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4851 ; free virtual = 18993
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1569.656 ; gain = 732.410 ; free physical = 5136 ; free virtual = 19423
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4851 ; free virtual = 18993
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1569.656 ; gain = 732.410 ; free physical = 5136 ; free virtual = 19423
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4851 ; free virtual = 18993
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1569.656 ; gain = 732.410 ; free physical = 5136 ; free virtual = 19423
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -874,7 +967,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4852 ; free virtual = 18993
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1569.656 ; gain = 732.410 ; free physical = 5147 ; free virtual = 19435
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -887,7 +980,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4852 ; free virtual = 18993
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1569.656 ; gain = 732.410 ; free physical = 5147 ; free virtual = 19435
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -899,25 +992,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4852 ; free virtual = 18993
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1569.656 ; gain = 732.410 ; free physical = 5147 ; free virtual = 19435
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4852 ; free virtual = 18993
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1569.656 ; gain = 732.410 ; free physical = 5147 ; free virtual = 19435
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4852 ; free virtual = 18993
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1569.656 ; gain = 732.410 ; free physical = 5147 ; free virtual = 19435
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4852 ; free virtual = 18993
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1569.656 ; gain = 732.410 ; free physical = 5147 ; free virtual = 19434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -933,94 +1026,99 @@ Report Cell Usage:
 +------+------------+------+
 |      |Cell        |Count |
 +------+------------+------+
-|1     |BUFG        |     3|
-|2     |BUFIO       |     1|
-|3     |BUFR        |     1|
-|4     |CARRY4      |    18|
-|5     |IDELAYCTRL  |     1|
-|6     |IDELAYE2    |     3|
-|7     |ISERDESE2   |     3|
-|8     |ISERDESE2_1 |     3|
-|9     |LUT1        |    88|
-|10    |LUT2        |    60|
-|11    |LUT3        |    83|
-|12    |LUT4        |    85|
-|13    |LUT5        |    79|
-|14    |LUT6        |   148|
-|15    |MMCME2_ADV  |     1|
-|16    |MUXF7       |     9|
-|17    |PLLE2_ADV   |     1|
-|18    |RAM32M      |     6|
-|19    |FDCE        |    10|
-|20    |FDPE        |    20|
-|21    |FDRE        |   490|
-|22    |FDSE        |    12|
-|23    |IBUF        |     1|
-|24    |IBUFDS      |     4|
-|25    |IOBUF       |     2|
-|26    |OBUF        |    20|
+|1     |BIBUF       |   130|
+|2     |BUFG        |     4|
+|3     |BUFIO       |     1|
+|4     |BUFR        |     1|
+|5     |CARRY4      |    18|
+|6     |IDELAYCTRL  |     1|
+|7     |IDELAYE2    |     3|
+|8     |ISERDESE2   |     3|
+|9     |ISERDESE2_1 |     3|
+|10    |LUT1        |   201|
+|11    |LUT2        |    72|
+|12    |LUT3        |    69|
+|13    |LUT4        |   123|
+|14    |LUT5        |    98|
+|15    |LUT6        |   187|
+|16    |MMCME2_ADV  |     1|
+|17    |MUXF7       |     9|
+|18    |PLLE2_ADV   |     1|
+|19    |PS7         |     1|
+|20    |RAM32M      |     6|
+|21    |FDCE        |    10|
+|22    |FDPE        |    20|
+|23    |FDRE        |   500|
+|24    |FDSE        |    13|
+|25    |IBUF        |     1|
+|26    |IBUFDS      |     4|
+|27    |IOBUF       |     2|
+|28    |OBUF        |    20|
 +------+------------+------+
 
 Report Instance Areas: 
-+------+--------------------------------------+-----------------------------------+------+
-|      |Instance                              |Module                             |Cells |
-+------+--------------------------------------+-----------------------------------+------+
-|1     |top                                   |                                   |  1152|
-|2     |  zybo_dvi_input_i                    |zybo_dvi_input                     |  1130|
-|3     |    GND                               |zybo_dvi_input_xlconstant_1_0      |     0|
-|4     |    VDD                               |zybo_dvi_input_xlconstant_0_0      |     0|
-|5     |    clk_wiz_0                         |zybo_dvi_input_clk_wiz_0_0         |     4|
-|6     |      inst                            |zybo_dvi_input_clk_wiz_0_0_clk_wiz |     4|
-|7     |    dvi2rgb_0                         |zybo_dvi_input_dvi2rgb_0_0         |  1107|
-|8     |      U0                              |dvi2rgb                            |  1107|
-|9     |        \DataDecoders[0].DecoderX     |TMDS_Decoder                       |   300|
-|10    |          ChannelBondX                |ChannelBond_17                     |    71|
-|11    |          InputSERDES_X               |InputSERDES_18                     |     4|
-|12    |          PhaseAlignX                 |PhaseAlign_19                      |   140|
-|13    |          SyncBaseOvf                 |SyncBase_20                        |     8|
-|14    |            SyncAsyncx                |SyncAsync__parameterized1_23       |     2|
-|15    |          SyncBaseRst                 |SyncBase__parameterized0_21        |     3|
-|16    |            SyncAsyncx                |SyncAsync_22                       |     2|
-|17    |        \DataDecoders[1].DecoderX     |TMDS_Decoder_0                     |   292|
-|18    |          ChannelBondX                |ChannelBond_10                     |    66|
-|19    |          InputSERDES_X               |InputSERDES_11                     |     4|
-|20    |          PhaseAlignX                 |PhaseAlign_12                      |   140|
-|21    |          SyncBaseOvf                 |SyncBase_13                        |     8|
-|22    |            SyncAsyncx                |SyncAsync__parameterized1_16       |     2|
-|23    |          SyncBaseRst                 |SyncBase__parameterized0_14        |     3|
-|24    |            SyncAsyncx                |SyncAsync_15                       |     2|
-|25    |        \DataDecoders[2].DecoderX     |TMDS_Decoder_1                     |   291|
-|26    |          ChannelBondX                |ChannelBond                        |    66|
-|27    |          InputSERDES_X               |InputSERDES                        |     4|
-|28    |          PhaseAlignX                 |PhaseAlign                         |   139|
-|29    |          SyncBaseOvf                 |SyncBase                           |     8|
-|30    |            SyncAsyncx                |SyncAsync__parameterized1          |     2|
-|31    |          SyncBaseRst                 |SyncBase__parameterized0           |     3|
-|32    |            SyncAsyncx                |SyncAsync_9                        |     2|
-|33    |        \GenerateBUFG.ResyncToBUFG_X  |ResyncToBUFG                       |    28|
-|34    |        \GenerateDDC.DDC_EEPROM       |EEPROM_8b                          |   157|
-|35    |          I2C_SlaveController         |TWI_SlaveCtl                       |   104|
-|36    |            GlitchF_SCL               |GlitchFilter                       |    12|
-|37    |            GlitchF_SDA               |GlitchFilter_6                     |    12|
-|38    |            SyncSCL                   |SyncAsync_7                        |     3|
-|39    |            SyncSDA                   |SyncAsync_8                        |     3|
-|40    |        LockLostReset                 |ResetBridge                        |     2|
-|41    |          SyncAsyncx                  |SyncAsync_5                        |     2|
-|42    |        TMDS_ClockingX                |TMDS_Clocking                      |    36|
-|43    |          LockLostReset               |ResetBridge_2                      |     2|
-|44    |            SyncAsyncx                |SyncAsync_4                        |     2|
-|45    |          MMCM_LockSync               |SyncAsync__parameterized0          |     4|
-|46    |          RdyLostReset                |ResetBridge_3                      |     3|
-|47    |            SyncAsyncx                |SyncAsync                          |     2|
-|48    |    rgb2vga_0                         |zybo_dvi_input_rgb2vga_0_0         |    19|
-|49    |      U0                              |rgb2vga                            |    19|
-+------+--------------------------------------+-----------------------------------+------+
++------+----------------------------------------+-------------------------------------------+------+
+|      |Instance                                |Module                                     |Cells |
++------+----------------------------------------+-------------------------------------------+------+
+|1     |top                                     |                                           |  1502|
+|2     |  zybo_dvi_input_i                      |zybo_dvi_input                             |  1480|
+|3     |    VDD                                 |zybo_dvi_input_xlconstant_0_0              |     0|
+|4     |    clk_wiz_0                           |zybo_dvi_input_clk_wiz_0_0                 |     4|
+|5     |      inst                              |zybo_dvi_input_clk_wiz_0_0_clk_wiz         |     4|
+|6     |    dvi2rgb_0                           |zybo_dvi_input_dvi2rgb_0_0                 |  1167|
+|7     |      U0                                |dvi2rgb                                    |  1167|
+|8     |        \DataDecoders[0].DecoderX       |TMDS_Decoder                               |   321|
+|9     |          ChannelBondX                  |ChannelBond_18                             |    65|
+|10    |          InputSERDES_X                 |InputSERDES_19                             |     4|
+|11    |          PhaseAlignX                   |PhaseAlign_20                              |   167|
+|12    |          SyncBaseOvf                   |SyncBase_21                                |     8|
+|13    |            SyncAsyncx                  |SyncAsync__parameterized1_24               |     2|
+|14    |          SyncBaseRst                   |SyncBase__parameterized0_22                |     3|
+|15    |            SyncAsyncx                  |SyncAsync_23                               |     2|
+|16    |        \DataDecoders[1].DecoderX       |TMDS_Decoder_1                             |   315|
+|17    |          ChannelBondX                  |ChannelBond_11                             |    67|
+|18    |          InputSERDES_X                 |InputSERDES_12                             |     4|
+|19    |          PhaseAlignX                   |PhaseAlign_13                              |   161|
+|20    |          SyncBaseOvf                   |SyncBase_14                                |     8|
+|21    |            SyncAsyncx                  |SyncAsync__parameterized1_17               |     2|
+|22    |          SyncBaseRst                   |SyncBase__parameterized0_15                |     3|
+|23    |            SyncAsyncx                  |SyncAsync_16                               |     2|
+|24    |        \DataDecoders[2].DecoderX       |TMDS_Decoder_2                             |   307|
+|25    |          ChannelBondX                  |ChannelBond                                |    67|
+|26    |          InputSERDES_X                 |InputSERDES                                |     4|
+|27    |          PhaseAlignX                   |PhaseAlign                                 |   154|
+|28    |          SyncBaseOvf                   |SyncBase                                   |     8|
+|29    |            SyncAsyncx                  |SyncAsync__parameterized1                  |     2|
+|30    |          SyncBaseRst                   |SyncBase__parameterized0                   |     3|
+|31    |            SyncAsyncx                  |SyncAsync_10                               |     2|
+|32    |        \GenerateBUFG.ResyncToBUFG_X    |ResyncToBUFG                               |    28|
+|33    |        \GenerateDDC.DDC_EEPROM         |EEPROM_8b                                  |   157|
+|34    |          I2C_SlaveController           |TWI_SlaveCtl                               |   104|
+|35    |            GlitchF_SCL                 |GlitchFilter                               |    12|
+|36    |            GlitchF_SDA                 |GlitchFilter_7                             |    12|
+|37    |            SyncSCL                     |SyncAsync_8                                |     3|
+|38    |            SyncSDA                     |SyncAsync_9                                |     3|
+|39    |        LockLostReset                   |ResetBridge                                |     2|
+|40    |          SyncAsyncx                    |SyncAsync_6                                |     2|
+|41    |        TMDS_ClockingX                  |TMDS_Clocking                              |    36|
+|42    |          LockLostReset                 |ResetBridge_3                              |     2|
+|43    |            SyncAsyncx                  |SyncAsync_5                                |     2|
+|44    |          MMCM_LockSync                 |SyncAsync__parameterized0                  |     4|
+|45    |          RdyLostReset                  |ResetBridge_4                              |     3|
+|46    |            SyncAsyncx                  |SyncAsync                                  |     2|
+|47    |    processing_system7_0                |zybo_dvi_input_processing_system7_0_0      |   290|
+|48    |      inst                              |processing_system7_v5_5_processing_system7 |   290|
+|49    |        xlnx_axi_wrshim_unwrap_inst_gp0 |xlnx_axi_wrshim_unwrap                     |    18|
+|50    |        xlnx_axi_wrshim_unwrap_inst_gp1 |xlnx_axi_wrshim_unwrap_0                   |    18|
+|51    |    rgb2vga_0                           |zybo_dvi_input_rgb2vga_0_0                 |    19|
+|52    |      U0                                |rgb2vga                                    |    19|
++------+----------------------------------------+-------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4852 ; free virtual = 18993
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1569.656 ; gain = 732.410 ; free physical = 5147 ; free virtual = 19434
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1398.965 ; gain = 109.379 ; free physical = 4851 ; free virtual = 18992
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1398.965 ; gain = 561.723 ; free physical = 4851 ; free virtual = 18992
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1569.656 ; gain = 292.410 ; free physical = 5147 ; free virtual = 19434
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1569.656 ; gain = 732.410 ; free physical = 5147 ; free virtual = 19434
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 43 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1032,8 +1130,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-168 Infos, 106 Warnings, 0 Critical Warnings and 0 Errors encountered.
+179 Infos, 112 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1414.980 ; gain = 503.363 ; free physical = 4851 ; free virtual = 18991
-report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1447.000 ; gain = 0.000 ; free physical = 4850 ; free virtual = 18991
-INFO: [Common 17-206] Exiting Vivado at Wed Jan 20 19:56:45 2016...
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1601.672 ; gain = 673.402 ; free physical = 5147 ; free virtual = 19434
+report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1633.691 ; gain = 0.000 ; free physical = 5144 ; free virtual = 19432
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 29 22:48:42 2016...

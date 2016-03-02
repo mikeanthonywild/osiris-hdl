@@ -149,8 +149,8 @@ set_property PACKAGE_PIN E18 [get_ports hdmi_hpd]
 set_property IOSTANDARD LVCMOS33 [get_ports hdmi_hpd]
 
 ##IO_L6N_T0_VREF_35
-set_property PACKAGE_PIN F17 [get_ports hdmi_out_en]
-set_property IOSTANDARD LVCMOS33 [get_ports hdmi_out_en]
+#set_property PACKAGE_PIN F17 [get_ports hdmi_out_en]
+#set_property IOSTANDARD LVCMOS33 [get_ports hdmi_out_en]
 
 ##IO_L16P_T2_35
 set_property PACKAGE_PIN G17 [get_ports ddc_scl_io]

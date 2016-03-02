@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-//Date        : Wed Mar  2 21:35:03 2016
+//Date        : Wed Mar  2 22:49:09 2016
 //Host        : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 //Command     : generate_target zybo_dvi_input.bd
 //Design      : zybo_dvi_input

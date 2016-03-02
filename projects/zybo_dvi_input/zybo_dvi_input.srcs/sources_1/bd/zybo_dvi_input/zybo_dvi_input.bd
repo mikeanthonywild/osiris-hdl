@@ -473,6 +473,7 @@
         <spirit:componentRef spirit:library="ip" spirit:name="dvi2rgb" spirit:vendor="digilentinc.com" spirit:version="1.5"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_dvi_input_dvi2rgb_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="kESIDFile">/home/mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>

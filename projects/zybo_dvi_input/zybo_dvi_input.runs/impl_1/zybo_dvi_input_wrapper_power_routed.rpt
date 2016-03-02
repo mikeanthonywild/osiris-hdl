@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date             : Wed Mar  2 21:36:49 2016
+| Date             : Wed Mar  2 22:50:56 2016
 | Host             : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 | Command          : report_power -file zybo_dvi_input_wrapper_power_routed.rpt -pb zybo_dvi_input_wrapper_power_summary_routed.pb
 | Design           : zybo_dvi_input_wrapper
@@ -51,13 +51,13 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.010 |       13 |       --- |             --- |
 | Slice Logic              |     0.002 |     1319 |       --- |             --- |
-|   LUT as Logic           |     0.001 |      405 |     17600 |            2.30 |
+|   LUT as Logic           |     0.001 |      404 |     17600 |            2.30 |
 |   Register               |    <0.001 |      515 |     35200 |            1.46 |
 |   CARRY4                 |    <0.001 |       18 |      4400 |            0.41 |
 |   LUT as Distributed RAM |    <0.001 |       24 |      6000 |            0.40 |
 |   Others                 |    <0.001 |      206 |       --- |             --- |
 |   F7/F8 Muxes            |    <0.001 |        9 |     17600 |            0.05 |
-| Signals                  |     0.001 |      838 |       --- |             --- |
+| Signals                  |     0.001 |      841 |       --- |             --- |
 | MMCM                     |     0.100 |        1 |         2 |           50.00 |
 | PLL                      |     0.110 |        1 |         2 |           50.00 |
 | I/O                      |     0.044 |       31 |       100 |           31.00 |
@@ -187,7 +187,7 @@ Table of Contents
 |             SyncAsyncx                  |    <0.001 |
 |           SyncBaseRst                   |    <0.001 |
 |             SyncAsyncx                  |    <0.001 |
-|         DataDecoders[2].DecoderX        |     0.013 |
+|         DataDecoders[2].DecoderX        |     0.012 |
 |           ChannelBondX                  |    <0.001 |
 |             pFIFO_reg_0_31_0_5          |    <0.001 |
 |             pFIFO_reg_0_31_6_9          |    <0.001 |

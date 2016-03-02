@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar  2 21:35:21 2016" VIVADOVERSION="2015.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar  2 22:49:26 2016" VIVADOVERSION="2015.4">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:1.0" DEVICE="7z010" NAME="zybo_dvi_input" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -667,7 +667,7 @@
         <PARAMETER NAME="kIDLY_TapValuePs" VALUE="78"/>
         <PARAMETER NAME="kIDLY_TapWidth" VALUE="5"/>
         <PARAMETER NAME="kAddBUFG" VALUE="true"/>
-        <PARAMETER NAME="kESIDFile" VALUE="/home/mike/Documents/osiris-hdl/ESID/digilent/dgl_dvi.txt"/>
+        <PARAMETER NAME="kESIDFile" VALUE="/home/mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt"/>
         <PARAMETER NAME="Component_Name" VALUE="zybo_dvi_input_dvi2rgb_0_0"/>
         <PARAMETER NAME="kEnableSerialClkOutput" VALUE="false"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>

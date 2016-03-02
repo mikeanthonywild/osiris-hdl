@@ -148,7 +148,7 @@ BEGIN
       kIDLY_TapValuePs => 78,
       kIDLY_TapWidth => 5,
       kAddBUFG => true,
-      kESIDFile => "/home/mike/Documents/osiris-hdl/ESID/digilent/dgl_dvi.txt"
+      kESIDFile => "/home/mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt"
     )
     PORT MAP (
       TMDS_Clk_p => TMDS_Clk_p,

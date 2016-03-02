@@ -191,6 +191,9 @@ CONFIG.PRIMITIVE {PLL} \
 
   # Create instance: dvi2rgb_0, and set properties
   set dvi2rgb_0 [ create_bd_cell -type ip -vlnv digilentinc.com:ip:dvi2rgb:1.5 dvi2rgb_0 ]
+  set_property -dict [ list \
+CONFIG.kESIDFile {/home/mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt} \
+ ] $dvi2rgb_0
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]

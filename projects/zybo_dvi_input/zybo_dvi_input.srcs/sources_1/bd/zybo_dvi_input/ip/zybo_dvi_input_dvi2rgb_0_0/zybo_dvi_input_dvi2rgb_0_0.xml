@@ -367,7 +367,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>a4fea8f8</spirit:value>
+            <spirit:value>2d0a3c37</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -383,7 +383,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 02 21:35:03 UTC 2016</spirit:value>
+            <spirit:value>Wed Mar 02 22:49:09 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -402,7 +402,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>a4fea8f8</spirit:value>
+            <spirit:value>2d0a3c37</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -418,7 +418,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 02 21:35:03 UTC 2016</spirit:value>
+            <spirit:value>Wed Mar 02 22:49:09 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -437,7 +437,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>a4fea8f8</spirit:value>
+            <spirit:value>2d0a3c37</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -453,7 +453,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 02 21:35:03 UTC 2016</spirit:value>
+            <spirit:value>Wed Mar 02 22:49:09 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -472,7 +472,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>a4c95c5d</spirit:value>
+            <spirit:value>fa883b10</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -488,7 +488,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 02 21:35:03 UTC 2016</spirit:value>
+            <spirit:value>Wed Mar 02 22:49:09 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -507,7 +507,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>a4c95c5d</spirit:value>
+            <spirit:value>fa883b10</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -523,7 +523,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 02 21:35:03 UTC 2016</spirit:value>
+            <spirit:value>Wed Mar 02 22:49:09 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -926,7 +926,7 @@
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>kESIDFile</spirit:name>
         <spirit:displayName>Kesidfile</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.kESIDFile">/home/mike/Documents/osiris-hdl/ESID/digilent/dgl_dvi.txt</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.kESIDFile">/home/mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -1152,7 +1152,7 @@
     <spirit:parameter>
       <spirit:name>kESIDFile</spirit:name>
       <spirit:displayName>ESID ROM location</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.kESIDFile">/home/mike/Documents/osiris-hdl/ESID/digilent/dgl_dvi.txt</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.kESIDFile">/home/mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -1170,6 +1170,7 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.REFCLK.CLK_DOMAIN" xilinx:valueSource="ip_propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.REFCLK.FREQ_HZ" xilinx:valueSource="ip_propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.REFCLK.PHASE" xilinx:valueSource="ip_propagated"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.kESIDFile" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

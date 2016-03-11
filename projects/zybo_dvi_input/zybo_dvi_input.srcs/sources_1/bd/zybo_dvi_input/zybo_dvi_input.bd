@@ -285,6 +285,12 @@
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
+        <spirit:port>
+          <spirit:name>pclk_lckd_led</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -473,6 +479,7 @@
         <spirit:componentRef spirit:library="ip" spirit:name="dvi2rgb" spirit:vendor="digilentinc.com" spirit:version="1.5"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_dvi_input_dvi2rgb_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="kClkRange">5</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="kESIDFile">/home/mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
@@ -555,6 +562,11 @@
         <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="flash_sync"/>
         <spirit:externalPortReference spirit:portRef="flash_sync_led"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="IRQ_F2P"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dvi2rgb_0_aPixelClkLckd</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="aPixelClkLckd"/>
+        <spirit:externalPortReference spirit:portRef="pclk_lckd_led"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

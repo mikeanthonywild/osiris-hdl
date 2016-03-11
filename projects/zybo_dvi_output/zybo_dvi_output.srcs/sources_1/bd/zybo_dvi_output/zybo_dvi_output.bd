@@ -103,6 +103,12 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
+          <spirit:name>clk</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
           <spirit:name>hdmi_out_en</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
@@ -110,12 +116,6 @@
               <spirit:left>0</spirit:left>
               <spirit:right>0</spirit:right>
             </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>clk</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
@@ -147,8 +147,8 @@
           <spirit:configurableElementValue spirit:referenceId="CLKIN1_JITTER_PS">80.0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT2_USED">true</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="NUM_OUT_CLKS">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">148.5</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_REQUESTED_OUT_FREQ">742.5</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">25.175</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_REQUESTED_OUT_FREQ">125.87</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT1_DRIVES">BUFG</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT2_DRIVES">BUFG</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT3_DRIVES">BUFG</spirit:configurableElementValue>
@@ -157,16 +157,16 @@
           <spirit:configurableElementValue spirit:referenceId="CLKOUT6_DRIVES">BUFG</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT7_DRIVES">BUFG</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="FEEDBACK_SOURCE">FDBK_AUTO</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_DIVCLK_DIVIDE">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKFBOUT_MULT_F">11.875</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_DIVCLK_DIVIDE">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKFBOUT_MULT_F">18.125</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="MMCM_CLKIN1_PERIOD">8.0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="MMCM_COMPENSATION">ZHOLD</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT0_DIVIDE_F">5.000</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT1_DIVIDE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_JITTER">157.337</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_PHASE_ERROR">127.299</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_JITTER">117.142</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_PHASE_ERROR">127.299</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT0_DIVIDE_F">30.000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT1_DIVIDE">6</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_JITTER">269.602</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_PHASE_ERROR">193.372</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_JITTER">194.472</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_PHASE_ERROR">193.372</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -182,14 +182,14 @@
         <spirit:componentRef spirit:library="user" spirit:name="test_pattern_generator" spirit:vendor="user.org" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_dvi_output_test_pattern_generator_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DISPLAY_WIDTH">1920</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="H_FRONT_PORCH">88</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="H_SYNC_PULSE">44</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="H_BACK_PORCH">148</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DISPLAY_HEIGHT">1080</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="V_FRONT_PORCH">4</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="V_SYNC_PULSE">5</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="V_BACK_PORCH">36</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DISPLAY_WIDTH">640</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="H_FRONT_PORCH">16</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="H_SYNC_PULSE">96</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="H_BACK_PORCH">48</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DISPLAY_HEIGHT">480</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="V_FRONT_PORCH">10</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="V_SYNC_PULSE">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="V_BACK_PORCH">33</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>

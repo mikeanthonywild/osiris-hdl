@@ -13,7 +13,7 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "kEmulateDDC" -parent ${Page_0}
   set kESIDFile [ipgui::add_param $IPINST -name "kESIDFile" -parent ${Page_0}]
   set_property tooltip {Location of the ESID ROM txt} ${kESIDFile}
-  ipgui::add_param $IPINST -name "kClkRange" -parent ${Page_0} -layout horizontal
+  ipgui::add_param $IPINST -name "kClkRange" -parent ${Page_0} -widget comboBox
 
 
 }

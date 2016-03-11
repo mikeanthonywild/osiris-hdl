@@ -49,8 +49,8 @@ set_property PACKAGE_PIN M14 [get_ports flash_sync_led]
 set_property IOSTANDARD LVCMOS33 [get_ports flash_sync_led]
 
 ##IO_L23N_T3_35
-#set_property PACKAGE_PIN M15 [get_ports {led[1]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {led[1]}]
+set_property PACKAGE_PIN M15 [get_ports pclk_lckd_led]
+set_property IOSTANDARD LVCMOS33 [get_ports pclk_lckd_led]
 
 ##IO_0_35
 #set_property PACKAGE_PIN G14 [get_ports {led[2]}]

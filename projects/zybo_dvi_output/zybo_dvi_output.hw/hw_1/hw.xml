@@ -8,7 +8,7 @@
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z010_1" gui_info="">
       <Properties Property="PROBES.FILE" value=""/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/$_project_name__wrapper.bit"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="/home/mike/Documents/osiris-hdl/projects/zybo_dvi_input/zybo_dvi_input.runs/impl_1/zybo_dvi_input_wrapper.bit"/>
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_ila" gui_info="">

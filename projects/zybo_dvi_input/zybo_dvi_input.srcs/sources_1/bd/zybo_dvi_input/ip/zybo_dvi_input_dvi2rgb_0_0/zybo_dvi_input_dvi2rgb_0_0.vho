@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: digilentinc.com:ip:dvi2rgb:1.5
--- IP Revision: 6
+-- IP Revision: 14
 
 -- The following code must appear in the VHDL architecture header.
 

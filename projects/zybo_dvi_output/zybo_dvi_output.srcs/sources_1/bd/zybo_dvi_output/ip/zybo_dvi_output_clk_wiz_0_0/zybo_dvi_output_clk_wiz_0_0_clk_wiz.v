@@ -55,8 +55,8 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// CLK_OUT1___148.438______0.000______50.0______157.337____127.299
-// CLK_OUT2___742.188______0.000______50.0______117.142____127.299
+// CLK_OUT1____25.174______0.000______50.0______269.602____193.372
+// CLK_OUT2___125.868______0.000______50.0______194.472____193.372
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -115,15 +115,15 @@ module zybo_dvi_output_clk_wiz_0_0_clk_wiz
     .CLKOUT4_CASCADE      ("FALSE"),
     .COMPENSATION         ("ZHOLD"),
     .STARTUP_WAIT         ("FALSE"),
-    .DIVCLK_DIVIDE        (2),
-    .CLKFBOUT_MULT_F      (11.875),
+    .DIVCLK_DIVIDE        (3),
+    .CLKFBOUT_MULT_F      (18.125),
     .CLKFBOUT_PHASE       (0.000),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
-    .CLKOUT0_DIVIDE_F     (5.000),
+    .CLKOUT0_DIVIDE_F     (30.000),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKOUT1_DIVIDE       (1),
+    .CLKOUT1_DIVIDE       (6),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),

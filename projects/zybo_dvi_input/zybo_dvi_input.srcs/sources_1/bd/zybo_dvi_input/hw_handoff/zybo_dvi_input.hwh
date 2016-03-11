@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar  2 22:49:26 2016" VIVADOVERSION="2015.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar 11 19:37:15 2016" VIVADOVERSION="2015.4">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:1.0" DEVICE="7z010" NAME="zybo_dvi_input" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -89,6 +89,11 @@
     <PORT DIR="O" NAME="flash_sync_led" SIGIS="undef" SIGNAME="dvi2rgb_0_flash_sync">
       <CONNECTIONS>
         <CONNECTION INSTANCE="dvi2rgb_0" PORT="flash_sync"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pclk_lckd_led" SIGIS="undef" SIGNAME="dvi2rgb_0_aPixelClkLckd">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dvi2rgb_0" PORT="aPixelClkLckd"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -663,7 +668,7 @@
       <PARAMETERS>
         <PARAMETER NAME="kEmulateDDC" VALUE="true"/>
         <PARAMETER NAME="kRstActiveHigh" VALUE="true"/>
-        <PARAMETER NAME="kClkRange" VALUE="1"/>
+        <PARAMETER NAME="kClkRange" VALUE="5"/>
         <PARAMETER NAME="kIDLY_TapValuePs" VALUE="78"/>
         <PARAMETER NAME="kIDLY_TapWidth" VALUE="5"/>
         <PARAMETER NAME="kAddBUFG" VALUE="true"/>
@@ -730,7 +735,11 @@
             <CONNECTION INSTANCE="rgb2vga_0" PORT="PixelClk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="aPixelClkLckd" SIGIS="undef"/>
+        <PORT DIR="O" NAME="aPixelClkLckd" SIGIS="undef" SIGNAME="dvi2rgb_0_aPixelClkLckd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pclk_lckd_led"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="DDC_SDA_I" SIGIS="undef"/>
         <PORT DIR="O" NAME="DDC_SDA_O" SIGIS="undef"/>
         <PORT DIR="O" NAME="DDC_SDA_T" SIGIS="undef"/>

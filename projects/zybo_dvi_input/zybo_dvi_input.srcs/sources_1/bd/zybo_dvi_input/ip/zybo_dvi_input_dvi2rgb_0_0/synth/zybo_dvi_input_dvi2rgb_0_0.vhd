@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: digilentinc.com:ip:dvi2rgb:1.5
--- IP Revision: 14
+-- IP Revision: 20
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -144,7 +144,7 @@ BEGIN
     GENERIC MAP (
       kEmulateDDC => true,
       kRstActiveHigh => true,
-      kClkRange => 5,
+      kClkRange => 3,
       kIDLY_TapValuePs => 78,
       kIDLY_TapWidth => 5,
       kAddBUFG => true,

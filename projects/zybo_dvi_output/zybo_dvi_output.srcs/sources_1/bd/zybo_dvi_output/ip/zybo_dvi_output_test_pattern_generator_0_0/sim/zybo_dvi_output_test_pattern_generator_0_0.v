@@ -74,13 +74,13 @@ output wire vde;
 
   test_pattern_generator #(
     .DISPLAY_WIDTH(640),
-    .H_FRONT_PORCH(16),
-    .H_SYNC_PULSE(96),
-    .H_BACK_PORCH(48),
+    .H_FRONT_PORCH(110),
+    .H_SYNC_PULSE(40),
+    .H_BACK_PORCH(220),
     .DISPLAY_HEIGHT(480),
-    .V_FRONT_PORCH(10),
-    .V_SYNC_PULSE(2),
-    .V_BACK_PORCH(33)
+    .V_FRONT_PORCH(5),
+    .V_SYNC_PULSE(5),
+    .V_BACK_PORCH(20)
   ) inst (
     .clk(clk),
     .r(r),

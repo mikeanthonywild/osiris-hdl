@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date         : Fri Mar 11 19:38:29 2016
+| Date         : Sat Mar 12 12:06:08 2016
 | Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 | Command      : report_io -file zybo_dvi_input_wrapper_io_placed.rpt
 | Design       : zybo_dvi_input_wrapper
@@ -23,7 +23,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           162 |
+|           163 |
 +---------------+
 
 
@@ -372,7 +372,7 @@ Table of Contents
 | U17        |                   | High Range | IO_L9N_T1_DQS_34        | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | U18        |                   | High Range | IO_L12P_T1_MRCC_34      | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | U19        |                   | High Range | IO_L12N_T1_MRCC_34      | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
-| U20        |                   | High Range | IO_L15N_T2_DQS_34       | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |
+| U20        | pclk_out          | High Range | IO_L15N_T2_DQS_34       | OUTPUT        | LVCMOS33          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | V1         | DDR_dq[24]        |            | PS_DDR_DQ24_502         | BIDIR         | SSTL15_T_DCI      |         |            | FAST |           DCI SPLIT |            FP_VTT_50 |         | FIXED      |           |          |      | SPLIT            |
 | V2         | DDR_dq[30]        |            | PS_DDR_DQ30_502         | BIDIR         | SSTL15_T_DCI      |         |            | FAST |           DCI SPLIT |            FP_VTT_50 |         | FIXED      |           |          |      | SPLIT            |
 | V3         | DDR_dq[31]        |            | PS_DDR_DQ31_502         | BIDIR         | SSTL15_T_DCI      |         |            | FAST |           DCI SPLIT |            FP_VTT_50 |         | FIXED      |           |          |      | SPLIT            |

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar 11 19:37:15 2016" VIVADOVERSION="2015.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar 12 12:04:55 2016" VIVADOVERSION="2015.4">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:1.0" DEVICE="7z010" NAME="zybo_dvi_input" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -36,11 +36,6 @@
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="hdmi_clk_p" SIGIS="undef" SIGNAME="External_Ports_hdmi_clk_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="dvi2rgb_0" PORT="TMDS_Clk_p"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" NAME="hdmi_clk_n" SIGIS="undef" SIGNAME="External_Ports_hdmi_clk_n">
       <CONNECTIONS>
         <CONNECTION INSTANCE="dvi2rgb_0" PORT="TMDS_Clk_n"/>
@@ -59,6 +54,11 @@
     <PORT DIR="O" LEFT="0" NAME="hdmi_hpd" RIGHT="0" SIGIS="undef" SIGNAME="VDD_dout">
       <CONNECTIONS>
         <CONNECTION INSTANCE="VDD" PORT="dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pclk_out" SIGIS="undef" SIGNAME="dvi2rgb_0_PixelClk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dvi2rgb_0" PORT="PixelClk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="4" NAME="vga_r" RIGHT="0" SIGIS="undef" SIGNAME="rgb2vga_0_vga_pRed">
@@ -89,6 +89,11 @@
     <PORT DIR="O" NAME="flash_sync_led" SIGIS="undef" SIGNAME="dvi2rgb_0_flash_sync">
       <CONNECTIONS>
         <CONNECTION INSTANCE="dvi2rgb_0" PORT="flash_sync"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="hdmi_clk_p" SIGIS="undef" SIGNAME="External_Ports_hdmi_clk_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dvi2rgb_0" PORT="TMDS_Clk_p"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="pclk_lckd_led" SIGIS="undef" SIGNAME="dvi2rgb_0_aPixelClkLckd">
@@ -668,7 +673,7 @@
       <PARAMETERS>
         <PARAMETER NAME="kEmulateDDC" VALUE="true"/>
         <PARAMETER NAME="kRstActiveHigh" VALUE="true"/>
-        <PARAMETER NAME="kClkRange" VALUE="5"/>
+        <PARAMETER NAME="kClkRange" VALUE="3"/>
         <PARAMETER NAME="kIDLY_TapValuePs" VALUE="78"/>
         <PARAMETER NAME="kIDLY_TapWidth" VALUE="5"/>
         <PARAMETER NAME="kAddBUFG" VALUE="true"/>
@@ -732,6 +737,7 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="PixelClk" SIGIS="clk" SIGNAME="dvi2rgb_0_PixelClk">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pclk_out"/>
             <CONNECTION INSTANCE="rgb2vga_0" PORT="PixelClk"/>
           </CONNECTIONS>
         </PORT>

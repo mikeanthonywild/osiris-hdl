@@ -1,4 +1,7 @@
 """A small script to calculate PLL parameters for target clocks.
+This is easily the least efficient way to do it, but the search space
+is pretty small so it's easier to just brute-force it. A parametric
+solver would be better....
 
 """
 

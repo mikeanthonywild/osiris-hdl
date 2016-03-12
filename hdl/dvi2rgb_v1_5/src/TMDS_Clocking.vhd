@@ -184,8 +184,7 @@ DVI_ClkGenerator: MMCME2_ADV
       CLKOUT0_PHASE        => 0.000,
       CLKOUT0_DUTY_CYCLE   => 0.500,
       CLKOUT0_USE_FINE_PS  => FALSE,
-      --CLKIN1_PERIOD        => real(kClkRange) * 6.0,
-      CLKIN1_PERIOD        => 40.0,
+      CLKIN1_PERIOD        => real(kClkRange) * 6.0,
       REF_JITTER1          => 0.010)
    port map
    -- Output clocks

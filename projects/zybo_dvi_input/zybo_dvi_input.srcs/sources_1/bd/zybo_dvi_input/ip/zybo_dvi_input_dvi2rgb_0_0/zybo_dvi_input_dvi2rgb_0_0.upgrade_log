@@ -1,6 +1,153 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
+| Date         : Sat Mar 12 12:03:31 2016
+| Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zybo_dvi_input_dvi2rgb_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of zybo_dvi_input_dvi2rgb_0_0 (digilentinc.com:ip:dvi2rgb:1.5) from (Rev. 19) to (Rev. 20)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
+| Date         : Sat Mar 12 11:52:39 2016
+| Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zybo_dvi_input_dvi2rgb_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of zybo_dvi_input_dvi2rgb_0_0 (digilentinc.com:ip:dvi2rgb:1.5) from (Rev. 18) to (Rev. 19)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
+| Date         : Fri Mar 11 23:11:33 2016
+| Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zybo_dvi_input_dvi2rgb_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of zybo_dvi_input_dvi2rgb_0_0 (digilentinc.com:ip:dvi2rgb:1.5) from (Rev. 17) to (Rev. 18)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
+| Date         : Fri Mar 11 23:07:06 2016
+| Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zybo_dvi_input_dvi2rgb_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of zybo_dvi_input_dvi2rgb_0_0 (digilentinc.com:ip:dvi2rgb:1.5) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
+| Date         : Fri Mar 11 21:07:24 2016
+| Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zybo_dvi_input_dvi2rgb_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of zybo_dvi_input_dvi2rgb_0_0 (digilentinc.com:ip:dvi2rgb:1.5 (Rev. 16)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
+| Date         : Fri Mar 11 21:04:37 2016
+| Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zybo_dvi_input_dvi2rgb_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of zybo_dvi_input_dvi2rgb_0_0 (digilentinc.com:ip:dvi2rgb:1.5) from (Rev. 15) to (Rev. 16)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
+| Date         : Fri Mar 11 20:49:59 2016
+| Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zybo_dvi_input_dvi2rgb_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of zybo_dvi_input_dvi2rgb_0_0 (digilentinc.com:ip:dvi2rgb:1.5) from (Rev. 14) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
 | Date         : Fri Mar 11 19:36:39 2016
 | Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 | Command      : upgrade_ip

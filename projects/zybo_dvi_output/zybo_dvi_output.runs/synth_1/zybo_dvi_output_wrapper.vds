@@ -2,8 +2,8 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Thu Mar  3 08:11:40 2016
-# Process ID: 3048
+# Start of session at: Sat Mar 12 16:42:41 2016
+# Process ID: 26340
 # Current directory: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1
 # Command line: vivado -log zybo_dvi_output_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source zybo_dvi_output_wrapper.tcl
 # Log file: /home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/synth_1/zybo_dvi_output_wrapper.vds
@@ -18,7 +18,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1029.062 ; gain = 191.824 ; free physical = 5381 ; free virtual = 19993
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1029.066 ; gain = 191.824 ; free physical = 5816 ; free virtual = 19410
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'zybo_dvi_output_wrapper' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v:12]
 INFO: [Synth 8-638] synthesizing module 'zybo_dvi_output' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v:13]
@@ -39,16 +39,16 @@ INFO: [Synth 8-638] synthesizing module 'IBUF' [/opt/Xilinx/Vivado/2015.4/script
 INFO: [Synth 8-256] done synthesizing module 'IBUF' (3#1) [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:14145]
 INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [/opt/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:20396]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
-	Parameter CLKFBOUT_MULT_F bound to: 18.125000 - type: float 
+	Parameter CLKFBOUT_MULT_F bound to: 11.875000 - type: float 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
 	Parameter CLKIN1_PERIOD bound to: 8.000000 - type: float 
 	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
-	Parameter CLKOUT0_DIVIDE_F bound to: 30.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 5.000000 - type: float 
 	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKOUT1_DIVIDE bound to: 6 - type: integer 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
 	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
 	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
@@ -74,7 +74,7 @@ INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [/opt/Xilinx/Vivado/2015.4/
 	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
 	Parameter COMPENSATION bound to: ZHOLD - type: string 
-	Parameter DIVCLK_DIVIDE bound to: 3 - type: integer 
+	Parameter DIVCLK_DIVIDE bound to: 2 - type: integer 
 	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
 	Parameter IS_PSEN_INVERTED bound to: 1'b0 
 	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
@@ -180,17 +180,17 @@ INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_output_rgb2dvi_0_0' (13#1
 INFO: [Synth 8-638] synthesizing module 'zybo_dvi_output_test_pattern_generator_0_0' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_test_pattern_generator_0_0/synth/zybo_dvi_output_test_pattern_generator_0_0.v:56]
 INFO: [Synth 8-638] synthesizing module 'test_pattern_generator' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/user.org/test_pattern_generator_v1_0/test_pattern_generator.v:11]
 	Parameter DISPLAY_WIDTH bound to: 640 - type: integer 
-	Parameter H_FRONT_PORCH bound to: 16 - type: integer 
-	Parameter H_SYNC_PULSE bound to: 96 - type: integer 
-	Parameter H_BACK_PORCH bound to: 48 - type: integer 
+	Parameter H_FRONT_PORCH bound to: 110 - type: integer 
+	Parameter H_SYNC_PULSE bound to: 40 - type: integer 
+	Parameter H_BACK_PORCH bound to: 220 - type: integer 
 	Parameter DISPLAY_HEIGHT bound to: 480 - type: integer 
-	Parameter V_FRONT_PORCH bound to: 10 - type: integer 
-	Parameter V_SYNC_PULSE bound to: 2 - type: integer 
-	Parameter V_BACK_PORCH bound to: 33 - type: integer 
-	Parameter BLANK_WIDTH bound to: 160 - type: integer 
-	Parameter MAX_H_COUNT bound to: 800 - type: integer 
-	Parameter BLANK_HEIGHT bound to: 45 - type: integer 
-	Parameter MAX_V_COUNT bound to: 525 - type: integer 
+	Parameter V_FRONT_PORCH bound to: 5 - type: integer 
+	Parameter V_SYNC_PULSE bound to: 5 - type: integer 
+	Parameter V_BACK_PORCH bound to: 20 - type: integer 
+	Parameter BLANK_WIDTH bound to: 370 - type: integer 
+	Parameter MAX_H_COUNT bound to: 1010 - type: integer 
+	Parameter BLANK_HEIGHT bound to: 30 - type: integer 
+	Parameter MAX_V_COUNT bound to: 510 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'test_pattern_generator' (14#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/user.org/test_pattern_generator_v1_0/test_pattern_generator.v:11]
 INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_output_test_pattern_generator_0_0' (15#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_test_pattern_generator_0_0/synth/zybo_dvi_output_test_pattern_generator_0_0.v:56]
 INFO: [Synth 8-638] synthesizing module 'zybo_dvi_output_xlconcat_0_0' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ip/zybo_dvi_output_xlconcat_0_0/synth/zybo_dvi_output_xlconcat_0_0.v:57]
@@ -234,7 +234,7 @@ INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_output_xlconcat_0_0' (17#
 INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_output' (18#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output.v:13]
 INFO: [Synth 8-256] done synthesizing module 'zybo_dvi_output_wrapper' (19#1) [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1069.445 ; gain = 232.207 ; free physical = 5339 ; free virtual = 19951
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1069.449 ; gain = 232.207 ; free physical = 5774 ; free virtual = 19369
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -244,7 +244,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1069.445 ; gain = 232.207 ; free physical = 5339 ; free virtual = 19951
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1069.449 ; gain = 232.207 ; free physical = 5774 ; free virtual = 19369
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -278,18 +278,18 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1395.961 ; gain = 0.000 ; free physical = 5152 ; free virtual = 19764
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1395.965 ; gain = 0.000 ; free physical = 5542 ; free virtual = 19144
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 3114 
+INFO: Helper process launched with PID 26408 
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5138 ; free virtual = 19749
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5521 ; free virtual = 19125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5138 ; free virtual = 19749
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5521 ; free virtual = 19125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -303,10 +303,10 @@ Applied set_property DONT_TOUCH = true for zybo_dvi_output_i/rgb2dvi_0. (constra
 Applied set_property DONT_TOUCH = true for zybo_dvi_output_i/test_pattern_generator_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for zybo_dvi_output_i/xlconcat_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5138 ; free virtual = 19749
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5521 ; free virtual = 19125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5133 ; free virtual = 19744
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5522 ; free virtual = 19125
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -388,7 +388,7 @@ BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5133 ; free virtual = 19744
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5531 ; free virtual = 19131
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -401,9 +401,9 @@ INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pC1_2_reg' in
 INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pVde_1_reg' into 'DataEncoders[0].DataEncoder/pVde_1_reg' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:110]
 INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pVde_2_reg' into 'DataEncoders[0].DataEncoder/pVde_2_reg' [/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.srcs/sources_1/bd/zybo_dvi_output/ipshared/digilentinc.com/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:150]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5130 ; free virtual = 19741
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5528 ; free virtual = 19125
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5130 ; free virtual = 19741
+Finished Parallel Reinference  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5528 ; free virtual = 19125
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -414,9 +414,9 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5116 ; free virtual = 19727
+Finished Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5516 ; free virtual = 19112
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5116 ; free virtual = 19727
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5516 ; free virtual = 19112
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -434,10 +434,10 @@ info: Source pin 'zybo_dvi_output_i/rgb2dvi_0/U0/PixelClk' of generated clock is
 info: Moving clock source from hierarchical pin 'zybo_dvi_output_i/rgb2dvi_0/U0/PixelClk' to 'zybo_dvi_output_i/test_pattern_generator_0/insti_0/\inst/h_count_reg[0] /C'
 INFO: Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5071 ; free virtual = 19687
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5416 ; free virtual = 19021
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5055 ; free virtual = 19673
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5404 ; free virtual = 19008
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -451,16 +451,16 @@ Start Technology Mapping
 WARNING: [Synth 8-3332] Sequential element (\DataEncoders[1].DataEncoder/pC1_1_reg ) is unused and will be removed from module rgb2dvi.
 WARNING: [Synth 8-3332] Sequential element (\DataEncoders[1].DataEncoder/pC1_2_reg ) is unused and will be removed from module rgb2dvi.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5029 ; free virtual = 19648
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5393 ; free virtual = 18991
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5029 ; free virtual = 19648
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5393 ; free virtual = 18991
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5029 ; free virtual = 19648
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5393 ; free virtual = 18991
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -477,7 +477,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5028 ; free virtual = 19647
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5393 ; free virtual = 18991
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -490,7 +490,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5028 ; free virtual = 19647
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5393 ; free virtual = 18991
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -502,25 +502,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5028 ; free virtual = 19647
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5393 ; free virtual = 18991
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5028 ; free virtual = 19647
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5393 ; free virtual = 18991
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5028 ; free virtual = 19647
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5393 ; free virtual = 18991
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5028 ; free virtual = 19647
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5393 ; free virtual = 18991
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -539,11 +539,11 @@ Report Cell Usage:
 |1     |BUFG        |     3|
 |2     |CARRY4      |     8|
 |3     |LUT1        |    27|
-|4     |LUT2        |    13|
-|5     |LUT3        |    43|
-|6     |LUT4        |    30|
+|4     |LUT2        |    10|
+|5     |LUT3        |    42|
+|6     |LUT4        |    35|
 |7     |LUT5        |    83|
-|8     |LUT6        |   100|
+|8     |LUT6        |   102|
 |9     |MMCME2_ADV  |     1|
 |10    |MUXF7       |     5|
 |11    |OSERDESE2   |     4|
@@ -560,8 +560,8 @@ Report Instance Areas:
 +------+-----------------------------------------+-------------------------------------------+------+
 |      |Instance                                 |Module                                     |Cells |
 +------+-----------------------------------------+-------------------------------------------+------+
-|1     |top                                      |                                           |   502|
-|2     |  zybo_dvi_output_i                      |zybo_dvi_output                            |   500|
+|1     |top                                      |                                           |   505|
+|2     |  zybo_dvi_output_i                      |zybo_dvi_output                            |   503|
 |3     |    VDD                                  |zybo_dvi_output_xlconstant_1_1             |     0|
 |4     |    clk_wiz_0                            |zybo_dvi_output_clk_wiz_0_0                |     5|
 |5     |      inst                               |zybo_dvi_output_clk_wiz_0_0_clk_wiz        |     5|
@@ -576,16 +576,16 @@ Report Instance Areas:
 |14    |        \DataEncoders[2].DataSerializer  |OutputSERDES_4                             |     3|
 |15    |        LockLostReset                    |ResetBridge                                |     2|
 |16    |          SyncAsyncx                     |SyncAsync                                  |     2|
-|17    |    test_pattern_generator_0             |zybo_dvi_output_test_pattern_generator_0_0 |    85|
-|18    |      inst                               |test_pattern_generator                     |    85|
+|17    |    test_pattern_generator_0             |zybo_dvi_output_test_pattern_generator_0_0 |    88|
+|18    |      inst                               |test_pattern_generator                     |    88|
 |19    |    xlconcat_0                           |zybo_dvi_output_xlconcat_0_0               |     0|
 +------+-----------------------------------------+-------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5028 ; free virtual = 19647
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5393 ; free virtual = 18991
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1395.961 ; gain = 111.379 ; free physical = 5028 ; free virtual = 19647
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1395.961 ; gain = 558.723 ; free physical = 5028 ; free virtual = 19647
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1395.965 ; gain = 111.379 ; free physical = 5393 ; free virtual = 18991
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1395.965 ; gain = 558.723 ; free physical = 5393 ; free virtual = 18991
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -597,6 +597,6 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 74 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1413.984 ; gain = 502.371 ; free physical = 4993 ; free virtual = 19616
-report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1446.004 ; gain = 0.000 ; free physical = 5001 ; free virtual = 19620
-INFO: [Common 17-206] Exiting Vivado at Thu Mar  3 08:12:15 2016...
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1413.988 ; gain = 502.371 ; free physical = 5395 ; free virtual = 18992
+report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1446.008 ; gain = 0.000 ; free physical = 5392 ; free virtual = 18989
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 12 16:43:19 2016...

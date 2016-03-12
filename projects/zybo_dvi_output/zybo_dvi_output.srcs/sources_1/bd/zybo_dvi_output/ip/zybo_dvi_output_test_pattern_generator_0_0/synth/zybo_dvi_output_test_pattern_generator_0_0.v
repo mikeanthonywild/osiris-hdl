@@ -73,14 +73,14 @@ output wire hsync;
 output wire vde;
 
   test_pattern_generator #(
-    .DISPLAY_WIDTH(1920),
-    .H_FRONT_PORCH(88),
-    .H_SYNC_PULSE(44),
-    .H_BACK_PORCH(148),
-    .DISPLAY_HEIGHT(1080),
-    .V_FRONT_PORCH(4),
+    .DISPLAY_WIDTH(640),
+    .H_FRONT_PORCH(110),
+    .H_SYNC_PULSE(40),
+    .H_BACK_PORCH(220),
+    .DISPLAY_HEIGHT(480),
+    .V_FRONT_PORCH(5),
     .V_SYNC_PULSE(5),
-    .V_BACK_PORCH(36)
+    .V_BACK_PORCH(20)
   ) inst (
     .clk(clk),
     .r(r),

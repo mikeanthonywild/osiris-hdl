@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date         : Sat Feb 27 19:37:53 2016
+| Date         : Sat Mar 12 16:43:18 2016
 | Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 | Command      : report_utilization -file zybo_dvi_output_wrapper_utilization_synth.rpt -pb zybo_dvi_output_wrapper_utilization_synth.pb
 | Design       : zybo_dvi_output_wrapper
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  248 |     0 |     17600 |  1.41 |
-|   LUT as Logic          |  248 |     0 |     17600 |  1.41 |
+| Slice LUTs*             |  246 |     0 |     17600 |  1.40 |
+|   LUT as Logic          |  246 |     0 |     17600 |  1.40 |
 |   LUT as Memory         |    0 |     0 |      6000 |  0.00 |
 | Slice Registers         |  174 |     0 |     35200 |  0.49 |
 |   Register as Flip Flop |  174 |     0 |     35200 |  0.49 |
@@ -148,13 +148,13 @@ Table of Contents
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
 | FDRE       |  157 |        Flop & Latch |
-| LUT6       |  106 |                 LUT |
+| LUT6       |  102 |                 LUT |
 | LUT5       |   83 |                 LUT |
-| LUT3       |   45 |                 LUT |
-| LUT4       |   27 |                 LUT |
+| LUT3       |   42 |                 LUT |
+| LUT4       |   35 |                 LUT |
 | LUT1       |   27 |                 LUT |
 | FDSE       |   15 |        Flop & Latch |
-| LUT2       |   12 |                 LUT |
+| LUT2       |   10 |                 LUT |
 | OSERDESE2  |    8 |                  IO |
 | CARRY4     |    8 |          CarryLogic |
 | MUXF7      |    5 |               MuxFx |

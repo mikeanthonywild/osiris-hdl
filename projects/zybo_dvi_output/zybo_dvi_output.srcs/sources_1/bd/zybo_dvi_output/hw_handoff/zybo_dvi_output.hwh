@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb 27 19:37:18 2016" VIVADOVERSION="2015.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar 12 16:42:41 2016" VIVADOVERSION="2015.4">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:1.0" DEVICE="7z010" NAME="zybo_dvi_output" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -24,14 +24,14 @@
         <CONNECTION INSTANCE="rgb2dvi_0" PORT="TMDS_Data_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="hdmi_out_en" RIGHT="0" SIGIS="undef" SIGNAME="VDD_dout">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="VDD" PORT="dout"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="hdmi_out_en" RIGHT="0" SIGIS="undef" SIGNAME="VDD_dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VDD" PORT="dout"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="0" NAME="btn" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_btn">
@@ -649,14 +649,14 @@
     <MODULE FULLNAME="/test_pattern_generator_0" HWVERSION="1.0" INSTANCE="test_pattern_generator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="test_pattern_generator" VLNV="user.org:user:test_pattern_generator:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="DISPLAY_WIDTH" VALUE="1920"/>
-        <PARAMETER NAME="H_FRONT_PORCH" VALUE="88"/>
-        <PARAMETER NAME="H_SYNC_PULSE" VALUE="44"/>
-        <PARAMETER NAME="H_BACK_PORCH" VALUE="148"/>
-        <PARAMETER NAME="DISPLAY_HEIGHT" VALUE="1080"/>
-        <PARAMETER NAME="V_FRONT_PORCH" VALUE="4"/>
+        <PARAMETER NAME="DISPLAY_WIDTH" VALUE="640"/>
+        <PARAMETER NAME="H_FRONT_PORCH" VALUE="110"/>
+        <PARAMETER NAME="H_SYNC_PULSE" VALUE="40"/>
+        <PARAMETER NAME="H_BACK_PORCH" VALUE="220"/>
+        <PARAMETER NAME="DISPLAY_HEIGHT" VALUE="480"/>
+        <PARAMETER NAME="V_FRONT_PORCH" VALUE="5"/>
         <PARAMETER NAME="V_SYNC_PULSE" VALUE="5"/>
-        <PARAMETER NAME="V_BACK_PORCH" VALUE="36"/>
+        <PARAMETER NAME="V_BACK_PORCH" VALUE="20"/>
         <PARAMETER NAME="Component_Name" VALUE="zybo_dvi_output_test_pattern_generator_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>

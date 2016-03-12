@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-//Date        : Mon Feb 29 22:47:42 2016
+//Date        : Sat Mar 12 12:04:37 2016
 //Host        : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 //Command     : generate_target zybo_dvi_input.bd
 //Design      : zybo_dvi_input
@@ -45,6 +45,8 @@ module zybo_dvi_input
     hdmi_d_n,
     hdmi_d_p,
     hdmi_hpd,
+    pclk_lckd_led,
+    pclk_out,
     vga_b,
     vga_g,
     vga_hs,
@@ -84,6 +86,8 @@ module zybo_dvi_input
   input [2:0]hdmi_d_n;
   input [2:0]hdmi_d_p;
   output [0:0]hdmi_hpd;
+  output pclk_lckd_led;
+  output pclk_out;
   output [4:0]vga_b;
   output [5:0]vga_g;
   output vga_hs;
@@ -103,6 +107,7 @@ module zybo_dvi_input
   wire [23:0]dvi2rgb_0_RGB_DATA;
   wire dvi2rgb_0_RGB_HSYNC;
   wire dvi2rgb_0_RGB_VSYNC;
+  wire dvi2rgb_0_aPixelClkLckd;
   wire dvi2rgb_0_flash_sync;
   wire hdmi_clk_n_1;
   wire hdmi_clk_p_1;
@@ -149,6 +154,8 @@ module zybo_dvi_input
   assign hdmi_d_n_1 = hdmi_d_n[2:0];
   assign hdmi_d_p_1 = hdmi_d_p[2:0];
   assign hdmi_hpd[0] = xlconstant_0_dout;
+  assign pclk_lckd_led = dvi2rgb_0_aPixelClkLckd;
+  assign pclk_out = dvi2rgb_0_PixelClk;
   assign vga_b[4:0] = rgb2vga_0_vga_pBlue;
   assign vga_g[5:0] = rgb2vga_0_vga_pGreen;
   assign vga_hs = rgb2vga_0_vga_pHSync;
@@ -173,6 +180,7 @@ module zybo_dvi_input
         .TMDS_Clk_p(hdmi_clk_p_1),
         .TMDS_Data_n(hdmi_d_n_1),
         .TMDS_Data_p(hdmi_d_p_1),
+        .aPixelClkLckd(dvi2rgb_0_aPixelClkLckd),
         .aRst(1'b0),
         .flash_sync(dvi2rgb_0_flash_sync),
         .pRst(1'b0),

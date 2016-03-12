@@ -67,6 +67,7 @@ entity dvi2rgb is
       kRstActiveHigh : boolean := true; --true, if active-high; false, if active-low
       kAddBUFG : boolean := true; --true, if PixelClk should be re-buffered with BUFG 
       kClkRange : natural := 1;  -- MULT_F = kClkRange*5 (choose >=120MHz=1, >=60MHz=2, >=40MHz=3)
+      kESIDFile : string := "/home/mike/Documents/osiris-hdl/ESID/digilent/dgl_dvi.txt";
       -- 7-series specific
       kIDLY_TapValuePs : natural := 78; --delay in ps per tap
       kIDLY_TapWidth : natural := 5); --number of bits for IDELAYE2 tap counter   
@@ -246,7 +247,7 @@ GenerateDDC: if kEmulateDDC generate
          kSlaveAddress => "1010000",
          kAddrBits => 7, -- 128 byte EDID 1.x data
          kWritable => false,
-         kInitFileName => "dgl_dvi_edid.txt") -- name of file containing init values
+         kInitFileName => kESIDFile) -- name of file containing init values
       port map(
          SampleClk => RefClk,
          sRst => '0',

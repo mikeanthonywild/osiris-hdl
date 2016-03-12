@@ -1,9 +1,0 @@
-#
-# An unexpected error has occurred (11)
-#
-Stack:
-/opt/Xilinx/Vivado/2015.4/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x90ea59) [0x7f85ede33a59]
-/opt/Xilinx/Vivado/2015.4/tps/lnx64/jre/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0xb6) [0x7f85ede39b46]
-/opt/Xilinx/Vivado/2015.4/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x90b493) [0x7f85ede30493]
-/lib/x86_64-linux-gnu/libc.so.6(+0x36d40) [0x7f861d8c6d40]
-[0xc461cb8]

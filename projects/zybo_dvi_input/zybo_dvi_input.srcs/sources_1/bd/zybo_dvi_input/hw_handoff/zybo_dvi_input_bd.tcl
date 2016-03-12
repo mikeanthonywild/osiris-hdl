@@ -159,6 +159,8 @@ CONFIG.FREQ_HZ {125000000} \
   set hdmi_d_n [ create_bd_port -dir I -from 2 -to 0 hdmi_d_n ]
   set hdmi_d_p [ create_bd_port -dir I -from 2 -to 0 hdmi_d_p ]
   set hdmi_hpd [ create_bd_port -dir O -from 0 -to 0 hdmi_hpd ]
+  set pclk_lckd_led [ create_bd_port -dir O pclk_lckd_led ]
+  set pclk_out [ create_bd_port -dir O pclk_out ]
   set vga_b [ create_bd_port -dir O -from 4 -to 0 vga_b ]
   set vga_g [ create_bd_port -dir O -from 5 -to 0 vga_g ]
   set vga_hs [ create_bd_port -dir O vga_hs ]
@@ -191,6 +193,10 @@ CONFIG.PRIMITIVE {PLL} \
 
   # Create instance: dvi2rgb_0, and set properties
   set dvi2rgb_0 [ create_bd_cell -type ip -vlnv digilentinc.com:ip:dvi2rgb:1.5 dvi2rgb_0 ]
+  set_property -dict [ list \
+CONFIG.kClkRange {3} \
+CONFIG.kESIDFile {/home/mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt} \
+ ] $dvi2rgb_0
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -343,7 +349,8 @@ CONFIG.PCW_USE_M_AXI_GP0 {0} \
   # Create port connections
   connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins clk_wiz_0/clk_in1]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins dvi2rgb_0/RefClk]
-  connect_bd_net -net dvi2rgb_0_PixelClk [get_bd_pins dvi2rgb_0/PixelClk] [get_bd_pins rgb2vga_0/PixelClk]
+  connect_bd_net -net dvi2rgb_0_PixelClk [get_bd_ports pclk_out] [get_bd_pins dvi2rgb_0/PixelClk] [get_bd_pins rgb2vga_0/PixelClk]
+  connect_bd_net -net dvi2rgb_0_aPixelClkLckd [get_bd_ports pclk_lckd_led] [get_bd_pins dvi2rgb_0/aPixelClkLckd]
   connect_bd_net -net dvi2rgb_0_flash_sync [get_bd_ports flash_sync_led] [get_bd_pins dvi2rgb_0/flash_sync] [get_bd_pins processing_system7_0/IRQ_F2P]
   connect_bd_net -net hdmi_clk_n_1 [get_bd_ports hdmi_clk_n] [get_bd_pins dvi2rgb_0/TMDS_Clk_n]
   connect_bd_net -net hdmi_clk_p_1 [get_bd_ports hdmi_clk_p] [get_bd_pins dvi2rgb_0/TMDS_Clk_p]
@@ -362,45 +369,48 @@ CONFIG.PCW_USE_M_AXI_GP0 {0} \
   regenerate_bd_layout -layout_string {
    guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.8
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -y -90 -defaultsOSRD
-preplace port vga_hs -pg 1 -y 310 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y -70 -defaultsOSRD
-preplace port hdmi_clk_n -pg 1 -y 200 -defaultsOSRD
-preplace port flash_sync_led -pg 1 -y 210 -defaultsOSRD
-preplace port vga_vs -pg 1 -y 330 -defaultsOSRD
-preplace port clk -pg 1 -y 290 -defaultsOSRD
-preplace port hdmi_clk_p -pg 1 -y 180 -defaultsOSRD
-preplace port DDC -pg 1 -y 190 -defaultsOSRD
-preplace portBus vga_b -pg 1 -y 290 -defaultsOSRD
-preplace portBus hdmi_d_n -pg 1 -y 240 -defaultsOSRD
-preplace portBus hdmi_hpd -pg 1 -y 50 -defaultsOSRD
-preplace portBus hdmi_d_p -pg 1 -y 220 -defaultsOSRD
-preplace portBus vga_r -pg 1 -y 250 -defaultsOSRD
-preplace portBus vga_g -pg 1 -y 270 -defaultsOSRD
-preplace inst VDD -pg 1 -lvl 3 -y 50 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 300 -defaultsOSRD
-preplace inst dvi2rgb_0 -pg 1 -lvl 2 -y 230 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -y -10 -defaultsOSRD
-preplace inst rgb2vga_0 -pg 1 -lvl 3 -y 290 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 1 3 NJ -90 NJ -90 NJ
+preplace port DDR -pg 1 -y 50 -defaultsOSRD
+preplace port vga_hs -pg 1 -y 510 -defaultsOSRD
+preplace port pclk_out -pg 1 -y 390 -defaultsOSRD
+preplace port pclk_lckd_led -pg 1 -y 410 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 70 -defaultsOSRD
+preplace port hdmi_clk_n -pg 1 -y 360 -defaultsOSRD
+preplace port flash_sync_led -pg 1 -y 370 -defaultsOSRD
+preplace port vga_vs -pg 1 -y 530 -defaultsOSRD
+preplace port clk -pg 1 -y 450 -defaultsOSRD
+preplace port hdmi_clk_p -pg 1 -y 340 -defaultsOSRD
+preplace port DDC -pg 1 -y 350 -defaultsOSRD
+preplace portBus vga_b -pg 1 -y 490 -defaultsOSRD
+preplace portBus hdmi_d_n -pg 1 -y 400 -defaultsOSRD
+preplace portBus hdmi_hpd -pg 1 -y 300 -defaultsOSRD
+preplace portBus hdmi_d_p -pg 1 -y 380 -defaultsOSRD
+preplace portBus vga_r -pg 1 -y 450 -defaultsOSRD
+preplace portBus vga_g -pg 1 -y 470 -defaultsOSRD
+preplace inst VDD -pg 1 -lvl 3 -y 300 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 460 -defaultsOSRD
+preplace inst dvi2rgb_0 -pg 1 -lvl 2 -y 390 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 3 -y 130 -defaultsOSRD
+preplace inst rgb2vga_0 -pg 1 -lvl 3 -y 490 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 3 1 NJ
 preplace netloc rgb2vga_0_vga_pRed 1 3 1 NJ
 preplace netloc rgb2vga_0_vga_pGreen 1 3 1 NJ
-preplace netloc dvi2rgb_0_flash_sync 1 0 4 -90 360 NJ 360 NJ 200 NJ
-preplace netloc hdmi_d_p_1 1 0 2 NJ 220 NJ
-preplace netloc dvi2rgb_0_DDC 1 2 2 NJ 190 NJ
+preplace netloc dvi2rgb_0_flash_sync 1 2 2 490 370 NJ
+preplace netloc hdmi_d_p_1 1 0 2 NJ 380 NJ
+preplace netloc dvi2rgb_0_DDC 1 2 2 NJ 350 NJ
+preplace netloc dvi2rgb_0_aPixelClkLckd 1 2 2 NJ 400 NJ
 preplace netloc xlconstant_0_dout 1 3 1 NJ
 preplace netloc clk_1 1 0 1 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ -70 NJ -70 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 3 1 NJ
 preplace netloc rgb2vga_0_vga_pVSync 1 3 1 NJ
 preplace netloc rgb2vga_0_vga_pHSync 1 3 1 NJ
 preplace netloc clk_wiz_0_clk_out1 1 1 1 NJ
-preplace netloc hdmi_d_n_1 1 0 2 NJ 240 NJ
-preplace netloc hdmi_clk_n_1 1 0 2 NJ 200 NJ
-preplace netloc dvi2rgb_0_RGB 1 2 1 610
+preplace netloc hdmi_d_n_1 1 0 2 NJ 400 NJ
+preplace netloc hdmi_clk_n_1 1 0 2 NJ 360 NJ
+preplace netloc dvi2rgb_0_RGB 1 2 1 480
+preplace netloc hdmi_clk_p_1 1 0 2 NJ 340 NJ
 preplace netloc rgb2vga_0_vga_pBlue 1 3 1 NJ
-preplace netloc dvi2rgb_0_PixelClk 1 2 1 590
-preplace netloc hdmi_clk_p_1 1 0 2 NJ 180 NJ
-levelinfo -pg 1 -110 100 440 720 850 -top -140 -bot 380
+preplace netloc dvi2rgb_0_PixelClk 1 2 2 500 390 NJ
+levelinfo -pg 1 0 100 330 690 890 -top 0 -bot 580
 ",
 }
 

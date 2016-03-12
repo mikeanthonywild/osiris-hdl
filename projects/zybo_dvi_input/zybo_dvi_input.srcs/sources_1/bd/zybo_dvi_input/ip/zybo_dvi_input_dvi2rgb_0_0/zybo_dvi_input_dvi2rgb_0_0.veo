@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: digilentinc.com:ip:dvi2rgb:1.5
-// IP Revision: 3
+// IP Revision: 20
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections

@@ -18,7 +18,7 @@ def main():
 
     """
     img_path = sys.argv[1]
-    coe_path = os.path.basename(os.path.splitext(img_path)[0]) + '.coe'
+    coe_path = os.path.splitext(img_path)[0] + '.coe'
 
     with open(coe_path, 'w') as coe_file:
         # Header

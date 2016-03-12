@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: digilentinc.com:ip:dvi2rgb:1.5
--- IP Revision: 3
+-- IP Revision: 20
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -89,7 +89,8 @@ ARCHITECTURE zybo_dvi_input_dvi2rgb_0_0_arch OF zybo_dvi_input_dvi2rgb_0_0 IS
       kClkRange : INTEGER;
       kIDLY_TapValuePs : INTEGER;
       kIDLY_TapWidth : INTEGER;
-      kAddBUFG : BOOLEAN
+      kAddBUFG : BOOLEAN;
+      kESIDFile : STRING
     );
     PORT (
       TMDS_Clk_p : IN STD_LOGIC;
@@ -143,10 +144,11 @@ BEGIN
     GENERIC MAP (
       kEmulateDDC => true,
       kRstActiveHigh => true,
-      kClkRange => 1,
+      kClkRange => 3,
       kIDLY_TapValuePs => 78,
       kIDLY_TapWidth => 5,
-      kAddBUFG => true
+      kAddBUFG => true,
+      kESIDFile => "/home/mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt"
     )
     PORT MAP (
       TMDS_Clk_p => TMDS_Clk_p,

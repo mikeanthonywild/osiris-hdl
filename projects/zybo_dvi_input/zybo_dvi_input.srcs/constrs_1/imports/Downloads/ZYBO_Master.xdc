@@ -49,8 +49,8 @@ set_property PACKAGE_PIN M14 [get_ports flash_sync_led]
 set_property IOSTANDARD LVCMOS33 [get_ports flash_sync_led]
 
 ##IO_L23N_T3_35
-#set_property PACKAGE_PIN M15 [get_ports {led[1]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {led[1]}]
+set_property PACKAGE_PIN M15 [get_ports pclk_lckd_led]
+set_property IOSTANDARD LVCMOS33 [get_ports pclk_lckd_led]
 
 ##IO_0_35
 #set_property PACKAGE_PIN G14 [get_ports {led[2]}]
@@ -149,8 +149,8 @@ set_property PACKAGE_PIN E18 [get_ports hdmi_hpd]
 set_property IOSTANDARD LVCMOS33 [get_ports hdmi_hpd]
 
 ##IO_L6N_T0_VREF_35
-set_property PACKAGE_PIN F17 [get_ports hdmi_out_en]
-set_property IOSTANDARD LVCMOS33 [get_ports hdmi_out_en]
+#set_property PACKAGE_PIN F17 [get_ports hdmi_out_en]
+#set_property IOSTANDARD LVCMOS33 [get_ports hdmi_out_en]
 
 ##IO_L16P_T2_35
 set_property PACKAGE_PIN G17 [get_ports ddc_scl_io]
@@ -195,12 +195,12 @@ set_property IOSTANDARD LVCMOS33 [get_ports ddc_sda_io]
 
 ##Pmod Header JB
 ##IO_L15N_T2_DQS_34
-#set_property PACKAGE_PIN U20 [get_ports {jb_n[0]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {jb_n[0]}]
+set_property PACKAGE_PIN U20 [get_ports pclk_out]
+set_property IOSTANDARD LVCMOS33 [get_ports pclk_out]
 
 ##IO_L15P_T2_DQS_34
-#set_property PACKAGE_PIN T20 [get_ports {jb_p[0]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {jb_p[0]}]
+#set_property PACKAGE_PIN T20 [get_ports pclk_in]
+#set_property IOSTANDARD LVCMOS33 [get_ports pclk_in]
 
 ##IO_L16N_T2_34
 #set_property PACKAGE_PIN W20 [get_ports {jb_n[1]}]

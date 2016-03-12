@@ -199,13 +199,13 @@ CONFIG.kGenerateSerialClk {false} \
   # Create instance: test_pattern_generator_0, and set properties
   set test_pattern_generator_0 [ create_bd_cell -type ip -vlnv user.org:user:test_pattern_generator:1.0 test_pattern_generator_0 ]
   set_property -dict [ list \
-CONFIG.DISPLAY_HEIGHT {1080} \
-CONFIG.DISPLAY_WIDTH {1920} \
-CONFIG.H_BACK_PORCH {148} \
-CONFIG.H_FRONT_PORCH {88} \
-CONFIG.H_SYNC_PULSE {44} \
-CONFIG.V_BACK_PORCH {36} \
-CONFIG.V_FRONT_PORCH {4} \
+CONFIG.DISPLAY_HEIGHT {480} \
+CONFIG.DISPLAY_WIDTH {640} \
+CONFIG.H_BACK_PORCH {220} \
+CONFIG.H_FRONT_PORCH {110} \
+CONFIG.H_SYNC_PULSE {40} \
+CONFIG.V_BACK_PORCH {20} \
+CONFIG.V_FRONT_PORCH {5} \
 CONFIG.V_SYNC_PULSE {5} \
  ] $test_pattern_generator_0
 

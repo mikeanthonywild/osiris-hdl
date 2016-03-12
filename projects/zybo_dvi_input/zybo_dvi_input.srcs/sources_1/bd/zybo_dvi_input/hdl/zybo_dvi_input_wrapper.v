@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-//Date        : Mon Feb 29 22:47:42 2016
+//Date        : Sat Mar 12 12:04:37 2016
 //Host        : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 //Command     : generate_target zybo_dvi_input_wrapper.bd
 //Design      : zybo_dvi_input_wrapper
@@ -40,6 +40,8 @@ module zybo_dvi_input_wrapper
     hdmi_d_n,
     hdmi_d_p,
     hdmi_hpd,
+    pclk_lckd_led,
+    pclk_out,
     vga_b,
     vga_g,
     vga_hs,
@@ -75,6 +77,8 @@ module zybo_dvi_input_wrapper
   input [2:0]hdmi_d_n;
   input [2:0]hdmi_d_p;
   output [0:0]hdmi_hpd;
+  output pclk_lckd_led;
+  output pclk_out;
   output [4:0]vga_b;
   output [5:0]vga_g;
   output vga_hs;
@@ -117,6 +121,8 @@ module zybo_dvi_input_wrapper
   wire [2:0]hdmi_d_n;
   wire [2:0]hdmi_d_p;
   wire [0:0]hdmi_hpd;
+  wire pclk_lckd_led;
+  wire pclk_out;
   wire [4:0]vga_b;
   wire [5:0]vga_g;
   wire vga_hs;
@@ -168,6 +174,8 @@ module zybo_dvi_input_wrapper
         .hdmi_d_n(hdmi_d_n),
         .hdmi_d_p(hdmi_d_p),
         .hdmi_hpd(hdmi_hpd),
+        .pclk_lckd_led(pclk_lckd_led),
+        .pclk_out(pclk_out),
         .vga_b(vga_b),
         .vga_g(vga_g),
         .vga_hs(vga_hs),

@@ -196,12 +196,6 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>hdmi_clk_p</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
           <spirit:name>hdmi_clk_n</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
@@ -235,6 +229,12 @@
               <spirit:left>0</spirit:left>
               <spirit:right>0</spirit:right>
             </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>pclk_out</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
@@ -285,6 +285,18 @@
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_clk_p</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>pclk_lckd_led</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -330,13 +342,6 @@
         <spirit:componentRef spirit:library="ip" spirit:name="rgb2vga" spirit:vendor="digilentinc.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_dvi_input_rgb2vga_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>dvi2rgb_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="dvi2rgb" spirit:vendor="digilentinc.com" spirit:version="1.5"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_dvi_input_dvi2rgb_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -475,6 +480,15 @@
           <spirit:configurableElementValue spirit:referenceId="PCW_MIO_53_SLEW">slow</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>dvi2rgb_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="dvi2rgb" spirit:vendor="digilentinc.com" spirit:version="1.5"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_dvi_input_dvi2rgb_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="kClkRange">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="kESIDFile">/home/mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections>
       <spirit:interconnection>
@@ -493,11 +507,6 @@
         <spirit:name>clk_wiz_0_clk_out1</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out1"/>
         <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="RefClk"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>hdmi_clk_p_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="hdmi_clk_p"/>
-        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="TMDS_Clk_p"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>hdmi_clk_n_1</spirit:name>
@@ -522,6 +531,7 @@
       <spirit:adHocConnection>
         <spirit:name>dvi2rgb_0_PixelClk</spirit:name>
         <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="PixelClk"/>
+        <spirit:externalPortReference spirit:portRef="pclk_out"/>
         <spirit:internalPortReference spirit:componentRef="rgb2vga_0" spirit:portRef="PixelClk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -554,6 +564,16 @@
         <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="flash_sync"/>
         <spirit:externalPortReference spirit:portRef="flash_sync_led"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="IRQ_F2P"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_clk_p_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="hdmi_clk_p"/>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="TMDS_Clk_p"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dvi2rgb_0_aPixelClkLckd</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="aPixelClkLckd"/>
+        <spirit:externalPortReference spirit:portRef="pclk_lckd_led"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

@@ -15,7 +15,7 @@ module i_buf_controller_dut;
     reg                         hsync;          // Horizontal sync signal
     reg                         vde;            // Video data enabled
     reg [7:0]                   i_data;         // Input pixel data
-    wire [15:0]    addr;           // Linebuffer address
+    wire [31:0]                 addr;           // Linebuffer address
     wire [31:0]                 o_data;         // Data to write to linebuffer
     wire                        line_valid;     // Line valid interrupt
     wire                        frame_valid;    // Frame valid interrupt 

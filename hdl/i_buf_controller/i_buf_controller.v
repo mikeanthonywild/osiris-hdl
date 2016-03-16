@@ -25,13 +25,13 @@ module i_buf_controller (
     output                          frame_valid // Frame valid interrupt 
 );
 
-    parameter ADDRESS_WIDTH = 16;
+    parameter ADDRESS_WIDTH = 32;
 
     reg [16:0] next_addr;
     reg [31:0] write_buffer;
     reg [12:0] h_count;
 
-    assign line_valid = vde;
+    assign line_valid = !vde;
     assign frame_valid = vsync;
 
     always @(posedge pclk) begin
@@ -45,7 +45,7 @@ module i_buf_controller (
                 h_count <= h_count + 1;
                 write_buffer <= {write_buffer[23:0], i_data};
                 addr <= next_addr;
-                if (!(h_count % 4)) begin
+                if (!(h_count % 4) && (h_count)) begin
                     o_data <= write_buffer;
                     next_addr <= next_addr + 1;
                 end

@@ -1,3 +1,5 @@
+import struct
+
 from myhdl import *
 from uhdl import *
 from PIL import Image
@@ -6,27 +8,88 @@ from PIL import Image
 image_data = Image.open('tests/images/qvga_test_pattern.bmp').convert('L')
 image_pixels = image_data.load()
 
-def _tb_vga_controller():
+def _tb_i_buf_controller():
     # Signals and interfaces etc.
-    vga_clk_25 = Clock()
+    pclk = Clock()
     reset_n = Reset()
-    din = Signal(intbv(0)[2:])
-    test_pattern = Signal(0)
-    addr = Signal(intbv(0)[17:])
-    vsync = Signal(0)
+    vsync = Signal(1)
     hsync = Signal(0)
-    R = Signal(intbv(0)[2:])
-    G = Signal(intbv(0)[2:])
-    B = Signal(intbv(0)[2:])
+    vde = Signal(0)
+    i_data = Signal(intbv(0)[8:])
+    addr = Signal(intbv(0)[32:])
+    o_data = Signal(intbv(0)[32:0])
+    line_valid = Signal(0)
+    frame_valid = Signal(0)
 
-    dut = Cosimulation('vvp -m ./myhdl.vpi ./bin/vga/vga_controller',
-                        vga_clk_25=vga_clk_25, reset_n=reset_n, din=din,
-                        test_pattern=test_pattern, addr=addr, vsync=vsync,
-                        hsync=hsync, R=R, G=G, B=B)
+    dut = Cosimulation('vvp -m ./myhdl.vpi ./bin/i_buf_controller/i_buf_controller',
+                        pclk=pclk, reset_n=reset_n, vsync=vsync,
+                        hsync=hsync, vde=vde, i_data=i_data,
+                        addr=addr, o_data=o_data, line_valid=line_valid,
+                        frame_valid=frame_valid)
 
-    return vga_clk_25, reset_n, din, test_pattern, addr, vsync, hsync, R, G, B, dut
+    return (pclk, reset_n, vsync, hsync, vde, i_data, 
+        addr, o_data, line_valid, frame_valid, dut)
+
+def test_readout_into_linebuffer():
+    """ Test that we can buffer data into a linebuffer.
+
+    """
+    capture_data = Image.new('L', (image_data.size[0], 1))
+    capture_pixels = capture_data.load()
+
+    (pclk, reset_n, vsync, hsync, vde, i_data, 
+        addr, o_data, line_valid, frame_valid, dut) = _tb_i_buf_controller()
+
+    def _bench():
+        @instance
+        def stimulus():
+            yield reset_n.posedge
+
+            # Wait a clock period to latch first byte of data
+            yield pclk.posedge
+
+            # Start capturing data into linebuffer
+            vde.next = 1
+            for pixel in range(image_data.size[0]):
+                i_data.next = image_pixels[pixel, 0]
+                yield pclk.posedge
 
 
+            # Any final bits of data
+            yield delay(pclk.period * 5)
+
+            capture_data.save('tests/output/test_readout_into_linebuffer.bmp')
+
+            # Check that test image and captured linebuffer match
+            for pixel in range(image_data.size[0]):
+                try:
+                    assert capture_pixels[pixel, 0] == image_pixels[pixel, 0]
+                except AssertionError:
+                    print("Pixel mismatch [{}, {}]. Captured {}, should be {}".format(
+                          pixel, 0, capture_pixels[pixel, 0], image_pixels[pixel, 0]))
+                    raise AssertionError
+
+            raise StopSimulation
+
+        @always(pclk.posedge)
+        def check_linebuffer():
+            # 4 pixels per word, so we need to multiply image offset
+            offset = int(addr) * 4
+            pixels = struct.unpack('4B', struct.pack('>I', int(o_data)))
+            try:
+                for i in range(4):
+                    capture_pixels[offset+i, 0] = pixels[i]
+            # We may run over the end, so ignore these addresses 
+            # because data isn't changing any more.
+            except IndexError:
+                pass
+
+        return dut, pclk.gen(), reset_n.pulse(), stimulus, check_linebuffer
+        
+    Simulation(_bench()).run()
+
+
+'''
 def test_vga_output_from_framebuffer():
     """ Test that we can display a frame fetched from the framebuffer.
 
@@ -130,63 +193,4 @@ def test_vga_output_from_test_pattern():
         return dut, vga_clk_25.gen(), reset_n.pulse(), stimulus
 
     Simulation(_bench()).run()
-
-
-def test_framebuf_addr_reset_correctly():
-    """ Test that we can display a frame from the test pattern
-    generator.
-
-    """
-    vga_clk_25, reset_n, din, test_pattern, addr, vsync, hsync, R, G, B, dut = _tb_vga_controller()
-
-    def _bench():
-
-        @instance
-        def stimulus():
-            yield reset_n.posedge
-
-            # Wait a clock period to latch first address in to RAM
-            yield vga_clk_25.posedge
-
-            # Let the DUT clock out a frame
-            for line in range(525):
-                for col in range(800):
-                    yield vga_clk_25.posedge
-
-            assert addr == 0x00
-            raise StopSimulation
-
-        return dut, vga_clk_25.gen(), reset_n.pulse(), stimulus
-
-    Simulation(_bench()).run()
-
-
-def test_vga_output_rgb_coherence():
-    """ Test that R, G and B outputs are equal.
-
-    """
-    vga_clk_25, reset_n, din, test_pattern, addr, vsync, hsync, R, G, B, dut = _tb_vga_controller()
-
-    def _bench():
-
-        @instance
-        def stimulus():
-            din.next = 0xff >> 6
-            yield reset_n.posedge
-
-            # Wait two clock periods to latch first address to output
-            yield vga_clk_25.posedge
-            yield vga_clk_25.posedge
-
-            try:
-                assert R == G == B
-            except AssertionError:
-                print("Pixel coherence mismatch. Captured [{}, {}, {}], should be [{}, {}, {}]".format(
-                      R, G, B, R, R, R))
-                raise AssertionError
-
-            raise StopSimulation
-
-        return dut, vga_clk_25.gen(), reset_n.pulse(), stimulus
-
-    Simulation(_bench()).run()
+'''

@@ -7,17 +7,18 @@
  * Instantiates i_buf_controller module for testing.
  */
 
-module i_buf_controller;
-    reg                     pclk,       // Pixel clock
-    reg                     reset_n,    // Synchronous reset
-    reg                     vsync,      // Vertical sync signal
-    reg                     hsync,      // Horizontal sync signal
-    reg                     vde,        // Video data enabled
-    reg [7:0]               i_data,     // Input pixel data
-    wire [ADDRESS_WIDTH:0]  addr,       // Linebuffer address
-    wire [31:0]             o_data,     // Data to write to linebuffer
-    wire                    line_valid, // Line valid interrupt
-    wire                    frame_valid // Frame valid interrupt 
+module i_buf_controller_dut;
+
+    reg                         pclk;           // Pixel clock
+    reg                         reset_n;        // Synchronous reset
+    reg                         vsync;          // Vertical sync signal
+    reg                         hsync;          // Horizontal sync signal
+    reg                         vde;            // Video data enabled
+    reg [7:0]                   i_data;         // Input pixel data
+    wire [15:0]    addr;           // Linebuffer address
+    wire [31:0]                 o_data;         // Data to write to linebuffer
+    wire                        line_valid;     // Line valid interrupt
+    wire                        frame_valid;    // Frame valid interrupt 
 
     initial begin
         $dumpfile("tests/output/i_buf_controller.vcd");
@@ -26,17 +27,17 @@ module i_buf_controller;
         $to_myhdl(addr, o_data, line_valid, frame_valid);
     end
 
-    vga_controller vga_controller (
-        .vga_clk_25(vga_clk_25),
+    i_buf_controller i_buf_controller (
+        .pclk(pclk),
         .reset_n(reset_n),
-        .din(din),
-        .test_pattern(test_pattern),
-        .addr(addr), 
         .vsync(vsync),
         .hsync(hsync),
-        .R(R),
-        .G(G),
-        .B(B)
+        .vde(vde),
+        .i_data(i_data),
+        .addr(addr),
+        .o_data(o_data),
+        .line_valid(line_valid),
+        .frame_valid(frame_valid)
     );
 
 endmodule

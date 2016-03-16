@@ -19,7 +19,7 @@ module i_buf_controller (
     input                           hsync,      // Horizontal sync signal
     input                           vde,        // Video data enabled
     input [7:0]                     i_data,     // Input pixel data
-    output reg [ADDRESS_WIDTH:0]    addr,       // Linebuffer address
+    output reg [ADDRESS_WIDTH-1:0]  addr,       // Linebuffer address
     output reg [31:0]               o_data,     // Data to write to linebuffer
     output                          line_valid, // Line valid interrupt
     output                          frame_valid // Frame valid interrupt 

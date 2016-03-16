@@ -64,7 +64,14 @@ ENTITY design_1_blk_mem_gen_0_0 IS
     wea : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     addra : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     dina : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    douta : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    douta : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    clkb : IN STD_LOGIC;
+    rstb : IN STD_LOGIC;
+    enb : IN STD_LOGIC;
+    web : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    addrb : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    dinb : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    doutb : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END design_1_blk_mem_gen_0_0;
 
@@ -222,6 +229,13 @@ ARCHITECTURE design_1_blk_mem_gen_0_0_arch OF design_1_blk_mem_gen_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF addra: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR";
   ATTRIBUTE X_INTERFACE_INFO OF dina: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTA DIN";
   ATTRIBUTE X_INTERFACE_INFO OF douta: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT";
+  ATTRIBUTE X_INTERFACE_INFO OF clkb: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB CLK";
+  ATTRIBUTE X_INTERFACE_INFO OF rstb: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB RST";
+  ATTRIBUTE X_INTERFACE_INFO OF enb: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB EN";
+  ATTRIBUTE X_INTERFACE_INFO OF web: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB WE";
+  ATTRIBUTE X_INTERFACE_INFO OF addrb: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR";
+  ATTRIBUTE X_INTERFACE_INFO OF dinb: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB DIN";
+  ATTRIBUTE X_INTERFACE_INFO OF doutb: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB DOUT";
 BEGIN
   U0 : blk_mem_gen_v8_3_1
     GENERIC MAP (
@@ -236,7 +250,7 @@ BEGIN
       C_CTRL_ECC_ALGO => "NONE",
       C_HAS_AXI_ID => 0,
       C_AXI_ID_WIDTH => 4,
-      C_MEM_TYPE => 0,
+      C_MEM_TYPE => 2,
       C_BYTE_SIZE => 8,
       C_ALGORITHM => 1,
       C_PRIM_TYPE => 1,
@@ -259,11 +273,11 @@ BEGIN
       C_WRITE_DEPTH_A => 8192,
       C_READ_DEPTH_A => 8192,
       C_ADDRA_WIDTH => 32,
-      C_HAS_RSTB => 0,
+      C_HAS_RSTB => 1,
       C_RST_PRIORITY_B => "CE",
       C_RSTRAM_B => 0,
       C_INITB_VAL => "0",
-      C_HAS_ENB => 0,
+      C_HAS_ENB => 1,
       C_HAS_REGCEB => 0,
       C_USE_BYTE_WEB => 1,
       C_WEB_WIDTH => 4,
@@ -297,7 +311,7 @@ BEGIN
       C_DISABLE_WARN_BHV_RANGE => 0,
       C_COUNT_36K_BRAM => "8",
       C_COUNT_18K_BRAM => "0",
-      C_EST_POWER_SUMMARY => "Estimated Power for IP     :     10.194 mW"
+      C_EST_POWER_SUMMARY => "Estimated Power for IP     :     20.388 mW"
     )
     PORT MAP (
       clka => clka,
@@ -308,13 +322,14 @@ BEGIN
       addra => addra,
       dina => dina,
       douta => douta,
-      clkb => '0',
-      rstb => '0',
-      enb => '0',
+      clkb => clkb,
+      rstb => rstb,
+      enb => enb,
       regceb => '0',
-      web => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 4)),
-      addrb => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32)),
-      dinb => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32)),
+      web => web,
+      addrb => addrb,
+      dinb => dinb,
+      doutb => doutb,
       injectsbiterr => '0',
       injectdbiterr => '0',
       eccpipece => '0',

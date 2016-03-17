@@ -42,17 +42,15 @@ module i_buf_controller (
             addr <= 0;
             o_data <= 0;
             h_count <= 0;
-            write_buffer <= 0;
-            h_count_stop <= 3;
+            h_count_stop <= 1;
         end else begin
             // Latch data and address into BRAM
             if (h_count < h_count_stop) begin
                 h_count <= h_count + 1;
-                write_buffer <= {write_buffer[23:0], i_data};
+                o_data <= {o_data[23:0], i_data};
                 addr <= next_addr;
                 we <= 0;
-                if (!(h_count % 4) && (h_count))  begin
-                    o_data <= write_buffer;
+                if (!((h_count+1) % 4)) begin
                     next_addr <= next_addr + 1;
                     we <= 1;
                 end
@@ -61,7 +59,7 @@ module i_buf_controller (
             // There's a slight latency in latching address and data,
             // so make sure we keep working for a few ticks after vde
             if (vde) begin
-                h_count_stop <= h_count + 3;
+                h_count_stop <= h_count + 2;
             end
 
             // New line - reset address

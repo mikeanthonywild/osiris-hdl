@@ -11,27 +11,28 @@
  */
 
 module o_buf_controller (
-    input                           pclk        // Video pixel clock
-    input                           reset_n     // Synchronous reset 
-    input                           i_data      // Data to read from linebuffer
-    output reg [ADDRESS_WIDTH-1:0]  addr        // Linebuffer address
-    output reg                      vsync       // Vertical sync signal
-    output reg                      hsync       // Horizontal sync signal
-    output reg                      o_data      // RAW pixel value
-    output reg                      req_line    // Request new line from PS
+    input                           pclk,       // Video pixel clock
+    input                           reset_n,    // Synchronous reset 
+    input [31:0]                    i_data,     // Data to read from linebuffer
+    output reg [ADDRESS_WIDTH-1:0]  addr,       // Linebuffer address
+    output reg                      vsync,      // Vertical sync signal
+    output reg                      hsync,      // Horizontal sync signal
+    output reg                      vde,        // Video data enable
+    output reg [7:0]                o_data,     // RAW pixel value
+    output reg                      req_line,   // Request new line from PS
     output reg                      req_frame   // Request new frame from PS
 );
 
     // Parameters
     parameter ADDRESS_WIDTH = 32;
     parameter integer DISPLAY_WIDTH    = 640;
-    parameter integer H_FRONT_PORCH    = 00;
-    parameter integer H_SYNC_PULSE     = 40;
-    parameter integer H_BACK_PORCH     = 220;
-    parameter integer DISPLAY_HEIGHT   = 720;
-    parameter integer V_FRONT_PORCH    = 5;
-    parameter integer V_SYNC_PULSE     = 5;
-    parameter integer V_BACK_PORCH     = 20;
+    parameter integer H_FRONT_PORCH    = 16;
+    parameter integer H_SYNC_PULSE     = 96;
+    parameter integer H_BACK_PORCH     = 48;
+    parameter integer DISPLAY_HEIGHT   = 320;
+    parameter integer V_FRONT_PORCH    = 10;
+    parameter integer V_SYNC_PULSE     = 2;
+    parameter integer V_BACK_PORCH     = 33;
 
     // Local params
     localparam BLANK_WIDTH      = H_FRONT_PORCH + H_SYNC_PULSE + H_BACK_PORCH;
@@ -40,9 +41,9 @@ module o_buf_controller (
     localparam MAX_V_COUNT      = DISPLAY_HEIGHT + BLANK_HEIGHT;
 
     // Registers
-    reg memory_ready;
     reg [12:0] h_count;
     reg [12:0] v_count;
+    reg [31:0] read_buffer;
 
 
     always @(posedge pclk) begin
@@ -50,59 +51,59 @@ module o_buf_controller (
         if (!reset_n) begin
             h_count <= 0;
             v_count <= 0;
-            memory_ready <= 0;
+            read_buffer <= 0;
             addr <= 0;
             hsync <= 1;
             vsync <= 1;
+            vde <= 0;
             o_data <= 0;
             req_line <= 0;
             req_frame <= 0;
         end else begin
-            if (memory_ready) begin
-                //Increment counters to drive VGA sync logic
-                if (h_count < MAX_H_COUNT-1) begin
-                    h_count <= h_count + 1;
-
-                    // Increment framebuffer address while we're drawing framebuffer
-                    // and also twice more for the last two pixels of the line to
-                    // ensure that the
-                    if (v_count < MAX_V_COUNT-1) begin
-                        if (h_count+1 < FRAMEBUF_WIDTH-1  && v_count < FRAMEBUF_HEIGHT ||
-                            h_count == MAX_H_COUNT-2) begin
-                            addr <= addr + 1;
-                        end
-                    end else begin
-                        if (h_count+1 < FRAMEBUF_WIDTH-1  && v_count < FRAMEBUF_HEIGHT) begin
-                            addr <= addr + 1;
-                        end else if (h_count == MAX_H_COUNT-2) begin
-                            addr <= 0;
-                        end
-                    end
-                end else begin
-                    // New line
-                    h_count <= 0;
-                    addr <= addr + 1;
-                    if (v_count < MAX_V_COUNT-1) begin
-                        v_count <= v_count + 1;
-                    end else begin
-                        // New frame
-                        v_count <= 0;
+            
+            if (h_count < MAX_H_COUNT-1) begin
+                h_count <= h_count + 1;
+                read_buffer <= i_data;
+                //{o_data, read_buffer} <= read_buffer << 8;
+                if (h_count < DISPLAY_WIDTH-1) begin
+                    if (!((h_count+1) % 4) && (h_count+1)) begin
+                        addr <= addr + 1;
                     end
                 end
-
-                // VGA sync logic
-                vsync <= (v_count >= (DISPLAY_HEIGHT + V_FRONT_PORCH)) &&
-                    (v_count < (MAX_V_COUNT - V_BACK_PORCH));
-                hsync <= (h_count < (DISPLAY_WIDTH + H_FRONT_PORCH)) ||
-                    (h_count >= (MAX_H_COUNT - H_BACK_PORCH));
-
-                // Pixel output - the fuck is this?! Tidy this up!
-                o_data <= i_data;
             end else begin
-                // Read first pixel and increment address
-                addr <= 1;
-                memory_ready <= 1;
+                h_count <= 0;
+                addr <= 0;
+                v_count <= v_count + 1;
+                if (v_count == MAX_V_COUNT-1) begin
+                    v_count <= 0;
+                end
             end
+            /*
+            if (h_count < MAX_H_COUNT-1) begin
+                h_count <= h_count + 1;
+
+                if (h_count < DISPLAY_WIDTH-1) begin
+                    //o_data <= {write_buffer[23:0], i_data};
+                    addr <= next_addr;
+                    we <= 0;
+                    if (!(h_count % 4) && (h_count)) begin
+                        read_buffer <= i_data;
+                        next_addr <= next_addr + 1;
+                    end
+                end
+            end
+            */
+
+            // VGA sync logic
+            /*
+            vsync <= (v_count >= (DISPLAY_HEIGHT + V_FRONT_PORCH)) &&
+                (v_count < (MAX_V_COUNT - V_BACK_PORCH));
+            hsync <= (h_count < (DISPLAY_WIDTH + H_FRONT_PORCH)) ||
+                (h_count >= (MAX_H_COUNT - H_BACK_PORCH));
+
+            // Pixel output
+            o_data <= i_data;
+            */
         end
 
     end

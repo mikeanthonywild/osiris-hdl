@@ -127,108 +127,53 @@ def test_linebuffer_addr_resets_after_new_line():
         
     Simulation(_bench()).run()
 
-'''
-def test_vga_output_from_framebuffer():
-    """ Test that we can display a frame fetched from the framebuffer.
+
+def test_linebuffer_ps_interrupts():
+    """ Test that the Processing System receives the correct
+    interrupts to notify it about new data.
 
     """
-    capture_data = Image.new('L', (640, 480))
-    capture_pixels = capture_data.load()
-
-    vga_clk_25, reset_n, din, test_pattern, addr, vsync, hsync, R, G, B, dut = _tb_vga_controller()
+    (pclk, reset_n, vsync, hsync, vde, i_data, 
+        we, addr, o_data, line_valid, frame_valid, dut) = _tb_i_buf_controller()
 
     def _bench():
         @instance
         def stimulus():
             yield reset_n.posedge
 
-            # Wait a clock period to latch first address in to RAM
-            yield vga_clk_25.posedge
+            # Wait a clock period to latch first byte of data
+            yield pclk.posedge
 
-            for line in range(525):
-                for col in range(800):
-                    if col < 640 and line < 480:
-                        capture_pixels[col, line] = int(R)
-                    yield vga_clk_25.posedge
+            # Start wait some cycles to simulate data being stored
+            # in linebuffer.
+            hsync.next = 1
+            yield delay(pclk.period * 10)
+            vde.next = 1
+            yield delay(pclk.period * 100)
 
-            capture_data.save('tests/output/test_vga_output_from_framebuffer.bmp')
+            # Start a new line
+            vde.next = 0
+            yield delay(pclk.period * 10)
+            hsync.next = 0
+            vsync.next = 0
+            yield delay(pclk.period * 10)
+            vsync.next = 1
 
-            # Check captured data
-            for line in range(480):
-                for col in range(640):
-                    if col < image_data.size[0] and line < image_data.size[1]:
-                        expected_pixel = image_pixels[col, line] >> 6
-                    else:
-                        expected_pixel = 0
-
-                    try:
-                        # Output is grayscale, so just check R channel
-                        assert capture_pixels[col, line] == expected_pixel
-                    except AssertionError:
-                        print("Pixel mismatch [{}, {}]. Captured {}, should be {}".format(
-                              col, line, capture_pixels[col, line], expected_pixel))
-                        raise AssertionError
-            raise StopSimulation
-
-        @always(vga_clk_25.posedge)
-        def framebuffer_read():
-            x = int(addr) % image_data.size[0]
-            y = int(addr) / image_data.size[0]
-            try:
-                din.next = image_pixels[x, y] >> 6
-            except IndexError:
-                pass
-                #print("Index error [{}, {}]".format(x, y))
-                #raise IndexError
-
-        return dut, vga_clk_25.gen(), reset_n.pulse(), stimulus, framebuffer_read
-
-    Simulation(_bench()).run()
-
-
-def test_vga_output_from_test_pattern():
-    """ Test that we can display a frame from the test pattern
-    generator.
-
-    """
-    capture_data = Image.new('RGB', (640, 480))
-    capture_pixels = capture_data.load()
-
-    vga_clk_25, reset_n, din, test_pattern, addr, vsync, hsync, R, G, B, dut = _tb_vga_controller()
-
-    def _bench():
-
-        @instance
-        def stimulus():
-            test_pattern.next = 1
-            yield reset_n.posedge
-
-            # Wait a clock period to latch first address in to RAM
-            yield vga_clk_25.posedge
-
-            for line in range(525):
-                for col in range(800):
-                    if col < 640 and line < 480:
-                        capture_pixels[col, line] = (R, G, B)
-                    yield vga_clk_25.posedge
-
-            capture_data.save('tests/output/test_vga_output_from_test_pattern.bmp')
-
-            # Check captured data
-            for line in range(480):
-                for col in range(640):
-                    try:
-                        # Output is grayscale, so just check R channel
-                        expected_pixel = ((line % 2) * 255) >> 6
-                        assert capture_pixels[col, line][0] == expected_pixel
-                    except AssertionError:
-                        print("Pixel mismatch [{}, {}]. Captured {}, should be {}".format(
-                              col, line, capture_pixels[col, line], expected_pixel))
-                        raise AssertionError
+            # PS interrupts are checked in check_line_valid() and
+            # check_frame_valid() methods.
 
             raise StopSimulation
 
-        return dut, vga_clk_25.gen(), reset_n.pulse(), stimulus
+        @always(line_valid.posedge)
+        def check_line_valid():
+            # line_valid should only occur when vde is low
+            assert not int(vde)
 
+        @always(frame_valid.posedge)
+        def check_frame_valid():
+            # frame_valid goes low briefly when vsync occurs
+            assert int(vsync)
+
+        return dut, pclk.gen(), reset_n.pulse(), stimulus, check_line_valid, check_frame_valid
+        
     Simulation(_bench()).run()
-'''

@@ -133,8 +133,7 @@ def test_vga_output_from_test_pattern():
 
 
 def test_framebuf_addr_reset_correctly():
-    """ Test that we can display a frame from the test pattern
-    generator.
+    """ Test that framebuffer address is reset after a new frame.
 
     """
     vga_clk_25, reset_n, din, test_pattern, addr, vsync, hsync, R, G, B, dut = _tb_vga_controller()
@@ -152,6 +151,8 @@ def test_framebuf_addr_reset_correctly():
             for line in range(525):
                 for col in range(800):
                     yield vga_clk_25.posedge
+
+            yield vga_clk_25.posedge
 
             assert addr == 0x00
             raise StopSimulation

@@ -44,6 +44,7 @@ def test_test():
         @instance
         def stimulus():
             yield reset_n.posedge
+            yield pclk.posedge
 
             # Wait a two clock periods for output to propagate
             yield delay(2 * pclk.period)
@@ -57,6 +58,7 @@ def test_test():
 
             # Check captured data
             for pixel in range(640):
+                print(capture_pixels[pixel, 0], image_pixels[pixel, 0])
                 try:
                     assert capture_pixels[pixel, 0] == image_pixels[pixel, 0]
                 except AssertionError:
@@ -64,16 +66,21 @@ def test_test():
                           pixel, capture_pixels[pixel, 0], image_pixels[pixel, 0]))
                     raise AssertionError
 
+            #assert False
+
             raise StopSimulation
 
         @always(pclk.posedge)
         def linebuffer_read():
             offset = int(addr) * 4
             pixels = 0
+            #for i in range(4):
+            #    image_pixels[offset+i, 0] = i
             for i in range(4):
-                pixels = pixels | image_pixels[offset+i, 0] << (3-i) * 8
-            #i_data.next = pixels
-            i_data.next = addr
+                pixels = pixels | image_pixels[offset+i, 0] << ((3-i) * 8)
+                
+            i_data.next = pixels
+            #i_data.next = 
 
         return dut, pclk.gen(), reset_n.pulse(), stimulus, linebuffer_read
         

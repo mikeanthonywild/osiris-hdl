@@ -47,9 +47,6 @@ def test_readout_into_linebuffer():
         def stimulus():
             yield reset_n.posedge
 
-            # Wait a clock period to latch first byte of data
-            yield pclk.posedge
-
             # Start capturing data into linebuffer
             vde.next = 1
             hsync.next = 1
@@ -102,9 +99,6 @@ def test_linebuffer_addr_resets_after_new_line():
         def stimulus():
             yield reset_n.posedge
 
-            # Wait a clock period to latch first byte of data
-            yield pclk.posedge
-
             # Start wait some cycles to simulate data being stored
             # in linebuffer.
             hsync.next = 1
@@ -140,9 +134,6 @@ def test_linebuffer_ps_interrupts():
         @instance
         def stimulus():
             yield reset_n.posedge
-
-            # Wait a clock period to latch first byte of data
-            yield pclk.posedge
 
             # Start wait some cycles to simulate data being stored
             # in linebuffer.

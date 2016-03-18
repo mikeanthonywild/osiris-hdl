@@ -44,6 +44,7 @@ module o_buf_controller (
     reg [12:0] h_count;
     reg [12:0] v_count;
     reg [31:0] read_buffer;
+    reg [31:0] test_reg;
 
 
     always @(posedge pclk) begin
@@ -51,7 +52,6 @@ module o_buf_controller (
         if (!reset_n) begin
             h_count <= 0;
             v_count <= 0;
-            read_buffer <= 0;
             addr <= 0;
             hsync <= 1;
             vsync <= 1;
@@ -63,8 +63,7 @@ module o_buf_controller (
             
             if (h_count < MAX_H_COUNT-1) begin
                 h_count <= h_count + 1;
-                read_buffer <= i_data;
-                //{o_data, read_buffer} <= read_buffer << 8;
+                o_data <= (i_data >> ((3 - ((h_count-1) % 4)) * 8)) & 'h000000ff;
                 if (h_count < DISPLAY_WIDTH-1) begin
                     if (!((h_count+1) % 4) && (h_count+1)) begin
                         addr <= addr + 1;

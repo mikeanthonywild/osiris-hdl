@@ -81,7 +81,7 @@ def test_video_output_from_linebuffer():
         
     Simulation(_bench()).run()
 
-'''
+
 def test_linebuffer_addr_resets_after_new_line():
     """ Test that the linebuffer address is reset after we start a new
     line.
@@ -108,56 +108,38 @@ def test_linebuffer_addr_resets_after_new_line():
         return dut, pclk.gen(), reset_n.pulse(), stimulus
 
     Simulation(_bench()).run()
-'''
 
-'''
+
 def test_linebuffer_ps_interrupts():
     """ Test that the Processing System receives the correct
-    interrupts to notify it about new data.
+    interrupts so we can request new data.
 
     """
-    (pclk, reset_n, vsync, hsync, vde, i_data, 
-        we, addr, o_data, line_valid, frame_valid, dut) = _tb_i_buf_controller()
+    (pclk, reset_n, i_data, vsync, hsync, vde,  
+        addr, o_data, req_line, req_frame, dut) = _tb_o_buf_controller()
 
     def _bench():
         @instance
         def stimulus():
             yield reset_n.posedge
-
-            # Wait a clock period to latch first byte of data
             yield pclk.posedge
+
+            
 
             # Start wait some cycles to simulate data being stored
             # in linebuffer.
-            hsync.next = 1
-            yield delay(pclk.period * 10)
-            vde.next = 1
-            yield delay(pclk.period * 100)
-
-            # Start a new line
-            vde.next = 0
-            yield delay(pclk.period * 10)
-            hsync.next = 0
-            vsync.next = 0
-            yield delay(pclk.period * 10)
-            vsync.next = 1
-
-            # PS interrupts are checked in check_line_valid() and
-            # check_frame_valid() methods.
+            for line in range(525):
+                for pixel in range(800):
+                    # req_line should pulse as soon as we have finished the line
+                    if pixel >= 640:
+                        assert req_line
+                    # req_frame is asserted briefly during the last line before blankingo
+                    if line == 479 and pixel:
+                        assert req_frame
+                    yield pclk.posedge
 
             raise StopSimulation
 
-        @always(line_valid.posedge)
-        def check_line_valid():
-            # line_valid should only occur when vde is low
-            assert not int(vde)
-
-        @always(frame_valid.posedge)
-        def check_frame_valid():
-            # frame_valid goes low briefly when vsync occurs
-            assert int(vsync)
-
-        return dut, pclk.gen(), reset_n.pulse(), stimulus, check_line_valid, check_frame_valid
+        return dut, pclk.gen(), reset_n.pulse(), stimulus
         
     Simulation(_bench()).run()
-'''

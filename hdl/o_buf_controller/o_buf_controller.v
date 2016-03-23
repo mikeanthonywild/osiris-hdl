@@ -29,10 +29,10 @@ module o_buf_controller (
     parameter integer H_FRONT_PORCH    = 16;
     parameter integer H_SYNC_PULSE     = 96;
     parameter integer H_BACK_PORCH     = 48;
-    parameter integer DISPLAY_HEIGHT   = 320;
-    parameter integer V_FRONT_PORCH    = 10;
-    parameter integer V_SYNC_PULSE     = 2;
-    parameter integer V_BACK_PORCH     = 33;
+    parameter integer DISPLAY_HEIGHT   = 480;
+    parameter integer V_FRONT_PORCH    = 1;
+    parameter integer V_SYNC_PULSE     = 3;
+    parameter integer V_BACK_PORCH     = 25;
 
     // Local params
     localparam BLANK_WIDTH      = H_FRONT_PORCH + H_SYNC_PULSE + H_BACK_PORCH;
@@ -87,6 +87,11 @@ module o_buf_controller (
             hsync_next <= (h_count < (DISPLAY_WIDTH + H_FRONT_PORCH)) ||
                 (h_count >= (MAX_H_COUNT - H_BACK_PORCH));
             hsync <= hsync_next;
+
+            // PS interrupts
+            req_line <= h_count >= DISPLAY_WIDTH-1;
+            req_frame <= v_count == DISPLAY_HEIGHT-1;
+
         end
 
     end

@@ -44,8 +44,8 @@ module o_buf_controller (
     reg [12:0] h_count;
     reg [12:0] v_count;
     reg [31:0] read_buffer;
-    reg [31:0] test_reg;
-
+    reg hsync_next;
+    reg vsync_next;
 
     always @(posedge pclk) begin
         
@@ -53,6 +53,8 @@ module o_buf_controller (
             h_count <= 0;
             v_count <= 0;
             addr <= 0;
+            hsync_next <= 1;
+            vsync_next <= 1;
             hsync <= 1;
             vsync <= 1;
             vde <= 0;
@@ -77,32 +79,14 @@ module o_buf_controller (
                     v_count <= 0;
                 end
             end
-            /*
-            if (h_count < MAX_H_COUNT-1) begin
-                h_count <= h_count + 1;
-
-                if (h_count < DISPLAY_WIDTH-1) begin
-                    //o_data <= {write_buffer[23:0], i_data};
-                    addr <= next_addr;
-                    we <= 0;
-                    if (!(h_count % 4) && (h_count)) begin
-                        read_buffer <= i_data;
-                        next_addr <= next_addr + 1;
-                    end
-                end
-            end
-            */
 
             // VGA sync logic
-            /*
-            vsync <= (v_count >= (DISPLAY_HEIGHT + V_FRONT_PORCH)) &&
-                (v_count < (MAX_V_COUNT - V_BACK_PORCH));
-            hsync <= (h_count < (DISPLAY_WIDTH + H_FRONT_PORCH)) ||
+            vsync <= (v_count < (DISPLAY_HEIGHT + V_FRONT_PORCH)) ||
+                (v_count >= (MAX_V_COUNT - V_BACK_PORCH));
+            vsync <= vsync_next;
+            hsync_next <= (h_count < (DISPLAY_WIDTH + H_FRONT_PORCH)) ||
                 (h_count >= (MAX_H_COUNT - H_BACK_PORCH));
-
-            // Pixel output
-            o_data <= i_data;
-            */
+            hsync <= hsync_next;
         end
 
     end

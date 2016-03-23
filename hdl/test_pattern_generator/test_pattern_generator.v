@@ -52,8 +52,8 @@
         end
 
         // VGA sync logic
-        vsync <= (v_count >= (DISPLAY_HEIGHT + V_FRONT_PORCH)) &&
-            (v_count < (MAX_V_COUNT - V_BACK_PORCH));
+        vsync <= (v_count < (DISPLAY_HEIGHT + V_FRONT_PORCH)) ||
+            (v_count >= (MAX_V_COUNT - V_BACK_PORCH));
         hsync <= (h_count < (DISPLAY_WIDTH + H_FRONT_PORCH)) ||
             (h_count >= (MAX_H_COUNT - H_BACK_PORCH));
         vde <= h_count < DISPLAY_WIDTH && v_count < DISPLAY_HEIGHT;

@@ -131,7 +131,7 @@ def test_linebuffer_ps_interrupts():
             for line in range(525):
                 for pixel in range(800):
                     # req_line should pulse as soon as we have finished the line
-                    if pixel >= 640:
+                    if pixel >= 640 and line < 480:
                         assert req_line
                     # req_frame is asserted briefly during the last line before blankingo
                     if line == 479 and pixel:

@@ -89,7 +89,7 @@ module o_buf_controller (
             hsync <= hsync_next;
 
             // PS interrupts
-            req_line <= h_count >= DISPLAY_WIDTH-1;
+            req_line <= h_count >= DISPLAY_WIDTH-1 && v_count < DISPLAY_HEIGHT;
             req_frame <= v_count == DISPLAY_HEIGHT-1;
 
         end

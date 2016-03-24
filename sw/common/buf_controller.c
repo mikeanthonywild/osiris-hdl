@@ -14,6 +14,7 @@
 #include "interrupt.h"
 #include "config.h"
 #include "framebuf.h"
+#include "xaxicdma.h"
 
 /************************** Constant Definitions *****************************/
 
@@ -25,16 +26,27 @@
 
 
 /************************** Variable Definitions *****************************/
-static line_valid_flag;
-static frame_valid_flag;
-static req_line_flag;
-static req_frame_flag;
+static u32 line_valid_flag;
+static u32 frame_valid_flag;
+static u32 req_line_flag;
+static u32 req_frame_flag;
+
+static XAxiCdma i_cdma;
+static XAxiCdma o_cdma;
+
+static u32 framebuf_i_offset;
+static u32 framebuf_o_offset;
 
 /************************** Function Prototypes ******************************/
 static void line_valid_isr(void *);
 static void frame_valid_isr(void *);
 static void req_line_isr(void *);
 static void req_frame_isr(void *);
+
+static s32 setup_buf_ctrl_interrupts(void);
+
+s32 buf_controller_setup();
+s32 buf_controller_update();
 
 /*****************************************************************************/
 s32 setup_buf_ctrl_interrupts(void) {
@@ -85,25 +97,34 @@ void req_frame_isr(void *req_frame_flag) {
 }
 
 
-void buf_controller_update(void) {
-    // Check the flags for transfers or address reset
-    if (line_valid_flag) {
+s32 buf_controller_setup(void) {
 
+
+    return XST_SUCCESS;
+}
+
+
+void buf_controller_update(void) {
+    // Check the flags for transfers and address reset
+    if (line_valid_flag) {
+        XAxiCdma_Simple_Transfer(&i_cdma, src, dst, len, void, void)
+        framebuf_i_offset++;
         line_valid_flag = 0;
     }
 
     if (frame_valid_flag) {
-
+        framebuf_i_offset = 0;
         frame_valid_flag = 0;
     }
 
     if (req_line_flag) {
-
+        XAxiCdma_Simple_Transfer(&o_cdma, src, dst, len, void, void)
+        framebuf_o_offset++;
         req_line_flag = 0;
     }
 
     if (req_frame_flag) {
-
+        framebuf_o_offset = 0;
         req_frame_flag = 0;
     }
 }

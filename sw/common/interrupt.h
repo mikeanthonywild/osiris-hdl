@@ -30,6 +30,6 @@ TRIGGER_TYPE_EDGE_RISING        = 3
 
 
 /************************** Function Prototypes ******************************/
-s32 create_interrupt(XScuGic *, u32, u8, u8, Xil_InterruptHandler, void *);
+int create_interrupt(XScuGic *, u32, u8, u8, Xil_InterruptHandler, void *);
 
 #endif // INTERRUPT_H

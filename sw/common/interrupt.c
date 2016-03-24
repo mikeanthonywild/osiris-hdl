@@ -28,7 +28,7 @@
 
 
 /*****************************************************************************/
-s32 create_interrupt(XScuGic *instance_p, u32 int_id, u8 priority, trigger_t trigger, Xil_InterruptHandler isr, void *callback_ref) {
+int create_interrupt(XScuGic *instance_p, u32 int_id, u8 priority, trigger_t trigger, Xil_InterruptHandler isr, void *callback_ref) {
     int status;
 
     // Connect interrupt controller hardware driver

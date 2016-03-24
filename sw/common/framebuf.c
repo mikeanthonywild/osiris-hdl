@@ -22,7 +22,7 @@
 
 
 /************************** Variable Definitions *****************************/
-u8 framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH]
+u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH]
 
 /************************** Function Prototypes ******************************/
 

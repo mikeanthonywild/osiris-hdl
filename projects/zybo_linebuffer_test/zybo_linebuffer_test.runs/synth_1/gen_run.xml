@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1458087211">
-  <File Type="VDS-TIMING-PB" Name="design_1_wrapper_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="design_1_wrapper_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="design_1_wrapper.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="design_1_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="design_1_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="design_1_wrapper.vds"/>
-  <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1458936943">
+  <File Type="VDS-TIMING-PB" Name="linebuffer_test_wrapper_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="linebuffer_test_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="linebuffer_test_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="linebuffer_test_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="linebuffer_test_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="linebuffer_test_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="linebuffer_test_wrapper.vds"/>
+  <File Type="PA-TCL" Name="linebuffer_test_wrapper.tcl"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+    <File Path="$PSRCDIR/sources_1/bd/linebuffer_test/linebuffer_test.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
+    <File Path="$PSRCDIR/sources_1/bd/linebuffer_test/hdl/linebuffer_test_wrapper.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -28,9 +28,10 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/ip/design_1_i_buf_controller_0_0/design_1_i_buf_controller_0_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/ip/design_1_test_pattern_generator_0_0/design_1_test_pattern_generator_0_0.upgrade_log"/>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="design_1_wrapper"/>
+      <Option Name="TopModule" Val="linebuffer_test_wrapper"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -44,14 +45,8 @@
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/constrs_1/new/debug.xdc">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-      </FileInfo>
-    </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/debug.xdc"/>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/Downloads/ZYBO_Master.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

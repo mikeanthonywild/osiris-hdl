@@ -28,23 +28,50 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+      <File Path="$PSRCDIR/sources_1/bd/linebuffer_test/linebuffer_test.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hdl/design_1.v"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_test_pattern_generator_0_0/design_1_test_pattern_generator_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_i_buf_controller_0_0/design_1_i_buf_controller_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1.hwh"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hdl/design_1.hwdef"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_rst_processing_system7_0_100M_0/linebuffer_test_rst_processing_system7_0_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_processing_system7_0_axi_periph_0/linebuffer_test_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="hdl/linebuffer_test.v"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_axi_cdma_0_0/linebuffer_test_axi_cdma_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_processing_system7_0_0/linebuffer_test_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_o_buf_controller_0_0/linebuffer_test_o_buf_controller_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_i_buf_controller_0_1/linebuffer_test_i_buf_controller_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_blk_mem_gen_0_0/linebuffer_test_blk_mem_gen_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_axi_bram_ctrl_0_1/linebuffer_test_axi_bram_ctrl_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_blk_mem_gen_0_1/linebuffer_test_blk_mem_gen_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_axi_cdma_0_1/linebuffer_test_axi_cdma_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_axi_mem_intercon_1_0/linebuffer_test_axi_mem_intercon_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_axi_bram_ctrl_0_0/linebuffer_test_axi_bram_ctrl_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_axi_mem_intercon_0/linebuffer_test_axi_mem_intercon_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_rgb2vga_0_0/linebuffer_test_rgb2vga_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_xbar_0/linebuffer_test_xbar_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_xlconcat_0_0/linebuffer_test_xlconcat_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_test_pattern_generator_0_0/linebuffer_test_test_pattern_generator_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_xbar_2/linebuffer_test_xbar_2.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_clk_wiz_0_0/linebuffer_test_clk_wiz_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_xbar_1/linebuffer_test_xbar_1.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_us_0/linebuffer_test_auto_us_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_ds_1/linebuffer_test_auto_ds_1.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_pc_0/linebuffer_test_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_xlconcat_2_0/linebuffer_test_xlconcat_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_xlconstant_0_1/linebuffer_test_xlconstant_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_xlconstant_0_0/linebuffer_test_xlconstant_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_xlconcat_1_0/linebuffer_test_xlconcat_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_us_1/linebuffer_test_auto_us_1.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="linebuffer_test_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_pc_2/linebuffer_test_auto_pc_2.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_ds_0/linebuffer_test_auto_ds_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_pc_1/linebuffer_test_auto_pc_1.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="hdl/linebuffer_test.hwdef"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="hw_handoff/linebuffer_test.hwh"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="hw_handoff/linebuffer_test_bd.tcl"/>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
+      <File Path="$PSRCDIR/sources_1/bd/linebuffer_test/hdl/linebuffer_test_wrapper.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -52,9 +79,10 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/design_1/ip/design_1_i_buf_controller_0_0/design_1_i_buf_controller_0_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/design_1/ip/design_1_test_pattern_generator_0_0/design_1_test_pattern_generator_0_0.upgrade_log"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="design_1_wrapper"/>
+        <Option Name="TopModule" Val="linebuffer_test_wrapper"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
@@ -68,14 +96,8 @@
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/constrs_1/new/debug.xdc">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-        </FileInfo>
-      </File>
       <Config>
-        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/debug.xdc"/>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/Downloads/ZYBO_Master.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
@@ -83,7 +105,7 @@
       <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="design_1_wrapper"/>
+        <Option Name="TopModule" Val="linebuffer_test_wrapper"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="SrcSet" Val="sources_1"/>

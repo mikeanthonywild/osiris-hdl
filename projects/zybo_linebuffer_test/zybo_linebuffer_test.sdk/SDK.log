@@ -1,0 +1,7 @@
+20:33:46 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+20:33:50 INFO  : XSDB server has started successfully.
+20:33:50 INFO  : Processing command line option -hwspec /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf.
+21:00:23 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+21:00:24 INFO  : XSDB server has started successfully.
+21:00:25 INFO  : Processing command line option -hwspec /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf.
+21:00:25 INFO  : Checking for hwspec changes in the project linebuffer_test_wrapper_hw_platform_0.

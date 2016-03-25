@@ -12,13 +12,14 @@
 #define INTERRUPT_H
 
 /***************************** Include Files *********************************/
-
+#include "xil_types.h"
+#include "xscugic.h"
 
 /************************** Constant Definitions *****************************/
-TRIGGER_TYPE_LEVEL_ACTIVE_LOW   = 0
-TRIGGER_TYPE_LEVEL_ACTIVE_HIGH  = 1
-TRIGGER_TYPE_EDGE_FALLING       = 2
-TRIGGER_TYPE_EDGE_RISING        = 3
+#define TRIGGER_TYPE_LEVEL_ACTIVE_LOW   0
+#define TRIGGER_TYPE_LEVEL_ACTIVE_HIGH  1
+#define TRIGGER_TYPE_EDGE_FALLING       2
+#define TRIGGER_TYPE_EDGE_RISING        3
 
 /**************************** Type Definitions *******************************/
 

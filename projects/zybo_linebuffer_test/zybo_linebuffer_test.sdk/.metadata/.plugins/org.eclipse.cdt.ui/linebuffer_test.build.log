@@ -1,0 +1,42 @@
+23:15:11 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'setup_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'buf_controller_setup':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:131:9: warning: unused variable 'status' [-Wunused-variable]
+     int status;
+         ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'buf_controller_update':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:145:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: At top level:
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:51:5: warning: 'setup_buf_ctrl_interrupts' defined but not used [-Wunused-function]
+ int setup_buf_ctrl_interrupts(void) {
+     ^
+make: *** [sw/common/buf_controller.o] Error 1
+
+23:15:11 Build Finished (took 61ms)
+

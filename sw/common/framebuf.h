@@ -12,7 +12,7 @@
 #define FRAMEBUF_H
 
 /***************************** Include Files *********************************/
-#include "config.h"
+#include "platform_config.h"
 
 /************************** Constant Definitions *****************************/
 

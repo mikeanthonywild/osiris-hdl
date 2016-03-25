@@ -12,7 +12,7 @@
 /***************************** Include Files *********************************/
 #include "buf_controller.h"
 #include "interrupt.h"
-#include "config.h"
+#include "platform_config.h"
 #include "framebuf.h"
 #include "xaxicdma.h"
 
@@ -47,33 +47,30 @@ static void req_frame_isr(void *);
 
 static int setup_buf_ctrl_interrupts(void);
 
-int buf_controller_setup();
-int buf_controller_update();
-
 /*****************************************************************************/
 int setup_buf_ctrl_interrupts(void) {
     int status;
 
     // line_valid
-    status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr);
+    status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
     if (status != XST_SUCCESS) {
         return XST_FAILURE;
     }
 
     // frame_valid
-    status = create_interrupt(&g_int_ctrl, FRAME_VALID_INT_ID, 0x0, TRIGGER_TYPE_EDGE_RISING, frame_valid_isr);
+    status = create_interrupt(&g_int_ctrl, FRAME_VALID_INT_ID, 0x0, TRIGGER_TYPE_EDGE_RISING, frame_valid_isr, NULL);
     if (status != XST_SUCCESS) {
         return XST_FAILURE;
     }
 
     // req_line
-    status = create_interrupt(&g_int_ctrl, REQ_LINE_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, req_line_isr);
+    status = create_interrupt(&g_int_ctrl, REQ_LINE_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, req_line_isr, NULL);
     if (status != XST_SUCCESS) {
         return XST_FAILURE;
     }
 
     // req_frame
-    status = create_interrupt(&g_int_ctrl, REQ_FRAME_INT_ID, 0x0, TRIGGER_TYPE_EDGE_RISING, req_frame_isr);
+    status = create_interrupt(&g_int_ctrl, REQ_FRAME_INT_ID, 0x0, TRIGGER_TYPE_EDGE_RISING, req_frame_isr, NULL);
     if (status != XST_SUCCESS) {
         return XST_FAILURE;
     }
@@ -145,7 +142,7 @@ void buf_controller_update(void) {
          * is enabled
          */
         //Xil_DCacheFlushRange((UINTPTR)&SrcBuffer, Length);
-        XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, void, void)
+        XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
         i_framebuffer_line_p++;
         line_valid_flag = 0;
     }
@@ -156,7 +153,7 @@ void buf_controller_update(void) {
     }
 
     if (req_line_flag) {
-        XAxiCdma_Simple_Transfer(&o_cdma, o_framebuffer_line_p, O_BRAM_AXI_ADDR, FRAMEBUF_WIDTH, void, void)
+        XAxiCdma_Simple_Transfer(&o_cdma, o_framebuffer_line_p, O_BRAM_AXI_ADDR, FRAMEBUF_WIDTH, NULL, NULL);
         o_framebuffer_line_p++;
         req_line_flag = 0;
     }

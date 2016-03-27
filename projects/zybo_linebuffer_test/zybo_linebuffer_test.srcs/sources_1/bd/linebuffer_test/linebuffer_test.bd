@@ -173,6 +173,44 @@
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>INTR.BTN</spirit:name>
+        <spirit:displayName>Interrupt</spirit:displayName>
+        <spirit:description>Interrupt</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="interrupt" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="interrupt_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>INTERRUPT</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>btn</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>SENSITIVITY</spirit:name>
+            <spirit:value>EDGE_RISING</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PortWidth</spirit:name>
+            <spirit:value>4</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
     </spirit:busInterfaces>
     <spirit:model>
       <spirit:views>
@@ -229,6 +267,16 @@
           <spirit:name>vga_vs</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>btn</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
           </spirit:wire>
         </spirit:port>
       </spirit:ports>
@@ -382,13 +430,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>o_buf_controller</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="o_buf_controller" spirit:vendor="mikeanthonywild.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">linebuffer_test_o_buf_controller_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>i_buf_controller</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="i_buf_controller" spirit:vendor="mikeanthonywild.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -517,7 +558,7 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>xlconcat_0</spirit:instanceName>
+        <spirit:instanceName>irq_concat</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="xlconcat" spirit:vendor="xilinx.com" spirit:version="2.1"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">linebuffer_test_xlconcat_0_0</spirit:configurableElementValue>
@@ -525,7 +566,7 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>xlconcat_1</spirit:instanceName>
+        <spirit:instanceName>vga_concat</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="xlconcat" spirit:vendor="xilinx.com" spirit:version="2.1"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">linebuffer_test_xlconcat_1_0</spirit:configurableElementValue>
@@ -540,7 +581,7 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>xlconcat_2</spirit:instanceName>
+        <spirit:instanceName>bram_we_concat</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="xlconcat" spirit:vendor="xilinx.com" spirit:version="2.1"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">linebuffer_test_xlconcat_2_0</spirit:configurableElementValue>
@@ -554,6 +595,13 @@
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">linebuffer_test_xlconstant_0_1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CONST_WIDTH">4</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CONST_VAL">0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>o_buf_controller</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="o_buf_controller" spirit:vendor="mikeanthonywild.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">linebuffer_test_o_buf_controller_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -619,26 +667,26 @@
         <spirit:name>processing_system7_0_FCLK_CLK0</spirit:name>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="FCLK_CLK0"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="M_AXI_GP0_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="rst_processing_system7_0_100M" spirit:portRef="slowest_sync_clk"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="i_axi_cdma" spirit:portRef="s_axi_lite_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="i_axi_cdma" spirit:portRef="m_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="i_axi_bram_ctrl" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="o_axi_cdma" spirit:portRef="m_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="o_axi_bram_ctrl" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="o_axi_cdma" spirit:portRef="s_axi_lite_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="S_AXI_HP0_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="S_AXI_HP1_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="S00_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="i_axi_bram_ctrl" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="M00_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="o_axi_cdma" spirit:portRef="m_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="o_axi_bram_ctrl" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="M00_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="o_axi_cdma" spirit:portRef="s_axi_lite_aclk"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M01_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="S_AXI_HP0_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="M01_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="S_AXI_HP1_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="M01_ACLK"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -649,16 +697,16 @@
       <spirit:adHocConnection>
         <spirit:name>rst_processing_system7_0_100M_peripheral_aresetn</spirit:name>
         <spirit:internalPortReference spirit:componentRef="rst_processing_system7_0_100M" spirit:portRef="peripheral_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="i_axi_cdma" spirit:portRef="s_axi_lite_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="i_axi_bram_ctrl" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="o_axi_bram_ctrl" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="o_axi_cdma" spirit:portRef="s_axi_lite_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S00_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="i_axi_bram_ctrl" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="M00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="S00_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="o_axi_bram_ctrl" spirit:portRef="s_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="M00_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="o_axi_cdma" spirit:portRef="s_axi_lite_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M01_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="M01_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon_1" spirit:portRef="M01_ARESETN"/>
@@ -711,29 +759,24 @@
         <spirit:internalPortReference spirit:componentRef="i_buf_controller" spirit:portRef="vde"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>xlconcat_0_dout</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="dout"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="IRQ_F2P"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>o_buf_controller_req_line</spirit:name>
         <spirit:internalPortReference spirit:componentRef="o_buf_controller" spirit:portRef="req_line"/>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In2"/>
+        <spirit:internalPortReference spirit:componentRef="irq_concat" spirit:portRef="In2"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>o_buf_controller_req_frame</spirit:name>
         <spirit:internalPortReference spirit:componentRef="o_buf_controller" spirit:portRef="req_frame"/>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In3"/>
+        <spirit:internalPortReference spirit:componentRef="irq_concat" spirit:portRef="In3"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>i_buf_controller_line_valid</spirit:name>
         <spirit:internalPortReference spirit:componentRef="i_buf_controller" spirit:portRef="line_valid"/>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In0"/>
+        <spirit:internalPortReference spirit:componentRef="irq_concat" spirit:portRef="In0"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>i_buf_controller_frame_valid</spirit:name>
         <spirit:internalPortReference spirit:componentRef="i_buf_controller" spirit:portRef="frame_valid"/>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In1"/>
+        <spirit:internalPortReference spirit:componentRef="irq_concat" spirit:portRef="In1"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rgb2vga_0_vga_pRed</spirit:name>
@@ -775,10 +818,10 @@
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out1"/>
         <spirit:internalPortReference spirit:componentRef="test_pattern_generator_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="i_buf_controller" spirit:portRef="pclk"/>
-        <spirit:internalPortReference spirit:componentRef="o_buf_controller" spirit:portRef="pclk"/>
         <spirit:internalPortReference spirit:componentRef="o_linebuffer" spirit:portRef="clkb"/>
         <spirit:internalPortReference spirit:componentRef="i_linebuffer" spirit:portRef="clkb"/>
         <spirit:internalPortReference spirit:componentRef="rgb2vga_0" spirit:portRef="PixelClk"/>
+        <spirit:internalPortReference spirit:componentRef="o_buf_controller" spirit:portRef="pclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>o_linebuffer_doutb</spirit:name>
@@ -793,13 +836,13 @@
       <spirit:adHocConnection>
         <spirit:name>o_buf_controller_o_data</spirit:name>
         <spirit:internalPortReference spirit:componentRef="o_buf_controller" spirit:portRef="o_data"/>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_1" spirit:portRef="In0"/>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_1" spirit:portRef="In1"/>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_1" spirit:portRef="In2"/>
+        <spirit:internalPortReference spirit:componentRef="vga_concat" spirit:portRef="In0"/>
+        <spirit:internalPortReference spirit:componentRef="vga_concat" spirit:portRef="In1"/>
+        <spirit:internalPortReference spirit:componentRef="vga_concat" spirit:portRef="In2"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>xlconcat_1_dout</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_1" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="vga_concat" spirit:portRef="dout"/>
         <spirit:internalPortReference spirit:componentRef="rgb2vga_0" spirit:portRef="rgb_pData"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -807,8 +850,8 @@
         <spirit:internalPortReference spirit:componentRef="VDD" spirit:portRef="dout"/>
         <spirit:internalPortReference spirit:componentRef="o_linebuffer" spirit:portRef="enb"/>
         <spirit:internalPortReference spirit:componentRef="i_linebuffer" spirit:portRef="enb"/>
-        <spirit:internalPortReference spirit:componentRef="o_buf_controller" spirit:portRef="reset_n"/>
         <spirit:internalPortReference spirit:componentRef="i_buf_controller" spirit:portRef="reset_n"/>
+        <spirit:internalPortReference spirit:componentRef="o_buf_controller" spirit:portRef="reset_n"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>GND_dout</spirit:name>
@@ -817,16 +860,21 @@
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>xlconcat_2_dout</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_2" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="bram_we_concat" spirit:portRef="dout"/>
         <spirit:internalPortReference spirit:componentRef="i_linebuffer" spirit:portRef="web"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>i_buf_controller_we</spirit:name>
         <spirit:internalPortReference spirit:componentRef="i_buf_controller" spirit:portRef="we"/>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_2" spirit:portRef="In0"/>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_2" spirit:portRef="In1"/>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_2" spirit:portRef="In2"/>
-        <spirit:internalPortReference spirit:componentRef="xlconcat_2" spirit:portRef="In3"/>
+        <spirit:internalPortReference spirit:componentRef="bram_we_concat" spirit:portRef="In0"/>
+        <spirit:internalPortReference spirit:componentRef="bram_we_concat" spirit:portRef="In1"/>
+        <spirit:internalPortReference spirit:componentRef="bram_we_concat" spirit:portRef="In2"/>
+        <spirit:internalPortReference spirit:componentRef="bram_we_concat" spirit:portRef="In3"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>btn_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="btn"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="IRQ_F2P"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

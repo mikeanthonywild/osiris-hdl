@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-//Date        : Fri Mar 25 20:15:41 2016
+//Date        : Sun Mar 27 21:58:58 2016
 //Host        : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 //Command     : generate_target linebuffer_test_wrapper.bd
 //Design      : linebuffer_test_wrapper
@@ -31,6 +31,7 @@ module linebuffer_test_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    btn,
     clk,
     vga_b,
     vga_g,
@@ -58,6 +59,7 @@ module linebuffer_test_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  input [3:0]btn;
   input clk;
   output [4:0]vga_b;
   output [5:0]vga_g;
@@ -86,6 +88,7 @@ module linebuffer_test_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire [3:0]btn;
   wire clk;
   wire [4:0]vga_b;
   wire [5:0]vga_g;
@@ -115,6 +118,7 @@ module linebuffer_test_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .btn(btn),
         .clk(clk),
         .vga_b(vga_b),
         .vga_g(vga_g),

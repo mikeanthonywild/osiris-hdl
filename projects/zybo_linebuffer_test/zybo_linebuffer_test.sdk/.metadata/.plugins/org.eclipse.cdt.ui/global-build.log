@@ -5184,3 +5184,1858 @@ arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
   35432	   1992	 330532	 367956	  59d54	linebuffer_test.elf
 Finished building: linebuffer_test.elf.size
  
+17:56:23 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35432	   1992	 330532	 367956	  59d54	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+17:56:42 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35448	   1992	 330532	 367972	  59d64	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+17:57:03 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35564	   1992	 330532	 368088	  59dd8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+17:58:20 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+18:15:41 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:54:6: error: conflicting types for 'print'
+ void print(char *str);
+      ^
+In file included from ../../linebuffer_test_bsp/ps7_cortexa9_0/include/xil_io.h:65:0,
+                 from ../../linebuffer_test_bsp/ps7_cortexa9_0/include/xscugic.h:155,
+                 from /home/mike/Documents/osiris-hdl/sw/common/interrupt.h:16,
+                 from ../src/helloworld.c:51:
+../../linebuffer_test_bsp/ps7_cortexa9_0/include/xil_printf.h:36:6: note: previous declaration of 'print' was here
+ void print( const char8 *ptr);
+      ^
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:5: warning: implicit declaration of function 'init_interrupts' [-Wimplicit-function-declaration]
+     init_interrupts();
+     ^
+../src/helloworld.c:62:5: warning: implicit declaration of function 'enable_interrupts' [-Wimplicit-function-declaration]
+     enable_interrupts();
+     ^
+make: *** [src/helloworld.o] Error 1
+18:16:26 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:5: warning: implicit declaration of function 'init_interrupts' [-Wimplicit-function-declaration]
+     init_interrupts();
+     ^
+../src/helloworld.c:60:5: warning: implicit declaration of function 'enable_interrupts' [-Wimplicit-function-declaration]
+     enable_interrupts();
+     ^
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35564	   1992	 330532	 368088	  59dd8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+18:16:32 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:5: warning: implicit declaration of function 'init_interrupts' [-Wimplicit-function-declaration]
+     init_interrupts();
+     ^
+../src/helloworld.c:60:5: warning: implicit declaration of function 'enable_interrupts' [-Wimplicit-function-declaration]
+     enable_interrupts();
+     ^
+../src/helloworld.c:62:5: warning: implicit declaration of function 'Xil_printf' [-Wimplicit-function-declaration]
+     Xil_printf("Hello World\n\r");
+     ^
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/Debug/../src/helloworld.c:62: undefined reference to `Xil_printf'
+collect2: error: ld returned 1 exit status
+make: *** [linebuffer_test.elf] Error 1
+18:16:36 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:5: warning: implicit declaration of function 'init_interrupts' [-Wimplicit-function-declaration]
+     init_interrupts();
+     ^
+../src/helloworld.c:60:5: warning: implicit declaration of function 'enable_interrupts' [-Wimplicit-function-declaration]
+     enable_interrupts();
+     ^
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35500	   1992	 330532	 368024	  59d98	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+18:17:21 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35500	   1992	 330532	 368024	  59d98	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+18:17:24 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35500	   1992	 330532	 368024	  59d98	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+18:17:32 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35500	   1992	 330532	 368024	  59d98	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+18:18:21 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:23:29 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:85:6: warning: 'line_valid_isr' defined but not used [-Wunused-function]
+ void line_valid_isr(void *line_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:90:6: warning: 'frame_valid_isr' defined but not used [-Wunused-function]
+ void frame_valid_isr(void *frame_valid_flag) {
+      ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35372	   1992	 330532	 367896	  59d18	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+20:23:42 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:24:33 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35500	   1992	 330532	 368024	  59d98	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+20:24:39 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35464	   1992	 330532	 367988	  59d74	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+20:24:44 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:26:12 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35500	   1992	 330532	 368024	  59d98	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+20:27:18 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35500	   1992	 330532	 368024	  59d98	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+20:27:36 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35500	   1992	 330532	 368024	  59d98	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+20:27:44 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:28:07 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35500	   1992	 330532	 368024	  59d98	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+20:28:16 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'init_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:153:9: warning: "/*" within comment [-Wcomment]
+         /* Flush the SrcBuffer before the DMA transfer, in case the Data Cache
+ ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:53:9: warning: unused variable 'status' [-Wunused-variable]
+     int status;
+         ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:160:5: warning: no return statement in function returning non-void [-Wreturn-type]
+     }
+     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: At top level:
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:162:5: error: expected identifier or '(' before 'if'
+     if (frame_valid_flag) {
+     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:167:5: error: expected identifier or '(' before 'if'
+     if (req_line_flag) {
+     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:173:5: error: expected identifier or '(' before 'if'
+     if (req_frame_flag) {
+     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:177:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:36:17: warning: 'o_cdma' defined but not used [-Wunused-variable]
+ static XAxiCdma o_cdma;
+                 ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:37:25: warning: 'i_cdma_cfg_p' defined but not used [-Wunused-variable]
+ static XAxiCdma_Config *i_cdma_cfg_p;
+                         ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:38:25: warning: 'o_cdma_cfg_p' defined but not used [-Wunused-variable]
+ static XAxiCdma_Config *o_cdma_cfg_p;
+                         ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:41:13: warning: 'o_framebuffer_line_p' defined but not used [-Wunused-variable]
+ static u8 (*o_framebuffer_line_p)[FRAMEBUF_WIDTH] = &g_framebuf[0];
+             ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:44:13: warning: 'line_valid_isr' declared 'static' but never defined [-Wunused-function]
+ static void line_valid_isr(void *);
+             ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:45:13: warning: 'frame_valid_isr' declared 'static' but never defined [-Wunused-function]
+ static void frame_valid_isr(void *);
+             ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:46:13: warning: 'req_line_isr' declared 'static' but never defined [-Wunused-function]
+ static void req_line_isr(void *);
+             ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:47:13: warning: 'req_frame_isr' declared 'static' but never defined [-Wunused-function]
+ static void req_frame_isr(void *);
+             ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:52:5: warning: 'init_buf_ctrl_interrupts' defined but not used [-Wunused-function]
+ int init_buf_ctrl_interrupts(void) {
+     ^
+make: *** [sw/common/buf_controller.o] Error 1
+20:28:17 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:85:6: warning: 'line_valid_isr' defined but not used [-Wunused-function]
+ void line_valid_isr(void *line_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:90:6: warning: 'frame_valid_isr' defined but not used [-Wunused-function]
+ void frame_valid_isr(void *frame_valid_flag) {
+      ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35372	   1992	 330532	 367896	  59d18	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+20:28:21 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:29:16 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:85:6: warning: 'line_valid_isr' defined but not used [-Wunused-function]
+ void line_valid_isr(void *line_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:90:6: warning: 'frame_valid_isr' defined but not used [-Wunused-function]
+ void frame_valid_isr(void *frame_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:100:6: warning: 'req_frame_isr' defined but not used [-Wunused-function]
+ void req_frame_isr(void *req_frame_flag) {
+      ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35308	   1992	 330532	 367832	  59cd8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+20:29:20 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:31:26 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:31:47 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35500	   1992	 330532	 368024	  59d98	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+20:32:22 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:32:56 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:85:6: warning: 'line_valid_isr' defined but not used [-Wunused-function]
+ void line_valid_isr(void *line_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:90:6: warning: 'frame_valid_isr' defined but not used [-Wunused-function]
+ void frame_valid_isr(void *frame_valid_flag) {
+      ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35372	   1992	 330532	 367896	  59d18	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+20:33:04 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:33:14 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:33:30 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:34:08 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:34:38 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:35:26 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:36:02 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:36:20 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:36:45 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:37:35 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:38:33 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35500	   1992	 330532	 368024	  59d98	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+20:38:47 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:39:47 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:6: warning: 'line_valid_isr' defined but not used [-Wunused-function]
+ void line_valid_isr(void *line_valid_flag) {
+      ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35436	   1992	 330532	 367960	  59d58	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+20:40:10 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:41:40 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:44:30 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:6: warning: 'line_valid_isr' defined but not used [-Wunused-function]
+ void line_valid_isr(void *line_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:88:6: warning: 'frame_valid_isr' defined but not used [-Wunused-function]
+ void frame_valid_isr(void *frame_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:98:6: warning: 'req_frame_isr' defined but not used [-Wunused-function]
+ void req_frame_isr(void *req_frame_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'init_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:57:8: warning: 'status' is used uninitialized in this function [-Wuninitialized]
+     if (status != XST_SUCCESS) {
+        ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35372	   1992	 330532	 367896	  59d18	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+20:48:57 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:14:0:
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.h:15:23: fatal error: xil_types.h: No such file or directory
+ #include "xil_types.h"
+                       ^
+compilation terminated.
+make: *** [sw/common/buf_controller.o] Error 1
+20:49:32 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:14:0:
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.h:15:23: fatal error: xil_types.h: No such file or directory
+ #include "xil_types.h"
+                       ^
+compilation terminated.
+make: *** [sw/common/buf_controller.o] Error 1
+20:49:50 **** Clean-only build of configuration Debug for project linebuffer_test ****
+make clean 
+rm -rf  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o  ./sw/common/buf_controller.d ./sw/common/framebuf.d ./sw/common/interrupt.d  ./src/helloworld.d ./src/platform.d  linebuffer_test.elf.size  linebuffer_test.elf
+ 
+20:49:50 **** Clean-only build of project linebuffer_test_bsp ****
+make -k clean 
+rm -f ps7_cortexa9_0/lib/libxil.a
+20:49:51 **** Build of project linebuffer_test_bsp ****
+make -k all 
+Running Make include in ps7_cortexa9_0/libsrc/axicdma_v4_0/src
+make -C ps7_cortexa9_0/libsrc/axicdma_v4_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make libs in ps7_cortexa9_0/libsrc/axicdma_v4_0/src
+make -C ps7_cortexa9_0/libsrc/axicdma_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling axicdma
+xaxicdma_bdring.c: In function 'XAxiCdma_BdRingGetCurrBd':
+xaxicdma_bdring.c:204:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   return (XAxiCdma_Bd *)((XAxiCdma_BdRead(InstancePtr->BaseAddr, XAXICDMA_CDESC_OFFSET)) |
+          ^
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling coresightps_dcc
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling cpu_cortexa9
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling ddrps
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling devcfg
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling dmaps
+Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling emacps
+Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling gpiops
+Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling qspips
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling scugic
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling scutimer
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling scuwdt
+Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling sdps
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling standalone
+Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling ttcps
+Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling uartps
+Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling usbps
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling xadcps
+Finished building libraries
+20:49:58 **** Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:6: warning: 'line_valid_isr' defined but not used [-Wunused-function]
+ void line_valid_isr(void *line_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:88:6: warning: 'frame_valid_isr' defined but not used [-Wunused-function]
+ void frame_valid_isr(void *frame_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:98:6: warning: 'req_frame_isr' defined but not used [-Wunused-function]
+ void req_frame_isr(void *req_frame_flag) {
+      ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/platform.o" -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35308	   1992	 330532	 367832	  59cd8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+20:50:16 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:50:37 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:58:30 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:58:45 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:59:14 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+20:59:24 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:01:59 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:6: warning: 'line_valid_isr' defined but not used [-Wunused-function]
+ void line_valid_isr(void *line_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:88:6: warning: 'frame_valid_isr' defined but not used [-Wunused-function]
+ void frame_valid_isr(void *frame_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:98:6: warning: 'req_frame_isr' defined but not used [-Wunused-function]
+ void req_frame_isr(void *req_frame_flag) {
+      ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35292	   1992	 330532	 367816	  59cc8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:02:18 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:02:57 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:04:29 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35276	   1992	 330532	 367800	  59cb8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:04:32 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35276	   1992	 330532	 367800	  59cb8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:05:15 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:59:8: error: unknown type name 'XScuTimer'
+ static XScuTimer prv_timer; // Private timer instance
+        ^
+../src/helloworld.c:60:8: error: unknown type name 'XScuTimer_Config'
+ static XScuTimer_Config *prv_timer_cfg;
+        ^
+../src/helloworld.c:55:16: warning: 'int_ctl' defined but not used [-Wunused-variable]
+ static XScuGic int_ctl;
+                ^
+../src/helloworld.c:56:24: warning: 'int_ctl_cfg' defined but not used [-Wunused-variable]
+ static XScuGic_Config *int_ctl_cfg;
+                        ^
+../src/helloworld.c:59:18: warning: 'prv_timer' defined but not used [-Wunused-variable]
+ static XScuTimer prv_timer; // Private timer instance
+                  ^
+../src/helloworld.c:60:26: warning: 'prv_timer_cfg' defined but not used [-Wunused-variable]
+ static XScuTimer_Config *prv_timer_cfg;
+                          ^
+make: *** [src/helloworld.o] Error 1
+21:05:28 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:60:16: warning: 'int_ctl' defined but not used [-Wunused-variable]
+ static XScuGic int_ctl;
+                ^
+../src/helloworld.c:61:24: warning: 'int_ctl_cfg' defined but not used [-Wunused-variable]
+ static XScuGic_Config *int_ctl_cfg;
+                        ^
+../src/helloworld.c:64:18: warning: 'prv_timer' defined but not used [-Wunused-variable]
+ static XScuTimer prv_timer; // Private timer instance
+                  ^
+../src/helloworld.c:65:26: warning: 'prv_timer_cfg' defined but not used [-Wunused-variable]
+ static XScuTimer_Config *prv_timer_cfg;
+                          ^
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35276	   1992	 330580	 367848	  59ce8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:05:44 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:60:16: warning: 'int_ctl' defined but not used [-Wunused-variable]
+ static XScuGic int_ctl;
+                ^
+../src/helloworld.c:61:24: warning: 'int_ctl_cfg' defined but not used [-Wunused-variable]
+ static XScuGic_Config *int_ctl_cfg;
+                        ^
+../src/helloworld.c:64:18: warning: 'prv_timer' defined but not used [-Wunused-variable]
+ static XScuTimer prv_timer; // Private timer instance
+                  ^
+../src/helloworld.c:65:26: warning: 'prv_timer_cfg' defined but not used [-Wunused-variable]
+ static XScuTimer_Config *prv_timer_cfg;
+                          ^
+../src/helloworld.c:70:13: warning: 'ButtonHandler' defined but not used [-Wunused-function]
+ static void ButtonHandler(void *callback_ref) {
+             ^
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36140	   1992	 330580	 368712	  5a048	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:06:13 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:87:2: error: 'status' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&int_ctl, int_ctl_cfg, int_ctl_cfg->CpuBaseAddress);
+  ^
+../src/helloworld.c:87:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:95:71: error: 'TimerIntrHandler' undeclared (first use in this function)
+  XScuGic_Connect(&int_ctl, XPAR_SCUTIMER_INTR, (Xil_ExceptionHandler) TimerIntrHandler, (void *) &prv_timer);
+                                                                       ^
+make: *** [src/helloworld.o] Error 1
+21:06:23 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:95:71: error: 'TimerIntrHandler' undeclared (first use in this function)
+  XScuGic_Connect(&int_ctl, XPAR_SCUTIMER_INTR, (Xil_ExceptionHandler) TimerIntrHandler, (void *) &prv_timer);
+                                                                       ^
+../src/helloworld.c:95:71: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+21:06:43 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:65:26: warning: 'prv_timer_cfg' defined but not used [-Wunused-variable]
+ static XScuTimer_Config *prv_timer_cfg;
+                          ^
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36432	   1992	 330580	 369004	  5a16c	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:07:12 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:07:51 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:65:26: warning: 'prv_timer_cfg' defined but not used [-Wunused-variable]
+ static XScuTimer_Config *prv_timer_cfg;
+                          ^
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35588	   1992	 330580	 368160	  59e20	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:07:58 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:64:18: warning: 'prv_timer' defined but not used [-Wunused-variable]
+ static XScuTimer prv_timer; // Private timer instance
+                  ^
+../src/helloworld.c:65:26: warning: 'prv_timer_cfg' defined but not used [-Wunused-variable]
+ static XScuTimer_Config *prv_timer_cfg;
+                          ^
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35588	   1992	 330580	 368160	  59e20	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:08:03 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:08:49 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:09:01 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:64:18: warning: 'prv_timer' defined but not used [-Wunused-variable]
+ static XScuTimer prv_timer; // Private timer instance
+                  ^
+../src/helloworld.c:65:26: warning: 'prv_timer_cfg' defined but not used [-Wunused-variable]
+ static XScuTimer_Config *prv_timer_cfg;
+                          ^
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35588	   1992	 330580	 368160	  59e20	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:09:03 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:10:28 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:10:39 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:10:55 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:64:18: warning: 'prv_timer' defined but not used [-Wunused-variable]
+ static XScuTimer prv_timer; // Private timer instance
+                  ^
+../src/helloworld.c:65:26: warning: 'prv_timer_cfg' defined but not used [-Wunused-variable]
+ static XScuTimer_Config *prv_timer_cfg;
+                          ^
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35588	   1992	 330580	 368160	  59e20	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:11:13 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:11:26 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:13:14 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35292	   1992	 330532	 367816	  59cc8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:20:11 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:20:29 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:20:48 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:21:08 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:6: warning: 'line_valid_isr' defined but not used [-Wunused-function]
+ void line_valid_isr(void *line_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:88:6: warning: 'frame_valid_isr' defined but not used [-Wunused-function]
+ void frame_valid_isr(void *frame_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:98:6: warning: 'req_frame_isr' defined but not used [-Wunused-function]
+ void req_frame_isr(void *req_frame_flag) {
+      ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35308	   1992	 330532	 367832	  59cd8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:21:20 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:22:03 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:22:15 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:22:18 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:23:41 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:6: warning: 'line_valid_isr' defined but not used [-Wunused-function]
+ void line_valid_isr(void *line_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:88:6: warning: 'frame_valid_isr' defined but not used [-Wunused-function]
+ void frame_valid_isr(void *frame_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:98:6: warning: 'req_frame_isr' defined but not used [-Wunused-function]
+ void req_frame_isr(void *req_frame_flag) {
+      ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35308	   1992	 330532	 367832	  59cd8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:23:53 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:24:50 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:25:49 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:26:16 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:29:01 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:35:47 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:6: warning: unused variable 'cnt' [-Wunused-variable]
+  int cnt = 0;
+      ^
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35308	   1992	 330532	 367832	  59cd8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:35:57 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:20: error: expected expression before ')' token
+     while (cnt++ < ) {
+                    ^
+make: *** [src/helloworld.o] Error 1
+21:36:03 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35372	   1992	 330532	 367896	  59d18	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:36:16 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35392	   1992	 330532	 367916	  59d2c	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:36:49 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:37:29 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:38:06 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35392	   1992	 330532	 367916	  59d2c	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:38:17 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:38:50 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:39:02 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:39:36 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:40:44 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'init_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:53:9: warning: unused variable 'status' [-Wunused-variable]
+     int status;
+         ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: At top level:
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:6: warning: 'line_valid_isr' defined but not used [-Wunused-function]
+ void line_valid_isr(void *line_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:88:6: warning: 'frame_valid_isr' defined but not used [-Wunused-function]
+ void frame_valid_isr(void *frame_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:93:6: warning: 'req_line_isr' defined but not used [-Wunused-function]
+ void req_line_isr(void *req_line_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:98:6: warning: 'req_frame_isr' defined but not used [-Wunused-function]
+ void req_frame_isr(void *req_frame_flag) {
+      ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35328	   1992	 330532	 367852	  59cec	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:41:02 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:41:17 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:41:46 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:6: warning: 'line_valid_isr' defined but not used [-Wunused-function]
+ void line_valid_isr(void *line_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:88:6: warning: 'frame_valid_isr' defined but not used [-Wunused-function]
+ void frame_valid_isr(void *frame_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:98:6: warning: 'req_frame_isr' defined but not used [-Wunused-function]
+ void req_frame_isr(void *req_frame_flag) {
+      ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35392	   1992	 330532	 367916	  59d2c	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:41:48 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:43:15 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:43:40 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:43:49 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:44:29 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:46:15 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:6: warning: 'line_valid_isr' defined but not used [-Wunused-function]
+ void line_valid_isr(void *line_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:88:6: warning: 'frame_valid_isr' defined but not used [-Wunused-function]
+ void frame_valid_isr(void *frame_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:98:6: warning: 'req_frame_isr' defined but not used [-Wunused-function]
+ void req_frame_isr(void *req_frame_flag) {
+      ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35324	   1992	 330532	 367848	  59ce8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:47:05 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35324	   1992	 330532	 367848	  59ce8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:47:09 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35324	   1992	 330532	 367848	  59ce8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+21:47:17 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:47:45 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:48:00 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:48:35 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+21:48:58 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+22:12:00 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:6: warning: 'line_valid_isr' defined but not used [-Wunused-function]
+ void line_valid_isr(void *line_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:88:6: warning: 'frame_valid_isr' defined but not used [-Wunused-function]
+ void frame_valid_isr(void *frame_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:93:6: warning: 'req_line_isr' defined but not used [-Wunused-function]
+ void req_line_isr(void *req_line_flag) {
+      ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35324	   1992	 330532	 367848	  59ce8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+22:12:37 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+22:13:13 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+22:13:50 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:6: warning: 'line_valid_isr' defined but not used [-Wunused-function]
+ void line_valid_isr(void *line_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:93:6: warning: 'req_line_isr' defined but not used [-Wunused-function]
+ void req_line_isr(void *req_line_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:98:6: warning: 'req_frame_isr' defined but not used [-Wunused-function]
+ void req_frame_isr(void *req_frame_flag) {
+      ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35324	   1992	 330532	 367848	  59ce8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+22:13:54 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+22:14:14 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+22:14:35 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:88:6: warning: 'frame_valid_isr' defined but not used [-Wunused-function]
+ void frame_valid_isr(void *frame_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:93:6: warning: 'req_line_isr' defined but not used [-Wunused-function]
+ void req_line_isr(void *req_line_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:98:6: warning: 'req_frame_isr' defined but not used [-Wunused-function]
+ void req_frame_isr(void *req_frame_flag) {
+      ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35324	   1992	 330532	 367848	  59ce8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+22:14:38 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+22:14:55 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+22:17:18 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:14:0:
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.h:15:23: fatal error: xil_types.h: No such file or directory
+ #include "xil_types.h"
+                       ^
+compilation terminated.
+make: *** [sw/common/buf_controller.o] Error 1
+22:17:44 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:14:0:
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.h:15:23: fatal error: xil_types.h: No such file or directory
+ #include "xil_types.h"
+                       ^
+compilation terminated.
+make: *** [sw/common/buf_controller.o] Error 1
+22:18:05 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:14:0:
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.h:15:23: fatal error: xil_types.h: No such file or directory
+ #include "xil_types.h"
+                       ^
+compilation terminated.
+make: *** [sw/common/buf_controller.o] Error 1
+22:19:01 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:14:0:
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.h:16:21: fatal error: xscugic.h: No such file or directory
+ #include "xscugic.h"
+                     ^
+compilation terminated.
+make: *** [sw/common/buf_controller.o] Error 1
+22:19:03 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:14:0:
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.h:15:23: fatal error: xil_types.h: No such file or directory
+ #include "xil_types.h"
+                       ^
+compilation terminated.
+make: *** [sw/common/buf_controller.o] Error 1
+22:19:25 **** Auto Build of project linebuffer_test_bsp ****
+make -k all 
+Running Make include in ps7_cortexa9_0/libsrc/axicdma_v4_0/src
+make -C ps7_cortexa9_0/libsrc/axicdma_v4_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Running Make libs in ps7_cortexa9_0/libsrc/axicdma_v4_0/src
+make -C ps7_cortexa9_0/libsrc/axicdma_v4_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling axicdma
+xaxicdma_bdring.c: In function 'XAxiCdma_BdRingGetCurrBd':
+xaxicdma_bdring.c:204:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   return (XAxiCdma_Bd *)((XAxiCdma_BdRead(InstancePtr->BaseAddr, XAXICDMA_CDESC_OFFSET)) |
+          ^
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling coresightps_dcc
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling cpu_cortexa9
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling ddrps
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling devcfg
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling dmaps
+Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling emacps
+Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling gpiops
+Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling qspips
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling scugic
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling scutimer
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling scuwdt
+Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling sdps
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling standalone
+Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling ttcps
+Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling uartps
+Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling usbps
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+Compiling xadcps
+Finished building libraries
+22:19:32 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:88:6: warning: 'frame_valid_isr' defined but not used [-Wunused-function]
+ void frame_valid_isr(void *frame_valid_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:93:6: warning: 'req_line_isr' defined but not used [-Wunused-function]
+ void req_line_isr(void *req_line_flag) {
+      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:98:6: warning: 'req_frame_isr' defined but not used [-Wunused-function]
+ void req_frame_isr(void *req_frame_flag) {
+      ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:6: warning: unused variable 'cnt' [-Wunused-variable]
+  int cnt = 0;
+      ^
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/platform.o" -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35308	   1992	 330532	 367832	  59cd8	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+22:19:39 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+22:20:11 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+22:20:56 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35500	   1992	 330532	 368024	  59d98	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
+22:21:08 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+22:22:08 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+22:22:32 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.
+22:23:23 **** Incremental Build of configuration Debug for project linebuffer_test ****
+make all 
+make: Nothing to be done for `all'.

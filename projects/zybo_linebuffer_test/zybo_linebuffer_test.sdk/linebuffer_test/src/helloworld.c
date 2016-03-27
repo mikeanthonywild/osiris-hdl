@@ -45,26 +45,29 @@
  *   ps7_uart    115200 (configured by bootrom/bsp)
  */
 
-#include <stdio.h>
 #include "platform.h"
 #include "buf_controller.h"
+#include "interrupt.h"
+#include "xil_printf.h"
 
-
-void print(char *str);
 
 int main()
 {
+	int cnt = 0;
+
     init_platform();
     init_interrupts();
     init_buf_controller();
 
     enable_interrupts();
 
-    print("Hello World\n\r");
+    xil_printf("Hello World\n\r");
 
     while (1) {
     	update_buf_controller();
     }
+
+    xil_printf("Shutting down...\n");
 
     cleanup_platform();
     return 0;

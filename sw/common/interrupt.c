@@ -31,7 +31,7 @@ static XScuGic_Config *int_ctrl_cfg_p;
 
 
 /*****************************************************************************/
-int init_interrupts() {
+int init_interrupts(void) {
 	int status;
 
 	Xil_ExceptionInit(); // Only needed for Microblaze + PPC?
@@ -49,7 +49,7 @@ int init_interrupts() {
 }
 
 
-void enable_interrupts() {
+void enable_interrupts(void) {
 	Xil_ExceptionEnable();
 }
 

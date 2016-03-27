@@ -11,7 +11,7 @@
 source linebuffer_test_wrapper.tcl -notrace
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
-INFO: [Netlist 29-17] Analyzing 245 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 248 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2015.4
 INFO: [Device 21-403] Loading part xc7z010clg400-1
@@ -31,9 +31,105 @@ Finished Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_linebuf
 Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_clk_wiz_0_0/linebuffer_test_clk_wiz_0_0.xdc] for cell 'linebuffer_test_i/clk_wiz_0/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_clk_wiz_0_0/linebuffer_test_clk_wiz_0_0.xdc:56]
 INFO: [Timing 38-2] Deriving generated clocks [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_clk_wiz_0_0/linebuffer_test_clk_wiz_0_0.xdc:56]
-get_clocks: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1758.934 ; gain = 486.523 ; free physical = 638 ; free virtual = 16496
+get_clocks: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1759.934 ; gain = 487.523 ; free physical = 807 ; free virtual = 16585
 Finished Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_clk_wiz_0_0/linebuffer_test_clk_wiz_0_0.xdc] for cell 'linebuffer_test_i/clk_wiz_0/inst'
 Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc]
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_0'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:408]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:408]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_1'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:409]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:409]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_10'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:410]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:410]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_11'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:411]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:411]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_12'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:412]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:412]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_13'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:413]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:413]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_14'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:414]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:414]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_15'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:415]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:415]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_16'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:416]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:416]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_17'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:417]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:417]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_18'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:418]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:418]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_19'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:419]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:419]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_2'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:420]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:420]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_20'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:421]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:421]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_21'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:422]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:422]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_22'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:423]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:423]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_23'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:424]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:424]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_24'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:425]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:425]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_25'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:426]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:426]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_26'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:427]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:427]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_27'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:428]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:428]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_28'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:429]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:429]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_29'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:430]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:430]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_3'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:431]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:431]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_30'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:432]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:432]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_31'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:433]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:433]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_4'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:434]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:434]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_5'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:435]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:435]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_6'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:436]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:436]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_7'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:437]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:437]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_8'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:438]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:438]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_buf_controller_n_9'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:439]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:439]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc]
 Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_auto_ds_0/linebuffer_test_auto_ds_0_clocks.xdc] for cell 'linebuffer_test_i/axi_mem_intercon/m00_couplers/auto_ds/inst'
 Finished Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_auto_ds_0/linebuffer_test_auto_ds_0_clocks.xdc] for cell 'linebuffer_test_i/axi_mem_intercon/m00_couplers/auto_ds/inst'
@@ -49,7 +145,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 28 instances
   RAM32X1D => RAM32X1D (RAMD32, RAMD32): 2 instances
 
-link_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 1759.934 ; gain = 849.316 ; free physical = 670 ; free virtual = 16494
+link_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1759.934 ; gain = 849.316 ; free physical = 842 ; free virtual = 16587
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
@@ -60,40 +156,57 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.24 . Memory (MB): peak = 1831.969 ; gain = 64.031 ; free physical = 670 ; free virtual = 16494
+Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.36 . Memory (MB): peak = 1831.969 ; gain = 64.031 ; free physical = 841 ; free virtual = 16586
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-2] Deriving generated clocks
 
 Starting Logic Optimization Task
-Implement Debug Cores | Checksum: 217401351
 
-Phase 1 Retarget
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.cache/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mike/Documents/osiris-hdl/hdl'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.4/data/ip'.
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:1.1 for cell dbg_hub_CV.
+INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:xsdbm:1.1", from Vivado IP cache entry "7d0f03ed9dc6c806".
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.0 for cell u_ila_0_CV.
+INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:ila:6.0", from Vivado IP cache entry "79ca9e13ebe1857f".
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1846.641 ; gain = 0.000 ; free physical = 1033 ; free virtual = 16531
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 175f44f68
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 1846.641 ; gain = 14.672 ; free physical = 1042 ; free virtual = 16540
+Implement Debug Cores | Checksum: 1ca41b989
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 2 Retarget
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 4 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1205460da
+Phase 2 Retarget | Checksum: 1a216e47d
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1831.969 ; gain = 0.000 ; free physical = 645 ; free virtual = 16471
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:58 . Memory (MB): peak = 1855.641 ; gain = 23.672 ; free physical = 1039 ; free virtual = 16537
 
-Phase 2 Constant Propagation
+Phase 3 Constant Propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-10] Eliminated 242 cells.
-Phase 2 Constant Propagation | Checksum: 145b6a21a
+INFO: [Opt 31-10] Eliminated 237 cells.
+Phase 3 Constant Propagation | Checksum: 229e5c02e
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1831.969 ; gain = 0.000 ; free physical = 638 ; free virtual = 16466
+Time (s): cpu = 00:01:01 ; elapsed = 00:01:01 . Memory (MB): peak = 1855.641 ; gain = 23.672 ; free physical = 1037 ; free virtual = 16535
 
-Phase 3 Sweep
-INFO: [Opt 31-12] Eliminated 1410 unconnected nets.
-INFO: [Opt 31-11] Eliminated 1100 unconnected cells.
-Phase 3 Sweep | Checksum: 13d894532
+Phase 4 Sweep
+INFO: [Opt 31-12] Eliminated 1476 unconnected nets.
+INFO: [Opt 31-120] Instance linebuffer_test_i/irq_concat (linebuffer_test_xlconcat_0_0) has been optimized to an empty box cell during sweep but it has constraints that prevent its removal. Empty box cells do not impact the implementation flow but they have no functional relevance.
+Resolution: If this is not expected, please check for DONT_TOUCH properties or timing constraint set on the empty box cell or on nets connected to the cell. If found, remove the relevant DONT_TOUCH property or timing constraint and re-run opt_design.
+INFO: [Opt 31-11] Eliminated 1110 unconnected cells.
+Phase 4 Sweep | Checksum: 1cc01e85b
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1831.969 ; gain = 0.000 ; free physical = 832 ; free virtual = 16671
+Time (s): cpu = 00:01:04 ; elapsed = 00:01:04 . Memory (MB): peak = 1855.641 ; gain = 23.672 ; free physical = 1037 ; free virtual = 16535
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1831.969 ; gain = 0.000 ; free physical = 832 ; free virtual = 16671
-Ending Logic Optimization Task | Checksum: 13d894532
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1855.641 ; gain = 0.000 ; free physical = 1037 ; free virtual = 16535
+Ending Logic Optimization Task | Checksum: 1cc01e85b
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1831.969 ; gain = 0.000 ; free physical = 843 ; free virtual = 16670
+Time (s): cpu = 00:01:04 ; elapsed = 00:01:04 . Memory (MB): peak = 1855.641 ; gain = 23.672 ; free physical = 1035 ; free virtual = 16533
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -106,24 +219,24 @@ Finished Running Vector-less Activity Propagation
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 2 BRAM(s) out of a total of 4 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 2 BRAM(s) out of a total of 5 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 2 WE to EN ports
-Number of BRAM Ports augmented: 0 newly gated: 4 Total Ports: 8
-Ending PowerOpt Patch Enables Task | Checksum: 1563d3f09
+Number of BRAM Ports augmented: 0 newly gated: 4 Total Ports: 10
+Ending PowerOpt Patch Enables Task | Checksum: 172a669bc
 
-Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2069.121 ; gain = 0.000 ; free physical = 600 ; free virtual = 16426
-Ending Power Optimization Task | Checksum: 1563d3f09
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2138.816 ; gain = 0.000 ; free physical = 836 ; free virtual = 16334
+Ending Power Optimization Task | Checksum: 172a669bc
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2069.121 ; gain = 237.152 ; free physical = 600 ; free virtual = 16426
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2138.816 ; gain = 283.176 ; free physical = 836 ; free virtual = 16334
 INFO: [Common 17-83] Releasing license: Implementation
-28 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+43 Infos, 32 Warnings, 32 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 2069.121 ; gain = 309.188 ; free physical = 600 ; free virtual = 16426
+opt_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:10 . Memory (MB): peak = 2138.816 ; gain = 378.883 ; free physical = 836 ; free virtual = 16334
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2069.121 ; gain = 0.000 ; free physical = 596 ; free virtual = 16425
+Write XDEF Complete: Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2138.816 ; gain = 0.000 ; free physical = 832 ; free virtual = 16334
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.runs/impl_1/linebuffer_test_wrapper_drc_opted.rpt.
 Command: place_design
@@ -141,17 +254,17 @@ Starting Placer Task
 INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
 
 Phase 1 Placer Initialization
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2069.121 ; gain = 0.000 ; free physical = 598 ; free virtual = 16425
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2138.816 ; gain = 0.000 ; free physical = 829 ; free virtual = 16332
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2069.121 ; gain = 0.000 ; free physical = 599 ; free virtual = 16426
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2138.816 ; gain = 0.000 ; free physical = 831 ; free virtual = 16334
 
 Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device
 
 Phase 1.1.1 Pre-Place Cells
-Phase 1.1.1 Pre-Place Cells | Checksum: 97ba8fe2
+Phase 1.1.1 Pre-Place Cells | Checksum: 3d43e8d1
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2069.121 ; gain = 0.000 ; free physical = 599 ; free virtual = 16426
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2138.816 ; gain = 0.000 ; free physical = 831 ; free virtual = 16334
 WARNING: [Place 30-12] An IO Bus FIXED_IO_mio with more than one IO standard is found. Components associated with this bus are: 
 	FIXED_IO_mio[53] of IOStandard LVCMOS18
 	FIXED_IO_mio[52] of IOStandard LVCMOS18
@@ -210,216 +323,216 @@ WARNING: [Place 30-12] An IO Bus FIXED_IO_mio with more than one IO standard is 
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 1.1.2 IO and Clk Clean Up
-Phase 1.1.2 IO and Clk Clean Up | Checksum: 97ba8fe2
+Phase 1.1.2 IO and Clk Clean Up | Checksum: 3d43e8d1
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2069.121 ; gain = 0.000 ; free physical = 590 ; free virtual = 16422
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2138.816 ; gain = 0.000 ; free physical = 829 ; free virtual = 16332
 
 Phase 1.1.3 Implementation Feasibility check On IDelay
-Phase 1.1.3 Implementation Feasibility check On IDelay | Checksum: 97ba8fe2
+Phase 1.1.3 Implementation Feasibility check On IDelay | Checksum: 3d43e8d1
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2069.121 ; gain = 0.000 ; free physical = 590 ; free virtual = 16422
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2138.816 ; gain = 0.000 ; free physical = 829 ; free virtual = 16332
 
 Phase 1.1.4 Commit IO Placement
-Phase 1.1.4 Commit IO Placement | Checksum: 0e0ea4e2
+Phase 1.1.4 Commit IO Placement | Checksum: f535e08d
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2069.121 ; gain = 0.000 ; free physical = 590 ; free virtual = 16422
-Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: c53c32df
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2138.816 ; gain = 0.000 ; free physical = 829 ; free virtual = 16332
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1320db6b7
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2069.121 ; gain = 0.000 ; free physical = 590 ; free virtual = 16422
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2138.816 ; gain = 0.000 ; free physical = 829 ; free virtual = 16332
 
 Phase 1.2 Build Placer Netlist Model
 
 Phase 1.2.1 Place Init Design
 
 Phase 1.2.1.1 Init Lut Pin Assignment
-Phase 1.2.1.1 Init Lut Pin Assignment | Checksum: aee5bd6b
+Phase 1.2.1.1 Init Lut Pin Assignment | Checksum: 276711b11
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2069.121 ; gain = 0.000 ; free physical = 595 ; free virtual = 16421
-Phase 1.2.1 Place Init Design | Checksum: 102f4158d
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2138.816 ; gain = 0.000 ; free physical = 825 ; free virtual = 16327
+Phase 1.2.1 Place Init Design | Checksum: 289ca1d60
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2069.121 ; gain = 0.000 ; free physical = 593 ; free virtual = 16420
-Phase 1.2 Build Placer Netlist Model | Checksum: 102f4158d
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 2138.816 ; gain = 0.000 ; free physical = 819 ; free virtual = 16321
+Phase 1.2 Build Placer Netlist Model | Checksum: 289ca1d60
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2069.121 ; gain = 0.000 ; free physical = 593 ; free virtual = 16420
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 2138.816 ; gain = 0.000 ; free physical = 819 ; free virtual = 16321
 
 Phase 1.3 Constrain Clocks/Macros
 
 Phase 1.3.1 Constrain Global/Regional Clocks
-Phase 1.3.1 Constrain Global/Regional Clocks | Checksum: 102f4158d
+Phase 1.3.1 Constrain Global/Regional Clocks | Checksum: 289ca1d60
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2069.121 ; gain = 0.000 ; free physical = 593 ; free virtual = 16420
-Phase 1.3 Constrain Clocks/Macros | Checksum: 102f4158d
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 2138.816 ; gain = 0.000 ; free physical = 819 ; free virtual = 16321
+Phase 1.3 Constrain Clocks/Macros | Checksum: 289ca1d60
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2069.121 ; gain = 0.000 ; free physical = 593 ; free virtual = 16420
-Phase 1 Placer Initialization | Checksum: 102f4158d
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 2138.816 ; gain = 0.000 ; free physical = 818 ; free virtual = 16320
+Phase 1 Placer Initialization | Checksum: 289ca1d60
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 2069.121 ; gain = 0.000 ; free physical = 593 ; free virtual = 16420
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 2138.816 ; gain = 0.000 ; free physical = 817 ; free virtual = 16320
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 125dcfafb
+Phase 2 Global Placement | Checksum: 1ca5079b7
 
-Time (s): cpu = 00:00:34 ; elapsed = 00:00:16 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 593 ; free virtual = 16419
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:21 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 799 ; free virtual = 16302
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 125dcfafb
+Phase 3.1 Commit Multi Column Macros | Checksum: 1ca5079b7
 
-Time (s): cpu = 00:00:34 ; elapsed = 00:00:16 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 593 ; free virtual = 16420
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:21 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 788 ; free virtual = 16291
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 661dc414
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 180dec261
 
-Time (s): cpu = 00:00:41 ; elapsed = 00:00:18 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 593 ; free virtual = 16420
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:24 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 804 ; free virtual = 16307
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 95703be3
+Phase 3.3 Area Swap Optimization | Checksum: 1a3f25243
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:18 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 593 ; free virtual = 16420
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:25 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 806 ; free virtual = 16309
 
 Phase 3.4 updateClock Trees: DP
-Phase 3.4 updateClock Trees: DP | Checksum: 95703be3
+Phase 3.4 updateClock Trees: DP | Checksum: 1a3f25243
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:18 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 593 ; free virtual = 16420
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:25 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 806 ; free virtual = 16309
 
 Phase 3.5 Timing Path Optimizer
-Phase 3.5 Timing Path Optimizer | Checksum: 4baaf785
+Phase 3.5 Timing Path Optimizer | Checksum: 1598c2c93
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:19 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 593 ; free virtual = 16420
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:25 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 803 ; free virtual = 16306
 
 Phase 3.6 Fast Optimization
-Phase 3.6 Fast Optimization | Checksum: ba4b0d1f
+Phase 3.6 Fast Optimization | Checksum: 1c2dd06b4
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:19 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 592 ; free virtual = 16419
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:25 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 803 ; free virtual = 16306
 
 Phase 3.7 Small Shape Detail Placement
 
 Phase 3.7.1 Commit Small Macros and Core Logic
 
 Phase 3.7.1.1 Commit Slice Clusters
-Phase 3.7.1.1 Commit Slice Clusters | Checksum: 10b43ba4f
+Phase 3.7.1.1 Commit Slice Clusters | Checksum: 1bc07c74d
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:23 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
-Phase 3.7.1 Commit Small Macros and Core Logic | Checksum: 10b43ba4f
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:30 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 804 ; free virtual = 16307
+Phase 3.7.1 Commit Small Macros and Core Logic | Checksum: 1bc07c74d
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:23 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:30 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 802 ; free virtual = 16304
 
 Phase 3.7.2 Clock Restriction Legalization for Leaf Columns
-Phase 3.7.2 Clock Restriction Legalization for Leaf Columns | Checksum: 10b43ba4f
+Phase 3.7.2 Clock Restriction Legalization for Leaf Columns | Checksum: 1bc07c74d
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:23 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:31 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 803 ; free virtual = 16306
 
 Phase 3.7.3 Clock Restriction Legalization for Non-Clock Pins
-Phase 3.7.3 Clock Restriction Legalization for Non-Clock Pins | Checksum: 10b43ba4f
+Phase 3.7.3 Clock Restriction Legalization for Non-Clock Pins | Checksum: 1bc07c74d
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:23 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
-Phase 3.7 Small Shape Detail Placement | Checksum: 10b43ba4f
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:31 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 803 ; free virtual = 16306
+Phase 3.7 Small Shape Detail Placement | Checksum: 1bc07c74d
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:23 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:31 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 803 ; free virtual = 16305
 
 Phase 3.8 Re-assign LUT pins
-Phase 3.8 Re-assign LUT pins | Checksum: ef40ed56
+Phase 3.8 Re-assign LUT pins | Checksum: 19864e240
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:24 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
-Phase 3 Detail Placement | Checksum: ef40ed56
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:31 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 803 ; free virtual = 16306
+Phase 3 Detail Placement | Checksum: 19864e240
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:24 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:32 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 804 ; free virtual = 16307
 
 Phase 4 Post Placement Optimization and Clean-Up
 
 Phase 4.1 Post Commit Optimization
 
 Phase 4.1.1 callUpdateTimingBeforePCO
-Phase 4.1.1 callUpdateTimingBeforePCO | Checksum: 11dc9bc80
+Phase 4.1.1 callUpdateTimingBeforePCO | Checksum: 186e2a183
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:25 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:33 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 803 ; free virtual = 16306
 
 Phase 4.1.2 updateClock Trees: PCOPT
-Phase 4.1.2 updateClock Trees: PCOPT | Checksum: 11dc9bc80
+Phase 4.1.2 updateClock Trees: PCOPT | Checksum: 186e2a183
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:26 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:33 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 803 ; free virtual = 16306
 
 Phase 4.1.3 Post Placement Optimization
 
 Phase 4.1.3.1 PCOPT Shape updates
 
 Phase 4.1.3.1.1 removeOptionalFFsFromShapes
-Phase 4.1.3.1.1 removeOptionalFFsFromShapes | Checksum: 11dc9bc80
+Phase 4.1.3.1.1 removeOptionalFFsFromShapes | Checksum: 186e2a183
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:26 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:34 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 803 ; free virtual = 16306
 
 Phase 4.1.3.1.2 deleteLutnmShapes
 
 Phase 4.1.3.1.2.1 deleteShapes
-Phase 4.1.3.1.2.1 deleteShapes | Checksum: 1695d1701
+Phase 4.1.3.1.2.1 deleteShapes | Checksum: 122a824ab
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:26 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
-Phase 4.1.3.1.2 deleteLutnmShapes | Checksum: 1695d1701
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:34 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 803 ; free virtual = 16305
+Phase 4.1.3.1.2 deleteLutnmShapes | Checksum: 122a824ab
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:26 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
-Phase 4.1.3.1 PCOPT Shape updates | Checksum: 1695d1701
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:34 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 803 ; free virtual = 16306
+Phase 4.1.3.1 PCOPT Shape updates | Checksum: 122a824ab
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:26 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:34 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 802 ; free virtual = 16305
 
 Phase 4.1.3.2 Post Placement Timing Optimization
 
 Phase 4.1.3.2.1 Restore Best Placement
-Phase 4.1.3.2.1 Restore Best Placement | Checksum: 1c19412f9
+Phase 4.1.3.2.1 Restore Best Placement | Checksum: 1cdbe8047
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:27 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.542. For the most accurate timing information please run report_timing.
-Phase 4.1.3.2 Post Placement Timing Optimization | Checksum: 1c19412f9
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:35 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 805 ; free virtual = 16308
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.524. For the most accurate timing information please run report_timing.
+Phase 4.1.3.2 Post Placement Timing Optimization | Checksum: 1cdbe8047
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:27 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
-Phase 4.1.3 Post Placement Optimization | Checksum: 1c19412f9
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:35 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 805 ; free virtual = 16308
+Phase 4.1.3 Post Placement Optimization | Checksum: 1cdbe8047
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:27 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
-Phase 4.1 Post Commit Optimization | Checksum: 1c19412f9
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:35 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 805 ; free virtual = 16308
+Phase 4.1 Post Commit Optimization | Checksum: 1cdbe8047
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:27 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:35 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 805 ; free virtual = 16308
 
 Phase 4.2 Sweep Clock Roots: Post-Placement
-Phase 4.2 Sweep Clock Roots: Post-Placement | Checksum: 1c19412f9
+Phase 4.2 Sweep Clock Roots: Post-Placement | Checksum: 1cdbe8047
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:27 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16419
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:35 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 805 ; free virtual = 16308
 
 Phase 4.3 Post Placement Cleanup
-Phase 4.3 Post Placement Cleanup | Checksum: 1c19412f9
+Phase 4.3 Post Placement Cleanup | Checksum: 1cdbe8047
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:27 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:35 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 803 ; free virtual = 16306
 
 Phase 4.4 Placer Reporting
 
 Phase 4.4.1 Restore STA
-Phase 4.4.1 Restore STA | Checksum: 1c19412f9
+Phase 4.4.1 Restore STA | Checksum: 1cdbe8047
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:27 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
-Phase 4.4 Placer Reporting | Checksum: 1c19412f9
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:35 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 803 ; free virtual = 16306
+Phase 4.4 Placer Reporting | Checksum: 1cdbe8047
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:27 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:35 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 803 ; free virtual = 16306
 
 Phase 4.5 Final Placement Cleanup
-Phase 4.5 Final Placement Cleanup | Checksum: 163fb8b5a
+Phase 4.5 Final Placement Cleanup | Checksum: 211696988
 
-Time (s): cpu = 00:00:57 ; elapsed = 00:00:27 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 163fb8b5a
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:35 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 808 ; free virtual = 16311
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 211696988
 
-Time (s): cpu = 00:00:57 ; elapsed = 00:00:27 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
-Ending Placer Task | Checksum: 9b344e1f
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:36 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 807 ; free virtual = 16310
+Ending Placer Task | Checksum: 178f45865
 
-Time (s): cpu = 00:00:57 ; elapsed = 00:00:27 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:36 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 807 ; free virtual = 16310
 INFO: [Common 17-83] Releasing license: Implementation
-43 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+58 Infos, 33 Warnings, 32 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:59 ; elapsed = 00:00:29 . Memory (MB): peak = 2092.156 ; gain = 23.035 ; free physical = 591 ; free virtual = 16418
+place_design: Time (s): cpu = 00:01:15 ; elapsed = 00:00:37 . Memory (MB): peak = 2161.852 ; gain = 23.035 ; free physical = 807 ; free virtual = 16310
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.84 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 575 ; free virtual = 16421
-report_io: Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 639 ; free virtual = 16464
-report_utilization: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.20 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 638 ; free virtual = 16464
-report_control_sets: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 637 ; free virtual = 16463
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.98 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 785 ; free virtual = 16309
+report_io: Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 793 ; free virtual = 16302
+report_utilization: Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.24 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 794 ; free virtual = 16303
+report_control_sets: Time (s): cpu = 00:00:00.27 ; elapsed = 00:00:00.29 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 793 ; free virtual = 16303
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
@@ -432,118 +545,117 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
-Checksum: PlaceDB: 86bbccaf ConstDB: 0 ShapeSum: 14788170 RouteDB: 0
+Checksum: PlaceDB: fe0e7007 ConstDB: 0 ShapeSum: 7ae5e85e RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 151bed2d8
+Phase 1 Build RT Design | Checksum: 120f63e6a
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 637 ; free virtual = 16464
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 788 ; free virtual = 16298
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 151bed2d8
+Phase 2.1 Create Timer | Checksum: 120f63e6a
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 635 ; free virtual = 16462
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 786 ; free virtual = 16295
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 151bed2d8
+Phase 2.2 Pre Route Cleanup | Checksum: 120f63e6a
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 612 ; free virtual = 16438
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 770 ; free virtual = 16279
  Number of Nodes with overlaps = 0
 
 Phase 2.3 Update Timing
-Phase 2.3 Update Timing | Checksum: 202d693b9
+Phase 2.3 Update Timing | Checksum: 1987971a5
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:13 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 604 ; free virtual = 16431
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.723  | TNS=0.000  | WHS=-0.500 | THS=-243.917|
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:14 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 755 ; free virtual = 16265
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.713  | TNS=0.000  | WHS=-0.503 | THS=-443.842|
 
-Phase 2 Router Initialization | Checksum: 1dc46bf0e
+Phase 2 Router Initialization | Checksum: 1f8784352
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:14 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 604 ; free virtual = 16431
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:16 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 733 ; free virtual = 16243
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 1ab8b8e41
+Phase 3 Initial Routing | Checksum: 1509c7924
 
-Time (s): cpu = 00:00:33 ; elapsed = 00:00:15 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 604 ; free virtual = 16431
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:17 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 755 ; free virtual = 16264
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 1480
- Number of Nodes with overlaps = 212
- Number of Nodes with overlaps = 51
- Number of Nodes with overlaps = 26
+ Number of Nodes with overlaps = 1611
+ Number of Nodes with overlaps = 225
+ Number of Nodes with overlaps = 59
+ Number of Nodes with overlaps = 21
  Number of Nodes with overlaps = 3
  Number of Nodes with overlaps = 2
  Number of Nodes with overlaps = 0
 
 Phase 4.1.1 Update Timing
-Phase 4.1.1 Update Timing | Checksum: 225c5e67e
+Phase 4.1.1 Update Timing | Checksum: 1e0854540
 
-Time (s): cpu = 00:01:08 ; elapsed = 00:00:22 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 605 ; free virtual = 16434
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.323  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:43 ; elapsed = 00:00:30 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 753 ; free virtual = 16262
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.159  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 24abf92c2
+Phase 4.1 Global Iteration 0 | Checksum: c72a2c4c
 
-Time (s): cpu = 00:01:08 ; elapsed = 00:00:22 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 604 ; free virtual = 16433
+Time (s): cpu = 00:01:44 ; elapsed = 00:00:30 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 753 ; free virtual = 16263
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
 
 Phase 4.2.1 Update Timing
-Phase 4.2.1 Update Timing | Checksum: 16eae92ec
+Phase 4.2.1 Update Timing | Checksum: 15ddc005b
 
-Time (s): cpu = 00:01:09 ; elapsed = 00:00:22 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 604 ; free virtual = 16433
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.313  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:44 ; elapsed = 00:00:30 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 752 ; free virtual = 16262
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.159  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 16eae92ec
+Phase 4.2 Global Iteration 1 | Checksum: f2f79d99
 
-Time (s): cpu = 00:01:09 ; elapsed = 00:00:22 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 603 ; free virtual = 16432
-Phase 4 Rip-up And Reroute | Checksum: 16eae92ec
+Time (s): cpu = 00:01:44 ; elapsed = 00:00:31 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 753 ; free virtual = 16262
+Phase 4 Rip-up And Reroute | Checksum: f2f79d99
 
-Time (s): cpu = 00:01:09 ; elapsed = 00:00:22 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 603 ; free virtual = 16433
+Time (s): cpu = 00:01:44 ; elapsed = 00:00:31 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 753 ; free virtual = 16262
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 1ff44073c
+Phase 5.1.1 Update Timing | Checksum: 1bf92e51b
 
-Time (s): cpu = 00:01:11 ; elapsed = 00:00:22 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 605 ; free virtual = 16432
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.428  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:46 ; elapsed = 00:00:31 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 753 ; free virtual = 16262
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.173  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 5.1 Delay CleanUp | Checksum: 1ff44073c
+Phase 5.1 Delay CleanUp | Checksum: 1bf92e51b
 
-Time (s): cpu = 00:01:11 ; elapsed = 00:00:22 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 605 ; free virtual = 16432
+Time (s): cpu = 00:01:46 ; elapsed = 00:00:31 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 753 ; free virtual = 16262
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 1ff44073c
+Phase 5.2 Clock Skew Optimization | Checksum: 1bf92e51b
 
-Time (s): cpu = 00:01:11 ; elapsed = 00:00:22 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 605 ; free virtual = 16432
-Phase 5 Delay and Skew Optimization | Checksum: 1ff44073c
+Time (s): cpu = 00:01:46 ; elapsed = 00:00:31 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 753 ; free virtual = 16263
+Phase 5 Delay and Skew Optimization | Checksum: 1bf92e51b
 
-Time (s): cpu = 00:01:11 ; elapsed = 00:00:22 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 605 ; free virtual = 16432
+Time (s): cpu = 00:01:46 ; elapsed = 00:00:31 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 753 ; free virtual = 16263
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Update Timing
-Phase 6.1 Update Timing | Checksum: 1b1ca1316
+Phase 6.1 Update Timing | Checksum: 142336cdc
 
-Time (s): cpu = 00:01:13 ; elapsed = 00:00:23 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 629 ; free virtual = 16473
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.428  | TNS=0.000  | WHS=0.019  | THS=0.000  |
+Time (s): cpu = 00:01:49 ; elapsed = 00:00:32 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 753 ; free virtual = 16262
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.173  | TNS=0.000  | WHS=0.020  | THS=0.000  |
 
-Phase 6 Post Hold Fix | Checksum: 2481efc5c
+Phase 6 Post Hold Fix | Checksum: 19c590ecf
 
-Time (s): cpu = 00:01:13 ; elapsed = 00:00:23 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 629 ; free virtual = 16473
+Time (s): cpu = 00:01:49 ; elapsed = 00:00:32 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 753 ; free virtual = 16263
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 5.33221 %
-  Global Horizontal Routing Utilization  = 7.72472 %
+  Global Vertical Routing Utilization    = 6.31151 %
+  Global Horizontal Routing Utilization  = 8.63948 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -552,43 +664,43 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 177ae947f
+Phase 7 Route finalize | Checksum: 199066363
 
-Time (s): cpu = 00:01:13 ; elapsed = 00:00:23 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 628 ; free virtual = 16473
+Time (s): cpu = 00:01:49 ; elapsed = 00:00:32 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 753 ; free virtual = 16263
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 177ae947f
+Phase 8 Verifying routed nets | Checksum: 199066363
 
-Time (s): cpu = 00:01:13 ; elapsed = 00:00:23 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 628 ; free virtual = 16473
+Time (s): cpu = 00:01:49 ; elapsed = 00:00:32 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 754 ; free virtual = 16263
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 1367e5d08
+Phase 9 Depositing Routes | Checksum: 1a099333e
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:24 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 654 ; free virtual = 16484
+Time (s): cpu = 00:01:50 ; elapsed = 00:00:33 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 754 ; free virtual = 16263
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.428  | TNS=0.000  | WHS=0.019  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.173  | TNS=0.000  | WHS=0.020  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 1367e5d08
+Phase 10 Post Router Timing | Checksum: 1a099333e
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:24 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 655 ; free virtual = 16484
+Time (s): cpu = 00:01:50 ; elapsed = 00:00:33 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 749 ; free virtual = 16259
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:24 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 655 ; free virtual = 16484
+Time (s): cpu = 00:01:50 ; elapsed = 00:00:33 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 753 ; free virtual = 16263
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-57 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+72 Infos, 34 Warnings, 32 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:01:17 ; elapsed = 00:00:26 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 655 ; free virtual = 16484
+route_design: Time (s): cpu = 00:01:53 ; elapsed = 00:00:34 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 753 ; free virtual = 16263
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.96 . Memory (MB): peak = 2092.156 ; gain = 0.000 ; free physical = 625 ; free virtual = 16480
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 2161.852 ; gain = 0.000 ; free physical = 731 ; free virtual = 16267
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.runs/impl_1/linebuffer_test_wrapper_drc_routed.rpt.
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
@@ -611,5 +723,5 @@ Creating bitstream...
 Writing bitstream ./linebuffer_test_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Common 17-83] Releasing license: Implementation
-write_bitstream: Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 2261.730 ; gain = 169.574 ; free physical = 281 ; free virtual = 16122
-INFO: [Common 17-206] Exiting Vivado at Fri Mar 25 20:30:27 2016...
+write_bitstream: Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 2336.793 ; gain = 174.941 ; free physical = 477 ; free virtual = 15995
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 27 22:15:27 2016...

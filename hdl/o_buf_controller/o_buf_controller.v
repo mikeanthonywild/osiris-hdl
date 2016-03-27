@@ -43,18 +43,12 @@ module o_buf_controller (
     // Registers
     reg [12:0] h_count;
     reg [12:0] v_count;
-    reg [31:0] read_buffer;
-    reg hsync_next;
-    reg vsync_next;
 
     always @(posedge pclk) begin
-        
         if (!reset_n) begin
             h_count <= 0;
             v_count <= 0;
             addr <= 0;
-            hsync_next <= 1;
-            vsync_next <= 1;
             hsync <= 1;
             vsync <= 1;
             vde <= 0;
@@ -81,19 +75,18 @@ module o_buf_controller (
             end
 
             // VGA sync logic
+            // All of these have a 1-cycle delay to sync them with data output
             vsync <= (v_count < (DISPLAY_HEIGHT + V_FRONT_PORCH)) ||
                 (v_count >= (MAX_V_COUNT - V_BACK_PORCH));
-            vsync <= vsync_next;
-            hsync_next <= (h_count < (DISPLAY_WIDTH + H_FRONT_PORCH)) ||
+            hsync <= (h_count < (DISPLAY_WIDTH + H_FRONT_PORCH)) ||
                 (h_count >= (MAX_H_COUNT - H_BACK_PORCH));
-            hsync <= hsync_next;
+            vde <= h_count < DISPLAY_WIDTH-1 && v_count < DISPLAY_HEIGHT;
 
             // PS interrupts
             req_line <= h_count >= DISPLAY_WIDTH-1 && v_count < DISPLAY_HEIGHT;
             req_frame <= v_count == DISPLAY_HEIGHT-1;
 
         end
-
     end
 
 endmodule

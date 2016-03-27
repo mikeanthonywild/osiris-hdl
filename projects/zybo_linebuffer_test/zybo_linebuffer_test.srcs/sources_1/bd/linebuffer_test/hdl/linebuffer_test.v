@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-//Date        : Fri Mar 25 20:15:41 2016
+//Date        : Sun Mar 27 21:58:58 2016
 //Host        : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 //Command     : generate_target linebuffer_test.bd
 //Design      : linebuffer_test
@@ -32,6 +32,7 @@ module linebuffer_test
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    btn,
     clk,
     vga_b,
     vga_g,
@@ -59,6 +60,7 @@ module linebuffer_test
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  input [3:0]btn;
   input clk;
   output [4:0]vga_b;
   output [5:0]vga_g;
@@ -196,6 +198,7 @@ module linebuffer_test
   wire axi_mem_intercon_M01_AXI_WREADY;
   wire [7:0]axi_mem_intercon_M01_AXI_WSTRB;
   wire axi_mem_intercon_M01_AXI_WVALID;
+  wire [3:0]btn_1;
   wire clk_1;
   wire clk_wiz_0_clk_out1;
   wire [11:0]i_axi_bram_ctrl_BRAM_PORTA_ADDR;
@@ -387,10 +390,10 @@ module linebuffer_test
   wire [7:0]test_pattern_generator_0_r;
   wire test_pattern_generator_0_vde;
   wire test_pattern_generator_0_vsync;
-  wire [3:0]xlconcat_0_dout;
   wire [23:0]xlconcat_1_dout;
   wire [3:0]xlconcat_2_dout;
 
+  assign btn_1 = btn[3:0];
   assign clk_1 = clk;
   assign vga_b[4:0] = rgb2vga_0_vga_pBlue;
   assign vga_g[5:0] = rgb2vga_0_vga_pGreen;
@@ -605,6 +608,12 @@ module linebuffer_test
         .S00_AXI_wready(o_axi_cdma_M_AXI_WREADY),
         .S00_AXI_wstrb(o_axi_cdma_M_AXI_WSTRB),
         .S00_AXI_wvalid(o_axi_cdma_M_AXI_WVALID));
+  linebuffer_test_xlconcat_2_0 bram_we_concat
+       (.In0(i_buf_controller_we),
+        .In1(i_buf_controller_we),
+        .In2(i_buf_controller_we),
+        .In3(i_buf_controller_we),
+        .dout(xlconcat_2_dout));
   linebuffer_test_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(clk_1),
         .clk_out1(clk_wiz_0_clk_out1),
@@ -725,6 +734,11 @@ module linebuffer_test
         .rstb(1'b0),
         .wea(i_axi_bram_ctrl_BRAM_PORTA_WE),
         .web(xlconcat_2_dout));
+  linebuffer_test_xlconcat_0_0 irq_concat
+       (.In0(i_buf_controller_line_valid),
+        .In1(i_buf_controller_frame_valid),
+        .In2(o_buf_controller_req_line),
+        .In3(o_buf_controller_req_frame));
   linebuffer_test_axi_bram_ctrl_0_1 o_axi_bram_ctrl
        (.bram_addr_a(o_axi_bram_ctrl_BRAM_PORTA_ADDR),
         .bram_clk_a(o_axi_bram_ctrl_BRAM_PORTA_CLK),
@@ -861,7 +875,7 @@ module linebuffer_test
         .DDR_WEB(DDR_we_n),
         .FCLK_CLK0(processing_system7_0_FCLK_CLK0),
         .FCLK_RESET0_N(processing_system7_0_FCLK_RESET0_N),
-        .IRQ_F2P(xlconcat_0_dout),
+        .IRQ_F2P(btn_1),
         .MIO(FIXED_IO_mio[53:0]),
         .M_AXI_GP0_ACLK(processing_system7_0_FCLK_CLK0),
         .M_AXI_GP0_ARADDR(processing_system7_0_M_AXI_GP0_ARADDR),
@@ -1089,23 +1103,11 @@ module linebuffer_test
         .r(test_pattern_generator_0_r),
         .vde(test_pattern_generator_0_vde),
         .vsync(test_pattern_generator_0_vsync));
-  linebuffer_test_xlconcat_0_0 xlconcat_0
-       (.In0(i_buf_controller_line_valid),
-        .In1(i_buf_controller_frame_valid),
-        .In2(o_buf_controller_req_line),
-        .In3(o_buf_controller_req_frame),
-        .dout(xlconcat_0_dout));
-  linebuffer_test_xlconcat_1_0 xlconcat_1
+  linebuffer_test_xlconcat_1_0 vga_concat
        (.In0(o_buf_controller_o_data),
         .In1(o_buf_controller_o_data),
         .In2(o_buf_controller_o_data),
         .dout(xlconcat_1_dout));
-  linebuffer_test_xlconcat_2_0 xlconcat_2
-       (.In0(i_buf_controller_we),
-        .In1(i_buf_controller_we),
-        .In2(i_buf_controller_we),
-        .In3(i_buf_controller_we),
-        .dout(xlconcat_2_dout));
 endmodule
 
 module linebuffer_test_axi_mem_intercon_0

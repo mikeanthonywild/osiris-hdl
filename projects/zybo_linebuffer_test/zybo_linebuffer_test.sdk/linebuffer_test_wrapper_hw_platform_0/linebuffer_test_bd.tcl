@@ -148,6 +148,11 @@ proc create_root_design { parentCell } {
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
   # Create ports
+  set btn [ create_bd_port -dir I -from 3 -to 0 -type intr btn ]
+  set_property -dict [ list \
+CONFIG.PortWidth {4} \
+CONFIG.SENSITIVITY {EDGE_RISING} \
+ ] $btn
   set clk [ create_bd_port -dir I -type clk clk ]
   set_property -dict [ list \
 CONFIG.FREQ_HZ {125000000} \
@@ -179,6 +184,12 @@ CONFIG.NUM_MI {2} \
   set_property -dict [ list \
 CONFIG.NUM_MI {2} \
  ] $axi_mem_intercon_1
+
+  # Create instance: bram_we_concat, and set properties
+  set bram_we_concat [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 bram_we_concat ]
+  set_property -dict [ list \
+CONFIG.NUM_PORTS {4} \
+ ] $bram_we_concat
 
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.2 clk_wiz_0 ]
@@ -217,6 +228,12 @@ CONFIG.Port_B_Enable_Rate {100} \
 CONFIG.Port_B_Write_Rate {50} \
 CONFIG.Use_RSTB_Pin {true} \
  ] $i_linebuffer
+
+  # Create instance: irq_concat, and set properties
+  set irq_concat [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 irq_concat ]
+  set_property -dict [ list \
+CONFIG.NUM_PORTS {4} \
+ ] $irq_concat
 
   # Create instance: o_axi_bram_ctrl, and set properties
   set o_axi_bram_ctrl [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.0 o_axi_bram_ctrl ]
@@ -400,23 +417,11 @@ CONFIG.NUM_MI {2} \
   # Create instance: test_pattern_generator_0, and set properties
   set test_pattern_generator_0 [ create_bd_cell -type ip -vlnv user.org:user:test_pattern_generator:1.0 test_pattern_generator_0 ]
 
-  # Create instance: xlconcat_0, and set properties
-  set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
-  set_property -dict [ list \
-CONFIG.NUM_PORTS {4} \
- ] $xlconcat_0
-
-  # Create instance: xlconcat_1, and set properties
-  set xlconcat_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_1 ]
+  # Create instance: vga_concat, and set properties
+  set vga_concat [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 vga_concat ]
   set_property -dict [ list \
 CONFIG.NUM_PORTS {3} \
- ] $xlconcat_1
-
-  # Create instance: xlconcat_2, and set properties
-  set xlconcat_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_2 ]
-  set_property -dict [ list \
-CONFIG.NUM_PORTS {4} \
- ] $xlconcat_2
+ ] $vga_concat
 
   # Create interface connections
   connect_bd_intf_net -intf_net axi_mem_intercon_1_M00_AXI [get_bd_intf_pins axi_mem_intercon_1/M00_AXI] [get_bd_intf_pins o_axi_bram_ctrl/S_AXI]
@@ -436,18 +441,19 @@ CONFIG.NUM_PORTS {4} \
   # Create port connections
   connect_bd_net -net GND_dout [get_bd_pins GND/dout] [get_bd_pins o_linebuffer/web]
   connect_bd_net -net VDD_dout [get_bd_pins VDD/dout] [get_bd_pins i_buf_controller/reset_n] [get_bd_pins i_linebuffer/enb] [get_bd_pins o_buf_controller/reset_n] [get_bd_pins o_linebuffer/enb]
+  connect_bd_net -net btn_1 [get_bd_ports btn] [get_bd_pins processing_system7_0/IRQ_F2P]
   connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins clk_wiz_0/clk_in1]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins i_buf_controller/pclk] [get_bd_pins i_linebuffer/clkb] [get_bd_pins o_buf_controller/pclk] [get_bd_pins o_linebuffer/clkb] [get_bd_pins rgb2vga_0/PixelClk] [get_bd_pins test_pattern_generator_0/clk]
   connect_bd_net -net i_buf_controller_addr [get_bd_pins i_buf_controller/addr] [get_bd_pins i_linebuffer/addrb]
-  connect_bd_net -net i_buf_controller_frame_valid [get_bd_pins i_buf_controller/frame_valid] [get_bd_pins xlconcat_0/In1]
-  connect_bd_net -net i_buf_controller_line_valid [get_bd_pins i_buf_controller/line_valid] [get_bd_pins xlconcat_0/In0]
+  connect_bd_net -net i_buf_controller_frame_valid [get_bd_pins i_buf_controller/frame_valid] [get_bd_pins irq_concat/In1]
+  connect_bd_net -net i_buf_controller_line_valid [get_bd_pins i_buf_controller/line_valid] [get_bd_pins irq_concat/In0]
   connect_bd_net -net i_buf_controller_o_data [get_bd_pins i_buf_controller/o_data] [get_bd_pins i_linebuffer/dinb]
-  connect_bd_net -net i_buf_controller_we [get_bd_pins i_buf_controller/we] [get_bd_pins xlconcat_2/In0] [get_bd_pins xlconcat_2/In1] [get_bd_pins xlconcat_2/In2] [get_bd_pins xlconcat_2/In3]
+  connect_bd_net -net i_buf_controller_we [get_bd_pins bram_we_concat/In0] [get_bd_pins bram_we_concat/In1] [get_bd_pins bram_we_concat/In2] [get_bd_pins bram_we_concat/In3] [get_bd_pins i_buf_controller/we]
   connect_bd_net -net o_buf_controller_addr [get_bd_pins o_buf_controller/addr] [get_bd_pins o_linebuffer/addrb]
   connect_bd_net -net o_buf_controller_hsync [get_bd_pins o_buf_controller/hsync] [get_bd_pins rgb2vga_0/rgb_pHSync]
-  connect_bd_net -net o_buf_controller_o_data [get_bd_pins o_buf_controller/o_data] [get_bd_pins xlconcat_1/In0] [get_bd_pins xlconcat_1/In1] [get_bd_pins xlconcat_1/In2]
-  connect_bd_net -net o_buf_controller_req_frame [get_bd_pins o_buf_controller/req_frame] [get_bd_pins xlconcat_0/In3]
-  connect_bd_net -net o_buf_controller_req_line [get_bd_pins o_buf_controller/req_line] [get_bd_pins xlconcat_0/In2]
+  connect_bd_net -net o_buf_controller_o_data [get_bd_pins o_buf_controller/o_data] [get_bd_pins vga_concat/In0] [get_bd_pins vga_concat/In1] [get_bd_pins vga_concat/In2]
+  connect_bd_net -net o_buf_controller_req_frame [get_bd_pins irq_concat/In3] [get_bd_pins o_buf_controller/req_frame]
+  connect_bd_net -net o_buf_controller_req_line [get_bd_pins irq_concat/In2] [get_bd_pins o_buf_controller/req_line]
   connect_bd_net -net o_buf_controller_vde [get_bd_pins o_buf_controller/vde] [get_bd_pins rgb2vga_0/rgb_pVDE]
   connect_bd_net -net o_buf_controller_vsync [get_bd_pins o_buf_controller/vsync] [get_bd_pins rgb2vga_0/rgb_pVSync]
   connect_bd_net -net o_linebuffer_doutb [get_bd_pins o_buf_controller/i_data] [get_bd_pins o_linebuffer/doutb]
@@ -464,9 +470,8 @@ CONFIG.NUM_PORTS {4} \
   connect_bd_net -net test_pattern_generator_0_r [get_bd_pins i_buf_controller/i_data] [get_bd_pins test_pattern_generator_0/r]
   connect_bd_net -net test_pattern_generator_0_vde [get_bd_pins i_buf_controller/vde] [get_bd_pins test_pattern_generator_0/vde]
   connect_bd_net -net test_pattern_generator_0_vsync [get_bd_pins i_buf_controller/vsync] [get_bd_pins test_pattern_generator_0/vsync]
-  connect_bd_net -net xlconcat_0_dout [get_bd_pins processing_system7_0/IRQ_F2P] [get_bd_pins xlconcat_0/dout]
-  connect_bd_net -net xlconcat_1_dout [get_bd_pins rgb2vga_0/rgb_pData] [get_bd_pins xlconcat_1/dout]
-  connect_bd_net -net xlconcat_2_dout [get_bd_pins i_linebuffer/web] [get_bd_pins xlconcat_2/dout]
+  connect_bd_net -net xlconcat_1_dout [get_bd_pins rgb2vga_0/rgb_pData] [get_bd_pins vga_concat/dout]
+  connect_bd_net -net xlconcat_2_dout [get_bd_pins bram_we_concat/dout] [get_bd_pins i_linebuffer/web]
 
   # Create address segments
   create_bd_addr_seg -range 0x1000 -offset 0xC0000000 [get_bd_addr_spaces i_axi_cdma/Data] [get_bd_addr_segs i_axi_bram_ctrl/S_AXI/Mem0] SEG_i_axi_bram_ctrl_Mem0
@@ -486,6 +491,7 @@ preplace port FIXED_IO -pg 1 -y 240 -defaultsOSRD
 preplace port vga_vs -pg 1 -y 1120 -defaultsOSRD
 preplace port clk -pg 1 -y 770 -defaultsOSRD
 preplace portBus vga_b -pg 1 -y 1080 -defaultsOSRD
+preplace portBus btn -pg 1 -y 380 -defaultsOSRD
 preplace portBus vga_r -pg 1 -y 1040 -defaultsOSRD
 preplace portBus vga_g -pg 1 -y 1060 -defaultsOSRD
 preplace inst o_axi_cdma -pg 1 -lvl 3 -y 500 -defaultsOSRD
@@ -494,68 +500,68 @@ preplace inst rst_processing_system7_0_100M -pg 1 -lvl 1 -y 90 -defaultsOSRD
 preplace inst i_axi_bram_ctrl -pg 1 -lvl 5 -y 530 -defaultsOSRD
 preplace inst GND -pg 1 -lvl 5 -y 950 -defaultsOSRD
 preplace inst test_pattern_generator_0 -pg 1 -lvl 2 -y 770 -defaultsOSRD
-preplace inst o_linebuffer -pg 1 -lvl 6 -y 860 -defaultsOSRD
 preplace inst o_buf_controller -pg 1 -lvl 3 -y 1050 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 4 -y 830 -defaultsOSRD
+preplace inst o_linebuffer -pg 1 -lvl 6 -y 860 -defaultsOSRD
 preplace inst i_buf_controller -pg 1 -lvl 3 -y 790 -defaultsOSRD
-preplace inst xlconcat_1 -pg 1 -lvl 5 -y 1100 -defaultsOSRD
-preplace inst xlconcat_2 -pg 1 -lvl 5 -y 810 -defaultsOSRD
 preplace inst i_axi_cdma -pg 1 -lvl 3 -y 340 -defaultsOSRD
+preplace inst vga_concat -pg 1 -lvl 5 -y 1100 -defaultsOSRD
 preplace inst VDD -pg 1 -lvl 2 -y 920 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 780 -defaultsOSRD
 preplace inst axi_mem_intercon -pg 1 -lvl 4 -y 320 -defaultsOSRD
+preplace inst bram_we_concat -pg 1 -lvl 5 -y 810 -defaultsOSRD
+preplace inst irq_concat -pg 1 -lvl 4 -y 830 -defaultsOSRD
 preplace inst rgb2vga_0 -pg 1 -lvl 6 -y 1080 -defaultsOSRD
 preplace inst o_axi_bram_ctrl -pg 1 -lvl 5 -y 660 -defaultsOSRD
 preplace inst processing_system7_0_axi_periph -pg 1 -lvl 2 -y 330 -defaultsOSRD
 preplace inst i_linebuffer -pg 1 -lvl 6 -y 610 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 5 -y 310 -defaultsOSRD
-preplace netloc o_axi_bram_ctrl_BRAM_PORTA 1 5 1 1870
-preplace netloc i_axi_bram_ctrl_BRAM_PORTA 1 5 1 N
-preplace netloc axi_mem_intercon_M01_AXI 1 4 1 1320
 preplace netloc processing_system7_0_DDR 1 5 2 NJ 220 NJ
+preplace netloc o_axi_bram_ctrl_BRAM_PORTA 1 5 1 1870
+preplace netloc i_axi_bram_ctrl_BRAM_PORTA 1 5 1 1860
+preplace netloc axi_mem_intercon_M01_AXI 1 4 1 1350
+preplace netloc btn_1 1 0 5 NJ 190 NJ 150 NJ 150 NJ 150 1410
 preplace netloc rgb2vga_0_vga_pRed 1 6 1 NJ
 preplace netloc test_pattern_generator_0_hsync 1 2 1 N
 preplace netloc test_pattern_generator_0_vsync 1 2 1 N
-preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 700
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 710
 preplace netloc rgb2vga_0_vga_pGreen 1 6 1 NJ
-preplace netloc o_buf_controller_req_line 1 3 1 990
-preplace netloc o_buf_controller_vsync 1 3 3 NJ 1010 NJ 1010 1880
-preplace netloc axi_mem_intercon_1_M00_AXI 1 4 1 1350
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 400 170 NJ 170 NJ 170 NJ 170 1840
-preplace netloc test_pattern_generator_0_r 1 2 1 700
-preplace netloc o_buf_controller_vde 1 3 3 NJ 1030 NJ 1030 1840
-preplace netloc xlconcat_1_dout 1 5 1 1900
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 30 180 NJ 180 NJ 180 NJ 180 NJ 450 1830
-preplace netloc axi_mem_intercon_1_M01_AXI 1 4 1 1330
-preplace netloc axi_mem_intercon_M00_AXI 1 4 1 1380
+preplace netloc o_buf_controller_req_line 1 3 1 1020
+preplace netloc o_buf_controller_vsync 1 3 3 NJ 1010 NJ 1020 1860
+preplace netloc axi_mem_intercon_1_M00_AXI 1 4 1 1370
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 410 110 NJ 110 NJ 110 NJ 110 1870
+preplace netloc test_pattern_generator_0_r 1 2 1 710
+preplace netloc o_buf_controller_vde 1 3 3 NJ 1050 NJ 1170 1910
+preplace netloc xlconcat_1_dout 1 5 1 1890
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 30 180 NJ 160 NJ 160 NJ 160 NJ 160 1860
+preplace netloc axi_mem_intercon_1_M01_AXI 1 4 1 1360
+preplace netloc axi_mem_intercon_M00_AXI 1 4 1 1400
 preplace netloc o_buf_controller_o_data 1 3 2 NJ 1070 NJ
-preplace netloc i_buf_controller_o_data 1 3 3 980 910 NJ 890 NJ
-preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 4 370 470 700 420 1010 730 1360
-preplace netloc i_buf_controller_addr 1 3 3 990 740 NJ 730 NJ
-preplace netloc xlconcat_0_dout 1 4 1 1370
+preplace netloc i_buf_controller_o_data 1 3 3 1030 730 NJ 730 NJ
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 4 370 480 730 420 1040 170 1390
+preplace netloc i_buf_controller_addr 1 3 3 1000 130 NJ 130 NJ
 preplace netloc clk_1 1 0 1 NJ
 preplace netloc processing_system7_0_FIXED_IO 1 5 2 NJ 240 NJ
-preplace netloc o_buf_controller_addr 1 3 3 NJ 1000 NJ 1000 1870
-preplace netloc clk_wiz_0_clk_out1 1 1 5 380 870 710 1170 NJ 1170 NJ 1170 1860
+preplace netloc o_buf_controller_addr 1 3 3 NJ 990 NJ 1000 1860
+preplace netloc clk_wiz_0_clk_out1 1 1 5 390 870 720 940 NJ 940 NJ 1010 1880
 preplace netloc rgb2vga_0_vga_pVSync 1 6 1 NJ
 preplace netloc rgb2vga_0_vga_pHSync 1 6 1 NJ
-preplace netloc o_buf_controller_req_frame 1 3 1 1010
+preplace netloc o_buf_controller_req_frame 1 3 1 1040
 preplace netloc test_pattern_generator_0_vde 1 2 1 N
-preplace netloc o_axi_cdma_M_AXI 1 3 1 980
-preplace netloc VDD_dout 1 2 4 720 920 NJ 920 NJ 900 1880
-preplace netloc o_buf_controller_hsync 1 3 3 NJ 1020 NJ 1020 1870
-preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 3 380 160 NJ 160 990
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 20 190 390 190 720 260 1000 720 1340 460 1840
+preplace netloc o_axi_cdma_M_AXI 1 3 1 1010
+preplace netloc VDD_dout 1 2 4 730 920 NJ 920 NJ 900 1900
+preplace netloc o_buf_controller_hsync 1 3 3 NJ 1180 NJ 1180 1900
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 3 400 190 NJ 190 1030
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 20 270 410 470 710 580 1020 180 1380 450 1850
 preplace netloc i_buf_controller_we 1 3 2 N 750 NJ
 preplace netloc xlconcat_2_dout 1 5 1 NJ
 preplace netloc GND_dout 1 5 1 NJ
-preplace netloc o_linebuffer_doutb 1 2 4 720 1180 NJ 1180 NJ 1180 NJ
-preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 1 710
-preplace netloc i_axi_cdma_M_AXI 1 3 1 980
+preplace netloc o_linebuffer_doutb 1 2 4 740 910 NJ 910 NJ 890 NJ
+preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 1 720
+preplace netloc i_axi_cdma_M_AXI 1 3 1 1010
 preplace netloc rgb2vga_0_vga_pBlue 1 6 1 NJ
-preplace netloc i_buf_controller_frame_valid 1 3 1 1000
-preplace netloc i_buf_controller_line_valid 1 3 1 1000
-levelinfo -pg 1 0 200 550 850 1170 1610 2050 2220 -top 0 -bot 1190
+preplace netloc i_buf_controller_frame_valid 1 3 1 1020
+preplace netloc i_buf_controller_line_valid 1 3 1 1020
+levelinfo -pg 1 -10 200 560 870 1200 1630 2060 2230 -top 0 -bot 1190
 ",
 }
 

@@ -28,20 +28,20 @@ create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_p
 
 ##Buttons
 ##IO_L20N_T3_34
-#set_property PACKAGE_PIN R18 [get_ports {btn[0]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {btn[0]}]
+set_property PACKAGE_PIN R18 [get_ports {btn[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {btn[0]}]
 
 ##IO_L24N_T3_34
-#set_property PACKAGE_PIN P16 [get_ports {btn[1]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {btn[1]}]
+set_property PACKAGE_PIN P16 [get_ports {btn[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {btn[1]}]
 
 ##IO_L18P_T2_34
-#set_property PACKAGE_PIN V16 [get_ports {btn[2]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {btn[2]}]
+set_property PACKAGE_PIN V16 [get_ports {btn[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {btn[2]}]
 
 ##IO_L7P_T1_34
-#set_property PACKAGE_PIN Y16 [get_ports {btn[3]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {btn[3]}]
+set_property PACKAGE_PIN Y16 [get_ports {btn[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {btn[3]}]
 
 ##LEDs
 ##IO_L23P_T3_35
@@ -405,6 +405,74 @@ set_property IOSTANDARD LVCMOS33 [get_ports vga_hs]
 set_property PACKAGE_PIN R19 [get_ports vga_vs]
 set_property IOSTANDARD LVCMOS33 [get_ports vga_vs]
 
-
-
-
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_0]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_1]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_10]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_11]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_12]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_13]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_14]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_15]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_16]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_17]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_18]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_19]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_2]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_20]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_21]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_22]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_23]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_24]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_25]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_26]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_27]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_28]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_29]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_3]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_30]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_31]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_4]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_5]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_6]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_7]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_8]
+set_property MARK_DEBUG false [get_nets linebuffer_test_i/o_buf_controller_n_9]
+set_property MARK_DEBUG true [get_nets linebuffer_test_i/o_buf_controller_vsync]
+set_property MARK_DEBUG true [get_nets linebuffer_test_i/o_buf_controller_vde]
+set_property MARK_DEBUG true [get_nets linebuffer_test_i/o_buf_controller_req_line]
+set_property MARK_DEBUG true [get_nets linebuffer_test_i/o_buf_controller_req_frame]
+set_property MARK_DEBUG true [get_nets linebuffer_test_i/o_buf_controller_hsync]
+create_debug_core u_ila_0 ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list linebuffer_test_i/clk_wiz_0/inst/clk_out1]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+set_property port_width 1 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list linebuffer_test_i/o_buf_controller_hsync]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list linebuffer_test_i/o_buf_controller_req_frame]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list linebuffer_test_i/o_buf_controller_req_line]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list linebuffer_test_i/o_buf_controller_vde]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list linebuffer_test_i/o_buf_controller_vsync]]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets u_ila_0_clk_out1]

@@ -301,6 +301,18 @@
 
 /******************************************************************/
 
+/* Definitions for Fabric interrupts connected to ps7_scugic_0 */
+#define XPAR_FABRIC_SYSTEM_BTN0_INTR 61
+#define XPAR_FABRIC_SYSTEM_BTN1_INTR 62
+#define XPAR_FABRIC_SYSTEM_BTN2_INTR 63
+#define XPAR_FABRIC_SYSTEM_BTN3_INTR 64
+
+/******************************************************************/
+
+/* Canonical definitions for Fabric interrupts connected to ps7_scugic_0 */
+
+/******************************************************************/
+
 /* Definitions for driver SCUGIC */
 #define XPAR_XSCUGIC_NUM_INSTANCES 1
 

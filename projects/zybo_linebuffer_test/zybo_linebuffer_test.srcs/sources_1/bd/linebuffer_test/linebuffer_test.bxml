@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="linebuffer_test" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1458936943"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1458936943"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1458936943"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1459112358"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1459112358"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1459112358"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/linebuffer_test_processing_system7_0_0/linebuffer_test_processing_system7_0_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0"/>
@@ -143,15 +143,8 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/linebuffer_test_xlconcat_0_0/linebuffer_test_xlconcat_0_0.xci" Type="IP">
-        <Instance HierarchyPath="xlconcat_0"/>
+        <Instance HierarchyPath="irq_concat"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="hdl/linebuffer_test.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
@@ -174,7 +167,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/linebuffer_test_xlconcat_1_0/linebuffer_test_xlconcat_1_0.xci" Type="IP">
-        <Instance HierarchyPath="xlconcat_1"/>
+        <Instance HierarchyPath="vga_concat"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -190,7 +183,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/linebuffer_test_xlconcat_2_0/linebuffer_test_xlconcat_2_0.xci" Type="IP">
-        <Instance HierarchyPath="xlconcat_2"/>
+        <Instance HierarchyPath="bram_we_concat"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -200,6 +193,13 @@
       <File Name="ip/linebuffer_test_xlconstant_0_1/linebuffer_test_xlconstant_0_1.xci" Type="IP">
         <Instance HierarchyPath="GND"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="hdl/linebuffer_test.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>

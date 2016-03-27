@@ -80,19 +80,19 @@ int init_buf_ctrl_interrupts(void) {
 
 
 void line_valid_isr(void *line_valid_flag) {
-    *((int *)line_valid_flag) = 1;
+    line_valid_flag = 1;
 }
 
 void frame_valid_isr(void *frame_valid_flag) {
-	*((int *)frame_valid_flag) = 1;
+    frame_valid_flag = 1;
 }
 
 void req_line_isr(void *req_line_flag) {
-	*((int *)req_line_flag) = 1;
+    req_line_flag = 1;
 }
 
 void req_frame_isr(void *req_frame_flag) {
-	*((int *)req_frame_flag) = 1;
+    req_frame_flag = 1;
 }
 
 
@@ -147,7 +147,7 @@ void update_buf_controller(void) {
          * is enabled
          */
         //Xil_DCacheFlushRange((UINTPTR)&SrcBuffer, Length);
-        XAxiCdma_SimpleTransfer(&i_cdma, (UINTPTR)I_BRAM_AXI_ADDR, (UINTPTR)i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+        XAxiCdma_SimpleTransfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
         i_framebuffer_line_p++;
         line_valid_flag = 0;
     }
@@ -158,7 +158,7 @@ void update_buf_controller(void) {
     }
 
     if (req_line_flag) {
-    	XAxiCdma_SimpleTransfer(&o_cdma, (UINTPTR)o_framebuffer_line_p, (UINTPTR)O_BRAM_AXI_ADDR, FRAMEBUF_WIDTH, NULL, NULL);
+    	XAxiCdma_SimpleTransfer(&o_cdma, o_framebuffer_line_p, O_BRAM_AXI_ADDR, FRAMEBUF_WIDTH, NULL, NULL);
         o_framebuffer_line_p++;
         req_line_flag = 0;
     }

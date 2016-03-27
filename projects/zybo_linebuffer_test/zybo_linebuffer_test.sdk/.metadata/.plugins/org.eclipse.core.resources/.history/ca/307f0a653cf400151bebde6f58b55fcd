@@ -147,7 +147,7 @@ void update_buf_controller(void) {
          * is enabled
          */
         //Xil_DCacheFlushRange((UINTPTR)&SrcBuffer, Length);
-        XAxiCdma_SimpleTransfer(&i_cdma, (UINTPTR)I_BRAM_AXI_ADDR, (UINTPTR)i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+        XAxiCdma_SimpleTransfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
         i_framebuffer_line_p++;
         line_valid_flag = 0;
     }

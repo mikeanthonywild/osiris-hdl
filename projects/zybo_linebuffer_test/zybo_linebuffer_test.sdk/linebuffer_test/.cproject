@@ -26,9 +26,10 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="xilinx.gnu.compiler.option.optimization.level.1971610862" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.option.debugging.level.928990805" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.inferred.swplatform.includes.1557773027" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath"/>
-								<option id="xilinx.gnu.compiler.dircategory.includes.672996030" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+								<option id="xilinx.gnu.compiler.dircategory.includes.672996030" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="../../linebuffer_test_bsp/ps7_cortexa9_0/include"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/linebuffer_test/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/linebuffer_test/sw/common}&quot;"/>
 								</option>
 								<inputType id="xilinx.gnu.arm.c.compiler.input.1345456053" name="C source files" superClass="xilinx.gnu.arm.c.compiler.input"/>
 							</tool>

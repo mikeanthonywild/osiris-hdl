@@ -45,10 +45,10 @@ static void frame_valid_isr(void *);
 static void req_line_isr(void *);
 static void req_frame_isr(void *);
 
-static int setup_buf_ctrl_interrupts(void);
+static int init_buf_ctrl_interrupts(void);
 
 /*****************************************************************************/
-int setup_buf_ctrl_interrupts(void) {
+int init_buf_ctrl_interrupts(void) {
     int status;
 
     // line_valid
@@ -127,14 +127,19 @@ int init_axi_cdma(void) {
 }
 
 
-int buf_controller_setup(void) {
+int init_buf_controller(void) {
     int status;
+
+    status = init_buf_ctrl_interrupts();
+    if (status != XST_SUCCESS) {
+    	return XST_FAILURE;
+    }
 
     return XST_SUCCESS;
 }
 
 
-void buf_controller_update(void) {
+void update_buf_controller(void) {
     // Check the flags for transfers and address reset
     if (line_valid_flag) {
         // TODO: Do we need to flush the cache?
@@ -142,7 +147,7 @@ void buf_controller_update(void) {
          * is enabled
          */
         //Xil_DCacheFlushRange((UINTPTR)&SrcBuffer, Length);
-        XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+        XAxiCdma_SimpleTransfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
         i_framebuffer_line_p++;
         line_valid_flag = 0;
     }
@@ -153,7 +158,7 @@ void buf_controller_update(void) {
     }
 
     if (req_line_flag) {
-        XAxiCdma_Simple_Transfer(&o_cdma, o_framebuffer_line_p, O_BRAM_AXI_ADDR, FRAMEBUF_WIDTH, NULL, NULL);
+    	XAxiCdma_SimpleTransfer(&o_cdma, o_framebuffer_line_p, O_BRAM_AXI_ADDR, FRAMEBUF_WIDTH, NULL, NULL);
         o_framebuffer_line_p++;
         req_line_flag = 0;
     }

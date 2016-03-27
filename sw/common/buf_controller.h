@@ -28,7 +28,7 @@
 
 
 /************************** Function Prototypes ******************************/
-int buf_controller_setup(void);
-void buf_controller_update(void);
+int init_buf_controller(void);
+void update_buf_controller(void);
 
 #endif // BUF_CONTROLLER_H

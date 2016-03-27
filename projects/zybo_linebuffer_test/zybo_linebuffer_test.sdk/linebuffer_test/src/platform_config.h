@@ -1,6 +1,8 @@
 #ifndef __PLATFORM_CONFIG_H_
 #define __PLATFORM_CONFIG_H_
 
+#include "xparameters.h"
+
 #define STDOUT_IS_PS7_UART
 #define UART_DEVICE_ID 0
 
@@ -17,5 +19,7 @@
 
 #define I_CDMA_DEVICE_ID	XPAR_I_AXI_CDMA_DEVICE_ID
 #define O_CDMA_DEVICE_ID	XPAR_O_AXI_CDMA_DEVICE_ID
+
+#define SCUGIC_DEVICE_ID 	XPAR_SCUGIC_0_DEVICE_ID
 
 #endif

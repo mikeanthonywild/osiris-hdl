@@ -10,7 +10,7 @@
 
 /***************************** Include Files *********************************/
 #include "framebuf.h"
-#include "config.h"
+#include "platform_config.h"
 
 /************************** Constant Definitions *****************************/
 
@@ -22,7 +22,7 @@
 
 
 /************************** Variable Definitions *****************************/
-u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH]
+u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
 
 /************************** Function Prototypes ******************************/
 

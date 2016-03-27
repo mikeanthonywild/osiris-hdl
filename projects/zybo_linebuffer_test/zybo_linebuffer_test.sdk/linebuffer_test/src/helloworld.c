@@ -47,14 +47,24 @@
 
 #include <stdio.h>
 #include "platform.h"
+#include "buf_controller.h"
+
 
 void print(char *str);
 
 int main()
 {
     init_platform();
+    init_interrupts();
+    init_buf_controller();
+
+    enable_interrupts();
 
     print("Hello World\n\r");
+
+    while (1) {
+    	update_buf_controller();
+    }
 
     cleanup_platform();
     return 0;

@@ -3205,3 +3205,1694 @@ arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/inc
  int setup_buf_ctrl_interrupts(void) {
      ^
 make: *** [sw/common/buf_controller.o] Error 1
+23:18:46 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'setup_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'buf_controller_setup':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:131:9: warning: unused variable 'status' [-Wunused-variable]
+     int status;
+         ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'buf_controller_update':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:147:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: At top level:
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:51:5: warning: 'setup_buf_ctrl_interrupts' defined but not used [-Wunused-function]
+ int setup_buf_ctrl_interrupts(void) {
+     ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:18:50 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'setup_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'buf_controller_setup':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:135:5: error: expected expression before 'return'
+     return XST_SUCCESS;
+     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:131:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'buf_controller_update':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:147:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: At top level:
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:51:5: warning: 'setup_buf_ctrl_interrupts' defined but not used [-Wunused-function]
+ int setup_buf_ctrl_interrupts(void) {
+     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'buf_controller_setup':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:136:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:26:51 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'setup_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'buf_controller_setup':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:135:5: error: expected ';' before 'return'
+     return XST_SUCCESS;
+     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:131:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'buf_controller_update':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:147:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'buf_controller_setup':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:136:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:26:52 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'setup_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'buf_controller_setup':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:131:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'buf_controller_update':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:147:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:27:12 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'setup_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'buf_controller_update':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:27:33 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'setup_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:27:40 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'setup_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:28:01 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'setup_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:28:41 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'setup_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:29:05 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'setup_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:29:12 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'setup_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:29:22 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'setup_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:29:43 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'setup_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:30:02 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'init_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'init_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:133:5: warning: implicit declaration of function 'setup_buf_ctrl_interrupts' [-Wimplicit-function-declaration]
+     status = setup_buf_ctrl_interrupts();
+     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: At top level:
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:51:5: warning: 'init_buf_ctrl_interrupts' defined but not used [-Wunused-function]
+ int init_buf_ctrl_interrupts(void) {
+     ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:30:09 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'init_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:31:09 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'init_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:31:45 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'init_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:32:03 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'init_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:32:30 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:14:0:
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.h:34:1: error: two or more data types in declaration specifiers
+ int create_interrupt(XScuGic *, u32, u8, u8, Xil_InterruptHandler, void *);
+ ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'init_buf_ctrl_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: error: 'g_int_ctrl' undeclared (first use in this function)
+     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, line_valid_isr, NULL);
+                                ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:55:32: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+make: *** [sw/common/buf_controller.o] Error 1
+23:32:44 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/framebuf.c:12:0:
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.h:24:8: error: unknown type name 'u8'
+ extern u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
+        ^
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.c:13:20: fatal error: config.h: No such file or directory
+ #include "config.h"
+                    ^
+compilation terminated.
+make: *** [sw/common/framebuf.o] Error 1
+23:32:50 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/framebuf.c:12:0:
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.h:24:8: error: unknown type name 'u8'
+ extern u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
+        ^
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.c:13:20: fatal error: config.h: No such file or directory
+ #include "config.h"
+                    ^
+compilation terminated.
+make: *** [sw/common/framebuf.o] Error 1
+23:33:08 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/framebuf.c:12:0:
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.h:24:8: error: unknown type name 'u8'
+ extern u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
+        ^
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.c:13:20: fatal error: config.h: No such file or directory
+ #include "config.h"
+                    ^
+compilation terminated.
+make: *** [sw/common/framebuf.o] Error 1
+23:33:14 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/framebuf.c:12:0:
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.h:24:8: error: unknown type name 'u8'
+ extern u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
+        ^
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.c:13:20: fatal error: config.h: No such file or directory
+ #include "config.h"
+                    ^
+compilation terminated.
+make: *** [sw/common/framebuf.o] Error 1
+23:33:26 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/framebuf.c:12:0:
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.h:24:8: error: unknown type name 'u8'
+ extern u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
+        ^
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.c:13:20: fatal error: config.h: No such file or directory
+ #include "config.h"
+                    ^
+compilation terminated.
+make: *** [sw/common/framebuf.o] Error 1
+23:35:30 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/framebuf.c:12:0:
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.h:24:8: error: unknown type name 'u8'
+ extern u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
+        ^
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.c:13:20: fatal error: config.h: No such file or directory
+ #include "config.h"
+                    ^
+compilation terminated.
+make: *** [sw/common/framebuf.o] Error 1
+23:35:33 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/framebuf.c:12:0:
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.h:24:8: error: unknown type name 'u8'
+ extern u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
+        ^
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.c:13:20: fatal error: config.h: No such file or directory
+ #include "config.h"
+                    ^
+compilation terminated.
+make: *** [sw/common/framebuf.o] Error 1
+23:35:39 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/framebuf.c:12:0:
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.h:24:8: error: unknown type name 'u8'
+ extern u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
+        ^
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.c:13:20: fatal error: config.h: No such file or directory
+ #include "config.h"
+                    ^
+compilation terminated.
+make: *** [sw/common/framebuf.o] Error 1
+23:36:34 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/framebuf.c:12:0:
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.h:24:8: error: unknown type name 'u8'
+ extern u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
+        ^
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.c:13:20: fatal error: config.h: No such file or directory
+ #include "config.h"
+                    ^
+compilation terminated.
+make: *** [sw/common/framebuf.o] Error 1
+23:36:36 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/framebuf.c:12:0:
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.h:24:8: error: unknown type name 'u8'
+ extern u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
+        ^
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.c:13:20: fatal error: config.h: No such file or directory
+ #include "config.h"
+                    ^
+compilation terminated.
+make: *** [sw/common/framebuf.o] Error 1
+23:36:40 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/framebuf.c:12:0:
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.h:24:8: error: unknown type name 'u8'
+ extern u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
+        ^
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.c:13:20: fatal error: config.h: No such file or directory
+ #include "config.h"
+                    ^
+compilation terminated.
+make: *** [sw/common/framebuf.o] Error 1
+23:36:42 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/framebuf.c:12:0:
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.h:24:8: error: unknown type name 'u8'
+ extern u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
+        ^
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.c:13:20: fatal error: config.h: No such file or directory
+ #include "config.h"
+                    ^
+compilation terminated.
+make: *** [sw/common/framebuf.o] Error 1
+23:36:52 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/framebuf.c:12:0:
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.h:24:8: error: unknown type name 'u8'
+ extern u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
+        ^
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.c:13:20: fatal error: config.h: No such file or directory
+ #include "config.h"
+                    ^
+compilation terminated.
+make: *** [sw/common/framebuf.o] Error 1
+23:37:18 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/framebuf.c:12:0:
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.h:24:8: error: unknown type name 'u8'
+ extern u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
+        ^
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.c:13:20: fatal error: config.h: No such file or directory
+ #include "config.h"
+                    ^
+compilation terminated.
+make: *** [sw/common/framebuf.o] Error 1
+23:43:59 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/framebuf.c:12:0:
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.h:24:8: error: unknown type name 'u8'
+ extern u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
+        ^
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.c:13:20: fatal error: config.h: No such file or directory
+ #include "config.h"
+                    ^
+compilation terminated.
+make: *** [sw/common/framebuf.o] Error 1
+23:44:26 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.c:13:20: fatal error: config.h: No such file or directory
+ #include "config.h"
+                    ^
+compilation terminated.
+make: *** [sw/common/framebuf.o] Error 1
+23:44:36 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+/home/mike/Documents/osiris-hdl/sw/common/framebuf.c:25:1: error: expected '=', ',', ';', 'asm' or '__attribute__' at end of input
+ u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH]
+ ^
+make: *** [sw/common/framebuf.o] Error 1
+23:44:43 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:51:68: error: unknown type name 'trigger_t'
+ int create_interrupt(XScuGic *instance_p, u32 int_id, u8 priority, trigger_t trigger, Xil_InterruptHandler isr, void *callback_ref) {
+                                                                    ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:26:24: warning: 'int_ctrl_cfg_p' defined but not used [-Wunused-variable]
+ static XScuGic_Config *int_ctrl_cfg_p;
+                        ^
+make: *** [sw/common/interrupt.o] Error 1
+23:44:53 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c: In function 'create_interrupt':
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:60:12: error: void value not ignored as it ought to be
+     status = XScuGic_SetPriorityTriggerType(instance_p, int_id, priority, trigger);
+            ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:65:12: error: void value not ignored as it ought to be
+     status = XScuGic_Enable(instance_p, int_id);
+            ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c: At top level:
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:26:24: warning: 'int_ctrl_cfg_p' defined but not used [-Wunused-variable]
+ static XScuGic_Config *int_ctrl_cfg_p;
+                        ^
+make: *** [sw/common/interrupt.o] Error 1
+23:46:25 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:26:24: warning: 'int_ctrl_cfg_p' defined but not used [-Wunused-variable]
+ static XScuGic_Config *int_ctrl_cfg_p;
+                        ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:50:23: fatal error: interrupt.h: No such file or directory
+ #include "interrupt.h"
+                       ^
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+23:47:06 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:51:28: fatal error: buf_controller.h: No such file or directory
+ #include "buf_controller.h"
+                            ^
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+23:47:15 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:51:28: fatal error: buf_controller.h: No such file or directory
+ #include "buf_controller.h"
+                            ^
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+23:47:18 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:50:28: fatal error: buf_controller.h: No such file or directory
+ #include "buf_controller.h"
+                            ^
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+17:39:23 **** Clean-only build of configuration Debug for project linebuffer_test ****
+make clean 
+rm -rf  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o  ./sw/common/buf_controller.d ./sw/common/framebuf.d ./sw/common/interrupt.d  ./src/helloworld.d ./src/platform.d  linebuffer_test.elf.size  linebuffer_test.elf
+ 
+17:39:23 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:26:24: warning: 'int_ctrl_cfg_p' defined but not used [-Wunused-variable]
+ static XScuGic_Config *int_ctrl_cfg_p;
+                        ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:50:28: fatal error: buf_controller.h: No such file or directory
+ #include "buf_controller.h"
+                            ^
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+17:39:33 **** Clean-only build of configuration Debug for project linebuffer_test ****
+make clean 
+rm -rf  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o  ./sw/common/buf_controller.d ./sw/common/framebuf.d ./sw/common/interrupt.d  ./src/helloworld.d ./src/platform.d  linebuffer_test.elf.size  linebuffer_test.elf
+ 
+17:39:33 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:26:24: warning: 'int_ctrl_cfg_p' defined but not used [-Wunused-variable]
+ static XScuGic_Config *int_ctrl_cfg_p;
+                        ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:50:28: fatal error: buf_controller.h: No such file or directory
+ #include "buf_controller.h"
+                            ^
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+17:40:08 **** Clean-only build of configuration Debug for project linebuffer_test ****
+make clean 
+rm -rf  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o  ./sw/common/buf_controller.d ./sw/common/framebuf.d ./sw/common/interrupt.d  ./src/helloworld.d ./src/platform.d  linebuffer_test.elf.size  linebuffer_test.elf
+ 
+17:40:08 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:26:24: warning: 'int_ctrl_cfg_p' defined but not used [-Wunused-variable]
+ static XScuGic_Config *int_ctrl_cfg_p;
+                        ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:5: warning: implicit declaration of function 'init_interrupts' [-Wimplicit-function-declaration]
+     init_interrupts();
+     ^
+../src/helloworld.c:62:5: warning: implicit declaration of function 'Xil_ExceptionEnable' [-Wimplicit-function-declaration]
+     Xil_ExceptionEnable();
+     ^
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/platform.o" -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -Wl,-T -Wl,../src/lscript.ld -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -l-Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/opt/Xilinx/SDK/2015.4/gnu/arm/lin/bin/../lib/gcc/arm-xilinx-eabi/4.9.2/../../../../arm-xilinx-eabi/bin/ld: cannot find -l-Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+collect2: error: ld returned 1 exit status
+make: *** [linebuffer_test.elf] Error 1
+17:40:11 **** Clean-only build of configuration Debug for project linebuffer_test ****
+make clean 
+rm -rf  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o  ./sw/common/buf_controller.d ./sw/common/framebuf.d ./sw/common/interrupt.d  ./src/helloworld.d ./src/platform.d  linebuffer_test.elf.size  linebuffer_test.elf
+ 
+17:40:11 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:26:24: warning: 'int_ctrl_cfg_p' defined but not used [-Wunused-variable]
+ static XScuGic_Config *int_ctrl_cfg_p;
+                        ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:5: warning: implicit declaration of function 'init_interrupts' [-Wimplicit-function-declaration]
+     init_interrupts();
+     ^
+../src/helloworld.c:62:5: warning: implicit declaration of function 'Xil_ExceptionEnable' [-Wimplicit-function-declaration]
+     Xil_ExceptionEnable();
+     ^
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/platform.o" -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./sw/common/buf_controller.o: In function `update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150: undefined reference to `XAxiCdma_Simple_Transfer'
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:161: undefined reference to `XAxiCdma_Simple_Transfer'
+./src/helloworld.o: In function `main':
+/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/Debug/../src/helloworld.c:62: undefined reference to `Xil_ExceptionEnable'
+collect2: error: ld returned 1 exit status
+make: *** [linebuffer_test.elf] Error 1
+17:40:35 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:5: warning: implicit declaration of function 'init_interrupts' [-Wimplicit-function-declaration]
+     init_interrupts();
+     ^
+../src/helloworld.c:64:5: warning: implicit declaration of function 'Xil_ExceptionEnable' [-Wimplicit-function-declaration]
+     Xil_ExceptionEnable();
+     ^
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./sw/common/buf_controller.o: In function `update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150: undefined reference to `XAxiCdma_Simple_Transfer'
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:161: undefined reference to `XAxiCdma_Simple_Transfer'
+./src/helloworld.o: In function `main':
+/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/Debug/../src/helloworld.c:64: undefined reference to `Xil_ExceptionEnable'
+collect2: error: ld returned 1 exit status
+make: *** [linebuffer_test.elf] Error 1
+17:40:43 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:5: warning: implicit declaration of function 'init_interrupts' [-Wimplicit-function-declaration]
+     init_interrupts();
+     ^
+../src/helloworld.c:61:5: warning: implicit declaration of function 'enable_interrupts' [-Wimplicit-function-declaration]
+     enable_interrupts();
+     ^
+../src/helloworld.c:64:5: warning: implicit declaration of function 'Xil_ExceptionEnable' [-Wimplicit-function-declaration]
+     Xil_ExceptionEnable();
+     ^
+Finished building: ../src/helloworld.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./sw/common/buf_controller.o: In function `update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150: undefined reference to `XAxiCdma_Simple_Transfer'
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:161: undefined reference to `XAxiCdma_Simple_Transfer'
+./src/helloworld.o: In function `main':
+/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/Debug/../src/helloworld.c:61: undefined reference to `enable_interrupts'
+/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/Debug/../src/helloworld.c:64: undefined reference to `Xil_ExceptionEnable'
+collect2: error: ld returned 1 exit status
+make: *** [linebuffer_test.elf] Error 1
+17:41:32 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:26:24: warning: 'int_ctrl_cfg_p' defined but not used [-Wunused-variable]
+ static XScuGic_Config *int_ctrl_cfg_p;
+                        ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./sw/common/buf_controller.o: In function `update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150: undefined reference to `XAxiCdma_Simple_Transfer'
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:161: undefined reference to `XAxiCdma_Simple_Transfer'
+./src/helloworld.o: In function `main':
+/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/Debug/../src/helloworld.c:64: undefined reference to `Xil_ExceptionEnable'
+collect2: error: ld returned 1 exit status
+make: *** [linebuffer_test.elf] Error 1
+17:41:34 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:26:24: warning: 'int_ctrl_cfg_p' defined but not used [-Wunused-variable]
+ static XScuGic_Config *int_ctrl_cfg_p;
+                        ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./sw/common/buf_controller.o: In function `update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150: undefined reference to `XAxiCdma_Simple_Transfer'
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:161: undefined reference to `XAxiCdma_Simple_Transfer'
+./src/helloworld.o: In function `main':
+/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/Debug/../src/helloworld.c:64: undefined reference to `Xil_ExceptionEnable'
+collect2: error: ld returned 1 exit status
+make: *** [linebuffer_test.elf] Error 1
+17:42:41 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:27:24: warning: 'int_ctrl_cfg_p' defined but not used [-Wunused-variable]
+ static XScuGic_Config *int_ctrl_cfg_p;
+                        ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./sw/common/buf_controller.o: In function `update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150: undefined reference to `XAxiCdma_Simple_Transfer'
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:161: undefined reference to `XAxiCdma_Simple_Transfer'
+./src/helloworld.o: In function `main':
+/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/Debug/../src/helloworld.c:64: undefined reference to `Xil_ExceptionEnable'
+collect2: error: ld returned 1 exit status
+make: *** [linebuffer_test.elf] Error 1
+17:43:57 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c: In function 'init_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:37:2: error: 'status' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&int_ctl, int_ctl_cfg, int_ctl_cfg->CpuBaseAddress);
+  ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:37:2: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:37:34: error: 'int_ctl' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&int_ctl, int_ctl_cfg, int_ctl_cfg->CpuBaseAddress);
+                                  ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:37:43: error: 'int_ctl_cfg' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&int_ctl, int_ctl_cfg, int_ctl_cfg->CpuBaseAddress);
+                                           ^
+make: *** [sw/common/interrupt.o] Error 1
+17:44:35 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c: In function 'init_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:2: error: 'status' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&int_ctl, int_ctl_cfg, int_ctl_cfg->CpuBaseAddress);
+  ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:2: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:34: error: 'int_ctl' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&int_ctl, int_ctl_cfg, int_ctl_cfg->CpuBaseAddress);
+                                  ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:43: error: 'int_ctl_cfg' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&int_ctl, int_ctl_cfg, int_ctl_cfg->CpuBaseAddress);
+                                           ^
+make: *** [sw/common/interrupt.o] Error 1
+17:44:52 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:15:0:
+/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src/platform_config.h:4:24: fatal error: xparameter.h: No such file or directory
+ #include "xparameter.h"
+                        ^
+compilation terminated.
+make: *** [sw/common/buf_controller.o] Error 1
+17:45:06 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+In file included from /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:15:0:
+/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src/platform_config.h:4:24: fatal error: xparameter.h: No such file or directory
+ #include "xparameter.h"
+                        ^
+compilation terminated.
+make: *** [sw/common/buf_controller.o] Error 1
+17:45:16 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "/home/mike/Documents/osiris-hdl/sw/common/framebuf.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/framebuf.c
+ 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c: In function 'init_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:2: error: 'status' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&int_ctl, int_ctl_cfg, int_ctl_cfg->CpuBaseAddress);
+  ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:2: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:34: error: 'int_ctl' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&int_ctl, int_ctl_cfg, int_ctl_cfg->CpuBaseAddress);
+                                  ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:43: error: 'int_ctl_cfg' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&int_ctl, int_ctl_cfg, int_ctl_cfg->CpuBaseAddress);
+                                           ^
+make: *** [sw/common/interrupt.o] Error 1
+17:45:24 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c: In function 'init_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:2: error: 'status' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&int_ctl, int_ctl_cfg, int_ctl_cfg->CpuBaseAddress);
+  ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:2: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:34: error: 'int_ctl' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&int_ctl, int_ctl_cfg, int_ctl_cfg->CpuBaseAddress);
+                                  ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:43: error: 'int_ctl_cfg' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&int_ctl, int_ctl_cfg, int_ctl_cfg->CpuBaseAddress);
+                                           ^
+make: *** [sw/common/interrupt.o] Error 1
+17:45:37 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c: In function 'init_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:2: error: 'status' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&int_ctl, int_ctl_cfg, int_ctl_cfg->CpuBaseAddress);
+  ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:2: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:34: error: 'int_ctl' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&int_ctl, int_ctl_cfg, int_ctl_cfg->CpuBaseAddress);
+                                  ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:43: error: 'int_ctl_cfg' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&int_ctl, int_ctl_cfg, int_ctl_cfg->CpuBaseAddress);
+                                           ^
+make: *** [sw/common/interrupt.o] Error 1
+17:46:01 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c: In function 'init_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:2: error: 'status' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&g_int_ctrl, int_ctrl_cfg_p, int_ctl_cfg->CpuBaseAddress);
+  ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:2: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:62: error: 'int_ctl_cfg' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&g_int_ctrl, int_ctrl_cfg_p, int_ctl_cfg->CpuBaseAddress);
+                                                              ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:45:107: error: 'int_ctl' undeclared (first use in this function)
+  Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_IRQ_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, &int_ctl);
+                                                                                                           ^
+make: *** [sw/common/interrupt.o] Error 1
+17:46:09 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c: In function 'init_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:2: error: 'status' undeclared (first use in this function)
+  status = XScuGic_CfgInitialize(&g_int_ctrl, int_ctrl_cfg_p, int_ctrl_cfg_p->CpuBaseAddress);
+  ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:38:2: note: each undeclared identifier is reported only once for each function it appears in
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:45:107: error: 'int_ctl' undeclared (first use in this function)
+  Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_IRQ_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, &int_ctl);
+                                                                                                           ^
+make: *** [sw/common/interrupt.o] Error 1
+17:46:17 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c: In function 'init_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:47:107: error: 'int_ctl' undeclared (first use in this function)
+  Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_IRQ_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, &int_ctl);
+                                                                                                           ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:47:107: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [sw/common/interrupt.o] Error 1
+17:46:24 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c: In function 'init_interrupts':
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:46:107: error: 'int_ctl' undeclared (first use in this function)
+  Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_IRQ_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, &int_ctl);
+                                                                                                           ^
+/home/mike/Documents/osiris-hdl/sw/common/interrupt.c:46:107: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [sw/common/interrupt.o] Error 1
+17:46:48 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "/home/mike/Documents/osiris-hdl/sw/common/interrupt.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/interrupt.c
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:5: warning: implicit declaration of function 'init_interrupts' [-Wimplicit-function-declaration]
+     init_interrupts();
+     ^
+../src/helloworld.c:61:5: warning: implicit declaration of function 'enable_interrupts' [-Wimplicit-function-declaration]
+     enable_interrupts();
+     ^
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"src/platform.o" -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./sw/common/buf_controller.o: In function `update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150: undefined reference to `XAxiCdma_Simple_Transfer'
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:161: undefined reference to `XAxiCdma_Simple_Transfer'
+collect2: error: ld returned 1 exit status
+make: *** [linebuffer_test.elf] Error 1
+17:48:13 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:9: warning: implicit declaration of function 'XAxiCdma_Simple_Transfer' [-Wimplicit-function-declaration]
+         XAxiCdma_Simple_Transfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+         ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:161:39: warning: passing argument 2 of 'XAxiCdma_SimpleTransfer' makes integer from pointer without a cast
+      XAxiCdma_SimpleTransfer(&o_cdma, o_framebuffer_line_p, O_BRAM_AXI_ADDR, FRAMEBUF_WIDTH, NULL, NULL);
+                                       ^
+In file included from /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:17:0:
+../../linebuffer_test_bsp/ps7_cortexa9_0/include/xaxicdma.h:534:5: note: expected 'UINTPTR' but argument is of type 'u8 (*)[640]'
+ u32 XAxiCdma_SimpleTransfer(XAxiCdma *InstancePtr, UINTPTR SrcAddr, UINTPTR DstAddr,
+     ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./sw/common/buf_controller.o: In function `update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150: undefined reference to `XAxiCdma_Simple_Transfer'
+collect2: error: ld returned 1 exit status
+make: *** [linebuffer_test.elf] Error 1
+17:48:19 **** Auto Build of configuration Debug for project linebuffer_test ****
+make all 
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'line_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:83:21: warning: assignment makes pointer from integer without a cast
+     line_valid_flag = 1;
+                     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'frame_valid_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:87:22: warning: assignment makes pointer from integer without a cast
+     frame_valid_flag = 1;
+                      ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_line_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:91:19: warning: assignment makes pointer from integer without a cast
+     req_line_flag = 1;
+                   ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'req_frame_isr':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:95:20: warning: assignment makes pointer from integer without a cast
+     req_frame_flag = 1;
+                    ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:150:59: warning: passing argument 3 of 'XAxiCdma_SimpleTransfer' makes integer from pointer without a cast
+         XAxiCdma_SimpleTransfer(&i_cdma, I_BRAM_AXI_ADDR, i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+                                                           ^
+In file included from /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:17:0:
+../../linebuffer_test_bsp/ps7_cortexa9_0/include/xaxicdma.h:534:5: note: expected 'UINTPTR' but argument is of type 'u8 (*)[640]'
+ u32 XAxiCdma_SimpleTransfer(XAxiCdma *InstancePtr, UINTPTR SrcAddr, UINTPTR DstAddr,
+     ^
+/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:161:39: warning: passing argument 2 of 'XAxiCdma_SimpleTransfer' makes integer from pointer without a cast
+      XAxiCdma_SimpleTransfer(&o_cdma, o_framebuffer_line_p, O_BRAM_AXI_ADDR, FRAMEBUF_WIDTH, NULL, NULL);
+                                       ^
+In file included from /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:17:0:
+../../linebuffer_test_bsp/ps7_cortexa9_0/include/xaxicdma.h:534:5: note: expected 'UINTPTR' but argument is of type 'u8 (*)[640]'
+ u32 XAxiCdma_SimpleTransfer(XAxiCdma *InstancePtr, UINTPTR SrcAddr, UINTPTR DstAddr,
+     ^
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35432	   1992	 330532	 367956	  59d54	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 

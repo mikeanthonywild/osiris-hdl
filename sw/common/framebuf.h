@@ -13,6 +13,7 @@
 
 /***************************** Include Files *********************************/
 #include "platform_config.h"
+#include "xil_types.h"
 
 /************************** Constant Definitions *****************************/
 

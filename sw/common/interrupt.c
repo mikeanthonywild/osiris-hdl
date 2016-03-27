@@ -11,6 +11,8 @@
 /***************************** Include Files *********************************/
 #include "interrupt.h"
 #include "xscugic.h"
+#include "xil_exception.h"
+#include "platform_config.h"
 
 /************************** Constant Definitions *****************************/
 
@@ -22,13 +24,37 @@
 
 
 /************************** Variable Definitions *****************************/
-
+XScuGic g_int_ctrl;
+static XScuGic_Config *int_ctrl_cfg_p;
 
 /************************** Function Prototypes ******************************/
 
 
 /*****************************************************************************/
-int create_interrupt(XScuGic *instance_p, u32 int_id, u8 priority, trigger_t trigger, Xil_InterruptHandler isr, void *callback_ref) {
+int init_interrupts() {
+	int status;
+
+	Xil_ExceptionInit(); // Only needed for Microblaze + PPC?
+
+	int_ctrl_cfg_p = XScuGic_LookupConfig(SCUGIC_DEVICE_ID);
+	status = XScuGic_CfgInitialize(&g_int_ctrl, int_ctrl_cfg_p, int_ctrl_cfg_p->CpuBaseAddress);
+	if (status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	// Connect interrupt controller hardware driver
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_IRQ_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, &g_int_ctrl);
+
+	return XST_SUCCESS;
+}
+
+
+void enable_interrupts() {
+	Xil_ExceptionEnable();
+}
+
+
+int create_interrupt(XScuGic *instance_p, u32 int_id, u8 priority, u8 trigger, Xil_InterruptHandler isr, void *callback_ref) {
     int status;
 
     // Connect interrupt controller hardware driver
@@ -37,15 +63,9 @@ int create_interrupt(XScuGic *instance_p, u32 int_id, u8 priority, trigger_t tri
         return XST_FAILURE;
     }
 
-    status = XScuGic_SetPriorityTriggerType(instance_p, int_id, priority, trigger);
-    if (status != XST_SUCCESS) {
-        return XST_FAILURE;
-    }
+    XScuGic_SetPriorityTriggerType(instance_p, int_id, priority, trigger);
 
-    status = XScuGic_Enable(instance_p, int_id);
-    if (status != XST_SUCCESS) {
-        return XST_FAILURE;
-    }
+    XScuGic_Enable(instance_p, int_id);
 
     return XST_SUCCESS;
 }

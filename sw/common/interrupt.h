@@ -25,7 +25,7 @@
 
 
 /**************************** Global variables *******************************/
-
+extern XScuGic g_int_ctrl;
 
 /***************** Macros (Inline Functions) Definitions *********************/
 

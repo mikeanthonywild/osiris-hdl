@@ -15,6 +15,7 @@
 #include "platform_config.h"
 #include "framebuf.h"
 #include "xaxicdma.h"
+#include "xil_cache.h"
 #include "xil_printf.h"
 
 /************************** Constant Definitions *****************************/
@@ -137,6 +138,11 @@ int init_buf_controller(void) {
     	return XST_FAILURE;
     }
 
+    status = init_axi_cdma();
+    if (status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
     return XST_SUCCESS;
 }
 
@@ -145,11 +151,8 @@ void update_buf_controller(void) {
     // Check the flags for transfers and address reset
     if (line_valid_flag) {
         // TODO: Do we need to flush the cache?
-        /* Flush the SrcBuffer before the DMA transfer, in case the Data Cache
-         * is enabled
-         */
-        //Xil_DCacheFlushRange((UINTPTR)&SrcBuffer, Length);
-        //XAxiCdma_SimpleTransfer(&i_cdma, (UINTPTR)I_BRAM_AXI_ADDR, (UINTPTR)i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+        Xil_DCacheFlushRange((UINTPTR)g_framebuf, FRAMEBUF_WIDTH);
+        XAxiCdma_SimpleTransfer(&i_cdma, (UINTPTR)I_BRAM_AXI_ADDR, (UINTPTR)i_framebuf_line_p, FRAMEBUF_WIDTH, NULL, NULL);
         i_framebuf_line_p++;
         line_valid_flag = 0;
         xil_printf("i_framebuf_line_p = 0x%x\n", i_framebuf_line_p);
@@ -162,6 +165,7 @@ void update_buf_controller(void) {
     }
 
     if (req_line_flag) {
+    	Xil_DCacheFlushRange((UINTPTR)g_framebuf, FRAMEBUF_WIDTH);
     	XAxiCdma_SimpleTransfer(&o_cdma, (UINTPTR)o_framebuf_line_p, (UINTPTR)O_BRAM_AXI_ADDR, FRAMEBUF_WIDTH, NULL, NULL);
         o_framebuf_line_p++;
         req_line_flag = 0;

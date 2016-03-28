@@ -1,6 +1,21 @@
-22:44:03 **** Incremental Build of configuration Debug for project linebuffer_test ****
+15:02:24 **** Auto Build of configuration Debug for project linebuffer_test ****
 make all 
-make: Nothing to be done for `all'.
+Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
+ 
+Building target: linebuffer_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: linebuffer_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35692	   1992	 330592	 368276	  59e94	linebuffer_test.elf
+Finished building: linebuffer_test.elf.size
+ 
 
-22:44:04 Build Finished (took 68ms)
+15:02:25 Build Finished (took 111ms)
 

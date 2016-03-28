@@ -13,7 +13,9 @@
   </ObjectList>
   <ObjectList object_type="hw_ila" gui_info="">
     <Object name="u_ila_0" gui_info="">
+      <Properties Property="CONTROL.DATA_DEPTH" value="1024"/>
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CONTROL.WINDOW_COUNT" value="1"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="u_ila_0_0" gui_info="">
@@ -23,9 +25,9 @@
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
     <Object name="design_1_i/test_pattern_generator_0_vde" gui_info="Trigger Setup=0"/>
-    <Object name="linebuffer_test_i/o_buf_controller_hsync" gui_info=""/>
+    <Object name="linebuffer_test_i/o_buf_controller_hsync" gui_info="Trigger Setup=0"/>
     <Object name="linebuffer_test_i/o_buf_controller_req_frame" gui_info=""/>
-    <Object name="linebuffer_test_i/o_buf_controller_req_line" gui_info="Trigger Setup=0"/>
+    <Object name="linebuffer_test_i/o_buf_controller_req_line" gui_info=""/>
     <Object name="linebuffer_test_i/o_buf_controller_vde" gui_info=""/>
     <Object name="linebuffer_test_i/o_buf_controller_vsync" gui_info=""/>
   </ObjectList>
@@ -170,13 +172,13 @@
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;hX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;h1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;hX"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;h1"/>
       </probeOptions>
       <nets>
         <net name="linebuffer_test_i/o_buf_controller_hsync"/>
@@ -200,13 +202,13 @@
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;hX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;h1"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;hX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;h1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;hX"/>
       </probeOptions>
       <nets>
         <net name="linebuffer_test_i/o_buf_controller_req_line"/>

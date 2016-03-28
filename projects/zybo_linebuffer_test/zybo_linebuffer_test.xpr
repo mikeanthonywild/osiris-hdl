@@ -44,6 +44,7 @@
         <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_xlconcat_0_0/linebuffer_test_xlconcat_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_xlconcat_1_0/linebuffer_test_xlconcat_1_0.xci"/>
         <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_clk_wiz_0_0/linebuffer_test_clk_wiz_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_us_1/linebuffer_test_auto_us_1.xci"/>
         <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_rgb2vga_0_0/linebuffer_test_rgb2vga_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_xbar_0/linebuffer_test_xbar_0.xci"/>
         <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_axi_mem_intercon_1_0/linebuffer_test_axi_mem_intercon_1_0.xci"/>
@@ -58,18 +59,17 @@
         <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_processing_system7_0_0/linebuffer_test_processing_system7_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_axi_bram_ctrl_0_0/linebuffer_test_axi_bram_ctrl_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_xbar_2/linebuffer_test_xbar_2.xci"/>
-        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="hdl/linebuffer_test.v"/>
-        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_pc_2/linebuffer_test_auto_pc_2.xci"/>
         <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="linebuffer_test_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_pc_0/linebuffer_test_auto_pc_0.xci"/>
         <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_ds_0/linebuffer_test_auto_ds_0.xci"/>
-        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="hdl/linebuffer_test.hwdef"/>
-        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="hw_handoff/linebuffer_test.hwh"/>
-        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="hw_handoff/linebuffer_test_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_us_1/linebuffer_test_auto_us_1.xci"/>
-        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_ds_1/linebuffer_test_auto_ds_1.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_pc_2/linebuffer_test_auto_pc_2.xci"/>
         <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_pc_1/linebuffer_test_auto_pc_1.xci"/>
         <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_us_0/linebuffer_test_auto_us_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_ds_1/linebuffer_test_auto_ds_1.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="ip/linebuffer_test_auto_pc_0/linebuffer_test_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="hdl/linebuffer_test.v"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="hdl/linebuffer_test.hwdef"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="hw_handoff/linebuffer_test_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="linebuffer_test.bd" FileRelPathName="hw_handoff/linebuffer_test.hwh"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/linebuffer_test/hdl/linebuffer_test_wrapper.v">
         <FileInfo>

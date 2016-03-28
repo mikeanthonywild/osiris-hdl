@@ -57,6 +57,7 @@ int main()
 
     init_platform();
     init_interrupts();
+    init_framebuf();
     init_buf_controller();
 
     enable_interrupts();

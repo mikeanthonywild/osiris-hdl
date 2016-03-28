@@ -37,8 +37,8 @@ static XAxiCdma o_cdma;
 static XAxiCdma_Config *i_cdma_cfg_p;
 static XAxiCdma_Config *o_cdma_cfg_p;
 
-static u8 (*i_framebuffer_line_p)[FRAMEBUF_WIDTH] = &g_framebuf[0];
-static u8 (*o_framebuffer_line_p)[FRAMEBUF_WIDTH] = &g_framebuf[0];
+static u8 (*i_framebuf_line_p)[FRAMEBUF_WIDTH] = &g_framebuf[0];
+static u8 (*o_framebuf_line_p)[FRAMEBUF_WIDTH] = &g_framebuf[0];
 
 /************************** Function Prototypes ******************************/
 static void line_valid_isr(void *);
@@ -53,25 +53,25 @@ int init_buf_ctrl_interrupts(void) {
     int status;
 
     // line_valid
-    status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, &line_valid_isr, NULL);
+    status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, &line_valid_isr, (void*)&line_valid_flag);
     if (status != XST_SUCCESS) {
         return XST_FAILURE;
     }
 
     // frame_valid
-    status = create_interrupt(&g_int_ctrl, FRAME_VALID_INT_ID, 0x0, TRIGGER_TYPE_EDGE_RISING, &frame_valid_isr, NULL);
+    status = create_interrupt(&g_int_ctrl, FRAME_VALID_INT_ID, 0x0, TRIGGER_TYPE_EDGE_RISING, &frame_valid_isr, (void*)&frame_valid_flag);
     if (status != XST_SUCCESS) {
         return XST_FAILURE;
     }
 
     // req_line
-    status = create_interrupt(&g_int_ctrl, REQ_LINE_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, &req_line_isr, NULL);
+    status = create_interrupt(&g_int_ctrl, REQ_LINE_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, &req_line_isr, (void*)&req_line_flag);
     if (status != XST_SUCCESS) {
         return XST_FAILURE;
     }
 
     // req_frame
-    status = create_interrupt(&g_int_ctrl, REQ_FRAME_INT_ID, 0x0, TRIGGER_TYPE_EDGE_RISING, &req_frame_isr, NULL);
+    status = create_interrupt(&g_int_ctrl, REQ_FRAME_INT_ID, 0x0, TRIGGER_TYPE_EDGE_RISING, &req_frame_isr, (void*)&req_frame_flag);
     if (status != XST_SUCCESS) {
         return XST_FAILURE;
     }
@@ -82,22 +82,19 @@ int init_buf_ctrl_interrupts(void) {
 
 void line_valid_isr(void *line_valid_flag) {
     *((int *)line_valid_flag) = 1;
-    xil_printf("line_valid_isr\n");
+    xil_printf("testing...\n");
 }
 
 void frame_valid_isr(void *frame_valid_flag) {
 	*((int *)frame_valid_flag) = 1;
-	xil_printf("frame_valid_isr\n");
 }
 
 void req_line_isr(void *req_line_flag) {
 	*((int *)req_line_flag) = 1;
-	xil_printf("req_line_isr\n");
 }
 
 void req_frame_isr(void *req_frame_flag) {
 	*((int *)req_frame_flag) = 1;
-	xil_printf("req_frame_isr\n");
 }
 
 
@@ -152,24 +149,28 @@ void update_buf_controller(void) {
          * is enabled
          */
         //Xil_DCacheFlushRange((UINTPTR)&SrcBuffer, Length);
-        XAxiCdma_SimpleTransfer(&i_cdma, (UINTPTR)I_BRAM_AXI_ADDR, (UINTPTR)i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
-        i_framebuffer_line_p++;
+        //XAxiCdma_SimpleTransfer(&i_cdma, (UINTPTR)I_BRAM_AXI_ADDR, (UINTPTR)i_framebuffer_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+        i_framebuf_line_p++;
         line_valid_flag = 0;
+        xil_printf("i_framebuf_line_p = 0x%x\n", i_framebuf_line_p);
     }
 
     if (frame_valid_flag) {
-        i_framebuffer_line_p = &g_framebuf[0];
+        i_framebuf_line_p = &g_framebuf[0];
         frame_valid_flag = 0;
+        xil_printf("i_framebuf_line_p = 0x%x\n", &g_framebuf[0]);
     }
 
     if (req_line_flag) {
-    	XAxiCdma_SimpleTransfer(&o_cdma, (UINTPTR)o_framebuffer_line_p, (UINTPTR)O_BRAM_AXI_ADDR, FRAMEBUF_WIDTH, NULL, NULL);
-        o_framebuffer_line_p++;
+    	XAxiCdma_SimpleTransfer(&o_cdma, (UINTPTR)o_framebuf_line_p, (UINTPTR)O_BRAM_AXI_ADDR, FRAMEBUF_WIDTH, NULL, NULL);
+        o_framebuf_line_p++;
         req_line_flag = 0;
+        xil_printf("o_framebuf_line_p = 0x%x\n", o_framebuf_line_p);
     }
 
     if (req_frame_flag) {
-        o_framebuffer_line_p = &g_framebuf[0];
+        o_framebuf_line_p = &g_framebuf[0];
         req_frame_flag = 0;
+        xil_printf("o_framebuf_line_p = 0x%x\n", &g_framebuf[0]);
     }
 }

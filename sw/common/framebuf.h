@@ -28,6 +28,6 @@ extern u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
 
 
 /************************** Function Prototypes ******************************/
-
+void init_framebuf(void);
 
 #endif // FRAMEBUF_H

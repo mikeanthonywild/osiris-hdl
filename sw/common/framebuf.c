@@ -11,6 +11,7 @@
 /***************************** Include Files *********************************/
 #include "framebuf.h"
 #include "platform_config.h"
+#include "string.h"
 
 /************************** Constant Definitions *****************************/
 
@@ -28,3 +29,6 @@ u8 g_framebuf[FRAMEBUF_HEIGHT][FRAMEBUF_WIDTH];
 
 
 /*****************************************************************************/
+void init_framebuf(void) {
+	memset(g_framebuf, 0x00, sizeof(g_framebuf[0][0]) * FRAMEBUF_HEIGHT * FRAMEBUF_WIDTH);
+}

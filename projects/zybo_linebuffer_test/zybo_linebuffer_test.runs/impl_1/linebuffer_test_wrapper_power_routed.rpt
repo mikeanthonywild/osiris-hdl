@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date             : Sun Mar 27 22:15:07 2016
+| Date             : Mon Mar 28 11:31:34 2016
 | Host             : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 | Command          : 
 | Design           : linebuffer_test_wrapper
@@ -50,15 +50,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.022 |       11 |       --- |             --- |
-| Slice Logic              |     0.005 |    18798 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     6463 |     17600 |           36.72 |
+| Slice Logic              |     0.005 |    18799 |       --- |             --- |
+|   LUT as Logic           |     0.004 |     6465 |     17600 |           36.73 |
 |   CARRY4                 |    <0.001 |      208 |      4400 |            4.73 |
 |   Register               |    <0.001 |     8941 |     35200 |           25.40 |
 |   LUT as Distributed RAM |    <0.001 |      140 |      6000 |            2.33 |
 |   F7/F8 Muxes            |    <0.001 |        7 |     17600 |            0.04 |
 |   LUT as Shift Register  |    <0.001 |      423 |      6000 |            7.05 |
 |   Others                 |     0.000 |      775 |       --- |             --- |
-| Signals                  |     0.007 |    13666 |       --- |             --- |
+| Signals                  |     0.006 |    13662 |       --- |             --- |
 | Block RAM                |     0.005 |      4.5 |        60 |            7.50 |
 | MMCM                     |     0.128 |        1 |         2 |           50.00 |
 | I/O                      |    <0.001 |       23 |       100 |           23.00 |

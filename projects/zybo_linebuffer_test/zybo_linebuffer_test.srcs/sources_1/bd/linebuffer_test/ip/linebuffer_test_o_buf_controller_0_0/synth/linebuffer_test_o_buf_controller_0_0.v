@@ -84,9 +84,9 @@ output wire req_frame;
     .H_SYNC_PULSE(96),
     .H_BACK_PORCH(48),
     .DISPLAY_HEIGHT(480),
-    .V_FRONT_PORCH(1),
-    .V_SYNC_PULSE(3),
-    .V_BACK_PORCH(25)
+    .V_FRONT_PORCH(10),
+    .V_SYNC_PULSE(2),
+    .V_BACK_PORCH(33)
   ) inst (
     .pclk(pclk),
     .reset_n(reset_n),

@@ -250,6 +250,11 @@ CONFIG.C_M_AXI_MAX_BURST_LEN {256} \
 
   # Create instance: o_buf_controller, and set properties
   set o_buf_controller [ create_bd_cell -type ip -vlnv mikeanthonywild.com:user:o_buf_controller:1.0 o_buf_controller ]
+  set_property -dict [ list \
+CONFIG.V_BACK_PORCH {33} \
+CONFIG.V_FRONT_PORCH {10} \
+CONFIG.V_SYNC_PULSE {2} \
+ ] $o_buf_controller
 
   # Create instance: o_linebuffer, and set properties
   set o_linebuffer [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.3 o_linebuffer ]

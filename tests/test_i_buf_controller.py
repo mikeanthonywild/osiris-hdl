@@ -4,6 +4,7 @@ from myhdl import *
 from uhdl import *
 from PIL import Image
 
+LINE_SLICE = 1
 
 image_data = Image.open('tests/images/qvga_test_pattern.bmp').convert('L')
 image_pixels = image_data.load()
@@ -51,7 +52,7 @@ def test_readout_into_linebuffer():
             vde.next = 1
             hsync.next = 1
             for pixel in range(image_data.size[0]):
-                i_data.next = image_pixels[pixel, 0]
+                i_data.next = image_pixels[pixel, LINE_SLICE]
                 yield pclk.posedge
 
 
@@ -64,10 +65,10 @@ def test_readout_into_linebuffer():
             # Check that test image and captured linebuffer match
             for pixel in range(image_data.size[0]):
                 try:
-                    assert capture_pixels[pixel, 0] == image_pixels[pixel, 0]
+                    assert capture_pixels[pixel, 0] == image_pixels[pixel, LINE_SLICE]
                 except AssertionError:
                     print("Pixel mismatch [{}, {}]. Captured {}, should be {}".format(
-                          pixel, 0, capture_pixels[pixel, 0], image_pixels[pixel, 0]))
+                          pixel, 0, capture_pixels[pixel, 0], image_pixels[pixel, LINE_SLICE]))
                     raise AssertionError
 
             raise StopSimulation

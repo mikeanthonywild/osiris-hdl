@@ -388,3 +388,49 @@ com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
 15:01:12 INFO  : ps7_init is completed.
 15:01:12 INFO  : ps7_post_config is completed.
 15:01:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:32:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:32:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:33:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:33:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:33:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:33:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+15:33:44 INFO  : FPGA configured successfully with bitstream "/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper_hw_platform_0/linebuffer_test_wrapper.bit"
+15:33:49 INFO  : ps7_init is completed.
+15:33:50 INFO  : ps7_post_config is completed.
+15:33:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:43:39 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:43:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:44:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:44:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:44:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:44:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+15:44:33 INFO  : FPGA configured successfully with bitstream "/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper_hw_platform_0/linebuffer_test_wrapper.bit"
+15:44:41 INFO  : ps7_init is completed.
+15:44:41 INFO  : ps7_post_config is completed.
+15:44:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:45:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:47:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:48:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:49:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:54:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:55:19 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:55:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:59:27 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:59:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:00:52 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:00:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:02:56 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:02:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:03:19 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:03:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:04:28 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:04:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:07:27 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:07:30 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:08:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:15:16 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:17:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:18:14 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:18:16 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:20:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:21:20 INFO  : Processor reset is completed for ps7_cortexa9_0

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1459160178">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1459169257">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="RDI-RDI" Name="linebuffer_test_wrapper.vdi"/>
   <File Type="BG-DRC" Name="linebuffer_test_wrapper.drc"/>
@@ -73,6 +73,18 @@
     <File Path="$PSRCDIR/sources_1/bd/design_1/ip/design_1_i_buf_controller_0_0/design_1_i_buf_controller_0_0.upgrade_log"/>
     <File Path="$PSRCDIR/sources_1/bd/design_1/ip/design_1_test_pattern_generator_0_0/design_1_test_pattern_generator_0_0.upgrade_log"/>
     <File Path="$PSRCDIR/sources_1/bd/linebuffer_test/ip/linebuffer_test_o_buf_controller_0_0/linebuffer_test_o_buf_controller_0_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/linebuffer_test/ip/linebuffer_test_blk_mem_gen_0_1/test_readout_into_linebuffer.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/linebuffer_test/ip/linebuffer_test_blk_mem_gen_0_1/test_video_output_from_linebuffer.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="linebuffer_test_wrapper"/>

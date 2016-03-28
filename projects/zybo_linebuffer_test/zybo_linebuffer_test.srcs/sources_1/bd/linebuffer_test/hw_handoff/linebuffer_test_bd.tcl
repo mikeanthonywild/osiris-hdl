@@ -259,12 +259,24 @@ CONFIG.V_SYNC_PULSE {2} \
   # Create instance: o_linebuffer, and set properties
   set o_linebuffer [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.3 o_linebuffer ]
   set_property -dict [ list \
+CONFIG.Byte_Size {8} \
+CONFIG.Coe_File {no_coe_file_loaded} \
+CONFIG.Enable_32bit_Address {true} \
 CONFIG.Enable_B {Use_ENB_Pin} \
+CONFIG.Fill_Remaining_Memory_Locations {false} \
+CONFIG.Load_Init_File {false} \
 CONFIG.Memory_Type {True_Dual_Port_RAM} \
 CONFIG.Port_B_Clock {100} \
 CONFIG.Port_B_Enable_Rate {100} \
 CONFIG.Port_B_Write_Rate {50} \
+CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
+CONFIG.Register_PortB_Output_of_Memory_Primitives {false} \
+CONFIG.Remaining_Memory_Locations {0} \
+CONFIG.Use_Byte_Write_Enable {true} \
+CONFIG.Use_RSTA_Pin {true} \
 CONFIG.Use_RSTB_Pin {true} \
+CONFIG.Write_Depth_A {8192} \
+CONFIG.use_bram_block {BRAM_Controller} \
  ] $o_linebuffer
 
   # Create instance: processing_system7_0, and set properties

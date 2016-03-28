@@ -17,6 +17,8 @@ set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
 set_property ip_repo_paths /home/mike/Documents/osiris-hdl/hdl [current_project]
 set_property vhdl_version vhdl_2k [current_fileset]
+add_files /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_blk_mem_gen_0_1/test_readout_into_linebuffer.coe
+add_files /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_blk_mem_gen_0_1/test_video_output_from_linebuffer.coe
 add_files /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/linebuffer_test.bd
 set_property used_in_implementation false [get_files -all /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_processing_system7_0_0/linebuffer_test_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_blk_mem_gen_0_0/linebuffer_test_blk_mem_gen_0_0_ooc.xdc]

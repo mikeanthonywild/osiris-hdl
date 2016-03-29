@@ -9,31 +9,34 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1064097fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomStartTime time="166284fs"></ZoomStartTime>
+      <ZoomEndTime time="183445fs"></ZoomEndTime>
+      <Cursor1Time time="184000fs"></Cursor1Time>
    </zoom_setting>
    <WVObjectSize size="5" />
    <wave_markers>
    </wave_markers>
-   <wvobject db_ref_id="1" type="logic" fp_name="linebuffer_test_i/o_buf_controller_vsync">
-      <obj_property name="ElementShortName">linebuffer_test_i/o_buf_controller_vsync</obj_property>
-      <obj_property name="ObjectShortName">linebuffer_test_i/o_buf_controller_vsync</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="linebuffer_test_i/o_buf_controller_hsync">
-      <obj_property name="ElementShortName">linebuffer_test_i/o_buf_controller_hsync</obj_property>
-      <obj_property name="ObjectShortName">linebuffer_test_i/o_buf_controller_hsync</obj_property>
-   </wvobject>
    <wvobject db_ref_id="1" type="logic" fp_name="linebuffer_test_i/o_buf_controller_vde">
       <obj_property name="ElementShortName">linebuffer_test_i/o_buf_controller_vde</obj_property>
       <obj_property name="ObjectShortName">linebuffer_test_i/o_buf_controller_vde</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="linebuffer_test_i/o_buf_controller_req_frame">
-      <obj_property name="ElementShortName">linebuffer_test_i/o_buf_controller_req_frame</obj_property>
-      <obj_property name="ObjectShortName">linebuffer_test_i/o_buf_controller_req_frame</obj_property>
+   <wvobject db_ref_id="1" type="logic" fp_name="linebuffer_test_i/vga_hs">
+      <obj_property name="ElementShortName">linebuffer_test_i/vga_hs</obj_property>
+      <obj_property name="ObjectShortName">linebuffer_test_i/vga_hs</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="linebuffer_test_i/o_buf_controller_req_line">
-      <obj_property name="ElementShortName">linebuffer_test_i/o_buf_controller_req_line</obj_property>
-      <obj_property name="ObjectShortName">linebuffer_test_i/o_buf_controller_req_line</obj_property>
+   <wvobject db_ref_id="1" type="array" fp_name="linebuffer_test_i/o_buf_controller_addr">
+      <obj_property name="ElementShortName">linebuffer_test_i/o_buf_controller_addr[12:0]</obj_property>
+      <obj_property name="ObjectShortName">linebuffer_test_i/o_buf_controller_addr[12:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="linebuffer_test_i/o_linebuffer_doutb">
+      <obj_property name="ElementShortName">linebuffer_test_i/o_linebuffer_doutb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">linebuffer_test_i/o_linebuffer_doutb[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="linebuffer_test_i/o_buf_controller_o_data">
+      <obj_property name="ElementShortName">linebuffer_test_i/o_buf_controller_o_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">linebuffer_test_i/o_buf_controller_o_data[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
 </wave_config>

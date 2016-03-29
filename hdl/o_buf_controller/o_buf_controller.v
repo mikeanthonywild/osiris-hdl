@@ -19,8 +19,8 @@ module o_buf_controller (
     output reg                      hsync,      // Horizontal sync signal
     output reg                      vde,        // Video data enable
     output reg [7:0]                o_data,     // RAW pixel value
-    output reg                      req_line,   // Request new line from PS
-    output reg                      req_frame   // Request new frame from PS
+    output                          req_line,   // Request new line from PS
+    output                          req_frame   // Request new frame from PS
 );
 
     // Parameters
@@ -43,6 +43,13 @@ module o_buf_controller (
     // Registers
     reg [12:0] h_count;
     reg [12:0] v_count;
+    reg vsync_next;
+    reg hsync_next;
+    reg vde_next;
+
+    // Combinatorial PS interrupts
+    assign req_line = !vde;
+    assign req_frame = v_count == DISPLAY_HEIGHT-1 && !req_line;
 
     always @(posedge pclk) begin
         if (!reset_n) begin
@@ -53,21 +60,20 @@ module o_buf_controller (
             vsync <= 1;
             vde <= 0;
             o_data <= 0;
-            req_line <= 0;
-            req_frame <= 0;
         end else begin
             
             if (h_count < MAX_H_COUNT-1) begin
                 h_count <= h_count + 1;
                 o_data <= (i_data >> ((3 - ((h_count-1) % 4)) * 8)) & 'h000000ff;
                 if (h_count < DISPLAY_WIDTH-1) begin
-                    if (!((h_count+1) % 4) && (h_count+1)) begin
+                    if (!((h_count+2) % 4) ) begin
                         addr <= addr + 1;
                     end
+                end else begin
+                    addr <= 0;
                 end
             end else begin
                 h_count <= 0;
-                addr <= 0;
                 v_count <= v_count + 1;
                 if (v_count == MAX_V_COUNT-1) begin
                     v_count <= 0;
@@ -76,16 +82,14 @@ module o_buf_controller (
 
             // VGA sync logic
             // All of these have a 1-cycle delay to sync them with data output
-            vsync <= (v_count < (DISPLAY_HEIGHT + V_FRONT_PORCH)) ||
+            vsync_next <= (v_count < (DISPLAY_HEIGHT + V_FRONT_PORCH)) ||
                 (v_count >= (MAX_V_COUNT - V_BACK_PORCH));
-            hsync <= (h_count < (DISPLAY_WIDTH + H_FRONT_PORCH)) ||
+            vsync <= vsync_next;
+            hsync_next <= (h_count < (DISPLAY_WIDTH + H_FRONT_PORCH)) ||
                 (h_count >= (MAX_H_COUNT - H_BACK_PORCH));
-            vde <= h_count < DISPLAY_WIDTH-1 && v_count < DISPLAY_HEIGHT;
-
-            // PS interrupts
-            req_line <= h_count >= DISPLAY_WIDTH-1 && v_count < DISPLAY_HEIGHT;
-            req_frame <= v_count == DISPLAY_HEIGHT-1;
-
+            hsync <= hsync_next;
+            vde_next <= h_count < DISPLAY_WIDTH-1 && v_count < DISPLAY_HEIGHT;
+            vde <= vde_next;
         end
     end
 

@@ -19,7 +19,7 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 WARNING: [Synth 8-992] S_AXI_GP0_ACLK_temp is already implicitly declared earlier [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:2701]
 WARNING: [Synth 8-992] S_AXI_GP1_ACLK_temp is already implicitly declared earlier [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:2702]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1131.789 ; gain = 294.547 ; free physical = 1473 ; free virtual = 17278
+Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1131.785 ; gain = 294.547 ; free physical = 2865 ; free virtual = 17631
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'linebuffer_test_wrapper' [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/hdl/linebuffer_test_wrapper.v:12]
 INFO: [Synth 8-638] synthesizing module 'linebuffer_test' [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/hdl/linebuffer_test.v:13]
@@ -13721,7 +13721,7 @@ INFO: [Synth 8-256] done synthesizing module 'linebuffer_test_xlconcat_1_0' (180
 INFO: [Synth 8-256] done synthesizing module 'linebuffer_test' (181#1) [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/hdl/linebuffer_test.v:13]
 INFO: [Synth 8-256] done synthesizing module 'linebuffer_test_wrapper' (182#1) [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/hdl/linebuffer_test_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:11:38 ; elapsed = 00:11:42 . Memory (MB): peak = 1434.379 ; gain = 597.137 ; free physical = 1417 ; free virtual = 17211
+Finished RTL Elaboration : Time (s): cpu = 00:11:29 ; elapsed = 00:11:34 . Memory (MB): peak = 1434.375 ; gain = 597.137 ; free physical = 2438 ; free virtual = 17243
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -13739,7 +13739,7 @@ INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[8] to constant 0 
 INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[17] to constant 0 [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ipshared/xilinx.com/blk_mem_gen_v8_3/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
 INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[8] to constant 0 [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ipshared/xilinx.com/blk_mem_gen_v8_3/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:11:40 ; elapsed = 00:11:43 . Memory (MB): peak = 1434.379 ; gain = 597.137 ; free physical = 1417 ; free virtual = 17211
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:11:31 ; elapsed = 00:11:35 . Memory (MB): peak = 1434.375 ; gain = 597.137 ; free physical = 2449 ; free virtual = 17249
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 43 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -13768,6 +13768,42 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/linebuffer_test_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
 Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc]
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_axi_bram_ctrl_n_49'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:483]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:483]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_axi_bram_ctrl_n_50'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:484]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:484]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_axi_bram_ctrl_n_51'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:485]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:485]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_axi_bram_ctrl_n_52'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:486]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:486]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_axi_bram_ctrl_n_53'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:487]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:487]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_axi_bram_ctrl_n_54'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:488]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:488]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_axi_bram_ctrl_n_55'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:489]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:489]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_axi_bram_ctrl_n_56'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:490]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:490]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_axi_bram_ctrl_n_57'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:491]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:491]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_axi_bram_ctrl_n_58'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:492]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:492]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_axi_bram_ctrl_n_59'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:493]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:493]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'linebuffer_test_i/o_axi_bram_ctrl_n_60'. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:494]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc:494]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/linebuffer_test_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/linebuffer_test_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
@@ -13792,22 +13828,24 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   MUXCY_L => MUXCY: 8 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1642.574 ; gain = 0.000 ; free physical = 1338 ; free virtual = 17132
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1642.570 ; gain = 0.000 ; free physical = 2353 ; free virtual = 17150
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 871 
+INFO: Helper process launched with PID 14707 
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:12:03 ; elapsed = 00:12:06 . Memory (MB): peak = 1642.574 ; gain = 805.332 ; free physical = 1330 ; free virtual = 17124
+Finished Constraint Validation : Time (s): cpu = 00:11:55 ; elapsed = 00:11:57 . Memory (MB): peak = 1642.570 ; gain = 805.332 ; free physical = 2349 ; free virtual = 17147
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:12:03 ; elapsed = 00:12:06 . Memory (MB): peak = 1642.574 ; gain = 805.332 ; free physical = 1330 ; free virtual = 17124
+Finished Loading Part and Timing Information : Time (s): cpu = 00:11:55 ; elapsed = 00:11:57 . Memory (MB): peak = 1642.570 ; gain = 805.332 ; free physical = 2349 ; free virtual = 17147
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property MARK_DEBUG = true for linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[8]. (constraint file  /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc, line 470).
+Applied set_property MARK_DEBUG = true for linebuffer_test_i/axi_mem_intercon_1_M00_AXI_WVALID. (constraint file  /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc, line 495).
 Applied set_property DONT_TOUCH = true for linebuffer_test_i/processing_system7_0/inst. (constraint file  /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.runs/synth_1/dont_touch.xdc, line 103).
 Applied set_property DONT_TOUCH = true for linebuffer_test_i/i_axi_cdma/U0. (constraint file  /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.runs/synth_1/dont_touch.xdc, line 110).
 Applied set_property DONT_TOUCH = true for linebuffer_test_i/o_axi_cdma/U0. (constraint file  /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.runs/synth_1/dont_touch.xdc, line 129).
@@ -13849,7 +13887,7 @@ Applied set_property DONT_TOUCH = true for linebuffer_test_i/rst_processing_syst
 Applied set_property DONT_TOUCH = true for linebuffer_test_i/test_pattern_generator_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for linebuffer_test_i/vga_concat. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:12:04 ; elapsed = 00:12:06 . Memory (MB): peak = 1642.574 ; gain = 805.332 ; free physical = 1330 ; free virtual = 17124
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:11:55 ; elapsed = 00:11:58 . Memory (MB): peak = 1642.570 ; gain = 805.332 ; free physical = 2348 ; free virtual = 17145
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "leaving_empty_fwft" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cmd_step_i" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -14021,7 +14059,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rlast_sm_cs_reg' using encoding 'sequential' in module 'rd_chnl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:12:12 ; elapsed = 00:12:14 . Memory (MB): peak = 1642.574 ; gain = 805.332 ; free physical = 1332 ; free virtual = 17126
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:12:04 ; elapsed = 00:12:07 . Memory (MB): peak = 1642.570 ; gain = 805.332 ; free physical = 2351 ; free virtual = 17149
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -15524,7 +15562,7 @@ BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:12:12 ; elapsed = 00:12:15 . Memory (MB): peak = 1642.574 ; gain = 805.332 ; free physical = 1331 ; free virtual = 17126
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:12:04 ; elapsed = 00:12:07 . Memory (MB): peak = 1642.570 ; gain = 805.332 ; free physical = 2351 ; free virtual = 17149
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -15602,9 +15640,9 @@ INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:12:18 ; elapsed = 00:12:20 . Memory (MB): peak = 1642.574 ; gain = 805.332 ; free physical = 1335 ; free virtual = 17130
+Finished Cross Boundary Optimization : Time (s): cpu = 00:12:10 ; elapsed = 00:12:13 . Memory (MB): peak = 1642.570 ; gain = 805.332 ; free physical = 2358 ; free virtual = 17156
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:12:18 ; elapsed = 00:12:20 . Memory (MB): peak = 1642.574 ; gain = 805.332 ; free physical = 1335 ; free virtual = 17130
+Finished Parallel Reinference  : Time (s): cpu = 00:12:10 ; elapsed = 00:12:13 . Memory (MB): peak = 1642.570 ; gain = 805.332 ; free physical = 2358 ; free virtual = 17156
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -15637,6 +15675,23 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (linebuffer_test_i/o_axi_bram_ctrl/\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/axi_b2b_brst_reg )
+INFO: [Synth 8-3886] merging instance 'linebuffer_test_i/o_axi_bram_ctrl/\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/GEN_RRESP.axi_rresp_int_reg[0] ' (FDRE) to 'linebuffer_test_i/o_axi_bram_ctrl/\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/GEN_RRESP.axi_rresp_int_reg[1] '
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (linebuffer_test_i/o_axi_bram_ctrl/\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/GEN_RRESP.axi_rresp_int_reg[1] )
+INFO: [Synth 8-3886] merging instance 'linebuffer_test_i/o_axi_bram_ctrl/\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/GEN_BRESP.axi_bresp_int_reg[0] ' (FDRE) to 'linebuffer_test_i/o_axi_bram_ctrl/\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/GEN_BRESP.axi_bresp_int_reg[1] '
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (linebuffer_test_i/o_axi_bram_ctrl/\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/GEN_BRESP.axi_bresp_int_reg[1] )
+INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Data_Exists_DFF ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
+INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Addr_Counters[0].FDRE_I ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
+INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Addr_Counters[1].FDRE_I ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
+INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Addr_Counters[2].FDRE_I ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
+INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Addr_Counters[3].FDRE_I ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
+INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/bid_gets_fifo_load_d1_reg ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
+INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/GEN_BRESP.axi_bresp_int_reg[1] ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
+INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/GEN_BRESP.axi_bresp_int_reg[0] ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
+INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/axi_b2b_brst_reg ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
+INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/GEN_RID_SNG.axi_rid_temp_reg[0] ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
+INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/GEN_RRESP.axi_rresp_int_reg[1] ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
+INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/GEN_RRESP.axi_rresp_int_reg[0] ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
 INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Data_Exists_DFF ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_0.
 INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Addr_Counters[0].FDRE_I ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_0.
 INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Addr_Counters[1].FDRE_I ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_0.
@@ -15644,17 +15699,10 @@ INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4
 INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Addr_Counters[3].FDRE_I ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_0.
 INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/bid_gets_fifo_load_d1_reg ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_0.
 INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/GEN_RID_SNG.axi_rid_temp_reg[0] ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_0.
-INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Data_Exists_DFF ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
-INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Addr_Counters[0].FDRE_I ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
-INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Addr_Counters[1].FDRE_I ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
-INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Addr_Counters[2].FDRE_I ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
-INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/BID_FIFO/Addr_Counters[3].FDRE_I ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
-INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/bid_gets_fifo_load_d1_reg ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
-INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/GEN_RID_SNG.axi_rid_temp_reg[0] ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:12:33 ; elapsed = 00:12:35 . Memory (MB): peak = 1642.574 ; gain = 805.332 ; free physical = 1302 ; free virtual = 17097
+Finished Area Optimization : Time (s): cpu = 00:12:26 ; elapsed = 00:12:29 . Memory (MB): peak = 1642.570 ; gain = 805.332 ; free physical = 2320 ; free virtual = 17117
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:12:33 ; elapsed = 00:12:35 . Memory (MB): peak = 1642.574 ; gain = 805.332 ; free physical = 1302 ; free virtual = 17097
+Finished Parallel Area Optimization  : Time (s): cpu = 00:12:26 ; elapsed = 00:12:29 . Memory (MB): peak = 1642.570 ; gain = 805.332 ; free physical = 2320 ; free virtual = 17117
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -15668,10 +15716,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:12:43 ; elapsed = 00:12:45 . Memory (MB): peak = 1750.559 ; gain = 913.316 ; free physical = 1148 ; free virtual = 16943
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:12:36 ; elapsed = 00:12:39 . Memory (MB): peak = 1754.555 ; gain = 917.316 ; free physical = 2170 ; free virtual = 16967
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:12:46 ; elapsed = 00:12:49 . Memory (MB): peak = 1782.582 ; gain = 945.340 ; free physical = 1117 ; free virtual = 16912
+Finished Timing Optimization : Time (s): cpu = 00:12:40 ; elapsed = 00:12:43 . Memory (MB): peak = 1785.578 ; gain = 948.340 ; free physical = 2138 ; free virtual = 16936
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -15763,23 +15811,18 @@ INFO: [Synth 8-3332] Sequential element (\inst/gen_axi4_axi3.axi3_conv_inst/USE_
 INFO: [Synth 8-3332] Sequential element (\inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/addr_step_q_reg[3] ) is unused and will be removed from module linebuffer_test_auto_pc_1.
 INFO: [Synth 8-3332] Sequential element (\inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/addr_step_q_reg[2] ) is unused and will be removed from module linebuffer_test_auto_pc_1.
 INFO: [Synth 8-3332] Sequential element (\inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/addr_step_q_reg[1] ) is unused and will be removed from module linebuffer_test_auto_pc_1.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/addr_step_q_reg[0] ) is unused and will be removed from module linebuffer_test_auto_pc_1.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/first_step_q_reg[15] ) is unused and will be removed from module linebuffer_test_auto_pc_1.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/first_step_q_reg[14] ) is unused and will be removed from module linebuffer_test_auto_pc_1.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/first_step_q_reg[13] ) is unused and will be removed from module linebuffer_test_auto_pc_1.
-INFO: [Synth 8-3332] Sequential element (\inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/first_step_q_reg[12] ) is unused and will be removed from module linebuffer_test_auto_pc_1.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:12:55 ; elapsed = 00:12:57 . Memory (MB): peak = 1797.629 ; gain = 960.387 ; free physical = 1101 ; free virtual = 16896
+Finished Technology Mapping : Time (s): cpu = 00:12:49 ; elapsed = 00:12:52 . Memory (MB): peak = 1801.594 ; gain = 964.355 ; free physical = 2119 ; free virtual = 16917
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:12:55 ; elapsed = 00:12:57 . Memory (MB): peak = 1797.629 ; gain = 960.387 ; free physical = 1101 ; free virtual = 16896
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:12:49 ; elapsed = 00:12:52 . Memory (MB): peak = 1801.594 ; gain = 964.355 ; free physical = 2119 ; free virtual = 16917
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:12:55 ; elapsed = 00:12:57 . Memory (MB): peak = 1797.629 ; gain = 960.387 ; free physical = 1101 ; free virtual = 16896
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:12:49 ; elapsed = 00:12:52 . Memory (MB): peak = 1801.594 ; gain = 964.355 ; free physical = 2119 ; free virtual = 16917
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -15913,7 +15956,7 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_command_fifo.v:340]
 INFO: [Common 17-14] Message 'Synth 8-5396' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:12:57 ; elapsed = 00:13:00 . Memory (MB): peak = 1797.629 ; gain = 960.387 ; free physical = 1102 ; free virtual = 16897
+Finished IO Insertion : Time (s): cpu = 00:12:51 ; elapsed = 00:12:54 . Memory (MB): peak = 1801.594 ; gain = 964.355 ; free physical = 2120 ; free virtual = 16918
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -15926,7 +15969,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:12:57 ; elapsed = 00:13:00 . Memory (MB): peak = 1797.629 ; gain = 960.387 ; free physical = 1102 ; free virtual = 16897
+Finished Renaming Generated Instances : Time (s): cpu = 00:12:51 ; elapsed = 00:12:54 . Memory (MB): peak = 1801.594 ; gain = 964.355 ; free physical = 2120 ; free virtual = 16918
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -15938,25 +15981,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:13:00 ; elapsed = 00:13:02 . Memory (MB): peak = 1797.629 ; gain = 960.387 ; free physical = 1101 ; free virtual = 16896
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:12:54 ; elapsed = 00:12:57 . Memory (MB): peak = 1801.594 ; gain = 964.355 ; free physical = 2120 ; free virtual = 16917
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:13:00 ; elapsed = 00:13:03 . Memory (MB): peak = 1797.629 ; gain = 960.387 ; free physical = 1101 ; free virtual = 16896
+Finished Renaming Generated Ports : Time (s): cpu = 00:12:54 ; elapsed = 00:12:57 . Memory (MB): peak = 1801.594 ; gain = 964.355 ; free physical = 2120 ; free virtual = 16917
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:13:00 ; elapsed = 00:13:03 . Memory (MB): peak = 1797.629 ; gain = 960.387 ; free physical = 1101 ; free virtual = 16896
+Finished Handling Custom Attributes : Time (s): cpu = 00:12:54 ; elapsed = 00:12:58 . Memory (MB): peak = 1801.594 ; gain = 964.355 ; free physical = 2120 ; free virtual = 16918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:13:01 ; elapsed = 00:13:03 . Memory (MB): peak = 1797.629 ; gain = 960.387 ; free physical = 1101 ; free virtual = 16896
+Finished Renaming Generated Nets : Time (s): cpu = 00:12:54 ; elapsed = 00:12:58 . Memory (MB): peak = 1801.594 ; gain = 964.355 ; free physical = 2120 ; free virtual = 16918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -16000,11 +16043,11 @@ Report Cell Usage:
 |2     |BUFG       |     3|
 |3     |CARRY4     |   209|
 |4     |LUT1       |   479|
-|5     |LUT2       |   663|
-|6     |LUT3       |  1681|
-|7     |LUT4       |  1405|
-|8     |LUT5       |  1154|
-|9     |LUT6       |  2266|
+|5     |LUT2       |   664|
+|6     |LUT3       |  1673|
+|7     |LUT4       |  1401|
+|8     |LUT5       |  1165|
+|9     |LUT6       |  2241|
 |10    |MMCME2_ADV |     1|
 |11    |MUXF7      |     1|
 |12    |PS7        |     1|
@@ -16028,8 +16071,8 @@ Report Instance Areas:
 +------+-----------------------------------------------------------------------+---------------------------------------------------------------------+------+
 |      |Instance                                                               |Module                                                               |Cells |
 +------+-----------------------------------------------------------------------+---------------------------------------------------------------------+------+
-|1     |top                                                                    |                                                                     | 16751|
-|2     |  linebuffer_test_i                                                    |linebuffer_test                                                      | 16729|
+|1     |top                                                                    |                                                                     | 16726|
+|2     |  linebuffer_test_i                                                    |linebuffer_test                                                      | 16704|
 |3     |    GND                                                                |linebuffer_test_xlconstant_0_1                                       |     0|
 |4     |    VDD                                                                |linebuffer_test_xlconstant_0_0                                       |     0|
 |5     |    axi_mem_intercon                                                   |linebuffer_test_axi_mem_intercon_0                                   |  4549|
@@ -16433,15 +16476,15 @@ Report Instance Areas:
 |403   |              \ramloop[1].ram.r                                        |blk_mem_gen_prim_width__parameterized0                               |     1|
 |404   |                \prim_noinit.ram                                       |blk_mem_gen_prim_wrapper__parameterized0                             |     1|
 |405   |    irq_concat                                                         |linebuffer_test_xlconcat_0_0                                         |     0|
-|406   |    o_axi_bram_ctrl                                                    |linebuffer_test_axi_bram_ctrl_0_1                                    |   453|
-|407   |      U0                                                               |axi_bram_ctrl                                                        |   453|
-|408   |        \gext_inst.abcv4_0_ext_inst                                    |axi_bram_ctrl_top                                                    |   453|
-|409   |          \GEN_AXI4.I_FULL_AXI                                         |full_axi                                                             |   453|
-|410   |            \GEN_ARB.I_SNG_PORT                                        |sng_port_arb                                                         |    28|
-|411   |            I_RD_CHNL                                                  |rd_chnl                                                              |   287|
-|412   |              I_WRAP_BRST                                              |wrap_brst_15                                                         |    56|
-|413   |            I_WR_CHNL                                                  |wr_chnl                                                              |   125|
-|414   |              I_WRAP_BRST                                              |wrap_brst                                                            |    49|
+|406   |    o_axi_bram_ctrl                                                    |linebuffer_test_axi_bram_ctrl_0_1                                    |   428|
+|407   |      U0                                                               |axi_bram_ctrl                                                        |   428|
+|408   |        \gext_inst.abcv4_0_ext_inst                                    |axi_bram_ctrl_top                                                    |   428|
+|409   |          \GEN_AXI4.I_FULL_AXI                                         |full_axi                                                             |   428|
+|410   |            \GEN_ARB.I_SNG_PORT                                        |sng_port_arb                                                         |    31|
+|411   |            I_RD_CHNL                                                  |rd_chnl                                                              |   275|
+|412   |              I_WRAP_BRST                                              |wrap_brst_15                                                         |    47|
+|413   |            I_WR_CHNL                                                  |wr_chnl                                                              |   105|
+|414   |              I_WRAP_BRST                                              |wrap_brst                                                            |    29|
 |415   |    o_axi_cdma                                                         |linebuffer_test_axi_cdma_0_1                                         |  2174|
 |416   |      U0                                                               |axi_cdma                                                             |  2174|
 |417   |        \GEN_SIMPLE_MODE.I_SIMPLE_MODE_WRAP                            |axi_cdma_simple_wrap                                                 |  2174|
@@ -16578,11 +16621,11 @@ Report Instance Areas:
 |548   |    vga_concat                                                         |linebuffer_test_xlconcat_1_0                                         |     0|
 +------+-----------------------------------------------------------------------+---------------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:13:01 ; elapsed = 00:13:03 . Memory (MB): peak = 1797.629 ; gain = 960.387 ; free physical = 1101 ; free virtual = 16896
+Finished Writing Synthesis Report : Time (s): cpu = 00:12:54 ; elapsed = 00:12:58 . Memory (MB): peak = 1801.594 ; gain = 964.355 ; free physical = 2120 ; free virtual = 16918
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2984 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:12:36 ; elapsed = 00:12:40 . Memory (MB): peak = 1797.629 ; gain = 546.035 ; free physical = 1101 ; free virtual = 16896
-Synthesis Optimization Complete : Time (s): cpu = 00:13:01 ; elapsed = 00:13:03 . Memory (MB): peak = 1797.629 ; gain = 960.387 ; free physical = 1101 ; free virtual = 16896
+Synthesis Optimization Runtime : Time (s): cpu = 00:12:30 ; elapsed = 00:12:35 . Memory (MB): peak = 1801.594 ; gain = 550.004 ; free physical = 2120 ; free virtual = 16918
+Synthesis Optimization Complete : Time (s): cpu = 00:12:54 ; elapsed = 00:12:58 . Memory (MB): peak = 1801.594 ; gain = 964.355 ; free physical = 2120 ; free virtual = 16918
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 264 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -16597,8 +16640,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRLC32E => SRL16E: 4 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-1308 Infos, 259 Warnings, 0 Critical Warnings and 0 Errors encountered.
+1313 Infos, 271 Warnings, 12 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:13:03 ; elapsed = 00:13:05 . Memory (MB): peak = 1829.645 ; gain = 832.699 ; free physical = 1100 ; free virtual = 16896
-report_utilization: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.19 . Memory (MB): peak = 1861.664 ; gain = 0.000 ; free physical = 1095 ; free virtual = 16895
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 28 14:00:56 2016...
+synth_design: Time (s): cpu = 00:12:57 ; elapsed = 00:13:00 . Memory (MB): peak = 1833.609 ; gain = 836.668 ; free physical = 2115 ; free virtual = 16918
+report_utilization: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.20 . Memory (MB): peak = 1865.629 ; gain = 0.000 ; free physical = 2117 ; free virtual = 16926
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 29 12:40:12 2016...

@@ -41,6 +41,8 @@ def test_video_output_from_linebuffer():
     (pclk, reset_n, i_data, vsync, hsync, vde,  
         addr, o_data, req_line, req_frame, dut) = _tb_o_buf_controller()
 
+    i_data_delay = Signal(intbv(0)[32:0])
+
     def _bench():
         @instance
         def stimulus():
@@ -74,14 +76,18 @@ def test_video_output_from_linebuffer():
             offset = int(addr) * 4
             pixels = 0
             for i in range(4):
-                pixels = pixels | image_pixels[offset+i, LINE_SLICE] << ((3-i) * 8)
+                try:
+                    pixels = pixels | image_pixels[offset+i, LINE_SLICE] << ((3-i) * 8)
+                except IndexError:
+                    # Ignore invalid address at end
+                    pass
                 
-            i_data.next = pixels
+            i_data_delay.next = pixels
+            i_data.next = i_data_delay
 
         return dut, pclk.gen(), reset_n.pulse(), stimulus, linebuffer_read
         
     Simulation(_bench()).run()
-
 
 '''
 def test_linebuffer_addr_resets_after_new_line():

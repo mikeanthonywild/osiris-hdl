@@ -533,52 +533,52 @@ preplace inst processing_system7_0_axi_periph -pg 1 -lvl 2 -y 330 -defaultsOSRD
 preplace inst i_linebuffer -pg 1 -lvl 6 -y 610 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 5 -y 310 -defaultsOSRD
 preplace netloc processing_system7_0_DDR 1 5 2 NJ 220 NJ
-preplace netloc o_axi_bram_ctrl_BRAM_PORTA 1 5 1 1870
-preplace netloc i_axi_bram_ctrl_BRAM_PORTA 1 5 1 1860
-preplace netloc axi_mem_intercon_M01_AXI 1 4 1 1350
-preplace netloc btn_1 1 0 5 NJ 190 NJ 150 NJ 150 NJ 150 1410
+preplace netloc o_axi_bram_ctrl_BRAM_PORTA 1 5 1 1840
+preplace netloc i_axi_bram_ctrl_BRAM_PORTA 1 5 1 1830
+preplace netloc axi_mem_intercon_M01_AXI 1 4 1 1280
+preplace netloc btn_1 1 0 5 NJ 190 NJ 150 NJ 150 NJ 150 1340
 preplace netloc rgb2vga_0_vga_pRed 1 6 1 NJ
 preplace netloc test_pattern_generator_0_hsync 1 2 1 N
 preplace netloc test_pattern_generator_0_vsync 1 2 1 N
-preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 710
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 650
 preplace netloc rgb2vga_0_vga_pGreen 1 6 1 NJ
-preplace netloc o_buf_controller_req_line 1 3 1 1020
-preplace netloc o_buf_controller_vsync 1 3 3 NJ 1010 NJ 1020 1860
-preplace netloc axi_mem_intercon_1_M00_AXI 1 4 1 1370
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 410 110 NJ 110 NJ 110 NJ 110 1870
-preplace netloc test_pattern_generator_0_r 1 2 1 710
-preplace netloc o_buf_controller_vde 1 3 3 NJ 1050 NJ 1170 1910
-preplace netloc xlconcat_1_dout 1 5 1 1890
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 30 180 NJ 160 NJ 160 NJ 160 NJ 160 1860
-preplace netloc axi_mem_intercon_1_M01_AXI 1 4 1 1360
-preplace netloc axi_mem_intercon_M00_AXI 1 4 1 1400
+preplace netloc o_buf_controller_req_line 1 3 1 960
+preplace netloc o_buf_controller_vsync 1 3 3 NJ 1010 NJ 1020 1830
+preplace netloc axi_mem_intercon_1_M00_AXI 1 4 1 1300
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 350 110 NJ 110 NJ 110 NJ 110 1840
+preplace netloc test_pattern_generator_0_r 1 2 1 650
+preplace netloc o_buf_controller_vde 1 3 3 NJ 1050 NJ 1170 1880
+preplace netloc xlconcat_1_dout 1 5 1 1860
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 -30 180 NJ 160 NJ 160 NJ 160 NJ 160 1830
+preplace netloc axi_mem_intercon_1_M01_AXI 1 4 1 1290
+preplace netloc axi_mem_intercon_M00_AXI 1 4 1 1330
 preplace netloc o_buf_controller_o_data 1 3 2 NJ 1070 NJ
-preplace netloc i_buf_controller_o_data 1 3 3 1030 730 NJ 730 NJ
-preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 4 370 480 730 420 1040 170 1390
-preplace netloc i_buf_controller_addr 1 3 3 1000 130 NJ 130 NJ
+preplace netloc i_buf_controller_o_data 1 3 3 970 730 NJ 730 NJ
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 4 310 480 670 420 980 170 1320
+preplace netloc i_buf_controller_addr 1 3 3 940 130 NJ 130 NJ
 preplace netloc clk_1 1 0 1 NJ
 preplace netloc processing_system7_0_FIXED_IO 1 5 2 NJ 240 NJ
-preplace netloc o_buf_controller_addr 1 3 3 NJ 990 NJ 1000 1860
-preplace netloc clk_wiz_0_clk_out1 1 1 5 390 870 720 940 NJ 940 NJ 1010 1880
+preplace netloc o_buf_controller_addr 1 3 3 NJ 990 NJ 1000 1830
+preplace netloc clk_wiz_0_clk_out1 1 1 5 330 870 660 940 NJ 940 NJ 1010 1850
 preplace netloc rgb2vga_0_vga_pVSync 1 6 1 NJ
 preplace netloc rgb2vga_0_vga_pHSync 1 6 1 NJ
-preplace netloc o_buf_controller_req_frame 1 3 1 1040
+preplace netloc o_buf_controller_req_frame 1 3 1 980
 preplace netloc test_pattern_generator_0_vde 1 2 1 N
-preplace netloc o_axi_cdma_M_AXI 1 3 1 1010
-preplace netloc VDD_dout 1 2 4 730 920 NJ 920 NJ 900 1900
-preplace netloc o_buf_controller_hsync 1 3 3 NJ 1180 NJ 1180 1900
-preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 3 400 190 NJ 190 1030
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 20 270 410 470 710 580 1020 180 1380 450 1850
+preplace netloc o_axi_cdma_M_AXI 1 3 1 950
+preplace netloc VDD_dout 1 2 4 670 920 NJ 920 NJ 900 1870
+preplace netloc o_buf_controller_hsync 1 3 3 NJ 1180 NJ 1180 1870
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 3 340 190 NJ 190 970
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 -40 270 350 470 650 580 960 180 1310 450 1820
 preplace netloc i_buf_controller_we 1 3 2 N 750 NJ
 preplace netloc xlconcat_2_dout 1 5 1 NJ
 preplace netloc GND_dout 1 5 1 NJ
-preplace netloc o_linebuffer_doutb 1 2 4 740 910 NJ 910 NJ 890 NJ
-preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 1 720
-preplace netloc i_axi_cdma_M_AXI 1 3 1 1010
+preplace netloc o_linebuffer_doutb 1 2 4 680 910 NJ 910 NJ 890 NJ
+preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 1 660
+preplace netloc i_axi_cdma_M_AXI 1 3 1 950
 preplace netloc rgb2vga_0_vga_pBlue 1 6 1 NJ
-preplace netloc i_buf_controller_frame_valid 1 3 1 1020
-preplace netloc i_buf_controller_line_valid 1 3 1 1020
-levelinfo -pg 1 -10 200 560 870 1200 1630 2060 2230 -top 0 -bot 1190
+preplace netloc i_buf_controller_frame_valid 1 3 1 960
+preplace netloc i_buf_controller_line_valid 1 3 1 960
+levelinfo -pg 1 -70 140 500 810 1130 1600 2080 2250 -top 0 -bot 1190
 ",
 }
 

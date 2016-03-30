@@ -51,7 +51,7 @@ module i_buf_controller (
                 addr <= next_addr;
                 we <= 0;
                 if (!((h_count+1) % 4)) begin
-                    next_addr <= next_addr + 1;
+                    next_addr <= next_addr + 4;
                     we <= 1;
                 end
             end

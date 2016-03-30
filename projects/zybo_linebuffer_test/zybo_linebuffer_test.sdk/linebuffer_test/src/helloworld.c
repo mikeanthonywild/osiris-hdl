@@ -47,6 +47,7 @@
 
 #include "platform.h"
 #include "buf_controller.h"
+#include "framebuf.h"
 #include "interrupt.h"
 #include "xil_printf.h"
 

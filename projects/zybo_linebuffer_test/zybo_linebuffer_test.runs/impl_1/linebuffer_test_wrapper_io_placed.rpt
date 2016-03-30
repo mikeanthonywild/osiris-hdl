@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date         : Tue Mar 29 12:49:45 2016
+| Date         : Tue Mar 29 21:42:14 2016
 | Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 | Command      : report_io -file linebuffer_test_wrapper_io_placed.rpt
 | Design       : linebuffer_test_wrapper

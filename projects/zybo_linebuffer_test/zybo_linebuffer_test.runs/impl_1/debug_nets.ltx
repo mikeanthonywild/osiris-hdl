@@ -4,180 +4,165 @@
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="u_ila_0_0"/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
         <Option Id="PROBE_PORT" value="0"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="32"/>
+      </probeOptions>
+      <nets>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[31]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[30]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[29]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[28]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[27]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[26]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[25]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[24]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[23]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[22]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[21]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[20]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[19]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[18]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[17]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[16]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[15]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[14]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[13]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[12]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[11]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[10]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[9]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[8]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[7]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[6]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[5]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[4]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[3]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[2]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[1]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
+        <Option Id="PROBE_PORT" value="1"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="12"/>
       </probeOptions>
       <nets>
-        <net name="linebuffer_test_i/axi_mem_intercon_1_M00_AXI_AWADDR[11]"/>
-        <net name="linebuffer_test_i/axi_mem_intercon_1_M00_AXI_AWADDR[10]"/>
-        <net name="linebuffer_test_i/axi_mem_intercon_1_M00_AXI_AWADDR[9]"/>
-        <net name="linebuffer_test_i/axi_mem_intercon_1_M00_AXI_AWADDR[8]"/>
-        <net name="linebuffer_test_i/axi_mem_intercon_1_M00_AXI_AWADDR[7]"/>
-        <net name="linebuffer_test_i/axi_mem_intercon_1_M00_AXI_AWADDR[6]"/>
-        <net name="linebuffer_test_i/axi_mem_intercon_1_M00_AXI_AWADDR[5]"/>
-        <net name="linebuffer_test_i/axi_mem_intercon_1_M00_AXI_AWADDR[4]"/>
-        <net name="linebuffer_test_i/axi_mem_intercon_1_M00_AXI_AWADDR[3]"/>
-        <net name="linebuffer_test_i/axi_mem_intercon_1_M00_AXI_AWADDR[2]"/>
-        <net name="linebuffer_test_i/axi_mem_intercon_1_M00_AXI_AWADDR[1]"/>
-        <net name="linebuffer_test_i/axi_mem_intercon_1_M00_AXI_AWADDR[0]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[11]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[10]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[9]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[8]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[7]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[6]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[5]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[4]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[3]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[2]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[1]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="u_ila_0_0"/>
-        <Option Id="PROBE_PORT" value="1"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="linebuffer_test_i/axi_mem_intercon_1_M00_AXI_WVALID"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="u_ila_0_0"/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
         <Option Id="PROBE_PORT" value="2"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="32"/>
       </probeOptions>
       <nets>
-        <net name="linebuffer_test_i/o_axi_bram_ctrl_n_49"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[31]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[30]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[29]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[28]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[27]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[26]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[25]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[24]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[23]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[22]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[21]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[20]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[19]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[18]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[17]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[16]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[15]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[14]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[13]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[12]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[11]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[10]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[9]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[8]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[7]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[6]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[5]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[4]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[3]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[2]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[1]"/>
+        <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="u_ila_0_0"/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
         <Option Id="PROBE_PORT" value="3"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="32"/>
       </probeOptions>
       <nets>
-        <net name="linebuffer_test_i/o_axi_bram_ctrl_n_50"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[31]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[30]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[29]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[28]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[27]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[26]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[25]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[24]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[23]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[22]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[21]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[20]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[19]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[18]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[17]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[16]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[15]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[14]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[13]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[12]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[11]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[10]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[9]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[8]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[7]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[6]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[5]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[4]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[3]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[2]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[1]"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="u_ila_0_0"/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
         <Option Id="PROBE_PORT" value="4"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="linebuffer_test_i/o_axi_bram_ctrl_n_51"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="u_ila_0_0"/>
-        <Option Id="PROBE_PORT" value="5"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="linebuffer_test_i/o_axi_bram_ctrl_n_52"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="u_ila_0_0"/>
-        <Option Id="PROBE_PORT" value="6"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="linebuffer_test_i/o_axi_bram_ctrl_n_53"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="u_ila_0_0"/>
-        <Option Id="PROBE_PORT" value="7"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="linebuffer_test_i/o_axi_bram_ctrl_n_54"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="u_ila_0_0"/>
-        <Option Id="PROBE_PORT" value="8"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="linebuffer_test_i/o_axi_bram_ctrl_n_55"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="u_ila_0_0"/>
-        <Option Id="PROBE_PORT" value="9"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="linebuffer_test_i/o_axi_bram_ctrl_n_56"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="u_ila_0_0"/>
-        <Option Id="PROBE_PORT" value="10"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="linebuffer_test_i/o_axi_bram_ctrl_n_57"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="u_ila_0_0"/>
-        <Option Id="PROBE_PORT" value="11"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="linebuffer_test_i/o_axi_bram_ctrl_n_58"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="u_ila_0_0"/>
-        <Option Id="PROBE_PORT" value="12"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="linebuffer_test_i/o_axi_bram_ctrl_n_59"/>
-      </nets>
-    </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
-      <probeOptions Id="DebugProbeParams">
-        <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="HW_ILA" value="u_ila_0_0"/>
-        <Option Id="PROBE_PORT" value="13"/>
-        <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
-      </probeOptions>
-      <nets>
-        <net name="linebuffer_test_i/o_axi_bram_ctrl_n_60"/>
+        <net name="linebuffer_test_i/o_axi_cdma_M_AXI_AWVALID"/>
       </nets>
     </probe>
   </probeset>

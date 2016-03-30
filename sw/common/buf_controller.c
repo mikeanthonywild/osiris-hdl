@@ -154,8 +154,8 @@ void update_buf_controller(void) {
 	int status;
     if (line_valid_flag) {
         // TODO: Do we need to flush the cache?
-        Xil_DCacheFlushRange((UINTPTR)g_framebuf, FRAMEBUF_WIDTH);
-        XAxiCdma_SimpleTransfer(&i_cdma, (UINTPTR)I_BRAM_AXI_ADDR, (UINTPTR)i_framebuf_line_p, FRAMEBUF_WIDTH, NULL, NULL);
+        //Xil_DCacheFlushRange((UINTPTR)g_framebuf, FRAMEBUF_WIDTH);
+        //XAxiCdma_SimpleTransfer(&i_cdma, (UINTPTR)I_BRAM_AXI_ADDR, (UINTPTR)i_framebuf_line_p, FRAMEBUF_WIDTH, NULL, NULL);
         i_framebuf_line_p++;
         line_valid_flag = 0;
         xil_printf("i_framebuf_line_p = 0x%x\n", i_framebuf_line_p);
@@ -168,16 +168,10 @@ void update_buf_controller(void) {
     }
 
     if (req_line_flag) {
-    	Xil_DCacheFlushRange((UINTPTR)g_framebuf, FRAMEBUF_WIDTH);
-    	status = XAxiCdma_SimpleTransfer(&o_cdma, (UINTPTR)(&g_framebuf[line][0]), (UINTPTR)O_BRAM_AXI_ADDR, FRAMEBUF_WIDTH, NULL, NULL);
-        for (i=0; i<20; i++) {
-        	xil_printf("0x%x ", g_framebuf[line][i]);
-        }
+    	status = XAxiCdma_SimpleTransfer(&o_cdma, (UINTPTR)o_framebuf_line_p, (UINTPTR)O_BRAM_AXI_ADDR, FRAMEBUF_WIDTH, NULL, NULL);
     	o_framebuf_line_p++;
-        line++;
-        req_line_flag = 0;
-        xil_printf("o_framebuf_line_p = 0x%x\n", o_framebuf_line_p);
-        xil_printf("line = 0x%x\n", &g_framebuf[line][0]);
+    	req_line_flag = 0;
+    	xil_printf("o_framebuf_line_p = 0x%x\n", o_framebuf_line_p);
     }
 
     if (req_frame_flag) {

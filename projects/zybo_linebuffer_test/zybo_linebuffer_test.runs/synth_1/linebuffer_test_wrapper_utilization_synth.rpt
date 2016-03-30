@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date         : Tue Mar 29 12:40:12 2016
+| Date         : Tue Mar 29 20:07:40 2016
 | Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 | Command      : report_utilization -file linebuffer_test_wrapper_utilization_synth.rpt -pb linebuffer_test_wrapper_utilization_synth.pb
 | Design       : linebuffer_test_wrapper
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 6768 |     0 |     17600 | 38.45 |
-|   LUT as Logic             | 6192 |     0 |     17600 | 35.18 |
+| Slice LUTs*                | 6785 |     0 |     17600 | 38.55 |
+|   LUT as Logic             | 6209 |     0 |     17600 | 35.28 |
 |   LUT as Memory            |  576 |     0 |      6000 |  9.60 |
 |     LUT as Distributed RAM |  116 |     0 |           |       |
 |     LUT as Shift Register  |  460 |     0 |           |       |
-| Slice Registers            | 8235 |     0 |     35200 | 23.39 |
-|   Register as Flip Flop    | 8235 |     0 |     35200 | 23.39 |
+| Slice Registers            | 8236 |     0 |     35200 | 23.40 |
+|   Register as Flip Flop    | 8236 |     0 |     35200 | 23.40 |
 |   Register as Latch        |    0 |     0 |     35200 |  0.00 |
 | F7 Muxes                   |    1 |     0 |      8800 |  0.01 |
 | F8 Muxes                   |    0 |     0 |      4400 |  0.00 |
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 264   |          Yes |           - |          Set |
 | 264   |          Yes |           - |        Reset |
-| 152   |          Yes |         Set |            - |
-| 7555  |          Yes |       Reset |            - |
+| 150   |          Yes |         Set |            - |
+| 7558  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,20 +149,20 @@ Table of Contents
 +------------+------+----------------------+
 |  Ref Name  | Used |  Functional Category |
 +------------+------+----------------------+
-| FDRE       | 7555 |         Flop & Latch |
-| LUT6       | 2241 |                  LUT |
-| LUT3       | 1673 |                  LUT |
-| LUT4       | 1401 |                  LUT |
-| LUT5       | 1165 |                  LUT |
-| LUT2       |  664 |                  LUT |
-| LUT1       |  479 |                  LUT |
+| FDRE       | 7558 |         Flop & Latch |
+| LUT6       | 2278 |                  LUT |
+| LUT3       | 1682 |                  LUT |
+| LUT4       | 1405 |                  LUT |
+| LUT5       | 1152 |                  LUT |
+| LUT2       |  653 |                  LUT |
+| LUT1       |  467 |                  LUT |
 | SRL16E     |  301 |   Distributed Memory |
 | FDPE       |  264 |         Flop & Latch |
 | FDCE       |  264 |         Flop & Latch |
-| CARRY4     |  209 |           CarryLogic |
+| CARRY4     |  205 |           CarryLogic |
 | RAMD32     |  172 |   Distributed Memory |
 | SRLC32E    |  159 |   Distributed Memory |
-| FDSE       |  152 |         Flop & Latch |
+| FDSE       |  150 |         Flop & Latch |
 | BIBUF      |  130 |                   IO |
 | RAMS32     |   56 |   Distributed Memory |
 | OBUF       |   18 |                   IO |

@@ -452,3 +452,200 @@ com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
 13:06:49 INFO  : ps7_init is completed.
 13:06:50 INFO  : ps7_post_config is completed.
 13:06:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:01:25 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+19:50:38 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+19:50:40 INFO  : XSDB server has started successfully.
+19:50:40 INFO  : Processing command line option -hwspec /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf.
+19:50:40 INFO  : Checking for hwspec changes in the project linebuffer_test_wrapper_hw_platform_0.
+19:50:42 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1459277341000,  Project:1459252254000
+19:50:42 INFO  : The hardware specification for project 'linebuffer_test_wrapper_hw_platform_0' is different from /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf.
+19:50:42 INFO  : Copied contents of /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf into /linebuffer_test_wrapper_hw_platform_0/system.hdf.
+19:50:51 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+19:50:53 INFO  : 
+19:50:54 INFO  : Updating hardware inferred compiler options for linebuffer_test.
+19:50:54 INFO  : Clearing existing target manager status.
+19:51:27 INFO  : ps7_init is completed.
+19:51:27 INFO  : ps7_post_config is completed.
+19:51:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:11:01 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1459278609000,  Project:1459277341000
+20:11:01 INFO  : Project linebuffer_test_wrapper_hw_platform_0's source hardware specification located at /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+20:11:03 INFO  : Copied contents of /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf into /linebuffer_test_wrapper_hw_platform_0/system.hdf.
+20:11:07 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:11:08 INFO  : 
+20:11:09 INFO  : Updating hardware inferred compiler options for linebuffer_test.
+20:11:09 INFO  : Clearing existing target manager status.
+20:11:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:11:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+20:11:42 INFO  : FPGA configured successfully with bitstream "/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper_hw_platform_0/linebuffer_test_wrapper.bit"
+20:11:46 INFO  : ps7_init is completed.
+20:11:46 INFO  : ps7_post_config is completed.
+20:11:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:16:48 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:18:32 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:18:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:22:25 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:22:30 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:23:30 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:23:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:25:10 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:25:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:28:34 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:28:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:31:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:32:18 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:32:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:40:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:44:08 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:44:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:57:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:58:19 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:58:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:05:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:06:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:06:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+21:06:42 INFO  : FPGA configured successfully with bitstream "/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper_hw_platform_0/linebuffer_test_wrapper.bit"
+21:06:46 INFO  : ps7_init is completed.
+21:06:46 INFO  : ps7_post_config is completed.
+21:06:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:07:30 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:07:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:09:04 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:09:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:10:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:10:36 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+21:10:49 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+21:10:50 INFO  : XSDB server has started successfully.
+21:10:50 INFO  : Processing command line option -hwspec /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf.
+21:10:51 INFO  : Checking for hwspec changes in the project linebuffer_test_wrapper_hw_platform_0.
+21:11:03 INFO  : ps7_init is completed.
+21:11:03 INFO  : ps7_post_config is completed.
+21:11:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:11:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:11:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+21:11:11 INFO  : FPGA configured successfully with bitstream "/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper_hw_platform_0/linebuffer_test_wrapper.bit"
+21:11:16 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:11:23 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1011)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:616)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+21:11:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:11:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+21:11:40 INFO  : FPGA configured successfully with bitstream "/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper_hw_platform_0/linebuffer_test_wrapper.bit"
+21:11:45 INFO  : ps7_init is completed.
+21:11:45 INFO  : ps7_post_config is completed.
+21:11:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:12:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:13:03 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Error downloading program to target: 
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.loadProgram(XilinxAppLaunchConfigurationDelegate.java:865)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:746)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+21:13:03 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+21:13:18 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+21:13:20 INFO  : XSDB server has started successfully.
+21:13:20 INFO  : Processing command line option -hwspec /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf.
+21:13:20 INFO  : Checking for hwspec changes in the project linebuffer_test_wrapper_hw_platform_0.
+21:13:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:13:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+21:13:41 INFO  : FPGA configured successfully with bitstream "/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper_hw_platform_0/linebuffer_test_wrapper.bit"
+21:13:50 INFO  : ps7_init is completed.
+21:13:50 INFO  : ps7_post_config is completed.
+21:13:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:15:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:15:46 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:15:48 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:24:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:24:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+21:24:26 INFO  : FPGA configured successfully with bitstream "/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper_hw_platform_0/linebuffer_test_wrapper.bit"
+21:24:31 INFO  : ps7_init is completed.
+21:24:31 INFO  : ps7_post_config is completed.
+21:24:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:26:07 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:26:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:26:31 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+21:26:46 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+21:26:47 INFO  : XSDB server has started successfully.
+21:26:47 INFO  : Processing command line option -hwspec /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf.
+21:26:47 INFO  : Checking for hwspec changes in the project linebuffer_test_wrapper_hw_platform_0.
+21:26:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:26:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+21:26:55 INFO  : FPGA configured successfully with bitstream "/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper_hw_platform_0/linebuffer_test_wrapper.bit"
+21:27:15 INFO  : ps7_init is completed.
+21:27:15 INFO  : ps7_post_config is completed.
+21:27:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:27:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:27:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+21:27:57 INFO  : FPGA configured successfully with bitstream "/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper_hw_platform_0/linebuffer_test_wrapper.bit"
+21:28:00 INFO  : ps7_init is completed.
+21:28:00 INFO  : ps7_post_config is completed.
+21:28:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:29:02 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:29:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:44:53 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1011)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:534)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:616)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+21:45:10 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1459284229000,  Project:1459278609000
+21:45:10 INFO  : Project linebuffer_test_wrapper_hw_platform_0's source hardware specification located at /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+21:45:12 INFO  : Copied contents of /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf into /linebuffer_test_wrapper_hw_platform_0/system.hdf.
+21:45:16 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+21:45:17 INFO  : 
+21:45:18 INFO  : Updating hardware inferred compiler options for linebuffer_test.
+21:45:18 INFO  : Clearing existing target manager status.
+21:45:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:45:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+21:45:34 ERROR : Error occured during Prog B register check
+21:45:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:45:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+21:45:43 ERROR : Cannot find memory context of target ARM_DAP
+21:45:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:45:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+21:45:55 INFO  : FPGA configured successfully with bitstream "/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper_hw_platform_0/linebuffer_test_wrapper.bit"
+21:46:06 INFO  : ps7_init is completed.
+21:46:06 INFO  : ps7_post_config is completed.
+21:46:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:15:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:15:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+22:15:46 INFO  : FPGA configured successfully with bitstream "/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper_hw_platform_0/linebuffer_test_wrapper.bit"
+22:15:51 INFO  : ps7_init is completed.
+22:15:51 INFO  : ps7_post_config is completed.
+22:15:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:17:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:17:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+22:17:49 INFO  : FPGA configured successfully with bitstream "/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper_hw_platform_0/linebuffer_test_wrapper.bit"
+22:17:53 INFO  : ps7_init is completed.
+22:17:53 INFO  : ps7_post_config is completed.
+22:17:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:19:45 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

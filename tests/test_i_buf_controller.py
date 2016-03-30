@@ -6,7 +6,7 @@ from PIL import Image
 
 LINE_SLICE = 1
 
-image_data = Image.open('tests/images/qvga_test_pattern.bmp').convert('L')
+image_data = Image.open('tests/images/vga_test_pattern.bmp').convert('L')
 image_pixels = image_data.load()
 
 def _tb_i_buf_controller():
@@ -77,7 +77,7 @@ def test_readout_into_linebuffer():
         def check_linebuffer():
             if int(we):
                 # 4 pixels per word, so we need to multiply image offset
-                offset = int(addr) * 4
+                offset = int(addr)
                 pixels = struct.unpack('4B', struct.pack('>I', int(o_data)))
                 for i in range(4):
                     capture_pixels[offset+i, 0] = pixels[i]

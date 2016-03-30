@@ -67,7 +67,7 @@ module o_buf_controller (
                 o_data <= (i_data >> ((3 - ((h_count-1) % 4)) * 8)) & 'h000000ff;
                 if (h_count < DISPLAY_WIDTH-1) begin
                     if (!((h_count+2) % 4) ) begin
-                        addr <= addr + 1;
+                        addr <= addr + 4;
                     end
                 end else begin
                     addr <= 0;

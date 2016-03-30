@@ -73,7 +73,7 @@ def test_video_output_from_linebuffer():
 
         @always(pclk.posedge)
         def linebuffer_read():
-            offset = int(addr) * 4
+            offset = int(addr)
             pixels = 0
             for i in range(4):
                 try:

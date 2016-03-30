@@ -1,4 +1,4 @@
-13:06:46 **** Incremental Build of configuration Debug for project linebuffer_test ****
+22:17:52 **** Incremental Build of configuration Debug for project linebuffer_test ****
 make all 
 Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
 Invoking: ARM gcc compiler
@@ -10,5 +10,5 @@ In file included from /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
 compilation terminated.
 make: *** [sw/common/buf_controller.o] Error 1
 
-13:06:46 Build Finished (took 64ms)
+22:17:52 Build Finished (took 61ms)
 

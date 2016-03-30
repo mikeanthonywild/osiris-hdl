@@ -18,7 +18,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>1b17d9d6</spirit:value>
+            <spirit:value>92de5870</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -34,7 +34,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>1b17d9d6</spirit:value>
+            <spirit:value>92de5870</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -176,7 +176,7 @@
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>reg</spirit:typeName>
+              <spirit:typeName>std_logic</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
@@ -189,7 +189,7 @@
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>reg</spirit:typeName>
+              <spirit:typeName>std_logic</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
@@ -231,17 +231,17 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>V_FRONT_PORCH</spirit:name>
         <spirit:displayName>V Front Porch</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.V_FRONT_PORCH">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.V_FRONT_PORCH">10</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>V_SYNC_PULSE</spirit:name>
         <spirit:displayName>V Sync Pulse</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.V_SYNC_PULSE">3</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.V_SYNC_PULSE">2</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>V_BACK_PORCH</spirit:name>
         <spirit:displayName>V Back Porch</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.V_BACK_PORCH">25</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.V_BACK_PORCH">33</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -251,7 +251,7 @@
       <spirit:file>
         <spirit:name>o_buf_controller.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_1b17d9d6</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_92de5870</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -311,17 +311,17 @@
     <spirit:parameter>
       <spirit:name>V_FRONT_PORCH</spirit:name>
       <spirit:displayName>V Front Porch</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.V_FRONT_PORCH">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.V_FRONT_PORCH">10</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>V_SYNC_PULSE</spirit:name>
       <spirit:displayName>V Sync Pulse</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.V_SYNC_PULSE">3</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.V_SYNC_PULSE">2</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>V_BACK_PORCH</spirit:name>
       <spirit:displayName>V Back Porch</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.V_BACK_PORCH">25</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.V_BACK_PORCH">33</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -335,12 +335,12 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Linebuffer readout (output)</xilinx:displayName>
       <xilinx:vendorDisplayName>Perform readout of image data from linebuffer and genreate video output.</xilinx:vendorDisplayName>
-      <xilinx:coreRevision>1</xilinx:coreRevision>
+      <xilinx:coreRevision>2</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>user.org:user:o_buf_controller_dut:1.0</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>mikeanthonywild.com:user:o_buf_controller_dut:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2016-03-25T16:02:15Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2016-03-29T18:30:12Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="user.org:user:o_buf_controller_dut:1.0_ARCHIVE_LOCATION">/home/mike/Documents/osiris-hdl/hdl/o_buf_controller</xilinx:tag>
@@ -350,10 +350,10 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2015.4</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="1c7373de"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="c561ae17"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="aab461e1"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="805f2ed3"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f4174434"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="b1f13d70"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="d839c403"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="762c3b22"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

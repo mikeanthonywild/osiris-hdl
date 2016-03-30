@@ -25,7 +25,8 @@ def main():
         img_pixels = img_data.load()
         for y in range(img_data.size[1]):
             header_file.write('\t{')
-            for x in range(img_data.size[0]):
+            header_file.write('\t0xDE,\t0xAD,\t0xBE,\t0xEF,\t0xDE,\t0xAD,\t0xBE,\t0xEF,')
+            for x in range(8, img_data.size[0]):
                 header_file.write("\t0x{}".format(format(img_pixels[x, y], 'x')))
                 if x < img_data.size[0] - 1:
                     header_file.write(',')

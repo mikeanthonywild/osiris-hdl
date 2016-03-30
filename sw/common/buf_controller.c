@@ -38,9 +38,8 @@ static XAxiCdma o_cdma;
 static XAxiCdma_Config *i_cdma_cfg_p;
 static XAxiCdma_Config *o_cdma_cfg_p;
 
-static u8 (*i_framebuf_line_p)[FRAMEBUF_WIDTH] = &g_framebuf[0];
-static u8 (*o_framebuf_line_p)[FRAMEBUF_WIDTH] = &g_framebuf[0];
-static int line = 0;
+static int i_framebuf_line;
+static int o_framebuf_line;
 
 /************************** Function Prototypes ******************************/
 static void line_valid_isr(void *);
@@ -103,7 +102,6 @@ void req_frame_isr(void *req_frame_flag) {
 int init_axi_cdma(void) {
     int status;
     
-
     // AXI CDMA for i_buf_controller
     i_cdma_cfg_p = XAxiCdma_LookupConfig(I_CDMA_DEVICE_ID);
     if (!i_cdma_cfg_p) {
@@ -150,34 +148,29 @@ int init_buf_controller(void) {
 
 void update_buf_controller(void) {
     // Check the flags for transfers and address reset
-	int i=0;
-	int status;
     if (line_valid_flag) {
-        // TODO: Do we need to flush the cache?
-        //Xil_DCacheFlushRange((UINTPTR)g_framebuf, FRAMEBUF_WIDTH);
-        //XAxiCdma_SimpleTransfer(&i_cdma, (UINTPTR)I_BRAM_AXI_ADDR, (UINTPTR)i_framebuf_line_p, FRAMEBUF_WIDTH, NULL, NULL);
-        i_framebuf_line_p++;
+    	// Cache flush is essential!!!
+    	//Xil_DCacheFlushRange((UINTPTR)&g_framebuf[i_framebuf_line][0], FRAMEBUF_WIDTH);
+    	Xil_DCacheInvalidateRange((UINTPTR)&g_framebuf[i_framebuf_line][0], FRAMEBUF_WIDTH);
+        XAxiCdma_SimpleTransfer(&i_cdma, (UINTPTR)I_BRAM_AXI_ADDR, (UINTPTR)&g_framebuf[i_framebuf_line][0], FRAMEBUF_WIDTH, NULL, NULL);
+        i_framebuf_line++;
         line_valid_flag = 0;
-        xil_printf("i_framebuf_line_p = 0x%x\n", i_framebuf_line_p);
     }
 
     if (frame_valid_flag) {
-        i_framebuf_line_p = &g_framebuf[0];
+        i_framebuf_line = 0;
         frame_valid_flag = 0;
-        xil_printf("i_framebuf_line_p = 0x%x\n", &g_framebuf[0]);
     }
 
     if (req_line_flag) {
-    	status = XAxiCdma_SimpleTransfer(&o_cdma, (UINTPTR)o_framebuf_line_p, (UINTPTR)O_BRAM_AXI_ADDR, FRAMEBUF_WIDTH, NULL, NULL);
-    	o_framebuf_line_p++;
+    	Xil_DCacheFlushRange((UINTPTR)&g_framebuf[o_framebuf_line][0], FRAMEBUF_WIDTH);
+    	XAxiCdma_SimpleTransfer(&o_cdma, (UINTPTR)&g_framebuf[o_framebuf_line][0], (UINTPTR)O_BRAM_AXI_ADDR, FRAMEBUF_WIDTH, NULL, NULL);
+    	o_framebuf_line++;
     	req_line_flag = 0;
-    	xil_printf("o_framebuf_line_p = 0x%x\n", o_framebuf_line_p);
     }
 
     if (req_frame_flag) {
-        o_framebuf_line_p = &g_framebuf[0];
+        o_framebuf_line = 0;
         req_frame_flag = 0;
-        line = 0;
-        xil_printf("o_framebuf_line_p = 0x%x\n", &g_framebuf[0]);
     }
 }

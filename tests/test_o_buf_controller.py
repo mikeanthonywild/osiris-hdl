@@ -4,7 +4,7 @@ from myhdl import *
 from uhdl import *
 from PIL import Image
 
-LINE_SLICE = 1
+LINE_SLICE = 0
 
 image_data = Image.open('tests/images/vga_test_pattern.bmp').convert('L')
 image_pixels = image_data.load()

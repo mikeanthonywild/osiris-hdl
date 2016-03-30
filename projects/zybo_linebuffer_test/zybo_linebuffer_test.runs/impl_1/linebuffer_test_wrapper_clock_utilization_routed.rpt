@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date              : Tue Mar 29 21:43:29 2016
+| Date              : Wed Mar 30 17:02:17 2016
 | Host              : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 | Command           : report_clock_utilization -file linebuffer_test_wrapper_clock_utilization_routed.rpt
 | Design            : linebuffer_test_wrapper
@@ -52,9 +52,9 @@ Table of Contents
 +-------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------+------+-------+-------+
 |     1 | dbg_hub/inst/N_EXT_BSCAN.u_bufg_icon_update                                   | dbg_hub/inst/UPDATE_temp                                                  |    1 |     1 |    no |
 |     2 | linebuffer_test_i/clk_wiz_0/inst/clkf_buf                                     | linebuffer_test_i/clk_wiz_0/inst/clkfbout_buf_linebuffer_test_clk_wiz_0_0 |    1 |     1 |    no |
-|     3 | linebuffer_test_i/clk_wiz_0/inst/clkout1_buf                                  | linebuffer_test_i/clk_wiz_0/inst/clk_out1                                 |  197 |    67 |    no |
-|     4 | dbg_hub/inst/N_EXT_BSCAN.u_bufg_icon                                          | dbg_hub/inst/idrck                                                        |  269 |    66 |    no |
-|     5 | linebuffer_test_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0                     | 9986 |  2572 |    no |
+|     3 | dbg_hub/inst/N_EXT_BSCAN.u_bufg_icon                                          | dbg_hub/inst/idrck                                                        |  271 |    60 |    no |
+|     4 | linebuffer_test_i/clk_wiz_0/inst/clkout1_buf                                  | linebuffer_test_i/clk_wiz_0/inst/clk_out1                                 |  501 |   100 |    no |
+|     5 | linebuffer_test_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0                     | 7023 |  1861 |    no |
 +-------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------+------+-------+-------+
 
 
@@ -97,10 +97,10 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 3737 |  8800 |  247 |  1600 |    0 |    20 |    5 |    10 |    0 |    20 |
-| X1Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 3512 |  8800 |  621 |  1400 |    1 |    40 |    5 |    20 |    0 |    20 |
-| X0Y1              |    3 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  917 |  8800 |   98 |  1600 |    0 |    20 |    2 |    10 |    0 |    20 |
-| X1Y1              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 1208 |  8800 |   88 |  1400 |    0 |    40 |    1 |    20 |    0 |    20 |
+| X0Y0              |    4 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 3497 |  8800 |  439 |  1600 |    1 |    20 |    4 |    10 |    0 |    20 |
+| X1Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2952 |  8800 |  390 |  1400 |    1 |    40 |    7 |    20 |    0 |    20 |
+| X0Y1              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  352 |  8800 |   22 |  1600 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y1              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  118 |  8800 |    1 |  1400 |    0 |    40 |    0 |    20 |    0 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * RAMB36 site can be used as two RAMB18/FIFO18 sites.
 
@@ -108,23 +108,26 @@ Table of Contents
 8. Net wise resources used in clock region X0Y0
 -----------------------------------------------
 
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
-| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                     Clock Net Name                    |
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
-| BUFG        | BUFHCE_X0Y8 |   no  |         0 |        0 |       0 |         5 |       0 |       0 |  115 |     0 |        0 | linebuffer_test_i/clk_wiz_0/inst/clk_out1             |
-| BUFG        | BUFHCE_X0Y9 |   no  |         0 |        0 |       0 |         5 |       0 |       0 | 3622 |   247 |        0 | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0 |
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
+| Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                     Clock Net Name                    |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
+| BUFG        | BUFHCE_X0Y10 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |    1 |     0 |        0 | dbg_hub/inst/UPDATE_temp                              |
+| BUFG        | BUFHCE_X0Y9  |   no  |         0 |        0 |       0 |         3 |       0 |       0 |    6 |     0 |        0 | linebuffer_test_i/clk_wiz_0/inst/clk_out1             |
+| BUFG        | BUFHCE_X0Y8  |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   23 |     0 |        0 | dbg_hub/inst/idrck                                    |
+| BUFG        | BUFHCE_X0Y11 |   no  |         0 |        0 |       0 |         7 |       0 |       0 | 3467 |   439 |        0 | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0 |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
 
 
 9. Net wise resources used in clock region X1Y0
 -----------------------------------------------
 
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
-| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                     Clock Net Name                    |
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
-| BUFG        | BUFHCE_X1Y8 |   no  |         0 |        0 |       0 |         2 |       0 |       0 |    2 |     0 |        0 | linebuffer_test_i/clk_wiz_0/inst/clk_out1             |
-| BUFG        | BUFHCE_X1Y9 |   no  |         0 |        0 |       0 |        10 |       0 |       0 | 3510 |   621 |        0 | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0 |
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
+| Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                     Clock Net Name                    |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
+| BUFG        | BUFHCE_X1Y8  |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  224 |    24 |        0 | dbg_hub/inst/idrck                                    |
+| BUFG        | BUFHCE_X1Y9  |   no  |         0 |        0 |       0 |         8 |       0 |       0 |  400 |    72 |        0 | linebuffer_test_i/clk_wiz_0/inst/clk_out1             |
+| BUFG        | BUFHCE_X1Y10 |   no  |         0 |        0 |       0 |         8 |       0 |       0 | 2328 |   294 |        0 | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0 |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
 
 
 10. Net wise resources used in clock region X0Y1
@@ -133,9 +136,7 @@ Table of Contents
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-------------------------------------------------------+
 | Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                     Clock Net Name                    |
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-------------------------------------------------------+
-| BUFG        | BUFHCE_X0Y20 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   1 |     0 |        0 | dbg_hub/inst/idrck                                    |
-| BUFG        | BUFHCE_X0Y21 |   no  |         0 |        0 |       0 |         2 |       0 |       0 |  54 |     0 |        0 | linebuffer_test_i/clk_wiz_0/inst/clk_out1             |
-| BUFG        | BUFHCE_X0Y22 |   no  |         0 |        0 |       0 |         2 |       0 |       0 | 862 |    98 |        0 | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0 |
+| BUFG        | BUFHCE_X0Y20 |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 352 |    22 |        0 | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0 |
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-------------------------------------------------------+
 
 
@@ -146,10 +147,8 @@ Table of Contents
 | Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                               Clock Net Name                              |
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------------------------------------------------+
 | BUFG        | BUFHCE_X1Y12 |   no  |         1 |        0 |       0 |         0 |       0 |       0 |   0 |     0 |        0 | linebuffer_test_i/clk_wiz_0/inst/clkfbout_buf_linebuffer_test_clk_wiz_0_0 |
-| BUFG        | BUFHCE_X1Y22 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   1 |     0 |        0 | dbg_hub/inst/UPDATE_temp                                                  |
-| BUFG        | BUFHCE_X1Y21 |   no  |         0 |        0 |       0 |         1 |       0 |       0 |  16 |     0 |        0 | linebuffer_test_i/clk_wiz_0/inst/clk_out1                                 |
-| BUFG        | BUFHCE_X1Y20 |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 244 |    24 |        0 | dbg_hub/inst/idrck                                                        |
-| BUFG        | BUFHCE_X1Y23 |   no  |         0 |        0 |       0 |         1 |       0 |       0 | 947 |    64 |        0 | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0                     |
+| BUFG        | BUFHCE_X1Y20 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  12 |     0 |        0 | linebuffer_test_i/clk_wiz_0/inst/clk_out1                                 |
+| BUFG        | BUFHCE_X1Y21 |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 106 |     1 |        0 | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0                     |
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------------------------------------------------+
 
 
@@ -183,21 +182,21 @@ set_property LOC IOB_X0Y78 [get_ports clk]
 #startgroup
 create_pblock {CLKAG_dbg_hub/inst/UPDATE_temp}
 add_cells_to_pblock [get_pblocks  {CLKAG_dbg_hub/inst/UPDATE_temp}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="dbg_hub/inst/UPDATE_temp"}]]]
-resize_pblock [get_pblocks {CLKAG_dbg_hub/inst/UPDATE_temp}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_dbg_hub/inst/UPDATE_temp}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
 #endgroup
 
 # Clock net "dbg_hub/inst/idrck" driven by instance "dbg_hub/inst/N_EXT_BSCAN.u_bufg_icon" located at site "BUFGCTRL_X0Y1"
 #startgroup
 create_pblock {CLKAG_dbg_hub/inst/idrck}
 add_cells_to_pblock [get_pblocks  {CLKAG_dbg_hub/inst/idrck}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="dbg_hub/inst/idrck"}]]]
-resize_pblock [get_pblocks {CLKAG_dbg_hub/inst/idrck}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_dbg_hub/inst/idrck}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
 # Clock net "linebuffer_test_i/clk_wiz_0/inst/clk_out1" driven by instance "linebuffer_test_i/clk_wiz_0/inst/clkout1_buf" located at site "BUFGCTRL_X0Y16"
 #startgroup
 create_pblock {CLKAG_linebuffer_test_i/clk_wiz_0/inst/clk_out1}
 add_cells_to_pblock [get_pblocks  {CLKAG_linebuffer_test_i/clk_wiz_0/inst/clk_out1}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="linebuffer_test_i/clk_wiz_0/inst/clk_out1"}]]]
-resize_pblock [get_pblocks {CLKAG_linebuffer_test_i/clk_wiz_0/inst/clk_out1}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_linebuffer_test_i/clk_wiz_0/inst/clk_out1}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0" driven by instance "linebuffer_test_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG" located at site "BUFGCTRL_X0Y0"

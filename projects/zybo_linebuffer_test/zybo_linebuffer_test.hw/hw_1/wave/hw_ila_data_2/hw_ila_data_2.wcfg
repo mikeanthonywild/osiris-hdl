@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="148654fs"></ZoomStartTime>
+      <ZoomEndTime time="168535fs"></ZoomEndTime>
+      <Cursor1Time time="130000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="2" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject db_ref_id="1" type="array" fp_name="linebuffer_test_i/o_buf_controller_addr">
+      <obj_property name="ElementShortName">linebuffer_test_i/o_buf_controller_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">linebuffer_test_i/o_buf_controller_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="linebuffer_test_i/o_linebuffer_doutb">
+      <obj_property name="ElementShortName">linebuffer_test_i/o_linebuffer_doutb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">linebuffer_test_i/o_linebuffer_doutb[31:0]</obj_property>
+   </wvobject>
+</wave_config>

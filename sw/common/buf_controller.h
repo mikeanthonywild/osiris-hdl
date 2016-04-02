@@ -30,5 +30,6 @@
 /************************** Function Prototypes ******************************/
 int init_buf_controller(void);
 void update_buf_controller(void);
+void cleanup_buf_controller(void);
 
 #endif // BUF_CONTROLLER_H

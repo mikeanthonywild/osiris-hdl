@@ -57,20 +57,47 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test
 # IP: bd/linebuffer_test/ip/linebuffer_test_xlconstant_0_1/linebuffer_test_xlconstant_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_xlconstant_0_1 || ORIG_REF_NAME==linebuffer_test_xlconstant_0_1}]
 
+# IP: bd/linebuffer_test/ip/linebuffer_test_blk_mem_gen_0_0/linebuffer_test_blk_mem_gen_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_blk_mem_gen_0_0 || ORIG_REF_NAME==linebuffer_test_blk_mem_gen_0_0}]
+
+# IP: bd/linebuffer_test/ip/linebuffer_test_axi_cdma_0_0/linebuffer_test_axi_cdma_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_axi_cdma_0_0 || ORIG_REF_NAME==linebuffer_test_axi_cdma_0_0}]
+
+# IP: bd/linebuffer_test/ip/linebuffer_test_axi_bram_ctrl_0_0/linebuffer_test_axi_bram_ctrl_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_axi_bram_ctrl_0_0 || ORIG_REF_NAME==linebuffer_test_axi_bram_ctrl_0_0}]
+
+# IP: bd/linebuffer_test/ip/linebuffer_test_i_buf_controller_0_0/linebuffer_test_i_buf_controller_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_i_buf_controller_0_0 || ORIG_REF_NAME==linebuffer_test_i_buf_controller_0_0}]
+
+# IP: bd/linebuffer_test/ip/linebuffer_test_xlconcat_0_0/linebuffer_test_xlconcat_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_xlconcat_0_0 || ORIG_REF_NAME==linebuffer_test_xlconcat_0_0}]
+
+# IP: bd/linebuffer_test/ip/linebuffer_test_test_pattern_generator_0_0/linebuffer_test_test_pattern_generator_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_test_pattern_generator_0_0 || ORIG_REF_NAME==linebuffer_test_test_pattern_generator_0_0}]
+
+# IP: bd/linebuffer_test/ip/linebuffer_test_xlconcat_0_1/linebuffer_test_xlconcat_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_xlconcat_0_1 || ORIG_REF_NAME==linebuffer_test_xlconcat_0_1}]
+
 # IP: bd/linebuffer_test/ip/linebuffer_test_auto_pc_0/linebuffer_test_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_auto_pc_0 || ORIG_REF_NAME==linebuffer_test_auto_pc_0}]
-
-# IP: bd/linebuffer_test/ip/linebuffer_test_auto_pc_1/linebuffer_test_auto_pc_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_auto_pc_1 || ORIG_REF_NAME==linebuffer_test_auto_pc_1}]
 
 # IP: bd/linebuffer_test/ip/linebuffer_test_auto_ds_0/linebuffer_test_auto_ds_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_auto_ds_0 || ORIG_REF_NAME==linebuffer_test_auto_ds_0}]
 
-# IP: bd/linebuffer_test/ip/linebuffer_test_auto_pc_2/linebuffer_test_auto_pc_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_auto_pc_2 || ORIG_REF_NAME==linebuffer_test_auto_pc_2}]
+# IP: bd/linebuffer_test/ip/linebuffer_test_auto_pc_1/linebuffer_test_auto_pc_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_auto_pc_1 || ORIG_REF_NAME==linebuffer_test_auto_pc_1}]
 
 # IP: bd/linebuffer_test/ip/linebuffer_test_auto_us_0/linebuffer_test_auto_us_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_auto_us_0 || ORIG_REF_NAME==linebuffer_test_auto_us_0}]
+
+# IP: bd/linebuffer_test/ip/linebuffer_test_auto_ds_1/linebuffer_test_auto_ds_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_auto_ds_1 || ORIG_REF_NAME==linebuffer_test_auto_ds_1}]
+
+# IP: bd/linebuffer_test/ip/linebuffer_test_auto_pc_2/linebuffer_test_auto_pc_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_auto_pc_2 || ORIG_REF_NAME==linebuffer_test_auto_pc_2}]
+
+# IP: bd/linebuffer_test/ip/linebuffer_test_auto_us_1/linebuffer_test_auto_us_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_auto_us_1 || ORIG_REF_NAME==linebuffer_test_auto_us_1}]
 
 # XDC: bd/linebuffer_test/ip/linebuffer_test_processing_system7_0_0/linebuffer_test_processing_system7_0_0.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==linebuffer_test_processing_system7_0_0 || ORIG_REF_NAME==linebuffer_test_processing_system7_0_0}] {/inst }]/inst ]]
@@ -106,20 +133,39 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/linebuffer_test/ip/linebuffer_test_xbar_2/linebuffer_test_xbar_2_ooc.xdc
 
-# XDC: bd/linebuffer_test/ip/linebuffer_test_auto_pc_0/linebuffer_test_auto_pc_0_ooc.xdc
+# XDC: bd/linebuffer_test/ip/linebuffer_test_blk_mem_gen_0_0/linebuffer_test_blk_mem_gen_0_0_ooc.xdc
 
-# XDC: bd/linebuffer_test/ip/linebuffer_test_auto_pc_1/linebuffer_test_auto_pc_1_ooc.xdc
+# XDC: bd/linebuffer_test/ip/linebuffer_test_axi_cdma_0_0/linebuffer_test_axi_cdma_0_0_ooc.xdc
+
+# XDC: bd/linebuffer_test/ip/linebuffer_test_axi_cdma_0_0/linebuffer_test_axi_cdma_0_0.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==linebuffer_test_axi_cdma_0_0 || ORIG_REF_NAME==linebuffer_test_axi_cdma_0_0}] {/U0 }]/U0 ]]
+
+# XDC: bd/linebuffer_test/ip/linebuffer_test_axi_bram_ctrl_0_0/linebuffer_test_axi_bram_ctrl_0_0_ooc.xdc
+
+# XDC: bd/linebuffer_test/ip/linebuffer_test_auto_pc_0/linebuffer_test_auto_pc_0_ooc.xdc
 
 # XDC: bd/linebuffer_test/ip/linebuffer_test_auto_ds_0/linebuffer_test_auto_ds_0_ooc.xdc
 
 # XDC: bd/linebuffer_test/ip/linebuffer_test_auto_ds_0/linebuffer_test_auto_ds_0_clocks.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==linebuffer_test_auto_ds_0 || ORIG_REF_NAME==linebuffer_test_auto_ds_0}] {/inst }]/inst ]]
 
-# XDC: bd/linebuffer_test/ip/linebuffer_test_auto_pc_2/linebuffer_test_auto_pc_2_ooc.xdc
+# XDC: bd/linebuffer_test/ip/linebuffer_test_auto_pc_1/linebuffer_test_auto_pc_1_ooc.xdc
 
 # XDC: bd/linebuffer_test/ip/linebuffer_test_auto_us_0/linebuffer_test_auto_us_0_ooc.xdc
 
 # XDC: bd/linebuffer_test/ip/linebuffer_test_auto_us_0/linebuffer_test_auto_us_0_clocks.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==linebuffer_test_auto_us_0 || ORIG_REF_NAME==linebuffer_test_auto_us_0}] {/inst }]/inst ]]
+
+# XDC: bd/linebuffer_test/ip/linebuffer_test_auto_ds_1/linebuffer_test_auto_ds_1_ooc.xdc
+
+# XDC: bd/linebuffer_test/ip/linebuffer_test_auto_ds_1/linebuffer_test_auto_ds_1_clocks.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==linebuffer_test_auto_ds_1 || ORIG_REF_NAME==linebuffer_test_auto_ds_1}] {/inst }]/inst ]]
+
+# XDC: bd/linebuffer_test/ip/linebuffer_test_auto_pc_2/linebuffer_test_auto_pc_2_ooc.xdc
+
+# XDC: bd/linebuffer_test/ip/linebuffer_test_auto_us_1/linebuffer_test_auto_us_1_ooc.xdc
+
+# XDC: bd/linebuffer_test/ip/linebuffer_test_auto_us_1/linebuffer_test_auto_us_1_clocks.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==linebuffer_test_auto_us_1 || ORIG_REF_NAME==linebuffer_test_auto_us_1}] {/inst }]/inst ]]
 
 # XDC: bd/linebuffer_test/linebuffer_test_ooc.xdc

@@ -21,7 +21,7 @@
 /******************************************************************/
 
 /* Definitions for driver AXICDMA */
-#define XPAR_XAXICDMA_NUM_INSTANCES 1
+#define XPAR_XAXICDMA_NUM_INSTANCES 2
 
 /* Definitions for peripheral O_AXI_CDMA */
 #define XPAR_O_AXI_CDMA_DEVICE_ID 0
@@ -33,6 +33,18 @@
 #define XPAR_O_AXI_CDMA_INCLUDE_SG 0
 #define XPAR_O_AXI_CDMA_M_AXI_MAX_BURST_LEN 256
 #define XPAR_O_AXI_CDMA_ADDR_WIDTH 32
+
+
+/* Definitions for peripheral I_AXI_CDMA */
+#define XPAR_I_AXI_CDMA_DEVICE_ID 1
+#define XPAR_I_AXI_CDMA_BASEADDR 0x7E200000
+#define XPAR_I_AXI_CDMA_HIGHADDR 0x7E20FFFF
+#define XPAR_I_AXI_CDMA_INCLUDE_DRE 0
+#define XPAR_I_AXI_CDMA_USE_DATAMOVER_LITE 0
+#define XPAR_I_AXI_CDMA_M_AXI_DATA_WIDTH 32
+#define XPAR_I_AXI_CDMA_INCLUDE_SG 0
+#define XPAR_I_AXI_CDMA_M_AXI_MAX_BURST_LEN 256
+#define XPAR_I_AXI_CDMA_ADDR_WIDTH 32
 
 
 /******************************************************************/
@@ -47,6 +59,17 @@
 #define XPAR_AXICDMA_0_INCLUDE_SG 0
 #define XPAR_AXICDMA_0_M_AXI_MAX_BURST_LEN 256
 #define XPAR_AXICDMA_0_ADDR_WIDTH 32
+
+/* Canonical definitions for peripheral I_AXI_CDMA */
+#define XPAR_AXICDMA_1_DEVICE_ID XPAR_I_AXI_CDMA_DEVICE_ID
+#define XPAR_AXICDMA_1_BASEADDR 0x7E200000
+#define XPAR_AXICDMA_1_HIGHADDR 0x7E20FFFF
+#define XPAR_AXICDMA_1_INCLUDE_DRE 0
+#define XPAR_AXICDMA_1_USE_DATAMOVER_LITE 0
+#define XPAR_AXICDMA_1_M_AXI_DATA_WIDTH 32
+#define XPAR_AXICDMA_1_INCLUDE_SG 0
+#define XPAR_AXICDMA_1_M_AXI_MAX_BURST_LEN 256
+#define XPAR_AXICDMA_1_ADDR_WIDTH 32
 
 
 /******************************************************************/
@@ -275,18 +298,6 @@
 #define XPAR_XQSPIPS_0_QSPI_CLK_FREQ_HZ 200000000
 #define XPAR_XQSPIPS_0_QSPI_MODE 0
 
-
-/******************************************************************/
-
-/* Definitions for Fabric interrupts connected to ps7_scugic_0 */
-#define XPAR_FABRIC_SYSTEM_BTN0_INTR 61
-#define XPAR_FABRIC_SYSTEM_BTN1_INTR 62
-#define XPAR_FABRIC_SYSTEM_BTN2_INTR 63
-#define XPAR_FABRIC_SYSTEM_BTN3_INTR 64
-
-/******************************************************************/
-
-/* Canonical definitions for Fabric interrupts connected to ps7_scugic_0 */
 
 /******************************************************************/
 

@@ -33,6 +33,8 @@ extern XScuGic g_int_ctrl;
 /************************** Function Prototypes ******************************/
 int init_interrupts(void);
 void enable_interrupts(void);
+void cleanup_interrupts(void);
 int create_interrupt(XScuGic *, u32, u8, u8, Xil_InterruptHandler, void *);
+void destroy_interrupt(XScuGic *, u32);
 
 #endif // INTERRUPT_H

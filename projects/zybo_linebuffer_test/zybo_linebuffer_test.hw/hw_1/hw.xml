@@ -4,10 +4,10 @@
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="1">
-  <device name="xc7z010_1" gui_info="dashboard1=hw_ila_1[xc7z010_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7z010_1/hw_ila_1/Status=ILA_STATUS_1;xc7z010_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z010_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z010_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;]"/>
+  <device name="xc7z010_1" gui_info="dashboard1=hw_ila_1[xc7z010_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7z010_1/hw_ila_1/Status=ILA_STATUS_1;xc7z010_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z010_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z010_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;],dashboard2=hw_ila_2[xc7z010_1/hw_ila_2/Capture Setup=ILA_CAPTURE_1;xc7z010_1/hw_ila_2/Settings=ILA_SETTINGS_1;xc7z010_1/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;xc7z010_1/hw_ila_2/Status=ILA_STATUS_1;xc7z010_1/hw_ila_2/Waveform=ILA_WAVE_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z010_1" gui_info="">
-      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/debug_nets.ltx"/>
+      <Properties Property="PROBES.FILE" value=""/>
       <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/linebuffer_test_wrapper.bit"/>
     </Object>
   </ObjectList>
@@ -26,10 +26,16 @@
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
+    <Object name="u_ila_1_0" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
     <Object name="design_1_i/test_pattern_generator_0_vde" gui_info="Trigger Setup=0"/>
     <Object name="linebuffer_test_i/axi_mem_intercon_1_M00_AXI_WVALID" gui_info="Trigger Setup=0"/>
+    <Object name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_ADDR[11:0]" gui_info="Trigger Setup=0"/>
+    <Object name="linebuffer_test_i/i_buf_controller_0_addr[31:0]" gui_info="Trigger Setup=0"/>
     <Object name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[11:0]" gui_info="Trigger Setup=0"/>
     <Object name="linebuffer_test_i/o_axi_cdma_M_AXI_AWVALID" gui_info="Trigger Setup=0"/>
     <Object name="linebuffer_test_i/o_buf_controller_addr[31:0]" gui_info="Trigger Setup=0"/>
@@ -234,6 +240,185 @@
         <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;h004"/>
       </probeOptions>
       <nets>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_ADDR[11]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_ADDR[10]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_ADDR[9]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_ADDR[8]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_ADDR[7]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_ADDR[6]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_ADDR[5]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_ADDR[4]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_ADDR[3]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_ADDR[2]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_ADDR[1]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_ADDR[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[31]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[30]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[29]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[28]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[27]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[26]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[25]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[24]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[23]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[22]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[21]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[20]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[19]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[18]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[17]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[16]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[15]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[14]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[13]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[12]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[11]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[10]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[9]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[8]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[7]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[6]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[5]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[4]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[3]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[2]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[1]"/>
+        <net name="linebuffer_test_i/i_axi_bram_ctrl_BRAM_PORTA_DOUT[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;h0000_0000"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;h0000_0000"/>
+      </probeOptions>
+      <nets>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[31]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[30]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[29]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[28]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[27]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[26]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[25]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[24]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[23]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[22]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[21]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[20]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[19]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[18]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[17]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[16]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[15]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[14]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[13]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[12]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[11]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[10]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[9]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[8]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[7]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[6]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[5]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[4]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[3]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[2]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[1]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_addr[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[31]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[30]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[29]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[28]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[27]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[26]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[25]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[24]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[23]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[22]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[21]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[20]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[19]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[18]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[17]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[16]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[15]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[14]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[13]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[12]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[11]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[10]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[9]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[8]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[7]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[6]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[5]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[4]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[3]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[2]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[1]"/>
+        <net name="linebuffer_test_i/i_buf_controller_0_o_data[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;hX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;hX"/>
+      </probeOptions>
+      <nets>
+        <net name="linebuffer_test_i/i_buf_controller_0_we"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq12&apos;h004"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;h004"/>
+      </probeOptions>
+      <nets>
         <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[11]"/>
         <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[10]"/>
         <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[9]"/>
@@ -248,7 +433,7 @@
         <net name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -608,7 +793,7 @@
         <net name="linebuffer_test_i/o_buf_controller_addr[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;h0000_0000"/>
@@ -669,7 +854,7 @@
         <net name="linebuffer_test_i/o_buf_controller_hsync"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
@@ -751,7 +936,7 @@
         <net name="linebuffer_test_i/o_buf_controller_vsync"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -795,6 +980,58 @@
         <net name="linebuffer_test_i/o_linebuffer_doutb[2]"/>
         <net name="linebuffer_test_i/o_linebuffer_doutb[1]"/>
         <net name="linebuffer_test_i/o_linebuffer_doutb[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;hX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;hX"/>
+      </probeOptions>
+      <nets>
+        <net name="linebuffer_test_i/test_pattern_generator_0_hsync"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+      </probeOptions>
+      <nets>
+        <net name="linebuffer_test_i/test_pattern_generator_0_r[7]"/>
+        <net name="linebuffer_test_i/test_pattern_generator_0_r[6]"/>
+        <net name="linebuffer_test_i/test_pattern_generator_0_r[5]"/>
+        <net name="linebuffer_test_i/test_pattern_generator_0_r[4]"/>
+        <net name="linebuffer_test_i/test_pattern_generator_0_r[3]"/>
+        <net name="linebuffer_test_i/test_pattern_generator_0_r[2]"/>
+        <net name="linebuffer_test_i/test_pattern_generator_0_r[1]"/>
+        <net name="linebuffer_test_i/test_pattern_generator_0_r[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;hX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;hX"/>
+      </probeOptions>
+      <nets>
+        <net name="linebuffer_test_i/test_pattern_generator_0_vde"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">

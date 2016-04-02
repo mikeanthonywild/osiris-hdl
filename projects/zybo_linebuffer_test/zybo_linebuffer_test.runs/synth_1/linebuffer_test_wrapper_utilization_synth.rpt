@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date         : Wed Mar 30 16:32:53 2016
+| Date         : Fri Apr  1 12:03:34 2016
 | Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 | Command      : report_utilization -file linebuffer_test_wrapper_utilization_synth.rpt -pb linebuffer_test_wrapper_utilization_synth.pb
 | Design       : linebuffer_test_wrapper
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 4251 |     0 |     17600 | 24.15 |
-|   LUT as Logic             | 3916 |     0 |     17600 | 22.25 |
-|   LUT as Memory            |  335 |     0 |      6000 |  5.58 |
-|     LUT as Distributed RAM |   68 |     0 |           |       |
-|     LUT as Shift Register  |  267 |     0 |           |       |
-| Slice Registers            | 5302 |     0 |     35200 | 15.06 |
-|   Register as Flip Flop    | 5302 |     0 |     35200 | 15.06 |
+| Slice LUTs*                | 6776 |     0 |     17600 | 38.50 |
+|   LUT as Logic             | 6200 |     0 |     17600 | 35.23 |
+|   LUT as Memory            |  576 |     0 |      6000 |  9.60 |
+|     LUT as Distributed RAM |  116 |     0 |           |       |
+|     LUT as Shift Register  |  460 |     0 |           |       |
+| Slice Registers            | 8230 |     0 |     35200 | 23.38 |
+|   Register as Flip Flop    | 8230 |     0 |     35200 | 23.38 |
 |   Register as Latch        |    0 |     0 |     35200 |  0.00 |
 | F7 Muxes                   |    0 |     0 |      8800 |  0.00 |
 | F8 Muxes                   |    0 |     0 |      4400 |  0.00 |
@@ -56,10 +56,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 198   |          Yes |           - |          Set |
-| 198   |          Yes |           - |        Reset |
-| 103   |          Yes |         Set |            - |
-| 4803  |          Yes |       Reset |            - |
+| 264   |          Yes |           - |          Set |
+| 264   |          Yes |           - |        Reset |
+| 150   |          Yes |         Set |            - |
+| 7552  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -69,9 +69,9 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |    8 |     0 |        60 | 13.33 |
-|   RAMB36/FIFO*    |    8 |     0 |        60 | 13.33 |
-|     RAMB36E1 only |    8 |       |           |       |
+| Block RAM Tile    |   16 |     0 |        60 | 26.67 |
+|   RAMB36/FIFO*    |   16 |     0 |        60 | 26.67 |
+|     RAMB36E1 only |   16 |       |           |       |
 |   RAMB18          |    0 |     0 |       120 |  0.00 |
 +-------------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
@@ -93,7 +93,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+--------+
 |          Site Type          | Used | Fixed | Available |  Util% |
 +-----------------------------+------+-------+-----------+--------+
-| Bonded IOB                  |   23 |     0 |       100 |  23.00 |
+| Bonded IOB                  |   19 |     0 |       100 |  19.00 |
 | Bonded IPADs                |    0 |     0 |         2 |   0.00 |
 | Bonded IOPADs               |  130 |     0 |       130 | 100.00 |
 | PHY_CONTROL                 |    0 |     0 |         2 |   0.00 |
@@ -116,7 +116,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    3 |     0 |        32 |  9.38 |
+| BUFGCTRL   |    4 |     0 |        32 | 12.50 |
 | BUFIO      |    0 |     0 |         8 |  0.00 |
 | MMCME2_ADV |    1 |     0 |         2 | 50.00 |
 | PLLE2_ADV  |    0 |     0 |         2 |  0.00 |
@@ -149,28 +149,28 @@ Table of Contents
 +------------+------+----------------------+
 |  Ref Name  | Used |  Functional Category |
 +------------+------+----------------------+
-| FDRE       | 4803 |         Flop & Latch |
-| LUT6       | 1317 |                  LUT |
-| LUT3       | 1095 |                  LUT |
-| LUT4       |  860 |                  LUT |
-| LUT5       |  802 |                  LUT |
-| LUT2       |  479 |                  LUT |
-| LUT1       |  322 |                  LUT |
-| FDPE       |  198 |         Flop & Latch |
-| FDCE       |  198 |         Flop & Latch |
-| SRL16E     |  164 |   Distributed Memory |
+| FDRE       | 7552 |         Flop & Latch |
+| LUT6       | 2268 |                  LUT |
+| LUT3       | 1680 |                  LUT |
+| LUT4       | 1406 |                  LUT |
+| LUT5       | 1155 |                  LUT |
+| LUT2       |  656 |                  LUT |
+| LUT1       |  463 |                  LUT |
+| SRL16E     |  301 |   Distributed Memory |
+| FDPE       |  264 |         Flop & Latch |
+| FDCE       |  264 |         Flop & Latch |
+| CARRY4     |  204 |           CarryLogic |
+| RAMD32     |  172 |   Distributed Memory |
+| SRLC32E    |  159 |   Distributed Memory |
+| FDSE       |  150 |         Flop & Latch |
 | BIBUF      |  130 |                   IO |
-| CARRY4     |  123 |           CarryLogic |
-| SRLC32E    |  103 |   Distributed Memory |
-| FDSE       |  103 |         Flop & Latch |
-| RAMD32     |  100 |   Distributed Memory |
-| RAMS32     |   32 |   Distributed Memory |
+| RAMS32     |   56 |   Distributed Memory |
 | OBUF       |   18 |                   IO |
-| RAMB36E1   |    8 |         Block Memory |
-| IBUF       |    5 |                   IO |
-| BUFG       |    3 |                Clock |
+| RAMB36E1   |   16 |         Block Memory |
+| BUFG       |    4 |                Clock |
 | PS7        |    1 | Specialized Resource |
 | MMCME2_ADV |    1 |                Clock |
+| IBUF       |    1 |                   IO |
 +------------+------+----------------------+
 
 

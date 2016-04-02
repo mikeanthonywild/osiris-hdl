@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="linebuffer_test" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1459351493"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1459351493"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1459351493"/>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1459541469"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1459541469"/>
+    <Generation Name="SIMULATION" State="STALE" Timestamp="1459541469"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/linebuffer_test_processing_system7_0_0/linebuffer_test_processing_system7_0_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0"/>
@@ -142,6 +142,54 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
+      <File Name="ip/linebuffer_test_blk_mem_gen_0_0/linebuffer_test_blk_mem_gen_0_0.xci" Type="IP">
+        <Instance HierarchyPath="i_linebuffer"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/linebuffer_test_axi_cdma_0_0/linebuffer_test_axi_cdma_0_0.xci" Type="IP">
+        <Instance HierarchyPath="i_axi_cdma"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/linebuffer_test_axi_bram_ctrl_0_0/linebuffer_test_axi_bram_ctrl_0_0.xci" Type="IP">
+        <Instance HierarchyPath="i_axi_bram_ctrl"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/linebuffer_test_i_buf_controller_0_0/linebuffer_test_i_buf_controller_0_0.xci" Type="IP">
+        <Instance HierarchyPath="i_buf_controller_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/linebuffer_test_xlconcat_0_0/linebuffer_test_xlconcat_0_0.xci" Type="IP">
+        <Instance HierarchyPath="bram_we_concat"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/linebuffer_test_test_pattern_generator_0_0/linebuffer_test_test_pattern_generator_0_0.xci" Type="IP">
+        <Instance HierarchyPath="test_pattern_generator_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
       <File Name="hdl/linebuffer_test.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
@@ -149,8 +197,24 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
+      <File Name="ip/linebuffer_test_xlconcat_0_1/linebuffer_test_xlconcat_0_1.xci" Type="IP">
+        <Instance HierarchyPath="irq_concat"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
       <File Name="ip/linebuffer_test_auto_pc_0/linebuffer_test_auto_pc_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0_axi_periph/s00_couplers/auto_pc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/linebuffer_test_auto_ds_0/linebuffer_test_auto_ds_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_mem_intercon/m00_couplers/auto_ds"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -165,7 +229,15 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/linebuffer_test_auto_ds_0/linebuffer_test_auto_ds_0.xci" Type="IP">
+      <File Name="ip/linebuffer_test_auto_us_0/linebuffer_test_auto_us_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_mem_intercon/s00_couplers/auto_us"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/linebuffer_test_auto_ds_1/linebuffer_test_auto_ds_1.xci" Type="IP">
         <Instance HierarchyPath="axi_mem_intercon_1/m00_couplers/auto_ds"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -181,7 +253,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/linebuffer_test_auto_us_0/linebuffer_test_auto_us_0.xci" Type="IP">
+      <File Name="ip/linebuffer_test_auto_us_1/linebuffer_test_auto_us_1.xci" Type="IP">
         <Instance HierarchyPath="axi_mem_intercon_1/s00_couplers/auto_us"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>

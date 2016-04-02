@@ -1,29 +1,6 @@
-19:24:01 **** Auto Build of configuration Debug for project linebuffer_test ****
+20:21:54 **** Incremental Build of configuration Debug for project linebuffer_test ****
 make all 
-Building file: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
-Invoking: ARM gcc compiler
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test/src" -I"/home/mike/Documents/osiris-hdl/sw/common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c"
-/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'init_axi_cdma':
-/home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:106:42: warning: passing argument 1 of 'XAxiCdma_LookupConfig' makes integer from pointer without a cast
-     i_cdma_cfg_p = XAxiCdma_LookupConfig(I_CDMA_DEVICE_ID);
-                                          ^
-In file included from /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c:17:0:
-../../linebuffer_test_bsp/ps7_cortexa9_0/include/xaxicdma.h:519:18: note: expected 'u32' but argument is of type 'void *'
- XAxiCdma_Config *XAxiCdma_LookupConfig(u32 DeviceId);
-                  ^
-Finished building: /home/mike/Documents/osiris-hdl/sw/common/buf_controller.c
- 
-Building target: linebuffer_test.elf
-Invoking: ARM gcc linker
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: linebuffer_test.elf
- 
-Invoking: ARM Print Size
-arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  36980	 309152	 330548	 676680	  a5348	linebuffer_test.elf
-Finished building: linebuffer_test.elf.size
- 
+make: Nothing to be done for `all'.
 
-19:24:01 Build Finished (took 113ms)
+20:21:54 Build Finished (took 59ms)
 

@@ -54,6 +54,7 @@ int init_buf_ctrl_interrupts(void) {
     int status;
 
     // line_valid
+    /*
     status = create_interrupt(&g_int_ctrl, LINE_VALID_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, &line_valid_isr, (void*)&line_valid_flag);
     if (status != XST_SUCCESS) {
         return XST_FAILURE;
@@ -64,6 +65,7 @@ int init_buf_ctrl_interrupts(void) {
     if (status != XST_SUCCESS) {
         return XST_FAILURE;
     }
+    */
 
     // req_line
     status = create_interrupt(&g_int_ctrl, REQ_LINE_INT_ID, 0x8, TRIGGER_TYPE_EDGE_RISING, &req_line_isr, (void*)&req_line_flag);
@@ -83,7 +85,6 @@ int init_buf_ctrl_interrupts(void) {
 
 void line_valid_isr(void *line_valid_flag) {
     *((int *)line_valid_flag) = 1;
-    xil_printf("testing...\n");
 }
 
 void frame_valid_isr(void *frame_valid_flag) {

@@ -5,60 +5,83 @@ preplace port DDR -pg 1 -y 220 -defaultsOSRD
 preplace port vga_hs -pg 1 -y 1100 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -y 240 -defaultsOSRD
 preplace port vga_vs -pg 1 -y 1120 -defaultsOSRD
-preplace port clk -pg 1 -y 770 -defaultsOSRD
+preplace port clk -pg 1 -y 970 -defaultsOSRD
 preplace portBus vga_b -pg 1 -y 1080 -defaultsOSRD
-preplace portBus btn -pg 1 -y 380 -defaultsOSRD
 preplace portBus vga_r -pg 1 -y 1040 -defaultsOSRD
 preplace portBus vga_g -pg 1 -y 1060 -defaultsOSRD
 preplace inst o_axi_cdma -pg 1 -lvl 3 -y 500 -defaultsOSRD
+preplace inst i_axi_bram_ctrl -pg 1 -lvl 5 -y 530 -defaultsOSRD
 preplace inst axi_mem_intercon_1 -pg 1 -lvl 4 -y 580 -defaultsOSRD
 preplace inst rst_processing_system7_0_100M -pg 1 -lvl 1 -y 90 -defaultsOSRD
+preplace inst test_pattern_generator_0 -pg 1 -lvl 2 -y 860 -defaultsOSRD
 preplace inst GND -pg 1 -lvl 5 -y 950 -defaultsOSRD
-preplace inst o_buf_controller -pg 1 -lvl 3 -y 1050 -defaultsOSRD
+preplace inst o_buf_controller -pg 1 -lvl 3 -y 1100 -defaultsOSRD
 preplace inst o_linebuffer -pg 1 -lvl 6 -y 860 -defaultsOSRD
-preplace inst vga_concat -pg 1 -lvl 5 -y 1100 -defaultsOSRD
-preplace inst VDD -pg 1 -lvl 2 -y 920 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 780 -defaultsOSRD
+preplace inst i_axi_cdma -pg 1 -lvl 3 -y 340 -defaultsOSRD
+preplace inst vga_concat -pg 1 -lvl 5 -y 1150 -defaultsOSRD
+preplace inst i_buf_controller_0 -pg 1 -lvl 3 -y 880 -defaultsOSRD
+preplace inst VDD -pg 1 -lvl 2 -y 1030 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 980 -defaultsOSRD
 preplace inst axi_mem_intercon -pg 1 -lvl 4 -y 320 -defaultsOSRD
+preplace inst irq_concat -pg 1 -lvl 4 -y 950 -defaultsOSRD
+preplace inst bram_we_concat -pg 1 -lvl 5 -y 810 -defaultsOSRD
+preplace inst i_linebuffer -pg 1 -lvl 6 -y 610 -defaultsOSRD
 preplace inst rgb2vga_0 -pg 1 -lvl 6 -y 1080 -defaultsOSRD
 preplace inst o_axi_bram_ctrl -pg 1 -lvl 5 -y 660 -defaultsOSRD
 preplace inst processing_system7_0_axi_periph -pg 1 -lvl 2 -y 330 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 5 -y 310 -defaultsOSRD
 preplace netloc processing_system7_0_DDR 1 5 2 NJ 220 NJ
-preplace netloc o_axi_bram_ctrl_BRAM_PORTA 1 5 1 1840
-preplace netloc axi_mem_intercon_M01_AXI 1 4 1 1280
-preplace netloc btn_1 1 0 5 NJ 190 NJ 150 NJ 150 NJ 150 1320
+preplace netloc i_axi_bram_ctrl_BRAM_PORTA 1 5 1 N
+preplace netloc o_axi_bram_ctrl_BRAM_PORTA 1 5 1 1900
+preplace netloc axi_mem_intercon_M01_AXI 1 4 1 1360
+preplace netloc i_buf_controller_0_o_data 1 3 3 NJ 140 NJ 140 1900
 preplace netloc rgb2vga_0_vga_pRed 1 6 1 NJ
+preplace netloc test_pattern_generator_0_hsync 1 2 1 N
+preplace netloc test_pattern_generator_0_vsync 1 2 1 N
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 700
+preplace netloc o_buf_controller_req_line 1 3 1 1030
+preplace netloc bram_we_concat_dout 1 5 1 1880
 preplace netloc rgb2vga_0_vga_pGreen 1 6 1 NJ
-preplace netloc o_buf_controller_vsync 1 3 3 NJ 1010 NJ 1010 1820
-preplace netloc axi_mem_intercon_1_M00_AXI 1 4 1 1300
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 340 160 NJ 160 NJ 160 NJ 160 1850
-preplace netloc o_buf_controller_vde 1 3 3 NJ 1050 NJ 1170 1860
-preplace netloc xlconcat_1_dout 1 5 1 1830
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 -30 180 NJ 180 NJ 180 NJ 170 NJ 170 1840
-preplace netloc axi_mem_intercon_1_M01_AXI 1 4 1 1290
-preplace netloc o_buf_controller_o_data 1 3 2 NJ 1070 NJ
-preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 4 310 530 650 590 970 720 1300
-preplace netloc clk_1 1 0 1 NJ
+preplace netloc o_buf_controller_vsync 1 3 3 NJ 1230 NJ 1230 1910
+preplace netloc axi_mem_intercon_1_M00_AXI 1 4 1 1380
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 400 100 NJ 100 NJ 100 NJ 100 1890
+preplace netloc test_pattern_generator_0_r 1 2 1 700
+preplace netloc o_buf_controller_vde 1 3 3 NJ 1080 NJ 1080 1870
+preplace netloc i_buf_controller_0_line_valid 1 3 1 1010
+preplace netloc xlconcat_1_dout 1 5 1 1900
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 30 180 NJ 160 NJ 160 NJ 160 NJ 160 1880
+preplace netloc axi_mem_intercon_M00_AXI 1 4 1 1410
+preplace netloc axi_mem_intercon_1_M01_AXI 1 4 1 1370
+preplace netloc o_buf_controller_o_data 1 3 2 NJ 1120 NJ
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 4 370 480 740 420 1060 180 1390
+preplace netloc clk_1 1 0 1 N
 preplace netloc processing_system7_0_FIXED_IO 1 5 2 NJ 240 NJ
-preplace netloc o_buf_controller_addr 1 3 3 NJ 840 NJ 840 N
-preplace netloc clk_wiz_0_clk_out1 1 1 5 N 770 650 860 NJ 860 NJ 860 1840
+preplace netloc clk_wiz_0_clk_out1 1 1 5 380 760 710 120 NJ 120 NJ 460 NJ
+preplace netloc o_buf_controller_req_frame 1 3 1 1050
+preplace netloc test_pattern_generator_0_vde 1 2 1 N
+preplace netloc o_buf_controller_addr 1 3 3 NJ 870 NJ 890 1870
 preplace netloc rgb2vga_0_vga_pVSync 1 6 1 NJ
 preplace netloc rgb2vga_0_vga_pHSync 1 6 1 NJ
-preplace netloc o_axi_cdma_M_AXI 1 3 1 940
-preplace netloc VDD_dout 1 2 4 660 900 NJ 900 NJ 900 N
-preplace netloc o_buf_controller_hsync 1 3 3 NJ 1180 NJ 1180 1850
-preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 3 330 190 NJ 190 950
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 -40 270 340 490 670 580 960 180 1310 450 1820
+preplace netloc clk_wiz_0_clk_out2 1 1 5 NJ 1080 700 1220 NJ 1220 NJ 1220 1890
+preplace netloc i_buf_controller_0_addr 1 3 3 NJ 130 NJ 130 1910
+preplace netloc o_axi_cdma_M_AXI 1 3 1 1020
+preplace netloc VDD_dout 1 2 4 720 730 NJ 730 NJ 730 1910
+preplace netloc o_buf_controller_hsync 1 3 3 NJ 1060 NJ 1060 1870
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 3 390 190 NJ 190 1030
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 20 270 400 470 720 580 1050 170 1420 450 1870
+preplace netloc irq_concat_dout 1 4 1 1400
 preplace netloc GND_dout 1 5 1 NJ
-preplace netloc o_linebuffer_doutb 1 2 4 670 880 NJ 880 NJ 880 NJ
-preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 1 670
+preplace netloc o_linebuffer_doutb 1 2 4 740 780 NJ 780 NJ 900 1880
+preplace netloc i_axi_cdma_M_AXI 1 3 1 1020
+preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 1 730
+preplace netloc i_buf_controller_0_frame_valid 1 3 1 1000
+preplace netloc i_buf_controller_0_we 1 3 2 NJ 840 NJ
 preplace netloc rgb2vga_0_vga_pBlue 1 6 1 NJ
-levelinfo -pg 1 -70 140 500 810 1130 1600 2080 2250 -top 0 -bot 1190
+levelinfo -pg 1 0 200 550 870 1210 1650 2070 2240 -top 0 -bot 1240
 ",
 }
 {
-   da_axi4_cnt: "6",
-   da_bram_cntlr_cnt: "4",
+   da_axi4_cnt: "9",
+   da_bram_cntlr_cnt: "5",
    da_ps7_cnt: "1",
 }

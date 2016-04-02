@@ -40,6 +40,6 @@ void init_framebuf(void) {
 	//}
 	//memset(g_framebuf, 0xFF, sizeof(g_framebuf[0]) * 1280);
 #else
-    memset(g_framebuf, 0xFF, sizeof(g_framebuf[0][0]) * FRAMEBUF_HEIGHT * FRAMEBUF_WIDTH);
+    memset(g_framebuf, 0x00, sizeof(g_framebuf[0][0]) * FRAMEBUF_HEIGHT * FRAMEBUF_WIDTH);
 #endif
 }

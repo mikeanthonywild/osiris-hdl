@@ -48,7 +48,6 @@ set_msg_config -id {HDL 9-1654} -limit 100000
 start_step init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z010clg400-1
   set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
@@ -74,7 +73,15 @@ set rc [catch {
   set_property processing_order EARLY [get_files /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_clk_wiz_0_0/linebuffer_test_clk_wiz_0_0.xdc]
   read_xdc -ref linebuffer_test_axi_cdma_0_0 -cells U0 /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_axi_cdma_0_0/linebuffer_test_axi_cdma_0_0.xdc
   set_property processing_order EARLY [get_files /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_axi_cdma_0_0/linebuffer_test_axi_cdma_0_0.xdc]
+  read_xdc -ref linebuffer_test_rgb2dvi_0_0 -cells U0 /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_rgb2dvi_0_0/src/rgb2dvi.xdc
+  set_property processing_order EARLY [get_files /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_rgb2dvi_0_0/src/rgb2dvi.xdc]
+  read_xdc -prop_thru_buffers -ref linebuffer_test_clk_wiz_0_1 -cells inst /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_clk_wiz_0_1/linebuffer_test_clk_wiz_0_1_board.xdc
+  set_property processing_order EARLY [get_files /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_clk_wiz_0_1/linebuffer_test_clk_wiz_0_1_board.xdc]
+  read_xdc -ref linebuffer_test_clk_wiz_0_1 -cells inst /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_clk_wiz_0_1/linebuffer_test_clk_wiz_0_1.xdc
+  set_property processing_order EARLY [get_files /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_clk_wiz_0_1/linebuffer_test_clk_wiz_0_1.xdc]
   read_xdc /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc
+  read_xdc -ref linebuffer_test_rgb2dvi_0_0 -cells U0 /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc
+  set_property processing_order LATE [get_files /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc]
   read_xdc -ref linebuffer_test_auto_ds_0 -cells inst /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_auto_ds_0/linebuffer_test_auto_ds_0_clocks.xdc
   set_property processing_order LATE [get_files /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_auto_ds_0/linebuffer_test_auto_ds_0_clocks.xdc]
   read_xdc -ref linebuffer_test_auto_us_0 -cells inst /home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_auto_us_0/linebuffer_test_auto_us_0_clocks.xdc

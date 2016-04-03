@@ -78,6 +78,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test
 # IP: bd/linebuffer_test/ip/linebuffer_test_xlconcat_0_1/linebuffer_test_xlconcat_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_xlconcat_0_1 || ORIG_REF_NAME==linebuffer_test_xlconcat_0_1}]
 
+# IP: bd/linebuffer_test/ip/linebuffer_test_rgb2dvi_0_0/linebuffer_test_rgb2dvi_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_rgb2dvi_0_0 || ORIG_REF_NAME==linebuffer_test_rgb2dvi_0_0}]
+
+# IP: bd/linebuffer_test/ip/linebuffer_test_clk_wiz_0_1/linebuffer_test_clk_wiz_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_clk_wiz_0_1 || ORIG_REF_NAME==linebuffer_test_clk_wiz_0_1}]
+
 # IP: bd/linebuffer_test/ip/linebuffer_test_auto_pc_0/linebuffer_test_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==linebuffer_test_auto_pc_0 || ORIG_REF_NAME==linebuffer_test_auto_pc_0}]
 
@@ -141,6 +147,22 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==linebuffer_test_axi_cdma_0_0 || ORIG_REF_NAME==linebuffer_test_axi_cdma_0_0}] {/U0 }]/U0 ]]
 
 # XDC: bd/linebuffer_test/ip/linebuffer_test_axi_bram_ctrl_0_0/linebuffer_test_axi_bram_ctrl_0_0_ooc.xdc
+
+# XDC: bd/linebuffer_test/ip/linebuffer_test_rgb2dvi_0_0/src/rgb2dvi.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==linebuffer_test_rgb2dvi_0_0 || ORIG_REF_NAME==linebuffer_test_rgb2dvi_0_0}] {/U0 }]/U0 ]]
+
+# XDC: bd/linebuffer_test/ip/linebuffer_test_rgb2dvi_0_0/src/rgb2dvi_ooc.xdc
+
+# XDC: bd/linebuffer_test/ip/linebuffer_test_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==linebuffer_test_rgb2dvi_0_0 || ORIG_REF_NAME==linebuffer_test_rgb2dvi_0_0}] {/U0 }]/U0 ]]
+
+# XDC: bd/linebuffer_test/ip/linebuffer_test_clk_wiz_0_1/linebuffer_test_clk_wiz_0_1_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==linebuffer_test_clk_wiz_0_1 || ORIG_REF_NAME==linebuffer_test_clk_wiz_0_1}] {/inst }]/inst ]]
+
+# XDC: bd/linebuffer_test/ip/linebuffer_test_clk_wiz_0_1/linebuffer_test_clk_wiz_0_1.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==linebuffer_test_clk_wiz_0_1 || ORIG_REF_NAME==linebuffer_test_clk_wiz_0_1}] {/inst }]/inst ]]
+
+# XDC: bd/linebuffer_test/ip/linebuffer_test_clk_wiz_0_1/linebuffer_test_clk_wiz_0_1_ooc.xdc
 
 # XDC: bd/linebuffer_test/ip/linebuffer_test_auto_pc_0/linebuffer_test_auto_pc_0_ooc.xdc
 

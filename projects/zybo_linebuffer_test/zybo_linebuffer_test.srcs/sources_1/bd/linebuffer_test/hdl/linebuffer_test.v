@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-//Date        : Fri Apr  1 11:50:47 2016
+//Date        : Sun Apr  3 10:56:11 2016
 //Host        : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 //Command     : generate_target linebuffer_test.bd
 //Design      : linebuffer_test
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "linebuffer_test,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=linebuffer_test,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=40,numReposBlks=28,numNonXlnxBlks=4,numHierBlks=12,maxHierDepth=0,da_axi4_cnt=9,da_bram_cntlr_cnt=5,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "linebuffer_test.hwdef" *) 
+(* CORE_GENERATION_INFO = "linebuffer_test,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=linebuffer_test,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=42,numReposBlks=30,numNonXlnxBlks=5,numHierBlks=12,maxHierDepth=0,da_axi4_cnt=9,da_bram_cntlr_cnt=5,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "linebuffer_test.hwdef" *) 
 module linebuffer_test
    (DDR_addr,
     DDR_ba,
@@ -33,6 +33,10 @@ module linebuffer_test
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     clk,
+    hdmi_clk_n,
+    hdmi_clk_p,
+    hdmi_d_n,
+    hdmi_d_p,
     vga_b,
     vga_g,
     vga_hs,
@@ -60,6 +64,10 @@ module linebuffer_test
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   input clk;
+  output hdmi_clk_n;
+  output hdmi_clk_p;
+  output [2:0]hdmi_d_n;
+  output [2:0]hdmi_d_p;
   output [4:0]vga_b;
   output [5:0]vga_g;
   output vga_hs;
@@ -200,6 +208,7 @@ module linebuffer_test
   wire clk_1;
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_0_clk_out2;
+  wire dvi_clk_gen_clk_out2;
   wire [11:0]i_axi_bram_ctrl_BRAM_PORTA_ADDR;
   wire i_axi_bram_ctrl_BRAM_PORTA_CLK;
   wire [31:0]i_axi_bram_ctrl_BRAM_PORTA_DIN;
@@ -379,6 +388,10 @@ module linebuffer_test
   wire [31:0]processing_system7_0_axi_periph_M01_AXI_WDATA;
   wire processing_system7_0_axi_periph_M01_AXI_WREADY;
   wire processing_system7_0_axi_periph_M01_AXI_WVALID;
+  wire rgb2dvi_0_TMDS_Clk_n;
+  wire rgb2dvi_0_TMDS_Clk_p;
+  wire [2:0]rgb2dvi_0_TMDS_Data_n;
+  wire [2:0]rgb2dvi_0_TMDS_Data_p;
   wire [4:0]rgb2vga_0_vga_pBlue;
   wire [5:0]rgb2vga_0_vga_pGreen;
   wire rgb2vga_0_vga_pHSync;
@@ -393,6 +406,10 @@ module linebuffer_test
   wire [23:0]xlconcat_1_dout;
 
   assign clk_1 = clk;
+  assign hdmi_clk_n = rgb2dvi_0_TMDS_Clk_n;
+  assign hdmi_clk_p = rgb2dvi_0_TMDS_Clk_p;
+  assign hdmi_d_n[2:0] = rgb2dvi_0_TMDS_Data_n;
+  assign hdmi_d_p[2:0] = rgb2dvi_0_TMDS_Data_p;
   assign vga_b[4:0] = rgb2vga_0_vga_pBlue;
   assign vga_g[5:0] = rgb2vga_0_vga_pGreen;
   assign vga_hs = rgb2vga_0_vga_pHSync;
@@ -612,10 +629,10 @@ module linebuffer_test
         .In2(i_buf_controller_0_we),
         .In3(i_buf_controller_0_we),
         .dout(bram_we_concat_dout));
-  linebuffer_test_clk_wiz_0_0 clk_wiz_0
+  linebuffer_test_clk_wiz_0_1 dvi_clk_gen
        (.clk_in1(clk_1),
-        .clk_out1(clk_wiz_0_clk_out1),
-        .clk_out2(clk_wiz_0_clk_out2),
+        .clk_out1(clk_wiz_0_clk_out2),
+        .clk_out2(dvi_clk_gen_clk_out2),
         .reset(1'b0));
   linebuffer_test_axi_bram_ctrl_0_0 i_axi_bram_ctrl
        (.bram_addr_a(i_axi_bram_ctrl_BRAM_PORTA_ADDR),
@@ -1078,6 +1095,19 @@ module linebuffer_test
         .S00_AXI_wready(processing_system7_0_M_AXI_GP0_WREADY),
         .S00_AXI_wstrb(processing_system7_0_M_AXI_GP0_WSTRB),
         .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID));
+  linebuffer_test_rgb2dvi_0_0 rgb2dvi_0
+       (.PixelClk(clk_wiz_0_clk_out2),
+        .SerialClk(dvi_clk_gen_clk_out2),
+        .TMDS_Clk_n(rgb2dvi_0_TMDS_Clk_n),
+        .TMDS_Clk_p(rgb2dvi_0_TMDS_Clk_p),
+        .TMDS_Data_n(rgb2dvi_0_TMDS_Data_n),
+        .TMDS_Data_p(rgb2dvi_0_TMDS_Data_p),
+        .aRst(1'b0),
+        .flash_sync(1'b0),
+        .vid_pData(xlconcat_1_dout),
+        .vid_pHSync(o_buf_controller_hsync),
+        .vid_pVDE(o_buf_controller_vde),
+        .vid_pVSync(o_buf_controller_vsync));
   linebuffer_test_rgb2vga_0_0 rgb2vga_0
        (.PixelClk(clk_wiz_0_clk_out2),
         .rgb_pData(xlconcat_1_dout),
@@ -1103,6 +1133,10 @@ module linebuffer_test
         .r(test_pattern_generator_0_r),
         .vde(test_pattern_generator_0_vde),
         .vsync(test_pattern_generator_0_vsync));
+  linebuffer_test_clk_wiz_0_0 tpg_clk_gen
+       (.clk_in1(clk_1),
+        .clk_out1(clk_wiz_0_clk_out1),
+        .reset(1'b0));
   linebuffer_test_xlconcat_1_0 vga_concat
        (.In0(o_buf_controller_o_data),
         .In1(o_buf_controller_o_data),

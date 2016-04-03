@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date         : Fri Apr  1 12:03:34 2016
+| Date         : Sun Apr  3 11:07:27 2016
 | Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 | Command      : report_utilization -file linebuffer_test_wrapper_utilization_synth.rpt -pb linebuffer_test_wrapper_utilization_synth.pb
 | Design       : linebuffer_test_wrapper
@@ -30,15 +30,15 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 6776 |     0 |     17600 | 38.50 |
-|   LUT as Logic             | 6200 |     0 |     17600 | 35.23 |
+| Slice LUTs*                | 6977 |     0 |     17600 | 39.64 |
+|   LUT as Logic             | 6401 |     0 |     17600 | 36.37 |
 |   LUT as Memory            |  576 |     0 |      6000 |  9.60 |
 |     LUT as Distributed RAM |  116 |     0 |           |       |
 |     LUT as Shift Register  |  460 |     0 |           |       |
-| Slice Registers            | 8230 |     0 |     35200 | 23.38 |
-|   Register as Flip Flop    | 8230 |     0 |     35200 | 23.38 |
+| Slice Registers            | 8372 |     0 |     35200 | 23.78 |
+|   Register as Flip Flop    | 8372 |     0 |     35200 | 23.78 |
 |   Register as Latch        |    0 |     0 |     35200 |  0.00 |
-| F7 Muxes                   |    0 |     0 |      8800 |  0.00 |
+| F7 Muxes                   |    5 |     0 |      8800 |  0.06 |
 | F8 Muxes                   |    0 |     0 |      4400 |  0.00 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -56,10 +56,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 264   |          Yes |           - |          Set |
+| 266   |          Yes |           - |          Set |
 | 264   |          Yes |           - |        Reset |
-| 150   |          Yes |         Set |            - |
-| 7552  |          Yes |       Reset |            - |
+| 165   |          Yes |         Set |            - |
+| 7677  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -93,7 +93,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+--------+
 |          Site Type          | Used | Fixed | Available |  Util% |
 +-----------------------------+------+-------+-----------+--------+
-| Bonded IOB                  |   19 |     0 |       100 |  19.00 |
+| Bonded IOB                  |   27 |     0 |       100 |  27.00 |
 | Bonded IPADs                |    0 |     0 |         2 |   0.00 |
 | Bonded IOPADs               |  130 |     0 |       130 | 100.00 |
 | PHY_CONTROL                 |    0 |     0 |         2 |   0.00 |
@@ -106,7 +106,8 @@ Table of Contents
 | PHASER_IN/PHASER_IN_PHY     |    0 |     0 |         8 |   0.00 |
 | IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       100 |   0.00 |
 | ILOGIC                      |    0 |     0 |       100 |   0.00 |
-| OLOGIC                      |    0 |     0 |       100 |   0.00 |
+| OLOGIC                      |    8 |     0 |       100 |   8.00 |
+|   OSERDES                   |    8 |       |           |        |
 +-----------------------------+------+-------+-----------+--------+
 
 
@@ -116,10 +117,10 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    4 |     0 |        32 | 12.50 |
+| BUFGCTRL   |    6 |     0 |        32 | 18.75 |
 | BUFIO      |    0 |     0 |         8 |  0.00 |
 | MMCME2_ADV |    1 |     0 |         2 | 50.00 |
-| PLLE2_ADV  |    0 |     0 |         2 |  0.00 |
+| PLLE2_ADV  |    1 |     0 |         2 | 50.00 |
 | BUFMRCE    |    0 |     0 |         4 |  0.00 |
 | BUFHCE     |    0 |     0 |        48 |  0.00 |
 | BUFR       |    0 |     0 |         8 |  0.00 |
@@ -149,26 +150,30 @@ Table of Contents
 +------------+------+----------------------+
 |  Ref Name  | Used |  Functional Category |
 +------------+------+----------------------+
-| FDRE       | 7552 |         Flop & Latch |
-| LUT6       | 2268 |                  LUT |
-| LUT3       | 1680 |                  LUT |
-| LUT4       | 1406 |                  LUT |
-| LUT5       | 1155 |                  LUT |
-| LUT2       |  656 |                  LUT |
-| LUT1       |  463 |                  LUT |
+| FDRE       | 7677 |         Flop & Latch |
+| LUT6       | 2360 |                  LUT |
+| LUT3       | 1721 |                  LUT |
+| LUT4       | 1433 |                  LUT |
+| LUT5       | 1235 |                  LUT |
+| LUT2       |  666 |                  LUT |
+| LUT1       |  464 |                  LUT |
 | SRL16E     |  301 |   Distributed Memory |
-| FDPE       |  264 |         Flop & Latch |
+| FDPE       |  266 |         Flop & Latch |
 | FDCE       |  264 |         Flop & Latch |
 | CARRY4     |  204 |           CarryLogic |
 | RAMD32     |  172 |   Distributed Memory |
+| FDSE       |  165 |         Flop & Latch |
 | SRLC32E    |  159 |   Distributed Memory |
-| FDSE       |  150 |         Flop & Latch |
 | BIBUF      |  130 |                   IO |
 | RAMS32     |   56 |   Distributed Memory |
 | OBUF       |   18 |                   IO |
 | RAMB36E1   |   16 |         Block Memory |
-| BUFG       |    4 |                Clock |
+| OSERDESE2  |    8 |                   IO |
+| BUFG       |    6 |                Clock |
+| MUXF7      |    5 |                MuxFx |
+| OBUFDS     |    4 |                   IO |
 | PS7        |    1 | Specialized Resource |
+| PLLE2_ADV  |    1 |                Clock |
 | MMCME2_ADV |    1 |                Clock |
 | IBUF       |    1 |                   IO |
 +------------+------+----------------------+

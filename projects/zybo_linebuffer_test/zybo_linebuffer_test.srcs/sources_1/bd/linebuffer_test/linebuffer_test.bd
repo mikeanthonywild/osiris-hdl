@@ -231,6 +231,38 @@
             <spirit:direction>out</spirit:direction>
           </spirit:wire>
         </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_clk_p</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_clk_n</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_d_p</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>2</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>hdmi_d_n</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>2</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -459,26 +491,35 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>clk_wiz_0</spirit:instanceName>
+        <spirit:instanceName>tpg_clk_gen</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="clk_wiz" spirit:vendor="xilinx.com" spirit:version="5.2"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">linebuffer_test_clk_wiz_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PRIMITIVE">PLL</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="USE_INCLK_SWITCHOVER">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SECONDARY_SOURCE">Single_ended_clock_capable_pin</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKIN2_JITTER_PS">146.42</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_USED">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="NUM_OUT_CLKS">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_USED">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="NUM_OUT_CLKS">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">100</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT2_REQUESTED_OUT_FREQ">25.175</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_DIVCLK_DIVIDE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKFBOUT_MULT_F">9.500</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_DRIVES">BUFG</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_DRIVES">BUFG</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT3_DRIVES">BUFG</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT4_DRIVES">BUFG</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT5_DRIVES">BUFG</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT6_DRIVES">BUFG</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT7_DRIVES">BUFG</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_DIVCLK_DIVIDE">5</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKFBOUT_MULT_F">36</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="MMCM_CLKIN2_PERIOD">10.0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT0_DIVIDE_F">11.875</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT1_DIVIDE">47</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_JITTER">112.754</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_PHASE_ERROR">86.070</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_JITTER">148.894</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_PHASE_ERROR">86.070</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_COMPENSATION">ZHOLD</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT0_DIVIDE_F">9</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT1_DIVIDE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_JITTER">237.312</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_PHASE_ERROR">249.865</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_JITTER">317.841</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_PHASE_ERROR">249.865</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -586,6 +627,33 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">linebuffer_test_xlconcat_0_1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="NUM_PORTS">4</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>rgb2dvi_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="rgb2dvi" spirit:vendor="digilentinc.com" spirit:version="1.2"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">linebuffer_test_rgb2dvi_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="kGenerateSerialClk">false</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>dvi_clk_gen</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="clk_wiz" spirit:vendor="xilinx.com" spirit:version="5.2"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">linebuffer_test_clk_wiz_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_USED">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="NUM_OUT_CLKS">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">25.175</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_REQUESTED_OUT_FREQ">125.875</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_DIVCLK_DIVIDE">5</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKFBOUT_MULT_F">35.250</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT0_DIVIDE_F">35.000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT1_DIVIDE">7</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_JITTER">323.721</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_PHASE_ERROR">251.929</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_JITTER">231.295</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_PHASE_ERROR">251.929</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -705,22 +773,26 @@
       <spirit:adHocConnection>
         <spirit:name>clk_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_in1"/>
+        <spirit:internalPortReference spirit:componentRef="tpg_clk_gen" spirit:portRef="clk_in1"/>
+        <spirit:internalPortReference spirit:componentRef="dvi_clk_gen" spirit:portRef="clk_in1"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>o_buf_controller_hsync</spirit:name>
         <spirit:internalPortReference spirit:componentRef="o_buf_controller" spirit:portRef="hsync"/>
         <spirit:internalPortReference spirit:componentRef="rgb2vga_0" spirit:portRef="rgb_pHSync"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="vid_pHSync"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>o_buf_controller_vsync</spirit:name>
         <spirit:internalPortReference spirit:componentRef="o_buf_controller" spirit:portRef="vsync"/>
         <spirit:internalPortReference spirit:componentRef="rgb2vga_0" spirit:portRef="rgb_pVSync"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="vid_pVSync"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>o_buf_controller_vde</spirit:name>
         <spirit:internalPortReference spirit:componentRef="o_buf_controller" spirit:portRef="vde"/>
         <spirit:internalPortReference spirit:componentRef="rgb2vga_0" spirit:portRef="rgb_pVDE"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="vid_pVDE"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rgb2vga_0_vga_pRed</spirit:name>
@@ -768,6 +840,7 @@
         <spirit:name>xlconcat_1_dout</spirit:name>
         <spirit:internalPortReference spirit:componentRef="vga_concat" spirit:portRef="dout"/>
         <spirit:internalPortReference spirit:componentRef="rgb2vga_0" spirit:portRef="rgb_pData"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="vid_pData"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>VDD_dout</spirit:name>
@@ -852,17 +925,43 @@
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_0_clk_out1</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out1"/>
+        <spirit:internalPortReference spirit:componentRef="tpg_clk_gen" spirit:portRef="clk_out1"/>
         <spirit:internalPortReference spirit:componentRef="test_pattern_generator_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="i_buf_controller_0" spirit:portRef="pclk"/>
         <spirit:internalPortReference spirit:componentRef="i_linebuffer" spirit:portRef="clkb"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_0_clk_out2</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out2"/>
+        <spirit:internalPortReference spirit:componentRef="dvi_clk_gen" spirit:portRef="clk_out1"/>
         <spirit:internalPortReference spirit:componentRef="o_buf_controller" spirit:portRef="pclk"/>
         <spirit:internalPortReference spirit:componentRef="rgb2vga_0" spirit:portRef="PixelClk"/>
         <spirit:internalPortReference spirit:componentRef="o_linebuffer" spirit:portRef="clkb"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="PixelClk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rgb2dvi_0_TMDS_Clk_p</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="TMDS_Clk_p"/>
+        <spirit:externalPortReference spirit:portRef="hdmi_clk_p"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rgb2dvi_0_TMDS_Clk_n</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="TMDS_Clk_n"/>
+        <spirit:externalPortReference spirit:portRef="hdmi_clk_n"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rgb2dvi_0_TMDS_Data_p</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="TMDS_Data_p"/>
+        <spirit:externalPortReference spirit:portRef="hdmi_d_p"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rgb2dvi_0_TMDS_Data_n</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="TMDS_Data_n"/>
+        <spirit:externalPortReference spirit:portRef="hdmi_d_n"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dvi_clk_gen_clk_out2</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dvi_clk_gen" spirit:portRef="clk_out2"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="SerialClk"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

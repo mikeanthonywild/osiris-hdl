@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-//Date        : Fri Apr  1 11:50:47 2016
+//Date        : Sun Apr  3 10:56:11 2016
 //Host        : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
 //Command     : generate_target linebuffer_test_wrapper.bd
 //Design      : linebuffer_test_wrapper
@@ -32,6 +32,10 @@ module linebuffer_test_wrapper
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     clk,
+    hdmi_clk_n,
+    hdmi_clk_p,
+    hdmi_d_n,
+    hdmi_d_p,
     vga_b,
     vga_g,
     vga_hs,
@@ -59,6 +63,10 @@ module linebuffer_test_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   input clk;
+  output hdmi_clk_n;
+  output hdmi_clk_p;
+  output [2:0]hdmi_d_n;
+  output [2:0]hdmi_d_p;
   output [4:0]vga_b;
   output [5:0]vga_g;
   output vga_hs;
@@ -87,6 +95,10 @@ module linebuffer_test_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire clk;
+  wire hdmi_clk_n;
+  wire hdmi_clk_p;
+  wire [2:0]hdmi_d_n;
+  wire [2:0]hdmi_d_p;
   wire [4:0]vga_b;
   wire [5:0]vga_g;
   wire vga_hs;
@@ -116,6 +128,10 @@ module linebuffer_test_wrapper
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .clk(clk),
+        .hdmi_clk_n(hdmi_clk_n),
+        .hdmi_clk_p(hdmi_clk_p),
+        .hdmi_d_n(hdmi_d_n),
+        .hdmi_d_p(hdmi_d_p),
         .vga_b(vga_b),
         .vga_g(vga_g),
         .vga_hs(vga_hs),

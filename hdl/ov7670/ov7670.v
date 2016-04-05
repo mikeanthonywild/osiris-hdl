@@ -8,7 +8,7 @@
  */
 
 module ov7670 (
-    input           pclk_24,        // Pixel clock from OV7670
+    input           pclk_12,        // Pixel clock from OV7670
     input           clk_24          // Core clock
     input           reset_n,        // Reset button
 
@@ -44,7 +44,7 @@ module ov7670 (
     );
 
     ov7670_capture ov7670_capture (
-        .pclk_24(pclk_24),
+        .pclk_12(pclk_12),
         .reset_n(reset_n),
         .start(start_capture),
         .vsync(ov7670_vsync),

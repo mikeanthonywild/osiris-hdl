@@ -67,12 +67,6 @@ COMPONENT zybo_dvi_input_dvi2rgb_0_0
     flash_sync : OUT STD_LOGIC;
     PixelClk : OUT STD_LOGIC;
     aPixelClkLckd : OUT STD_LOGIC;
-    DDC_SDA_I : IN STD_LOGIC;
-    DDC_SDA_O : OUT STD_LOGIC;
-    DDC_SDA_T : OUT STD_LOGIC;
-    DDC_SCL_I : IN STD_LOGIC;
-    DDC_SCL_O : OUT STD_LOGIC;
-    DDC_SCL_T : OUT STD_LOGIC;
     pRst : IN STD_LOGIC
   );
 END COMPONENT;
@@ -97,12 +91,6 @@ your_instance_name : zybo_dvi_input_dvi2rgb_0_0
     flash_sync => flash_sync,
     PixelClk => PixelClk,
     aPixelClkLckd => aPixelClkLckd,
-    DDC_SDA_I => DDC_SDA_I,
-    DDC_SDA_O => DDC_SDA_O,
-    DDC_SDA_T => DDC_SDA_T,
-    DDC_SCL_I => DDC_SCL_I,
-    DDC_SCL_O => DDC_SCL_O,
-    DDC_SCL_T => DDC_SCL_T,
     pRst => pRst
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------

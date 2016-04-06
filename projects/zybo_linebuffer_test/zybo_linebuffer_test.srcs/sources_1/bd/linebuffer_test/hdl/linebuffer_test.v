@@ -1,8 +1,8 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-//Date        : Sun Apr  3 10:56:11 2016
-//Host        : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
+//Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+//Date        : Mon Apr 04 21:29:27 2016
+//Host        : Study running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target linebuffer_test.bd
 //Design      : linebuffer_test
 //Purpose     : IP block netlist
@@ -33,6 +33,7 @@ module linebuffer_test
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     clk,
+    flash_sync_btn,
     hdmi_clk_n,
     hdmi_clk_p,
     hdmi_d_n,
@@ -64,6 +65,7 @@ module linebuffer_test
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   input clk;
+  input flash_sync_btn;
   output hdmi_clk_n;
   output hdmi_clk_p;
   output [2:0]hdmi_d_n;
@@ -209,6 +211,7 @@ module linebuffer_test
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_0_clk_out2;
   wire dvi_clk_gen_clk_out2;
+  wire flash_sync_btn_1;
   wire [11:0]i_axi_bram_ctrl_BRAM_PORTA_ADDR;
   wire i_axi_bram_ctrl_BRAM_PORTA_CLK;
   wire [31:0]i_axi_bram_ctrl_BRAM_PORTA_DIN;
@@ -246,8 +249,6 @@ module linebuffer_test
   wire [3:0]i_axi_cdma_M_AXI_WSTRB;
   wire i_axi_cdma_M_AXI_WVALID;
   wire [31:0]i_buf_controller_0_addr;
-  wire i_buf_controller_0_frame_valid;
-  wire i_buf_controller_0_line_valid;
   wire [31:0]i_buf_controller_0_o_data;
   wire i_buf_controller_0_we;
   wire [3:0]irq_concat_dout;
@@ -406,6 +407,7 @@ module linebuffer_test
   wire [23:0]xlconcat_1_dout;
 
   assign clk_1 = clk;
+  assign flash_sync_btn_1 = flash_sync_btn;
   assign hdmi_clk_n = rgb2dvi_0_TMDS_Clk_n;
   assign hdmi_clk_p = rgb2dvi_0_TMDS_Clk_p;
   assign hdmi_d_n[2:0] = rgb2dvi_0_TMDS_Data_n;
@@ -726,10 +728,8 @@ module linebuffer_test
         .s_axi_lite_wvalid(processing_system7_0_axi_periph_M00_AXI_WVALID));
   linebuffer_test_i_buf_controller_0_0 i_buf_controller_0
        (.addr(i_buf_controller_0_addr),
-        .frame_valid(i_buf_controller_0_frame_valid),
         .hsync(test_pattern_generator_0_hsync),
         .i_data(test_pattern_generator_0_r),
-        .line_valid(i_buf_controller_0_line_valid),
         .o_data(i_buf_controller_0_o_data),
         .pclk(clk_wiz_0_clk_out1),
         .reset_n(VDD_dout),
@@ -751,8 +751,8 @@ module linebuffer_test
         .wea(i_axi_bram_ctrl_BRAM_PORTA_WE),
         .web(bram_we_concat_dout));
   linebuffer_test_xlconcat_0_1 irq_concat
-       (.In0(i_buf_controller_0_line_valid),
-        .In1(i_buf_controller_0_frame_valid),
+       (.In0(1'b0),
+        .In1(1'b0),
         .In2(o_buf_controller_req_line),
         .In3(o_buf_controller_req_frame),
         .dout(irq_concat_dout));
@@ -858,7 +858,7 @@ module linebuffer_test
         .vde(o_buf_controller_vde),
         .vsync(o_buf_controller_vsync));
   linebuffer_test_blk_mem_gen_0_1 o_linebuffer
-       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,o_axi_bram_ctrl_BRAM_PORTA_ADDR}),
+       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,o_axi_bram_ctrl_BRAM_PORTA_ADDR}),
         .addrb(o_buf_controller_addr),
         .clka(o_axi_bram_ctrl_BRAM_PORTA_CLK),
         .clkb(clk_wiz_0_clk_out2),
@@ -1103,7 +1103,7 @@ module linebuffer_test
         .TMDS_Data_n(rgb2dvi_0_TMDS_Data_n),
         .TMDS_Data_p(rgb2dvi_0_TMDS_Data_p),
         .aRst(1'b0),
-        .flash_sync(1'b0),
+        .flash_sync(flash_sync_btn_1),
         .vid_pData(xlconcat_1_dout),
         .vid_pHSync(o_buf_controller_hsync),
         .vid_pVDE(o_buf_controller_vde),

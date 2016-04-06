@@ -1,8 +1,8 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-//Date        : Sat Mar 12 12:04:37 2016
-//Host        : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
+//Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+//Date        : Mon Apr 04 14:53:55 2016
+//Host        : Study running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target zybo_dvi_input_wrapper.bd
 //Design      : zybo_dvi_input_wrapper
 //Purpose     : IP block netlist
@@ -32,8 +32,6 @@ module zybo_dvi_input_wrapper
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     clk,
-    ddc_scl_io,
-    ddc_sda_io,
     flash_sync_led,
     hdmi_clk_n,
     hdmi_clk_p,
@@ -69,8 +67,6 @@ module zybo_dvi_input_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   input clk;
-  inout ddc_scl_io;
-  inout ddc_sda_io;
   output flash_sync_led;
   input hdmi_clk_n;
   input hdmi_clk_p;
@@ -107,14 +103,6 @@ module zybo_dvi_input_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire clk;
-  wire ddc_scl_i;
-  wire ddc_scl_io;
-  wire ddc_scl_o;
-  wire ddc_scl_t;
-  wire ddc_sda_i;
-  wire ddc_sda_io;
-  wire ddc_sda_o;
-  wire ddc_sda_t;
   wire flash_sync_led;
   wire hdmi_clk_n;
   wire hdmi_clk_p;
@@ -129,24 +117,8 @@ module zybo_dvi_input_wrapper
   wire [4:0]vga_r;
   wire vga_vs;
 
-  IOBUF ddc_scl_iobuf
-       (.I(ddc_scl_o),
-        .IO(ddc_scl_io),
-        .O(ddc_scl_i),
-        .T(ddc_scl_t));
-  IOBUF ddc_sda_iobuf
-       (.I(ddc_sda_o),
-        .IO(ddc_sda_io),
-        .O(ddc_sda_i),
-        .T(ddc_sda_t));
   zybo_dvi_input zybo_dvi_input_i
-       (.DDC_scl_i(ddc_scl_i),
-        .DDC_scl_o(ddc_scl_o),
-        .DDC_scl_t(ddc_scl_t),
-        .DDC_sda_i(ddc_sda_i),
-        .DDC_sda_o(ddc_sda_o),
-        .DDC_sda_t(ddc_sda_t),
-        .DDR_addr(DDR_addr),
+       (.DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
         .DDR_cas_n(DDR_cas_n),
         .DDR_ck_n(DDR_ck_n),

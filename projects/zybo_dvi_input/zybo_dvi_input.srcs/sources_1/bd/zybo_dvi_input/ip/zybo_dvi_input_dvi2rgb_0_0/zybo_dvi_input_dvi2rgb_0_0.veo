@@ -68,12 +68,6 @@ zybo_dvi_input_dvi2rgb_0_0 your_instance_name (
   .flash_sync(flash_sync),        // output wire flash_sync
   .PixelClk(PixelClk),            // output wire PixelClk
   .aPixelClkLckd(aPixelClkLckd),  // output wire aPixelClkLckd
-  .DDC_SDA_I(DDC_SDA_I),          // input wire DDC_SDA_I
-  .DDC_SDA_O(DDC_SDA_O),          // output wire DDC_SDA_O
-  .DDC_SDA_T(DDC_SDA_T),          // output wire DDC_SDA_T
-  .DDC_SCL_I(DDC_SCL_I),          // input wire DDC_SCL_I
-  .DDC_SCL_O(DDC_SCL_O),          // output wire DDC_SCL_O
-  .DDC_SCL_T(DDC_SCL_T),          // output wire DDC_SCL_T
   .pRst(pRst)                    // input wire pRst
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------

@@ -1,8 +1,8 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-//Date        : Sat Mar 12 12:04:37 2016
-//Host        : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
+//Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+//Date        : Mon Apr 04 14:53:55 2016
+//Host        : Study running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target zybo_dvi_input.bd
 //Design      : zybo_dvi_input
 //Purpose     : IP block netlist
@@ -11,13 +11,7 @@
 
 (* CORE_GENERATION_INFO = "zybo_dvi_input,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=zybo_dvi_input,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=5,numReposBlks=5,numNonXlnxBlks=2,numHierBlks=0,maxHierDepth=0,da_board_cnt=1,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "zybo_dvi_input.hwdef" *) 
 module zybo_dvi_input
-   (DDC_scl_i,
-    DDC_scl_o,
-    DDC_scl_t,
-    DDC_sda_i,
-    DDC_sda_o,
-    DDC_sda_t,
-    DDR_addr,
+   (DDR_addr,
     DDR_ba,
     DDR_cas_n,
     DDR_ck_n,
@@ -52,12 +46,6 @@ module zybo_dvi_input
     vga_hs,
     vga_r,
     vga_vs);
-  input DDC_scl_i;
-  output DDC_scl_o;
-  output DDC_scl_t;
-  input DDC_sda_i;
-  output DDC_sda_o;
-  output DDC_sda_t;
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -96,12 +84,6 @@ module zybo_dvi_input
 
   wire clk_1;
   wire clk_wiz_0_clk_out1;
-  wire dvi2rgb_0_DDC_SCL_I;
-  wire dvi2rgb_0_DDC_SCL_O;
-  wire dvi2rgb_0_DDC_SCL_T;
-  wire dvi2rgb_0_DDC_SDA_I;
-  wire dvi2rgb_0_DDC_SDA_O;
-  wire dvi2rgb_0_DDC_SDA_T;
   wire dvi2rgb_0_PixelClk;
   wire dvi2rgb_0_RGB_ACTIVE_VIDEO;
   wire [23:0]dvi2rgb_0_RGB_DATA;
@@ -141,13 +123,7 @@ module zybo_dvi_input
   wire rgb2vga_0_vga_pVSync;
   wire [0:0]xlconstant_0_dout;
 
-  assign DDC_scl_o = dvi2rgb_0_DDC_SCL_O;
-  assign DDC_scl_t = dvi2rgb_0_DDC_SCL_T;
-  assign DDC_sda_o = dvi2rgb_0_DDC_SDA_O;
-  assign DDC_sda_t = dvi2rgb_0_DDC_SDA_T;
   assign clk_1 = clk;
-  assign dvi2rgb_0_DDC_SCL_I = DDC_scl_i;
-  assign dvi2rgb_0_DDC_SDA_I = DDC_sda_i;
   assign flash_sync_led = dvi2rgb_0_flash_sync;
   assign hdmi_clk_n_1 = hdmi_clk_n;
   assign hdmi_clk_p_1 = hdmi_clk_p;
@@ -168,13 +144,7 @@ module zybo_dvi_input
         .clk_out1(clk_wiz_0_clk_out1),
         .reset(1'b0));
   zybo_dvi_input_dvi2rgb_0_0 dvi2rgb_0
-       (.DDC_SCL_I(dvi2rgb_0_DDC_SCL_I),
-        .DDC_SCL_O(dvi2rgb_0_DDC_SCL_O),
-        .DDC_SCL_T(dvi2rgb_0_DDC_SCL_T),
-        .DDC_SDA_I(dvi2rgb_0_DDC_SDA_I),
-        .DDC_SDA_O(dvi2rgb_0_DDC_SDA_O),
-        .DDC_SDA_T(dvi2rgb_0_DDC_SDA_T),
-        .PixelClk(dvi2rgb_0_PixelClk),
+       (.PixelClk(dvi2rgb_0_PixelClk),
         .RefClk(clk_wiz_0_clk_out1),
         .TMDS_Clk_n(hdmi_clk_n_1),
         .TMDS_Clk_p(hdmi_clk_p_1),

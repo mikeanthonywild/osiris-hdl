@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Digilent Zybo 210279772162A/2-xc7z010" key="zybo_receiver_wrapper_hw_platform_1-device"/>
+	<item value="" key="zybo_receiver_wrapper_hw_platform_1-bmmFile"/>
+	<item value="false" key="zybo_receiver_wrapper_hw_platform_1-partial_bit"/>
+	<item value="" key="zybo_receiver_wrapper_hw_platform_0-bmmFile"/>
+	<item value="zybo_receiver_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="zybo_receiver_wrapper.bit" key="zybo_receiver_wrapper_hw_platform_1-bitFile"/>
+	<item value="false" key="zybo_receiver_wrapper_hw_platform_0-partial_bit"/>
+	<item value="Local" key="zybo_receiver_wrapper_hw_platform_1-target"/>
+	<item value="Local" key="zybo_receiver_wrapper_hw_platform_0-target"/>
+	<item value="zybo_receiver_wrapper.bit" key="zybo_receiver_wrapper_hw_platform_0-bitFile"/>
+	<item value="Digilent Zybo 210279772162A/2-xc7z010" key="zybo_receiver_wrapper_hw_platform_0-device"/>
+</section>

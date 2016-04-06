@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:test_pattern_generator:1.0
-// IP Revision: 9
+// IP Revision: 11
 
 (* X_CORE_INFO = "test_pattern_generator,Vivado 2015.4" *)
 (* CHECK_LICENSE_TYPE = "zybo_dvi_output_test_pattern_generator_0_0,test_pattern_generator,{}" *)

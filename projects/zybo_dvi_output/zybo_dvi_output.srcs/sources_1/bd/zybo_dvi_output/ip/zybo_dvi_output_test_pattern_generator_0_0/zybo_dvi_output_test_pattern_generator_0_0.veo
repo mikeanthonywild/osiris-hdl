@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: user.org:user:test_pattern_generator:1.0
-// IP Revision: 9
+// IP Revision: 11
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections

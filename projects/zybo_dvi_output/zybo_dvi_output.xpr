@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="10" Path="/home/mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.xpr">
+<Project Version="7" Minor="10" Path="C:/Users/Mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="a2ea38f277ef4286ac559c0da1b1d2e1"/>
@@ -35,11 +35,11 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
         <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="ip/zybo_dvi_output_rgb2dvi_0_0/zybo_dvi_output_rgb2dvi_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="ip/zybo_dvi_output_xlconcat_0_0/zybo_dvi_output_xlconcat_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="ip/zybo_dvi_output_test_pattern_generator_0_0/zybo_dvi_output_test_pattern_generator_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="ip/zybo_dvi_output_xlconstant_1_1/zybo_dvi_output_xlconstant_1_1.xci"/>
-        <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="hdl/zybo_dvi_output.v"/>
+        <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="ip/zybo_dvi_output_xlconcat_0_0/zybo_dvi_output_xlconcat_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="ip/zybo_dvi_output_clk_wiz_0_0/zybo_dvi_output_clk_wiz_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="ip/zybo_dvi_output_test_pattern_generator_0_0/zybo_dvi_output_test_pattern_generator_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_dvi_output.bd" FileRelPathName="hdl/zybo_dvi_output.v"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/zybo_dvi_output/hdl/zybo_dvi_output_wrapper.v">
         <FileInfo>
@@ -101,6 +101,9 @@
     </Simulator>
     <Simulator Name="Riviera">
       <Option Name="Description" Val="Riviera-PRO Simulator"/>
+    </Simulator>
+    <Simulator Name="ActiveHDL">
+      <Option Name="Description" Val="Active-HDL Simulator"/>
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="10">

@@ -28,8 +28,8 @@ create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_p
 
 ##Buttons
 ##IO_L20N_T3_34
-#set_property PACKAGE_PIN R18 [get_ports {btn[0]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {btn[0]}]
+set_property PACKAGE_PIN R18 [get_ports flash_sync_btn]
+set_property IOSTANDARD LVCMOS33 [get_ports flash_sync_btn]
 
 ##IO_L24N_T3_34
 #set_property PACKAGE_PIN P16 [get_ports {btn[1]}]

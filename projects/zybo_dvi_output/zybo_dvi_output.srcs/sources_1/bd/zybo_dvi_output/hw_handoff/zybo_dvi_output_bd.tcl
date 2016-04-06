@@ -165,13 +165,13 @@ CONFIG.FREQ_HZ {125000000} \
   set_property -dict [ list \
 CONFIG.CLKIN1_JITTER_PS {80.0} \
 CONFIG.CLKOUT1_DRIVES {BUFG} \
-CONFIG.CLKOUT1_JITTER {157.337} \
-CONFIG.CLKOUT1_PHASE_ERROR {127.299} \
-CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {148.5} \
+CONFIG.CLKOUT1_JITTER {261.690} \
+CONFIG.CLKOUT1_PHASE_ERROR {249.865} \
+CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {60} \
 CONFIG.CLKOUT2_DRIVES {BUFG} \
-CONFIG.CLKOUT2_JITTER {117.142} \
-CONFIG.CLKOUT2_PHASE_ERROR {127.299} \
-CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {742.5} \
+CONFIG.CLKOUT2_JITTER {198.991} \
+CONFIG.CLKOUT2_PHASE_ERROR {249.865} \
+CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {300} \
 CONFIG.CLKOUT2_USED {true} \
 CONFIG.CLKOUT3_DRIVES {BUFG} \
 CONFIG.CLKOUT4_DRIVES {BUFG} \
@@ -179,12 +179,12 @@ CONFIG.CLKOUT5_DRIVES {BUFG} \
 CONFIG.CLKOUT6_DRIVES {BUFG} \
 CONFIG.CLKOUT7_DRIVES {BUFG} \
 CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
-CONFIG.MMCM_CLKFBOUT_MULT_F {11.875} \
+CONFIG.MMCM_CLKFBOUT_MULT_F {36.000} \
 CONFIG.MMCM_CLKIN1_PERIOD {8.0} \
-CONFIG.MMCM_CLKOUT0_DIVIDE_F {5.000} \
-CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
+CONFIG.MMCM_CLKOUT0_DIVIDE_F {15.000} \
+CONFIG.MMCM_CLKOUT1_DIVIDE {3} \
 CONFIG.MMCM_COMPENSATION {ZHOLD} \
-CONFIG.MMCM_DIVCLK_DIVIDE {2} \
+CONFIG.MMCM_DIVCLK_DIVIDE {5} \
 CONFIG.NUM_OUT_CLKS {2} \
 CONFIG.PRIMITIVE {MMCM} \
  ] $clk_wiz_0
@@ -237,7 +237,7 @@ CONFIG.NUM_PORTS {3} \
 
   # Perform GUI Layout
   regenerate_bd_layout -layout_string {
-   guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.8
+   guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
 preplace port hdmi_clk_n -pg 1 -y 170 -defaultsOSRD
 preplace port clk -pg 1 -y 270 -defaultsOSRD
@@ -252,13 +252,13 @@ preplace inst rgb2dvi_0 -pg 1 -lvl 4 -y 170 -defaultsOSRD
 preplace inst VDD -pg 1 -lvl 3 -y 220 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 280 -defaultsOSRD
 preplace netloc btn_1 1 0 4 NJ 210 NJ 220 NJ 270 600
-preplace netloc test_pattern_generator_0_b 1 2 1 410
+preplace netloc test_pattern_generator_0_b 1 2 1 400
 preplace netloc rgb2dvi_0_TMDS_Clk_n 1 4 1 NJ
 preplace netloc test_pattern_generator_0_hsync 1 2 2 NJ 140 600
 preplace netloc test_pattern_generator_0_vsync 1 2 2 NJ 150 N
 preplace netloc rgb2dvi_0_TMDS_Clk_p 1 4 1 NJ
-preplace netloc test_pattern_generator_0_r 1 2 1 390
-preplace netloc test_pattern_generator_0_g 1 2 1 400
+preplace netloc test_pattern_generator_0_r 1 2 1 380
+preplace netloc test_pattern_generator_0_g 1 2 1 390
 preplace netloc xlconcat_0_dout 1 3 1 600
 preplace netloc clk_1 1 0 1 N
 preplace netloc test_pattern_generator_0_vde 1 2 2 NJ 170 N

@@ -1,5 +1,5 @@
 {
-   guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.8
+   guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
 preplace port DDR -pg 1 -y 50 -defaultsOSRD
 preplace port vga_hs -pg 1 -y 510 -defaultsOSRD
@@ -11,7 +11,6 @@ preplace port flash_sync_led -pg 1 -y 370 -defaultsOSRD
 preplace port vga_vs -pg 1 -y 530 -defaultsOSRD
 preplace port clk -pg 1 -y 450 -defaultsOSRD
 preplace port hdmi_clk_p -pg 1 -y 340 -defaultsOSRD
-preplace port DDC -pg 1 -y 350 -defaultsOSRD
 preplace portBus vga_b -pg 1 -y 490 -defaultsOSRD
 preplace portBus hdmi_d_n -pg 1 -y 400 -defaultsOSRD
 preplace portBus hdmi_hpd -pg 1 -y 300 -defaultsOSRD
@@ -20,29 +19,28 @@ preplace portBus vga_r -pg 1 -y 450 -defaultsOSRD
 preplace portBus vga_g -pg 1 -y 470 -defaultsOSRD
 preplace inst VDD -pg 1 -lvl 3 -y 300 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 460 -defaultsOSRD
-preplace inst dvi2rgb_0 -pg 1 -lvl 2 -y 390 -defaultsOSRD
+preplace inst dvi2rgb_0 -pg 1 -lvl 2 -y 420 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 3 -y 130 -defaultsOSRD
 preplace inst rgb2vga_0 -pg 1 -lvl 3 -y 490 -defaultsOSRD
 preplace netloc processing_system7_0_DDR 1 3 1 NJ
 preplace netloc rgb2vga_0_vga_pRed 1 3 1 NJ
 preplace netloc rgb2vga_0_vga_pGreen 1 3 1 NJ
+preplace netloc hdmi_d_p_1 1 0 2 NJ 370 190
 preplace netloc dvi2rgb_0_flash_sync 1 2 2 490 370 NJ
-preplace netloc hdmi_d_p_1 1 0 2 NJ 380 NJ
-preplace netloc dvi2rgb_0_DDC 1 2 2 NJ 350 NJ
-preplace netloc dvi2rgb_0_aPixelClkLckd 1 2 2 NJ 400 NJ
+preplace netloc dvi2rgb_0_aPixelClkLckd 1 2 2 520 400 NJ
 preplace netloc xlconstant_0_dout 1 3 1 NJ
 preplace netloc clk_1 1 0 1 NJ
 preplace netloc processing_system7_0_FIXED_IO 1 3 1 NJ
+preplace netloc clk_wiz_0_clk_out1 1 1 1 N
 preplace netloc rgb2vga_0_vga_pVSync 1 3 1 NJ
 preplace netloc rgb2vga_0_vga_pHSync 1 3 1 NJ
-preplace netloc clk_wiz_0_clk_out1 1 1 1 NJ
-preplace netloc hdmi_d_n_1 1 0 2 NJ 400 NJ
-preplace netloc hdmi_clk_n_1 1 0 2 NJ 360 NJ
-preplace netloc dvi2rgb_0_RGB 1 2 1 480
-preplace netloc hdmi_clk_p_1 1 0 2 NJ 340 NJ
+preplace netloc hdmi_d_n_1 1 0 2 NJ 400 180
+preplace netloc hdmi_clk_n_1 1 0 2 NJ 390 N
+preplace netloc dvi2rgb_0_RGB 1 2 1 500
+preplace netloc hdmi_clk_p_1 1 0 2 NJ 340 200
 preplace netloc rgb2vga_0_vga_pBlue 1 3 1 NJ
-preplace netloc dvi2rgb_0_PixelClk 1 2 2 500 390 NJ
-levelinfo -pg 1 0 100 330 690 890 -top 0 -bot 580
+preplace netloc dvi2rgb_0_PixelClk 1 2 2 510 390 NJ
+levelinfo -pg 1 -10 100 350 700 900 -top 0 -bot 580
 ",
 }
 {

@@ -1,15 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar 12 12:04:55 2016" VIVADOVERSION="2015.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr 04 14:54:33 2016" VIVADOVERSION="2015.4">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:1.0" DEVICE="7z010" NAME="zybo_dvi_input" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="I" NAME="DDC_scl_i" SIGIS="undef"/>
-    <PORT DIR="O" NAME="DDC_scl_o" SIGIS="undef"/>
-    <PORT DIR="O" NAME="DDC_scl_t" SIGIS="undef"/>
-    <PORT DIR="I" NAME="DDC_sda_i" SIGIS="undef"/>
-    <PORT DIR="O" NAME="DDC_sda_o" SIGIS="undef"/>
-    <PORT DIR="O" NAME="DDC_sda_t" SIGIS="undef"/>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef"/>
     <PORT DIR="IO" NAME="DDR_cke" SIGIS="undef"/>
     <PORT DIR="IO" NAME="DDR_ck_n" SIGIS="undef"/>
@@ -104,16 +98,6 @@
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
-    <BUSINTERFACE BUSNAME="dvi2rgb_0_DDC" NAME="DDC" TYPE="INITIATOR">
-      <PORTMAPS>
-        <PORTMAP PHYSICAL="DDC_scl_i"/>
-        <PORTMAP PHYSICAL="DDC_scl_o"/>
-        <PORTMAP PHYSICAL="DDC_scl_t"/>
-        <PORTMAP PHYSICAL="DDC_sda_i"/>
-        <PORTMAP PHYSICAL="DDC_sda_o"/>
-        <PORTMAP PHYSICAL="DDC_sda_t"/>
-      </PORTMAPS>
-    </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="processing_system7_0_DDR" DATAWIDTH="8" NAME="DDR" TYPE="INITIATOR">
       <PARAMETER NAME="TIMEPERIOD_PS" VALUE="1250"/>
       <PARAMETER NAME="MEMORY_TYPE" VALUE="COMPONENTS"/>
@@ -668,16 +652,16 @@
     </MODULE>
     <MODULE FULLNAME="/dvi2rgb_0" HWVERSION="1.5" INSTANCE="dvi2rgb_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dvi2rgb" VLNV="digilentinc.com:ip:dvi2rgb:1.5">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="/home/mike/Documents/osiris-hdl/hdl/dvi2rgb_v1_5/docs/dvi2rgb_v1_5.pdf"/>
+        <DOCUMENT SOURCE="c:/Users/Mike/Documents/osiris-hdl/hdl/dvi2rgb_v1_5/docs/dvi2rgb_v1_5.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
-        <PARAMETER NAME="kEmulateDDC" VALUE="true"/>
+        <PARAMETER NAME="kEmulateDDC" VALUE="false"/>
         <PARAMETER NAME="kRstActiveHigh" VALUE="true"/>
-        <PARAMETER NAME="kClkRange" VALUE="3"/>
+        <PARAMETER NAME="kClkRange" VALUE="1"/>
         <PARAMETER NAME="kIDLY_TapValuePs" VALUE="78"/>
         <PARAMETER NAME="kIDLY_TapWidth" VALUE="5"/>
         <PARAMETER NAME="kAddBUFG" VALUE="true"/>
-        <PARAMETER NAME="kESIDFile" VALUE="/home/mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt"/>
+        <PARAMETER NAME="kESIDFile"/>
         <PARAMETER NAME="Component_Name" VALUE="zybo_dvi_input_dvi2rgb_0_0"/>
         <PARAMETER NAME="kEnableSerialClkOutput" VALUE="false"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -746,12 +730,6 @@
             <CONNECTION INSTANCE="External_Ports" PORT="pclk_lckd_led"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="DDC_SDA_I" SIGIS="undef"/>
-        <PORT DIR="O" NAME="DDC_SDA_O" SIGIS="undef"/>
-        <PORT DIR="O" NAME="DDC_SDA_T" SIGIS="undef"/>
-        <PORT DIR="I" NAME="DDC_SCL_I" SIGIS="undef"/>
-        <PORT DIR="O" NAME="DDC_SCL_O" SIGIS="undef"/>
-        <PORT DIR="O" NAME="DDC_SCL_T" SIGIS="undef"/>
         <PORT DIR="I" NAME="pRst" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
@@ -761,16 +739,6 @@
             <PORTMAP PHYSICAL="TMDS_Clk_n"/>
             <PORTMAP PHYSICAL="TMDS_Data_p"/>
             <PORTMAP PHYSICAL="TMDS_Data_n"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="dvi2rgb_0_DDC" NAME="DDC" TYPE="INITIATOR">
-          <PORTMAPS>
-            <PORTMAP PHYSICAL="DDC_SCL_I"/>
-            <PORTMAP PHYSICAL="DDC_SCL_O"/>
-            <PORTMAP PHYSICAL="DDC_SCL_T"/>
-            <PORTMAP PHYSICAL="DDC_SDA_I"/>
-            <PORTMAP PHYSICAL="DDC_SDA_O"/>
-            <PORTMAP PHYSICAL="DDC_SDA_T"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="dvi2rgb_0_RGB" NAME="RGB" TYPE="INITIATOR">
@@ -1810,7 +1778,7 @@
     </MODULE>
     <MODULE FULLNAME="/rgb2vga_0" HWVERSION="1.0" INSTANCE="rgb2vga_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rgb2vga" VLNV="digilentinc.com:ip:rgb2vga:1.0">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="/home/mike/Documents/osiris-hdl/hdl/rgb2vga_v1_0/docs/rgb2vga_v1_0.pdf"/>
+        <DOCUMENT SOURCE="c:/Users/Mike/Documents/osiris-hdl/hdl/rgb2vga_v1_0/docs/rgb2vga_v1_0.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="VID_IN_DATA_WIDTH" VALUE="24"/>

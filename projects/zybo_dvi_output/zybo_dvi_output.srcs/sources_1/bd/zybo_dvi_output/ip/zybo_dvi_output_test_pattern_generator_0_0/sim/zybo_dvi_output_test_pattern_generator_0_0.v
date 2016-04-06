@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:test_pattern_generator:1.0
-// IP Revision: 9
+// IP Revision: 11
 
 `timescale 1ns/1ps
 

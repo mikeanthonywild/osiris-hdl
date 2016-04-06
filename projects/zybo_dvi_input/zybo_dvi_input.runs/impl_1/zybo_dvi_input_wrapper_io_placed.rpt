@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date         : Sat Mar 12 12:06:08 2016
-| Host         : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Mon Apr 04 14:56:33 2016
+| Host         : Study running 64-bit Service Pack 1  (build 7601)
 | Command      : report_io -file zybo_dvi_input_wrapper_io_placed.rpt
 | Design       : zybo_dvi_input_wrapper
 | Device       : xc7z010
@@ -23,7 +23,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           163 |
+|           161 |
 +---------------+
 
 
@@ -169,8 +169,8 @@ Table of Contents
 | G14        |                   | High Range | IO_0_35                 | User IO       |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |
 | G15        |                   | High Range | IO_L19N_T3_VREF_35      | User IO       |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |
 | G16        |                   |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
-| G17        | ddc_scl_io        | High Range | IO_L16P_T2_35           | BIDIR         | LVCMOS33          |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
-| G18        | ddc_sda_io        | High Range | IO_L16N_T2_35           | BIDIR         | LVCMOS33          |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
+| G17        |                   | High Range | IO_L16P_T2_35           | User IO       |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |
+| G18        |                   | High Range | IO_L16N_T2_35           | User IO       |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |
 | G19        | vga_b[4]          | High Range | IO_L18P_T2_AD13P_35     | OUTPUT        | LVCMOS33          |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | G20        | vga_r[3]          | High Range | IO_L18N_T2_AD13N_35     | OUTPUT        | LVCMOS33          |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | H1         | DDR_dq[14]        |            | PS_DDR_DQ14_502         | BIDIR         | SSTL15_T_DCI      |         |            | FAST |           DCI SPLIT |            FP_VTT_50 |         | FIXED      |           |          |      | SPLIT            |

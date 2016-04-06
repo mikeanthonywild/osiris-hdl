@@ -1,8 +1,8 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-//Date        : Sun Apr  3 10:56:11 2016
-//Host        : mike-HP-Z600-Workstation running 64-bit elementary OS Freya
+//Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+//Date        : Mon Apr 04 21:29:27 2016
+//Host        : Study running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target linebuffer_test_wrapper.bd
 //Design      : linebuffer_test_wrapper
 //Purpose     : IP block netlist
@@ -32,6 +32,7 @@ module linebuffer_test_wrapper
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     clk,
+    flash_sync_btn,
     hdmi_clk_n,
     hdmi_clk_p,
     hdmi_d_n,
@@ -63,6 +64,7 @@ module linebuffer_test_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   input clk;
+  input flash_sync_btn;
   output hdmi_clk_n;
   output hdmi_clk_p;
   output [2:0]hdmi_d_n;
@@ -95,6 +97,7 @@ module linebuffer_test_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire clk;
+  wire flash_sync_btn;
   wire hdmi_clk_n;
   wire hdmi_clk_p;
   wire [2:0]hdmi_d_n;
@@ -128,6 +131,7 @@ module linebuffer_test_wrapper
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .clk(clk),
+        .flash_sync_btn(flash_sync_btn),
         .hdmi_clk_n(hdmi_clk_n),
         .hdmi_clk_p(hdmi_clk_p),
         .hdmi_d_n(hdmi_d_n),

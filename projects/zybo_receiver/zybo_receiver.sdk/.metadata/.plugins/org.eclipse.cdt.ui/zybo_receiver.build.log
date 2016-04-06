@@ -1,0 +1,21 @@
+21:07:54 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/common/framebuf.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "C:/Users/Mike/Documents/osiris-hdl/sw/common/framebuf.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/common/framebuf.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36904	 309184	 330548	 676636	  a531c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+
+21:07:58 Build Finished (took 3s.479ms)
+

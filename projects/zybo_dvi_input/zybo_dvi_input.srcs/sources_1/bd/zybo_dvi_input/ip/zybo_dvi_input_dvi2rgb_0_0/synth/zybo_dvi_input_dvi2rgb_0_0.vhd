@@ -68,12 +68,6 @@ ENTITY zybo_dvi_input_dvi2rgb_0_0 IS
     flash_sync : OUT STD_LOGIC;
     PixelClk : OUT STD_LOGIC;
     aPixelClkLckd : OUT STD_LOGIC;
-    DDC_SDA_I : IN STD_LOGIC;
-    DDC_SDA_O : OUT STD_LOGIC;
-    DDC_SDA_T : OUT STD_LOGIC;
-    DDC_SCL_I : IN STD_LOGIC;
-    DDC_SCL_O : OUT STD_LOGIC;
-    DDC_SCL_T : OUT STD_LOGIC;
     pRst : IN STD_LOGIC
   );
 END zybo_dvi_input_dvi2rgb_0_0;
@@ -133,22 +127,16 @@ ARCHITECTURE zybo_dvi_input_dvi2rgb_0_0_arch OF zybo_dvi_input_dvi2rgb_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF vid_pHSync: SIGNAL IS "xilinx.com:interface:vid_io:1.0 RGB HSYNC";
   ATTRIBUTE X_INTERFACE_INFO OF vid_pVSync: SIGNAL IS "xilinx.com:interface:vid_io:1.0 RGB VSYNC";
   ATTRIBUTE X_INTERFACE_INFO OF PixelClk: SIGNAL IS "xilinx.com:signal:clock:1.0 PixelClk CLK";
-  ATTRIBUTE X_INTERFACE_INFO OF DDC_SDA_I: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SDA_I";
-  ATTRIBUTE X_INTERFACE_INFO OF DDC_SDA_O: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SDA_O";
-  ATTRIBUTE X_INTERFACE_INFO OF DDC_SDA_T: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SDA_T";
-  ATTRIBUTE X_INTERFACE_INFO OF DDC_SCL_I: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SCL_I";
-  ATTRIBUTE X_INTERFACE_INFO OF DDC_SCL_O: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SCL_O";
-  ATTRIBUTE X_INTERFACE_INFO OF DDC_SCL_T: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SCL_T";
 BEGIN
   U0 : dvi2rgb
     GENERIC MAP (
-      kEmulateDDC => true,
+      kEmulateDDC => false,
       kRstActiveHigh => true,
-      kClkRange => 3,
+      kClkRange => 1,
       kIDLY_TapValuePs => 78,
       kIDLY_TapWidth => 5,
       kAddBUFG => true,
-      kESIDFile => "/home/mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt"
+      kESIDFile => ""
     )
     PORT MAP (
       TMDS_Clk_p => TMDS_Clk_p,
@@ -165,12 +153,8 @@ BEGIN
       flash_sync => flash_sync,
       PixelClk => PixelClk,
       aPixelClkLckd => aPixelClkLckd,
-      DDC_SDA_I => DDC_SDA_I,
-      DDC_SDA_O => DDC_SDA_O,
-      DDC_SDA_T => DDC_SDA_T,
-      DDC_SCL_I => DDC_SCL_I,
-      DDC_SCL_O => DDC_SCL_O,
-      DDC_SCL_T => DDC_SCL_T,
+      DDC_SDA_I => '0',
+      DDC_SCL_I => '0',
       pRst => pRst,
       pRst_n => '1'
     );

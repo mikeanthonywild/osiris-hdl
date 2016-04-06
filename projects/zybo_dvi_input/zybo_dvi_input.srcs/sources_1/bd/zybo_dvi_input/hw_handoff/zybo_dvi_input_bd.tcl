@@ -144,7 +144,6 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
-  set DDC [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:iic_rtl:1.0 DDC ]
   set DDR [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:ddrx_rtl:1.0 DDR ]
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
@@ -194,8 +193,9 @@ CONFIG.PRIMITIVE {PLL} \
   # Create instance: dvi2rgb_0, and set properties
   set dvi2rgb_0 [ create_bd_cell -type ip -vlnv digilentinc.com:ip:dvi2rgb:1.5 dvi2rgb_0 ]
   set_property -dict [ list \
-CONFIG.kClkRange {3} \
-CONFIG.kESIDFile {/home/mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt} \
+CONFIG.kClkRange {1} \
+CONFIG.kESIDFile {} \
+CONFIG.kEmulateDDC {false} \
  ] $dvi2rgb_0
 
   # Create instance: processing_system7_0, and set properties
@@ -341,7 +341,6 @@ CONFIG.PCW_USE_M_AXI_GP0 {0} \
   set rgb2vga_0 [ create_bd_cell -type ip -vlnv digilentinc.com:ip:rgb2vga:1.0 rgb2vga_0 ]
 
   # Create interface connections
-  connect_bd_intf_net -intf_net dvi2rgb_0_DDC [get_bd_intf_ports DDC] [get_bd_intf_pins dvi2rgb_0/DDC]
   connect_bd_intf_net -intf_net dvi2rgb_0_RGB [get_bd_intf_pins dvi2rgb_0/RGB] [get_bd_intf_pins rgb2vga_0/vid_in]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
@@ -367,7 +366,7 @@ CONFIG.PCW_USE_M_AXI_GP0 {0} \
 
   # Perform GUI Layout
   regenerate_bd_layout -layout_string {
-   guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.8
+   guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
 preplace port DDR -pg 1 -y 50 -defaultsOSRD
 preplace port vga_hs -pg 1 -y 510 -defaultsOSRD
@@ -379,7 +378,6 @@ preplace port flash_sync_led -pg 1 -y 370 -defaultsOSRD
 preplace port vga_vs -pg 1 -y 530 -defaultsOSRD
 preplace port clk -pg 1 -y 450 -defaultsOSRD
 preplace port hdmi_clk_p -pg 1 -y 340 -defaultsOSRD
-preplace port DDC -pg 1 -y 350 -defaultsOSRD
 preplace portBus vga_b -pg 1 -y 490 -defaultsOSRD
 preplace portBus hdmi_d_n -pg 1 -y 400 -defaultsOSRD
 preplace portBus hdmi_hpd -pg 1 -y 300 -defaultsOSRD
@@ -388,29 +386,28 @@ preplace portBus vga_r -pg 1 -y 450 -defaultsOSRD
 preplace portBus vga_g -pg 1 -y 470 -defaultsOSRD
 preplace inst VDD -pg 1 -lvl 3 -y 300 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 460 -defaultsOSRD
-preplace inst dvi2rgb_0 -pg 1 -lvl 2 -y 390 -defaultsOSRD
+preplace inst dvi2rgb_0 -pg 1 -lvl 2 -y 420 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 3 -y 130 -defaultsOSRD
 preplace inst rgb2vga_0 -pg 1 -lvl 3 -y 490 -defaultsOSRD
 preplace netloc processing_system7_0_DDR 1 3 1 NJ
 preplace netloc rgb2vga_0_vga_pRed 1 3 1 NJ
 preplace netloc rgb2vga_0_vga_pGreen 1 3 1 NJ
+preplace netloc hdmi_d_p_1 1 0 2 NJ 370 190
 preplace netloc dvi2rgb_0_flash_sync 1 2 2 490 370 NJ
-preplace netloc hdmi_d_p_1 1 0 2 NJ 380 NJ
-preplace netloc dvi2rgb_0_DDC 1 2 2 NJ 350 NJ
-preplace netloc dvi2rgb_0_aPixelClkLckd 1 2 2 NJ 400 NJ
+preplace netloc dvi2rgb_0_aPixelClkLckd 1 2 2 520 400 NJ
 preplace netloc xlconstant_0_dout 1 3 1 NJ
 preplace netloc clk_1 1 0 1 NJ
 preplace netloc processing_system7_0_FIXED_IO 1 3 1 NJ
+preplace netloc clk_wiz_0_clk_out1 1 1 1 N
 preplace netloc rgb2vga_0_vga_pVSync 1 3 1 NJ
 preplace netloc rgb2vga_0_vga_pHSync 1 3 1 NJ
-preplace netloc clk_wiz_0_clk_out1 1 1 1 NJ
-preplace netloc hdmi_d_n_1 1 0 2 NJ 400 NJ
-preplace netloc hdmi_clk_n_1 1 0 2 NJ 360 NJ
-preplace netloc dvi2rgb_0_RGB 1 2 1 480
-preplace netloc hdmi_clk_p_1 1 0 2 NJ 340 NJ
+preplace netloc hdmi_d_n_1 1 0 2 NJ 400 180
+preplace netloc hdmi_clk_n_1 1 0 2 NJ 390 N
+preplace netloc dvi2rgb_0_RGB 1 2 1 500
+preplace netloc hdmi_clk_p_1 1 0 2 NJ 340 200
 preplace netloc rgb2vga_0_vga_pBlue 1 3 1 NJ
-preplace netloc dvi2rgb_0_PixelClk 1 2 2 500 390 NJ
-levelinfo -pg 1 0 100 330 690 890 -top 0 -bot 580
+preplace netloc dvi2rgb_0_PixelClk 1 2 2 510 390 NJ
+levelinfo -pg 1 -10 100 350 700 900 -top 0 -bot 580
 ",
 }
 

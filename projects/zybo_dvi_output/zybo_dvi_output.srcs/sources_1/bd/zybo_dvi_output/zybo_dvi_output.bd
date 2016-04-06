@@ -147,8 +147,8 @@
           <spirit:configurableElementValue spirit:referenceId="CLKIN1_JITTER_PS">80.0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT2_USED">true</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="NUM_OUT_CLKS">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">148.5</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_REQUESTED_OUT_FREQ">742.5</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">60</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_REQUESTED_OUT_FREQ">300</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT1_DRIVES">BUFG</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT2_DRIVES">BUFG</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT3_DRIVES">BUFG</spirit:configurableElementValue>
@@ -157,16 +157,16 @@
           <spirit:configurableElementValue spirit:referenceId="CLKOUT6_DRIVES">BUFG</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT7_DRIVES">BUFG</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="FEEDBACK_SOURCE">FDBK_AUTO</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_DIVCLK_DIVIDE">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKFBOUT_MULT_F">11.875</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_DIVCLK_DIVIDE">5</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKFBOUT_MULT_F">36.000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="MMCM_CLKIN1_PERIOD">8.0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="MMCM_COMPENSATION">ZHOLD</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT0_DIVIDE_F">5.000</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT1_DIVIDE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_JITTER">157.337</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_PHASE_ERROR">127.299</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_JITTER">117.142</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_PHASE_ERROR">127.299</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT0_DIVIDE_F">15.000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT1_DIVIDE">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_JITTER">261.690</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_PHASE_ERROR">249.865</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_JITTER">198.991</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_PHASE_ERROR">249.865</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -175,21 +175,6 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_dvi_output_xlconcat_0_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="NUM_PORTS">3</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>test_pattern_generator_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="test_pattern_generator" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_dvi_output_test_pattern_generator_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DISPLAY_WIDTH">640</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="H_FRONT_PORCH">110</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="H_SYNC_PULSE">40</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="H_BACK_PORCH">220</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DISPLAY_HEIGHT">480</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="V_FRONT_PORCH">5</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="V_SYNC_PULSE">5</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="V_BACK_PORCH">20</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -206,6 +191,21 @@
         <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_dvi_output_xlconstant_1_1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>test_pattern_generator_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="test_pattern_generator" spirit:vendor="user.org" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_dvi_output_test_pattern_generator_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DISPLAY_WIDTH">640</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="H_FRONT_PORCH">110</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="H_SYNC_PULSE">40</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="H_BACK_PORCH">220</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="DISPLAY_HEIGHT">480</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="V_FRONT_PORCH">5</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="V_SYNC_PULSE">5</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="V_BACK_PORCH">20</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -233,8 +233,8 @@
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_0_clk_out1</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out1"/>
-        <spirit:internalPortReference spirit:componentRef="test_pattern_generator_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="PixelClk"/>
+        <spirit:internalPortReference spirit:componentRef="test_pattern_generator_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_1</spirit:name>

@@ -153,12 +153,12 @@ set_property IOSTANDARD LVCMOS33 [get_ports hdmi_hpd]
 #set_property IOSTANDARD LVCMOS33 [get_ports hdmi_out_en]
 
 ##IO_L16P_T2_35
-set_property PACKAGE_PIN G17 [get_ports ddc_scl_io]
-set_property IOSTANDARD LVCMOS33 [get_ports ddc_scl_io]
+#set_property PACKAGE_PIN G17 [get_ports ddc_scl_io]
+#set_property IOSTANDARD LVCMOS33 [get_ports ddc_scl_io]
 
 ##IO_L16N_T2_35
-set_property PACKAGE_PIN G18 [get_ports ddc_sda_io]
-set_property IOSTANDARD LVCMOS33 [get_ports ddc_sda_io]
+#set_property PACKAGE_PIN G18 [get_ports ddc_sda_io]
+#set_property IOSTANDARD LVCMOS33 [get_ports ddc_sda_io]
 
 ##Pmod Header JA (XADC)
 ##IO_L21N_T3_DQS_AD14N_35

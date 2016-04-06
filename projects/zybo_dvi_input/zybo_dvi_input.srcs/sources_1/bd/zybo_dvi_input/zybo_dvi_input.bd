@@ -14,12 +14,6 @@
     </spirit:parameters>
     <spirit:busInterfaces>
       <spirit:busInterface>
-        <spirit:name>DDC</spirit:name>
-        <spirit:master/>
-        <spirit:busType spirit:library="interface" spirit:name="iic" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="iic_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
         <spirit:name>DDR</spirit:name>
         <spirit:master/>
         <spirit:busType spirit:library="interface" spirit:name="ddrx" spirit:vendor="xilinx.com" spirit:version="1.0"/>
@@ -485,8 +479,8 @@
         <spirit:componentRef spirit:library="ip" spirit:name="dvi2rgb" spirit:vendor="digilentinc.com" spirit:version="1.5"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">zybo_dvi_input_dvi2rgb_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="kClkRange">3</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="kESIDFile">/home/mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="kEmulateDDC">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="kClkRange">1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -502,26 +496,6 @@
         <spirit:name>clk_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_in1"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>clk_wiz_0_clk_out1</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out1"/>
-        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="RefClk"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>hdmi_clk_n_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="hdmi_clk_n"/>
-        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="TMDS_Clk_n"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>hdmi_d_p_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="hdmi_d_p"/>
-        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="TMDS_Data_p"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>hdmi_d_n_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="hdmi_d_n"/>
-        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="TMDS_Data_n"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>xlconstant_0_dout</spirit:name>
@@ -566,20 +540,37 @@
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="IRQ_F2P"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>hdmi_clk_p_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="hdmi_clk_p"/>
-        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="TMDS_Clk_p"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>dvi2rgb_0_aPixelClkLckd</spirit:name>
         <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="aPixelClkLckd"/>
         <spirit:externalPortReference spirit:portRef="pclk_lckd_led"/>
       </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_wiz_0_clk_out1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out1"/>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="RefClk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_d_n_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="hdmi_d_n"/>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="TMDS_Data_n"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_d_p_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="hdmi_d_p"/>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="TMDS_Data_p"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_clk_n_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="hdmi_clk_n"/>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="TMDS_Clk_n"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>hdmi_clk_p_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="hdmi_clk_p"/>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="TMDS_Clk_p"/>
+      </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
-      <spirit:hierConnection spirit:interfaceRef="DDC/dvi2rgb_0_DDC">
-        <spirit:activeInterface spirit:busRef="DDC" spirit:componentRef="dvi2rgb_0"/>
-      </spirit:hierConnection>
       <spirit:hierConnection spirit:interfaceRef="DDR/processing_system7_0_DDR">
         <spirit:activeInterface spirit:busRef="DDR" spirit:componentRef="processing_system7_0"/>
       </spirit:hierConnection>

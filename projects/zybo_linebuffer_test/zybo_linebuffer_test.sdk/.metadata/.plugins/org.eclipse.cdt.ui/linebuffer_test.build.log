@@ -1,6 +1,6 @@
-20:21:54 **** Incremental Build of configuration Debug for project linebuffer_test ****
+14:36:08 **** Incremental Build of configuration Debug for project linebuffer_test ****
 make all 
 make: Nothing to be done for `all'.
 
-20:21:54 Build Finished (took 59ms)
+14:36:08 Build Finished (took 312ms)
 

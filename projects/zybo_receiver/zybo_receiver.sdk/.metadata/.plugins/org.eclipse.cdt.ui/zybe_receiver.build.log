@@ -1,0 +1,13 @@
+20:01:00 **** Auto Build of configuration Debug for project zybe_receiver ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybe_receiver\src" -c -fmessage-length=0 -MT"src/helloworld.o" -I../../zybe_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:50:28: fatal error: buf_controller.h: No such file or directory
+ #include "buf_controller.h"
+                            ^
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+
+20:01:00 Build Finished (took 436ms)
+

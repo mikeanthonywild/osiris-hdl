@@ -30,7 +30,6 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 # If you do not already have a project created,
 # you can create a project using the following command:
 #    create_project project_1 myproj -part xc7z010clg400-1
-#    set_property BOARD_PART digilentinc.com:zybo:part0:1.0 [current_project]
 
 # CHECKING IF PROJECT EXISTS
 if { [get_projects -quiet] eq "" } {
@@ -152,6 +151,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
 CONFIG.FREQ_HZ {125000000} \
  ] $clk
+  set flash_sync_btn [ create_bd_port -dir I flash_sync_btn ]
   set hdmi_clk_n [ create_bd_port -dir O hdmi_clk_n ]
   set hdmi_clk_p [ create_bd_port -dir O hdmi_clk_p ]
   set hdmi_d_n [ create_bd_port -dir O -from 2 -to 0 hdmi_d_n ]
@@ -193,16 +193,16 @@ CONFIG.NUM_PORTS {4} \
   # Create instance: dvi_clk_gen, and set properties
   set dvi_clk_gen [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.2 dvi_clk_gen ]
   set_property -dict [ list \
-CONFIG.CLKOUT1_JITTER {323.721} \
-CONFIG.CLKOUT1_PHASE_ERROR {251.929} \
-CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25.175} \
-CONFIG.CLKOUT2_JITTER {231.295} \
-CONFIG.CLKOUT2_PHASE_ERROR {251.929} \
-CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {125.875} \
+CONFIG.CLKOUT1_JITTER {261.690} \
+CONFIG.CLKOUT1_PHASE_ERROR {249.865} \
+CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {60} \
+CONFIG.CLKOUT2_JITTER {198.991} \
+CONFIG.CLKOUT2_PHASE_ERROR {249.865} \
+CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {300} \
 CONFIG.CLKOUT2_USED {true} \
-CONFIG.MMCM_CLKFBOUT_MULT_F {35.250} \
-CONFIG.MMCM_CLKOUT0_DIVIDE_F {35.000} \
-CONFIG.MMCM_CLKOUT1_DIVIDE {7} \
+CONFIG.MMCM_CLKFBOUT_MULT_F {36.000} \
+CONFIG.MMCM_CLKOUT0_DIVIDE_F {15.000} \
+CONFIG.MMCM_CLKOUT1_DIVIDE {3} \
 CONFIG.MMCM_DIVCLK_DIVIDE {5} \
 CONFIG.NUM_OUT_CLKS {2} \
  ] $dvi_clk_gen
@@ -471,25 +471,25 @@ CONFIG.V_SYNC_PULSE {2} \
   set_property -dict [ list \
 CONFIG.CLKIN2_JITTER_PS {146.42} \
 CONFIG.CLKOUT1_DRIVES {BUFG} \
-CONFIG.CLKOUT1_JITTER {237.312} \
-CONFIG.CLKOUT1_PHASE_ERROR {249.865} \
-CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100} \
+CONFIG.CLKOUT1_JITTER {253.140} \
+CONFIG.CLKOUT1_PHASE_ERROR {121.803} \
+CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {12.5} \
 CONFIG.CLKOUT2_DRIVES {BUFG} \
 CONFIG.CLKOUT2_JITTER {317.841} \
 CONFIG.CLKOUT2_PHASE_ERROR {249.865} \
-CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {25.175} \
+CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {100.000} \
 CONFIG.CLKOUT2_USED {false} \
 CONFIG.CLKOUT3_DRIVES {BUFG} \
 CONFIG.CLKOUT4_DRIVES {BUFG} \
 CONFIG.CLKOUT5_DRIVES {BUFG} \
 CONFIG.CLKOUT6_DRIVES {BUFG} \
 CONFIG.CLKOUT7_DRIVES {BUFG} \
-CONFIG.MMCM_CLKFBOUT_MULT_F {36} \
+CONFIG.MMCM_CLKFBOUT_MULT_F {13} \
 CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
-CONFIG.MMCM_CLKOUT0_DIVIDE_F {9} \
+CONFIG.MMCM_CLKOUT0_DIVIDE_F {65} \
 CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
 CONFIG.MMCM_COMPENSATION {ZHOLD} \
-CONFIG.MMCM_DIVCLK_DIVIDE {5} \
+CONFIG.MMCM_DIVCLK_DIVIDE {2} \
 CONFIG.NUM_OUT_CLKS {1} \
 CONFIG.PRIMITIVE {PLL} \
 CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} \
@@ -525,9 +525,8 @@ CONFIG.NUM_PORTS {3} \
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins i_buf_controller_0/pclk] [get_bd_pins i_linebuffer/clkb] [get_bd_pins test_pattern_generator_0/clk] [get_bd_pins tpg_clk_gen/clk_out1]
   connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins dvi_clk_gen/clk_out1] [get_bd_pins o_buf_controller/pclk] [get_bd_pins o_linebuffer/clkb] [get_bd_pins rgb2dvi_0/PixelClk] [get_bd_pins rgb2vga_0/PixelClk]
   connect_bd_net -net dvi_clk_gen_clk_out2 [get_bd_pins dvi_clk_gen/clk_out2] [get_bd_pins rgb2dvi_0/SerialClk]
+  connect_bd_net -net flash_sync_btn_1 [get_bd_ports flash_sync_btn] [get_bd_pins rgb2dvi_0/flash_sync]
   connect_bd_net -net i_buf_controller_0_addr [get_bd_pins i_buf_controller_0/addr] [get_bd_pins i_linebuffer/addrb]
-  connect_bd_net -net i_buf_controller_0_frame_valid [get_bd_pins i_buf_controller_0/frame_valid] [get_bd_pins irq_concat/In1]
-  connect_bd_net -net i_buf_controller_0_line_valid [get_bd_pins i_buf_controller_0/line_valid] [get_bd_pins irq_concat/In0]
   connect_bd_net -net i_buf_controller_0_o_data [get_bd_pins i_buf_controller_0/o_data] [get_bd_pins i_linebuffer/dinb]
   connect_bd_net -net i_buf_controller_0_we [get_bd_pins bram_we_concat/In0] [get_bd_pins bram_we_concat/In1] [get_bd_pins bram_we_concat/In2] [get_bd_pins bram_we_concat/In3] [get_bd_pins i_buf_controller_0/we]
   connect_bd_net -net irq_concat_dout [get_bd_pins irq_concat/dout] [get_bd_pins processing_system7_0/IRQ_F2P]
@@ -568,96 +567,96 @@ CONFIG.NUM_PORTS {3} \
 
   # Perform GUI Layout
   regenerate_bd_layout -layout_string {
-   guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.8
+   guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -y 90 -defaultsOSRD
-preplace port vga_hs -pg 1 -y 1090 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y 110 -defaultsOSRD
-preplace port hdmi_clk_n -pg 1 -y 640 -defaultsOSRD
-preplace port vga_vs -pg 1 -y 1110 -defaultsOSRD
-preplace port clk -pg 1 -y 660 -defaultsOSRD
-preplace port hdmi_clk_p -pg 1 -y 620 -defaultsOSRD
-preplace portBus hdmi_d_n -pg 1 -y 680 -defaultsOSRD
-preplace portBus vga_b -pg 1 -y 1070 -defaultsOSRD
-preplace portBus hdmi_d_p -pg 1 -y 660 -defaultsOSRD
-preplace portBus vga_r -pg 1 -y 1030 -defaultsOSRD
-preplace portBus vga_g -pg 1 -y 1050 -defaultsOSRD
+preplace port DDR -pg 1 -y 100 -defaultsOSRD
+preplace port flash_sync_btn -pg 1 -y 730 -defaultsOSRD
+preplace port vga_hs -pg 1 -y 1150 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 120 -defaultsOSRD
+preplace port hdmi_clk_n -pg 1 -y 720 -defaultsOSRD
+preplace port vga_vs -pg 1 -y 1170 -defaultsOSRD
+preplace port clk -pg 1 -y 860 -defaultsOSRD
+preplace port hdmi_clk_p -pg 1 -y 700 -defaultsOSRD
+preplace portBus hdmi_d_n -pg 1 -y 760 -defaultsOSRD
+preplace portBus vga_b -pg 1 -y 1130 -defaultsOSRD
+preplace portBus hdmi_d_p -pg 1 -y 740 -defaultsOSRD
+preplace portBus vga_r -pg 1 -y 1090 -defaultsOSRD
+preplace portBus vga_g -pg 1 -y 1110 -defaultsOSRD
 preplace inst o_axi_cdma -pg 1 -lvl 3 -y 250 -defaultsOSRD
-preplace inst i_axi_bram_ctrl -pg 1 -lvl 5 -y 570 -defaultsOSRD
+preplace inst rst_processing_system7_0_100M -pg 1 -lvl 1 -y 260 -defaultsOSRD
+preplace inst i_axi_bram_ctrl -pg 1 -lvl 5 -y 410 -defaultsOSRD
 preplace inst axi_mem_intercon_1 -pg 1 -lvl 4 -y 440 -defaultsOSRD
-preplace inst rst_processing_system7_0_100M -pg 1 -lvl 1 -y 240 -defaultsOSRD
-preplace inst test_pattern_generator_0 -pg 1 -lvl 2 -y 560 -defaultsOSRD
-preplace inst GND -pg 1 -lvl 5 -y 1070 -defaultsOSRD
-preplace inst o_buf_controller -pg 1 -lvl 3 -y 910 -defaultsOSRD
-preplace inst o_linebuffer -pg 1 -lvl 6 -y 870 -defaultsOSRD
-preplace inst tpg_clk_gen -pg 1 -lvl 1 -y 670 -defaultsOSRD
-preplace inst dvi_clk_gen -pg 1 -lvl 2 -y 820 -defaultsOSRD
-preplace inst rgb2dvi_0 -pg 1 -lvl 6 -y 640 -defaultsOSRD
+preplace inst test_pattern_generator_0 -pg 1 -lvl 3 -y 660 -defaultsOSRD
+preplace inst GND -pg 1 -lvl 5 -y 1000 -defaultsOSRD
+preplace inst o_buf_controller -pg 1 -lvl 3 -y 1080 -defaultsOSRD
+preplace inst o_linebuffer -pg 1 -lvl 6 -y 940 -defaultsOSRD
+preplace inst tpg_clk_gen -pg 1 -lvl 2 -y 870 -defaultsOSRD
+preplace inst dvi_clk_gen -pg 1 -lvl 2 -y 980 -defaultsOSRD
+preplace inst rgb2dvi_0 -pg 1 -lvl 6 -y 720 -defaultsOSRD
 preplace inst i_axi_cdma -pg 1 -lvl 3 -y 90 -defaultsOSRD
-preplace inst vga_concat -pg 1 -lvl 5 -y 950 -defaultsOSRD
-preplace inst i_buf_controller_0 -pg 1 -lvl 3 -y 580 -defaultsOSRD
-preplace inst VDD -pg 1 -lvl 2 -y 710 -defaultsOSRD
+preplace inst vga_concat -pg 1 -lvl 5 -y 1140 -defaultsOSRD
+preplace inst i_buf_controller_0 -pg 1 -lvl 4 -y 680 -defaultsOSRD
+preplace inst VDD -pg 1 -lvl 2 -y 780 -defaultsOSRD
 preplace inst axi_mem_intercon -pg 1 -lvl 4 -y 150 -defaultsOSRD
-preplace inst irq_concat -pg 1 -lvl 4 -y 690 -defaultsOSRD
-preplace inst bram_we_concat -pg 1 -lvl 5 -y 430 -defaultsOSRD
-preplace inst i_linebuffer -pg 1 -lvl 6 -y 410 -defaultsOSRD
-preplace inst rgb2vga_0 -pg 1 -lvl 6 -y 1070 -defaultsOSRD
-preplace inst o_axi_bram_ctrl -pg 1 -lvl 5 -y 700 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 5 -y 190 -defaultsOSRD
+preplace inst irq_concat -pg 1 -lvl 4 -y 890 -defaultsOSRD
+preplace inst bram_we_concat -pg 1 -lvl 5 -y 690 -defaultsOSRD
+preplace inst i_linebuffer -pg 1 -lvl 6 -y 500 -defaultsOSRD
+preplace inst rgb2vga_0 -pg 1 -lvl 6 -y 1130 -defaultsOSRD
+preplace inst o_axi_bram_ctrl -pg 1 -lvl 5 -y 530 -defaultsOSRD
 preplace inst processing_system7_0_axi_periph -pg 1 -lvl 2 -y 150 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 5 -y 180 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 5 2 NJ 90 NJ
-preplace netloc i_axi_bram_ctrl_BRAM_PORTA 1 5 1 1860
-preplace netloc o_axi_bram_ctrl_BRAM_PORTA 1 5 1 1880
-preplace netloc axi_mem_intercon_M01_AXI 1 4 1 1320
+preplace netloc processing_system7_0_DDR 1 5 2 NJ 100 NJ
+preplace netloc i_axi_bram_ctrl_BRAM_PORTA 1 5 1 1770
+preplace netloc o_axi_bram_ctrl_BRAM_PORTA 1 5 1 1800
+preplace netloc axi_mem_intercon_M01_AXI 1 4 1 N
 preplace netloc rgb2dvi_0_TMDS_Clk_n 1 6 1 NJ
-preplace netloc i_buf_controller_0_o_data 1 3 3 N 580 NJ 350 NJ
+preplace netloc i_buf_controller_0_o_data 1 4 2 1290 610 NJ
 preplace netloc rgb2vga_0_vga_pRed 1 6 1 NJ
-preplace netloc test_pattern_generator_0_hsync 1 2 1 N
-preplace netloc test_pattern_generator_0_vsync 1 2 1 N
-preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 680
+preplace netloc flash_sync_btn_1 1 0 6 NJ 730 NJ 730 NJ 790 NJ 790 NJ 790 NJ
+preplace netloc test_pattern_generator_0_hsync 1 3 1 N
+preplace netloc test_pattern_generator_0_vsync 1 3 1 N
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 660
 preplace netloc rgb2dvi_0_TMDS_Clk_p 1 6 1 NJ
-preplace netloc o_buf_controller_req_line 1 3 1 980
+preplace netloc o_buf_controller_req_line 1 3 1 940
 preplace netloc bram_we_concat_dout 1 5 1 NJ
 preplace netloc rgb2vga_0_vga_pGreen 1 6 1 NJ
-preplace netloc o_buf_controller_vsync 1 3 3 NJ 870 NJ 860 1930
-preplace netloc axi_mem_intercon_1_M00_AXI 1 4 1 1330
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 360 10 NJ 10 NJ 10 NJ 10 1860
-preplace netloc test_pattern_generator_0_r 1 2 1 680
-preplace netloc o_buf_controller_vde 1 3 3 NJ 910 NJ 880 1940
-preplace netloc i_buf_controller_0_line_valid 1 3 1 980
-preplace netloc xlconcat_1_dout 1 5 1 1910
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 20 330 NJ 330 NJ 330 NJ 290 NJ 330 1850
-preplace netloc axi_mem_intercon_M00_AXI 1 4 1 1370
-preplace netloc axi_mem_intercon_1_M01_AXI 1 4 1 1320
-preplace netloc o_buf_controller_o_data 1 3 2 NJ 930 NJ
-preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 4 380 300 710 340 1010 610 1400
-preplace netloc clk_1 1 0 2 20 810 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 5 2 NJ 110 NJ
+preplace netloc o_buf_controller_vsync 1 3 3 NJ 1050 NJ 1050 1860
+preplace netloc axi_mem_intercon_1_M00_AXI 1 4 1 1280
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 360 10 NJ 10 NJ 10 NJ 10 1770
+preplace netloc test_pattern_generator_0_r 1 3 1 940
+preplace netloc o_buf_controller_vde 1 3 3 NJ 1070 NJ 1070 1870
+preplace netloc xlconcat_1_dout 1 5 1 1810
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 20 350 NJ 350 NJ 350 NJ 290 NJ 330 1760
+preplace netloc axi_mem_intercon_M00_AXI 1 4 1 1330
+preplace netloc axi_mem_intercon_1_M01_AXI 1 4 1 1270
+preplace netloc o_buf_controller_o_data 1 3 2 NJ 1100 NJ
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 4 340 300 690 330 960 580 1290
+preplace netloc clk_1 1 0 2 NJ 860 350
+preplace netloc processing_system7_0_FIXED_IO 1 5 2 NJ 120 NJ
 preplace netloc rgb2dvi_0_TMDS_Data_n 1 6 1 NJ
-preplace netloc clk_wiz_0_clk_out1 1 1 5 370 660 710 770 NJ 770 NJ 770 1870
-preplace netloc o_buf_controller_req_frame 1 3 1 1010
-preplace netloc test_pattern_generator_0_vde 1 2 1 N
-preplace netloc o_buf_controller_addr 1 3 3 NJ 850 NJ 850 N
+preplace netloc clk_wiz_0_clk_out1 1 2 4 680 760 960 780 NJ 780 1780
+preplace netloc o_buf_controller_req_frame 1 3 1 960
+preplace netloc test_pattern_generator_0_vde 1 3 1 N
+preplace netloc o_buf_controller_addr 1 3 3 950 980 NJ 950 NJ
 preplace netloc rgb2vga_0_vga_pVSync 1 6 1 NJ
 preplace netloc rgb2vga_0_vga_pHSync 1 6 1 NJ
-preplace netloc clk_wiz_0_clk_out2 1 2 4 680 780 NJ 780 NJ 780 1950
-preplace netloc i_buf_controller_0_addr 1 3 3 980 300 NJ 340 NJ
-preplace netloc o_axi_cdma_M_AXI 1 3 1 1000
-preplace netloc dvi_clk_gen_clk_out2 1 2 4 NJ 790 NJ 790 NJ 790 1890
+preplace netloc clk_wiz_0_clk_out2 1 2 4 660 970 NJ 970 NJ 940 1890
+preplace netloc i_buf_controller_0_addr 1 4 2 1270 600 NJ
+preplace netloc o_axi_cdma_M_AXI 1 3 1 940
+preplace netloc dvi_clk_gen_clk_out2 1 2 4 NJ 810 NJ 810 NJ 810 1840
 preplace netloc rgb2dvi_0_TMDS_Data_p 1 6 1 NJ
-preplace netloc VDD_dout 1 2 4 690 800 NJ 800 NJ 800 1900
-preplace netloc o_buf_controller_hsync 1 3 3 NJ 890 NJ 870 1920
-preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 3 360 350 NJ 350 1020
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 20 150 370 290 690 170 990 600 1390 320 1860
-preplace netloc irq_concat_dout 1 4 1 1350
+preplace netloc VDD_dout 1 2 4 670 780 930 800 NJ 800 1830
+preplace netloc o_buf_controller_hsync 1 3 3 NJ 1060 NJ 1060 1850
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 3 360 340 NJ 340 970
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 20 170 350 290 670 170 950 300 1340 340 1770
+preplace netloc irq_concat_dout 1 4 1 1310
 preplace netloc GND_dout 1 5 1 NJ
-preplace netloc o_linebuffer_doutb 1 2 4 690 1020 NJ 1020 NJ 1020 NJ
-preplace netloc i_axi_cdma_M_AXI 1 3 1 1020
-preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 1 700
-preplace netloc i_buf_controller_0_frame_valid 1 3 1 970
-preplace netloc i_buf_controller_0_we 1 3 2 970 590 NJ
+preplace netloc o_linebuffer_doutb 1 2 4 680 1210 NJ 1210 NJ 1210 1900
+preplace netloc i_axi_cdma_M_AXI 1 3 1 970
+preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 1 680
+preplace netloc i_buf_controller_0_we 1 4 1 1300
 preplace netloc rgb2vga_0_vga_pBlue 1 6 1 NJ
-levelinfo -pg 1 0 190 530 840 1170 1620 2130 2310 -top 0 -bot 1170
+levelinfo -pg 1 0 180 510 810 1120 1550 2050 2220 -top 0 -bot 1230
 ",
 }
 

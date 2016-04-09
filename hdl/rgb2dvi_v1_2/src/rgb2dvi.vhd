@@ -63,7 +63,9 @@ entity rgb2dvi is
       kGenerateSerialClk : boolean := true;
       kClkPrimitive : string := "MMCM"; -- "MMCM" or "PLL" to instantiate, if kGenerateSerialClk true
       kClkRange : natural := 1;  -- MULT_F = kClkRange*5 (choose >=120MHz=1, >=60MHz=2, >=40MHz=3)      
-      kRstActiveHigh : boolean := true); --true, if active-high; false, if active-low
+      kRstActiveHigh : boolean := true;
+      kEmulateDDC : boolean := true; --will emulate a DDC EEPROM with basic EDID, if set to yes 
+      kESIDFile : string := "/home/mike/Documents/osiris-hdl/ESID/digilent/dgl_dvi.txt"); --true, if active-high; false, if active-low
    Port (
       -- DVI 1.0 TMDS video interface
       TMDS_Clk_p : out std_logic;
@@ -80,10 +82,19 @@ entity rgb2dvi is
       vid_pVDE : in std_logic;
       vid_pHSync : in std_logic;
       vid_pVSync : in std_logic;
-      flash_sync: in std_logic;
+      shutter_sync: in std_logic;
       PixelClk : in std_logic; --pixel-clock recovered from the DVI interface
       
-      SerialClk : in std_logic); -- 5x PixelClk
+      SerialClk : in std_logic; -- 5x PixelClk
+
+      -- Optional DDC port
+      RefClk : in std_logic;
+      DDC_SDA_I : in std_logic;
+      DDC_SDA_O : out std_logic;
+      DDC_SDA_T : out std_logic;
+      DDC_SCL_I : in std_logic;
+      DDC_SCL_O : out std_logic; 
+      DDC_SCL_T : out std_logic);
    
 end rgb2dvi;
 
@@ -187,7 +198,30 @@ pC0(2) <= '0'; -- default is low for control signals
 pC1(2 downto 1) <= (others => '0'); -- default is low for control signals
 pC0(0) <= vid_pHSync; -- channel 0 carries control signals too
 pC1(0) <= vid_pVSync; -- channel 0 carries control signals too
-pC0(1) <= flash_sync; -- channel 1 carries control signals too (non-spec!)
+pC0(1) <= shutter_sync; -- channel 1 carries control signals too (non-spec!)
 pVde <= vid_pVDE & vid_pVDE & vid_pVDE; -- all of them are either active or blanking at once
+
+----------------------------------------------------------------------------------
+-- Optional DDC EEPROM Display Data Channel - Bi-directional (DDC2B)
+-- The EDID will be loaded from the file specified below in kInitFileName.
+----------------------------------------------------------------------------------
+GenerateDDC: if kEmulateDDC generate	
+   DDC_EEPROM: entity work.EEPROM_8b
+      generic map (
+         kSampleClkFreqInMHz => 200,
+         kSlaveAddress => "1010000",
+         kAddrBits => 7, -- 128 byte EDID 1.x data
+         kWritable => false,
+         kInitFileName => kESIDFile) -- name of file containing init values
+      port map(
+         SampleClk => RefClk,
+         sRst => '0',
+         aSDA_I => DDC_SDA_I,
+         aSDA_O => DDC_SDA_O,
+         aSDA_T => DDC_SDA_T,
+         aSCL_I => DDC_SCL_I,
+         aSCL_O => DDC_SCL_O,
+         aSCL_T => DDC_SCL_T);
+end generate GenerateDDC;
 
 end Behavioral;

@@ -3,41 +3,32 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+      <db_ref path="C:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
          <top_modules>
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="19261fs"></ZoomStartTime>
-      <ZoomEndTime time="48862fs"></ZoomEndTime>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="18101fs"></ZoomEndTime>
       <Cursor1Time time="4000fs"></Cursor1Time>
    </zoom_setting>
-   <WVObjectSize size="5" />
+   <WVObjectSize size="3" />
    <wave_markers>
    </wave_markers>
-   <wvobject db_ref_id="1" type="logic" fp_name="linebuffer_test_i/o_axi_cdma_M_AXI_AWVALID">
-      <obj_property name="ElementShortName">linebuffer_test_i/o_axi_cdma_M_AXI_AWVALID</obj_property>
-      <obj_property name="ObjectShortName">linebuffer_test_i/o_axi_cdma_M_AXI_AWVALID</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="array" fp_name="linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR">
-      <obj_property name="ElementShortName">linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[31:0]</obj_property>
-      <obj_property name="ObjectShortName">linebuffer_test_i/o_axi_cdma_M_AXI_AWADDR[31:0]</obj_property>
+   <wvobject db_ref_id="1" fp_name="linebuffer_test_i/o_buf_controller_addr" type="array">
+      <obj_property name="ElementShortName">linebuffer_test_i/o_buf_controller_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">linebuffer_test_i/o_buf_controller_addr[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" type="array" fp_name="linebuffer_test_i/o_axi_cdma_M_AXI_WDATA">
-      <obj_property name="ElementShortName">linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">linebuffer_test_i/o_axi_cdma_M_AXI_WDATA[31:0]</obj_property>
+   <wvobject db_ref_id="1" fp_name="linebuffer_test_i/o_buf_controller_o_data" type="array">
+      <obj_property name="ElementShortName">linebuffer_test_i/o_buf_controller_o_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">linebuffer_test_i/o_buf_controller_o_data[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" type="array" fp_name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR">
-      <obj_property name="ElementShortName">linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[11:0]</obj_property>
-      <obj_property name="ObjectShortName">linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[11:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="array" fp_name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN">
-      <obj_property name="ElementShortName">linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[31:0]</obj_property>
-      <obj_property name="ObjectShortName">linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[31:0]</obj_property>
+   <wvobject db_ref_id="1" fp_name="linebuffer_test_i/o_linebuffer_doutb" type="array">
+      <obj_property name="ElementShortName">linebuffer_test_i/o_linebuffer_doutb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">linebuffer_test_i/o_linebuffer_doutb[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
 </wave_config>

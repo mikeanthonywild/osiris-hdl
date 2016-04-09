@@ -485,3 +485,5 @@
 
 /******************************************************************/
 
+/* Xilinx FAT File System Library (XilFFs) User Settings */
+#define FILE_SYSTEM_INTERFACE_SD

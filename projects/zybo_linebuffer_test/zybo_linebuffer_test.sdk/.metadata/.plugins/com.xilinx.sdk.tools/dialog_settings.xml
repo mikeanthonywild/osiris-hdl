@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="linebuffer_test_wrapper_hw_platform_0" key="programflash.hwplatform"/>
+	<item value="C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\zynq_fsbl\BOOT.bin" key="linebuffer_test_wrapper_hw_platform_0-imgFile"/>
+	<item value="false" key="linebuffer_test_wrapper_hw_platform_0-blankCheck"/>
+	<item value="Digilent Zybo 210279772162A/2-xc7z010" key="linebuffer_test_wrapper_hw_platform_0-device"/>
+	<item value="Local" key="linebuffer_test_wrapper_hw_platform_0-target"/>
+	<item value="qspi_single" key="linebuffer_test_wrapper_hw_platform_0-flashType"/>
+	<item value="false" key="linebuffer_test_wrapper_hw_platform_0-verifyFlash"/>
+	<item value="" key="linebuffer_test_wrapper_hw_platform_0-fsblFile"/>
+	<item value="" key="linebuffer_test_wrapper_hw_platform_0-offSet"/>
+</section>

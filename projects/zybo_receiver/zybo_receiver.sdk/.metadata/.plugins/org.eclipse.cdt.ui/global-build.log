@@ -2477,3 +2477,366 @@ arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
   36904	 309184	 330548	 676636	  a531c	zybo_receiver.elf
 'Finished building: zybo_receiver.elf.size'
 ' '
+13:55:11 **** Build of project zybo_receiver_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axicdma_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/axicdma_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/axicdma_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/axicdma_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling axicdma"
+xaxicdma_bdring.c: In function 'XAxiCdma_BdRingGetCurrBd':
+xaxicdma_bdring.c:204:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   return (XAxiCdma_Bd *)((XAxiCdma_BdRead(InstancePtr->BaseAddr, XAXICDMA_CDESC_OFFSET)) |
+          ^
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+13:55:36 **** Clean-only build of configuration Debug for project zybo_receiver ****
+make clean 
+rm -rf  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o  ./sw/common/buf_controller.d ./sw/common/framebuf.d ./sw/common/interrupt.d  ./src/helloworld.d ./src/platform.d  zybo_receiver.elf.size  zybo_receiver.elf
+' '
+13:55:36 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c:149:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c'
+' '
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/common/framebuf.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "C:/Users/Mike/Documents/osiris-hdl/sw/common/framebuf.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/common/framebuf.c'
+' '
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/common/interrupt.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "C:/Users/Mike/Documents/osiris-hdl/sw/common/interrupt.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/common/interrupt.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -c -fmessage-length=0 -MT"src/helloworld.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -c -fmessage-length=0 -MT"src/platform.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37032	 309184	 330548	 676764	  a539c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+13:58:56 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+14:00:16 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+14:48:19 **** Build of project zybo_receiver_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axicdma_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/axicdma_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/axicdma_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/axicdma_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling axicdma"
+xaxicdma_bdring.c: In function 'XAxiCdma_BdRingGetCurrBd':
+xaxicdma_bdring.c:204:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   return (XAxiCdma_Bd *)((XAxiCdma_BdRead(InstancePtr->BaseAddr, XAXICDMA_CDESC_OFFSET)) |
+          ^
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+14:48:46 **** Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c:149:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c'
+' '
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/common/framebuf.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "C:/Users/Mike/Documents/osiris-hdl/sw/common/framebuf.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/common/framebuf.c'
+' '
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/common/interrupt.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "C:/Users/Mike/Documents/osiris-hdl/sw/common/interrupt.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/common/interrupt.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -c -fmessage-length=0 -MT"src/helloworld.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -c -fmessage-length=0 -MT"src/platform.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37032	 309184	 330548	 676764	  a539c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+14:50:25 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+14:53:44 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c:151:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c: At top level:
+C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c:86:6: warning: 'line_valid_isr' defined but not used [-Wunused-function]
+ void line_valid_isr(void *line_valid_flag) {
+      ^
+C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c:90:6: warning: 'frame_valid_isr' defined but not used [-Wunused-function]
+ void frame_valid_isr(void *frame_valid_flag) {
+      ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36904	 309184	 330548	 676636	  a531c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+14:53:48 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+14:54:27 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c:149:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37032	 309184	 330548	 676764	  a539c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+14:54:47 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+14:58:15 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+14:58:16 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+15:29:57 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+15:30:35 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+17:15:29 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.

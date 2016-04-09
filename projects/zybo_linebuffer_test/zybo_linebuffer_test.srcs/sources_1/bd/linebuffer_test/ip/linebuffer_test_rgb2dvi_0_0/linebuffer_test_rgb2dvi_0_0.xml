@@ -207,6 +207,62 @@
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>DDC</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>DDC_SCL_T</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>DDC_SDA_O</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>DDC_SDA_I</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>DDC_SDA_T</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>DDC_SCL_O</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>DDC_SCL_I</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
   </spirit:busInterfaces>
   <spirit:model>
     <spirit:views>
@@ -221,7 +277,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>17a543d6</spirit:value>
+            <spirit:value>73e11458</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -229,7 +285,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>5eb55908</spirit:value>
+            <spirit:value>de31c1bb</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -237,7 +293,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 04 20:25:35 UTC 2016</spirit:value>
+            <spirit:value>Sat Apr 09 10:25:16 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -256,7 +312,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>17a543d6</spirit:value>
+            <spirit:value>73e11458</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -264,7 +320,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>5eb55908</spirit:value>
+            <spirit:value>de31c1bb</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -272,7 +328,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 04 12:54:28 UTC 2016</spirit:value>
+            <spirit:value>Sat Apr 09 10:25:16 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -291,7 +347,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>17a543d6</spirit:value>
+            <spirit:value>73e11458</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -299,7 +355,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>5eb55908</spirit:value>
+            <spirit:value>de31c1bb</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -307,7 +363,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 04 20:25:35 UTC 2016</spirit:value>
+            <spirit:value>Sat Apr 09 10:25:16 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -326,7 +382,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>b6db5556</spirit:value>
+            <spirit:value>a2a6b73b</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -334,7 +390,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>5eb55908</spirit:value>
+            <spirit:value>de31c1bb</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -342,7 +398,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 04 12:54:28 UTC 2016</spirit:value>
+            <spirit:value>Sat Apr 09 10:25:16 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -361,7 +417,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>b6db5556</spirit:value>
+            <spirit:value>a2a6b73b</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -369,7 +425,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>5eb55908</spirit:value>
+            <spirit:value>de31c1bb</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -377,7 +433,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Apr 04 20:25:35 UTC 2016</spirit:value>
+            <spirit:value>Sat Apr 09 10:25:16 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -550,7 +606,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>flash_sync</spirit:name>
+        <spirit:name>shutter_sync</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -598,6 +654,97 @@
           </xilinx:portInfo>
         </spirit:vendorExtensions>
       </spirit:port>
+      <spirit:port>
+        <spirit:name>RefClk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>DDC_SDA_I</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>DDC_SDA_O</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>DDC_SDA_T</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>DDC_SCL_I</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>DDC_SCL_O</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>DDC_SCL_T</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_vhdlbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
     </spirit:ports>
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="boolean">
@@ -619,6 +766,16 @@
         <spirit:name>kClkRange</spirit:name>
         <spirit:displayName>Kclkrange</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.kClkRange" spirit:minimum="0" spirit:rangeType="long">1</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="boolean">
+        <spirit:name>kEmulateDDC</spirit:name>
+        <spirit:displayName>Kemulateddc</spirit:displayName>
+        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.kEmulateDDC">true</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="string">
+        <spirit:name>kESIDFile</spirit:name>
+        <spirit:displayName>Kesidfile</spirit:displayName>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.kESIDFile">c:/Users/Mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -682,6 +839,10 @@
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
+        <spirit:name>../../ipshared/digilentinc.com/rgb2dvi_v1_2/src/GlitchFilter.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>../../ipshared/digilentinc.com/rgb2dvi_v1_2/src/SyncAsync.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
@@ -690,6 +851,10 @@
         <spirit:name>../../ipshared/digilentinc.com/rgb2dvi_v1_2/src/SyncAsyncReset.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/digilentinc.com/rgb2dvi_v1_2/src/TWI_SlaveCtl.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>../../ipshared/digilentinc.com/rgb2dvi_v1_2/src/DVI_Constants.vhd</spirit:name>
@@ -701,6 +866,10 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>../../ipshared/digilentinc.com/rgb2dvi_v1_2/src/TMDS_Encoder.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/digilentinc.com/rgb2dvi_v1_2/src/EEPROM_8b.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -724,12 +893,22 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>../../ipshared/digilentinc.com/rgb2dvi_v1_2/src/GlitchFilter.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>../../ipshared/digilentinc.com/rgb2dvi_v1_2/src/SyncAsync.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>../../ipshared/digilentinc.com/rgb2dvi_v1_2/src/SyncAsyncReset.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/digilentinc.com/rgb2dvi_v1_2/src/TWI_SlaveCtl.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -745,6 +924,11 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>../../ipshared/digilentinc.com/rgb2dvi_v1_2/src/TMDS_Encoder.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/digilentinc.com/rgb2dvi_v1_2/src/EEPROM_8b.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -797,16 +981,26 @@
       <spirit:displayName>TMDS clock range</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.kClkRange" spirit:choiceRef="choice_pairs_c59fad91">1</spirit:value>
     </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>kEmulateDDC</spirit:name>
+      <spirit:displayName>Enable DDC</spirit:displayName>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.kEmulateDDC">true</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>kESIDFile</spirit:name>
+      <spirit:displayName>ESID file</spirit:displayName>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.kESIDFile">c:/Users/Mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt</spirit:value>
+    </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>RGB to DVI Video Encoder (Source)</xilinx:displayName>
-      <xilinx:coreRevision>7</xilinx:coreRevision>
+      <xilinx:coreRevision>13</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="xilinx.com:ip:rgb2dvi:1.0_ARCHIVE_LOCATION">C:/Users/Elod/Documents/Vivado_Projects/dgl_repo/ip/rgb2dvi_v1_0</xilinx:tag>
         <xilinx:tag xilinx:name="digilentinc.com:ip:rgb2dvi:1.0_ARCHIVE_LOCATION">C:/Users/Elod/Documents/Vivado_Projects/dgl_repo/ip/rgb2dvi_v1_0</xilinx:tag>
         <xilinx:tag xilinx:name="digilentinc.com:ip:rgb2dvi:1.1_ARCHIVE_LOCATION">C:/Users/Elod/Documents/Vivado_Projects/dgl_repo</xilinx:tag>
-        <xilinx:tag xilinx:name="digilentinc.com:ip:rgb2dvi:1.2_ARCHIVE_LOCATION">/home/mike/Documents/osiris-hdl/hdl/rgb2dvi_v1_2</xilinx:tag>
+        <xilinx:tag xilinx:name="digilentinc.com:ip:rgb2dvi:1.2_ARCHIVE_LOCATION">C:/Users/Mike/Documents/osiris-hdl/hdl/rgb2dvi_v1_2</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ASYNCRST.POLARITY" xilinx:valueSource="constant"/>
@@ -817,16 +1011,17 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SERIALCLK.CLK_DOMAIN" xilinx:valueSource="ip_propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SERIALCLK.FREQ_HZ" xilinx:valueSource="ip_propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SERIALCLK.PHASE" xilinx:valueSource="ip_propagated"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.kESIDFile" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.kGenerateSerialClk" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2015.4</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7fc9a1d2"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="1b3936a3"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="5c4ce2ae"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="6e4840da"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="a1d85ba9"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="1be95147"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d0c80dfc"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="0ce3ef52"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="652c29cc"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="75ff59aa"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

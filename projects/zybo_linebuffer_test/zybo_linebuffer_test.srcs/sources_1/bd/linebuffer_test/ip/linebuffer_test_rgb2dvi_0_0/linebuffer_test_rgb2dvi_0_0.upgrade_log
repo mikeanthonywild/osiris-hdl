@@ -1,0 +1,167 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sat Apr 09 11:22:30 2016
+| Host         : Study running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'linebuffer_test_rgb2dvi_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of linebuffer_test_rgb2dvi_0_0 (digilentinc.com:ip:rgb2dvi:1.2) from (Rev. 12) to (Rev. 13)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'linebuffer_test_rgb2dvi_0_0'. These changes may impact your design.
+
+
+-upgrade has removed port 'ref_clk_125'
+-upgrade has added port 'RefClk'
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sat Apr 09 10:20:22 2016
+| Host         : Study running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'linebuffer_test_rgb2dvi_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of linebuffer_test_rgb2dvi_0_0 (digilentinc.com:ip:rgb2dvi:1.2) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sat Apr 09 09:08:44 2016
+| Host         : Study running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'linebuffer_test_rgb2dvi_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of linebuffer_test_rgb2dvi_0_0 (digilentinc.com:ip:rgb2dvi:1.2) from (Rev. 10) to (Rev. 11)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'linebuffer_test_rgb2dvi_0_0'. These changes may impact your design.
+
+
+-upgrade has removed port 'flash_sync'
+-upgrade has added port 'ref_clk_125'
+-upgrade has added port 'shutter_sync'
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Fri Apr 08 20:43:28 2016
+| Host         : Study running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'linebuffer_test_rgb2dvi_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of linebuffer_test_rgb2dvi_0_0 (digilentinc.com:ip:rgb2dvi:1.2) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Fri Apr 08 20:37:34 2016
+| Host         : Study running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'linebuffer_test_rgb2dvi_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of linebuffer_test_rgb2dvi_0_0 (digilentinc.com:ip:rgb2dvi:1.2) from (Rev. 8) to (Rev. 9)
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading IP 'linebuffer_test_rgb2dvi_0_0'.
+
+
+-upgrade has added interface 'DDC'
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Fri Apr 08 20:28:03 2016
+| Host         : Study running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'linebuffer_test_rgb2dvi_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of linebuffer_test_rgb2dvi_0_0 (digilentinc.com:ip:rgb2dvi:1.2) from (Rev. 7) to (Rev. 8)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'linebuffer_test_rgb2dvi_0_0'. These changes may impact your design.
+
+
+-upgrade has added port 'DDC_SCL_I'
+-upgrade has added port 'DDC_SCL_O'
+-upgrade has added port 'DDC_SCL_T'
+-upgrade has added port 'DDC_SDA_I'
+-upgrade has added port 'DDC_SDA_O'
+-upgrade has added port 'DDC_SDA_T'
+

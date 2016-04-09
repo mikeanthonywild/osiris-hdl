@@ -8,7 +8,7 @@
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z010_1" gui_info="">
       <Properties Property="PROBES.FILE" value=""/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="C:/Users/Mike/Documents/osiris-hdl/projects/zybo_dvi_output/zybo_dvi_output.runs/impl_1/zybo_dvi_output_wrapper.bit"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/linebuffer_test_wrapper.bit"/>
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_ila" gui_info="">
@@ -39,7 +39,7 @@
     <Object name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[11:0]" gui_info="Trigger Setup=0"/>
     <Object name="linebuffer_test_i/o_axi_cdma_M_AXI_AWVALID" gui_info="Trigger Setup=0"/>
     <Object name="linebuffer_test_i/o_buf_controller_addr[31:0]" gui_info="Trigger Setup=0"/>
-    <Object name="linebuffer_test_i/o_buf_controller_hsync" gui_info="Trigger Setup=0"/>
+    <Object name="linebuffer_test_i/o_buf_controller_hsync" gui_info=""/>
     <Object name="linebuffer_test_i/o_buf_controller_req_frame" gui_info=""/>
     <Object name="linebuffer_test_i/o_buf_controller_req_line" gui_info=""/>
     <Object name="linebuffer_test_i/o_buf_controller_vde" gui_info=""/>
@@ -413,7 +413,7 @@
         <Option Id="COMPARE_VALUE.0" value="eq12&apos;h004"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;h004"/>
@@ -439,7 +439,7 @@
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
@@ -842,13 +842,13 @@
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;hX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;h1"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;hX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;h1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;hX"/>
       </probeOptions>
       <nets>
         <net name="linebuffer_test_i/o_buf_controller_hsync"/>
@@ -860,7 +860,7 @@
         <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
@@ -942,7 +942,7 @@
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>

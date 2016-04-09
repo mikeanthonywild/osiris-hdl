@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="linebuffer_test_wrapper.bit" key="linebuffer_test_wrapper_hw_platform_0-bitFile"/>
+	<item value="" key="linebuffer_test_wrapper_hw_platform_1-bmmFile"/>
+	<item value="Auto Detect" key="linebuffer_test_wrapper_hw_platform_1-device"/>
+	<item value="C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_wrapper_hw_platform_0\zybo_receiver_wrapper.bit" key="linebuffer_test_wrapper_hw_platform_0-bitFile"/>
 	<item value="" key="linebuffer_test_wrapper_hw_platform_0-bmmFile"/>
 	<item value="Local" key="linebuffer_test_wrapper_hw_platform_0-target"/>
 	<item value="Auto Detect" key="linebuffer_test_wrapper_hw_platform_0-device"/>
 	<item value="linebuffer_test_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="Local" key="linebuffer_test_wrapper_hw_platform_1-target"/>
 	<item value="false" key="linebuffer_test_wrapper_hw_platform_0-partial_bit"/>
+	<item value="linebuffer_test_wrapper.bit" key="linebuffer_test_wrapper_hw_platform_1-bitFile"/>
+	<item value="false" key="linebuffer_test_wrapper_hw_platform_1-partial_bit"/>
 </section>

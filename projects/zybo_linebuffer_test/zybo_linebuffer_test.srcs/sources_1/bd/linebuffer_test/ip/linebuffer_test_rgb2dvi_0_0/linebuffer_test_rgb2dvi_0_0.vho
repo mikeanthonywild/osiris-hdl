@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: digilentinc.com:ip:rgb2dvi:1.2
--- IP Revision: 7
+-- IP Revision: 13
 
 -- The following code must appear in the VHDL architecture header.
 
@@ -63,9 +63,16 @@ COMPONENT linebuffer_test_rgb2dvi_0_0
     vid_pVDE : IN STD_LOGIC;
     vid_pHSync : IN STD_LOGIC;
     vid_pVSync : IN STD_LOGIC;
-    flash_sync : IN STD_LOGIC;
+    shutter_sync : IN STD_LOGIC;
     PixelClk : IN STD_LOGIC;
-    SerialClk : IN STD_LOGIC
+    SerialClk : IN STD_LOGIC;
+    RefClk : IN STD_LOGIC;
+    DDC_SDA_I : IN STD_LOGIC;
+    DDC_SDA_O : OUT STD_LOGIC;
+    DDC_SDA_T : OUT STD_LOGIC;
+    DDC_SCL_I : IN STD_LOGIC;
+    DDC_SCL_O : OUT STD_LOGIC;
+    DDC_SCL_T : OUT STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -85,9 +92,16 @@ your_instance_name : linebuffer_test_rgb2dvi_0_0
     vid_pVDE => vid_pVDE,
     vid_pHSync => vid_pHSync,
     vid_pVSync => vid_pVSync,
-    flash_sync => flash_sync,
+    shutter_sync => shutter_sync,
     PixelClk => PixelClk,
-    SerialClk => SerialClk
+    SerialClk => SerialClk,
+    RefClk => RefClk,
+    DDC_SDA_I => DDC_SDA_I,
+    DDC_SDA_O => DDC_SDA_O,
+    DDC_SDA_T => DDC_SDA_T,
+    DDC_SCL_I => DDC_SCL_I,
+    DDC_SCL_O => DDC_SCL_O,
+    DDC_SCL_T => DDC_SCL_T
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 

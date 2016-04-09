@@ -3,25 +3,27 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="/home/mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1">
+      <db_ref path="C:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1">
          <top_modules>
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="148654fs"></ZoomStartTime>
-      <ZoomEndTime time="168535fs"></ZoomEndTime>
-      <Cursor1Time time="130000fs"></Cursor1Time>
+      <ZoomStartTime time="111400fs"></ZoomStartTime>
+      <ZoomEndTime time="118641fs"></ZoomEndTime>
+      <Cursor1Time time="120000fs"></Cursor1Time>
    </zoom_setting>
    <WVObjectSize size="2" />
    <wave_markers>
    </wave_markers>
-   <wvobject db_ref_id="1" type="array" fp_name="linebuffer_test_i/o_buf_controller_addr">
-      <obj_property name="ElementShortName">linebuffer_test_i/o_buf_controller_addr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">linebuffer_test_i/o_buf_controller_addr[31:0]</obj_property>
+   <wvobject db_ref_id="1" fp_name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR" type="array">
+      <obj_property name="ElementShortName">linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[11:0]</obj_property>
+      <obj_property name="ObjectShortName">linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_ADDR[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" type="array" fp_name="linebuffer_test_i/o_linebuffer_doutb">
-      <obj_property name="ElementShortName">linebuffer_test_i/o_linebuffer_doutb[31:0]</obj_property>
-      <obj_property name="ObjectShortName">linebuffer_test_i/o_linebuffer_doutb[31:0]</obj_property>
+   <wvobject db_ref_id="1" fp_name="linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN" type="array">
+      <obj_property name="ElementShortName">linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">linebuffer_test_i/o_axi_bram_ctrl_BRAM_PORTA_DIN[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
 </wave_config>

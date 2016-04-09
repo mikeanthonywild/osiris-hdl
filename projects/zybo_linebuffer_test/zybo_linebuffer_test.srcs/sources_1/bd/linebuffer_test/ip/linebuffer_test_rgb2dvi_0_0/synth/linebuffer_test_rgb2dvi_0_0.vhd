@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: digilentinc.com:ip:rgb2dvi:1.2
--- IP Revision: 7
+-- IP Revision: 13
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -64,9 +64,16 @@ ENTITY linebuffer_test_rgb2dvi_0_0 IS
     vid_pVDE : IN STD_LOGIC;
     vid_pHSync : IN STD_LOGIC;
     vid_pVSync : IN STD_LOGIC;
-    flash_sync : IN STD_LOGIC;
+    shutter_sync : IN STD_LOGIC;
     PixelClk : IN STD_LOGIC;
-    SerialClk : IN STD_LOGIC
+    SerialClk : IN STD_LOGIC;
+    RefClk : IN STD_LOGIC;
+    DDC_SDA_I : IN STD_LOGIC;
+    DDC_SDA_O : OUT STD_LOGIC;
+    DDC_SDA_T : OUT STD_LOGIC;
+    DDC_SCL_I : IN STD_LOGIC;
+    DDC_SCL_O : OUT STD_LOGIC;
+    DDC_SCL_T : OUT STD_LOGIC
   );
 END linebuffer_test_rgb2dvi_0_0;
 
@@ -79,7 +86,9 @@ ARCHITECTURE linebuffer_test_rgb2dvi_0_0_arch OF linebuffer_test_rgb2dvi_0_0 IS
       kGenerateSerialClk : BOOLEAN;
       kClkPrimitive : STRING;
       kRstActiveHigh : BOOLEAN;
-      kClkRange : INTEGER
+      kClkRange : INTEGER;
+      kEmulateDDC : BOOLEAN;
+      kESIDFile : STRING
     );
     PORT (
       TMDS_Clk_p : OUT STD_LOGIC;
@@ -92,9 +101,16 @@ ARCHITECTURE linebuffer_test_rgb2dvi_0_0_arch OF linebuffer_test_rgb2dvi_0_0 IS
       vid_pVDE : IN STD_LOGIC;
       vid_pHSync : IN STD_LOGIC;
       vid_pVSync : IN STD_LOGIC;
-      flash_sync : IN STD_LOGIC;
+      shutter_sync : IN STD_LOGIC;
       PixelClk : IN STD_LOGIC;
-      SerialClk : IN STD_LOGIC
+      SerialClk : IN STD_LOGIC;
+      RefClk : IN STD_LOGIC;
+      DDC_SDA_I : IN STD_LOGIC;
+      DDC_SDA_O : OUT STD_LOGIC;
+      DDC_SDA_T : OUT STD_LOGIC;
+      DDC_SCL_I : IN STD_LOGIC;
+      DDC_SCL_O : OUT STD_LOGIC;
+      DDC_SCL_T : OUT STD_LOGIC
     );
   END COMPONENT rgb2dvi;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -113,13 +129,21 @@ ARCHITECTURE linebuffer_test_rgb2dvi_0_0_arch OF linebuffer_test_rgb2dvi_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF vid_pVSync: SIGNAL IS "xilinx.com:interface:vid_io:1.0 RGB VSYNC";
   ATTRIBUTE X_INTERFACE_INFO OF PixelClk: SIGNAL IS "xilinx.com:signal:clock:1.0 PixelClk CLK";
   ATTRIBUTE X_INTERFACE_INFO OF SerialClk: SIGNAL IS "xilinx.com:signal:clock:1.0 SerialClk CLK";
+  ATTRIBUTE X_INTERFACE_INFO OF DDC_SDA_I: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SDA_I";
+  ATTRIBUTE X_INTERFACE_INFO OF DDC_SDA_O: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SDA_O";
+  ATTRIBUTE X_INTERFACE_INFO OF DDC_SDA_T: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SDA_T";
+  ATTRIBUTE X_INTERFACE_INFO OF DDC_SCL_I: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SCL_I";
+  ATTRIBUTE X_INTERFACE_INFO OF DDC_SCL_O: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SCL_O";
+  ATTRIBUTE X_INTERFACE_INFO OF DDC_SCL_T: SIGNAL IS "xilinx.com:interface:iic:1.0 DDC SCL_T";
 BEGIN
   U0 : rgb2dvi
     GENERIC MAP (
       kGenerateSerialClk => false,
       kClkPrimitive => "MMCM",
       kRstActiveHigh => true,
-      kClkRange => 1
+      kClkRange => 1,
+      kEmulateDDC => true,
+      kESIDFile => "c:/Users/Mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt"
     )
     PORT MAP (
       TMDS_Clk_p => TMDS_Clk_p,
@@ -132,8 +156,15 @@ BEGIN
       vid_pVDE => vid_pVDE,
       vid_pHSync => vid_pHSync,
       vid_pVSync => vid_pVSync,
-      flash_sync => flash_sync,
+      shutter_sync => shutter_sync,
       PixelClk => PixelClk,
-      SerialClk => SerialClk
+      SerialClk => SerialClk,
+      RefClk => RefClk,
+      DDC_SDA_I => DDC_SDA_I,
+      DDC_SDA_O => DDC_SDA_O,
+      DDC_SDA_T => DDC_SDA_T,
+      DDC_SCL_I => DDC_SCL_I,
+      DDC_SCL_O => DDC_SCL_O,
+      DDC_SCL_T => DDC_SCL_T
     );
 END linebuffer_test_rgb2dvi_0_0_arch;

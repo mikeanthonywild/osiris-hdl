@@ -1,0 +1,6 @@
+16:15:37 **** Incremental Build of configuration Release for project ps_test ****
+make all 
+make: Nothing to be done for `all'.
+
+16:15:37 Build Finished (took 203ms)
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\linebuffer_test\Debug" key="bootgen_files_selection"/>
+	<item value="C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_wrapper_hw_platform_0" key="program_fpga_view_bit_bmm_browse_key"/>
+	<item value="C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\zynq_fsbl" key="zynq_flash_files_selection"/>
+	<item value="C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\linebuffer_test\Debug" key="last_stored_selection"/>
+</section>

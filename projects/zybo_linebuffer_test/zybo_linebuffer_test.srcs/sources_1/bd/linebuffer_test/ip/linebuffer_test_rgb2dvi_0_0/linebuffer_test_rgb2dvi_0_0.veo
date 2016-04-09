@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: digilentinc.com:ip:rgb2dvi:1.2
-// IP Revision: 7
+// IP Revision: 13
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
@@ -55,18 +55,25 @@
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 linebuffer_test_rgb2dvi_0_0 your_instance_name (
-  .TMDS_Clk_p(TMDS_Clk_p),    // output wire TMDS_Clk_p
-  .TMDS_Clk_n(TMDS_Clk_n),    // output wire TMDS_Clk_n
-  .TMDS_Data_p(TMDS_Data_p),  // output wire [2 : 0] TMDS_Data_p
-  .TMDS_Data_n(TMDS_Data_n),  // output wire [2 : 0] TMDS_Data_n
-  .aRst(aRst),                // input wire aRst
-  .vid_pData(vid_pData),      // input wire [23 : 0] vid_pData
-  .vid_pVDE(vid_pVDE),        // input wire vid_pVDE
-  .vid_pHSync(vid_pHSync),    // input wire vid_pHSync
-  .vid_pVSync(vid_pVSync),    // input wire vid_pVSync
-  .flash_sync(flash_sync),    // input wire flash_sync
-  .PixelClk(PixelClk),        // input wire PixelClk
-  .SerialClk(SerialClk)      // input wire SerialClk
+  .TMDS_Clk_p(TMDS_Clk_p),      // output wire TMDS_Clk_p
+  .TMDS_Clk_n(TMDS_Clk_n),      // output wire TMDS_Clk_n
+  .TMDS_Data_p(TMDS_Data_p),    // output wire [2 : 0] TMDS_Data_p
+  .TMDS_Data_n(TMDS_Data_n),    // output wire [2 : 0] TMDS_Data_n
+  .aRst(aRst),                  // input wire aRst
+  .vid_pData(vid_pData),        // input wire [23 : 0] vid_pData
+  .vid_pVDE(vid_pVDE),          // input wire vid_pVDE
+  .vid_pHSync(vid_pHSync),      // input wire vid_pHSync
+  .vid_pVSync(vid_pVSync),      // input wire vid_pVSync
+  .shutter_sync(shutter_sync),  // input wire shutter_sync
+  .PixelClk(PixelClk),          // input wire PixelClk
+  .SerialClk(SerialClk),        // input wire SerialClk
+  .RefClk(RefClk),              // input wire RefClk
+  .DDC_SDA_I(DDC_SDA_I),        // input wire DDC_SDA_I
+  .DDC_SDA_O(DDC_SDA_O),        // output wire DDC_SDA_O
+  .DDC_SDA_T(DDC_SDA_T),        // output wire DDC_SDA_T
+  .DDC_SCL_I(DDC_SCL_I),        // input wire DDC_SCL_I
+  .DDC_SCL_O(DDC_SCL_O),        // output wire DDC_SCL_O
+  .DDC_SCL_T(DDC_SCL_T)        // output wire DDC_SCL_T
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

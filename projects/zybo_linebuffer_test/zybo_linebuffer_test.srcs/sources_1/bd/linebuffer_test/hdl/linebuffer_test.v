@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-//Date        : Mon Apr 04 21:29:27 2016
+//Date        : Sat Apr 09 11:24:29 2016
 //Host        : Study running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target linebuffer_test.bd
 //Design      : linebuffer_test
@@ -9,9 +9,15 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "linebuffer_test,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=linebuffer_test,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=42,numReposBlks=30,numNonXlnxBlks=5,numHierBlks=12,maxHierDepth=0,da_axi4_cnt=9,da_bram_cntlr_cnt=5,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "linebuffer_test.hwdef" *) 
+(* CORE_GENERATION_INFO = "linebuffer_test,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=linebuffer_test,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=43,numReposBlks=31,numNonXlnxBlks=5,numHierBlks=12,maxHierDepth=0,da_axi4_cnt=9,da_bram_cntlr_cnt=5,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "linebuffer_test.hwdef" *) 
 module linebuffer_test
-   (DDR_addr,
+   (DDC_scl_i,
+    DDC_scl_o,
+    DDC_scl_t,
+    DDC_sda_i,
+    DDC_sda_o,
+    DDC_sda_t,
+    DDR_addr,
     DDR_ba,
     DDR_cas_n,
     DDR_ck_n,
@@ -33,16 +39,25 @@ module linebuffer_test
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     clk,
+    d,
     flash_sync_btn,
     hdmi_clk_n,
     hdmi_clk_p,
     hdmi_d_n,
     hdmi_d_p,
-    vga_b,
-    vga_g,
-    vga_hs,
-    vga_r,
-    vga_vs);
+    href,
+    pclk,
+    rst_btn,
+    scl,
+    sda,
+    vsync,
+    xclk);
+  input DDC_scl_i;
+  output DDC_scl_o;
+  output DDC_scl_t;
+  input DDC_sda_i;
+  output DDC_sda_o;
+  output DDC_sda_t;
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -65,18 +80,22 @@ module linebuffer_test
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   input clk;
+  input [7:0]d;
   input flash_sync_btn;
   output hdmi_clk_n;
   output hdmi_clk_p;
   output [2:0]hdmi_d_n;
   output [2:0]hdmi_d_p;
-  output [4:0]vga_b;
-  output [5:0]vga_g;
-  output vga_hs;
-  output [4:0]vga_r;
-  output vga_vs;
+  input href;
+  input pclk;
+  input [0:0]rst_btn;
+  output scl;
+  inout sda;
+  input vsync;
+  output xclk;
 
   wire [3:0]GND_dout;
+  wire Net;
   wire [0:0]VDD_dout;
   wire [31:0]axi_mem_intercon_1_M00_AXI_ARADDR;
   wire [1:0]axi_mem_intercon_1_M00_AXI_ARBURST;
@@ -208,10 +227,13 @@ module linebuffer_test
   wire axi_mem_intercon_M01_AXI_WVALID;
   wire [3:0]bram_we_concat_dout;
   wire clk_1;
-  wire clk_wiz_0_clk_out1;
   wire clk_wiz_0_clk_out2;
+  wire [7:0]d_1;
   wire dvi_clk_gen_clk_out2;
+  wire dvi_clk_gen_clk_out3;
+  wire [23:0]dvi_concat_dout;
   wire flash_sync_btn_1;
+  wire href_1;
   wire [11:0]i_axi_bram_ctrl_BRAM_PORTA_ADDR;
   wire i_axi_bram_ctrl_BRAM_PORTA_CLK;
   wire [31:0]i_axi_bram_ctrl_BRAM_PORTA_DIN;
@@ -251,6 +273,8 @@ module linebuffer_test
   wire [31:0]i_buf_controller_0_addr;
   wire [31:0]i_buf_controller_0_o_data;
   wire i_buf_controller_0_we;
+  wire i_buf_controller_frame_valid;
+  wire i_buf_controller_line_valid;
   wire [3:0]irq_concat_dout;
   wire [11:0]o_axi_bram_ctrl_BRAM_PORTA_ADDR;
   wire o_axi_bram_ctrl_BRAM_PORTA_CLK;
@@ -296,6 +320,14 @@ module linebuffer_test
   wire o_buf_controller_vde;
   wire o_buf_controller_vsync;
   wire [31:0]o_linebuffer_doutb;
+  wire [7:0]ov7670_capture_0_dout;
+  wire ov7670_capture_0_hsync;
+  wire ov7670_capture_0_vde;
+  wire ov7670_capture_o_vsync;
+  wire ov7670_clk_gen_clk_out1;
+  wire ov7670_controller_0_start_capture;
+  wire ov7670_controller_scl;
+  wire pclk_1;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -389,34 +421,41 @@ module linebuffer_test
   wire [31:0]processing_system7_0_axi_periph_M01_AXI_WDATA;
   wire processing_system7_0_axi_periph_M01_AXI_WREADY;
   wire processing_system7_0_axi_periph_M01_AXI_WVALID;
+  wire rgb2dvi_0_DDC_SCL_I;
+  wire rgb2dvi_0_DDC_SCL_O;
+  wire rgb2dvi_0_DDC_SCL_T;
+  wire rgb2dvi_0_DDC_SDA_I;
+  wire rgb2dvi_0_DDC_SDA_O;
+  wire rgb2dvi_0_DDC_SDA_T;
   wire rgb2dvi_0_TMDS_Clk_n;
   wire rgb2dvi_0_TMDS_Clk_p;
   wire [2:0]rgb2dvi_0_TMDS_Data_n;
   wire [2:0]rgb2dvi_0_TMDS_Data_p;
-  wire [4:0]rgb2vga_0_vga_pBlue;
-  wire [5:0]rgb2vga_0_vga_pGreen;
-  wire rgb2vga_0_vga_pHSync;
-  wire [4:0]rgb2vga_0_vga_pRed;
-  wire rgb2vga_0_vga_pVSync;
+  wire [0:0]rst_btn_1;
   wire [0:0]rst_processing_system7_0_100M_interconnect_aresetn;
   wire [0:0]rst_processing_system7_0_100M_peripheral_aresetn;
-  wire test_pattern_generator_0_hsync;
-  wire [7:0]test_pattern_generator_0_r;
-  wire test_pattern_generator_0_vde;
-  wire test_pattern_generator_0_vsync;
-  wire [23:0]xlconcat_1_dout;
+  wire [0:0]util_vector_logic_0_Res;
+  wire vsync_1;
 
+  assign DDC_scl_o = rgb2dvi_0_DDC_SCL_O;
+  assign DDC_scl_t = rgb2dvi_0_DDC_SCL_T;
+  assign DDC_sda_o = rgb2dvi_0_DDC_SDA_O;
+  assign DDC_sda_t = rgb2dvi_0_DDC_SDA_T;
   assign clk_1 = clk;
+  assign d_1 = d[7:0];
   assign flash_sync_btn_1 = flash_sync_btn;
   assign hdmi_clk_n = rgb2dvi_0_TMDS_Clk_n;
   assign hdmi_clk_p = rgb2dvi_0_TMDS_Clk_p;
   assign hdmi_d_n[2:0] = rgb2dvi_0_TMDS_Data_n;
   assign hdmi_d_p[2:0] = rgb2dvi_0_TMDS_Data_p;
-  assign vga_b[4:0] = rgb2vga_0_vga_pBlue;
-  assign vga_g[5:0] = rgb2vga_0_vga_pGreen;
-  assign vga_hs = rgb2vga_0_vga_pHSync;
-  assign vga_r[4:0] = rgb2vga_0_vga_pRed;
-  assign vga_vs = rgb2vga_0_vga_pVSync;
+  assign href_1 = href;
+  assign pclk_1 = pclk;
+  assign rgb2dvi_0_DDC_SCL_I = DDC_scl_i;
+  assign rgb2dvi_0_DDC_SDA_I = DDC_sda_i;
+  assign rst_btn_1 = rst_btn[0];
+  assign scl = ov7670_controller_scl;
+  assign vsync_1 = vsync;
+  assign xclk = ov7670_clk_gen_clk_out1;
   linebuffer_test_xlconstant_0_1 GND
        (.dout(GND_dout));
   linebuffer_test_xlconstant_0_0 VDD
@@ -635,7 +674,13 @@ module linebuffer_test
        (.clk_in1(clk_1),
         .clk_out1(clk_wiz_0_clk_out2),
         .clk_out2(dvi_clk_gen_clk_out2),
+        .clk_out3(dvi_clk_gen_clk_out3),
         .reset(1'b0));
+  linebuffer_test_xlconcat_0_2 dvi_concat
+       (.In0(o_buf_controller_o_data),
+        .In1(o_buf_controller_o_data),
+        .In2(o_buf_controller_o_data),
+        .dout(dvi_concat_dout));
   linebuffer_test_axi_bram_ctrl_0_0 i_axi_bram_ctrl
        (.bram_addr_a(i_axi_bram_ctrl_BRAM_PORTA_ADDR),
         .bram_clk_a(i_axi_bram_ctrl_BRAM_PORTA_CLK),
@@ -726,21 +771,23 @@ module linebuffer_test
         .s_axi_lite_wdata(processing_system7_0_axi_periph_M00_AXI_WDATA),
         .s_axi_lite_wready(processing_system7_0_axi_periph_M00_AXI_WREADY),
         .s_axi_lite_wvalid(processing_system7_0_axi_periph_M00_AXI_WVALID));
-  linebuffer_test_i_buf_controller_0_0 i_buf_controller_0
+  linebuffer_test_i_buf_controller_0_0 i_buf_controller
        (.addr(i_buf_controller_0_addr),
-        .hsync(test_pattern_generator_0_hsync),
-        .i_data(test_pattern_generator_0_r),
+        .frame_valid(i_buf_controller_frame_valid),
+        .hsync(ov7670_capture_0_hsync),
+        .i_data(ov7670_capture_0_dout),
+        .line_valid(i_buf_controller_line_valid),
         .o_data(i_buf_controller_0_o_data),
-        .pclk(clk_wiz_0_clk_out1),
-        .reset_n(VDD_dout),
-        .vde(test_pattern_generator_0_vde),
-        .vsync(test_pattern_generator_0_vsync),
+        .pclk(pclk_1),
+        .reset_n(util_vector_logic_0_Res),
+        .vde(ov7670_capture_0_vde),
+        .vsync(ov7670_capture_o_vsync),
         .we(i_buf_controller_0_we));
   linebuffer_test_blk_mem_gen_0_0 i_linebuffer
        (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,i_axi_bram_ctrl_BRAM_PORTA_ADDR}),
         .addrb(i_buf_controller_0_addr),
         .clka(i_axi_bram_ctrl_BRAM_PORTA_CLK),
-        .clkb(clk_wiz_0_clk_out1),
+        .clkb(pclk_1),
         .dina(i_axi_bram_ctrl_BRAM_PORTA_DIN),
         .dinb(i_buf_controller_0_o_data),
         .douta(i_axi_bram_ctrl_BRAM_PORTA_DOUT),
@@ -750,9 +797,12 @@ module linebuffer_test
         .rstb(1'b0),
         .wea(i_axi_bram_ctrl_BRAM_PORTA_WE),
         .web(bram_we_concat_dout));
+  linebuffer_test_util_vector_logic_0_0 inverter
+       (.Op1(rst_btn_1),
+        .Res(util_vector_logic_0_Res));
   linebuffer_test_xlconcat_0_1 irq_concat
-       (.In0(1'b0),
-        .In1(1'b0),
+       (.In0(i_buf_controller_line_valid),
+        .In1(i_buf_controller_frame_valid),
         .In2(o_buf_controller_req_line),
         .In3(o_buf_controller_req_frame),
         .dout(irq_concat_dout));
@@ -854,11 +904,11 @@ module linebuffer_test
         .pclk(clk_wiz_0_clk_out2),
         .req_frame(o_buf_controller_req_frame),
         .req_line(o_buf_controller_req_line),
-        .reset_n(VDD_dout),
+        .reset_n(util_vector_logic_0_Res),
         .vde(o_buf_controller_vde),
         .vsync(o_buf_controller_vsync));
   linebuffer_test_blk_mem_gen_0_1 o_linebuffer
-       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,o_axi_bram_ctrl_BRAM_PORTA_ADDR}),
+       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,o_axi_bram_ctrl_BRAM_PORTA_ADDR}),
         .addrb(o_buf_controller_addr),
         .clka(o_axi_bram_ctrl_BRAM_PORTA_CLK),
         .clkb(clk_wiz_0_clk_out2),
@@ -872,6 +922,27 @@ module linebuffer_test
         .rstb(1'b0),
         .wea(o_axi_bram_ctrl_BRAM_PORTA_WE),
         .web(GND_dout));
+  linebuffer_test_ov7670_capture_0_0 ov7670_capture
+       (.d(d_1),
+        .dout(ov7670_capture_0_dout),
+        .href(href_1),
+        .hsync(ov7670_capture_0_hsync),
+        .o_vsync(ov7670_capture_o_vsync),
+        .pclk_12(pclk_1),
+        .reset_n(util_vector_logic_0_Res),
+        .start(ov7670_controller_0_start_capture),
+        .vde(ov7670_capture_0_vde),
+        .vsync(vsync_1));
+  linebuffer_test_clk_wiz_0_0 ov7670_clk_gen
+       (.clk_in1(clk_1),
+        .clk_out1(ov7670_clk_gen_clk_out1),
+        .reset(1'b0));
+  linebuffer_test_ov7670_controller_0_0 ov7670_controller
+       (.clk(ov7670_clk_gen_clk_out1),
+        .reset_n(util_vector_logic_0_Res),
+        .scl(ov7670_controller_scl),
+        .sda(sda),
+        .start_capture(ov7670_controller_0_start_capture));
   linebuffer_test_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
@@ -1096,29 +1167,25 @@ module linebuffer_test
         .S00_AXI_wstrb(processing_system7_0_M_AXI_GP0_WSTRB),
         .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID));
   linebuffer_test_rgb2dvi_0_0 rgb2dvi_0
-       (.PixelClk(clk_wiz_0_clk_out2),
+       (.DDC_SCL_I(rgb2dvi_0_DDC_SCL_I),
+        .DDC_SCL_O(rgb2dvi_0_DDC_SCL_O),
+        .DDC_SCL_T(rgb2dvi_0_DDC_SCL_T),
+        .DDC_SDA_I(rgb2dvi_0_DDC_SDA_I),
+        .DDC_SDA_O(rgb2dvi_0_DDC_SDA_O),
+        .DDC_SDA_T(rgb2dvi_0_DDC_SDA_T),
+        .PixelClk(clk_wiz_0_clk_out2),
+        .RefClk(dvi_clk_gen_clk_out3),
         .SerialClk(dvi_clk_gen_clk_out2),
         .TMDS_Clk_n(rgb2dvi_0_TMDS_Clk_n),
         .TMDS_Clk_p(rgb2dvi_0_TMDS_Clk_p),
         .TMDS_Data_n(rgb2dvi_0_TMDS_Data_n),
         .TMDS_Data_p(rgb2dvi_0_TMDS_Data_p),
-        .aRst(1'b0),
-        .flash_sync(flash_sync_btn_1),
-        .vid_pData(xlconcat_1_dout),
+        .aRst(rst_btn_1),
+        .shutter_sync(flash_sync_btn_1),
+        .vid_pData(dvi_concat_dout),
         .vid_pHSync(o_buf_controller_hsync),
         .vid_pVDE(o_buf_controller_vde),
         .vid_pVSync(o_buf_controller_vsync));
-  linebuffer_test_rgb2vga_0_0 rgb2vga_0
-       (.PixelClk(clk_wiz_0_clk_out2),
-        .rgb_pData(xlconcat_1_dout),
-        .rgb_pHSync(o_buf_controller_hsync),
-        .rgb_pVDE(o_buf_controller_vde),
-        .rgb_pVSync(o_buf_controller_vsync),
-        .vga_pBlue(rgb2vga_0_vga_pBlue),
-        .vga_pGreen(rgb2vga_0_vga_pGreen),
-        .vga_pHSync(rgb2vga_0_vga_pHSync),
-        .vga_pRed(rgb2vga_0_vga_pRed),
-        .vga_pVSync(rgb2vga_0_vga_pVSync));
   linebuffer_test_rst_processing_system7_0_100M_0 rst_processing_system7_0_100M
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),
@@ -1127,21 +1194,6 @@ module linebuffer_test
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_processing_system7_0_100M_peripheral_aresetn),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
-  linebuffer_test_test_pattern_generator_0_0 test_pattern_generator_0
-       (.clk(clk_wiz_0_clk_out1),
-        .hsync(test_pattern_generator_0_hsync),
-        .r(test_pattern_generator_0_r),
-        .vde(test_pattern_generator_0_vde),
-        .vsync(test_pattern_generator_0_vsync));
-  linebuffer_test_clk_wiz_0_0 tpg_clk_gen
-       (.clk_in1(clk_1),
-        .clk_out1(clk_wiz_0_clk_out1),
-        .reset(1'b0));
-  linebuffer_test_xlconcat_1_0 vga_concat
-       (.In0(o_buf_controller_o_data),
-        .In1(o_buf_controller_o_data),
-        .In2(o_buf_controller_o_data),
-        .dout(xlconcat_1_dout));
 endmodule
 
 module linebuffer_test_axi_mem_intercon_0

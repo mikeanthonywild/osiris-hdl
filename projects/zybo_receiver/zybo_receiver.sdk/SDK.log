@@ -320,3 +320,103 @@ java.net.SocketException: Connection reset
 	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess$CommandResultsReader.run(XMDJSONProcess.java:332)
 	at java.lang.Thread.run(Thread.java:745)
 23:16:36 ERROR : Zero sized response read from XMD. This indicates a communication error or a programming error.
+13:52:10 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+13:52:17 INFO  : XSDB server has started successfully.
+13:52:35 INFO  : Processing command line option -hwspec C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+13:52:42 INFO  : Checking for hwspec changes in the project zybo_receiver_wrapper_hw_platform_0.
+13:52:42 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1459973999544,  Project:1459795427097
+13:52:42 INFO  : The hardware specification for project 'zybo_receiver_wrapper_hw_platform_0' is different from C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+13:52:56 INFO  : Copied contents of C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf into \zybo_receiver_wrapper_hw_platform_0\system.hdf.
+13:53:05 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:53:16 INFO  : 
+13:53:17 INFO  : Updating hardware inferred compiler options for zybo_receiver.
+13:53:17 INFO  : Clearing existing target manager status.
+13:53:19 INFO  : Closing and re-opening the MSS file of ther project zybo_receiver_bsp
+13:53:19 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:53:58 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:53:59 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+13:54:25 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+13:54:26 INFO  : XSDB server has started successfully.
+13:54:34 INFO  : Processing command line option -hwspec C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+13:54:36 INFO  : Checking for hwspec changes in the project zybo_receiver_wrapper_hw_platform_0.
+13:55:49 INFO  : ps7_init is completed.
+13:55:49 INFO  : ps7_post_config is completed.
+13:55:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:58:58 INFO  : ps7_init is completed.
+13:58:58 INFO  : ps7_post_config is completed.
+13:58:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:00:18 INFO  : ps7_init is completed.
+14:00:18 INFO  : ps7_post_config is completed.
+14:00:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:51:20 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+14:18:35 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+14:18:38 INFO  : XSDB server has started successfully.
+14:18:38 INFO  : Processing command line option -hwspec C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+14:18:39 INFO  : Checking for hwspec changes in the project zybo_receiver_wrapper_hw_platform_0.
+14:19:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:19:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:19:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772162A" && level==0} -index 1' command is executed.
+14:19:13 INFO  : FPGA configured successfully with bitstream "C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper_hw_platform_0/zybo_receiver_wrapper.bit"
+14:46:48 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+14:46:51 INFO  : XSDB server has started successfully.
+14:46:51 INFO  : Processing command line option -hwspec C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+14:46:51 INFO  : Checking for hwspec changes in the project zybo_receiver_wrapper_hw_platform_0.
+14:48:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:48:57 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:49:00 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    AP transaction error (DP CTRL_STAT=0xf0000021)
+    Error Address = 0x00100000, Size = 0x00000004
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:686)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:637)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+14:49:51 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+14:50:08 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+14:50:11 INFO  : XSDB server has started successfully.
+14:50:11 INFO  : Processing command line option -hwspec C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+14:50:12 INFO  : Checking for hwspec changes in the project zybo_receiver_wrapper_hw_platform_0.
+14:50:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:50:32 INFO  : ps7_init is completed.
+14:50:32 INFO  : ps7_post_config is completed.
+14:50:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:53:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:54:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:58:17 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:58:33 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+15:29:03 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+15:29:06 INFO  : XSDB server has started successfully.
+15:29:07 INFO  : Processing command line option -hwspec C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+15:29:07 INFO  : Checking for hwspec changes in the project zybo_receiver_wrapper_hw_platform_0.
+15:29:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:29:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:29:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:29:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+15:29:52 INFO  : FPGA configured successfully with bitstream "C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper_hw_platform_0/zybo_receiver_wrapper.bit"
+15:30:05 INFO  : ps7_init is completed.
+15:30:05 INFO  : ps7_post_config is completed.
+15:30:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:30:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:36:07 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+17:14:39 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+17:14:43 INFO  : XSDB server has started successfully.
+17:14:43 INFO  : Processing command line option -hwspec C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+17:14:43 INFO  : Checking for hwspec changes in the project zybo_receiver_wrapper_hw_platform_0.
+17:15:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:15:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:15:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+17:15:24 INFO  : FPGA configured successfully with bitstream "C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper_hw_platform_0/zybo_receiver_wrapper.bit"
+17:15:35 INFO  : ps7_init is completed.
+17:15:35 INFO  : ps7_post_config is completed.
+17:15:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:23:12 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

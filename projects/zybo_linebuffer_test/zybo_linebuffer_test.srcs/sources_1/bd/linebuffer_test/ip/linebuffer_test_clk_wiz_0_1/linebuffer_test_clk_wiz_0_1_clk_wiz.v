@@ -55,8 +55,9 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// CLK_OUT1____60.000______0.000______50.0______261.690____249.865
-// CLK_OUT2___300.000______0.000______50.0______198.991____249.865
+// CLK_OUT1____60.000______0.000______50.0______348.653____335.459
+// CLK_OUT2___300.000______0.000______50.0______257.081____335.459
+// CLK_OUT3___200.000______0.000______50.0______275.885____335.459
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -71,6 +72,7 @@ module linebuffer_test_clk_wiz_0_1_clk_wiz
   // Clock out ports
   output        clk_out1,
   output        clk_out2,
+  output        clk_out3,
   // Status and control signals
   input         reset,
   output        locked
@@ -99,7 +101,6 @@ module linebuffer_test_clk_wiz_0_1_clk_wiz
   wire        clkfboutb_unused;
     wire clkout0b_unused;
    wire clkout1b_unused;
-   wire clkout2_unused;
    wire clkout2b_unused;
    wire clkout3_unused;
    wire clkout3b_unused;
@@ -116,17 +117,21 @@ module linebuffer_test_clk_wiz_0_1_clk_wiz
     .COMPENSATION         ("ZHOLD"),
     .STARTUP_WAIT         ("FALSE"),
     .DIVCLK_DIVIDE        (5),
-    .CLKFBOUT_MULT_F      (36.000),
+    .CLKFBOUT_MULT_F      (24.000),
     .CLKFBOUT_PHASE       (0.000),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
-    .CLKOUT0_DIVIDE_F     (15.000),
+    .CLKOUT0_DIVIDE_F     (10.000),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKOUT1_DIVIDE       (3),
+    .CLKOUT1_DIVIDE       (2),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
+    .CLKOUT2_DIVIDE       (3),
+    .CLKOUT2_PHASE        (0.000),
+    .CLKOUT2_DUTY_CYCLE   (0.500),
+    .CLKOUT2_USE_FINE_PS  ("FALSE"),
     .CLKIN1_PERIOD        (8.0))
   mmcm_adv_inst
     // Output clocks
@@ -137,7 +142,7 @@ module linebuffer_test_clk_wiz_0_1_clk_wiz
     .CLKOUT0B            (clkout0b_unused),
     .CLKOUT1             (clk_out2_linebuffer_test_clk_wiz_0_1),
     .CLKOUT1B            (clkout1b_unused),
-    .CLKOUT2             (clkout2_unused),
+    .CLKOUT2             (clk_out3_linebuffer_test_clk_wiz_0_1),
     .CLKOUT2B            (clkout2b_unused),
     .CLKOUT3             (clkout3_unused),
     .CLKOUT3B            (clkout3b_unused),
@@ -191,6 +196,10 @@ module linebuffer_test_clk_wiz_0_1_clk_wiz
   BUFG clkout2_buf
    (.O   (clk_out2),
     .I   (clk_out2_linebuffer_test_clk_wiz_0_1));
+
+  BUFG clkout3_buf
+   (.O   (clk_out3),
+    .I   (clk_out3_linebuffer_test_clk_wiz_0_1));
 
 
 

@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-//Date        : Mon Apr 04 21:29:27 2016
+//Date        : Sat Apr 09 11:24:29 2016
 //Host        : Study running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target linebuffer_test_wrapper.bd
 //Design      : linebuffer_test_wrapper
@@ -32,16 +32,21 @@ module linebuffer_test_wrapper
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     clk,
+    d,
+    ddc_scl_io,
+    ddc_sda_io,
     flash_sync_btn,
     hdmi_clk_n,
     hdmi_clk_p,
     hdmi_d_n,
     hdmi_d_p,
-    vga_b,
-    vga_g,
-    vga_hs,
-    vga_r,
-    vga_vs);
+    href,
+    pclk,
+    rst_btn,
+    scl,
+    sda,
+    vsync,
+    xclk);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -64,16 +69,21 @@ module linebuffer_test_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   input clk;
+  input [7:0]d;
+  inout ddc_scl_io;
+  inout ddc_sda_io;
   input flash_sync_btn;
   output hdmi_clk_n;
   output hdmi_clk_p;
   output [2:0]hdmi_d_n;
   output [2:0]hdmi_d_p;
-  output [4:0]vga_b;
-  output [5:0]vga_g;
-  output vga_hs;
-  output [4:0]vga_r;
-  output vga_vs;
+  input href;
+  input pclk;
+  input [0:0]rst_btn;
+  output scl;
+  inout sda;
+  input vsync;
+  output xclk;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -97,19 +107,46 @@ module linebuffer_test_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire clk;
+  wire [7:0]d;
+  wire ddc_scl_i;
+  wire ddc_scl_io;
+  wire ddc_scl_o;
+  wire ddc_scl_t;
+  wire ddc_sda_i;
+  wire ddc_sda_io;
+  wire ddc_sda_o;
+  wire ddc_sda_t;
   wire flash_sync_btn;
   wire hdmi_clk_n;
   wire hdmi_clk_p;
   wire [2:0]hdmi_d_n;
   wire [2:0]hdmi_d_p;
-  wire [4:0]vga_b;
-  wire [5:0]vga_g;
-  wire vga_hs;
-  wire [4:0]vga_r;
-  wire vga_vs;
+  wire href;
+  wire pclk;
+  wire [0:0]rst_btn;
+  wire scl;
+  wire sda;
+  wire vsync;
+  wire xclk;
 
+  IOBUF ddc_scl_iobuf
+       (.I(ddc_scl_o),
+        .IO(ddc_scl_io),
+        .O(ddc_scl_i),
+        .T(ddc_scl_t));
+  IOBUF ddc_sda_iobuf
+       (.I(ddc_sda_o),
+        .IO(ddc_sda_io),
+        .O(ddc_sda_i),
+        .T(ddc_sda_t));
   linebuffer_test linebuffer_test_i
-       (.DDR_addr(DDR_addr),
+       (.DDC_scl_i(ddc_scl_i),
+        .DDC_scl_o(ddc_scl_o),
+        .DDC_scl_t(ddc_scl_t),
+        .DDC_sda_i(ddc_sda_i),
+        .DDC_sda_o(ddc_sda_o),
+        .DDC_sda_t(ddc_sda_t),
+        .DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
         .DDR_cas_n(DDR_cas_n),
         .DDR_ck_n(DDR_ck_n),
@@ -131,14 +168,17 @@ module linebuffer_test_wrapper
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .clk(clk),
+        .d(d),
         .flash_sync_btn(flash_sync_btn),
         .hdmi_clk_n(hdmi_clk_n),
         .hdmi_clk_p(hdmi_clk_p),
         .hdmi_d_n(hdmi_d_n),
         .hdmi_d_p(hdmi_d_p),
-        .vga_b(vga_b),
-        .vga_g(vga_g),
-        .vga_hs(vga_hs),
-        .vga_r(vga_r),
-        .vga_vs(vga_vs));
+        .href(href),
+        .pclk(pclk),
+        .rst_btn(rst_btn),
+        .scl(scl),
+        .sda(sda),
+        .vsync(vsync),
+        .xclk(xclk));
 endmodule

@@ -48,12 +48,12 @@ set_msg_config -id {HDL 9-1654} -limit 100000
 start_step init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   set_property design_mode GateLvl [current_fileset]
   set_property webtalk.parent_dir C:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.cache/wt [current_project]
   set_property parent.project_path C:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.xpr [current_project]
   set_property ip_repo_paths {
   c:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.cache/ip
+  C:/users/mike/documents/osiris-hdl/hdl/rgb2dvi_v1_2
   C:/Users/Mike/Documents/osiris-hdl/hdl
 } [current_project]
   set_property ip_output_repo c:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.cache/ip [current_project]

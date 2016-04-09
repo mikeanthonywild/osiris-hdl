@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date              : Mon Apr 04 21:56:42 2016
+| Date              : Sat Apr 09 12:15:21 2016
 | Host              : Study running 64-bit Service Pack 1  (build 7601)
 | Command           : report_clock_utilization -file linebuffer_test_wrapper_clock_utilization_routed.rpt
 | Design            : linebuffer_test_wrapper
@@ -32,7 +32,7 @@ Table of Contents
 +-------+------+-----------+-----------+
 | Type  | Used | Available | Num Fixed |
 +-------+------+-----------+-----------+
-| BUFG  |    6 |        32 |         0 |
+| BUFG  |    8 |        32 |         0 |
 | BUFH  |    0 |        48 |         0 |
 | BUFIO |    0 |         8 |         0 |
 | MMCM  |    1 |         2 |         0 |
@@ -45,18 +45,20 @@ Table of Contents
 2. Details of Global Clocks
 ---------------------------
 
-+-------+-------------------------------------------------------------------------------+-----------------------------------------------------------------------------+--------------+-------+
-|       |                                                                               |                                                                             |   Num Loads  |       |
-+-------+-------------------------------------------------------------------------------+-----------------------------------------------------------------------------+------+-------+-------+
-| Index | BUFG Cell                                                                     | Net Name                                                                    | BELs | Sites | Fixed |
-+-------+-------------------------------------------------------------------------------+-----------------------------------------------------------------------------+------+-------+-------+
-|     1 | linebuffer_test_i/dvi_clk_gen/inst/clkf_buf                                   | linebuffer_test_i/dvi_clk_gen/inst/clkfbout_buf_linebuffer_test_clk_wiz_0_1 |    1 |     1 |    no |
-|     2 | linebuffer_test_i/tpg_clk_gen/inst/clkf_buf                                   | linebuffer_test_i/tpg_clk_gen/inst/clkfbout_buf_linebuffer_test_clk_wiz_0_0 |    1 |     1 |    no |
-|     3 | linebuffer_test_i/dvi_clk_gen/inst/clkout2_buf                                | linebuffer_test_i/dvi_clk_gen/inst/clk_out2                                 |    8 |     8 |    no |
-|     4 | linebuffer_test_i/tpg_clk_gen/inst/clkout1_buf                                | linebuffer_test_i/tpg_clk_gen/inst/clk_out1                                 |  124 |    41 |    no |
-|     5 | linebuffer_test_i/dvi_clk_gen/inst/clkout1_buf                                | linebuffer_test_i/dvi_clk_gen/inst/clk_out1                                 |  232 |   106 |    no |
-|     6 | linebuffer_test_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0                       | 7992 |  2142 |    no |
-+-------+-------------------------------------------------------------------------------+-----------------------------------------------------------------------------+------+-------+-------+
++-------+-------------------------------------------------------------------------------+--------------------------------------------------------------------------------+--------------+-------+
+|       |                                                                               |                                                                                |   Num Loads  |       |
++-------+-------------------------------------------------------------------------------+--------------------------------------------------------------------------------+------+-------+-------+
+| Index | BUFG Cell                                                                     | Net Name                                                                       | BELs | Sites | Fixed |
++-------+-------------------------------------------------------------------------------+--------------------------------------------------------------------------------+------+-------+-------+
+|     1 | linebuffer_test_i/dvi_clk_gen/inst/clkf_buf                                   | linebuffer_test_i/dvi_clk_gen/inst/clkfbout_buf_linebuffer_test_clk_wiz_0_1    |    1 |     1 |    no |
+|     2 | linebuffer_test_i/ov7670_clk_gen/inst/clkf_buf                                | linebuffer_test_i/ov7670_clk_gen/inst/clkfbout_buf_linebuffer_test_clk_wiz_0_0 |    1 |     1 |    no |
+|     3 | linebuffer_test_i/dvi_clk_gen/inst/clkout2_buf                                | linebuffer_test_i/dvi_clk_gen/inst/clk_out2                                    |    8 |     8 |    no |
+|     4 | linebuffer_test_i/dvi_clk_gen/inst/clkout3_buf                                | linebuffer_test_i/dvi_clk_gen/inst/clk_out3                                    |   61 |    22 |    no |
+|     5 | linebuffer_test_i/ov7670_clk_gen/inst/clkout1_buf                             | linebuffer_test_i/ov7670_clk_gen/inst/clk_out1                                 |   94 |    23 |    no |
+|     6 | pclk_IBUF_BUFG_inst                                                           | pclk_IBUF_BUFG                                                                 |  108 |    34 |    no |
+|     7 | linebuffer_test_i/dvi_clk_gen/inst/clkout1_buf                                | linebuffer_test_i/dvi_clk_gen/inst/clk_out1                                    |  214 |    93 |    no |
+|     8 | linebuffer_test_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0                          | 7992 |  2133 |    no |
++-------+-------------------------------------------------------------------------------+--------------------------------------------------------------------------------+------+-------+-------+
 
 
 +-------+--------------------------------------------------+-------------------------------------------------------------------------+--------------+-------+
@@ -66,18 +68,19 @@ Table of Contents
 +-------+--------------------------------------------------+-------------------------------------------------------------------------+------+-------+-------+
 |     1 | linebuffer_test_i/dvi_clk_gen/inst/mmcm_adv_inst | linebuffer_test_i/dvi_clk_gen/inst/clk_out1_linebuffer_test_clk_wiz_0_1 |    1 |     1 |    no |
 |     2 | linebuffer_test_i/dvi_clk_gen/inst/mmcm_adv_inst | linebuffer_test_i/dvi_clk_gen/inst/clk_out2_linebuffer_test_clk_wiz_0_1 |    1 |     1 |    no |
-|     3 | linebuffer_test_i/dvi_clk_gen/inst/mmcm_adv_inst | linebuffer_test_i/dvi_clk_gen/inst/clkfbout_linebuffer_test_clk_wiz_0_1 |    1 |     1 |    no |
+|     3 | linebuffer_test_i/dvi_clk_gen/inst/mmcm_adv_inst | linebuffer_test_i/dvi_clk_gen/inst/clk_out3_linebuffer_test_clk_wiz_0_1 |    1 |     1 |    no |
+|     4 | linebuffer_test_i/dvi_clk_gen/inst/mmcm_adv_inst | linebuffer_test_i/dvi_clk_gen/inst/clkfbout_linebuffer_test_clk_wiz_0_1 |    1 |     1 |    no |
 +-------+--------------------------------------------------+-------------------------------------------------------------------------+------+-------+-------+
 
 
-+-------+---------------------------------------------------+-------------------------------------------------------------------------+--------------+-------+
-|       |                                                   |                                                                         |   Num Loads  |       |
-+-------+---------------------------------------------------+-------------------------------------------------------------------------+------+-------+-------+
-| Index | PLL Cell                                          | Net Name                                                                | BELs | Sites | Fixed |
-+-------+---------------------------------------------------+-------------------------------------------------------------------------+------+-------+-------+
-|     1 | linebuffer_test_i/tpg_clk_gen/inst/plle2_adv_inst | linebuffer_test_i/tpg_clk_gen/inst/clk_out1_linebuffer_test_clk_wiz_0_0 |    1 |     1 |    no |
-|     2 | linebuffer_test_i/tpg_clk_gen/inst/plle2_adv_inst | linebuffer_test_i/tpg_clk_gen/inst/clkfbout_linebuffer_test_clk_wiz_0_0 |    1 |     1 |    no |
-+-------+---------------------------------------------------+-------------------------------------------------------------------------+------+-------+-------+
++-------+------------------------------------------------------+----------------------------------------------------------------------------+--------------+-------+
+|       |                                                      |                                                                            |   Num Loads  |       |
++-------+------------------------------------------------------+----------------------------------------------------------------------------+------+-------+-------+
+| Index | PLL Cell                                             | Net Name                                                                   | BELs | Sites | Fixed |
++-------+------------------------------------------------------+----------------------------------------------------------------------------+------+-------+-------+
+|     1 | linebuffer_test_i/ov7670_clk_gen/inst/plle2_adv_inst | linebuffer_test_i/ov7670_clk_gen/inst/clk_out1_linebuffer_test_clk_wiz_0_0 |    1 |     1 |    no |
+|     2 | linebuffer_test_i/ov7670_clk_gen/inst/plle2_adv_inst | linebuffer_test_i/ov7670_clk_gen/inst/clkfbout_linebuffer_test_clk_wiz_0_0 |    1 |     1 |    no |
++-------+------------------------------------------------------+----------------------------------------------------------------------------+------+-------+-------+
 
 
 3. Details of Regional Clocks
@@ -109,10 +112,10 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 3743 |  8800 |  328 |  1600 |    0 |    20 |    2 |    10 |    0 |    20 |
-| X1Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 3152 |  8800 |  337 |  1400 |    0 |    40 |   14 |    20 |    0 |    20 |
-| X0Y1              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  408 |  8800 |   22 |  1600 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y1              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 |  316 |  8800 |    1 |  1400 |    0 |    40 |    0 |    20 |    0 |    20 |
+| X0Y0              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 3769 |  8800 |  300 |  1600 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y0              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 3161 |  8800 |  363 |  1400 |    0 |    40 |   16 |    20 |    0 |    20 |
+| X0Y1              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  402 |  8800 |   24 |  1600 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y1              |    7 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 |  407 |  8800 |    1 |  1400 |    0 |    40 |    0 |    20 |    0 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * RAMB36 site can be used as two RAMB18/FIFO18 sites.
 
@@ -123,8 +126,7 @@ Table of Contents
 +-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
 | Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                     Clock Net Name                    |
 +-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
-| BUFG        | BUFHCE_X0Y8 |   no  |         0 |        0 |       0 |         2 |       0 |       0 |    5 |     0 |        0 | linebuffer_test_i/tpg_clk_gen/inst/clk_out1           |
-| BUFG        | BUFHCE_X0Y9 |   no  |         0 |        0 |       0 |         2 |       0 |       0 | 3738 |   328 |        0 | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0 |
+| BUFG        | BUFHCE_X0Y8 |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 3769 |   300 |        0 | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0 |
 +-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
 
 
@@ -134,9 +136,10 @@ Table of Contents
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
 | Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                     Clock Net Name                    |
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
-| BUFG        | BUFHCE_X1Y10 |   no  |         0 |        0 |       0 |         8 |       0 |       0 |   23 |     0 |        0 | linebuffer_test_i/dvi_clk_gen/inst/clk_out1           |
-| BUFG        | BUFHCE_X1Y8  |   no  |         0 |        0 |       0 |         6 |       0 |       0 |  111 |     0 |        0 | linebuffer_test_i/tpg_clk_gen/inst/clk_out1           |
-| BUFG        | BUFHCE_X1Y9  |   no  |         0 |        0 |       0 |        14 |       0 |       0 | 3018 |   337 |        0 | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0 |
+| BUFG        | BUFHCE_X1Y11 |   no  |         0 |        0 |       0 |         8 |       0 |       0 |   24 |     0 |        0 | linebuffer_test_i/dvi_clk_gen/inst/clk_out1           |
+| BUFG        | BUFHCE_X1Y10 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   75 |     0 |        0 | linebuffer_test_i/ov7670_clk_gen/inst/clk_out1        |
+| BUFG        | BUFHCE_X1Y8  |   no  |         0 |        0 |       0 |         8 |       0 |       0 |  100 |     0 |        0 | pclk_IBUF_BUFG                                        |
+| BUFG        | BUFHCE_X1Y9  |   no  |         0 |        0 |       0 |        16 |       0 |       0 | 2962 |   363 |        0 | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0 |
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------+
 
 
@@ -146,32 +149,36 @@ Table of Contents
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-------------------------------------------------------+
 | Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                     Clock Net Name                    |
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-------------------------------------------------------+
-| BUFG        | BUFHCE_X0Y20 |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 408 |    22 |        0 | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0 |
+| BUFG        | BUFHCE_X0Y20 |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 402 |    24 |        0 | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0 |
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-------------------------------------------------------+
 
 
 11. Net wise resources used in clock region X1Y1
 ------------------------------------------------
 
-+-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------------------------------------+
-| Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                                Clock Net Name                               |
-+-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------------------------------------+
-| BUFG        | BUFHCE_X1Y23 |   no  |         0 |        0 |       0 |         0 |       0 |       8 |   0 |     0 |        0 | linebuffer_test_i/dvi_clk_gen/inst/clk_out2                                 |
-| BUFG        | BUFHCE_X1Y12 |   no  |         1 |        0 |       0 |         0 |       0 |       0 |   0 |     0 |        0 | linebuffer_test_i/dvi_clk_gen/inst/clkfbout_buf_linebuffer_test_clk_wiz_0_1 |
-| BUFG        | BUFHCE_X1Y13 |   no  |         0 |        1 |       0 |         0 |       0 |       0 |   0 |     0 |        0 | linebuffer_test_i/tpg_clk_gen/inst/clkfbout_buf_linebuffer_test_clk_wiz_0_0 |
-| BUFG        | BUFHCE_X1Y20 |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 123 |     1 |        0 | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0                       |
-| BUFG        | BUFHCE_X1Y22 |   no  |         0 |        0 |       0 |         0 |       0 |       8 | 193 |     0 |        0 | linebuffer_test_i/dvi_clk_gen/inst/clk_out1                                 |
-+-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------------------------------------+
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+--------------------------------------------------------------------------------+
+| Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                                 Clock Net Name                                 |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+--------------------------------------------------------------------------------+
+| BUFG        | BUFHCE_X1Y23 |   no  |         0 |        0 |       0 |         0 |       0 |       8 |   0 |     0 |        0 | linebuffer_test_i/dvi_clk_gen/inst/clk_out2                                    |
+| BUFG        | BUFHCE_X1Y12 |   no  |         1 |        0 |       0 |         0 |       0 |       0 |   0 |     0 |        0 | linebuffer_test_i/dvi_clk_gen/inst/clkfbout_buf_linebuffer_test_clk_wiz_0_1    |
+| BUFG        | BUFHCE_X1Y13 |   no  |         0 |        1 |       0 |         0 |       0 |       0 |   0 |     0 |        0 | linebuffer_test_i/ov7670_clk_gen/inst/clkfbout_buf_linebuffer_test_clk_wiz_0_0 |
+| BUFG        | BUFHCE_X1Y22 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  18 |     0 |        0 | linebuffer_test_i/ov7670_clk_gen/inst/clk_out1                                 |
+| BUFG        | BUFHCE_X1Y20 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  61 |     0 |        0 | linebuffer_test_i/dvi_clk_gen/inst/clk_out3                                    |
+| BUFG        | BUFHCE_X1Y21 |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 154 |     1 |        0 | linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0                          |
+| BUFG        | BUFHCE_X1Y19 |   no  |         0 |        0 |       0 |         0 |       0 |       8 | 174 |     0 |        0 | linebuffer_test_i/dvi_clk_gen/inst/clk_out1                                    |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+--------------------------------------------------------------------------------+
 
 
 
 # Location of BUFG Primitives 
 set_property LOC BUFGCTRL_X0Y16 [get_cells linebuffer_test_i/dvi_clk_gen/inst/clkout1_buf]
-set_property LOC BUFGCTRL_X0Y17 [get_cells linebuffer_test_i/dvi_clk_gen/inst/clkout2_buf]
-set_property LOC BUFGCTRL_X0Y19 [get_cells linebuffer_test_i/dvi_clk_gen/inst/clkf_buf]
+set_property LOC BUFGCTRL_X0Y18 [get_cells linebuffer_test_i/dvi_clk_gen/inst/clkout2_buf]
+set_property LOC BUFGCTRL_X0Y19 [get_cells linebuffer_test_i/dvi_clk_gen/inst/clkout3_buf]
+set_property LOC BUFGCTRL_X0Y20 [get_cells linebuffer_test_i/dvi_clk_gen/inst/clkf_buf]
+set_property LOC BUFGCTRL_X0Y17 [get_cells linebuffer_test_i/ov7670_clk_gen/inst/clkout1_buf]
+set_property LOC BUFGCTRL_X0Y21 [get_cells linebuffer_test_i/ov7670_clk_gen/inst/clkf_buf]
 set_property LOC BUFGCTRL_X0Y0 [get_cells linebuffer_test_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG]
-set_property LOC BUFGCTRL_X0Y18 [get_cells linebuffer_test_i/tpg_clk_gen/inst/clkout1_buf]
-set_property LOC BUFGCTRL_X0Y20 [get_cells linebuffer_test_i/tpg_clk_gen/inst/clkf_buf]
+set_property LOC BUFGCTRL_X0Y1 [get_cells pclk_IBUF_BUFG_inst]
 
 # Location of IO Clock Primitives
 
@@ -185,12 +192,14 @@ set_property LOC MMCME2_ADV_X0Y1 [get_cells linebuffer_test_i/dvi_clk_gen/inst/m
 # Location of BUFMR Clock Primitives
 
 # Location of PLL Clock Primitives
-set_property LOC PLLE2_ADV_X0Y1 [get_cells linebuffer_test_i/tpg_clk_gen/inst/plle2_adv_inst]
+set_property LOC PLLE2_ADV_X0Y1 [get_cells linebuffer_test_i/ov7670_clk_gen/inst/plle2_adv_inst]
 
 # Location of IO Primitives which is load of clock spine
+set_property LOC IOB_X0Y40 [get_cells xclk_OBUF_inst]
 
 # Location of clock ports
 set_property LOC IOB_X0Y78 [get_ports clk]
+set_property LOC IOB_X0Y28 [get_ports pclk]
 
 # Clock net "linebuffer_test_i/dvi_clk_gen/inst/clk_out1" driven by instance "linebuffer_test_i/dvi_clk_gen/inst/clkout1_buf" located at site "BUFGCTRL_X0Y16"
 #startgroup
@@ -199,11 +208,25 @@ add_cells_to_pblock [get_pblocks  {CLKAG_linebuffer_test_i/dvi_clk_gen/inst/clk_
 resize_pblock [get_pblocks {CLKAG_linebuffer_test_i/dvi_clk_gen/inst/clk_out1}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
-# Clock net "linebuffer_test_i/dvi_clk_gen/inst/clk_out2" driven by instance "linebuffer_test_i/dvi_clk_gen/inst/clkout2_buf" located at site "BUFGCTRL_X0Y17"
+# Clock net "linebuffer_test_i/dvi_clk_gen/inst/clk_out2" driven by instance "linebuffer_test_i/dvi_clk_gen/inst/clkout2_buf" located at site "BUFGCTRL_X0Y18"
 #startgroup
 create_pblock {CLKAG_linebuffer_test_i/dvi_clk_gen/inst/clk_out2}
 add_cells_to_pblock [get_pblocks  {CLKAG_linebuffer_test_i/dvi_clk_gen/inst/clk_out2}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="linebuffer_test_i/dvi_clk_gen/inst/clk_out2"}]]]
 resize_pblock [get_pblocks {CLKAG_linebuffer_test_i/dvi_clk_gen/inst/clk_out2}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "linebuffer_test_i/dvi_clk_gen/inst/clk_out3" driven by instance "linebuffer_test_i/dvi_clk_gen/inst/clkout3_buf" located at site "BUFGCTRL_X0Y19"
+#startgroup
+create_pblock {CLKAG_linebuffer_test_i/dvi_clk_gen/inst/clk_out3}
+add_cells_to_pblock [get_pblocks  {CLKAG_linebuffer_test_i/dvi_clk_gen/inst/clk_out3}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="linebuffer_test_i/dvi_clk_gen/inst/clk_out3"}]]]
+resize_pblock [get_pblocks {CLKAG_linebuffer_test_i/dvi_clk_gen/inst/clk_out3}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "linebuffer_test_i/ov7670_clk_gen/inst/clk_out1" driven by instance "linebuffer_test_i/ov7670_clk_gen/inst/clkout1_buf" located at site "BUFGCTRL_X0Y17"
+#startgroup
+create_pblock {CLKAG_linebuffer_test_i/ov7670_clk_gen/inst/clk_out1}
+add_cells_to_pblock [get_pblocks  {CLKAG_linebuffer_test_i/ov7670_clk_gen/inst/clk_out1}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=xclk_OBUF_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="linebuffer_test_i/ov7670_clk_gen/inst/clk_out1"}]]]
+resize_pblock [get_pblocks {CLKAG_linebuffer_test_i/ov7670_clk_gen/inst/clk_out1}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0" driven by instance "linebuffer_test_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG" located at site "BUFGCTRL_X0Y0"
@@ -213,9 +236,9 @@ add_cells_to_pblock [get_pblocks  {CLKAG_linebuffer_test_i/processing_system7_0/
 resize_pblock [get_pblocks {CLKAG_linebuffer_test_i/processing_system7_0/inst/FCLK_CLK0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
-# Clock net "linebuffer_test_i/tpg_clk_gen/inst/clk_out1" driven by instance "linebuffer_test_i/tpg_clk_gen/inst/clkout1_buf" located at site "BUFGCTRL_X0Y18"
+# Clock net "pclk_IBUF_BUFG" driven by instance "pclk_IBUF_BUFG_inst" located at site "BUFGCTRL_X0Y1"
 #startgroup
-create_pblock {CLKAG_linebuffer_test_i/tpg_clk_gen/inst/clk_out1}
-add_cells_to_pblock [get_pblocks  {CLKAG_linebuffer_test_i/tpg_clk_gen/inst/clk_out1}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="linebuffer_test_i/tpg_clk_gen/inst/clk_out1"}]]]
-resize_pblock [get_pblocks {CLKAG_linebuffer_test_i/tpg_clk_gen/inst/clk_out1}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+create_pblock {CLKAG_pclk_IBUF_BUFG}
+add_cells_to_pblock [get_pblocks  {CLKAG_pclk_IBUF_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="pclk_IBUF_BUFG"}]]]
+resize_pblock [get_pblocks {CLKAG_pclk_IBUF_BUFG}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup

@@ -1,6 +1,27 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Fri Apr 08 20:46:51 2016
+| Host         : Study running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zybo_dvi_input_dvi2rgb_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of zybo_dvi_input_dvi2rgb_0_0 (digilentinc.com:ip:dvi2rgb:1.5) from (Rev. 20) to (Rev. 21)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
 | Date         : Mon Apr 04 14:53:45 2016
 | Host         : Study running 64-bit Service Pack 1  (build 7601)
 | Command      : upgrade_ip

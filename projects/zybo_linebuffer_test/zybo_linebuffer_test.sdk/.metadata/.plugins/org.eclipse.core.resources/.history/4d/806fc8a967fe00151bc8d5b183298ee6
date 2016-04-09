@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+	[bootloader]C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\FSBL\Release\FSBL.elf
+	C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\linebuffer_test_wrapper_hw_platform_0\linebuffer_test_wrapper.bit
+	C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\linebuffer_test\Debug\linebuffer_test.elf
+}

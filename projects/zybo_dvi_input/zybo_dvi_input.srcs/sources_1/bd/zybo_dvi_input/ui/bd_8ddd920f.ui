@@ -11,8 +11,8 @@ preplace port flash_sync_led -pg 1 -y 370 -defaultsOSRD
 preplace port vga_vs -pg 1 -y 530 -defaultsOSRD
 preplace port clk -pg 1 -y 450 -defaultsOSRD
 preplace port hdmi_clk_p -pg 1 -y 340 -defaultsOSRD
-preplace portBus vga_b -pg 1 -y 490 -defaultsOSRD
 preplace portBus hdmi_d_n -pg 1 -y 400 -defaultsOSRD
+preplace portBus vga_b -pg 1 -y 490 -defaultsOSRD
 preplace portBus hdmi_hpd -pg 1 -y 300 -defaultsOSRD
 preplace portBus hdmi_d_p -pg 1 -y 380 -defaultsOSRD
 preplace portBus vga_r -pg 1 -y 450 -defaultsOSRD

@@ -1,6 +1,45 @@
-14:36:08 **** Incremental Build of configuration Debug for project linebuffer_test ****
+16:28:09 **** Auto Build of configuration Debug for project linebuffer_test ****
 make all 
-make: Nothing to be done for `all'.
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\linebuffer_test\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c: In function 'update_buf_controller':
+C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c:149:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c'
+' '
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/common/framebuf.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\linebuffer_test\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "C:/Users/Mike/Documents/osiris-hdl/sw/common/framebuf.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/common/framebuf.c'
+' '
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/common/interrupt.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\linebuffer_test\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "C:/Users/Mike/Documents/osiris-hdl/sw/common/interrupt.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/common/interrupt.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\linebuffer_test\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -c -fmessage-length=0 -MT"src/helloworld.o" -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I../../linebuffer_test_bsp/ps7_cortexa9_0/include -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\linebuffer_test\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -c -fmessage-length=0 -MT"src/platform.o" -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: linebuffer_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../linebuffer_test_bsp/ps7_cortexa9_0/lib -o "linebuffer_test.elf"  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: linebuffer_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37032	 309184	 330548	 676764	  a539c	linebuffer_test.elf
+'Finished building: linebuffer_test.elf.size'
+' '
 
-14:36:08 Build Finished (took 312ms)
+16:28:13 Build Finished (took 4s.118ms)
 

@@ -14,6 +14,7 @@ set_property parent.project_path C:/Users/Mike/Documents/osiris-hdl/projects/zyb
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths {
+  c:/users/mike/documents/osiris-hdl/hdl/i_buf_controller
   c:/users/mike/documents/osiris-hdl/hdl/rgb2dvi_v1_2
   c:/Users/Mike/Documents/osiris-hdl/hdl
 } [current_project]

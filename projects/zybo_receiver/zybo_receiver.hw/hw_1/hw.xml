@@ -4,12 +4,166 @@
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="1">
-  <device name="xc7z010_1" gui_info=""/>
+  <device name="xc7z010_1" gui_info="dashboard1=hw_ila_1[xc7z010_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7z010_1/hw_ila_1/Status=ILA_STATUS_1;xc7z010_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z010_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z010_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z010_1" gui_info="">
       <Properties Property="PROBES.FILE" value=""/>
       <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/$_project_name__wrapper.bit"/>
     </Object>
   </ObjectList>
-  <probeset name="hw project" active="false"/>
+  <ObjectList object_type="hw_ila" gui_info="">
+    <Object name="u_ila_0" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="zybo_receiver_i/o_buf_controller_0_vde" gui_info="Trigger Setup=0"/>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[31]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[30]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[29]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[28]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[27]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[26]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[25]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[24]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[23]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[22]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[21]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[20]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[19]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[18]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[17]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[16]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[15]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[14]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[13]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[12]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[11]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[10]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[9]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[8]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[7]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[6]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[5]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[4]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[3]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[2]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[1]"/>
+        <net name="zybo_receiver_i/blk_mem_gen_0_doutb[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+      </probeOptions>
+      <nets>
+        <net name="zybo_receiver_i/o_buf_controller_0_o_data[7]"/>
+        <net name="zybo_receiver_i/o_buf_controller_0_o_data[6]"/>
+        <net name="zybo_receiver_i/o_buf_controller_0_o_data[5]"/>
+        <net name="zybo_receiver_i/o_buf_controller_0_o_data[4]"/>
+        <net name="zybo_receiver_i/o_buf_controller_0_o_data[3]"/>
+        <net name="zybo_receiver_i/o_buf_controller_0_o_data[2]"/>
+        <net name="zybo_receiver_i/o_buf_controller_0_o_data[1]"/>
+        <net name="zybo_receiver_i/o_buf_controller_0_o_data[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;h0"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;h0"/>
+      </probeOptions>
+      <nets>
+        <net name="zybo_receiver_i/o_buf_controller_0_vde"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="zybo_receiver_i/o_buf_controller_addr[31]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[30]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[29]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[28]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[27]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[26]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[25]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[24]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[23]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[22]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[21]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[20]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[19]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[18]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[17]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[16]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[15]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[14]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[13]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[12]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[11]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[10]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[9]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[8]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[7]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[6]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[5]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[4]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[3]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[2]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[1]"/>
+        <net name="zybo_receiver_i/o_buf_controller_addr[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;hX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;hX"/>
+      </probeOptions>
+      <nets>
+        <net name="zybo_receiver_i/o_buf_controller_req_frame"/>
+      </nets>
+    </probe>
+  </probeset>
 </hwsession>

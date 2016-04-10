@@ -1541,3 +1541,41 @@ com.xilinx.sdk.targetmanager.TMException: Error downloading program to target:
 17:07:12 INFO  : Invoking Bootgen: bootgen -image output.bif -o C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\zynq_fsbl\BOOT.bin -w on
 17:07:12 INFO  : Overwriting existing bif file C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\zynq_fsbl\output.bif
 17:07:14 INFO  : Bootgen command execution is done.
+17:25:46 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+17:25:48 INFO  : XSDB server has started successfully.
+17:25:48 INFO  : Processing command line option -hwspec C:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf.
+17:25:49 INFO  : Checking for hwspec changes in the project linebuffer_test_wrapper_hw_platform_0.
+17:25:54 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1460304966512,  Project:1460200558264
+17:25:54 INFO  : The hardware specification for project 'linebuffer_test_wrapper_hw_platform_0' is different from C:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf.
+17:25:54 INFO  : Copied contents of C:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf into \linebuffer_test_wrapper_hw_platform_0\system.hdf.
+17:26:40 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+17:26:58 INFO  : 
+17:27:00 INFO  : 
+17:27:28 INFO  : Updating hardware inferred compiler options for linebuffer_test.
+17:27:29 INFO  : Updating hardware inferred compiler options for zynq_fsbl.
+17:27:29 INFO  : Clearing existing target manager status.
+17:28:10 INFO  : Invoking Bootgen: bootgen -image output.bif -o C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\zynq_fsbl\BOOT.bin -w on
+17:28:11 INFO  : Bootgen command execution is done.
+17:30:07 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:30:07 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+18:30:16 INFO  : XSDB server has started successfully.
+18:30:40 INFO  : Processing command line option -hwspec C:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf.
+18:30:40 INFO  : Checking for hwspec changes in the project linebuffer_test_wrapper_hw_platform_0.
+18:30:52 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1460309200365,  Project:1460304966512
+18:30:52 INFO  : The hardware specification for project 'linebuffer_test_wrapper_hw_platform_0' is different from C:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf.
+18:30:53 INFO  : Copied contents of C:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf into \linebuffer_test_wrapper_hw_platform_0\system.hdf.
+18:31:41 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+18:32:02 INFO  : 
+18:32:05 INFO  : 
+18:32:06 INFO  : Updating hardware inferred compiler options for linebuffer_test.
+18:32:07 INFO  : Updating hardware inferred compiler options for zynq_fsbl.
+18:32:07 INFO  : Clearing existing target manager status.
+18:34:14 INFO  : Invoking Bootgen: bootgen -image output.bif -o C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\zynq_fsbl\BOOT.bin -w on
+18:34:17 INFO  : Bootgen command execution is done.
+18:34:34 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+19:23:33 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+19:23:34 INFO  : XSDB server has started successfully.
+19:23:42 INFO  : Processing command line option -hwspec C:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.sdk/linebuffer_test_wrapper.hdf.
+19:23:44 INFO  : Checking for hwspec changes in the project linebuffer_test_wrapper_hw_platform_0.
+19:25:14 INFO  : Invoking Bootgen: bootgen -image output.bif -o C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\zynq_fsbl\BOOT.bin -w on
+19:25:15 INFO  : Bootgen command execution is done.

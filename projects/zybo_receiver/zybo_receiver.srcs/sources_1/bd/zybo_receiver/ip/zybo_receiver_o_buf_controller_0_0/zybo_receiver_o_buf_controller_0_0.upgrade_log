@@ -1,0 +1,58 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sun Apr 10 18:32:33 2016
+| Host         : Study running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zybo_receiver_o_buf_controller_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of zybo_receiver_o_buf_controller_0_0 (mikeanthonywild.com:user:o_buf_controller:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sun Apr 10 15:26:20 2016
+| Host         : Study running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zybo_receiver_o_buf_controller_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of zybo_receiver_o_buf_controller_0_0 (mikeanthonywild.com:user:o_buf_controller:1.0 (Rev. 3)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Sun Apr 10 11:34:55 2016
+| Host         : Study running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zybo_receiver_o_buf_controller_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of zybo_receiver_o_buf_controller_0_0 (mikeanthonywild.com:user:o_buf_controller:1.0 (Rev. 3)) to current project options.
+

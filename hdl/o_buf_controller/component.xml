@@ -18,7 +18,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>378591ef</spirit:value>
+            <spirit:value>01b35b38</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -34,7 +34,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>378591ef</spirit:value>
+            <spirit:value>01b35b38</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -48,7 +48,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>23b03026</spirit:value>
+            <spirit:value>a4b87ae1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -251,7 +251,7 @@
       <spirit:file>
         <spirit:name>o_buf_controller.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_378591ef</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_01b35b38</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -335,22 +335,22 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Linebuffer readout (output)</xilinx:displayName>
       <xilinx:vendorDisplayName>Perform readout of image data from linebuffer and genreate video output.</xilinx:vendorDisplayName>
-      <xilinx:coreRevision>3</xilinx:coreRevision>
+      <xilinx:coreRevision>4</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>user.org:user:o_buf_controller_dut:1.0</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>mikeanthonywild.com:user:o_buf_controller_dut:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2016-03-30T11:10:26Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2016-04-10T15:46:16Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="user.org:user:o_buf_controller_dut:1.0_ARCHIVE_LOCATION">/home/mike/Documents/osiris-hdl/hdl/o_buf_controller</xilinx:tag>
         <xilinx:tag xilinx:name="mikeanthonywild.com:user:o_buf_controller_dut:1.0_ARCHIVE_LOCATION">/home/mike/Documents/osiris-hdl/hdl/o_buf_controller</xilinx:tag>
-        <xilinx:tag xilinx:name="mikeanthonywild.com:user:o_buf_controller:1.0_ARCHIVE_LOCATION">/home/mike/Documents/osiris-hdl/hdl/o_buf_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="mikeanthonywild.com:user:o_buf_controller:1.0_ARCHIVE_LOCATION">C:/Users/Mike/Documents/osiris-hdl/hdl/o_buf_controller</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2015.4</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="1103fa58"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="ae317fe3"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="b1f13d70"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="d839c403"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="762c3b22"/>

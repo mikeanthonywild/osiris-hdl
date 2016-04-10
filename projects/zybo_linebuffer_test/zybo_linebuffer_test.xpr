@@ -18,6 +18,7 @@
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../users/mike/documents/osiris-hdl/hdl/i_buf_controller"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../users/mike/documents/osiris-hdl/hdl/rgb2dvi_v1_2"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../hdl"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>

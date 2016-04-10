@@ -420,3 +420,123 @@ java.lang.RuntimeException: Failed to download ELF file
 17:15:35 INFO  : ps7_post_config is completed.
 17:15:35 INFO  : Processor reset is completed for ps7_cortexa9_0
 17:23:12 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+10:52:01 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+10:52:03 INFO  : XSDB server has started successfully.
+10:52:04 INFO  : Processing command line option -hwspec C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+10:52:04 INFO  : Checking for hwspec changes in the project zybo_receiver_wrapper_hw_platform_0.
+10:52:08 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1460281679728,  Project:1459973999544
+10:52:08 INFO  : The hardware specification for project 'zybo_receiver_wrapper_hw_platform_0' is different from C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+10:52:51 INFO  : Copied contents of C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf into \zybo_receiver_wrapper_hw_platform_0\system.hdf.
+10:53:07 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+10:53:19 INFO  : 
+10:53:20 INFO  : Updating hardware inferred compiler options for zybo_receiver.
+10:53:20 INFO  : Clearing existing target manager status.
+11:09:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:09:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+11:09:23 INFO  : FPGA configured successfully with bitstream "C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper_hw_platform_0/zybo_receiver_wrapper.bit"
+11:09:40 INFO  : ps7_init is completed.
+11:09:40 INFO  : ps7_post_config is completed.
+11:09:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:13:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:14:27 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:14:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:16:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:17:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:31:44 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:09:31 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+12:09:33 INFO  : XSDB server has started successfully.
+12:09:33 INFO  : Processing command line option -hwspec C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+12:09:34 INFO  : Checking for hwspec changes in the project zybo_receiver_wrapper_hw_platform_0.
+12:09:39 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1460286240171,  Project:1460281679728
+12:09:39 INFO  : The hardware specification for project 'zybo_receiver_wrapper_hw_platform_0' is different from C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+12:09:39 INFO  : Copied contents of C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf into \zybo_receiver_wrapper_hw_platform_0\system.hdf.
+12:09:46 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+12:09:57 INFO  : 
+12:09:58 INFO  : Updating hardware inferred compiler options for zybo_receiver.
+12:09:58 INFO  : Clearing existing target manager status.
+12:12:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:12:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+12:12:52 INFO  : FPGA configured successfully with bitstream "C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper_hw_platform_0/zybo_receiver_wrapper.bit"
+12:13:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:14:08 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:14:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:47:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:52:57 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:52:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:53:57 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:53:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:54:37 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:54:38 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:57:58 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:58:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:58:21 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:58:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:13:24 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:13:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:15:48 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:15:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:16:25 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:16:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:25:25 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:25:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:25:56 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:25:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:26:57 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:26:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:28:10 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:28:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:28:38 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:28:39 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:29:26 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:29:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:34:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:43:46 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:43:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:44:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:45:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:53:28 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:59:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:27:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:27:59 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:28:02 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:28:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:34:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:35:18 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+17:31:01 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+17:31:03 INFO  : XSDB server has started successfully.
+17:31:04 INFO  : Processing command line option -hwspec C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+17:31:04 INFO  : Checking for hwspec changes in the project zybo_receiver_wrapper_hw_platform_0.
+17:31:08 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1460302260149,  Project:1460286240171
+17:31:08 INFO  : The hardware specification for project 'zybo_receiver_wrapper_hw_platform_0' is different from C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+17:31:08 INFO  : Copied contents of C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf into \zybo_receiver_wrapper_hw_platform_0\system.hdf.
+17:31:15 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+17:31:18 INFO  : 
+17:31:19 INFO  : Updating hardware inferred compiler options for zybo_receiver.
+17:31:19 INFO  : Clearing existing target manager status.
+17:31:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:31:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:31:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+17:31:56 INFO  : FPGA configured successfully with bitstream "C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper_hw_platform_0/zybo_receiver_wrapper.bit"
+17:32:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:32:57 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:32:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:36:05 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:36:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:37:02 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:37:23 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+19:19:05 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+19:19:11 INFO  : XSDB server has started successfully.
+19:19:14 INFO  : Processing command line option -hwspec C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+19:19:14 INFO  : Checking for hwspec changes in the project zybo_receiver_wrapper_hw_platform_0.
+19:19:19 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1460311383285,  Project:1460302260149
+19:19:19 INFO  : The hardware specification for project 'zybo_receiver_wrapper_hw_platform_0' is different from C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+19:19:20 INFO  : Copied contents of C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf into \zybo_receiver_wrapper_hw_platform_0\system.hdf.
+19:19:26 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+19:19:43 INFO  : 
+19:19:44 INFO  : Updating hardware inferred compiler options for zybo_receiver.
+19:19:44 INFO  : Clearing existing target manager status.
+19:20:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:20:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+19:20:45 INFO  : FPGA configured successfully with bitstream "C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper_hw_platform_0/zybo_receiver_wrapper.bit"
+19:21:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:22:09 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

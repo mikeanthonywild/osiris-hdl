@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="156960fs"></ZoomStartTime>
+      <ZoomEndTime time="163841fs"></ZoomEndTime>
+      <Cursor1Time time="159000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="5" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject db_ref_id="1" fp_name="zybo_receiver_i/o_buf_controller_addr" type="array">
+      <obj_property name="ElementShortName">zybo_receiver_i/o_buf_controller_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">zybo_receiver_i/o_buf_controller_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="zybo_receiver_i/blk_mem_gen_0_doutb" type="array">
+      <obj_property name="ElementShortName">zybo_receiver_i/blk_mem_gen_0_doutb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">zybo_receiver_i/blk_mem_gen_0_doutb[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="zybo_receiver_i/o_buf_controller_0_o_data" type="array">
+      <obj_property name="ElementShortName">zybo_receiver_i/o_buf_controller_0_o_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">zybo_receiver_i/o_buf_controller_0_o_data[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="zybo_receiver_i/o_buf_controller_0_vde" type="logic">
+      <obj_property name="ElementShortName">zybo_receiver_i/o_buf_controller_0_vde</obj_property>
+      <obj_property name="ObjectShortName">zybo_receiver_i/o_buf_controller_0_vde</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="zybo_receiver_i/o_buf_controller_req_frame" type="logic">
+      <obj_property name="ElementShortName">zybo_receiver_i/o_buf_controller_req_frame</obj_property>
+      <obj_property name="ObjectShortName">zybo_receiver_i/o_buf_controller_req_frame</obj_property>
+   </wvobject>
+</wave_config>

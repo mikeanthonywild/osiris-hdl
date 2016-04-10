@@ -48,7 +48,7 @@
 
 
 // IP VLNV: mikeanthonywild.com:user:o_buf_controller:1.0
-// IP Revision: 3
+// IP Revision: 4
 
 `timescale 1ns/1ps
 

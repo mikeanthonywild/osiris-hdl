@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date         : Sat Apr 09 12:11:47 2016
+| Date         : Sun Apr 10 18:22:31 2016
 | Host         : Study running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file linebuffer_test_wrapper_utilization_synth.rpt -pb linebuffer_test_wrapper_utilization_synth.pb
 | Design       : linebuffer_test_wrapper
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 7091 |     0 |     17600 | 40.29 |
-|   LUT as Logic             | 6515 |     0 |     17600 | 37.02 |
+| Slice LUTs*                | 7085 |     0 |     17600 | 40.26 |
+|   LUT as Logic             | 6509 |     0 |     17600 | 36.98 |
 |   LUT as Memory            |  576 |     0 |      6000 |  9.60 |
 |     LUT as Distributed RAM |  116 |     0 |           |       |
 |     LUT as Shift Register  |  460 |     0 |           |       |
@@ -151,12 +151,12 @@ Table of Contents
 |  Ref Name  | Used |  Functional Category |
 +------------+------+----------------------+
 | FDRE       | 7822 |         Flop & Latch |
-| LUT6       | 2403 |                  LUT |
-| LUT3       | 1791 |                  LUT |
-| LUT4       | 1462 |                  LUT |
-| LUT5       | 1249 |                  LUT |
-| LUT2       |  677 |                  LUT |
-| LUT1       |  464 |                  LUT |
+| LUT6       | 2389 |                  LUT |
+| LUT3       | 1792 |                  LUT |
+| LUT4       | 1459 |                  LUT |
+| LUT5       | 1250 |                  LUT |
+| LUT2       |  691 |                  LUT |
+| LUT1       |  465 |                  LUT |
 | SRL16E     |  301 |   Distributed Memory |
 | FDPE       |  266 |         Flop & Latch |
 | FDCE       |  264 |         Flop & Latch |

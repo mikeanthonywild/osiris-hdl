@@ -30,8 +30,8 @@
 								</option>
 								<option id="xilinx.gnu.compiler.dircategory.includes.2118188351" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/zybo_receiver_bsp/ps7_cortexa9_0/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/sw/common}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/sw/common}&quot;"/>
 								</option>
 								<inputType id="xilinx.gnu.arm.c.compiler.input.1525389472" name="C source files" superClass="xilinx.gnu.arm.c.compiler.input"/>
 							</tool>

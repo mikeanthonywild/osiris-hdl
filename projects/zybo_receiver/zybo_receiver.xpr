@@ -34,6 +34,43 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_auto_us_1/zybo_receiver_auto_us_1.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_rst_processing_system7_0_100M_0/zybo_receiver_rst_processing_system7_0_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_axi_mem_intercon_0/zybo_receiver_axi_mem_intercon_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_axi_bram_ctrl_0_0/zybo_receiver_axi_bram_ctrl_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_xlconcat_0_0/zybo_receiver_xlconcat_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_xlconstant_0_1/zybo_receiver_xlconstant_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_axi_cdma_0_0/zybo_receiver_axi_cdma_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_blk_mem_gen_0_0/zybo_receiver_blk_mem_gen_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_xlslice_0_0/zybo_receiver_xlslice_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_xlconstant_0_0/zybo_receiver_xlconstant_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_i_buf_controller_0_0/zybo_receiver_i_buf_controller_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_clk_wiz_0_0/zybo_receiver_clk_wiz_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_dvi2rgb_0_0/zybo_receiver_dvi2rgb_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_processing_system7_0_0/zybo_receiver_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_xbar_1/zybo_receiver_xbar_1.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_axi_mem_intercon_1_0/zybo_receiver_axi_mem_intercon_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_axi_bram_ctrl_0_1/zybo_receiver_axi_bram_ctrl_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_blk_mem_gen_0_1/zybo_receiver_blk_mem_gen_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_xlconcat_0_1/zybo_receiver_xlconcat_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_o_buf_controller_0_0/zybo_receiver_o_buf_controller_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_rgb2vga_0_0/zybo_receiver_rgb2vga_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_processing_system7_0_axi_periph_0/zybo_receiver_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_xbar_0/zybo_receiver_xbar_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_xlconcat_0_2/zybo_receiver_xlconcat_0_2.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_xbar_2/zybo_receiver_xbar_2.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_axi_cdma_0_1/zybo_receiver_axi_cdma_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_auto_pc_2/zybo_receiver_auto_pc_2.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="hdl/zybo_receiver.v"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_auto_pc_0/zybo_receiver_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="zybo_receiver_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="hdl/zybo_receiver.hwdef"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="hw_handoff/zybo_receiver.hwh"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="hw_handoff/zybo_receiver_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_auto_ds_0/zybo_receiver_auto_ds_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_auto_us_0/zybo_receiver_auto_us_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_auto_ds_1/zybo_receiver_auto_ds_1.xci"/>
+        <CompFileExtendedInfo CompFileName="zybo_receiver.bd" FileRelPathName="ip/zybo_receiver_auto_pc_1/zybo_receiver_auto_pc_1.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/zybo_receiver/hdl/zybo_receiver_wrapper.v">
         <FileInfo>
@@ -42,6 +79,8 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/bd/zybo_receiver/ip/zybo_receiver_i_buf_controller_0_0/zybo_receiver_i_buf_controller_0_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/zybo_receiver/ip/zybo_receiver_o_buf_controller_0_0/zybo_receiver_o_buf_controller_0_0.upgrade_log"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="zybo_receiver_wrapper"/>
@@ -58,7 +97,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/constrs_1/new/debug.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
       <Config>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/debug.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>

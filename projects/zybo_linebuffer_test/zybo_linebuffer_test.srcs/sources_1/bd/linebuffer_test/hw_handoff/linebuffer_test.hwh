@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Apr 09 11:25:23 2016" VIVADOVERSION="2015.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Apr 10 18:01:00 2016" VIVADOVERSION="2015.4">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="linebuffer_test" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -83,9 +83,9 @@
     </PORT>
     <PORT DIR="I" NAME="pclk" SIGIS="undef" SIGNAME="External_Ports_pclk">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="i_buf_controller" PORT="pclk"/>
         <CONNECTION INSTANCE="i_linebuffer" PORT="clkb"/>
         <CONNECTION INSTANCE="ov7670_capture" PORT="pclk_12"/>
+        <CONNECTION INSTANCE="i_buf_controller" PORT="pclk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="7" NAME="d" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_d">
@@ -2651,9 +2651,9 @@
         </PORT>
         <PORT CLKFREQUENCY="60000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="dvi_clk_gen_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="o_buf_controller" PORT="pclk"/>
             <CONNECTION INSTANCE="o_linebuffer" PORT="clkb"/>
             <CONNECTION INSTANCE="rgb2dvi_0" PORT="PixelClk"/>
+            <CONNECTION INSTANCE="o_buf_controller" PORT="pclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="300000000" DIR="O" NAME="clk_out2" SIGIS="clk" SIGNAME="dvi_clk_gen_clk_out2">
@@ -3777,9 +3777,9 @@
         <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="inverter_Res">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ov7670_controller" PORT="reset_n"/>
+            <CONNECTION INSTANCE="ov7670_capture" PORT="reset_n"/>
             <CONNECTION INSTANCE="o_buf_controller" PORT="reset_n"/>
             <CONNECTION INSTANCE="i_buf_controller" PORT="reset_n"/>
-            <CONNECTION INSTANCE="ov7670_capture" PORT="reset_n"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

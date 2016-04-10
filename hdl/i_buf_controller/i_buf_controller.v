@@ -49,7 +49,7 @@ module i_buf_controller (
                 h_count_stop <= h_count + 2;
                 if (h_count < h_count_stop) begin
                     h_count <= h_count + 1;
-                    o_data <= {o_data[23:0], i_data};
+                    o_data <= {i_data, o_data[31:8]};
                     addr <= next_addr;
                     we <= 0;
                     if (!((h_count+1) % 4)) begin

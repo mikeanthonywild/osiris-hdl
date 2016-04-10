@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date         : Mon Apr 04 19:38:24 2016
+| Date         : Sun Apr 10 18:58:10 2016
 | Host         : Study running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file zybo_receiver_wrapper_utilization_synth.rpt -pb zybo_receiver_wrapper_utilization_synth.pb
 | Design       : zybo_receiver_wrapper
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 7179 |     0 |     17600 | 40.79 |
-|   LUT as Logic             | 6579 |     0 |     17600 | 37.38 |
+| Slice LUTs*                | 7173 |     0 |     17600 | 40.76 |
+|   LUT as Logic             | 6573 |     0 |     17600 | 37.35 |
 |   LUT as Memory            |  600 |     0 |      6000 | 10.00 |
 |     LUT as Distributed RAM |  140 |     0 |           |       |
 |     LUT as Shift Register  |  460 |     0 |           |       |
@@ -69,9 +69,9 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |    4 |     0 |        60 |  6.67 |
-|   RAMB36/FIFO*    |    4 |     0 |        60 |  6.67 |
-|     RAMB36E1 only |    4 |       |           |       |
+| Block RAM Tile    |   10 |     0 |        60 | 16.67 |
+|   RAMB36/FIFO*    |   10 |     0 |        60 | 16.67 |
+|     RAMB36E1 only |   10 |       |           |       |
 |   RAMB18          |    0 |     0 |       120 |  0.00 |
 +-------------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
@@ -153,12 +153,12 @@ Table of Contents
 |  Ref Name  | Used |  Functional Category |
 +------------+------+----------------------+
 | FDRE       | 7935 |         Flop & Latch |
-| LUT6       | 2407 |                  LUT |
+| LUT6       | 2392 |                  LUT |
 | LUT3       | 1728 |                  LUT |
-| LUT4       | 1522 |                  LUT |
-| LUT5       | 1220 |                  LUT |
-| LUT2       |  715 |                  LUT |
-| LUT1       |  522 |                  LUT |
+| LUT4       | 1519 |                  LUT |
+| LUT5       | 1222 |                  LUT |
+| LUT2       |  729 |                  LUT |
+| LUT1       |  523 |                  LUT |
 | SRL16E     |  301 |   Distributed Memory |
 | FDPE       |  284 |         Flop & Latch |
 | FDCE       |  274 |         Flop & Latch |
@@ -169,9 +169,9 @@ Table of Contents
 | BIBUF      |  130 |                   IO |
 | RAMS32     |   68 |   Distributed Memory |
 | OBUF       |   19 |                   IO |
+| RAMB36E1   |   10 |         Block Memory |
 | ISERDESE2  |    6 |                   IO |
 | BUFG       |    5 |                Clock |
-| RAMB36E1   |    4 |         Block Memory |
 | IBUFDS     |    4 |                   IO |
 | IDELAYE2   |    3 |                   IO |
 | PS7        |    1 | Specialized Resource |

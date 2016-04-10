@@ -610,8 +610,8 @@ preplace inst axi_mem_intercon_1 -pg 1 -lvl 4 -y 570 -defaultsOSRD
 preplace inst GND -pg 1 -lvl 5 -y 860 -defaultsOSRD
 preplace inst o_buf_controller -pg 1 -lvl 3 -y 1100 -defaultsOSRD
 preplace inst o_linebuffer -pg 1 -lvl 6 -y 710 -defaultsOSRD
-preplace inst dvi_concat -pg 1 -lvl 5 -y 960 -defaultsOSRD
 preplace inst i_buf_controller -pg 1 -lvl 3 -y 1340 -defaultsOSRD
+preplace inst dvi_concat -pg 1 -lvl 5 -y 960 -defaultsOSRD
 preplace inst rgb2dvi_0 -pg 1 -lvl 6 -y 1000 -defaultsOSRD
 preplace inst dvi_clk_gen -pg 1 -lvl 2 -y 1050 -defaultsOSRD
 preplace inst i_axi_cdma -pg 1 -lvl 3 -y 330 -defaultsOSRD

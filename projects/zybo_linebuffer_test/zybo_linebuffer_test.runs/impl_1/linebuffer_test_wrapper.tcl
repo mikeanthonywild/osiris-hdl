@@ -53,6 +53,7 @@ set rc [catch {
   set_property parent.project_path C:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.xpr [current_project]
   set_property ip_repo_paths {
   c:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.cache/ip
+  C:/users/mike/documents/osiris-hdl/hdl/i_buf_controller
   C:/users/mike/documents/osiris-hdl/hdl/rgb2dvi_v1_2
   C:/Users/Mike/Documents/osiris-hdl/hdl
 } [current_project]

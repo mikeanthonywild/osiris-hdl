@@ -2,8 +2,8 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Sat Apr 09 11:50:25 2016
-# Process ID: 9032
+# Start of session at: Sun Apr 10 18:01:03 2016
+# Process ID: 1856
 # Current directory: C:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.runs/synth_1
 # Command line: vivado.exe -log linebuffer_test_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source linebuffer_test_wrapper.tcl
 # Log file: C:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.runs/synth_1/linebuffer_test_wrapper.vds
@@ -19,10 +19,11 @@ WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4:part0:1.1 av
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4_ddr:part0:1.1 available at C:/Xilinx/Vivado/2015.4/data/boards/board_files/nexys4_ddr/C.1/board.xml as part xc7a100tcsg324-1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys_video:part0:1.1 available at C:/Xilinx/Vivado/2015.4/data/boards/board_files/nexys_video/A.0/board.xml as part xc7a200tsbg484-1 specified in board_part file is either invalid or not available
 INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/users/mike/documents/osiris-hdl/hdl/i_buf_controller'. The path is contained within another repository.
 WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/users/mike/documents/osiris-hdl/hdl/rgb2dvi_v1_2'. The path is contained within another repository.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mike/Documents/osiris-hdl/hdl'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
-add_files: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 311.340 ; gain = 124.090
+add_files: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 311.383 ; gain = 123.844
 Command: synth_design -top linebuffer_test_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
@@ -30,7 +31,7 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 WARNING: [Synth 8-992] S_AXI_GP0_ACLK_temp is already implicitly declared earlier [c:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:2701]
 WARNING: [Synth 8-992] S_AXI_GP1_ACLK_temp is already implicitly declared earlier [c:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ip/linebuffer_test_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:2702]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 404.934 ; gain = 233.535
+Starting RTL Elaboration : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 405.164 ; gain = 233.348
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'linebuffer_test_wrapper' [C:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/hdl/linebuffer_test_wrapper.v:12]
 INFO: [Synth 8-638] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:17333]
@@ -12938,7 +12939,7 @@ WARNING: [Synth 8-350] instance 'rst_processing_system7_0_100M' of module 'lineb
 INFO: [Synth 8-256] done synthesizing module 'linebuffer_test' (198#1) [C:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/hdl/linebuffer_test.v:13]
 INFO: [Synth 8-256] done synthesizing module 'linebuffer_test_wrapper' (199#1) [C:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/hdl/linebuffer_test_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:18:04 ; elapsed = 00:18:11 . Memory (MB): peak = 705.199 ; gain = 533.801
+Finished RTL Elaboration : Time (s): cpu = 00:18:09 ; elapsed = 00:18:17 . Memory (MB): peak = 705.836 ; gain = 534.020
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -12948,7 +12949,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:18:06 ; elapsed = 00:18:14 . Memory (MB): peak = 705.199 ; gain = 533.801
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:18:12 ; elapsed = 00:18:19 . Memory (MB): peak = 705.836 ; gain = 534.020
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 57 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -13013,16 +13014,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   MUXCY_L => MUXCY: 8 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.312 . Memory (MB): peak = 894.582 ; gain = 0.898
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.312 . Memory (MB): peak = 894.020 ; gain = 0.047
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:18:43 ; elapsed = 00:18:50 . Memory (MB): peak = 895.219 ; gain = 723.820
+Finished Constraint Validation : Time (s): cpu = 00:18:48 ; elapsed = 00:18:56 . Memory (MB): peak = 894.840 ; gain = 723.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:18:43 ; elapsed = 00:18:50 . Memory (MB): peak = 895.219 ; gain = 723.820
+Finished Loading Part and Timing Information : Time (s): cpu = 00:18:48 ; elapsed = 00:18:56 . Memory (MB): peak = 894.840 ; gain = 723.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -13073,7 +13074,7 @@ Applied set_property DONT_TOUCH = true for linebuffer_test_i/processing_system7_
 Applied set_property DONT_TOUCH = true for linebuffer_test_i/rgb2dvi_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for linebuffer_test_i/rst_processing_system7_0_100M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:18:44 ; elapsed = 00:18:51 . Memory (MB): peak = 895.219 ; gain = 723.820
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:18:49 ; elapsed = 00:18:57 . Memory (MB): peak = 894.840 ; gain = 723.023
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "leaving_empty_fwft" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cmd_step_i" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -13263,7 +13264,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'rlast_sm_cs_reg' using enc
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'gray' in module 'TWI_SlaveCtl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:19:06 ; elapsed = 00:19:15 . Memory (MB): peak = 895.219 ; gain = 723.820
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:19:12 ; elapsed = 00:19:21 . Memory (MB): peak = 894.840 ; gain = 723.023
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -13276,7 +13277,7 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 9     
+	   2 Input     32 Bit       Adders := 8     
 	   3 Input     23 Bit       Adders := 4     
 	   2 Input     16 Bit       Adders := 12    
 	   2 Input     14 Bit       Adders := 2     
@@ -14501,7 +14502,6 @@ Detailed RTL Component Info :
 Module o_buf_controller 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
 	   2 Input     14 Bit       Adders := 1     
 	   2 Input     13 Bit       Adders := 1     
 +---Registers : 
@@ -14860,7 +14860,7 @@ BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:19:07 ; elapsed = 00:19:16 . Memory (MB): peak = 895.219 ; gain = 723.820
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:19:12 ; elapsed = 00:19:22 . Memory (MB): peak = 894.840 ; gain = 723.023
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -14948,9 +14948,9 @@ INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pC1_2_reg' in
 INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pVde_1_reg' into 'DataEncoders[0].DataEncoder/pVde_1_reg' [c:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ipshared/digilentinc.com/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:110]
 INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pVde_2_reg' into 'DataEncoders[0].DataEncoder/pVde_2_reg' [c:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ipshared/digilentinc.com/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:150]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:19:20 ; elapsed = 00:19:29 . Memory (MB): peak = 895.219 ; gain = 723.820
+Finished Cross Boundary Optimization : Time (s): cpu = 00:19:25 ; elapsed = 00:19:35 . Memory (MB): peak = 894.840 ; gain = 723.023
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:19:20 ; elapsed = 00:19:29 . Memory (MB): peak = 895.219 ; gain = 723.820
+Finished Parallel Reinference  : Time (s): cpu = 00:19:25 ; elapsed = 00:19:35 . Memory (MB): peak = 894.840 ; gain = 723.023
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -14998,9 +14998,9 @@ INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4
 INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/bid_gets_fifo_load_d1_reg ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
 INFO: [Synth 8-3332] Sequential element (\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/GEN_RID_SNG.axi_rid_temp_reg[0] ) is unused and will be removed from module linebuffer_test_axi_bram_ctrl_0_1.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:19:53 ; elapsed = 00:20:06 . Memory (MB): peak = 895.219 ; gain = 723.820
+Finished Area Optimization : Time (s): cpu = 00:19:58 ; elapsed = 00:20:12 . Memory (MB): peak = 894.840 ; gain = 723.023
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:19:53 ; elapsed = 00:20:06 . Memory (MB): peak = 895.219 ; gain = 723.820
+Finished Parallel Area Optimization  : Time (s): cpu = 00:19:58 ; elapsed = 00:20:12 . Memory (MB): peak = 894.840 ; gain = 723.023
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -15019,10 +15019,10 @@ info: Source pin 'linebuffer_test_i/rgb2dvi_0/U0/PixelClk' of generated clock is
 info: Moving clock source from hierarchical pin 'linebuffer_test_i/rgb2dvi_0/U0/PixelClk' to 'linebuffer_test_i/o_linebuffer/U0/\inst_blk_mem_gen/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram /CLKBWRCLK'
 INFO: Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:20:12 ; elapsed = 00:20:25 . Memory (MB): peak = 1017.457 ; gain = 846.059
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:20:17 ; elapsed = 00:20:31 . Memory (MB): peak = 1017.277 ; gain = 845.461
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:20:16 ; elapsed = 00:20:29 . Memory (MB): peak = 1051.902 ; gain = 880.504
+Finished Timing Optimization : Time (s): cpu = 00:20:21 ; elapsed = 00:20:35 . Memory (MB): peak = 1052.016 ; gain = 880.199
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -15121,16 +15121,16 @@ INFO: [Synth 8-3332] Sequential element (\inst/gen_axi4_axi3.axi3_conv_inst/USE_
 INFO: [Synth 8-3332] Sequential element (\inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/first_step_q_reg[12] ) is unused and will be removed from module linebuffer_test_auto_pc_1.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:20:35 ; elapsed = 00:20:51 . Memory (MB): peak = 1065.902 ; gain = 894.504
+Finished Technology Mapping : Time (s): cpu = 00:20:39 ; elapsed = 00:20:56 . Memory (MB): peak = 1066.090 ; gain = 894.273
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:20:35 ; elapsed = 00:20:51 . Memory (MB): peak = 1065.902 ; gain = 894.504
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:20:39 ; elapsed = 00:20:56 . Memory (MB): peak = 1066.090 ; gain = 894.273
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:20:35 ; elapsed = 00:20:51 . Memory (MB): peak = 1065.902 ; gain = 894.504
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:20:39 ; elapsed = 00:20:56 . Memory (MB): peak = 1066.090 ; gain = 894.273
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -15264,7 +15264,7 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [c:/Users/Mike/Documents/osiris-hdl/projects/zybo_linebuffer_test/zybo_linebuffer_test.srcs/sources_1/bd/linebuffer_test/ipshared/xilinx.com/generic_baseblocks_v2_1/hdl/verilog/generic_baseblocks_v2_1_command_fifo.v:340]
 INFO: [Common 17-14] Message 'Synth 8-5396' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:20:39 ; elapsed = 00:20:55 . Memory (MB): peak = 1065.902 ; gain = 894.504
+Finished IO Insertion : Time (s): cpu = 00:20:43 ; elapsed = 00:21:00 . Memory (MB): peak = 1066.090 ; gain = 894.273
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -15277,7 +15277,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:20:39 ; elapsed = 00:20:55 . Memory (MB): peak = 1065.902 ; gain = 894.504
+Finished Renaming Generated Instances : Time (s): cpu = 00:20:43 ; elapsed = 00:21:00 . Memory (MB): peak = 1066.090 ; gain = 894.273
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -15289,25 +15289,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:20:44 ; elapsed = 00:21:00 . Memory (MB): peak = 1065.902 ; gain = 894.504
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:20:47 ; elapsed = 00:21:05 . Memory (MB): peak = 1066.090 ; gain = 894.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:20:44 ; elapsed = 00:21:00 . Memory (MB): peak = 1065.902 ; gain = 894.504
+Finished Renaming Generated Ports : Time (s): cpu = 00:20:48 ; elapsed = 00:21:05 . Memory (MB): peak = 1066.090 ; gain = 894.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:20:46 ; elapsed = 00:21:02 . Memory (MB): peak = 1065.902 ; gain = 894.504
+Finished Handling Custom Attributes : Time (s): cpu = 00:20:50 ; elapsed = 00:21:07 . Memory (MB): peak = 1066.090 ; gain = 894.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:20:46 ; elapsed = 00:21:02 . Memory (MB): peak = 1065.902 ; gain = 894.504
+Finished Renaming Generated Nets : Time (s): cpu = 00:20:50 ; elapsed = 00:21:07 . Memory (MB): peak = 1066.090 ; gain = 894.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -15349,12 +15349,12 @@ Report Cell Usage:
 |1     |BIBUF       |   130|
 |2     |BUFG        |     8|
 |3     |CARRY4      |   201|
-|4     |LUT1        |   464|
-|5     |LUT2        |   677|
-|6     |LUT3        |  1791|
-|7     |LUT4        |  1462|
-|8     |LUT5        |  1249|
-|9     |LUT6        |  2403|
+|4     |LUT1        |   465|
+|5     |LUT2        |   691|
+|6     |LUT3        |  1792|
+|7     |LUT4        |  1459|
+|8     |LUT5        |  1250|
+|9     |LUT6        |  2389|
 |10    |MMCME2_ADV  |     1|
 |11    |MUXF7       |    15|
 |12    |OSERDESE2   |     4|
@@ -15967,11 +15967,11 @@ Report Instance Areas:
 |582   |          SEQ_COUNTER                                                  |upcnt_n                                                              |    14|
 +------+-----------------------------------------------------------------------+---------------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:20:46 ; elapsed = 00:21:02 . Memory (MB): peak = 1065.902 ; gain = 894.504
+Finished Writing Synthesis Report : Time (s): cpu = 00:20:50 ; elapsed = 00:21:07 . Memory (MB): peak = 1066.090 ; gain = 894.273
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2987 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:10 ; elapsed = 00:20:17 . Memory (MB): peak = 1065.902 ; gain = 564.543
-Synthesis Optimization Complete : Time (s): cpu = 00:20:46 ; elapsed = 00:21:02 . Memory (MB): peak = 1065.902 ; gain = 894.504
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:09 ; elapsed = 00:20:22 . Memory (MB): peak = 1066.090 ; gain = 565.703
+Synthesis Optimization Complete : Time (s): cpu = 00:20:50 ; elapsed = 00:21:08 . Memory (MB): peak = 1066.090 ; gain = 894.273
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 279 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -15988,8 +15988,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRLC32E => SRL16E: 4 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-1335 Infos, 270 Warnings, 1 Critical Warnings and 0 Errors encountered.
+1335 Infos, 271 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:20:48 ; elapsed = 00:21:01 . Memory (MB): peak = 1065.902 ; gain = 754.563
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.141 . Memory (MB): peak = 1065.902 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 09 12:11:47 2016...
+synth_design: Time (s): cpu = 00:20:52 ; elapsed = 00:21:06 . Memory (MB): peak = 1066.090 ; gain = 754.707
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1066.090 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.187 . Memory (MB): peak = 1066.090 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 10 18:22:31 2016...

@@ -3,6 +3,8 @@
 
 # XDC: imports/Downloads/ZYBO_Master.xdc
 
+# XDC: new/debug.xdc
+
 # Block Designs: bd/zybo_receiver/zybo_receiver.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_receiver || ORIG_REF_NAME==zybo_receiver}]
 

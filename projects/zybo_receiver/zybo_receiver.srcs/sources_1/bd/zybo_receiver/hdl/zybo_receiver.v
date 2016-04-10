@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-//Date        : Mon Apr 04 19:16:16 2016
+//Date        : Sun Apr 10 18:33:30 2016
 //Host        : Study running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target zybo_receiver.bd
 //Design      : zybo_receiver
@@ -3519,7 +3519,7 @@ module zybo_receiver
         .vde(o_buf_controller_0_vde),
         .vsync(o_buf_controller_0_vsync));
   zybo_receiver_blk_mem_gen_0_1 o_linebuffer
-       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,o_axi_bram_ctrl_BRAM_PORTA_ADDR}),
+       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,o_axi_bram_ctrl_BRAM_PORTA_ADDR}),
         .addrb(o_buf_controller_addr),
         .clka(o_axi_bram_ctrl_BRAM_PORTA_CLK),
         .clkb(clk_wiz_0_clk_out1),

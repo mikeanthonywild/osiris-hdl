@@ -1,4 +1,4 @@
-19:24:13 **** Auto Build of configuration Debug for project linebuffer_test ****
+17:48:08 **** Auto Build of configuration Debug for project linebuffer_test ****
 make all 
 'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c'
 'Invoking: ARM gcc compiler'
@@ -41,5 +41,5 @@ arm-xilinx-eabi-size linebuffer_test.elf  |tee "linebuffer_test.elf.size"
 'Finished building: linebuffer_test.elf.size'
 ' '
 
-19:24:18 Build Finished (took 4s.914ms)
+17:48:12 Build Finished (took 4s.290ms)
 

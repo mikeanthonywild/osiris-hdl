@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-//Date        : Sun Apr 10 17:59:58 2016
+//Date        : Mon Apr 11 16:56:10 2016
 //Host        : Study running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target linebuffer_test.bd
 //Design      : linebuffer_test
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "linebuffer_test,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=linebuffer_test,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=43,numReposBlks=31,numNonXlnxBlks=5,numHierBlks=12,maxHierDepth=0,da_axi4_cnt=9,da_bram_cntlr_cnt=5,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "linebuffer_test.hwdef" *) 
+(* CORE_GENERATION_INFO = "linebuffer_test,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=linebuffer_test,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=44,numReposBlks=32,numNonXlnxBlks=5,numHierBlks=12,maxHierDepth=0,da_axi4_cnt=9,da_bram_cntlr_cnt=5,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "linebuffer_test.hwdef" *) 
 module linebuffer_test
    (DDC_scl_i,
     DDC_scl_o,
@@ -40,7 +40,6 @@ module linebuffer_test
     FIXED_IO_ps_srstb,
     clk,
     d,
-    flash_sync_btn,
     hdmi_clk_n,
     hdmi_clk_p,
     hdmi_d_n,
@@ -81,7 +80,6 @@ module linebuffer_test
   inout FIXED_IO_ps_srstb;
   input clk;
   input [7:0]d;
-  input flash_sync_btn;
   output hdmi_clk_n;
   output hdmi_clk_p;
   output [2:0]hdmi_d_n;
@@ -232,7 +230,6 @@ module linebuffer_test
   wire dvi_clk_gen_clk_out2;
   wire dvi_clk_gen_clk_out3;
   wire [23:0]dvi_concat_dout;
-  wire flash_sync_btn_1;
   wire href_1;
   wire [11:0]i_axi_bram_ctrl_BRAM_PORTA_ADDR;
   wire i_axi_bram_ctrl_BRAM_PORTA_CLK;
@@ -434,6 +431,7 @@ module linebuffer_test
   wire [0:0]rst_btn_1;
   wire [0:0]rst_processing_system7_0_100M_interconnect_aresetn;
   wire [0:0]rst_processing_system7_0_100M_peripheral_aresetn;
+  wire [0:0]shutter_sync_inverter_Res;
   wire [0:0]util_vector_logic_0_Res;
   wire vsync_1;
 
@@ -443,7 +441,6 @@ module linebuffer_test
   assign DDC_sda_t = rgb2dvi_0_DDC_SDA_T;
   assign clk_1 = clk;
   assign d_1 = d[7:0];
-  assign flash_sync_btn_1 = flash_sync_btn;
   assign hdmi_clk_n = rgb2dvi_0_TMDS_Clk_n;
   assign hdmi_clk_p = rgb2dvi_0_TMDS_Clk_p;
   assign hdmi_d_n[2:0] = rgb2dvi_0_TMDS_Data_n;
@@ -1181,7 +1178,7 @@ module linebuffer_test
         .TMDS_Data_n(rgb2dvi_0_TMDS_Data_n),
         .TMDS_Data_p(rgb2dvi_0_TMDS_Data_p),
         .aRst(rst_btn_1),
-        .shutter_sync(flash_sync_btn_1),
+        .shutter_sync(shutter_sync_inverter_Res),
         .vid_pData(dvi_concat_dout),
         .vid_pHSync(o_buf_controller_hsync),
         .vid_pVDE(o_buf_controller_vde),
@@ -1194,6 +1191,9 @@ module linebuffer_test
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_processing_system7_0_100M_peripheral_aresetn),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
+  linebuffer_test_util_vector_logic_0_1 shutter_sync_inverter
+       (.Op1(ov7670_capture_o_vsync),
+        .Res(shutter_sync_inverter_Res));
 endmodule
 
 module linebuffer_test_axi_mem_intercon_0

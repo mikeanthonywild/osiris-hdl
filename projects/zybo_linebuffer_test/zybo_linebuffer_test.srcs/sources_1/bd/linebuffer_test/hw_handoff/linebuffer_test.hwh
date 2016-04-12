@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Apr 10 18:01:00 2016" VIVADOVERSION="2015.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr 11 16:56:16 2016" VIVADOVERSION="2015.4">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="linebuffer_test" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -49,11 +49,6 @@
     <PORT DIR="O" LEFT="2" NAME="hdmi_d_n" RIGHT="0" SIGIS="undef" SIGNAME="rgb2dvi_0_TMDS_Data_n">
       <CONNECTIONS>
         <CONNECTION INSTANCE="rgb2dvi_0" PORT="TMDS_Data_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="flash_sync_btn" SIGIS="undef" SIGNAME="External_Ports_flash_sync_btn">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rgb2dvi_0" PORT="shutter_sync"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="xclk" SIGIS="undef" SIGNAME="ov7670_clk_gen_clk_out1">
@@ -4932,6 +4927,7 @@
         <PORT DIR="O" NAME="o_vsync" SIGIS="undef" SIGNAME="ov7670_capture_o_vsync">
           <CONNECTIONS>
             <CONNECTION INSTANCE="i_buf_controller" PORT="vsync"/>
+            <CONNECTION INSTANCE="shutter_sync_inverter" PORT="Op1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="vde" SIGIS="undef" SIGNAME="ov7670_capture_vde">
@@ -8202,9 +8198,9 @@
             <CONNECTION INSTANCE="o_buf_controller" PORT="vsync"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="shutter_sync" SIGIS="undef" SIGNAME="External_Ports_flash_sync_btn">
+        <PORT DIR="I" NAME="shutter_sync" SIGIS="undef" SIGNAME="shutter_sync_inverter_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="flash_sync_btn"/>
+            <CONNECTION INSTANCE="shutter_sync_inverter" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="60000000" DIR="I" NAME="PixelClk" SIGIS="clk" SIGNAME="dvi_clk_gen_clk_out1">
@@ -8316,6 +8312,28 @@
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon" PORT="M01_ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon_1" PORT="M01_ARESETN"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/shutter_sync_inverter" HWVERSION="2.0" INSTANCE="shutter_sync_inverter" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="not"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="linebuffer_test_util_vector_logic_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="ov7670_capture_o_vsync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ov7670_capture" PORT="o_vsync"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="shutter_sync_inverter_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rgb2dvi_0" PORT="shutter_sync"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

@@ -55,6 +55,7 @@ set rc [catch {
   set_property parent.project_path C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.xpr [current_project]
   set_property ip_repo_paths {
   c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.cache/ip
+  C:/users/mike/documents/osiris-hdl/hdl/dvi2rgb_v1_5
   C:/Users/Mike/Documents/osiris-hdl/hdl
 } [current_project]
   set_property ip_output_repo c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.cache/ip [current_project]
@@ -75,8 +76,15 @@ set rc [catch {
   set_property processing_order EARLY [get_files c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_rst_processing_system7_0_100M_0/zybo_receiver_rst_processing_system7_0_100M_0.xdc]
   read_xdc -ref zybo_receiver_axi_cdma_0_1 -cells U0 c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_cdma_0_1/zybo_receiver_axi_cdma_0_1.xdc
   set_property processing_order EARLY [get_files c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_cdma_0_1/zybo_receiver_axi_cdma_0_1.xdc]
+  read_xdc -prop_thru_buffers -ref zybo_receiver_axi_gpio_0_1 -cells U0 c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_gpio_0_1/zybo_receiver_axi_gpio_0_1_board.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_gpio_0_1/zybo_receiver_axi_gpio_0_1_board.xdc]
+  read_xdc -ref zybo_receiver_axi_gpio_0_1 -cells U0 c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_gpio_0_1/zybo_receiver_axi_gpio_0_1.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_gpio_0_1/zybo_receiver_axi_gpio_0_1.xdc]
+  read_xdc -prop_thru_buffers -ref zybo_receiver_axi_gpio_1_1 -cells U0 c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_gpio_1_1/zybo_receiver_axi_gpio_1_1_board.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_gpio_1_1/zybo_receiver_axi_gpio_1_1_board.xdc]
+  read_xdc -ref zybo_receiver_axi_gpio_1_1 -cells U0 c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_gpio_1_1/zybo_receiver_axi_gpio_1_1.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_gpio_1_1/zybo_receiver_axi_gpio_1_1.xdc]
   read_xdc C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc
-  read_xdc C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/constrs_1/new/debug.xdc
   read_xdc -ref zybo_receiver_auto_ds_0 -cells inst c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_auto_ds_0/zybo_receiver_auto_ds_0_clocks.xdc
   set_property processing_order LATE [get_files c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_auto_ds_0/zybo_receiver_auto_ds_0_clocks.xdc]
   read_xdc -ref zybo_receiver_auto_us_0 -cells inst c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_auto_us_0/zybo_receiver_auto_us_0_clocks.xdc

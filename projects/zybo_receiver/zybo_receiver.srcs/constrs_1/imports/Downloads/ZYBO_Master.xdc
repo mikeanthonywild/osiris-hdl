@@ -45,8 +45,8 @@ create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_p
 
 ##LEDs
 ##IO_L23P_T3_35
-set_property PACKAGE_PIN M14 [get_ports flash_sync_led]
-set_property IOSTANDARD LVCMOS33 [get_ports flash_sync_led]
+#set_property PACKAGE_PIN M14 [get_ports flash_sync_led]
+#set_property IOSTANDARD LVCMOS33 [get_ports flash_sync_led]
 
 ##IO_L23N_T3_35
 #set_property PACKAGE_PIN M15 [get_ports {led[1]}]
@@ -306,8 +306,9 @@ set_property IOSTANDARD TMDS_33 [get_ports {hdmi_d_p[2]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {je[2]}]
 
 ##IO_L19P_T3_35
-#set_property PACKAGE_PIN H15 [get_ports {je[3]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {je[3]}]
+# Flash trigger
+#set_property PACKAGE_PIN H15 [get_ports gpio_rtl_tri_o]
+#set_property IOSTANDARD LVCMOS33 [get_ports gpio_rtl_tri_o]
 
 ##IO_L3N_T0_DQS_34
 #set_property PACKAGE_PIN V13 [get_ports {je[4]}]
@@ -322,8 +323,9 @@ set_property IOSTANDARD TMDS_33 [get_ports {hdmi_d_p[2]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {je[6]}]
 
 ##IO_L7N_T1_34
-#set_property PACKAGE_PIN Y17 [get_ports {je[7]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {je[7]}]
+# Shutter release
+#set_property PACKAGE_PIN Y17 [get_ports gpio_rtl_tri_i]
+#set_property IOSTANDARD LVCMOS33 [get_ports gpio_rtl_tri_i]
 
 
 ##USB-OTG overcurrent detect pin

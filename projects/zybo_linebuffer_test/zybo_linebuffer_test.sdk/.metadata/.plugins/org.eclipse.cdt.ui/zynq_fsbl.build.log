@@ -1,4 +1,4 @@
-19:25:15 **** Auto Build of configuration Release for project zynq_fsbl ****
+17:52:26 **** Auto Build of configuration Release for project zynq_fsbl ****
 make all 
 'Building file: ../src/fsbl_hooks.c'
 'Invoking: ARM gcc compiler'
@@ -14,6 +14,18 @@ arm-xilinx-eabi-gcc -Wall -O2 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zyb
 'Invoking: ARM gcc compiler'
 arm-xilinx-eabi-gcc -Wall -O2 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\linebuffer_test_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/main.o" -I../../zynq_fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
 'Finished building: ../src/main.c'
+' '
+'Building file: ../src/md5.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_linebuffer_test\zybo_linebuffer_test.sdk\linebuffer_test_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/md5.o" -I../../zynq_fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/md5.d" -MT"src/md5.d" -o "src/md5.o" "../src/md5.c"
+../src/md5.c: In function 'MD5Final':
+../src/md5.c:445:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  ( (u32 *)context->intermediate )[ 14 ] = context->bits[ 0 ];
+  ^
+../src/md5.c:446:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  ( (u32 *)context->intermediate )[ 15 ] = context->bits[ 1 ];
+  ^
+'Finished building: ../src/md5.c'
 ' '
 'Building file: ../src/nand.c'
 'Invoking: ARM gcc compiler'
@@ -62,5 +74,5 @@ arm-xilinx-eabi-size zynq_fsbl.elf  |tee "zynq_fsbl.elf.size"
 'Finished building: zynq_fsbl.elf.size'
 ' '
 
-19:25:20 Build Finished (took 4s.587ms)
+17:52:32 Build Finished (took 5s.195ms)
 

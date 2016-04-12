@@ -1,0 +1,124 @@
+/*
+ * storage_manager.c
+ *
+ * Author: Mike Wild <m.a.wild@se12.qmul.ac.uk>
+ * Date: 24th March 2016
+ *
+ * Library for saving frames to SD card.
+ *
+ */
+
+/***************************** Include Files *********************************/
+#include "xsdps.h"
+#include "ff.h"
+
+/************************** Constant Definitions *****************************/
+
+
+/**************************** Type Definitions *******************************/
+
+
+/***************** Macros (Inline Functions) Definitions *********************/
+
+
+/************************** Variable Definitions *****************************/
+static FIL fh;
+static FATFS fatfs;
+static char FileName[32] = "Test.bin";
+static char *SD_File;
+static TCHAR *root_path = "0:/";
+u32 Platform;
+
+/************************** Function Prototypes ******************************/
+
+
+/*****************************************************************************/
+int init_storage_manager(void) {
+	FRESULT status;
+
+	status = f_mount(&fatfs, root_path, 0);
+	if (status != FR_OK) {
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+
+
+int write_frame() {
+
+
+	return XST_SUCCESS;
+}
+
+//	FRESULT Res;
+//	    UINT NumBytesRead;
+//	    UINT NumBytesWritten;
+//	    u32 BuffCnt;
+//	    u32 FileSize = (8*1024*1024);
+//	    /*
+//	     * Open file with required permissions.
+//	     * Here - Creating new file with read/write permissions. .
+//	     * To open file with write permissions, file system should not
+//	     * be in Read Only mode.
+//	     */
+//	    SD_File = (char *)FileName;
+//
+//	    Res = f_open(&fil, SD_File, FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
+//	    if (Res) {
+//	        return XST_FAILURE;
+//	    }
+//
+//	    /*
+//	     * Pointer to beginning of file .
+//	     */
+//	    Res = f_lseek(&fil, 0);
+//	    if (Res) {
+//	        return XST_FAILURE;
+//	    }
+//
+//	    /*
+//	     * Write data to file.
+//	     */
+//	    Xil_DCacheFlushRange((UINTPTR)SourceAddress, FileSize);
+//	    Res = f_write(&fil, (const void*)SourceAddress, FileSize,
+//	            &NumBytesWritten);
+//	    if (Res) {
+//	        return XST_FAILURE;
+//	    }
+//
+//	    /*
+//	     * Pointer to beginning of file .
+//	     */
+//	    Res = f_lseek(&fil, 0);
+//	    if (Res) {
+//	        return XST_FAILURE;
+//	    }
+//
+//	    /*
+//	     * Read data from file.
+//	     */
+//	    Res = f_read(&fil, (void*)DestinationAddress, FileSize,
+//	            &NumBytesRead);
+//	    if (Res) {
+//	        return XST_FAILURE;
+//	    }
+//
+//	    /*
+//	     * Data verification
+//	     */
+//	    for(BuffCnt = 0; BuffCnt < FileSize; BuffCnt++){
+//	        if(SourceAddress[BuffCnt] != DestinationAddress[BuffCnt]){
+//	            return XST_FAILURE;
+//	        }
+//	    }
+//
+//	    /*
+//	     * Close file.
+//	     */
+//	    Res = f_close(&fil);
+//	    if (Res) {
+//	        return XST_FAILURE;
+//	    }
+//
+//	    return XST_SUCCESS;

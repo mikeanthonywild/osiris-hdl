@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: digilentinc.com:ip:dvi2rgb:1.5
--- IP Revision: 21
+-- IP Revision: 22
 
 -- The following code must appear in the VHDL architecture header.
 
@@ -64,7 +64,7 @@ COMPONENT zybo_receiver_dvi2rgb_0_0
     vid_pVDE : OUT STD_LOGIC;
     vid_pHSync : OUT STD_LOGIC;
     vid_pVSync : OUT STD_LOGIC;
-    flash_sync : OUT STD_LOGIC;
+    shutter_sync : OUT STD_LOGIC;
     PixelClk : OUT STD_LOGIC;
     aPixelClkLckd : OUT STD_LOGIC;
     pRst : IN STD_LOGIC
@@ -88,7 +88,7 @@ your_instance_name : zybo_receiver_dvi2rgb_0_0
     vid_pVDE => vid_pVDE,
     vid_pHSync => vid_pHSync,
     vid_pVSync => vid_pVSync,
-    flash_sync => flash_sync,
+    shutter_sync => shutter_sync,
     PixelClk => PixelClk,
     aPixelClkLckd => aPixelClkLckd,
     pRst => pRst

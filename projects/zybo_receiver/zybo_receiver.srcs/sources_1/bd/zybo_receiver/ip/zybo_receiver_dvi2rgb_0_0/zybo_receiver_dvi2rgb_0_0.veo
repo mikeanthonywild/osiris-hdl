@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: digilentinc.com:ip:dvi2rgb:1.5
-// IP Revision: 21
+// IP Revision: 22
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
@@ -65,7 +65,7 @@ zybo_receiver_dvi2rgb_0_0 your_instance_name (
   .vid_pVDE(vid_pVDE),            // output wire vid_pVDE
   .vid_pHSync(vid_pHSync),        // output wire vid_pHSync
   .vid_pVSync(vid_pVSync),        // output wire vid_pVSync
-  .flash_sync(flash_sync),        // output wire flash_sync
+  .shutter_sync(shutter_sync),    // output wire shutter_sync
   .PixelClk(PixelClk),            // output wire PixelClk
   .aPixelClkLckd(aPixelClkLckd),  // output wire aPixelClkLckd
   .pRst(pRst)                    // input wire pRst

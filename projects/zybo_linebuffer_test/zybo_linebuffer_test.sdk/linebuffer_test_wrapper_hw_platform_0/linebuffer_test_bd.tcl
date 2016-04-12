@@ -153,7 +153,6 @@ proc create_root_design { parentCell } {
 CONFIG.FREQ_HZ {125000000} \
  ] $clk
   set d [ create_bd_port -dir I -from 7 -to 0 d ]
-  set flash_sync_btn [ create_bd_port -dir I flash_sync_btn ]
   set hdmi_clk_n [ create_bd_port -dir O hdmi_clk_n ]
   set hdmi_clk_p [ create_bd_port -dir O hdmi_clk_p ]
   set hdmi_d_n [ create_bd_port -dir O -from 2 -to 0 hdmi_d_n ]
@@ -509,6 +508,13 @@ CONFIG.kGenerateSerialClk {false} \
   # Create instance: rst_processing_system7_0_100M, and set properties
   set rst_processing_system7_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_processing_system7_0_100M ]
 
+  # Create instance: shutter_sync_inverter, and set properties
+  set shutter_sync_inverter [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 shutter_sync_inverter ]
+  set_property -dict [ list \
+CONFIG.C_OPERATION {not} \
+CONFIG.C_SIZE {1} \
+ ] $shutter_sync_inverter
+
   # Create interface connections
   connect_bd_intf_net -intf_net axi_mem_intercon_1_M00_AXI [get_bd_intf_pins axi_mem_intercon_1/M00_AXI] [get_bd_intf_pins o_axi_bram_ctrl/S_AXI]
   connect_bd_intf_net -intf_net axi_mem_intercon_1_M01_AXI [get_bd_intf_pins axi_mem_intercon_1/M01_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP1]
@@ -536,7 +542,6 @@ CONFIG.kGenerateSerialClk {false} \
   connect_bd_net -net dvi_clk_gen_clk_out2 [get_bd_pins dvi_clk_gen/clk_out2] [get_bd_pins rgb2dvi_0/SerialClk]
   connect_bd_net -net dvi_clk_gen_clk_out3 [get_bd_pins dvi_clk_gen/clk_out3] [get_bd_pins rgb2dvi_0/RefClk]
   connect_bd_net -net dvi_concat_dout [get_bd_pins dvi_concat/dout] [get_bd_pins rgb2dvi_0/vid_pData]
-  connect_bd_net -net flash_sync_btn_1 [get_bd_ports flash_sync_btn] [get_bd_pins rgb2dvi_0/shutter_sync]
   connect_bd_net -net href_1 [get_bd_ports href] [get_bd_pins ov7670_capture/href]
   connect_bd_net -net i_buf_controller_0_addr [get_bd_pins i_buf_controller/addr] [get_bd_pins i_linebuffer/addrb]
   connect_bd_net -net i_buf_controller_0_o_data [get_bd_pins i_buf_controller/o_data] [get_bd_pins i_linebuffer/dinb]
@@ -555,7 +560,7 @@ CONFIG.kGenerateSerialClk {false} \
   connect_bd_net -net ov7670_capture_0_dout [get_bd_pins i_buf_controller/i_data] [get_bd_pins ov7670_capture/dout]
   connect_bd_net -net ov7670_capture_0_hsync [get_bd_pins i_buf_controller/hsync] [get_bd_pins ov7670_capture/hsync]
   connect_bd_net -net ov7670_capture_0_vde [get_bd_pins i_buf_controller/vde] [get_bd_pins ov7670_capture/vde]
-  connect_bd_net -net ov7670_capture_o_vsync [get_bd_pins i_buf_controller/vsync] [get_bd_pins ov7670_capture/o_vsync]
+  connect_bd_net -net ov7670_capture_o_vsync [get_bd_pins i_buf_controller/vsync] [get_bd_pins ov7670_capture/o_vsync] [get_bd_pins shutter_sync_inverter/Op1]
   connect_bd_net -net ov7670_clk_gen_clk_out1 [get_bd_ports xclk] [get_bd_pins ov7670_clk_gen/clk_out1] [get_bd_pins ov7670_controller/clk]
   connect_bd_net -net ov7670_controller_0_start_capture [get_bd_pins ov7670_capture/start] [get_bd_pins ov7670_controller/start_capture]
   connect_bd_net -net ov7670_controller_scl [get_bd_ports scl] [get_bd_pins ov7670_controller/scl]
@@ -569,6 +574,7 @@ CONFIG.kGenerateSerialClk {false} \
   connect_bd_net -net rst_btn_1 [get_bd_ports rst_btn] [get_bd_pins inverter/Op1] [get_bd_pins rgb2dvi_0/aRst]
   connect_bd_net -net rst_processing_system7_0_100M_interconnect_aresetn [get_bd_pins axi_mem_intercon/ARESETN] [get_bd_pins axi_mem_intercon_1/ARESETN] [get_bd_pins processing_system7_0_axi_periph/ARESETN] [get_bd_pins rst_processing_system7_0_100M/interconnect_aresetn]
   connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins axi_mem_intercon/M00_ARESETN] [get_bd_pins axi_mem_intercon/M01_ARESETN] [get_bd_pins axi_mem_intercon/S00_ARESETN] [get_bd_pins axi_mem_intercon_1/M00_ARESETN] [get_bd_pins axi_mem_intercon_1/M01_ARESETN] [get_bd_pins axi_mem_intercon_1/S00_ARESETN] [get_bd_pins i_axi_bram_ctrl/s_axi_aresetn] [get_bd_pins i_axi_cdma/s_axi_lite_aresetn] [get_bd_pins o_axi_bram_ctrl/s_axi_aresetn] [get_bd_pins o_axi_cdma/s_axi_lite_aresetn] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M01_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]
+  connect_bd_net -net shutter_sync_inverter_Res [get_bd_pins rgb2dvi_0/shutter_sync] [get_bd_pins shutter_sync_inverter/Res]
   connect_bd_net -net util_vector_logic_0_Res [get_bd_pins i_buf_controller/reset_n] [get_bd_pins inverter/Res] [get_bd_pins o_buf_controller/reset_n] [get_bd_pins ov7670_capture/reset_n] [get_bd_pins ov7670_controller/reset_n]
   connect_bd_net -net vsync_1 [get_bd_ports vsync] [get_bd_pins ov7670_capture/vsync]
 
@@ -588,7 +594,6 @@ preplace port vsync -pg 1 -y 1310 -defaultsOSRD
 preplace port DDR -pg 1 -y 210 -defaultsOSRD
 preplace port scl -pg 1 -y 1550 -defaultsOSRD
 preplace port xclk -pg 1 -y 1420 -defaultsOSRD
-preplace port flash_sync_btn -pg 1 -y 980 -defaultsOSRD
 preplace port href -pg 1 -y 1330 -defaultsOSRD
 preplace port sda -pg 1 -y 1530 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -y 230 -defaultsOSRD
@@ -601,7 +606,7 @@ preplace portBus hdmi_d_n -pg 1 -y 1070 -defaultsOSRD
 preplace portBus rst_btn -pg 1 -y 1240 -defaultsOSRD
 preplace portBus hdmi_d_p -pg 1 -y 1090 -defaultsOSRD
 preplace portBus d -pg 1 -y 1350 -defaultsOSRD
-preplace inst ov7670_capture -pg 1 -lvl 2 -y 1300 -defaultsOSRD
+preplace inst ov7670_capture -pg 1 -lvl 2 -y 1230 -defaultsOSRD
 preplace inst o_axi_cdma -pg 1 -lvl 3 -y 490 -defaultsOSRD
 preplace inst rst_processing_system7_0_100M -pg 1 -lvl 1 -y 80 -defaultsOSRD
 preplace inst ov7670_clk_gen -pg 1 -lvl 5 -y 1460 -defaultsOSRD
@@ -610,6 +615,7 @@ preplace inst axi_mem_intercon_1 -pg 1 -lvl 4 -y 570 -defaultsOSRD
 preplace inst GND -pg 1 -lvl 5 -y 860 -defaultsOSRD
 preplace inst o_buf_controller -pg 1 -lvl 3 -y 1100 -defaultsOSRD
 preplace inst o_linebuffer -pg 1 -lvl 6 -y 710 -defaultsOSRD
+preplace inst shutter_sync_inverter -pg 1 -lvl 2 -y 1420 -defaultsOSRD
 preplace inst i_buf_controller -pg 1 -lvl 3 -y 1340 -defaultsOSRD
 preplace inst dvi_concat -pg 1 -lvl 5 -y 960 -defaultsOSRD
 preplace inst rgb2dvi_0 -pg 1 -lvl 6 -y 1000 -defaultsOSRD
@@ -626,65 +632,65 @@ preplace inst i_linebuffer -pg 1 -lvl 6 -y 1240 -defaultsOSRD
 preplace inst o_axi_bram_ctrl -pg 1 -lvl 5 -y 640 -defaultsOSRD
 preplace inst processing_system7_0_axi_periph -pg 1 -lvl 2 -y 320 -defaultsOSRD
 preplace netloc processing_system7_0_DDR 1 5 2 NJ 210 NJ
-preplace netloc i_axi_bram_ctrl_BRAM_PORTA 1 5 1 1990
-preplace netloc o_axi_bram_ctrl_BRAM_PORTA 1 5 1 1980
-preplace netloc axi_mem_intercon_M01_AXI 1 4 1 1420
+preplace netloc i_axi_bram_ctrl_BRAM_PORTA 1 5 1 2020
+preplace netloc o_axi_bram_ctrl_BRAM_PORTA 1 5 1 1950
+preplace netloc axi_mem_intercon_M01_AXI 1 4 1 1430
 preplace netloc rgb2dvi_0_TMDS_Clk_n 1 6 1 NJ
-preplace netloc i_buf_controller_0_o_data 1 3 3 1020 1240 NJ 1230 NJ
-preplace netloc flash_sync_btn_1 1 0 6 NJ 970 NJ 970 NJ 980 NJ 980 NJ 1030 N
-preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 690
-preplace netloc o_buf_controller_vsync 1 3 3 NJ 1050 NJ 1090 NJ
-preplace netloc ov7670_capture_o_vsync 1 2 1 710
+preplace netloc i_buf_controller_0_o_data 1 3 3 N 1340 NJ 1210 NJ
+preplace netloc shutter_sync_inverter_Res 1 2 4 770 990 NJ 990 NJ 1040 NJ
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 700
+preplace netloc o_buf_controller_vsync 1 3 3 NJ 1050 NJ 1080 NJ
+preplace netloc ov7670_capture_o_vsync 1 1 2 380 1350 710
 preplace netloc rgb2dvi_0_TMDS_Clk_p 1 6 1 NJ
-preplace netloc o_buf_controller_req_line 1 3 1 1000
+preplace netloc o_buf_controller_req_line 1 3 1 1040
 preplace netloc bram_we_concat_dout 1 5 1 NJ
 preplace netloc axi_mem_intercon_1_M00_AXI 1 4 1 1490
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 390 130 NJ 130 NJ 130 NJ 130 1980
-preplace netloc o_buf_controller_vde 1 3 3 NJ 1070 NJ 1080 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 380 130 NJ 130 NJ 130 NJ 130 1950
+preplace netloc o_buf_controller_vde 1 3 3 NJ 1060 NJ 1060 NJ
 preplace netloc dvi_concat_dout 1 5 1 NJ
-preplace netloc util_vector_logic_0_Res 1 1 5 360 1400 730 1440 NJ 1440 NJ 1520 NJ
+preplace netloc util_vector_logic_0_Res 1 1 5 340 1340 760 1220 NJ 1230 NJ 1220 NJ
 preplace netloc href_1 1 0 2 NJ 1330 NJ
-preplace netloc ov7670_capture_0_vde 1 2 1 690
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 30 170 NJ 150 NJ 150 NJ 150 NJ 150 1990
+preplace netloc ov7670_capture_0_vde 1 2 1 720
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 10 170 NJ 150 NJ 150 NJ 150 NJ 150 2020
 preplace netloc axi_mem_intercon_M00_AXI 1 4 1 1510
-preplace netloc axi_mem_intercon_1_M01_AXI 1 4 1 1430
-preplace netloc o_buf_controller_o_data 1 3 2 1000 1000 NJ
-preplace netloc ov7670_capture_0_hsync 1 2 1 720
-preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 4 360 170 700 250 1000 710 1440
-preplace netloc clk_1 1 0 5 NJ 1040 NJ 950 NJ 950 NJ 950 1450
-preplace netloc rst_btn_1 1 0 6 NJ 930 NJ 930 NJ 930 NJ 930 NJ 1040 1960
+preplace netloc axi_mem_intercon_1_M01_AXI 1 4 1 1440
+preplace netloc o_buf_controller_o_data 1 3 2 1040 1000 NJ
+preplace netloc ov7670_capture_0_hsync 1 2 1 740
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 4 350 170 730 250 1040 710 1450
+preplace netloc clk_1 1 0 5 NJ 1040 NJ 950 NJ 950 NJ 950 1440
+preplace netloc rst_btn_1 1 0 6 NJ 970 NJ 970 NJ 980 NJ 980 NJ 1030 NJ
 preplace netloc processing_system7_0_FIXED_IO 1 5 2 NJ 230 NJ
-preplace netloc ov7670_capture_0_dout 1 2 1 700
-preplace netloc ov7670_controller_0_start_capture 1 1 6 390 1450 NJ 1450 NJ 1400 NJ 1400 NJ 1400 2330
+preplace netloc ov7670_capture_0_dout 1 2 1 730
+preplace netloc ov7670_controller_0_start_capture 1 1 6 380 1330 NJ 1240 NJ 1250 NJ 1390 NJ 1390 2340
 preplace netloc rgb2dvi_0_TMDS_Data_n 1 6 1 NJ
-preplace netloc o_buf_controller_req_frame 1 3 1 990
-preplace netloc o_buf_controller_addr 1 3 3 990 720 NJ 720 NJ
-preplace netloc d_1 1 0 2 NJ 1350 NJ
-preplace netloc pclk_1 1 0 6 NJ 1190 380 1200 720 1230 NJ 1230 NJ 1200 NJ
-preplace netloc clk_wiz_0_clk_out2 1 2 4 730 960 NJ 960 NJ 1050 1950
-preplace netloc i_buf_controller_0_addr 1 3 3 NJ 1250 NJ 1220 NJ
+preplace netloc o_buf_controller_req_frame 1 3 1 1030
+preplace netloc o_buf_controller_addr 1 3 3 1030 720 NJ 720 NJ
+preplace netloc d_1 1 0 2 NJ 1290 NJ
+preplace netloc pclk_1 1 0 6 NJ 1180 360 1130 750 1230 NJ 1240 NJ 1230 NJ
+preplace netloc clk_wiz_0_clk_out2 1 2 4 780 930 NJ 930 NJ 1050 1950
+preplace netloc i_buf_controller_0_addr 1 3 3 NJ 1320 NJ 1200 NJ
 preplace netloc rgb2dvi_0_DDC 1 6 1 N
-preplace netloc o_axi_cdma_M_AXI 1 3 1 1010
-preplace netloc o_buf_controller_hsync 1 3 3 NJ 1060 NJ 1060 NJ
-preplace netloc VDD_dout 1 5 1 2000
+preplace netloc o_axi_cdma_M_AXI 1 3 1 1050
+preplace netloc o_buf_controller_hsync 1 3 3 NJ 1070 NJ 1100 NJ
+preplace netloc VDD_dout 1 5 1 2010
 preplace netloc ov7670_controller_scl 1 6 1 NJ
 preplace netloc Net 1 6 1 NJ
-preplace netloc ov7670_clk_gen_clk_out1 1 5 2 1970 1420 NJ
-preplace netloc dvi_clk_gen_clk_out2 1 2 4 NJ 970 NJ 970 NJ 1070 NJ
+preplace netloc ov7670_clk_gen_clk_out1 1 5 2 1980 1420 NJ
+preplace netloc dvi_clk_gen_clk_out2 1 2 4 NJ 960 NJ 960 NJ 1070 NJ
 preplace netloc rgb2dvi_0_TMDS_Data_p 1 6 1 NJ
-preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 3 370 160 NJ 160 1030
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 20 180 380 180 740 180 1040 170 1500 160 1950
-preplace netloc dvi_clk_gen_clk_out3 1 2 4 720 990 NJ 990 NJ 1100 NJ
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 3 360 160 NJ 160 1060
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 0 180 370 180 790 180 1070 170 1500 160 1940
+preplace netloc dvi_clk_gen_clk_out3 1 2 4 760 970 NJ 970 NJ 1090 NJ
 preplace netloc irq_concat_dout 1 4 1 1460
 preplace netloc GND_dout 1 5 1 NJ
-preplace netloc o_linebuffer_doutb 1 2 4 740 730 NJ 730 NJ 730 NJ
-preplace netloc i_axi_cdma_M_AXI 1 3 1 990
-preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 1 730
+preplace netloc o_linebuffer_doutb 1 2 4 790 730 NJ 730 NJ 730 NJ
+preplace netloc i_axi_cdma_M_AXI 1 3 1 1030
+preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 1 780
 preplace netloc vsync_1 1 0 2 NJ 1310 NJ
-preplace netloc i_buf_controller_frame_valid 1 3 1 1040
-preplace netloc i_buf_controller_line_valid 1 3 1 1010
+preplace netloc i_buf_controller_frame_valid 1 3 1 1070
+preplace netloc i_buf_controller_line_valid 1 3 1 1060
 preplace netloc i_buf_controller_0_we 1 3 2 NJ 1300 NJ
-levelinfo -pg 1 0 190 540 870 1270 1720 2160 2360 -top 0 -bot 1600
+levelinfo -pg 1 -20 180 550 910 1270 1730 2170 2370 -top 0 -bot 1600
 ",
 }
 

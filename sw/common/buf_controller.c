@@ -146,8 +146,6 @@ int init_buf_controller(void) {
 
 
 void update_buf_controller(void) {
-	int i;
-
     // Check the flags for transfers and address reset
     if (line_valid_flag) {
     	// Cache flush is essential!!!
@@ -172,11 +170,5 @@ void update_buf_controller(void) {
     if (req_frame_flag) {
         o_framebuf_line = 0;
         req_frame_flag = 0;
-        /*
-        for (i=0; i<20; i++) {
-        	xil_printf("0x%x ", g_framebuf[0][i]);
-        }
-        xil_printf("\n");
-        */
     }
 }

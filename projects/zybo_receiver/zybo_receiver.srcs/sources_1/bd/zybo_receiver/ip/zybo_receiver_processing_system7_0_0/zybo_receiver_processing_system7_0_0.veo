@@ -191,7 +191,7 @@ zybo_receiver_processing_system7_0_0 your_instance_name (
   .S_AXI_HP1_WID(S_AXI_HP1_WID),                        // input wire [5 : 0] S_AXI_HP1_WID
   .S_AXI_HP1_WDATA(S_AXI_HP1_WDATA),                    // input wire [63 : 0] S_AXI_HP1_WDATA
   .S_AXI_HP1_WSTRB(S_AXI_HP1_WSTRB),                    // input wire [7 : 0] S_AXI_HP1_WSTRB
-  .IRQ_F2P(IRQ_F2P),                                    // input wire [3 : 0] IRQ_F2P
+  .IRQ_F2P(IRQ_F2P),                                    // input wire [4 : 0] IRQ_F2P
   .FCLK_CLK0(FCLK_CLK0),                                // output wire FCLK_CLK0
   .FCLK_RESET0_N(FCLK_RESET0_N),                        // output wire FCLK_RESET0_N
   .MIO(MIO),                                            // inout wire [53 : 0] MIO

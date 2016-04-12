@@ -89,7 +89,7 @@ entity dvi2rgb is
       vid_pHSync : out std_logic;
       vid_pVSync : out std_logic;
       
-      flash_sync : out std_logic;
+      shutter_sync : out std_logic;
       
       PixelClk : out std_logic; --pixel-clock recovered from the DVI interface
       
@@ -201,7 +201,7 @@ pData(15 downto 8) <= pDataIn(0); -- blue is channel 0
 pHSync <= pC0(0); -- channel 0 carries control signals too
 pVSync <= pC1(0); -- channel 0 carries control signals too
 pVDE <= pDE(0); -- since channels are aligned, all of them are either active or blanking at once
-flash_sync <= pC0(1); -- channel 1 carries flash sync signals (non-spec!)
+shutter_sync <= pC0(1); -- channel 1 carries shutter sync signals (non-spec!)
 
 -- Clock outputs
 SerialClk <= SerialClk_int; -- fast 5x pixel clock for advanced use only

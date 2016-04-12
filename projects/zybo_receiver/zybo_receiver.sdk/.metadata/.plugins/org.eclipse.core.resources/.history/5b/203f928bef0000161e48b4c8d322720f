@@ -1,0 +1,82 @@
+/*
+ * storage_manager.c
+ *
+ * Author: Mike Wild <m.a.wild@se12.qmul.ac.uk>
+ * Date: 24th March 2016
+ *
+ * Library for saving frames to SD card.
+ *
+ */
+
+/***************************** Include Files *********************************/
+#include "xsdps.h"
+#include "ff.h"
+#include "framebuf.h"
+
+/************************** Constant Definitions *****************************/
+
+
+/**************************** Type Definitions *******************************/
+
+
+/***************** Macros (Inline Functions) Definitions *********************/
+
+
+/************************** Variable Definitions *****************************/
+static FIL fh;
+static FATFS fatfs;
+static char *filename = "image.pgm";
+static TCHAR *root_path = "0:/";
+u32 Platform;
+
+/************************** Function Prototypes ******************************/
+
+
+/*****************************************************************************/
+int init_storage_manager(void) {
+	FRESULT status;
+
+	status = f_mount(&fatfs, root_path, 0);
+	if (status != FR_OK) {
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+
+
+int save_frame(void) {
+	FRESULT status;
+	UINT bytes_written;
+	int line, pixel;
+
+	status = f_open(&fh, filename, FA_CREATE_ALWAYS | FA_WRITE);
+	if (status != FR_OK) {
+		return XST_FAILURE;
+	}
+
+	status = f_lseek(&fh, 0);
+	if (status != FR_OK) {
+		return XST_FAILURE;
+	}
+
+	f_puts("P2\n640 480\n255\n", &fh);
+
+	Xil_DCacheFlushRange((UINTPTR)g_framebuf, FRAMEBUF_WIDTH * FRAMEBUF_HEIGHT);
+	for (line=0; line<FRAMEBUF_HEIGHT; line++) {
+		for (pixel=0; pixel<FRAMEBUF_WIDTH; pixel++) {
+			f_write(&fh, sprintf("%d ", g_framebuf[line][pixel]));
+		}
+	}
+	status = f_write(&fh, (const void*)g_framebuf, FRAMEBUF_WIDTH * FRAMEBUF_HEIGHT, &bytes_written);
+	if (status != FR_OK) {
+		return XST_FAILURE;
+	}
+
+	status = f_close(&fh);
+	if (status != FR_OK) {
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}

@@ -1,6 +1,6 @@
-19:21:45 **** Incremental Build of configuration Debug for project zybo_receiver ****
+22:09:54 **** Incremental Build of configuration Debug for project zybo_receiver ****
 make all 
 make: Nothing to be done for `all'.
 
-19:21:46 Build Finished (took 172ms)
+22:09:54 Build Finished (took 234ms)
 

@@ -49,15 +49,25 @@
 #include "buf_controller.h"
 #include "framebuf.h"
 #include "interrupt.h"
+#include "storage_manager.h"
 #include "xil_printf.h"
+#include <xgpio.h>
 
 
 int main()
 {
+	int first_time = 0;
+	XGpio input;
+	int button_data = 0;
+
+	XGpio_Initialize(&input, XPAR_AXI_GPIO_0_DEVICE_ID);
+	XGpio_SetDataDirection(&input, 1, 0xF);
+
 	init_platform();
     init_interrupts();
     init_framebuf();
     init_buf_controller();
+    init_storage_manager();
 
     enable_interrupts();
 
@@ -65,13 +75,15 @@ int main()
 
     while (1) {
     	update_buf_controller();
+
+    	button_data = XGpio_DiscreteRead(&input, 1);
+
+    	if (button_data && !first_time) {
+    		xil_printf("Saving frame...\n");
+    		save_frame();
+    		first_time = 1;
+    	}
     }
-
-    xil_printf("Shutting down...\n");
-
-    cleanup_interrupts();
-    cleanup_buf_controller();
-    cleanup_platform();
 
     return 0;
 }

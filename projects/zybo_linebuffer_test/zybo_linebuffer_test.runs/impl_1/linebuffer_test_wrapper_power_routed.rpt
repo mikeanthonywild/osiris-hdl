@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date             : Sun Apr 10 18:26:02 2016
+| Date             : Mon Apr 11 17:21:16 2016
 | Host             : Study running 64-bit Service Pack 1  (build 7601)
 | Command          : 
 | Design           : linebuffer_test_wrapper
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 2.175 |
-| Dynamic (W)              | 2.031 |
+| Total On-Chip Power (W)  | 2.174 |
+| Dynamic (W)              | 2.030 |
 | Device Static (W)        | 0.144 |
 | Total Off-Chip Power (W) | 0.008 |
 | Effective TJA (C/W)      | 11.5  |
@@ -51,8 +51,8 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.026 |       18 |       --- |             --- |
-| Slice Logic              |     0.008 |    16695 |       --- |             --- |
-|   LUT as Logic           |     0.007 |     5928 |     17600 |           33.68 |
+| Slice Logic              |     0.008 |    16696 |       --- |             --- |
+|   LUT as Logic           |     0.007 |     5930 |     17600 |           33.69 |
 |   CARRY4                 |    <0.001 |      166 |      4400 |            3.77 |
 |   Register               |    <0.001 |     7739 |     35200 |           21.99 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
@@ -60,14 +60,14 @@ Table of Contents
 |   LUT as Distributed RAM |    <0.001 |      116 |      6000 |            1.93 |
 |   LUT as Shift Register  |    <0.001 |      338 |      6000 |            5.63 |
 |   Others                 |     0.000 |      649 |       --- |             --- |
-| Signals                  |     0.009 |    12140 |       --- |             --- |
+| Signals                  |     0.009 |    12137 |       --- |             --- |
 | Block RAM                |     0.023 |       16 |        60 |           26.67 |
 | MMCM                     |     0.086 |        1 |         2 |           50.00 |
 | PLL                      |     0.120 |        1 |         2 |           50.00 |
-| I/O                      |     0.185 |       27 |       100 |           27.00 |
+| I/O                      |     0.184 |       26 |       100 |           26.00 |
 | PS7                      |     1.565 |        1 |       --- |             --- |
 | Static Power             |     0.144 |          |           |                 |
-| Total                    |     2.166 |          |           |                 |
+| Total                    |     2.165 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -753,11 +753,11 @@ Table of Contents
 |         DataEncoders[0].DataEncoder                                  |     0.002 |
 |         DataEncoders[0].DataSerializer                               |     0.046 |
 |         DataEncoders[1].DataEncoder                                  |     0.002 |
-|         DataEncoders[1].DataSerializer                               |     0.047 |
+|         DataEncoders[1].DataSerializer                               |     0.046 |
 |         DataEncoders[2].DataEncoder                                  |     0.002 |
 |         DataEncoders[2].DataSerializer                               |     0.046 |
 |         GenerateDDC.DDC_EEPROM                                       |     0.002 |
-|           I2C_SlaveController                                        |     0.002 |
+|           I2C_SlaveController                                        |     0.001 |
 |             GlitchF_SCL                                              |    <0.001 |
 |             GlitchF_SDA                                              |    <0.001 |
 |             SyncSCL                                                  |    <0.001 |
@@ -770,6 +770,7 @@ Table of Contents
 |           ACTIVE_LOW_EXT.ACT_LO_EXT                                  |    <0.001 |
 |         SEQ                                                          |    <0.001 |
 |           SEQ_COUNTER                                                |    <0.001 |
+|     shutter_sync_inverter                                            |    <0.001 |
 +----------------------------------------------------------------------+-----------+
 
 

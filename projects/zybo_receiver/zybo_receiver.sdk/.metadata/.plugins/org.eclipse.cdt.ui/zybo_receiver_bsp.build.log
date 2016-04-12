@@ -1,4 +1,4 @@
-14:48:19 **** Build of project zybo_receiver_bsp ****
+19:21:11 **** Auto Build of project zybo_receiver_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/axicdma_v4_0/src"
 make -C ps7_cortexa9_0/libsrc/axicdma_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
@@ -43,6 +43,7 @@ xaxicdma_bdring.c: In function 'XAxiCdma_BdRingGetCurrBd':
 xaxicdma_bdring.c:204:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
    return (XAxiCdma_Bd *)((XAxiCdma_BdRead(InstancePtr->BaseAddr, XAXICDMA_CDESC_OFFSET)) |
           ^
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
 "Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 "Compiling coresightps_dcc"
@@ -96,5 +97,5 @@ make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm
 "Compiling xadcps"
 'Finished building libraries'
 
-14:48:45 Build Finished (took 26s.332ms)
+19:21:33 Build Finished (took 22s.791ms)
 

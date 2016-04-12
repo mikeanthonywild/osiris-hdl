@@ -372,16 +372,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>o_buf_controller</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="o_buf_controller" spirit:vendor="mikeanthonywild.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">linebuffer_test_o_buf_controller_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="V_FRONT_PORCH">10</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="V_SYNC_PULSE">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="V_BACK_PORCH">33</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>i_linebuffer</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="blk_mem_gen" spirit:vendor="xilinx.com" spirit:version="8.3"/>
         <spirit:configurableElementValues>
@@ -422,13 +412,6 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">linebuffer_test_xlconcat_0_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="NUM_PORTS">4</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>i_buf_controller</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="i_buf_controller" spirit:vendor="mikeanthonywild.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">linebuffer_test_i_buf_controller_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -689,6 +672,23 @@
           <spirit:configurableElementValue spirit:referenceId="kESIDFile">c:/Users/Mike/Documents/osiris-hdl/ESID/ov7670/ov7670.txt</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>o_buf_controller</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="o_buf_controller" spirit:vendor="mikeanthonywild.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">linebuffer_test_o_buf_controller_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="V_FRONT_PORCH">10</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="V_SYNC_PULSE">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="V_BACK_PORCH">33</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>i_buf_controller</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="i_buf_controller" spirit:vendor="mikeanthonywild.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">linebuffer_test_i_buf_controller_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections>
       <spirit:interconnection>
@@ -859,9 +859,9 @@
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_0_clk_out2</spirit:name>
         <spirit:internalPortReference spirit:componentRef="dvi_clk_gen" spirit:portRef="clk_out1"/>
-        <spirit:internalPortReference spirit:componentRef="o_buf_controller" spirit:portRef="pclk"/>
         <spirit:internalPortReference spirit:componentRef="o_linebuffer" spirit:portRef="clkb"/>
         <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="PixelClk"/>
+        <spirit:internalPortReference spirit:componentRef="o_buf_controller" spirit:portRef="pclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rgb2dvi_0_TMDS_Clk_p</spirit:name>
@@ -957,9 +957,9 @@
       <spirit:adHocConnection>
         <spirit:name>pclk_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="pclk"/>
-        <spirit:internalPortReference spirit:componentRef="i_buf_controller" spirit:portRef="pclk"/>
         <spirit:internalPortReference spirit:componentRef="i_linebuffer" spirit:portRef="clkb"/>
         <spirit:internalPortReference spirit:componentRef="ov7670_capture" spirit:portRef="pclk_12"/>
+        <spirit:internalPortReference spirit:componentRef="i_buf_controller" spirit:portRef="pclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>d_1</spirit:name>
@@ -970,9 +970,9 @@
         <spirit:name>util_vector_logic_0_Res</spirit:name>
         <spirit:internalPortReference spirit:componentRef="inverter" spirit:portRef="Res"/>
         <spirit:internalPortReference spirit:componentRef="ov7670_controller" spirit:portRef="reset_n"/>
+        <spirit:internalPortReference spirit:componentRef="ov7670_capture" spirit:portRef="reset_n"/>
         <spirit:internalPortReference spirit:componentRef="o_buf_controller" spirit:portRef="reset_n"/>
         <spirit:internalPortReference spirit:componentRef="i_buf_controller" spirit:portRef="reset_n"/>
-        <spirit:internalPortReference spirit:componentRef="ov7670_capture" spirit:portRef="reset_n"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>dvi_concat_dout</spirit:name>

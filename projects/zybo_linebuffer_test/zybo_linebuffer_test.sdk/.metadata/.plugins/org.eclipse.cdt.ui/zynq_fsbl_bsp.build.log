@@ -1,4 +1,4 @@
-16:34:04 **** Build of project zynq_fsbl_bsp ****
+18:32:48 **** Auto Build of project zynq_fsbl_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/axicdma_v4_0/src"
 make -C ps7_cortexa9_0/libsrc/axicdma_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
@@ -106,5 +106,5 @@ make -C ps7_cortexa9_0/libsrc/xilffs_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm
 make -C ps7_cortexa9_0/libsrc/xilrsa_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
 'Finished building libraries'
 
-16:34:31 Build Finished (took 27s.19ms)
+18:33:18 Build Finished (took 29s.531ms)
 

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: mikeanthonywild.com:user:o_buf_controller:1.0
-// IP Revision: 3
+// IP Revision: 4
 
 (* X_CORE_INFO = "o_buf_controller,Vivado 2015.4" *)
 (* CHECK_LICENSE_TYPE = "linebuffer_test_o_buf_controller_0_0,o_buf_controller,{}" *)

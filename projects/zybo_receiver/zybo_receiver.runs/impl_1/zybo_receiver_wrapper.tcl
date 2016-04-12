@@ -48,7 +48,6 @@ set_msg_config -id {HDL 9-1654} -limit 100000
 start_step init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z010clg400-1
   set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
@@ -77,6 +76,7 @@ set rc [catch {
   read_xdc -ref zybo_receiver_axi_cdma_0_1 -cells U0 c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_cdma_0_1/zybo_receiver_axi_cdma_0_1.xdc
   set_property processing_order EARLY [get_files c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_cdma_0_1/zybo_receiver_axi_cdma_0_1.xdc]
   read_xdc C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc
+  read_xdc C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/constrs_1/new/debug.xdc
   read_xdc -ref zybo_receiver_auto_ds_0 -cells inst c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_auto_ds_0/zybo_receiver_auto_ds_0_clocks.xdc
   set_property processing_order LATE [get_files c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_auto_ds_0/zybo_receiver_auto_ds_0_clocks.xdc]
   read_xdc -ref zybo_receiver_auto_us_0 -cells inst c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_auto_us_0/zybo_receiver_auto_us_0_clocks.xdc

@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date              : Mon Apr 04 19:43:10 2016
+| Date              : Sun Apr 10 19:02:25 2016
 | Host              : Study running 64-bit Service Pack 1  (build 7601)
 | Command           : report_clock_utilization -file zybo_receiver_wrapper_clock_utilization_routed.rpt
 | Design            : zybo_receiver_wrapper
@@ -51,10 +51,10 @@ Table of Contents
 | Index | BUFG Cell                                                                   | Net Name                                                                | BELs | Sites | Fixed |
 +-------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------+------+-------+-------+
 |     1 | zybo_receiver_i/ref_clk_gen/inst/clkf_buf                                   | zybo_receiver_i/ref_clk_gen/inst/clkfbout_buf_zybo_receiver_clk_wiz_0_0 |    1 |     1 |    no |
-|     2 | zybo_receiver_i/ref_clk_gen/inst/clkout2_buf                                | zybo_receiver_i/ref_clk_gen/inst/clk_out2                               |   70 |    29 |    no |
-|     3 | zybo_receiver_i/dvi2rgb_0/U0/GenerateBUFG.ResyncToBUFG_X/InstBUFG           | zybo_receiver_i/dvi2rgb_0/U0/GenerateBUFG.ResyncToBUFG_X/CLK            |   95 |    25 |    no |
-|     4 | zybo_receiver_i/ref_clk_gen/inst/clkout1_buf                                | zybo_receiver_i/ref_clk_gen/inst/clk_out1                               |  101 |    32 |    no |
-|     5 | zybo_receiver_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG | zybo_receiver_i/processing_system7_0/inst/FCLK_CLK0                     | 7980 |  2123 |    no |
+|     2 | zybo_receiver_i/ref_clk_gen/inst/clkout2_buf                                | zybo_receiver_i/ref_clk_gen/inst/clk_out2                               |   70 |    25 |    no |
+|     3 | zybo_receiver_i/ref_clk_gen/inst/clkout1_buf                                | zybo_receiver_i/ref_clk_gen/inst/clk_out1                               |  101 |    32 |    no |
+|     4 | zybo_receiver_i/dvi2rgb_0/U0/GenerateBUFG.ResyncToBUFG_X/InstBUFG           | zybo_receiver_i/dvi2rgb_0/U0/GenerateBUFG.ResyncToBUFG_X/CLK            |  106 |    37 |    no |
+|     5 | zybo_receiver_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG | zybo_receiver_i/processing_system7_0/inst/FCLK_CLK0                     | 7986 |  2130 |    no |
 +-------+-----------------------------------------------------------------------------+-------------------------------------------------------------------------+------+-------+-------+
 
 
@@ -87,7 +87,7 @@ Table of Contents
 +-------+------------------------------------------------------------+----------------------------------------------------------+------+-------+-------+
 | Index | BUFR Cell                                                  | Net Name                                                 | BELs | Sites | Fixed |
 +-------+------------------------------------------------------------+----------------------------------------------------------+------+-------+-------+
-|     1 | zybo_receiver_i/dvi2rgb_0/U0/TMDS_ClockingX/PixelClkBuffer | zybo_receiver_i/dvi2rgb_0/U0/TMDS_ClockingX/PixelClk_int |  368 |   112 |    no |
+|     1 | zybo_receiver_i/dvi2rgb_0/U0/TMDS_ClockingX/PixelClkBuffer | zybo_receiver_i/dvi2rgb_0/U0/TMDS_ClockingX/PixelClk_int |  368 |   114 |    no |
 +-------+------------------------------------------------------------+----------------------------------------------------------+------+-------+-------+
 
 
@@ -127,10 +127,10 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 3563 |  8800 |  259 |  1600 |    0 |    20 |    2 |    10 |    0 |    20 |
-| X1Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 3459 |  8800 |  410 |  1400 |    0 |    40 |    2 |    20 |    0 |    20 |
-| X0Y1              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  267 |  8800 |   18 |  1600 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y1              |    5 |    12 |    1 |     4 |    0 |     2 |    1 |     4 |    1 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    6 |    50 |    0 |    50 |  569 |  8800 |   49 |  1400 |    0 |    40 |    0 |    20 |    0 |    20 |
+| X0Y0              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 3599 |  8800 |  268 |  1600 |    0 |    20 |    2 |    10 |    0 |    20 |
+| X1Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 3485 |  8800 |  397 |  1400 |    0 |    40 |    8 |    20 |    0 |    20 |
+| X0Y1              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  215 |  8800 |   22 |  1600 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y1              |    5 |    12 |    1 |     4 |    0 |     2 |    1 |     4 |    1 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    6 |    50 |    0 |    50 |  564 |  8800 |   49 |  1400 |    0 |    40 |    0 |    20 |    0 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * RAMB36 site can be used as two RAMB18/FIFO18 sites.
 
@@ -141,8 +141,8 @@ Table of Contents
 +-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------------------------------------------+
 | Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                    Clock Net Name                   |
 +-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------------------------------------------+
-| BUFG        | BUFHCE_X0Y8 |   no  |         0 |        0 |       0 |         2 |       0 |       0 |   32 |     0 |        0 | zybo_receiver_i/ref_clk_gen/inst/clk_out2           |
-| BUFG        | BUFHCE_X0Y9 |   no  |         0 |        0 |       0 |         2 |       0 |       0 | 3531 |   259 |        0 | zybo_receiver_i/processing_system7_0/inst/FCLK_CLK0 |
+| BUFG        | BUFHCE_X0Y8 |   no  |         0 |        0 |       0 |         2 |       0 |       0 |   34 |     0 |        0 | zybo_receiver_i/ref_clk_gen/inst/clk_out2           |
+| BUFG        | BUFHCE_X0Y9 |   no  |         0 |        0 |       0 |         2 |       0 |       0 | 3565 |   268 |        0 | zybo_receiver_i/processing_system7_0/inst/FCLK_CLK0 |
 +-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------------------------------------------+
 
 
@@ -152,9 +152,9 @@ Table of Contents
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+--------------------------------------------------------------+
 | Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                        Clock Net Name                        |
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+--------------------------------------------------------------+
-| BUFG        | BUFHCE_X1Y9  |   no  |         0 |        0 |       0 |         0 |       0 |       0 |    5 |     0 |        0 | zybo_receiver_i/ref_clk_gen/inst/clk_out2                    |
-| BUFG        | BUFHCE_X1Y8  |   no  |         0 |        0 |       0 |         2 |       0 |       0 |   83 |     0 |        0 | zybo_receiver_i/dvi2rgb_0/U0/GenerateBUFG.ResyncToBUFG_X/CLK |
-| BUFG        | BUFHCE_X1Y10 |   no  |         0 |        0 |       0 |         2 |       0 |       0 | 3371 |   410 |        0 | zybo_receiver_i/processing_system7_0/inst/FCLK_CLK0          |
+| BUFG        | BUFHCE_X1Y9  |   no  |         0 |        0 |       0 |         0 |       0 |       0 |    3 |     0 |        0 | zybo_receiver_i/ref_clk_gen/inst/clk_out2                    |
+| BUFG        | BUFHCE_X1Y8  |   no  |         0 |        0 |       0 |         8 |       0 |       0 |   88 |     0 |        0 | zybo_receiver_i/dvi2rgb_0/U0/GenerateBUFG.ResyncToBUFG_X/CLK |
+| BUFG        | BUFHCE_X1Y10 |   no  |         0 |        0 |       0 |         8 |       0 |       0 | 3394 |   397 |        0 | zybo_receiver_i/processing_system7_0/inst/FCLK_CLK0          |
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+--------------------------------------------------------------+
 
 
@@ -164,8 +164,8 @@ Table of Contents
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------------+
 | Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                    Clock Net Name                   |
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------------+
-| BUFG        | BUFHCE_X0Y20 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  18 |     0 |        0 | zybo_receiver_i/ref_clk_gen/inst/clk_out2           |
-| BUFG        | BUFHCE_X0Y21 |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 249 |    18 |        0 | zybo_receiver_i/processing_system7_0/inst/FCLK_CLK0 |
+| BUFG        | BUFHCE_X0Y20 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  16 |     0 |        0 | zybo_receiver_i/ref_clk_gen/inst/clk_out2           |
+| BUFG        | BUFHCE_X0Y21 |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 199 |    22 |        0 | zybo_receiver_i/processing_system7_0/inst/FCLK_CLK0 |
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------------+
 
 
@@ -178,9 +178,9 @@ Table of Contents
 | BUFIO       |      ---     |   no  |         0 |        0 |       0 |         0 |      12 |       0 |   0 |     0 |        0 | zybo_receiver_i/dvi2rgb_0/U0/TMDS_ClockingX/pDataQ_reg[8]               |
 | BUFG        | BUFHCE_X1Y12 |   no  |         0 |        1 |       0 |         0 |       0 |       0 |   0 |     0 |        0 | zybo_receiver_i/ref_clk_gen/inst/clkfbout_buf_zybo_receiver_clk_wiz_0_0 |
 | BUFG        | BUFHCE_X1Y20 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  10 |     0 |        0 | zybo_receiver_i/dvi2rgb_0/U0/GenerateBUFG.ResyncToBUFG_X/CLK            |
-| BUFG        | BUFHCE_X1Y21 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  13 |     0 |        0 | zybo_receiver_i/ref_clk_gen/inst/clk_out2                               |
+| BUFG        | BUFHCE_X1Y21 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  15 |     0 |        0 | zybo_receiver_i/ref_clk_gen/inst/clk_out2                               |
 | BUFG        | BUFHCE_X1Y23 |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 100 |     0 |        0 | zybo_receiver_i/ref_clk_gen/inst/clk_out1                               |
-| BUFG        | BUFHCE_X1Y22 |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 136 |     1 |        0 | zybo_receiver_i/processing_system7_0/inst/FCLK_CLK0                     |
+| BUFG        | BUFHCE_X1Y22 |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 129 |     1 |        0 | zybo_receiver_i/processing_system7_0/inst/FCLK_CLK0                     |
 | BUFR        |      ---     |   no  |         0 |        0 |       0 |         0 |       6 |       0 | 310 |    48 |        0 | zybo_receiver_i/dvi2rgb_0/U0/TMDS_ClockingX/PixelClk_int                |
 +-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-------------------------------------------------------------------------+
 

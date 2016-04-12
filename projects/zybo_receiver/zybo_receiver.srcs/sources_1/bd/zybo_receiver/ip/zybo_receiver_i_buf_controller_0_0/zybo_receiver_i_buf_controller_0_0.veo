@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: mikeanthonywild.com:user:i_buf_controller:1.0
-// IP Revision: 4
+// IP Revision: 6
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections

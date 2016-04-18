@@ -1,6 +1,21 @@
-22:09:54 **** Incremental Build of configuration Debug for project zybo_receiver ****
+22:39:01 **** Auto Build of configuration Debug for project zybo_receiver ****
 make all 
-make: Nothing to be done for `all'.
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90964	 310408	 333120	 734492	  b351c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
 
-22:09:54 Build Finished (took 234ms)
+22:39:03 Build Finished (took 1s.762ms)
 

@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+	[bootloader]C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zynq_fsbl\Debug\zynq_fsbl.elf
+	C:\Users\Mike\Documents\osiris-hdl\bitfiles\demo_ov7670_rx.bit
+	C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\Debug\zybo_receiver.elf
+}

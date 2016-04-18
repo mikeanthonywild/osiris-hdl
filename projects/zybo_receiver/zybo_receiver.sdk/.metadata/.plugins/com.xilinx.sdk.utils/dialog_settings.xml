@@ -1,3 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\Debug" key="bootgen_files_selection"/>
+	<item value="C:\Users\Mike\Documents\osiris-hdl\bitfiles" key="program_fpga_view_bit_bmm_browse_key"/>
+	<item value="C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\Debug" key="last_stored_selection"/>
 </section>

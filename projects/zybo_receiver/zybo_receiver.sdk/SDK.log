@@ -600,3 +600,112 @@ Reason: ERROR: [Common 17-39] 'hsi::generate_bsp' failed due to earlier errors.
 22:07:21 INFO  : Processor reset is completed for ps7_cortexa9_0
 22:09:55 INFO  : Processor reset is completed for ps7_cortexa9_0
 22:41:05 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:32:59 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+18:33:12 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+18:33:14 INFO  : XSDB server has started successfully.
+18:33:14 INFO  : XSDB server has started successfully.
+18:33:48 INFO  : Processing command line option -hwspec C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+18:33:49 INFO  : Checking for hwspec changes in the project zybo_receiver_wrapper_hw_platform_0.
+18:34:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:34:04 ERROR : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772162A" && level==0} -index 1' is cancelled.
+18:34:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:34:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:34:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+18:34:34 INFO  : FPGA configured successfully with bitstream "C:/Users/Mike/Documents/osiris-hdl/bitfiles/demo_ov7670_rx.bit"
+18:35:06 INFO  : ps7_init is completed.
+18:35:06 INFO  : ps7_post_config is completed.
+18:35:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:36:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:37:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:37:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+18:37:42 INFO  : FPGA configured successfully with bitstream "C:/Users/Mike/Documents/osiris-hdl/bitfiles/demo_ov7670_rx.bit"
+18:37:47 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279772162A on TCP:127.0.0.1:3121
+
+
+18:37:47 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279772162A on TCP:127.0.0.1:3121
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:38:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:38:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+18:38:09 INFO  : FPGA configured successfully with bitstream "C:/Users/Mike/Documents/osiris-hdl/bitfiles/demo_ov7670_rx.bit"
+18:38:14 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279772162A on TCP:127.0.0.1:3121
+
+
+18:38:14 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Failed to open Cable Node jsn-Zybo-210279772162A on TCP:127.0.0.1:3121
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+18:38:25 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:38:42 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+18:38:46 INFO  : XSDB server has started successfully.
+18:38:46 INFO  : Processing command line option -hwspec C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper.hdf.
+18:38:46 INFO  : Checking for hwspec changes in the project zybo_receiver_wrapper_hw_platform_0.
+18:39:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:39:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+18:39:07 INFO  : FPGA configured successfully with bitstream "C:/Users/Mike/Documents/osiris-hdl/bitfiles/demo_ov7670_rx.bit"
+18:39:19 INFO  : ps7_init is completed.
+18:39:19 INFO  : ps7_post_config is completed.
+18:39:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:39:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:40:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:41:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:41:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+18:41:42 INFO  : FPGA configured successfully with bitstream "C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper_hw_platform_0/zybo_receiver_wrapper.bit"
+18:41:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:49:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:52:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:03:05 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+21:50:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:50:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279772551A" && level==0} -index 1' command is executed.
+21:50:41 INFO  : FPGA configured successfully with bitstream "C:/Users/Mike/Documents/osiris-hdl/bitfiles/demo_ov7670_rx.bit"
+21:51:20 INFO  : ps7_init is completed.
+21:51:20 INFO  : ps7_post_config is completed.
+21:51:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:18:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:20:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:25:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:26:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:27:13 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:27:15 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:27:38 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:29:20 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:29:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:33:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:33:57 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:33:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:36:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:43:36 INFO  : Invoking Bootgen: bootgen -image output.bif -o C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zynq_fsbl\BOOT.bin
+22:43:36 INFO  : Creating new bif file C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zynq_fsbl\output.bif
+22:43:38 INFO  : Bootgen command execution is done.
+22:49:24 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

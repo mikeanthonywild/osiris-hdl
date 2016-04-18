@@ -28,6 +28,6 @@
 
 /************************** Function Prototypes ******************************/
 int init_storage_manager(void);
-int save_frame(void);
+void update_storage_manager(void);
 
 #endif /* STORAGE_MANAGER_H_ */

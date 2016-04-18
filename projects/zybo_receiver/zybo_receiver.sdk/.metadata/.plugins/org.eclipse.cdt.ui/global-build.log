@@ -9305,3 +9305,1366 @@ make: Nothing to be done for `all'.
 22:09:54 **** Incremental Build of configuration Debug for project zybo_receiver ****
 make all 
 make: Nothing to be done for `all'.
+18:34:51 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+18:36:32 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+18:37:46 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+18:38:13 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+18:39:13 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+18:39:39 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+18:40:36 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+18:41:46 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+18:49:06 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+18:52:07 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+21:38:45 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+In file included from C:\Users\Mike\Documents\osiris-hdl\sw\common/framebuf.h:15:0,
+                 from C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:14:
+C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src/platform_config.h:27:8: error: no macro name given in #define directive
+ #define
+        ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:50:7: warning: unused variable 'bytes_written' [-Wunused-variable]
+  UINT bytes_written;
+       ^
+make: *** [sw/receiver/storage_manager.o] Error 1
+21:39:05 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:50:7: warning: unused variable 'bytes_written' [-Wunused-variable]
+  UINT bytes_written;
+       ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/common/buf_controller.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/common/buf_controller.d" -MT"sw/common/buf_controller.d" -o "sw/common/buf_controller.o" "C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/common/buf_controller.c'
+' '
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/common/framebuf.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/common/framebuf.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/common/framebuf.d" -MT"sw/common/framebuf.d" -o "sw/common/framebuf.o" "C:/Users/Mike/Documents/osiris-hdl/sw/common/framebuf.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/common/framebuf.c'
+' '
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/common/interrupt.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/common/interrupt.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/common/interrupt.d" -MT"sw/common/interrupt.d" -o "sw/common/interrupt.o" "C:/Users/Mike/Documents/osiris-hdl/sw/common/interrupt.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/common/interrupt.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"src/helloworld.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"src/platform.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61808	 309244	 333056	 704108	  abe6c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:39:31 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:52:7: warning: unused variable 'bytes_written' [-Wunused-variable]
+  UINT bytes_written;
+       ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61808	 309244	 333056	 704108	  abe6c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:39:46 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:53:7: warning: unused variable 'bytes_written' [-Wunused-variable]
+  UINT bytes_written;
+       ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61808	 309244	 333056	 704108	  abe6c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:39:50 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:53:7: warning: unused variable 'bytes_written' [-Wunused-variable]
+  UINT bytes_written;
+       ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61808	 309244	 333056	 704108	  abe6c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:40:16 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'init_storage_manager':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:45:2: error: unknown type name 'XGpio'
+  XGpio input;
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:48:2: warning: implicit declaration of function 'XGpio_Initialize' [-Wimplicit-function-declaration]
+  XGpio_Initialize(&input, XPAR_AXI_GPIO_0_DEVICE_ID);
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:49:2: warning: implicit declaration of function 'XGpio_SetDataDirection' [-Wimplicit-function-declaration]
+  XGpio_SetDataDirection(&input, 1, 0xF);
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:46:6: warning: unused variable 'button_data' [-Wunused-variable]
+  int button_data = 0;
+      ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:57:7: warning: unused variable 'bytes_written' [-Wunused-variable]
+  UINT bytes_written;
+       ^
+make: *** [sw/receiver/storage_manager.o] Error 1
+21:40:39 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'init_storage_manager':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:45:2: error: unknown type name 'XGpio'
+  XGpio push_buttons;
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:48:2: warning: implicit declaration of function 'XGpio_Initialize' [-Wimplicit-function-declaration]
+  XGpio_Initialize(&input, XPAR_AXI_GPIO_0_DEVICE_ID);
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:48:20: error: 'input' undeclared (first use in this function)
+  XGpio_Initialize(&input, XPAR_AXI_GPIO_0_DEVICE_ID);
+                    ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:48:20: note: each undeclared identifier is reported only once for each function it appears in
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:49:2: warning: implicit declaration of function 'XGpio_SetDataDirection' [-Wimplicit-function-declaration]
+  XGpio_SetDataDirection(&input, 1, 0xF);
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:46:6: warning: unused variable 'button_data' [-Wunused-variable]
+  int button_data = 0;
+      ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:45:8: warning: unused variable 'push_buttons' [-Wunused-variable]
+  XGpio push_buttons;
+        ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:57:7: warning: unused variable 'bytes_written' [-Wunused-variable]
+  UINT bytes_written;
+       ^
+make: *** [sw/receiver/storage_manager.o] Error 1
+21:40:50 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'init_storage_manager':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:45:2: error: unknown type name 'XGpio'
+  XGpio push_buttons;
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:48:2: warning: implicit declaration of function 'XGpio_Initialize' [-Wimplicit-function-declaration]
+  XGpio_Initialize(&input, XPAR_AXI_GPIO_0_DEVICE_ID);
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:48:20: error: 'input' undeclared (first use in this function)
+  XGpio_Initialize(&input, XPAR_AXI_GPIO_0_DEVICE_ID);
+                    ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:48:20: note: each undeclared identifier is reported only once for each function it appears in
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:49:2: warning: implicit declaration of function 'XGpio_SetDataDirection' [-Wimplicit-function-declaration]
+  XGpio_SetDataDirection(&input, 1, 0xF);
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:46:6: warning: unused variable 'button_data' [-Wunused-variable]
+  int button_data = 0;
+      ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:45:8: warning: unused variable 'push_buttons' [-Wunused-variable]
+  XGpio push_buttons;
+        ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:57:7: warning: unused variable 'bytes_written' [-Wunused-variable]
+  UINT bytes_written;
+       ^
+make: *** [sw/receiver/storage_manager.o] Error 1
+21:41:08 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'init_storage_manager':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:49:20: error: 'input' undeclared (first use in this function)
+  XGpio_Initialize(&input, XPAR_AXI_GPIO_0_DEVICE_ID);
+                    ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:49:20: note: each undeclared identifier is reported only once for each function it appears in
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:47:6: warning: unused variable 'button_data' [-Wunused-variable]
+  int button_data = 0;
+      ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:46:8: warning: unused variable 'push_buttons' [-Wunused-variable]
+  XGpio push_buttons;
+        ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:58:7: warning: unused variable 'bytes_written' [-Wunused-variable]
+  UINT bytes_written;
+       ^
+make: *** [sw/receiver/storage_manager.o] Error 1
+21:41:59 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'init_storage_manager':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:48:6: warning: unused variable 'button_data' [-Wunused-variable]
+  int button_data = 0;
+      ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"src/helloworld.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:74:6: error: 'button_data' undeclared (first use in this function)
+      button_data = XGpio_DiscreteRead(&input, 1);
+      ^
+../src/helloworld.c:74:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:74:6: warning: implicit declaration of function 'XGpio_DiscreteRead' [-Wimplicit-function-declaration]
+../src/helloworld.c:74:40: error: 'input' undeclared (first use in this function)
+      button_data = XGpio_DiscreteRead(&input, 1);
+                                        ^
+make: *** [src/helloworld.o] Error 1
+21:42:32 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:32:12: warning: 'Platform' defined but not used [-Wunused-variable]
+ static u32 Platform;
+            ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:34:12: warning: 'button_data' defined but not used [-Wunused-variable]
+ static int button_data = 0;
+            ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"src/helloworld.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:74:6: error: 'button_data' undeclared (first use in this function)
+      button_data = XGpio_DiscreteRead(&input, 1);
+      ^
+../src/helloworld.c:74:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:74:6: warning: implicit declaration of function 'XGpio_DiscreteRead' [-Wimplicit-function-declaration]
+../src/helloworld.c:74:40: error: 'input' undeclared (first use in this function)
+      button_data = XGpio_DiscreteRead(&input, 1);
+                                        ^
+make: *** [src/helloworld.o] Error 1
+21:42:46 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"src/helloworld.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'first_time' [-Wunused-variable]
+  int first_time = 0;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61724	 309244	 333056	 704024	  abe18	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:43:20 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'update_storage_manager':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:59:22: error: 'first_time' undeclared (first use in this function)
+  if (button_data && !first_time) {
+                      ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:59:22: note: each undeclared identifier is reported only once for each function it appears in
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:61:3: warning: implicit declaration of function 'save_frame' [-Wimplicit-function-declaration]
+   save_frame();
+   ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: At top level:
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:32:12: warning: 'Platform' defined but not used [-Wunused-variable]
+ static u32 Platform;
+            ^
+make: *** [sw/receiver/storage_manager.o] Error 1
+21:43:37 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'update_storage_manager':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:61:3: warning: implicit declaration of function 'save_frame' [-Wimplicit-function-declaration]
+   save_frame();
+   ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: At top level:
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:32:12: warning: 'Platform' defined but not used [-Wunused-variable]
+ static u32 Platform;
+            ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61808	 309244	 333056	 704108	  abe6c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:43:53 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'update_storage_manager':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:60:3: warning: implicit declaration of function 'save_frame' [-Wimplicit-function-declaration]
+   save_frame();
+   ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61808	 309244	 333056	 704108	  abe6c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:44:15 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'update_storage_manager':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:60:3: warning: implicit declaration of function 'save_frame' [-Wimplicit-function-declaration]
+   save_frame();
+   ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61808	 309244	 333056	 704108	  abe6c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:44:37 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61808	 309244	 333056	 704108	  abe6c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:44:55 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"src/helloworld.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'first_time' [-Wunused-variable]
+  int first_time = 0;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61808	 309244	 333056	 704108	  abe6c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:45:08 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"src/helloworld.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'first_time' [-Wunused-variable]
+  int first_time = 0;
+      ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61872	 309244	 333056	 704172	  abeac	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:50:48 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+21:52:42 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"src/helloworld.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61808	 309244	 333056	 704108	  abe6c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:53:02 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:35:12: warning: 'button_pressed' defined but not used [-Wunused-variable]
+ static int button_pressed = 0;
+            ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61808	 309244	 333056	 704108	  abe6c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:53:17 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61872	 309244	 333056	 704172	  abeac	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:53:44 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61872	 309244	 333056	 704172	  abeac	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:53:59 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61872	 309244	 333056	 704172	  abeac	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:54:47 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'update_storage_manager':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:62:3: warning: implicit declaration of function 'save_frame' [-Wimplicit-function-declaration]
+   save_frame();
+   ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"src/helloworld.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61872	 309244	 333056	 704172	  abeac	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:55:01 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61872	 309244	 333056	 704172	  abeac	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+21:55:26 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  61872	 309244	 333056	 704172	  abeac	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+22:03:28 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'get_next_free_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:77:1: error: expected expression before '}' token
+ }
+ ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:84:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  status = f_open(&fh, sprintf("%s%03d"), FA_CREATE_ALWAYS | FA_WRITE);
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:84:23: warning: incompatible implicit declaration of built-in function 'sprintf'
+  status = f_open(&fh, sprintf("%s%03d"), FA_CREATE_ALWAYS | FA_WRITE);
+                       ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:84:23: error: too few arguments to function 'sprintf'
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: At top level:
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:31:14: warning: 'basename' defined but not used [-Wunused-variable]
+ static char *basename = "image.pgm";
+              ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'get_next_free_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:77:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [sw/receiver/storage_manager.o] Error 1
+22:03:37 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'get_next_free_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:77:1: error: expected expression before '}' token
+ }
+ ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:84:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  status = f_open(&fh, sprintf("%s%03d.PGM"), FA_CREATE_ALWAYS | FA_WRITE);
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:84:23: warning: incompatible implicit declaration of built-in function 'sprintf'
+  status = f_open(&fh, sprintf("%s%03d.PGM"), FA_CREATE_ALWAYS | FA_WRITE);
+                       ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:84:23: error: too few arguments to function 'sprintf'
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: At top level:
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:31:14: warning: 'basename' defined but not used [-Wunused-variable]
+ static char *basename = "image.pgm";
+              ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'get_next_free_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:77:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [sw/receiver/storage_manager.o] Error 1
+22:03:50 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'get_next_free_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:77:1: error: expected expression before '}' token
+ }
+ ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:84:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  status = f_open(&fh, sprintf("%s%03d.PGM", basename, frameno), FA_CREATE_ALWAYS | FA_WRITE);
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:84:23: warning: incompatible implicit declaration of built-in function 'sprintf'
+  status = f_open(&fh, sprintf("%s%03d.PGM", basename, frameno), FA_CREATE_ALWAYS | FA_WRITE);
+                       ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:84:55: error: 'frameno' undeclared (first use in this function)
+  status = f_open(&fh, sprintf("%s%03d.PGM", basename, frameno), FA_CREATE_ALWAYS | FA_WRITE);
+                                                       ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:84:55: note: each undeclared identifier is reported only once for each function it appears in
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'get_next_free_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:77:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [sw/receiver/storage_manager.o] Error 1
+22:04:23 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'get_next_free_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:78:1: error: expected expression before '}' token
+ }
+ ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:85:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  status = f_open(&fh, sprintf("%s%03d.PGM", basename, frameno), FA_CREATE_ALWAYS | FA_WRITE);
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:85:23: warning: incompatible implicit declaration of built-in function 'sprintf'
+  status = f_open(&fh, sprintf("%s%03d.PGM", basename, frameno), FA_CREATE_ALWAYS | FA_WRITE);
+                       ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:85:23: warning: passing argument 2 of 'f_open' makes pointer from integer without a cast
+In file included from C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:13:0:
+C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include/ff.h:221:9: note: expected 'const TCHAR *' but argument is of type 'int'
+ FRESULT f_open (FIL* fp, const TCHAR* path, BYTE mode);    /* Open or create a file */
+         ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'get_next_free_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:78:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [sw/receiver/storage_manager.o] Error 1
+22:04:31 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:85:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  status = f_open(&fh, sprintf("%s%03d.PGM", basename, frameno), FA_CREATE_ALWAYS | FA_WRITE);
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:85:23: warning: incompatible implicit declaration of built-in function 'sprintf'
+  status = f_open(&fh, sprintf("%s%03d.PGM", basename, frameno), FA_CREATE_ALWAYS | FA_WRITE);
+                       ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:85:23: warning: passing argument 2 of 'f_open' makes pointer from integer without a cast
+In file included from C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:13:0:
+C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include/ff.h:221:9: note: expected 'const TCHAR *' but argument is of type 'int'
+ FRESULT f_open (FIL* fp, const TCHAR* path, BYTE mode);    /* Open or create a file */
+         ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90748	 310408	 333120	 734276	  b3444	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+22:05:22 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:88:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  status = f_open(&fh, sprintf("%s%03d.PGM", basename, frameno), FA_CREATE_ALWAYS | FA_WRITE);
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:88:23: warning: incompatible implicit declaration of built-in function 'sprintf'
+  status = f_open(&fh, sprintf("%s%03d.PGM", basename, frameno), FA_CREATE_ALWAYS | FA_WRITE);
+                       ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:88:23: warning: passing argument 2 of 'f_open' makes pointer from integer without a cast
+In file included from C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:13:0:
+C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include/ff.h:221:9: note: expected 'const TCHAR *' but argument is of type 'int'
+ FRESULT f_open (FIL* fp, const TCHAR* path, BYTE mode);    /* Open or create a file */
+         ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90812	 310408	 333120	 734340	  b3484	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+22:06:56 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:89:23: error: expected expression before ',' token
+  status = f_open(&fh, , FA_CREATE_ALWAYS | FA_WRITE);
+                       ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: At top level:
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:32:14: warning: 'basename' defined but not used [-Wunused-variable]
+ static char *basename = "image.pgm";
+              ^
+make: *** [sw/receiver/storage_manager.o] Error 1
+22:08:15 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:89:23: error: expected expression before ',' token
+  status = f_open(&fh, , FA_CREATE_ALWAYS | FA_WRITE);
+                       ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:87:7: warning: unused variable 'filename' [-Wunused-variable]
+  char filename[13]; // IMAGEXXX.PGM
+       ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: At top level:
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:31:14: warning: 'basename' defined but not used [-Wunused-variable]
+ static char *basename = "image.pgm";
+              ^
+make: *** [sw/receiver/storage_manager.o] Error 1
+22:09:36 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:89:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  sprintf(filename, "%s%05d.PGM")
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:89:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:89:2: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:89:2: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:90:2: error: expected ';' before 'status'
+  status = f_open(&fh, , FA_CREATE_ALWAYS | FA_WRITE);
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: At top level:
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:31:14: warning: 'basename' defined but not used [-Wunused-variable]
+ static char *basename = "IMAGE";
+              ^
+make: *** [sw/receiver/storage_manager.o] Error 1
+22:09:53 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:89:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  sprintf(filename, "%s%05d.PGM", basename, frameno);
+  ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:89:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90804	 310408	 333120	 734332	  b347c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+22:11:07 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90804	 310408	 333120	 734332	  b347c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+22:11:49 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'get_next_free_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:82:20: error: expected ')' before string constant
+  sprintf(filename, "%s%05d.PGM", basename, frameno);
+                    ^
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:79:7: warning: unused variable 'filename' [-Wunused-variable]
+  char filename[13]; // IMAGEXXX.PGM\0
+       ^
+make: *** [sw/receiver/storage_manager.o] Error 1
+22:16:23 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'get_next_free_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:84:28: error: expected expression before 'void'
+   switch (f_stat(filename, void)) {
+                            ^
+make: *** [sw/receiver/storage_manager.o] Error 1
+22:16:39 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'get_next_free_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:84:3: error: invalid use of void expression
+   switch (f_stat(filename, (void) NULL)) {
+   ^
+make: *** [sw/receiver/storage_manager.o] Error 1
+22:17:05 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90932	 310408	 333120	 734460	  b34fc	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+22:17:35 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90932	 310408	 333120	 734460	  b34fc	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+22:18:43 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+22:19:51 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90964	 310408	 333120	 734492	  b351c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+22:20:13 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+22:23:09 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:103:7: warning: unused variable 'filename' [-Wunused-variable]
+  char filename[13]; // IMAGEXXX.PGM\0
+       ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90980	 310408	 333120	 734508	  b352c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+22:25:04 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+22:26:27 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90964	 310408	 333120	 734492	  b351c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+22:26:34 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+22:27:04 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90964	 310408	 333120	 734492	  b351c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+22:27:13 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+22:27:33 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90964	 310408	 333120	 734492	  b351c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+22:27:36 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+22:29:19 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+22:33:04 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c: In function 'save_frame':
+C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c:103:7: warning: unused variable 'filename' [-Wunused-variable]
+  char filename[13]; // IMAGEXXX.PGM\0
+       ^
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90980	 310408	 333120	 734508	  b352c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+22:33:07 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+22:33:51 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90964	 310408	 333120	 734492	  b351c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+22:33:56 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+22:36:10 **** Incremental Build of configuration Debug for project zybo_receiver ****
+make all 
+make: Nothing to be done for `all'.
+22:38:57 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90964	 310408	 333120	 734492	  b351c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+22:39:01 **** Auto Build of configuration Debug for project zybo_receiver ****
+make all 
+'Building file: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_bsp\ps7_cortexa9_0\include" -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver\src" -I"C:\Users\Mike\Documents\osiris-hdl\sw\common" -I"C:\Users\Mike\Documents\osiris-hdl\sw\receiver" -c -fmessage-length=0 -MT"sw/receiver/storage_manager.o" -I../../zybo_receiver_bsp/ps7_cortexa9_0/include -MMD -MP -MF"sw/receiver/storage_manager.d" -MT"sw/receiver/storage_manager.d" -o "sw/receiver/storage_manager.o" "C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/sw/receiver/storage_manager.c'
+' '
+'Building target: zybo_receiver.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zybo_receiver_bsp/ps7_cortexa9_0/lib -o "zybo_receiver.elf"  ./sw/receiver/storage_manager.o  ./sw/common/buf_controller.o ./sw/common/framebuf.o ./sw/common/interrupt.o  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zybo_receiver.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zybo_receiver.elf  |tee "zybo_receiver.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90964	 310408	 333120	 734492	  b351c	zybo_receiver.elf
+'Finished building: zybo_receiver.elf.size'
+' '
+22:40:16 **** Build of project zynq_fsbl_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axicdma_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/axicdma_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/xilffs_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xilrsa_v1_1/src"
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/axicdma_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/axicdma_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling axicdma"
+xaxicdma_bdring.c: In function 'XAxiCdma_BdRingGetCurrBd':
+xaxicdma_bdring.c:204:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   return (XAxiCdma_Bd *)((XAxiCdma_BdRead(InstancePtr->BaseAddr, XAXICDMA_CDESC_OFFSET)) |
+          ^
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/xilffs_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling XilFFs Library"
+"Running Make libs in ps7_cortexa9_0/libsrc/xilrsa_v1_1/src"
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+'Finished building libraries'
+22:41:17 **** Build of configuration Debug for project zynq_fsbl ****
+make all 
+'Building file: ../src/fsbl_handoff.S'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/fsbl_handoff.o" -I../../zynq_fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_handoff.d" -MT"src/fsbl_handoff.d" -o "src/fsbl_handoff.o" "../src/fsbl_handoff.S"
+'Finished building: ../src/fsbl_handoff.S'
+' '
+'Building file: ../src/fsbl_hooks.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/fsbl_hooks.o" -I../../zynq_fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_hooks.d" -MT"src/fsbl_hooks.d" -o "src/fsbl_hooks.o" "../src/fsbl_hooks.c"
+'Finished building: ../src/fsbl_hooks.c'
+' '
+'Building file: ../src/image_mover.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/image_mover.o" -I../../zynq_fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/image_mover.d" -MT"src/image_mover.d" -o "src/image_mover.o" "../src/image_mover.c"
+'Finished building: ../src/image_mover.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/main.o" -I../../zynq_fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/md5.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/md5.o" -I../../zynq_fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/md5.d" -MT"src/md5.d" -o "src/md5.o" "../src/md5.c"
+'Finished building: ../src/md5.c'
+' '
+'Building file: ../src/nand.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/nand.o" -I../../zynq_fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nand.d" -MT"src/nand.d" -o "src/nand.o" "../src/nand.c"
+'Finished building: ../src/nand.c'
+' '
+'Building file: ../src/nor.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/nor.o" -I../../zynq_fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/nor.d" -MT"src/nor.d" -o "src/nor.o" "../src/nor.c"
+'Finished building: ../src/nor.c'
+' '
+'Building file: ../src/pcap.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/pcap.o" -I../../zynq_fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pcap.d" -MT"src/pcap.d" -o "src/pcap.o" "../src/pcap.c"
+'Finished building: ../src/pcap.c'
+' '
+'Building file: C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper_hw_platform_0/ps7_init.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/ps7_init.o" -I../../zynq_fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ps7_init.d" -MT"src/ps7_init.d" -o "src/ps7_init.o" "C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper_hw_platform_0/ps7_init.c"
+'Finished building: C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.sdk/zybo_receiver_wrapper_hw_platform_0/ps7_init.c'
+' '
+'Building file: ../src/qspi.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/qspi.o" -I../../zynq_fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/qspi.d" -MT"src/qspi.d" -o "src/qspi.o" "../src/qspi.c"
+'Finished building: ../src/qspi.c'
+' '
+'Building file: ../src/rsa.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/rsa.o" -I../../zynq_fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/rsa.d" -MT"src/rsa.d" -o "src/rsa.o" "../src/rsa.c"
+'Finished building: ../src/rsa.c'
+' '
+'Building file: ../src/sd.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -I"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zybo_receiver_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/sd.o" -I../../zynq_fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sd.d" -MT"src/sd.d" -o "src/sd.o" "../src/sd.c"
+'Finished building: ../src/sd.c'
+' '
+'Building target: zynq_fsbl.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -L"C:\Users\Mike\Documents\osiris-hdl\projects\zybo_receiver\zybo_receiver.sdk\zynq_fsbl\src" -Wl,-T -Wl,../src/lscript.ld -L../../zynq_fsbl_bsp/ps7_cortexa9_0/lib -o "zynq_fsbl.elf"  ./src/fsbl_handoff.o ./src/fsbl_hooks.o ./src/image_mover.o ./src/main.o ./src/md5.o ./src/nand.o ./src/nor.o ./src/pcap.o ./src/ps7_init.o ./src/qspi.o ./src/rsa.o ./src/sd.o   -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zynq_fsbl.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zynq_fsbl.elf  |tee "zynq_fsbl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77120	  11860	  74308	 163288	  27dd8	zynq_fsbl.elf
+'Finished building: zynq_fsbl.elf.size'
+' '
+22:41:25 **** Auto Build of configuration Debug for project zynq_fsbl ****
+make all 
+make: Nothing to be done for `all'.
+22:43:39 **** Auto Build of configuration Debug for project zynq_fsbl ****
+make all 
+make: Nothing to be done for `all'.

@@ -14,7 +14,10 @@ set_property parent.project_path C:/Users/Mike/Documents/osiris-hdl/projects/zyb
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
-set_property ip_repo_paths c:/Users/Mike/Documents/osiris-hdl/hdl [current_project]
+set_property ip_repo_paths {
+  c:/users/mike/documents/osiris-hdl/hdl/dvi2rgb_v1_5
+  c:/Users/Mike/Documents/osiris-hdl/hdl
+} [current_project]
 set_property vhdl_version vhdl_2k [current_fileset]
 add_files C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/zybo_receiver.bd
 set_property used_in_implementation false [get_files -all c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_processing_system7_0_0/zybo_receiver_processing_system7_0_0.xdc]
@@ -37,6 +40,12 @@ set_property used_in_implementation false [get_files -all c:/Users/Mike/Document
 set_property used_in_implementation false [get_files -all c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_cdma_0_1/zybo_receiver_axi_cdma_0_1.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_xbar_1/zybo_receiver_xbar_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_xbar_2/zybo_receiver_xbar_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_gpio_0_1/zybo_receiver_axi_gpio_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_gpio_0_1/zybo_receiver_axi_gpio_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_gpio_0_1/zybo_receiver_axi_gpio_0_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_gpio_1_1/zybo_receiver_axi_gpio_1_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_gpio_1_1/zybo_receiver_axi_gpio_1_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_axi_gpio_1_1/zybo_receiver_axi_gpio_1_1.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_auto_pc_0/zybo_receiver_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_auto_ds_0/zybo_receiver_auto_ds_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/ip/zybo_receiver_auto_ds_0/zybo_receiver_auto_ds_0_clocks.xdc]
@@ -54,9 +63,6 @@ set_property is_locked true [get_files C:/Users/Mike/Documents/osiris-hdl/projec
 read_verilog -library xil_defaultlib C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/sources_1/bd/zybo_receiver/hdl/zybo_receiver_wrapper.v
 read_xdc C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc
 set_property used_in_implementation false [get_files C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/constrs_1/imports/Downloads/ZYBO_Master.xdc]
-
-read_xdc C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/constrs_1/new/debug.xdc
-set_property used_in_implementation false [get_files C:/Users/Mike/Documents/osiris-hdl/projects/zybo_receiver/zybo_receiver.srcs/constrs_1/new/debug.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

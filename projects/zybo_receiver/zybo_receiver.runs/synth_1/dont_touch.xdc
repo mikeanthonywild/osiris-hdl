@@ -3,8 +3,6 @@
 
 # XDC: imports/Downloads/ZYBO_Master.xdc
 
-# XDC: new/debug.xdc
-
 # Block Designs: bd/zybo_receiver/zybo_receiver.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_receiver || ORIG_REF_NAME==zybo_receiver}]
 
@@ -83,6 +81,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_receiver_x
 # IP: bd/zybo_receiver/ip/zybo_receiver_xlconcat_0_2/zybo_receiver_xlconcat_0_2.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_receiver_xlconcat_0_2 || ORIG_REF_NAME==zybo_receiver_xlconcat_0_2}]
 
+# IP: bd/zybo_receiver/ip/zybo_receiver_axi_gpio_0_1/zybo_receiver_axi_gpio_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_receiver_axi_gpio_0_1 || ORIG_REF_NAME==zybo_receiver_axi_gpio_0_1}]
+
+# IP: bd/zybo_receiver/ip/zybo_receiver_axi_gpio_1_1/zybo_receiver_axi_gpio_1_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_receiver_axi_gpio_1_1 || ORIG_REF_NAME==zybo_receiver_axi_gpio_1_1}]
+
 # IP: bd/zybo_receiver/ip/zybo_receiver_auto_pc_0/zybo_receiver_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_receiver_auto_pc_0 || ORIG_REF_NAME==zybo_receiver_auto_pc_0}]
 
@@ -151,6 +155,22 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 # XDC: bd/zybo_receiver/ip/zybo_receiver_xbar_1/zybo_receiver_xbar_1_ooc.xdc
 
 # XDC: bd/zybo_receiver/ip/zybo_receiver_xbar_2/zybo_receiver_xbar_2_ooc.xdc
+
+# XDC: bd/zybo_receiver/ip/zybo_receiver_axi_gpio_0_1/zybo_receiver_axi_gpio_0_1_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==zybo_receiver_axi_gpio_0_1 || ORIG_REF_NAME==zybo_receiver_axi_gpio_0_1}] {/U0 }]/U0 ]]
+
+# XDC: bd/zybo_receiver/ip/zybo_receiver_axi_gpio_0_1/zybo_receiver_axi_gpio_0_1_ooc.xdc
+
+# XDC: bd/zybo_receiver/ip/zybo_receiver_axi_gpio_0_1/zybo_receiver_axi_gpio_0_1.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==zybo_receiver_axi_gpio_0_1 || ORIG_REF_NAME==zybo_receiver_axi_gpio_0_1}] {/U0 }]/U0 ]]
+
+# XDC: bd/zybo_receiver/ip/zybo_receiver_axi_gpio_1_1/zybo_receiver_axi_gpio_1_1_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==zybo_receiver_axi_gpio_1_1 || ORIG_REF_NAME==zybo_receiver_axi_gpio_1_1}] {/U0 }]/U0 ]]
+
+# XDC: bd/zybo_receiver/ip/zybo_receiver_axi_gpio_1_1/zybo_receiver_axi_gpio_1_1_ooc.xdc
+
+# XDC: bd/zybo_receiver/ip/zybo_receiver_axi_gpio_1_1/zybo_receiver_axi_gpio_1_1.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==zybo_receiver_axi_gpio_1_1 || ORIG_REF_NAME==zybo_receiver_axi_gpio_1_1}] {/U0 }]/U0 ]]
 
 # XDC: bd/zybo_receiver/ip/zybo_receiver_auto_pc_0/zybo_receiver_auto_pc_0_ooc.xdc
 

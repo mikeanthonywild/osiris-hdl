@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-//Date        : Sun Apr 10 17:59:58 2016
+//Date        : Mon Apr 11 16:56:10 2016
 //Host        : Study running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target linebuffer_test_wrapper.bd
 //Design      : linebuffer_test_wrapper
@@ -35,7 +35,6 @@ module linebuffer_test_wrapper
     d,
     ddc_scl_io,
     ddc_sda_io,
-    flash_sync_btn,
     hdmi_clk_n,
     hdmi_clk_p,
     hdmi_d_n,
@@ -72,7 +71,6 @@ module linebuffer_test_wrapper
   input [7:0]d;
   inout ddc_scl_io;
   inout ddc_sda_io;
-  input flash_sync_btn;
   output hdmi_clk_n;
   output hdmi_clk_p;
   output [2:0]hdmi_d_n;
@@ -116,7 +114,6 @@ module linebuffer_test_wrapper
   wire ddc_sda_io;
   wire ddc_sda_o;
   wire ddc_sda_t;
-  wire flash_sync_btn;
   wire hdmi_clk_n;
   wire hdmi_clk_p;
   wire [2:0]hdmi_d_n;
@@ -169,7 +166,6 @@ module linebuffer_test_wrapper
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .clk(clk),
         .d(d),
-        .flash_sync_btn(flash_sync_btn),
         .hdmi_clk_n(hdmi_clk_n),
         .hdmi_clk_p(hdmi_clk_p),
         .hdmi_d_n(hdmi_d_n),

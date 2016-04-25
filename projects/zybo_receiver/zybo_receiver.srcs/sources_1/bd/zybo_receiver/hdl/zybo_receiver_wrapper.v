@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-//Date        : Sun Apr 10 18:33:30 2016
+//Date        : Tue Apr 12 19:17:31 2016
 //Host        : Study running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target zybo_receiver_wrapper.bd
 //Design      : zybo_receiver_wrapper
@@ -31,12 +31,14 @@ module zybo_receiver_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    btns_4bits_tri_i,
     clk,
-    flash_sync_led,
     hdmi_clk_n,
     hdmi_clk_p,
     hdmi_d_n,
     hdmi_d_p,
+    leds_4bits_tri_o,
+    sws_4bits_tri_i,
     vga_b,
     vga_g,
     vga_hs,
@@ -63,12 +65,14 @@ module zybo_receiver_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  input [3:0]btns_4bits_tri_i;
   input clk;
-  output flash_sync_led;
   input hdmi_clk_n;
   input hdmi_clk_p;
   input [2:0]hdmi_d_n;
   input [2:0]hdmi_d_p;
+  output [3:0]leds_4bits_tri_o;
+  input [3:0]sws_4bits_tri_i;
   output [4:0]vga_b;
   output [5:0]vga_g;
   output vga_hs;
@@ -96,12 +100,14 @@ module zybo_receiver_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire [3:0]btns_4bits_tri_i;
   wire clk;
-  wire flash_sync_led;
   wire hdmi_clk_n;
   wire hdmi_clk_p;
   wire [2:0]hdmi_d_n;
   wire [2:0]hdmi_d_p;
+  wire [3:0]leds_4bits_tri_o;
+  wire [3:0]sws_4bits_tri_i;
   wire [4:0]vga_b;
   wire [5:0]vga_g;
   wire vga_hs;
@@ -130,12 +136,14 @@ module zybo_receiver_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .btns_4bits_tri_i(btns_4bits_tri_i),
         .clk(clk),
-        .flash_sync_led(flash_sync_led),
         .hdmi_clk_n(hdmi_clk_n),
         .hdmi_clk_p(hdmi_clk_p),
         .hdmi_d_n(hdmi_d_n),
         .hdmi_d_p(hdmi_d_p),
+        .leds_4bits_tri_o(leds_4bits_tri_o),
+        .sws_4bits_tri_i(sws_4bits_tri_i),
         .vga_b(vga_b),
         .vga_g(vga_g),
         .vga_hs(vga_hs),

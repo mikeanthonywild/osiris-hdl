@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: digilentinc.com:ip:dvi2rgb:1.5
--- IP Revision: 21
+-- IP Revision: 22
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -65,7 +65,7 @@ ENTITY zybo_receiver_dvi2rgb_0_0 IS
     vid_pVDE : OUT STD_LOGIC;
     vid_pHSync : OUT STD_LOGIC;
     vid_pVSync : OUT STD_LOGIC;
-    flash_sync : OUT STD_LOGIC;
+    shutter_sync : OUT STD_LOGIC;
     PixelClk : OUT STD_LOGIC;
     aPixelClkLckd : OUT STD_LOGIC;
     pRst : IN STD_LOGIC
@@ -98,7 +98,7 @@ ARCHITECTURE zybo_receiver_dvi2rgb_0_0_arch OF zybo_receiver_dvi2rgb_0_0 IS
       vid_pVDE : OUT STD_LOGIC;
       vid_pHSync : OUT STD_LOGIC;
       vid_pVSync : OUT STD_LOGIC;
-      flash_sync : OUT STD_LOGIC;
+      shutter_sync : OUT STD_LOGIC;
       PixelClk : OUT STD_LOGIC;
       SerialClk : OUT STD_LOGIC;
       aPixelClkLckd : OUT STD_LOGIC;
@@ -146,7 +146,7 @@ BEGIN
       vid_pVDE => vid_pVDE,
       vid_pHSync => vid_pHSync,
       vid_pVSync => vid_pVSync,
-      flash_sync => flash_sync,
+      shutter_sync => shutter_sync,
       PixelClk => PixelClk,
       aPixelClkLckd => aPixelClkLckd,
       DDC_SDA_I => '0',

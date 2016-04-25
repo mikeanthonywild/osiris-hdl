@@ -49,6 +49,7 @@
 #include "buf_controller.h"
 #include "framebuf.h"
 #include "interrupt.h"
+#include "storage_manager.h"
 #include "xil_printf.h"
 
 
@@ -58,6 +59,7 @@ int main()
     init_interrupts();
     init_framebuf();
     init_buf_controller();
+    init_storage_manager();
 
     enable_interrupts();
 
@@ -65,13 +67,8 @@ int main()
 
     while (1) {
     	update_buf_controller();
+    	update_storage_manager();
     }
-
-    xil_printf("Shutting down...\n");
-
-    cleanup_interrupts();
-    cleanup_buf_controller();
-    cleanup_platform();
 
     return 0;
 }

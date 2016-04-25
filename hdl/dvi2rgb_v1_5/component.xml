@@ -324,7 +324,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>fface31b</spirit:value>
+            <spirit:value>e3e5a766</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -340,7 +340,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>789dfe9f</spirit:value>
+            <spirit:value>5259305a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -564,7 +564,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>flash_sync</spirit:name>
+        <spirit:name>shutter_sync</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -867,7 +867,7 @@
       <spirit:file>
         <spirit:name>src/dvi2rgb.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_9245a5af</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_5e750d2d</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1018,12 +1018,12 @@
       <xilinx:displayName>DVI to RGB Video Decoder (Sink)</xilinx:displayName>
       <xilinx:vendorDisplayName>Digilent, Inc.</xilinx:vendorDisplayName>
       <xilinx:vendorURL>http://www.digilentinc.com</xilinx:vendorURL>
-      <xilinx:coreRevision>21</xilinx:coreRevision>
+      <xilinx:coreRevision>22</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>digilentinc.com:ip:dvi2rgb:1.3</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>digilentinc.com:ip:dvi2rgb:1.4</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2016-04-04T13:53:12Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2016-04-11T18:45:03Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="digilentinc.com:ip:dvi2rgb:1.0_ARCHIVE_LOCATION">C:/Users/Elod/Documents/Vivado_Projects/dgl_repo/ip/dvi2rgb_v1_0</xilinx:tag>
         <xilinx:tag xilinx:name="digilentinc.com:ip:dvi2rgb:1.1_ARCHIVE_LOCATION">C:/Users/Elod/Documents/Vivado_Projects/dgl_repo</xilinx:tag>
@@ -1035,8 +1035,8 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2015.4</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f6c1e85b"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="62a2fb32"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="e81854b3"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f889b52c"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="f6c2d1e9"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="189063f5"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="fab9cec9"/>
     </xilinx:packagingInfo>

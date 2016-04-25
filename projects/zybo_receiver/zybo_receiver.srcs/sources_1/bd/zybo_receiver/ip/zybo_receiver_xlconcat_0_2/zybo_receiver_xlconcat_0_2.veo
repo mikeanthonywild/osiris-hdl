@@ -59,7 +59,8 @@ zybo_receiver_xlconcat_0_2 your_instance_name (
   .In1(In1),    // input wire [0 : 0] In1
   .In2(In2),    // input wire [0 : 0] In2
   .In3(In3),    // input wire [0 : 0] In3
-  .dout(dout)  // output wire [3 : 0] dout
+  .In4(In4),    // input wire [0 : 0] In4
+  .dout(dout)  // output wire [4 : 0] dout
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

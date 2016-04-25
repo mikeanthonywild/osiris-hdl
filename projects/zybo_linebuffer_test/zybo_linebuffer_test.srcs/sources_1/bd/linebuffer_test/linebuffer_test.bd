@@ -222,12 +222,6 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>flash_sync_btn</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
           <spirit:name>xclk</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
@@ -689,6 +683,15 @@
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">linebuffer_test_i_buf_controller_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>shutter_sync_inverter</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="util_vector_logic" spirit:vendor="xilinx.com" spirit:version="2.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">linebuffer_test_util_vector_logic_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_SIZE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_OPERATION">not</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections>
       <spirit:interconnection>
@@ -889,11 +892,6 @@
         <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="SerialClk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>flash_sync_btn_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="flash_sync_btn"/>
-        <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="shutter_sync"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>ov7670_controller_0_start_capture</spirit:name>
         <spirit:internalPortReference spirit:componentRef="ov7670_controller" spirit:portRef="start_capture"/>
         <spirit:internalPortReference spirit:componentRef="ov7670_capture" spirit:portRef="start"/>
@@ -933,6 +931,7 @@
         <spirit:name>ov7670_capture_o_vsync</spirit:name>
         <spirit:internalPortReference spirit:componentRef="ov7670_capture" spirit:portRef="o_vsync"/>
         <spirit:internalPortReference spirit:componentRef="i_buf_controller" spirit:portRef="vsync"/>
+        <spirit:internalPortReference spirit:componentRef="shutter_sync_inverter" spirit:portRef="Op1"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>vsync_1</spirit:name>
@@ -1023,6 +1022,11 @@
         <spirit:name>dvi_clk_gen_clk_out3</spirit:name>
         <spirit:internalPortReference spirit:componentRef="dvi_clk_gen" spirit:portRef="clk_out3"/>
         <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="RefClk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>shutter_sync_inverter_Res</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="shutter_sync_inverter" spirit:portRef="Res"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="shutter_sync"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

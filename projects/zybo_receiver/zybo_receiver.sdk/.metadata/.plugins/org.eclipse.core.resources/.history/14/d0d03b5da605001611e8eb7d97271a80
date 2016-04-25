@@ -1,0 +1,95 @@
+/*
+ * storage_manager.c
+ *
+ * Author: Mike Wild <m.a.wild@se12.qmul.ac.uk>
+ * Date: 24th March 2016
+ *
+ * Library for saving frames to SD card.
+ *
+ */
+
+/***************************** Include Files *********************************/
+#include "xsdps.h"
+#include "ff.h"
+#include "framebuf.h"
+#include "platform_config.h"
+#include <xgpio.h>
+
+/************************** Constant Definitions *****************************/
+
+
+/**************************** Type Definitions *******************************/
+
+
+/***************** Macros (Inline Functions) Definitions *********************/
+
+
+/************************** Variable Definitions *****************************/
+static FIL fh;
+static FATFS fatfs;
+static char *filename = "image.pgm";
+static TCHAR *root_path = "0:/";
+static XGpio push_buttons;
+static int button_data = 0;
+
+/************************** Function Prototypes ******************************/
+
+
+/*****************************************************************************/
+int init_storage_manager(void) {
+	FRESULT status;
+
+	// Mount the SD card
+	status = f_mount(&fatfs, root_path, 0);
+	if (status != FR_OK) {
+		return XST_FAILURE;
+	}
+
+	XGpio_Initialize(&push_buttons, GPIO_DEVICE_ID);
+	XGpio_SetDataDirection(&push_buttons, 1, 0xF);
+
+	return XST_SUCCESS;
+}
+
+
+void update_storage_manager(void) {
+	button_data = XGpio_DiscreteRead(&push_buttons, 1);
+
+	if (button_data) {
+		xil_printf("Saving frame...\n");
+		save_frame();
+	}
+}
+
+
+int save_frame(void) {
+	FRESULT status;
+	int line, pixel;
+
+	status = f_open(&fh, filename, FA_CREATE_ALWAYS | FA_WRITE);
+	if (status != FR_OK) {
+		return XST_FAILURE;
+	}
+
+	status = f_lseek(&fh, 0);
+	if (status != FR_OK) {
+		return XST_FAILURE;
+	}
+
+	(void)f_puts("P2\n640 480\n255\n", &fh);
+
+	Xil_DCacheFlushRange((UINTPTR)g_framebuf, FRAMEBUF_WIDTH * FRAMEBUF_HEIGHT);
+	for (line=0; line<FRAMEBUF_HEIGHT; line++) {
+		for (pixel=0; pixel<FRAMEBUF_WIDTH; pixel++) {
+			f_printf(&fh, "%d ", g_framebuf[line][pixel]);
+		}
+		f_putc('\n', &fh);
+	}
+
+	status = f_close(&fh);
+	if (status != FR_OK) {
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
